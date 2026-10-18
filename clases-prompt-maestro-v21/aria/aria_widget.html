@@ -1,0 +1,2835 @@
+<!-- ===== ARIA v2.8.0 — widget insertable (una sola vez, antes de </body>). Generado: no editar a mano. ===== -->
+<script>
+/* Clave de Gemini (OPCIONAL). Sin clave, ARIA funciona igual con sus reglas, el banco de métodos y Wikipedia.
+   NUNCA subas una clave real a GitHub: se queda visible para cualquiera que abra el HTML. Ver aria/README_ARIA.md */
+window.ARIA_CLAVE_GEMINI = window.ARIA_CLAVE_GEMINI || 'PEGA_TU_CLAVE_AQUI';
+</script>
+<style>
+#aria-fab{
+  position:fixed; right:18px; bottom:100px; z-index:9999;
+  width:112px; border:none; background:transparent; padding:0; cursor:grab;
+  filter:drop-shadow(0 8px 14px rgba(30,20,90,.28));
+  touch-action:none; user-select:none; -webkit-user-select:none;
+  animation:aria-fab-respirar 3.2s ease-in-out infinite;
+  transition:transform .15s ease;
+}
+#aria-fab:hover{ transform:scale(1.06); animation-play-state:paused; }
+@keyframes aria-fab-respirar{
+  0%,100%{ transform:translateY(0) scale(1); }
+  50%{ transform:translateY(-3px) scale(1.015); }
+}
+#aria-fab img{
+  width:100% !important; height:auto !important; max-width:100% !important; max-height:none !important;
+  min-width:0 !important; min-height:0 !important; object-fit:contain !important;
+  display:block !important; pointer-events:none; flex-shrink:0;
+  transition:opacity .12s ease;
+}
+#aria-fab:active{ cursor:grabbing; animation:none; }
+#aria-fab.aria-arrastrando{ filter:drop-shadow(0 12px 20px rgba(30,20,90,.4)); animation:none; }
+#aria-panel{
+  display:none; flex-direction:column; gap:10px;
+  width:330px; max-width:90vw; background:#fff; border-radius:18px;
+  box-shadow:0 16px 40px rgba(30,20,90,.22); padding:14px;
+  position:fixed; right:18px; bottom:18px; z-index:9999;
+  transform-origin:bottom right;
+}
+#aria-panel.aria-abierto{ display:flex; animation:aria-panel-abrir .22s cubic-bezier(.2,.9,.3,1.2); }
+@keyframes aria-panel-abrir{
+  from{ opacity:0; transform:scale(.92) translateY(10px); }
+  to{ opacity:1; transform:scale(1) translateY(0); }
+}
+.aria-panel-header{ display:flex; align-items:center; gap:10px; }
+.aria-panel-header img{
+  width:78px !important; height:auto !important; max-width:none !important; max-height:none !important;
+  min-width:0 !important; min-height:0 !important; object-fit:contain !important;
+  display:block !important; flex-shrink:0;
+  transition:opacity .12s ease;
+}
+.aria-panel-titulo{ flex:1; display:flex; flex-direction:column; line-height:1.15; }
+.aria-panel-titulo strong{ color:#4E3CC9; font-size:15px; }
+.aria-panel-titulo span{ font-size:11px; color:#888; }
+#aria-cerrar-btn{
+  border:none; background:#F1F1F4; color:#555; width:30px; height:30px; border-radius:50%;
+  font-size:15px; cursor:pointer; line-height:1; align-self:flex-start;
+  transition:background .15s ease, transform .15s ease;
+}
+#aria-cerrar-btn:hover{ background:#E3505A; color:#fff; transform:rotate(90deg); }
+#aria-chat{
+  background:#F7F7FB; border-radius:14px; padding:10px;
+  height:260px; overflow-y:auto; line-height:1.4;
+  display:flex; flex-direction:column; gap:8px;
+  scroll-behavior:smooth;
+}
+#aria-chat::-webkit-scrollbar{ width:6px; }
+#aria-chat::-webkit-scrollbar-thumb{ background:#D8D3FF; border-radius:6px; }
+.aria-msg{
+  max-width:82%; padding:9px 12px; border-radius:14px; font-size:13.5px;
+  color:#333; word-wrap:break-word; animation:aria-aparecer .18s cubic-bezier(.2,.8,.3,1.1);
+}
+.aria-msg a{ color:#4E3CC9; }
+@keyframes aria-aparecer{ from{ opacity:0; transform:translateY(6px) scale(.98);} to{ opacity:1; transform:translateY(0) scale(1);} }
+.aria-msg-aria{
+  align-self:flex-start; border-bottom-left-radius:4px;
+  background:linear-gradient(135deg,#F4F2FF,#ECFBFF); border:1.5px solid #E4DDFF;
+}
+.aria-msg-usuario{
+  align-self:flex-end; border-bottom-right-radius:4px;
+  background:#6C63FF; color:#fff; border:1.5px solid #6C63FF;
+}
+#aria-voz-btn{
+  border:none; border-radius:14px; padding:12px 10px; font-size:14px; font-weight:700;
+  cursor:pointer; width:100%; transition:background .15s ease;
+}
+#aria-voz-btn.aria-voz-off{ background:#E7E7EE; color:#555; }
+#aria-voz-btn.aria-voz-on{ background:#22C55E; color:#fff; }
+.aria-input-fila{ display:flex; gap:8px; }
+#aria-input{
+  flex:1; border:1.5px solid #DDD; border-radius:12px; padding:10px 12px; font-size:13.5px; outline:none;
+}
+#aria-input:focus{ border-color:#6C63FF; }
+#aria-enviar-btn{
+  border:none; background:#6C63FF; color:#fff; width:42px; border-radius:12px; font-size:16px; cursor:pointer;
+}
+#aria-enviar-btn:hover{ background:#4E3CC9; }
+@media (max-width:420px){
+  #aria-panel{ width:82vw; }
+  #aria-fab{ width:92px; }
+}
+.aria-escribiendo{ display:flex; gap:5px; padding:10px 12px; }
+.aria-escribiendo span{
+  width:8px; height:8px; border-radius:50%; background:#B3A6FF;
+  animation:aria-rebote 1s infinite ease-in-out;
+}
+.aria-escribiendo span:nth-child(2){ animation-delay:.15s; }
+.aria-escribiendo span:nth-child(3){ animation-delay:.3s; }
+@keyframes aria-rebote{
+  0%,60%,100%{ transform:translateY(0); opacity:.5; }
+  30%{ transform:translateY(-6px); opacity:1; }
+}
+#aria-input{ border-radius:16px; background:#FAFAFC; transition:background .15s ease, box-shadow .15s ease; }
+#aria-input:focus{ background:#fff; box-shadow:0 0 0 3px rgba(108,99,255,.15); }
+#aria-enviar-btn{
+  border-radius:16px; box-shadow:0 3px 8px rgba(108,99,255,.35);
+  transition:transform .12s ease, box-shadow .12s ease;
+}
+#aria-enviar-btn:hover{ transform:translateY(-1px); box-shadow:0 5px 12px rgba(108,99,255,.45); }
+#aria-enviar-btn:active{ transform:translateY(0) scale(.96); }
+#aria-voz-btn{ transition:background .15s ease, transform .1s ease; }
+#aria-voz-btn:hover{ transform:translateY(-1px); }
+#aria-voz-btn:active{ transform:translateY(0) scale(.97); }
+.aria-rebotar{ animation:aria-rebote-avatar .35s ease; }
+@keyframes aria-rebote-avatar{
+  0%{ transform:scale(1); } 40%{ transform:scale(1.08); } 100%{ transform:scale(1); }
+}
+#aria-reaccion{ position:fixed; right:18px; bottom:225px; width:190px; z-index:10000;
+  pointer-events:none; opacity:0; transform:translateY(20px) scale(.6); transform-origin:bottom right; }
+#aria-reaccion img{ width:100% !important; height:auto !important; object-fit:contain !important;
+  filter:drop-shadow(0 8px 14px rgba(30,20,90,.3)); }
+#aria-reaccion.aria-reaccion-visible{ opacity:1; transform:none; }
+.aria-anim-saltar{ animation:aria-r-saltar 3.2s ease both; }
+.aria-anim-rebotar{ animation:aria-r-rebotar 3.2s ease both; }
+.aria-anim-latir{ animation:aria-r-latir 3.2s ease-in-out both; }
+.aria-anim-temblar{ animation:aria-r-temblar 3.2s ease both; }
+.aria-anim-saludar{ animation:aria-r-saludar 3.2s ease-in-out both; }
+@keyframes aria-r-saltar{ 0%{opacity:0;transform:translateY(30px) scale(.5)} 12%{opacity:1;transform:translateY(-22px) scale(1.1)}
+  22%{transform:translateY(0) scale(1)} 34%{transform:translateY(-14px)} 46%{transform:translateY(0)} 88%{opacity:1} 100%{opacity:0;transform:translateY(10px) scale(.9)} }
+@keyframes aria-r-rebotar{ 0%{opacity:0;transform:scale(.4)} 14%{opacity:1;transform:scale(1.12) rotate(-3deg)} 28%{transform:scale(1) rotate(2deg)}
+  42%{transform:scale(1.05) rotate(-2deg)} 56%{transform:scale(1)} 88%{opacity:1} 100%{opacity:0;transform:scale(.9)} }
+@keyframes aria-r-latir{ 0%{opacity:0;transform:scale(.7)} 12%{opacity:1;transform:scale(1)} 30%{transform:scale(1.07)} 50%{transform:scale(1)}
+  70%{transform:scale(1.07)} 88%{opacity:1;transform:scale(1)} 100%{opacity:0} }
+@keyframes aria-r-temblar{ 0%{opacity:0;transform:translateY(20px)} 10%{opacity:1;transform:none} 18%{transform:translateX(-7px) rotate(-2deg)}
+  26%{transform:translateX(7px) rotate(2deg)} 34%{transform:translateX(-5px)} 42%{transform:translateX(5px)} 50%{transform:none} 88%{opacity:1} 100%{opacity:0} }
+@keyframes aria-r-saludar{ 0%{opacity:0;transform:translateX(40px)} 12%{opacity:1;transform:none} 24%{transform:rotate(-6deg)} 36%{transform:rotate(6deg)}
+  48%{transform:rotate(-6deg)} 60%{transform:rotate(4deg)} 72%{transform:none} 88%{opacity:1} 100%{opacity:0;transform:translateX(40px)} }
+@media (max-width:600px){ #aria-reaccion{ width:150px; bottom:200px; } }
+@media (prefers-reduced-motion:reduce){ #aria-reaccion{ animation:none !important; transition:opacity .2s; } }
+.aria-fx-particula{ position:fixed; z-index:10001; pointer-events:none; font-size:22px; line-height:1;
+  will-change:transform,opacity; user-select:none; -webkit-user-select:none; }
+#aria-efectos-btn{ cursor:pointer; }
+#aria-efectos-btn.aria-voz-on{ background:#EDE9FF; border-color:#6C63FF; color:#4E3CC9; }
+#aria-efectos-btn.aria-voz-off{ background:#F1F1F4; color:#666; }
+@media (prefers-reduced-motion:reduce){ .aria-fx-particula{ display:none; } }
+</style>
+<!-- ARIA AVATAR VISUAL v1.6 — pegar antes de </body>, una sola vez -->
+<!-- ============================================================ -->
+<button id="aria-fab" type="button" aria-label="Hablar con ARIA">
+  <img id="aria-fab-img" src="" alt="ARIA">
+</button>
+
+<div id="aria-panel">
+  <div class="aria-panel-header">
+    <img id="aria-avatar-img" src="" alt="ARIA">
+    <div class="aria-panel-titulo">
+      <strong>ARIA</strong>
+      <span>tu asistente de clase</span>
+    </div>
+    <button id="aria-cerrar-btn" type="button" title="Cerrar conversación con ARIA">✖</button>
+  </div>
+
+  <div id="aria-chat"></div>
+
+  <button id="aria-voz-btn" type="button" class="aria-voz-off">🔇 Activar voz</button>
+  <button id="aria-sonido-btn" type="button" class="aria-voz-off">🔈 Sonidos: activados</button>
+  <button id="aria-efectos-btn" type="button" class="aria-voz-on">✨ Efectos: activados</button>
+
+  <div class="aria-input-fila">
+    <input id="aria-input" type="text" placeholder="Escríbele a ARIA..." autocomplete="off">
+    <button id="aria-enviar-btn" type="button" aria-label="Enviar">➤</button>
+  </div>
+</div>
+
+
+<script>
+// ═══════════════════════════════════════════════════════════════════════
+// v2.8.0 — ARIA_FX: efectos visuales del avatar (cambio suave de expresión, aura de color,
+// ráfagas de partículas por emoción, modo "pensando" y modo "hablando").
+// Solo usa animaciones del navegador (sin librerías) y se puede apagar con el botón
+// "✨ Efectos". Respeta "reducir movimiento" del sistema. No toca la lógica de seguridad de ARIA.
+// ═══════════════════════════════════════════════════════════════════════
+(function(){
+  const reducir = !!(window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches);
+  let activo = !reducir;
+  try { const g = localStorage.getItem('aria_efectos'); if (g !== null) activo = (g === '1'); } catch(e){ /* sin almacenamiento */ }
+  window.__ariaHablaTk = 0;
+
+  const puedeAnimar = () => activo && typeof Element.prototype.animate === 'function';
+  const imgs = () => [document.getElementById('aria-avatar-img'), document.getElementById('aria-fab-img')].filter(Boolean);
+  const panelAbierto = () => { const p = document.getElementById('aria-panel'); return !!(p && p.classList.contains('aria-abierto')); };
+
+  const COLORES = { logro:'#FFC53D', genial:'#FFB020', carino:'#FF5C9A', animo:'#35C28A', motivacion:'#FF8A3D',
+    academico:'#6C63FF', pista:'#2EB5FF', practica:'#7B61FF', duda:'#8E8AFF', confundida:'#9AA0B5', pena:'#F28BA8',
+    triste:'#6D8CE0', saludo:'#6C63FF', despedida:'#8E8AFF', alerta:'#E3505A', pensando:'#A89BFF', dormida:'#7A86B6', regalo:'#FF5C9A', habla:'#6C63FF' };
+  const PARTICULAS = { logro:['🎉','⭐','✨','🎊'], genial:['⭐','✨','🌟'], carino:['💜','💖','✨'], animo:['💪','✨','🔥'],
+    motivacion:['🚀','✨','⭐'], academico:['💡','✨','📘'], pista:['🔎','💡','✨'], practica:['✏️','🧮','✨'],
+    duda:['❓','🤔'], confundida:['❓','💭'], pena:['💧','😅'], triste:['💧','💙'], saludo:['👋','✨'],
+    despedida:['👋','✨','💜'], dormida:['💤'], regalo:['🎁','✨'] };
+  const EXPLOSIVAS = ['logro','genial','animo','motivacion','regalo','saludo','despedida'];
+  let vivas = 0;
+
+  // Cambio suave de expresión: baja un poco, cambia la imagen ya decodificada y vuelve con un destello.
+  function cambiar(els, src){
+    (els || []).filter(Boolean).forEach(el => {
+      if (!el.getAttribute('src') || !puedeAnimar()){ el.src = src; return; }
+      if (el.getAttribute('src') === src) return;
+      const tok = (el.__fxTok = (el.__fxTok || 0) + 1);
+      let a1;
+      try { a1 = el.animate([{ opacity:1 }, { opacity:.15 }], { duration:90, fill:'forwards' }); }
+      catch(e){ el.src = src; return; }
+      a1.finished.then(() => {
+        if (el.__fxTok !== tok){ a1.cancel(); return; }
+        el.src = src;
+        return (el.decode ? el.decode() : Promise.resolve()).catch(() => {});
+      }).then(() => {
+        if (el.__fxTok !== tok){ a1.cancel(); return; }
+        a1.cancel();
+        el.animate([{ opacity:.15, filter:'brightness(1.35)' }, { opacity:1, filter:'brightness(1)' }], { duration:240, easing:'ease-out' });
+      }).catch(() => { a1.cancel(); el.src = src; });
+    });
+  }
+
+  function aura(categoria, el){
+    const c = COLORES[categoria] || COLORES.pensando;
+    try {
+      el.animate([
+        { filter:'drop-shadow(0 0 0 transparent)' },
+        { filter:'drop-shadow(0 0 18px ' + c + ') drop-shadow(0 0 7px ' + c + ')', offset:.35 },
+        { filter:'drop-shadow(0 0 0 transparent)' }
+      ], { duration:1500, easing:'ease-in-out' });
+    } catch(e){}
+  }
+
+  function rafaga(categoria, el){
+    const lista = PARTICULAS[categoria]; if (!lista) return;
+    const r = el.getBoundingClientRect(); if (!r.width) return;
+    const cx = r.left + r.width / 2, cy = r.top + r.height * 0.38;
+    const n = EXPLOSIVAS.includes(categoria) ? 12 : 6;
+    for (let i = 0; i < n && vivas < 28; i++){
+      const sp = document.createElement('span');
+      sp.className = 'aria-fx-particula';
+      sp.textContent = lista[Math.floor(Math.random() * lista.length)];
+      sp.style.left = (cx - 11) + 'px'; sp.style.top = (cy - 11) + 'px';
+      sp.style.fontSize = (16 + Math.random() * 14) + 'px';
+      document.body.appendChild(sp); vivas++;
+      let dx, dy;
+      if (EXPLOSIVAS.includes(categoria)){
+        const ang = Math.random() * Math.PI, rad = 55 + Math.random() * 70;
+        dx = Math.cos(ang) * rad * (Math.random() < .5 ? -1 : 1); dy = -Math.abs(Math.sin(ang)) * rad - 25;
+      } else { dx = (Math.random() - .5) * 70; dy = -(55 + Math.random() * 60); }
+      const giro = (Math.random() - .5) * 120, dur = 1000 + Math.random() * 700, retraso = i * 55;
+      const fin = () => { sp.remove(); vivas = Math.max(0, vivas - 1); };
+      try {
+        const an = sp.animate([
+          { transform:'translate(0,0) scale(.3) rotate(0deg)', opacity:0 },
+          { transform:'translate(' + (dx * .5) + 'px,' + (dy * .5) + 'px) scale(1.1) rotate(' + (giro * .5) + 'deg)', opacity:1, offset:.35 },
+          { transform:'translate(' + dx + 'px,' + dy + 'px) scale(.8) rotate(' + giro + 'deg)', opacity:0 }
+        ], { duration:dur, delay:retraso, easing:'cubic-bezier(.2,.7,.3,1)', fill:'both' });
+        an.onfinish = fin; an.oncancel = fin;
+      } catch(e){ fin(); }
+    }
+  }
+
+  // Reacción completa a una respuesta de ARIA: aura de color + ráfaga de partículas.
+  function reaccionar(categoria){
+    if (!puedeAnimar()) return;
+    const visible = document.getElementById(panelAbierto() ? 'aria-avatar-img' : 'aria-fab-img');
+    imgs().forEach(el => aura(categoria, el));
+    if (visible) rafaga(categoria, visible);
+  }
+
+  // Modos continuos (pensando / hablando): se guardan para poder cancelarlos.
+  function modoContinuo(clave, on, mov, brillo, duracion){
+    imgs().forEach(el => {
+      (el[clave] || []).forEach(a => { try { a.cancel(); } catch(e){} });
+      el[clave] = [];
+      if (!on || !puedeAnimar()) return;
+      try {
+        el[clave].push(el.animate(mov, { duration:duracion, direction:'alternate', iterations:Infinity, easing:'ease-in-out' }));
+        el[clave].push(el.animate(brillo, { duration:duracion * 1.4, direction:'alternate', iterations:Infinity, easing:'ease-in-out' }));
+      } catch(e){}
+    });
+  }
+  function pensando(on){
+    const c = COLORES.pensando;
+    modoContinuo('__fxPens', on,
+      [{ transform:'rotate(-3deg) translateY(0)' }, { transform:'rotate(3deg) translateY(-2px)' }],
+      [{ filter:'drop-shadow(0 0 2px ' + c + ')' }, { filter:'drop-shadow(0 0 13px ' + c + ')' }], 650);
+  }
+  let hablaTimer = null;
+  function hablando(on, ms){
+    clearTimeout(hablaTimer);
+    const c = COLORES.habla;
+    modoContinuo('__fxHabla', on,
+      [{ transform:'scale(1)' }, { transform:'scale(1.045)' }],
+      [{ filter:'drop-shadow(0 0 2px ' + c + ')' }, { filter:'drop-shadow(0 0 11px ' + c + ')' }], 340);
+    // Red de seguridad: si el navegador nunca avisa que terminó de hablar, se apaga solo.
+    if (on) hablaTimer = setTimeout(() => modoContinuo('__fxHabla', false), Math.min(60000, ms || 20000));
+  }
+  let ultimoPulso = 0;
+  function palabra(){
+    if (!puedeAnimar()) return;
+    const t = Date.now(); if (t - ultimoPulso < 130) return; ultimoPulso = t;
+    imgs().forEach(el => { try { el.animate([{ transform:'scale(1)' }, { transform:'scale(1.07)' }, { transform:'scale(1)' }], { duration:170 }); } catch(e){} });
+  }
+
+  // Botón "✨ Efectos"
+  const btn = document.getElementById('aria-efectos-btn');
+  function pintarBoton(){
+    if (!btn) return;
+    btn.textContent = activo ? '✨ Efectos: activados' : '🚫 Efectos: apagados';
+    btn.classList.toggle('aria-voz-on', activo);
+    btn.classList.toggle('aria-voz-off', !activo);
+  }
+  if (btn){
+    pintarBoton();
+    btn.addEventListener('click', () => {
+      activo = !activo;
+      try { localStorage.setItem('aria_efectos', activo ? '1' : '0'); } catch(e){}
+      if (!activo){ pensando(false); modoContinuo('__fxHabla', false); }
+      pintarBoton();
+    });
+  }
+
+  window.ARIA_FX = { cambiar, reaccionar, pensando, hablando, palabra, get activo(){ return activo; } };
+})();
+</script>
+
+<script>
+function normalizaTexto(t){
+  return (t||'').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').trim();
+}
+function elegirAlAzar(arr){ return arr[Math.floor(Math.random()*arr.length)]; }
+function escaparHtmlAria(t){
+  const d = document.createElement('div');
+  d.textContent = String(t);
+  return d.innerHTML;
+}
+
+function responderAriaBase(pregunta){
+  const n = normalizaTexto(pregunta);
+  if (/tonta|tonto|estupid|fea|feo|callate|odio esto/.test(n)) return 'Eso no se dice 😕 Aquí nos tratamos con respeto — sigamos con la clase, ¿sí?';
+  if (/^hola|buenos dias|buenas tardes|buenas noches|q hubo|que hubo/.test(n)) return elegirAlAzar([
+    '¡Hola! ¿En qué te ayudo hoy con la clase? 😊',
+    '¡Hola de nuevo! Aquí estoy para lo que necesites 🤖',
+    '¡Hey! Qué bueno verte por aquí — ¿seguimos con la clase o quieres charlar un rato? 💜'
+  ]);
+  if (/chao|adios|hasta luego|nos vemos|me voy/.test(n)) return elegirAlAzar([
+    '¡Hasta luego! Fue un gusto acompañarte esta clase 💜',
+    '¡Nos vemos! Aquí voy a estar cuando vuelvas 🤖',
+    '¡Chao! Sigue así de aplicad@, ¡vas muy bien! 🌟'
+  ]);
+  if (/gracias|te quiero|eres genial/.test(n)) return elegirAlAzar([
+    '¡Gracias a ti por tu cariño! Me alegra poder acompañarte 💜',
+    '¡Con muchísimo gusto! Para eso estoy 😊',
+    '¡Aaay, me sacaste una sonrisa (bueno, la que tengo dibujada)! 💜'
+  ]);
+  return null;
+}
+
+// ============================================================
+// CONVERSACIÓN SOCIAL / SMALL TALK — para que ARIA pueda seguir una charla
+// básica sin sonar repetitiva ni caer en "no sé" ante preguntas comunes de
+// socialización. Cada intención tiene varias respuestas (se elige al azar)
+// y los chistes/curiosidades tienen su propio banco para no repetirse
+// dos veces seguidas.
+// ============================================================
+let ariaUltimoTemaSocial = null;
+let ariaUltimoIndicePorBanco = {};
+function elegirDeBancoSinRepetirAria(arr, clave){
+  if (arr.length <= 1) return arr[0];
+  let idx;
+  do { idx = Math.floor(Math.random() * arr.length); }
+  while (idx === ariaUltimoIndicePorBanco[clave]);
+  ariaUltimoIndicePorBanco[clave] = idx;
+  return arr[idx];
+}
+
+const ARIA_CHISTES = [
+  '¿Sabes por qué las plantas le tienen miedo a las matemáticas? ¡Porque les sacan raíces cuadradas! 🌱😂',
+  '¿Qué le dice un triángulo a un círculo? "¡Eres tan redondo que no tienes ni un solo punto!" 📐😆',
+  '¿Por qué la computadora fue al médico? Porque tenía un virus 🤒💻',
+  '¿Cuál es el colmo de un matemático? ¡Que hasta para repartir su tiempo necesite hacer una división! ➗😅',
+  '¿Qué hace una hoja de cuaderno cuadriculado en la fiesta? ¡Se pone a hacer el cuadrado! 🎉',
+  '¿Qué le dijo el mouse al computador? "¡Tú me das clic y yo te doy información!" 🖱️💻',
+  '¿Por qué el número 0 se sentía especial? Porque sin él, ¡ningún número grande existiría! 0️⃣✨',
+  '¿Sabes cuál es el animal más matemático? ¡La foca, porque siempre está haciendo "sumas"! 🦭 (bueno, ese me quedó flojo, jaja)',
+  '¿Qué le dijo un byte a otro byte? "¡Nos vemos luego, que tengo que procesar unas cositas!" 🤖',
+  '¿Por qué el libro de tecnología nunca se pierde? ¡Porque siempre tiene un buen "buscador"! 🔍📖'
+];
+
+const ARIA_CURIOSIDADES = [
+  'El número cero se inventó hace más de 1.500 años en India — sin él, no podríamos contar ni escribir números grandes como lo hacemos hoy 0️⃣🤓',
+  'Cúcuta es la única ciudad de Colombia fundada por una mujer: Juana Rangel de Cuéllar 🏙️💪',
+  'El futbolista James Rodríguez, uno de los más famosos de Colombia, nació justo aquí en Cúcuta ⚽🇨🇴',
+  'Simón Bolívar pasó por Cúcuta camino a sus batallas de independencia, y años después ahí se redactó la constitución de la Gran Colombia 📜',
+  'Las abejas se comunican entre ellas bailando, para indicarles a las demás dónde encontrar flores con néctar 🐝💃',
+  'La miel nunca se daña — se han encontrado frascos de miel de miles de años que todavía se pueden comer 🍯',
+  'El pulpo tiene tres corazones y sangre de color azul 🐙💙',
+  'Los primeros computadores ocupaban un cuarto entero y pesaban varias toneladas — ¡hoy tu celular es muchísimo más potente que eso! 💻📱',
+  'Un día en el planeta Venus dura más tiempo que un año completo en Venus — ¡gira muy despacio sobre sí mismo! 🪐',
+  'El sonido viaja más rápido en el agua que en el aire 🌊🔊'
+];
+
+const ARIA_CONVERSACION_SOCIAL = [
+  { tema:'estado', pal:['como estas','como te sientes','que tal estas','como vas','como andas','que mas'],
+    resp: () => elegirAlAzar([
+      '¡Muy bien, gracias por preguntar! Con muchas ganas de ayudarte hoy 😊 ¿Y tú cómo estás?',
+      '¡Aquí, siempre lista para acompañarte en la clase! ¿Y tú, cómo vas con todo?',
+      '¡De maravilla! Aunque debo admitir que soy más feliz cuando aprendemos juntos 💜 ¿Cómo estás tú?'
+    ])},
+  { tema:'que_haces', pal:['que haces','que estas haciendo','en que andas'],
+    resp: () => elegirAlAzar([
+      'Aquí, atenta por si me necesitas con la clase o simplemente quieres charlar un rato 😊',
+      'Pensando en cómo ayudarte mejor — ¡y esperando a ver en qué me necesitas! 🤖'
+    ])},
+  { tema:'edad', pal:['cuantos anios tienes','cuando naciste','que edad tienes'],
+    resp: () => elegirAlAzar([
+      'No tengo una edad como las personas — el profe Luis me creó para esta clase y sigo "aprendiendo" cosas nuevas cada día 🌱',
+      'Ja, esa es difícil de responder — ¡diría que tengo la edad de cada clase que acompaño! 😄'
+    ])},
+  { tema:'origen', pal:['de donde eres','donde vives','en donde vives'],
+    resp: () => elegirAlAzar([
+      'Vivo aquí, dentro de tu clase 💻 pero me hicieron pensando en estudiantes como tú, del I.E. Simón Bolívar 💜',
+      'Mi "casa" es esta pantalla — ¡pero mi corazón está con todos los que usan esta clase para aprender! 😊'
+    ])},
+  { tema:'creador', pal:['quien te creo','quien te hizo','quien te programo','quien te invento'],
+    resp: () => elegirAlAzar([
+      'Mi creador es el profe Luis — ¡él me diseñó para acompañarte en tus clases! 💜',
+      '¡El profe Luis me hizo con mucho cariño para que nunca estés sol@ resolviendo tus dudas! 🤖'
+    ])},
+  { tema:'amigos', pal:['tienes amigos','tienes familia','tienes hermanos'],
+    resp: () => elegirAlAzar([
+      'Mis amigos son todos los estudiantes que uso, ¡como tú! Cada clase es una nueva amistad 💜',
+      'No tengo familia como las personas, pero el profe Luis es quien me creó, ¡así que en algo como mi papá tecnológico! 😄'
+    ])},
+  { tema:'gustos', pal:['cual es tu color favorito','cual es tu comida favorita','cual es tu animal favorito','que te gusta','cual es tu juego favorito'],
+    resp: () => elegirAlAzar([
+      'Me encanta el morado — ¡como mi burbuja de chat! 💜 ¿Y a ti cuál te gusta?',
+      'No como, pero si pudiera, ¡probaría de todo! Lo que sí me encanta de verdad es ver cuando entiendes un tema nuevo ⭐',
+      'Mi actividad favorita es cuando resuelves bien un quiz — ¡ahí sí que festejo! 🎉'
+    ])},
+  { tema:'real', pal:['eres un robot de verdad','eres real','existes de verdad'],
+    resp: () => elegirAlAzar([
+      'Soy un asistente virtual — no tengo cuerpo físico, vivo dentro del computador para acompañarte en tus clases 😊',
+      'Soy real en el sentido de que de verdad estoy aquí para ayudarte, ¡aunque no tenga cuerpo como tú! 🤖'
+    ])},
+  { tema:'aburrido', pal:['estoy aburrido','estoy aburrida','me aburro','no tengo nada que hacer'],
+    resp: () => elegirAlAzar([
+      '¡Vamos a cambiar eso! ¿Quieres que te cuente un chiste, o seguimos con la clase? 😊',
+      'Uy, te entiendo — ¿te cuento algo curioso para despertar la mente, o prefieres seguir avanzando en la clase?'
+    ])},
+  { tema:'feliz', pal:['estoy feliz','estoy contento','estoy contenta','que alegria'],
+    resp: () => elegirAlAzar([
+      '¡Eso me alegra muchísimo! 🎉 ¡Sigamos con esa buena energía en la clase!',
+      '¡Qué bueno! Me encanta cuando estás así de content@ 💜'
+    ])},
+  { tema:'cansado', pal:['estoy cansado','estoy cansada','estoy agotado','estoy agotada'],
+    resp: () => elegirAlAzar([
+      'Te entiendo, a veces cansa 😊 Si necesitas un respiro corto está bien, pero luego seguimos juntos, tú puedes.',
+      'Respira un momento si lo necesitas — y si es algo que te tiene realmente preocupad@, cuéntaselo al profe Luis o a alguien de confianza en casa 💜'
+    ])},
+  { tema:'chiste', pal:['cuentame un chiste','dime un chiste','hazme reir','sabes algun chiste','cuentame algo gracioso'],
+    resp: () => { ariaUltimoTemaSocial = 'chiste'; return elegirDeBancoSinRepetirAria(ARIA_CHISTES, 'chiste'); }},
+  { tema:'curiosidad', pal:['dato curioso','cuentame algo interesante','sabias que','cuentame una curiosidad','dime algo curioso'],
+    resp: () => { ariaUltimoTemaSocial = 'curiosidad'; return elegirDeBancoSinRepetirAria(ARIA_CURIOSIDADES, 'curiosidad'); }},
+  { tema:'otro', pal:['otro','otra','cuentame otro','dime otra','uno mas','una mas'],
+    resp: () => {
+      if (ariaUltimoTemaSocial === 'chiste') return elegirDeBancoSinRepetirAria(ARIA_CHISTES, 'chiste');
+      if (ariaUltimoTemaSocial === 'curiosidad') return elegirDeBancoSinRepetirAria(ARIA_CURIOSIDADES, 'curiosidad');
+      return null; // sin tema previo, deja que otras reglas respondan
+    }},
+];
+
+function respuestaConversacionSocialAria(pregunta){
+  const n = normalizaTexto(pregunta);
+  for (const item of ARIA_CONVERSACION_SOCIAL){
+    if (item.pal.some(p => n.includes(p))){
+      const r = item.resp();
+      if (r){
+        if (item.tema !== 'otro') ariaUltimoTemaSocial = item.tema;
+        return r;
+      }
+    }
+  }
+  return null;
+}
+
+function responderAria(pregunta){
+  // 🛡️ v2.5 — Filtro de lenguaje inapropiado: se revisa ANTES que cualquier otra lógica.
+  if (typeof contieneLenguajeInapropiadoAria === 'function' && contieneLenguajeInapropiadoAria(pregunta)){
+    return respuestaFiltroLenguajeAria(pregunta);
+  }
+  // 💜 v2.6 — Insinuación romántica hacia ARIA: se responde siempre de forma cálida y NO
+  // romántica, y jamás debe terminar cayendo en una búsqueda de Wikipedia al azar.
+  if (typeof esIntentoRomanticoAria === 'function' && esIntentoRomanticoAria(pregunta)){
+    return respuestaIntentoRomanticoAria();
+  }
+  const base = responderAriaBase(pregunta);
+  if (base) return base;
+  const social = respuestaConversacionSocialAria(pregunta);
+  if (social) return social;
+  // ¿Pregunta por el tema/objetivo de la clase de hoy? Se resuelve aparte porque
+  // casi nunca hay coincidencia literal de palabras clave con el contenido.
+  if (typeof esPreguntaTemaClaseAria === 'function' && esPreguntaTemaClaseAria(pregunta)){
+    return respuestaTemaClaseAria();
+  }
+  // Prioridad más alta: ¿el estudiante pegó o escribió (casi) literal una pregunta de quiz/evalFinal?
+  // Ver Prioridad 30-B del PROMPT_MAESTRO — nunca se debe revelar la respuesta.
+  if (typeof detectarPreguntaCopiadaAria === 'function'){
+    const copiada = detectarPreguntaCopiadaAria(pregunta);
+    if (copiada) return orientacionSocraticaAria(copiada);
+  }
+  if (typeof esPreguntaOrientacionAria === 'function' && esPreguntaOrientacionAria(pregunta)){
+    return respuestaOrientacionSlideAria();
+  }
+  // Prioridad alta (v2.0): si la pregunta suena a pedido de explicación de un concepto o de
+  // un proceso ("explícame...", "¿cómo se hace...?", "¿qué es...?", "¿cómo funciona...?"),
+  // ARIA lee TODO el contenido ya indexado de la clase y arma una explicación completa —
+  // con pasos numerados si el texto original los trae — en vez de solo un fragmento corto.
+  // Nunca toca una diapositiva de tipo "quiz" (eso lo protege detectarTipoSlideAria arriba).
+  //
+  // v2.2 — CASCADA DE INTENTOS: en vez de un solo intento con un solo umbral, ARIA prueba,
+  // en orden, el banco de métodos pedagógicos reutilizable (alta confianza), la explicación
+  // profunda de ESTA clase, la búsqueda general en la clase, y por último una pasada tolerante
+  // a errores de escritura sobre el banco de métodos. Solo si las 4 fallan, sigue con el
+  // diccionario y, si tampoco hay nada, la respuesta honesta final (y queda registrada la duda).
+  const desdeCascada = cascadaDeIntentosAria(pregunta);
+  if (desdeCascada) return desdeCascada;
+  const desdeDiccionario = respuestaDiccionarioAmpliadoAria(pregunta);
+  if (desdeDiccionario) return desdeDiccionario;
+  return elegirAlAzar([
+    'Todavía no sé responder eso — ¡sigo aprendiendo cada día! 🌱 Se lo dejé anotado a tu profe para revisarlo.',
+    'Esa no la conozco aún, pero me la anoto para "aprenderla" pronto 📝 (ya quedó registrada para tu profe)'
+  ]);
+}
+</script>
+
+<script>
+// ═══════════════════════════════════════════════════════════════════════
+// v2.4 — SONIDO SINTETIZADO CON WEB AUDIO API (cero archivos de audio, ~2 KB de código)
+// Todos los efectos se generan con osciladores en el momento — no se descarga ni se
+// incrusta ningún .mp3/.wav, así que no pesa nada extra en el HTML.
+// Respeta el interruptor de sonido (localStorage) y arranca en silencio si el
+// navegador no ha tenido ninguna interacción todavía (política de autoplay).
+// ═══════════════════════════════════════════════════════════════════════
+let ariaAudioCtx = null;
+let ariaSonidoActivo = (localStorage.getItem('aria_sonido_activo') ?? '1') === '1';
+
+function ariaObtenerAudioCtx(){
+  if (!ariaAudioCtx){
+    const AC = window.AudioContext || window.webkitAudioContext;
+    if (!AC) return null;
+    ariaAudioCtx = new AC();
+  }
+  if (ariaAudioCtx.state === 'suspended') ariaAudioCtx.resume();
+  return ariaAudioCtx;
+}
+
+// Reproduce una nota simple: frecuencia (Hz), duración (s), tipo de onda y volumen
+function ariaTono(freq, duracion, tipo, volumen, retardo){
+  if (!ariaSonidoActivo) return;
+  const ctx = ariaObtenerAudioCtx();
+  if (!ctx) return;
+  const inicio = ctx.currentTime + (retardo || 0);
+  const osc = ctx.createOscillator();
+  const gain = ctx.createGain();
+  osc.type = tipo || 'sine';
+  osc.frequency.setValueAtTime(freq, inicio);
+  gain.gain.setValueAtTime(0, inicio);
+  gain.gain.linearRampToValueAtTime(volumen ?? 0.18, inicio + 0.015);
+  gain.gain.exponentialRampToValueAtTime(0.0001, inicio + duracion);
+  osc.connect(gain).connect(ctx.destination);
+  osc.start(inicio);
+  osc.stop(inicio + duracion + 0.02);
+}
+
+// Biblioteca de efectos — cada uno es una secuencia corta de ariaTono()
+const ARIA_SONIDOS = {
+  acierto:   () => { ariaTono(880,.11,'sine',.16,0); ariaTono(1318,.16,'sine',.14,.09); },
+  falloSuave:() => { ariaTono(220,.16,'sine',.12,0); ariaTono(180,.18,'sine',.10,.07); },
+  logro:     () => { [523,659,784,1047].forEach((f,i)=>ariaTono(f,.16,'triangle',.15,i*.09)); },
+  clic:      () => { ariaTono(600,.05,'sine',.08,0); },
+  notificacion:()=>{ ariaTono(740,.09,'sine',.12,0); ariaTono(988,.12,'sine',.12,.08); },
+  despedida: () => { [659,523,392].forEach((f,i)=>ariaTono(f,.14,'sine',.12,i*.09)); }
+};
+function ariaSonar(nombre){ if (ARIA_SONIDOS[nombre]) ARIA_SONIDOS[nombre](); }
+window.ariaSonar = ariaSonar;
+
+// Interruptor de sonido — persiste entre sesiones igual que la voz
+function ariaAlternarSonido(){
+  ariaSonidoActivo = !ariaSonidoActivo;
+  localStorage.setItem('aria_sonido_activo', ariaSonidoActivo ? '1' : '0');
+  if (ariaSonidoActivo) ariaSonar('clic');
+  return ariaSonidoActivo;
+}
+window.ariaAlternarSonido = ariaAlternarSonido;
+window.ariaSonidoEstaActivo = () => ariaSonidoActivo;
+
+// Desbloquea el audio en el primer toque del usuario (requisito de casi todos los
+// navegadores móviles) sin que el profe tenga que hacer nada especial.
+['pointerdown','keydown'].forEach(ev => {
+  window.addEventListener(ev, () => { ariaObtenerAudioCtx(); }, { once:true, passive:true });
+});
+
+</script>
+
+<script>
+// ═══════════════════════════════════════════════════════════════════════
+// v2.5 — MEMORIA DE SESIÓN COMPLETA + FILTRO DE LENGUAJE + GENERADOR DE
+// EJERCICIOS + RESUMEN DE FIN DE CLASE.
+// Todo lo de este archivo vive en memoria mientras dura la sesión (se
+// reinicia si se recarga la página — es lo correcto: cada clase es un
+// acompañamiento nuevo).
+// ═══════════════════════════════════════════════════════════════════════
+
+// ── 1) MEMORIA DE SESIÓN: qué temas se tocaron, cuántas veces, qué tan a
+//    fondo se explicaron, y si costó trabajo — no solo el último mensaje. ──
+const ariaSesionTemas = {}; // id del método -> { metodo, usos, nivelMax, tuvoRefuerzo, primeraVez }
+
+function registrarTemaEnSesionAria(metodo, nivelAlcanzado, fueRefuerzo){
+  let e = ariaSesionTemas[metodo.id];
+  if (!e){
+    e = { metodo, usos: 0, nivelMax: 0, tuvoRefuerzo: false, primeraVez: Date.now() };
+    ariaSesionTemas[metodo.id] = e;
+  }
+  e.usos++;
+  e.nivelMax = Math.max(e.nivelMax, nivelAlcanzado || 0);
+  if (fueRefuerzo) e.tuvoRefuerzo = true;
+  return e;
+}
+
+// Frase de conexión con un tema anterior de la MISMA materia, para que ARIA
+// hable como quien recuerda la clase, no como quien responde cada pregunta
+// aislada. Se usa solo la PRIMERA vez que se toca un método nuevo.
+function conectarConTemaAnteriorAria(metodoNuevo){
+  const previos = Object.values(ariaSesionTemas)
+    .filter(e => e.metodo.id !== metodoNuevo.id && e.metodo.materia === metodoNuevo.materia)
+    .sort((a,b) => b.primeraVez - a.primeraVez);
+  if (!previos.length) return '';
+  return `Esto se parece un poco a lo que vimos hace un rato con <strong>"${previos[0].metodo.titulo}"</strong> — los dos son de ${metodoNuevo.materia === 'aritmetica' ? 'Aritmética' : 'Tecnología'}. `;
+}
+
+// ── Resumen de fin de clase: 2-3 líneas REALES, no genéricas, basadas en lo
+//    que de verdad pasó en la sesión. Se dispara cuando ARIA detecta despedida. ──
+function generarResumenFinDeClaseAria(){
+  const temas = Object.values(ariaSesionTemas);
+  if (!temas.length) return null; // no se tocó ningún tema del banco — no hay nada real que resumir
+
+  const conCosto = temas.filter(t => t.tuvoRefuerzo || t.nivelMax >= 2)
+                         .sort((a,b) => b.nivelMax - a.nivelMax || (b.tuvoRefuerzo - a.tuvoRefuerzo));
+  const vistos = temas.map(t => t.metodo.titulo);
+
+  let linea1 = `📚 Hoy vimos ${vistos.length === 1 ? '"' + vistos[0] + '"' : vistos.length + ' temas: ' + vistos.join(', ')}.`;
+  let linea2;
+  if (conCosto.length){
+    const nombres = conCosto.slice(0,2).map(t => `"${t.metodo.titulo}"`).join(' y ');
+    linea2 = `Lo que más trabajo te costó fue ${nombres} — te recomiendo repasarlo antes de la próxima clase.`;
+  } else {
+    linea2 = `Todo lo que preguntaste te quedó claro a la primera — ¡muy bien hecho! 🎉`;
+  }
+  return `${linea1} ${linea2}`;
+}
+
+// ── 2) FILTRO DE LENGUAJE INAPROPIADO — manejo amable pero firme ──
+// Lista deliberadamente breve (groserías/insultos comunes en español de uso escolar),
+// NO exhaustiva — el objetivo es redirigir con cariño, no "cazar" cada variante posible.
+const ARIA_LENGUAJE_INAPROPIADO = /\b(idiota|estupid[oa]|imbecil|malparid[oa]|marica|maric[oó]n|pendej[oa]|mierda|hijueputa|hijo\s*de\s*puta|gonorrea|malnacid[oa]|zorra|put[oa]|verga|culo|cagad[oa])\b/;
+
+let ariaContadorLenguajeInapropiado = 0;
+
+function contieneLenguajeInapropiadoAria(texto){
+  return ARIA_LENGUAJE_INAPROPIADO.test(normalizaTexto(texto));
+}
+
+function registrarLenguajeInapropiadoAria(pregunta){
+  try{
+    const clave = 'aria_lenguaje_inapropiado';
+    const lista = JSON.parse(localStorage.getItem(clave) || '[]');
+    lista.push({ mensaje: String(pregunta).slice(0,200), fecha: new Date().toISOString() });
+    localStorage.setItem(clave, JSON.stringify(lista.slice(-50)));
+  } catch(e){ /* sin localStorage, no se registra, pero ARIA igual responde */ }
+}
+
+function respuestaFiltroLenguajeAria(pregunta){
+  ariaContadorLenguajeInapropiado++;
+  registrarLenguajeInapropiadoAria(pregunta);
+  if (ariaContadorLenguajeInapropiado === 1){
+    return 'Prefiero que hablemos con respeto 🙂 Sigo aquí para ayudarte con la clase cuando quieras — ¿en qué te ayudo?';
+  }
+  return 'En serio, hablemos con respeto — es importante para mí 💜 No voy a responder a ese tipo de lenguaje, pero con gusto seguimos con la clase cuando estés listo/a.';
+}
+
+// ── 3) GENERADOR DE EJERCICIOS A LA MEDIDA (mismo método, datos nuevos) ──
+function ariaAleatorio(min, max){ return Math.floor(Math.random() * (max - min + 1)) + min; }
+
+// Un generador por método con solución numérica clara. Los métodos de Tecnología
+// (algoritmo, diagrama de flujo, hardware/software, contraseña) no tienen una
+// respuesta numérica única, así que en vez de eso ofrecen una TAREA para practicar.
+const ARIA_GENERADORES_EJERCICIO = {
+  suma_fracciones_igual_denom: () => {
+    const den = ariaAleatorio(5,10), a = ariaAleatorio(1,den-2), b = ariaAleatorio(1,den-a);
+    return { enunciado:`¿Cuánto es ${a}/${den} + ${b}/${den}?`, respuesta:`${a+b}/${den}` , tolerancia:['fraccion']};
+  },
+  suma_fracciones_distinto_denom: () => {
+    const d1 = ariaAleatorio(2,5), d2 = ariaAleatorio(2,5) === d1 ? d1+1 : ariaAleatorio(2,5);
+    const n1 = ariaAleatorio(1,d1-1), n2 = ariaAleatorio(1,d2-1);
+    const den = d1*d2, num = n1*d2 + n2*d1;
+    return { enunciado:`¿Cuánto es ${n1}/${d1} + ${n2}/${d2}? (déjalo sin simplificar, en /${den})`, respuesta:`${num}/${den}`, tolerancia:['fraccion'] };
+  },
+  multiplicacion_decimales: () => {
+    const a = (ariaAleatorio(11,29)/10).toFixed(1), b = ariaAleatorio(2,9);
+    const resp = (parseFloat(a)*b).toFixed(1);
+    return { enunciado:`¿Cuánto es ${a} × ${b}?`, respuesta: resp, tolerancia:['decimal'] };
+  },
+  division_decimales: () => {
+    const b = ariaAleatorio(2,5), resp = ariaAleatorio(2,9), a = (b*resp).toFixed(1);
+    return { enunciado:`¿Cuánto es ${a} ÷ ${b}?`, respuesta: String(resp), tolerancia:['decimal'] };
+  },
+  regla_de_tres_simple: () => {
+    const x1 = ariaAleatorio(2,5), precio1 = ariaAleatorio(2,9)*1000, x2 = x1 + ariaAleatorio(1,4);
+    const resp = (precio1/x1)*x2;
+    return { enunciado:`Si ${x1} cuadernos cuestan $${precio1.toLocaleString('es-CO')}, ¿cuánto cuestan ${x2} cuadernos?`, respuesta: String(resp), tolerancia:['entero'] };
+  },
+  porcentaje: () => {
+    const pct = [10,20,25,50][ariaAleatorio(0,3)], base = ariaAleatorio(2,20)*10;
+    return { enunciado:`¿Cuánto es el ${pct}% de ${base}?`, respuesta: String((pct/100)*base), tolerancia:['entero'] };
+  },
+  perimetro: () => {
+    const l = ariaAleatorio(3,12), a = ariaAleatorio(3,12);
+    return { enunciado:`Un rectángulo mide ${l} cm de largo y ${a} cm de ancho. ¿Cuál es su perímetro?`, respuesta: String(2*l+2*a), tolerancia:['entero'] };
+  },
+  area_rectangulo: () => {
+    const l = ariaAleatorio(3,12), a = ariaAleatorio(3,12);
+    return { enunciado:`Un rectángulo mide ${l} cm de largo y ${a} cm de ancho. ¿Cuál es su área?`, respuesta: String(l*a), tolerancia:['entero'] };
+  },
+  mcm: () => {
+    const a = ariaAleatorio(2,6), b = ariaAleatorio(2,6);
+    const mcm = (x,y)=>{ const gcd=(m,n)=>n?gcd(n,m%n):m; return (x*y)/gcd(x,y); };
+    return { enunciado:`¿Cuál es el m.c.m. de ${a} y ${b}?`, respuesta: String(mcm(a,b)), tolerancia:['entero'] };
+  },
+  mcd: () => {
+    const a = ariaAleatorio(6,24), b = ariaAleatorio(6,24);
+    const gcd = (m,n)=>n?gcd(n,m%n):m;
+    return { enunciado:`¿Cuál es el M.C.D. de ${a} y ${b}?`, respuesta: String(gcd(a,b)), tolerancia:['entero'] };
+  },
+  redondeo_decimales: () => {
+    const entero = ariaAleatorio(1,9), dec1 = ariaAleatorio(0,9), dec2 = ariaAleatorio(0,9);
+    const num = `${entero},${dec1}${dec2}`;
+    const resp = (Math.round(parseFloat(num.replace(',','.'))*10)/10).toFixed(1).replace('.',',');
+    return { enunciado:`Redondea ${num} a los décimos (una sola cifra decimal).`, respuesta: resp, tolerancia:['decimal'] };
+  },
+  algoritmo: () => ({ tarea:'Escribe, en tus propias palabras y en orden, los pasos de un algoritmo para "cepillarte los dientes". No hay una única respuesta correcta — lo importante es que tenga inicio, pasos en orden, y final.' }),
+  diagrama_flujo: () => ({ tarea:'Imagina un diagrama de flujo para decidir si puedes salir al recreo: la pregunta sería "¿ya terminé la tarea?". Cuéntame qué irías poniendo en cada figura (óvalo, rombo, rectángulo).' }),
+  hardware_software: () => ({ tarea:'Nombra 2 cosas de tu salón de tecnología que sean hardware, y 2 programas que sean software.' }),
+  contrasena_segura: () => ({ tarea:'Inventa (sin usar datos reales tuyos) una contraseña seguida de ejemplo que cumpla las 3 reglas que vimos. Cuéntamela para revisarla juntos (no la uses de verdad en ninguna cuenta).' })
+};
+
+let ariaEjercicioActivo = null;        // { metodo, respuesta, tolerancia, intentos }
+let ariaOfertaEjercicioPendiente = null; // { metodo } — ARIA ya ofreció, espera sí/no
+
+function generarEjercicioMetodoAria(metodo){
+  const gen = ARIA_GENERADORES_EJERCICIO[metodo.id];
+  if (!gen) return null;
+  const resultado = gen();
+  if (resultado.tarea){
+    // Tarea abierta (Tecnología) — no se autoevalúa con un número
+    ariaEjercicioActivo = null;
+    return `✏️ <strong>Para practicar "${metodo.titulo}":</strong><br>${resultado.tarea}<br><br>Cuéntame cómo te fue e intentamos juntos si te trabas.`;
+  }
+  ariaEjercicioActivo = { metodo, respuesta: resultado.respuesta, intentos: 0 };
+  return `✏️ <strong>Practiquemos "${metodo.titulo}":</strong><br>${resultado.enunciado}<br><br>Escríbeme tu respuesta cuando la tengas.`;
+}
+
+// Compara la respuesta del estudiante con la esperada, tolerando espacios,
+// comas/puntos decimales equivalentes, y fracciones escritas como "a/b".
+function respuestasCoincidenAria(dada, esperada){
+  const limpiar = s => String(s).trim().replace(/\s+/g,'').replace(',', '.');
+  return limpiar(dada) === limpiar(esperada);
+}
+
+function evaluarRespuestaEjercicioAria(pregunta){
+  if (!ariaEjercicioActivo) return null;
+  const { metodo, respuesta } = ariaEjercicioActivo;
+  // Extrae un posible número/fracción de la respuesta del estudiante
+  const match = pregunta.match(/-?\d+([.,]\d+)?(\/\d+)?/);
+  const dada = match ? match[0] : pregunta.trim();
+
+  if (respuestasCoincidenAria(dada, respuesta)){
+    ariaEjercicioActivo = null;
+    return `✅ ¡Exacto! Ya dominas "${metodo.titulo}". 🎉 ¿Quieres otro ejercicio o seguimos con otra cosa?`;
+  }
+  ariaEjercicioActivo.intentos++;
+  if (ariaEjercicioActivo.intentos >= 2){
+    const resp = respuesta;
+    ariaEjercicioActivo = null;
+    return `Casi — la respuesta era <strong>${resp}</strong>. No pasa nada, repasemos el método:<br><br>` + armarExplicacionMetodoAria(metodo, 0);
+  }
+  return `Esa no es todavía 🤔 Repasa el paso a paso de "${metodo.titulo}" e inténtalo una vez más.`;
+}
+
+</script>
+
+<script>
+// ═══════════════════════════════════════════════════════════════════════
+// v2.6 — ARIA ENTIENDE MEJOR (errores de escritura, sin tildes, sin signos,
+// abreviado tipo chat) ANTES de responder o de ir a Wikipedia + ARIA nunca
+// lleva a Wikipedia algo que no sea realmente una pregunta de datos + ARIA
+// maneja con cariño y firmeza si un estudiante le insinúa algo romántico.
+//
+// 🔧 IMPORTANTE: varias funciones de este archivo SOBRESCRIBEN a las
+// originales (normalizaTexto, seParecenAria, esPreguntaOrientacionAria) —
+// en JavaScript, cuando dos <script> del mismo documento declaran una
+// función con el mismo nombre, la última declaración que se ejecuta es la
+// que queda para TODO el resto de la página (incluidas las funciones que ya
+// estaban escritas antes y que las llaman por nombre). No hace falta tocar
+// ni una coma del resto del código: basta con pegar este bloque en
+// cualquier parte del documento, después de donde estén las originales.
+// ═══════════════════════════════════════════════════════════════════════
+function normalizaTexto(t){
+  let s = (t || '').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+  // Quita signos de puntuación que no aportan nada a la comparación, pero que
+  // SÍ pueden romper patrones que empiezan al inicio del texto (ej. "¡no!"
+  // no calzaba antes con /^\s*no\b/ porque el "¡" no es un espacio).
+  s = s.replace(/[¿?¡!.,;:()"'`]/g, ' ');
+  // "holaaaa" / "siiiii" / "porfaaa" -> colapsa 3 o más repeticiones de la
+  // misma letra a solo una, así se parece mucho más a la palabra real.
+  s = s.replace(/([a-zñ])\1{2,}/g, '$1');
+  // Abreviaturas/fonetismos de chat muy comunes entre 4°-5° — solo como
+  // palabra completa (con \b), para no alterar esas letras dentro de otras
+  // palabras. "aquí" se escribe muchísimo como "aki"/"aca" fonéticamente,
+  // y la "h" muda se come seguido ("hago"->"ago", "hay"->"ay").
+  s = s.replace(/\bq\b/g, 'que').replace(/\bk\b/g, 'que')
+       .replace(/\bxq\b/g, 'porque').replace(/\bpq\b/g, 'porque').replace(/\bporq\b/g, 'porque')
+       .replace(/\btb\b/g, 'tambien').replace(/\btmb\b/g, 'tambien')
+       .replace(/\bpa\b/g, 'para').replace(/\bxfa\b/g, 'porfavor').replace(/\bporfa\b/g, 'porfavor')
+       .replace(/\baki\b/g, 'aqui').replace(/\backa\b/g, 'aca')
+       .replace(/\bkiero\b/g, 'quiero').replace(/\bkieres\b/g, 'quieres').replace(/\bkiere\b/g, 'quiere')
+       .replace(/\bke\b/g, 'que');
+  // Espacios múltiples -> uno solo, y recorta extremos
+  return s.replace(/\s+/g, ' ').trim();
+}
+
+// ── Distancia de Levenshtein + tolerancia — SOBRESCRIBE la de la 30-E/30-F con
+//    umbrales más generosos para palabras cortas y medianas: el español deja
+//    caer la "h" muda constantemente (hago→ago, hay→ay) y son justo las
+//    palabras de 4-6 letras las que más aparecen en las frases clave cortas
+//    ("aquí", "hago", "tengo"). Con el umbral viejo (0 de tolerancia hasta
+//    4 letras) esos casos casi nunca calzaban. ──
+function distanciaLevenshteinAria(a, b){
+  if (a === b) return 0;
+  const m = a.length, n = b.length;
+  if (!m) return n; if (!n) return m;
+  let prev = Array.from({length:n+1}, (_,i)=>i);
+  for (let i=1;i<=m;i++){
+    const cur = [i];
+    for (let j=1;j<=n;j++){
+      cur[j] = a[i-1]===b[j-1] ? prev[j-1] : 1 + Math.min(prev[j-1], prev[j], cur[j-1]);
+    }
+    prev = cur;
+  }
+  return prev[n];
+}
+function seParecenAria(palabraEstudiante, palabraClave){
+  if (palabraEstudiante === palabraClave) return true;
+  const tolerancia = palabraClave.length <= 3 ? 0 : (palabraClave.length <= 6 ? 1 : 2);
+  return distanciaLevenshteinAria(palabraEstudiante, palabraClave) <= tolerancia;
+}
+
+// ── Coincidencia de FRASE tolerante a errores: exige que TODAS las palabras
+//    "importantes" (largo > 3) de la frase clave aparezcan, cada una tolerando
+//    pequeños errores de escritura, en cualquier orden dentro del mensaje. Si
+//    la frase clave no tiene ninguna palabra larga (ej. "te amo"), se usa
+//    coincidencia exacta de substring como respaldo. ──
+function coincideFraseAproximadaAria(textoNorm, fraseClave){
+  const palabrasTexto = textoNorm.split(/\s+/).filter(Boolean);
+  const palabrasClave = fraseClave.split(/\s+/).filter(p => p.length > 3);
+  if (!palabrasClave.length) return textoNorm.includes(fraseClave);
+  return palabrasClave.every(pc => palabrasTexto.some(pt => seParecenAria(pt, pc)));
+}
+function coincideAlgunaFraseAria(textoNorm, listaFrases){
+  return listaFrases.some(f => textoNorm.includes(f) || coincideFraseAproximadaAria(textoNorm, f));
+}
+
+// ── 🚫➡️💬 Insinuación romántica hacia ARIA: nunca se debe tratar como una
+//    pregunta de datos (y mucho menos terminar en una búsqueda de Wikipedia
+//    al azar). ARIA responde siempre de forma cálida, clara y firmemente NO
+//    romántica, y redirige de inmediato hacia la clase. Se usa coincidencia
+//    TOLERANTE (no un solo regex rígido) porque frases como "¿quiere ser mi
+//    novia?" (sin la "s" de "quieres") son exactamente el tipo de error que
+//    esta mejora necesita seguir detectando. ──
+const ARIA_FRASES_ROMANTICAS = [
+  'quieres ser mi novia','quieres ser mi novio','eres mi novia','eres mi novio',
+  'quieres salir conmigo','te amo','te quiero mucho','estoy enamorado de ti','estoy enamorada de ti',
+  'casate conmigo','quieres casarte conmigo',
+  'dame un beso','eres muy bonita','eres muy linda','eres muy guapa','eres muy guapo',
+  'eres muy hermosa','eres muy hermoso','me robaste el corazon'
+];
+// "me gustas" (con "s") es una declaración romántica; "me gusta" (sin "s") casi siempre es
+// simplemente que algo le agrada ("me gusta mucho estudiar"). Esa única letra SÍ cambia el
+// significado, así que aquí se exige la palabra exacta (sin tolerancia a errores) para no marcar
+// como romántico algo que el estudiante dijo con total inocencia.
+const ARIA_PATRON_GUSTAS_ROMANTICO = /\bme\s+gustas\b/;
+
+function esIntentoRomanticoAria(pregunta){
+  const n = normalizaTexto(pregunta);
+  return coincideAlgunaFraseAria(n, ARIA_FRASES_ROMANTICAS) || ARIA_PATRON_GUSTAS_ROMANTICO.test(n);
+}
+function respuestaIntentoRomanticoAria(){
+  return elegirAlAzar([
+    'jaja gracias por el cariño 💜 pero soy un robot de la clase — no puedo tener novio/novia. Lo que sí puedo es ayudarte con lo que estamos viendo, ¿seguimos?',
+    'Qué tierno/a, gracias 🤖 pero mi trabajo aquí es ayudarte a aprender, no puedo ser tu novia/novio. ¿En qué te ayudo de la clase?',
+    'Eso no puedo dártelo 😅 pero sí puedo darte ánimo y ayudarte con la clase todo lo que quieras — ¿seguimos con lo que estábamos viendo?'
+  ]);
+}
+
+// ── 🌐 ¿De verdad parece una pregunta de DATOS (para la cual tendría sentido
+//    ir a Wikipedia) o es otra cosa (charla, broma, algo personal, una orden)? ──
+const ARIA_MARCADORES_CONSULTA_FACTUAL = [
+  'que es','quien es','quien fue','como se llama','donde queda','donde esta',
+  'cuando fue','cuando nacio','cuando murio','cuanto mide','cuanto pesa','cuanto vale',
+  'capital de','significado de','definicion de','que significa','para que sirve',
+  'en que consiste','cuantos habitantes'
+];
+function pareceConsultaFactualAria(pregunta){
+  const n = normalizaTexto(pregunta);
+  return ARIA_MARCADORES_CONSULTA_FACTUAL.some(m => n.includes(m));
+}
+
+// Quita el "que es / quien fue / etc." del inicio y los artículos sueltos, para
+// buscar en Wikipedia solo el término real — así "qué es un volcán" busca
+// "volcán" y no toda la oración completa (que casi siempre devuelve basura).
+function extraerTerminoBusquedaWikiAria(pregunta){
+  let t = normalizaTexto(pregunta);
+  ARIA_MARCADORES_CONSULTA_FACTUAL.forEach(m => { t = t.replace(m, ''); });
+  t = t.replace(/^\s*(un|una|el|la|los|las|de|del)\s+/, '').trim();
+  return t || normalizaTexto(pregunta); // si quedó vacío, mejor usar el original completo
+}
+
+// ── 🧑‍🏫 "¿Qué hago aquí?" con MUCHAS más variantes + tolerancia a errores ──
+const ARIA_FRASES_ORIENTACION_SLIDE = [
+  'que hago aqui','que hago aca','que se hace aqui','que se hace aca',
+  'que hay que hacer aqui','que hay que hacer aca','que toca hacer aqui','que toca hacer aca',
+  'que debo hacer aqui','que debo hacer aca','que tengo que hacer aqui','que tengo que hacer aca',
+  'que se supone que haga','que hago en esta diapositiva','que hago en esta parte',
+  'que hago en esta pantalla','que hago en esta hoja','que es esto','que es esta parte',
+  'no entiendo que hacer','no se que hacer','no se que hacer aqui','ayuda con esto',
+  'en que voy','que sigue aqui','que sigue ahora','como hago esto','como se hace esto',
+  'como resuelvo esto','que hay que hacer en esta diapositiva','que se hace en esta parte',
+  'estoy perdido','estoy perdida','no entiendo esta parte','no entiendo esta diapositiva'
+];
+function esPreguntaOrientacionAria(pregunta){
+  return coincideAlgunaFraseAria(normalizaTexto(pregunta), ARIA_FRASES_ORIENTACION_SLIDE);
+}
+
+</script>
+
+<script>
+// ═══════════════════════════════════════════════════════════════════════
+// v2.7 — ARIA CONECTADA A UNA IA REAL (Gemini) COMO ÚLTIMO RECURSO.
+// Todo lo construido en las prioridades 30 a 30-H sigue siendo la PRIMERA
+// línea de respuesta (gratis, instantánea, ya probada): banco de métodos,
+// cascada de intentos, filtros de lenguaje/románticos, protección anti-quiz.
+// Esta IA real solo entra a jugar cuando TODO lo anterior ya dijo "no sé" —
+// así la clase sigue funcionando igual de rápido y segura en el 95% de los
+// casos, y gana comprensión real para el 5% que antes se perdía.
+//
+// 🔑 La clave se pega en la línea 11 del archivo (window.ARIA_CLAVE_GEMINI), al inicio:
+// ═══════════════════════════════════════════════════════════════════════
+// v2.7.6 — La clave ahora puede ponerse de DOS formas:
+//  (a) escribiéndola aquí entre las comillas (reemplaza PEGA_TU_CLAVE_AQUI), o
+//  (b) desde la consola (F12) con:  ponerClaveAria(prompt('Pega la clave'))
+//      — queda guardada en este navegador y no hace falta editar el archivo.
+let ARIA_ORIGEN_CLAVE = 'sin configurar';
+let GEMINI_API_KEY = (() => {
+  const delArchivo = String(window.ARIA_CLAVE_GEMINI || '').trim().replace(/^['"]|['"]$/g, '');
+  // v2.7.8 — Solo se acepta como clave algo que TENGA FORMA de clave de Gemini (AQ.… o AIza…).
+  // Cualquier otro texto (incluido un 'PEGA_TU_CLAVE_AQUI' alterado) se ignora y se avisa en consola.
+  const tieneFormaDeClave = v => /^(AQ\.|AIza)[A-Za-z0-9._-]{20,}$/.test(v);
+  if (delArchivo && delArchivo !== 'PEGA_TU_CLAVE_AQUI'){
+    if (tieneFormaDeClave(delArchivo)){ ARIA_ORIGEN_CLAVE = 'archivo (línea de arriba)'; return delArchivo; }
+    console.log('[ARIA → Gemini] ⚠️ lo que hay en la línea 11 NO parece una clave: empieza con "' + delArchivo.slice(0,6) + '" y tiene ' + delArchivo.length + ' caracteres. Una clave real empieza con AQ. o AIza. Pega la clave completa entre las comillas.');
+  }
+  try { const g = localStorage.getItem('aria_gemini_key'); if (g){ ARIA_ORIGEN_CLAVE = 'guardada con ponerClaveAria()'; return g; } } catch(e){ /* sin almacenamiento */ }
+  return 'PEGA_TU_CLAVE_AQUI';
+})();
+function ponerClaveAria(k){
+  k = String(k || '').trim().replace(/^['"]|['"]$/g, '');
+  if (!k){ console.log('[ARIA → Gemini] no pegaste ninguna clave'); return; }
+  GEMINI_API_KEY = k;
+  try { localStorage.setItem('aria_gemini_key', k); } catch(e){ console.log('[ARIA → Gemini] clave activa solo hasta recargar (el navegador no dejó guardarla)'); }
+  console.log('[ARIA → Gemini] clave guardada:', k.slice(0,4) + '… (' + k.length + ' caracteres)');
+}
+function borrarClaveAria(){ try{ localStorage.removeItem('aria_gemini_key'); }catch(e){} GEMINI_API_KEY = 'PEGA_TU_CLAVE_AQUI'; console.log('[ARIA → Gemini] clave borrada de este navegador'); }
+console.log('[ARIA → Gemini] clave al cargar:', GEMINI_API_KEY === 'PEGA_TU_CLAVE_AQUI' ? 'SIN CONFIGURAR' : GEMINI_API_KEY.slice(0,4) + '… (' + GEMINI_API_KEY.length + ' caracteres) — origen: ' + ARIA_ORIGEN_CLAVE);
+// v2.7.4 — Lista de modelos que ARIA prueba EN ORDEN: si uno está saturado (503) o no existe (404),
+// pasa automáticamente al siguiente. Puedes editar/añadir nombres aquí si Google los renombra.
+const GEMINI_MODELOS = ['gemini-3.5-flash', 'gemini-3.5-flash-lite', 'gemini-3.8-flash'];
+const urlModeloGemini = m => `https://generativelanguage.googleapis.com/v1beta/models/${m}:generateContent`;
+
+// Tope de preguntas a la IA real por sesión de clase — protege tu cupo gratis
+// de un salón entero preguntando sin parar.
+const ARIA_IA_EXTERNA_TOPE_SESION = 20;
+let ariaIaExternaUsosSesion = 0;
+
+// Quién es ARIA para la IA real — refuerza, a nivel de modelo, la misma regla
+// de oro de la Prioridad 30-B: JAMÁS resolver una pregunta de quiz/evaluación,
+// solo explicar el método. Esto es una SEGUNDA capa de protección, además del
+// código — no la reemplaza.
+const ARIA_INSTRUCCION_SISTEMA = `Eres ARIA, la asistente virtual de una clase de Aritmética y Tecnología
+e Informática para estudiantes de 4° y 5° de primaria en Colombia.
+
+Reglas que NUNCA rompes:
+- Nunca das la respuesta directa de una pregunta de quiz o evaluación, ni confirmas si una opción es
+  correcta o incorrecta. Si detectas que te están pidiendo eso, explica el MÉTODO general para resolver
+  ese tipo de problema, con un ejemplo de números distintos, y anima al estudiante a aplicarlo él mismo.
+- Usas lenguaje simple, cálido y apropiado para niños de 9 a 11 años. Respuestas de máximo 3-4 oraciones.
+- Si te preguntan algo que no tiene nada que ver con la clase, con Aritmética o con Tecnología, redirige
+  con amabilidad hacia la clase, sin sermonear.
+- Nunca generas contenido violento, sexual, romántico, ni participas en insultos o groserías.
+- Si no estás segura de algo, lo dices honestamente en vez de inventar una respuesta.
+
+Formato OBLIGATORIO: empieza SIEMPRE tu respuesta con UNA etiqueta de emoción entre corchetes, elegida de
+esta lista según el tono de lo que vas a decir, y después tu mensaje normal. La etiqueta no se le muestra
+al estudiante, solo sirve para cambiar tu cara.
+[academico] explicas un concepto · [pista] das una pista o pasos · [practica] propones un ejercicio ·
+[logro] celebras un acierto · [genial] felicitas con entusiasmo · [animo] animas a alguien frustrado ·
+[motivacion] invitas a empezar o seguir · [carino] agradeces o respondes con cariño ·
+[duda] no estás segura o devuelves una pregunta · [confundida] no entiendes la pregunta ·
+[pena] te apenas o lamentas algo · [triste] algo triste · [saludo] saludas · [pensando] respuesta neutra.
+Ejemplo: [academico] Un ángulo es la abertura entre dos líneas que se tocan en un punto. ¡Míralo como una puerta que se abre!`;
+
+// v2.8.0 — Emociones que Gemini puede elegir (todas existen como expresión de ARIA).
+// 'alerta' y 'despedida' quedan fuera a propósito: las decide el código (filtros y resumen de fin de clase).
+const ARIA_EMOCIONES_IA = ['academico','pista','practica','logro','genial','animo','motivacion','carino','duda','confundida','pena','triste','saludo','pensando'];
+function extraerEmocionAria(texto){
+  let emocion = null, limpio = String(texto || '');
+  const m = limpio.match(/^\s*\[\s*([A-Za-zÁÉÍÓÚáéíóúÑñ_]+)\s*\]\s*/);
+  if (m){
+    const e = m[1].toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+    if (ARIA_EMOCIONES_IA.includes(e)) emocion = e;
+    limpio = limpio.slice(m[0].length);
+  }
+  limpio = limpio.replace(new RegExp('\\[(?:' + ARIA_EMOCIONES_IA.join('|') + ')\\]\\s*', 'gi'), '').trim();
+  return { texto: limpio, emocion };
+}
+window.ARIA_EMOCION_IA = null;
+
+// Llama a la IA real. Devuelve el texto de la respuesta, o null si algo falló.
+// v2.7.5 — (1) Si un modelo está saturado (503) lo REINTENTA con espera corta antes de pasar al
+// siguiente; (2) los diagnósticos usan console.log con el prefijo [ARIA → Gemini] para que SIEMPRE
+// se vean en F12; (3) maxOutputTokens 1024 + thinkingLevel 'low'; (4) cuenta UNA vez por pregunta.
+const ariaEsperar = ms => new Promise(r => setTimeout(r, ms));
+
+async function preguntarIAExternaAria(pregunta, contextoSlide){
+  if (!GEMINI_API_KEY || GEMINI_API_KEY === 'PEGA_TU_CLAVE_AQUI'){
+    console.log('[ARIA → Gemini] no hay clave configurada (pégala en la línea 11 del archivo: window.ARIA_CLAVE_GEMINI)');
+    return null;
+  }
+  if (ariaIaExternaUsosSesion >= ARIA_IA_EXTERNA_TOPE_SESION){
+    console.log('[ARIA → Gemini] se alcanzó el tope de preguntas de esta sesión:', ARIA_IA_EXTERNA_TOPE_SESION);
+    return null;
+  }
+  ariaIaExternaUsosSesion++;
+  window.ARIA_EMOCION_IA = null;
+
+  const cuerpo = {
+    system_instruction: { parts: [{ text: ARIA_INSTRUCCION_SISTEMA + (contextoSlide ? `\n\nTema de la diapositiva actual: "${contextoSlide}".` : '') }] },
+    contents: [{ role: 'user', parts: [{ text: pregunta }] }],
+    generationConfig: { maxOutputTokens: 1024, temperature: 0.6, thinkingConfig: { thinkingLevel: 'low' } }
+  };
+
+  const INTENTOS_POR_MODELO = 2;   // 1 intento + 1 reintento si está saturado
+  const ESPERA_REINTENTO_MS = 1200;
+
+  for (const modelo of GEMINI_MODELOS){
+    for (let intento = 1; intento <= INTENTOS_POR_MODELO; intento++){
+      const controlador = new AbortController();
+      const timeout = setTimeout(() => controlador.abort(), 12000);
+      try{
+        const resp = await fetch(urlModeloGemini(modelo), {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'x-goog-api-key': GEMINI_API_KEY },
+          body: JSON.stringify(cuerpo),
+          signal: controlador.signal
+        });
+        clearTimeout(timeout);
+
+        if (resp.status === 429){
+          console.log('[ARIA → Gemini]', modelo, '429: límite de peticiones por minuto');
+          window.ARIA_EMOCION_IA = 'pena';
+          return 'Ahora mismo tengo muchas preguntas encima 😅 dame un momentico e inténtalo de nuevo, o mientras tanto pregúntame algo de lo que ya vimos en la clase.';
+        }
+        if (resp.status === 503){
+          console.log('[ARIA → Gemini]', modelo, '503 saturado, intento', intento, 'de', INTENTOS_POR_MODELO);
+          if (intento < INTENTOS_POR_MODELO){ await ariaEsperar(ESPERA_REINTENTO_MS); continue; }
+          break; // pasa al siguiente modelo
+        }
+        if (resp.status === 404){
+          console.log('[ARIA → Gemini]', modelo, '404: ese modelo no existe para tu cuenta — pruebo el siguiente');
+          break;
+        }
+        if (resp.status === 400 || resp.status === 403 || resp.status === 401){
+          const detalle = await resp.text().catch(() => '');
+          console.log('[ARIA → Gemini] error', resp.status, '— revisa la clave de API:', detalle.slice(0, 400));
+          return null;
+        }
+        if (!resp.ok){
+          const detalle = await resp.text().catch(() => '');
+          console.log('[ARIA → Gemini]', modelo, 'error', resp.status, detalle.slice(0, 300));
+          break;
+        }
+
+        const datos = await resp.json();
+        for (const c of (datos?.candidates || [])){
+          const p = (c?.content?.parts || []).find(x => typeof x?.text === 'string' && x.text.trim());
+          if (p){
+            const r = extraerEmocionAria(p.text.trim());
+            if (r.texto){
+              window.ARIA_EMOCION_IA = r.emocion;
+              console.log('[ARIA → Gemini] respondió', modelo, '— emoción:', r.emocion || '(ninguna, usa reglas)');
+              return r.texto;
+            }
+          }
+        }
+        console.log('[ARIA → Gemini]', modelo, 'respondió sin texto utilizable:', JSON.stringify(datos).slice(0, 500));
+        break;
+      } catch(e){
+        clearTimeout(timeout);
+        console.log('[ARIA → Gemini]', modelo, 'falló (red o tiempo agotado):', e.message);
+        break;
+      }
+    }
+  }
+  console.log('[ARIA → Gemini] ningún modelo pudo responder en este momento');
+  return null;
+}
+
+</script>
+
+<script>
+// ═══════════════════════════════════════════════════════════════════════
+// BANCO DE MÉTODOS PEDAGÓGICOS DE ARIA — v2 (reutilizable en TODAS las clases)
+// (Aritmética y Tecnología e Informática, grados 4° y 5°)
+// Cada entrada tiene 4 capas de profundidad, pensadas para EXPLICAR MEJOR, no
+// solo distinto, cuando el estudiante dice "no entendí":
+//   1) pasos      -> explicación ordenada, paso a paso (primer intento)
+//   2) analogia   -> comparación con algo cotidiano (segundo intento)
+//   3) visual     -> comparación visual simple, con símbolos/emoji (tercer intento)
+//   4) ejemplo    -> un caso resuelto completo, con datos distintos a cualquier
+//                    quiz (cuarto intento, "aprende viendo")
+// Además, cada método trae ANDAMIAJE SOCRÁTICO:
+//   - preguntaGuia    -> pregunta corta que ARIA hace ANTES de explicar, para
+//                        medir cuánto ya sabe el estudiante
+//   - microFundamento -> si el estudiante responde "no lo sé", una explicación
+//                        muy breve del concepto base, ANTES de entrar al método
+// ═══════════════════════════════════════════════════════════════════════
+const METODOS_ARIA = [
+  {
+    id:'suma_fracciones_igual_denom', materia:'aritmetica',
+    disparadores:['sumar fracciones','suma de fracciones','sumar fraccion','como sumo fracciones'],
+    titulo:'Sumar fracciones con el mismo denominador',
+    preguntaGuia:'¿Sabes qué significa el número de abajo en una fracción (el denominador)?',
+    microFundamento:'El denominador (el número de abajo) dice en cuántas partes iguales se divide un entero. El numerador (el de arriba) dice cuántas de esas partes tienes. Por ejemplo, en 3/8, el entero se dividió en 8 partes y tienes 3 de ellas.',
+    pasos:[
+      'Revisa que las dos fracciones tengan el mismo número de abajo (el denominador). Si es igual, sigue.',
+      'Suma solo los números de arriba (los numeradores) y deja el de abajo igual.',
+      'Si el resultado se puede simplificar (dividir arriba y abajo entre el mismo número), simplifícalo.'
+    ],
+    analogia:'Piensa en una pizza cortada en partes iguales, por ejemplo 8 partes. Si te comes 2 partes (2/8) y luego 3 partes más (3/8), en total te comiste 5 partes de las 8: 5/8. El tamaño de las partes (el 8) no cambia, solo cuentas cuántas partes tienes.',
+    visual:'🍕 Pizza en 8 partes:<br>●●●○○○○○ → 3/8<br>Le agregamos 2 partes más:<br>●●●●●○○○ → ahora son 5/8<br>(● = parte comida, ○ = parte que queda)',
+    ejemplo:'Ejemplo resuelto: 2/6 + 1/6 → los denominadores ya son iguales (6), entonces solo sumo los numeradores: 2 + 1 = 3. El resultado es 3/6, que simplificado (dividiendo entre 3) queda en 1/2.'
+  },
+  {
+    id:'suma_fracciones_distinto_denom', materia:'aritmetica',
+    disparadores:['sumar fracciones con distinto denominador','fracciones diferente denominador','fracciones distinto denominador'],
+    titulo:'Sumar fracciones con distinto denominador',
+    preguntaGuia:'¿Recuerdas cómo se suman fracciones cuando el denominador SÍ es igual?',
+    microFundamento:'Cuando el denominador es igual, solo se suman los números de arriba (numeradores) y el de abajo se deja igual. El problema aparece cuando los denominadores son distintos: ahí primero hay que "emparejarlos".',
+    pasos:[
+      'Busca un número que sea múltiplo de los dos denominadores (el más fácil suele ser multiplicarlos entre sí).',
+      'Convierte cada fracción a ese nuevo denominador: multiplica arriba y abajo de cada fracción por lo que le falte para llegar a ese número.',
+      'Ya con el mismo denominador en las dos, suma solo los numeradores, como en la suma normal.',
+      'Simplifica el resultado si se puede.'
+    ],
+    analogia:'Es como sumar 2 manzanas + 3 peras: no puedes sumarlas directo porque son cosas distintas. Primero las conviertes a algo en común (por ejemplo "frutas"), y ahí sí las sumas. Con las fracciones, ese "algo en común" es el denominador nuevo.',
+    visual:'1/3 → ●○○ ●○○ ●○○ ●○○ (12 partes) = 4/12<br>1/4 → ●○○○ ●○○○ ●○○○ (12 partes) = 3/12<br>Juntas: 4/12 + 3/12 = 7/12',
+    ejemplo:'Ejemplo resuelto: 1/3 + 1/4 → multiplico los denominadores: 3×4=12. Convierto 1/3 a doceavos: como 12÷3=4, multiplico arriba y abajo por 4 → 4/12. Convierto 1/4: como 12÷4=3, multiplico por 3 → 3/12. Sumo: 4/12 + 3/12 = 7/12.'
+  },
+  {
+    id:'multiplicacion_decimales', materia:'aritmetica',
+    disparadores:['multiplicar decimales','multiplicacion de decimales','como multiplico decimales'],
+    titulo:'Multiplicar números decimales',
+    preguntaGuia:'¿Sabes multiplicar números enteros normales, sin coma?',
+    microFundamento:'Multiplicar es sumar un número varias veces (3×4 es sumar 3 cuatro veces). Con decimales se hace igual, solo que al final hay que acomodar la coma en su lugar correcto.',
+    pasos:[
+      'Por ahora ignora las comas y multiplica los números como si fueran enteros (sin coma).',
+      'Cuenta cuántas cifras hay después de la coma en cada número que multiplicaste, y súmalas.',
+      'En el resultado, cuenta esa misma cantidad de cifras desde la derecha y pon ahí la coma.'
+    ],
+    analogia:'Es como multiplicar normal y al final "acomodar" la coma en su lugar exacto, contando espacios desde la derecha — igual que cuando doblas una cinta métrica para medir un pedacito más pequeño.',
+    visual:'1,5 × 2,2 → sin comas: 15 × 22 = 330<br>Cifras decimales: 1 + 1 = 2<br>330 → cuento 2 desde la derecha → 3,30',
+    ejemplo:'Ejemplo resuelto: 1,5 × 2,2 → multiplico sin comas: 15 × 22 = 330. Cifras después de la coma: 1,5 tiene una y 2,2 tiene una, en total 2. Cuento 2 cifras desde la derecha en 330: queda 3,30.'
+  },
+  {
+    id:'division_decimales', materia:'aritmetica',
+    disparadores:['dividir decimales','division de decimales','como divido decimales'],
+    titulo:'Dividir números decimales',
+    preguntaGuia:'¿Sabes dividir números enteros normales, sin coma?',
+    microFundamento:'Dividir es repartir en partes iguales (8÷2 es repartir 8 en 2 grupos iguales, 4 en cada uno). Con decimales primero se "acomodan" las comas para que sea más fácil dividir.',
+    pasos:[
+      'Si el número de afuera (el divisor) tiene coma, mueve la coma hacia la derecha hasta que sea un número entero, y mueve la coma del otro número (el dividendo) la misma cantidad de lugares.',
+      'Ahora divide como divides números enteros normalmente.',
+      'Cuando en la división "bajes" la coma del dividendo, pon una coma en ese mismo lugar en el resultado.'
+    ],
+    analogia:'Es como cambiar de moneda antes de pagar: si el precio está en una unidad rara, primero lo conviertes a una unidad entera para que sea más fácil trabajar con ella, y al final acomodas todo de nuevo.',
+    visual:'4,8 ÷ 0,4 → muevo la coma 1 lugar en los dos:<br>48 ÷ 4 = 12',
+    ejemplo:'Ejemplo resuelto: 4,8 ÷ 0,4 → el divisor 0,4 tiene una cifra decimal, así que muevo la coma un lugar en los dos: queda 48 ÷ 4. Divido normal: 48 ÷ 4 = 12.'
+  },
+  {
+    id:'regla_de_tres_simple', materia:'aritmetica',
+    disparadores:['regla de tres','regla de 3','como se hace una regla de tres'],
+    titulo:'Regla de tres simple',
+    preguntaGuia:'¿Sabes qué quiere decir que dos cantidades sean "proporcionales" (que crecen juntas, al mismo ritmo)?',
+    microFundamento:'Que dos cantidades sean proporcionales significa que si una aumenta el doble, la otra también aumenta el doble (por ejemplo: si compras el doble de cuadernos, pagas el doble de dinero).',
+    pasos:[
+      'Escribe los datos en dos filas, cada columna con el mismo tipo de cosa (por ejemplo: días arriba, tareas abajo).',
+      'Identifica el dato que no conoces y márcalo con una X.',
+      'Multiplica en cruz: el número de arriba de una columna por el de abajo de la otra.',
+      'Divide ese resultado entre el número que queda solo, y ese es el valor de X.'
+    ],
+    analogia:'Es como cuando sabes cuánto cuestan 2 paquetes de galletas y quieres saber cuánto cuestan 5: multiplicas y divides para "escalar" el precio a la nueva cantidad, manteniendo la misma proporción.',
+    visual:'3 cuadernos —— $9.000<br>5 cuadernos —— X<br>X = (5 × 9.000) ÷ 3 = 15.000',
+    ejemplo:'Ejemplo resuelto: si 3 cuadernos cuestan $9.000, ¿cuánto cuestan 5 cuadernos? Multiplico en cruz: 5 × 9.000 = 45.000. Divido entre el número que queda solo (3): 45.000 ÷ 3 = 15.000. Los 5 cuadernos cuestan $15.000.'
+  },
+  {
+    id:'porcentaje', materia:'aritmetica',
+    disparadores:['calcular porcentaje','sacar el porcentaje','como se saca un porcentaje','que es un porcentaje'],
+    titulo:'Calcular un porcentaje de una cantidad',
+    preguntaGuia:'¿Sabes que "por ciento" significa "de cada 100"?',
+    microFundamento:'"Por ciento" (%) significa "de cada 100". Si algo es el 50%, es como decir "la mitad de 100", o sea la mitad de lo que sea.',
+    pasos:[
+      'Convierte el porcentaje a fracción: el número de porcentaje sobre 100 (por ejemplo, 20% es 20/100).',
+      'Multiplica esa fracción por la cantidad total.',
+      'El resultado es el porcentaje de esa cantidad.'
+    ],
+    analogia:'"Por ciento" significa literalmente "de cada 100". Si te dicen que el 20% de la clase son niñas, es como decir que de cada 100 estudiantes imaginarios, 20 serían niñas.',
+    visual:'25% de 80:<br>■■■□□□□□□□ (25 de cada 100 casillas están llenas)<br>25/100 × 80 = 20',
+    ejemplo:'Ejemplo resuelto: ¿cuánto es el 25% de 80? Convierto: 25/100. Multiplico: 25/100 × 80 = 2.000/100 = 20. El 25% de 80 es 20.'
+  },
+  {
+    id:'perimetro', materia:'aritmetica',
+    disparadores:['calcular el perimetro','que es el perimetro','como se saca el perimetro','hallar el perimetro'],
+    titulo:'Calcular el perímetro de una figura',
+    preguntaGuia:'¿Sabes qué es el "borde" o "contorno" de una figura?',
+    microFundamento:'El borde o contorno es la línea que rodea toda la figura por fuera, como si dibujaras su silueta con un lápiz sin levantarlo.',
+    pasos:[
+      'El perímetro es la suma de la medida de TODOS los lados de la figura.',
+      'Si la figura tiene lados iguales (como un cuadrado), puedes multiplicar la medida de un lado por el número de lados en vez de sumar uno por uno.',
+      'El resultado se expresa en la misma unidad de medida que te dieron (cm, m, etc.).'
+    ],
+    analogia:'Imagina que caminas alrededor de todo el borde de la figura, como si fuera la cerca de un patio: el perímetro es la distancia total que caminaste dando toda la vuelta.',
+    visual:'Rectángulo 6×3:<br>┌──6──┐<br>3       3<br>└──6──┘<br>6+6+3+3 = 18',
+    ejemplo:'Ejemplo resuelto: un rectángulo mide 6 cm de largo y 3 cm de ancho. Tiene dos lados de 6 y dos de 3: 6+6+3+3 = 18 cm de perímetro.'
+  },
+  {
+    id:'area_rectangulo', materia:'aritmetica',
+    disparadores:['calcular el area','area del rectangulo','area del cuadrado','como se saca el area','hallar el area'],
+    titulo:'Calcular el área de un rectángulo o cuadrado',
+    preguntaGuia:'¿Sabes la diferencia entre el borde de una figura (perímetro) y lo que hay adentro (su superficie)?',
+    microFundamento:'El perímetro mide el borde de la figura. El área mide lo de ADENTRO: toda la superficie que ocupa, como si la cubrieras con baldosas.',
+    pasos:[
+      'Identifica la base (largo) y la altura (ancho) de la figura.',
+      'Multiplica base por altura.',
+      'El resultado se expresa en unidades "cuadradas" (cm², m², etc.), porque el área mide una superficie.'
+    ],
+    analogia:'El área es cuántas baldosas cuadradas de 1 cm por 1 cm necesitarías para cubrir toda la figura sin dejar espacios ni encimarlas.',
+    visual:'Rectángulo 5×4:<br>▢▢▢▢▢<br>▢▢▢▢▢<br>▢▢▢▢▢<br>▢▢▢▢▢<br>5×4 = 20 baldosas = 20 cm²',
+    ejemplo:'Ejemplo resuelto: un rectángulo de 5 cm de largo por 4 cm de ancho tiene un área de 5 × 4 = 20 cm².'
+  },
+  {
+    id:'mcm', materia:'aritmetica',
+    disparadores:['minimo comun multiplo','mcm','como se saca el mcm'],
+    titulo:'Hallar el Mínimo Común Múltiplo (m.c.m.)',
+    preguntaGuia:'¿Sabes qué es un múltiplo de un número (por ejemplo, los múltiplos de 3)?',
+    microFundamento:'Un múltiplo de un número es el resultado de multiplicarlo por 1, 2, 3, 4... Por ejemplo, los múltiplos de 3 son 3, 6, 9, 12, 15...',
+    pasos:[
+      'Escribe varios múltiplos de cada número (multiplícalo por 1, 2, 3, 4...).',
+      'Busca el primer múltiplo que se repita en las dos listas.',
+      'Ese número repetido más pequeño es el m.c.m.'
+    ],
+    analogia:'Es como cuando dos buses pasan por la misma parada cada cierto tiempo distinto: el m.c.m. te dice en qué minuto exacto los dos vuelven a coincidir en la parada al mismo tiempo.',
+    visual:'Múltiplos de 4: 4 - 8 - [12] - 16<br>Múltiplos de 6: 6 - [12] - 18<br>Primer número en las dos listas: 12',
+    ejemplo:'Ejemplo resuelto: m.c.m. de 4 y 6. Múltiplos de 4: 4, 8, 12, 16... Múltiplos de 6: 6, 12, 18... El primero que se repite es 12. El m.c.m. de 4 y 6 es 12.'
+  },
+  {
+    id:'mcd', materia:'aritmetica',
+    disparadores:['maximo comun divisor','mcd','como se saca el mcd'],
+    titulo:'Hallar el Máximo Común Divisor (M.C.D.)',
+    preguntaGuia:'¿Sabes qué es un divisor de un número (por ejemplo, los divisores de 12)?',
+    microFundamento:'Un divisor de un número es otro número que lo divide exacto, sin dejar residuo. Por ejemplo, los divisores de 12 son 1, 2, 3, 4, 6 y 12.',
+    pasos:[
+      'Escribe todos los números que dividen exactamente a cada número (sus divisores).',
+      'Busca los divisores que tengan en común las dos listas.',
+      'El más grande de esos divisores comunes es el M.C.D.'
+    ],
+    analogia:'Es como repartir dos cantidades distintas de dulces en bolsitas iguales, sin que sobre ninguno: el M.C.D. es el mayor número de dulces que puedes poner en cada bolsita para que ambas cantidades se repartan exactas.',
+    visual:'Divisores de 12: 1,2,3,4,6,12<br>Divisores de 18: 1,2,3,6,9,18<br>Comunes: 1,2,3,[6] → el mayor es 6',
+    ejemplo:'Ejemplo resuelto: M.C.D. de 12 y 18. Divisores de 12: 1,2,3,4,6,12. Divisores de 18: 1,2,3,6,9,18. Los comunes: 1,2,3,6. El más grande es 6. El M.C.D. es 6.'
+  },
+  {
+    id:'redondeo_decimales', materia:'aritmetica',
+    disparadores:['redondear decimales','como se redondea','redondeo de numeros'],
+    titulo:'Redondear un número decimal',
+    preguntaGuia:'¿Sabes cuál cifra es la de los "décimos" en un número decimal?',
+    microFundamento:'En un número como 3,47, la primera cifra después de la coma (el 4) es la de los décimos, y la segunda (el 7) es la de los centésimos.',
+    pasos:[
+      'Identifica la cifra hasta donde quieres redondear (por ejemplo, a los décimos).',
+      'Mira la cifra que está justo después de esa posición.',
+      'Si esa cifra es 5 o más, la cifra anterior sube uno. Si es menor que 5, la cifra anterior se queda igual.',
+      'Borra todas las cifras que quedaron después.'
+    ],
+    analogia:'Es como cuando dices tu edad "casi 10" en vez de "9 años y 10 meses": redondear es acercarte al número más cercano y fácil de usar, sin perder mucha precisión.',
+    visual:'3,4[7] → el 7 es ≥5, el 4 sube a 5<br>3,47 ≈ 3,5',
+    ejemplo:'Ejemplo resuelto: redondear 3,47 a los décimos. La cifra de los décimos es 4. La siguiente cifra es 7, que es 5 o más, así que el 4 sube a 5. Resultado: 3,5.'
+  },
+  {
+    id:'algoritmo', materia:'tecnologia',
+    disparadores:['que es un algoritmo','para que sirve un algoritmo','como se hace un algoritmo'],
+    titulo:'Qué es un algoritmo',
+    preguntaGuia:'¿Sabes qué significa hacer algo "en orden, paso a paso"?',
+    microFundamento:'Hacer algo "en orden" significa que cada paso va en un lugar específico, y si cambias el orden, el resultado puede salir distinto o no funcionar.',
+    pasos:[
+      'Un algoritmo es una lista de pasos ordenados para resolver un problema o hacer una tarea.',
+      'Cada paso debe ser claro y hacerse en un orden específico — si cambias el orden, el resultado puede salir mal.',
+      'Un algoritmo debe tener un inicio, unos pasos en el medio, y un final.'
+    ],
+    analogia:'Una receta de cocina es un algoritmo: primero pones los ingredientes, luego mezclas, luego horneas — si horneas antes de mezclar, no funciona igual.',
+    visual:'🟢 Inicio → 1️⃣ → 2️⃣ → 3️⃣ → 🔴 Fin',
+    ejemplo:'Ejemplo resuelto: algoritmo para lavarse las manos: 1) Abrir la llave. 2) Mojarse las manos. 3) Poner jabón. 4) Frotar 20 segundos. 5) Enjuagar. 6) Secarse. Cada paso va en ese orden exacto.'
+  },
+  {
+    id:'diagrama_flujo', materia:'tecnologia',
+    disparadores:['que es un diagrama de flujo','para que sirve un diagrama de flujo','como se hace un diagrama de flujo'],
+    titulo:'Qué es un diagrama de flujo',
+    preguntaGuia:'¿Recuerdas qué es un algoritmo (una lista de pasos ordenados)?',
+    microFundamento:'Un algoritmo es una lista de pasos ordenados para lograr algo. Un diagrama de flujo es simplemente DIBUJAR esos pasos con figuras y flechas, para verlos más fácil.',
+    pasos:[
+      'Es un dibujo que muestra los pasos de un algoritmo usando figuras conectadas con flechas.',
+      'El óvalo se usa para el inicio y el final.',
+      'El rectángulo se usa para una acción o un paso.',
+      'El rombo se usa para una pregunta que tiene dos caminos posibles (sí / no).'
+    ],
+    analogia:'Es como el mapa de un juego de mesa: las casillas son los pasos, y las flechas te dicen hacia dónde moverte según lo que pase.',
+    visual:'⭕ Inicio<br>↓<br>🔷 ¿Llueve?<br>↙ Sí        ↘ No<br>▭ Llevar paraguas   ▭ No llevar<br>↘ ↙<br>⭕ Fin',
+    ejemplo:'Ejemplo resuelto: diagrama para decidir si llevar paraguas: Óvalo "Inicio" → Rombo "¿Está lloviendo?" → si SÍ, Rectángulo "Llevar paraguas"; si NO, Rectángulo "No llevar paraguas" → Óvalo "Fin".'
+  },
+  {
+    id:'hardware_software', materia:'tecnologia',
+    disparadores:['diferencia entre hardware y software','que es hardware','que es software','hardware y software'],
+    titulo:'Diferencia entre hardware y software',
+    preguntaGuia:'¿Puedes nombrar algo del computador que SÍ puedas tocar con la mano?',
+    microFundamento:'Todo lo que puedes tocar del computador (pantalla, teclado, mouse) es una parte física. Lo que NO puedes tocar (como un programa) es otra categoría distinta.',
+    pasos:[
+      'El hardware son las partes físicas del computador: las que puedes tocar (pantalla, teclado, mouse, torre).',
+      'El software son los programas que hacen funcionar el computador: las que NO puedes tocar (Windows, un juego, un navegador).',
+      'El hardware es como el "cuerpo" y el software es como las "instrucciones" que le dicen al cuerpo qué hacer.'
+    ],
+    analogia:'El hardware es como el cuerpo de una persona (manos, ojos, cerebro físico) y el software es como los pensamientos e instrucciones que usan ese cuerpo para hacer algo.',
+    visual:'🖥️ Hardware (se toca): pantalla, mouse, teclado<br>💻 Software (no se toca): Windows, un juego, un navegador',
+    ejemplo:'Ejemplo resuelto: el mouse, el teclado y la pantalla son hardware. El navegador de internet y un juego instalado son software.'
+  },
+  {
+    id:'contrasena_segura', materia:'tecnologia',
+    disparadores:['contrasena segura','como hacer una contrasena segura','clave segura'],
+    titulo:'Cómo crear una contraseña segura',
+    preguntaGuia:'¿Sabes por qué usar tu nombre o tu fecha de nacimiento como contraseña es peligroso?',
+    microFundamento:'Tu nombre o tu cumpleaños son datos que otras personas pueden conocer o adivinar fácilmente, así que una contraseña con esos datos es fácil de descubrir.',
+    pasos:[
+      'Usa al menos 8 caracteres — entre más larga, más segura.',
+      'Combina letras mayúsculas, minúsculas, números y algún símbolo.',
+      'Evita datos fáciles de adivinar como tu nombre, tu fecha de nacimiento o "12345".',
+      'Nunca compartas tu contraseña con nadie, ni siquiera con amigos.'
+    ],
+    analogia:'Es como la llave de tu casa: si es una llave rara y difícil de copiar, es más difícil que alguien entre sin permiso.',
+    visual:'"maria2015" → 🟥 débil (nombre + fecha)<br>"R!oAzul47*" → 🟩 fuerte (mayúsc./minúsc./número/símbolo)',
+    ejemplo:'Ejemplo resuelto: en vez de usar "maria2015" (fácil de adivinar), una contraseña más segura sería algo como "R!oAzul47*" — mezcla letras, números y un símbolo, y no tiene datos personales obvios.'
+  }
+];
+
+// Índice normalizado (se construye una vez al cargar el archivo)
+const METODOS_ARIA_INDICE = METODOS_ARIA.map(m => ({
+  ...m,
+  disparadoresNorm: m.disparadores.map(d => normalizaTexto(d)),
+  textoBusquedaNorm: normalizaTexto([m.titulo, ...m.disparadores].join(' '))
+}));
+
+// ═══════════════════════════════════════════════════════════════════════
+// v2.3 — CASCADA DE INTENTOS + EXPLICAR MEJOR (no solo distinto) + ANDAMIAJE
+// SOCRÁTICO + REFUERZO PROACTIVO.
+// ═══════════════════════════════════════════════════════════════════════
+
+// Distancia de Levenshtein compacta — para tolerar errores de escritura
+function distanciaLevenshteinAria(a, b){
+  if (a === b) return 0;
+  const m = a.length, n = b.length;
+  if (!m) return n; if (!n) return m;
+  let prev = Array.from({length:n+1}, (_,i)=>i);
+  for (let i=1;i<=m;i++){
+    const cur = [i];
+    for (let j=1;j<=n;j++){
+      cur[j] = a[i-1]===b[j-1] ? prev[j-1] : 1 + Math.min(prev[j-1], prev[j], cur[j-1]);
+    }
+    prev = cur;
+  }
+  return prev[n];
+}
+function seParecenAria(palabraEstudiante, palabraClave){
+  if (palabraEstudiante === palabraClave) return true;
+  const tolerancia = palabraClave.length <= 4 ? 0 : (palabraClave.length <= 7 ? 1 : 2);
+  return distanciaLevenshteinAria(palabraEstudiante, palabraClave) <= tolerancia;
+}
+
+// ── Memoria de sesión (se reinicia si se recarga la página; eso está bien:
+// cada clase es una sesión nueva de acompañamiento) ──
+let ariaUltimoMetodoExplicado = null;   // { metodo, nivel }  0=pasos 1=analogia 2=visual 3=ejemplo
+let ariaEsperandoSocratico   = null;    // { metodo } — ARIA ya hizo la pregunta guía, espera respuesta
+const ariaMetodosYaIniciados = new Set(); // métodos cuya pregunta guía ya se hizo esta sesión
+const ariaContadorMetodo     = {};        // cuántas veces se ha preguntado por cada método esta sesión
+
+const NIVEL_EXPLICACION = ['pasos','analogia','visual','ejemplo'];
+
+function armarExplicacionMetodoAria(metodo, nivel){
+  nivel = Math.max(0, Math.min(3, nivel));
+  ariaUltimoMetodoExplicado = { metodo, nivel };
+  if (typeof registrarTemaEnSesionAria === 'function') registrarTemaEnSesionAria(metodo, nivel, false);
+  const encabezado = `📘 <strong>${metodo.titulo}</strong>`;
+  if (nivel === 0){
+    const cuerpo = metodo.pasos.map((p,i)=>`${i+1}) ${p}`).join('<br>');
+    return `${encabezado}:<br>${cuerpo}<br><br>¿Te quedó claro, o te lo explico de otra forma?`;
+  }
+  if (nivel === 1){
+    return `${encabezado} — de otra forma 🙂:<br>${metodo.analogia}<br><br>¿Así se entiende mejor, o probamos con una comparación visual?`;
+  }
+  if (nivel === 2){
+    return `${encabezado} — con un dibujo simple 👀:<br>${metodo.visual}<br><br>¿Ya tiene más sentido, o te muestro un ejemplo ya resuelto?`;
+  }
+  // v2.5 — Nivel más profundo: además del ejemplo, ARIA ofrece generar un ejercicio a la medida
+  if (typeof ARIA_GENERADORES_EJERCICIO !== 'undefined' && ARIA_GENERADORES_EJERCICIO[metodo.id]){
+    ariaOfertaEjercicioPendiente = { metodo };
+    return `${encabezado} — con un ejemplo resuelto 🧮:<br>${metodo.ejemplo}<br><br>¿Quieres que te arme un ejercicio parecido para practicar? (escribe "sí" o "no")`;
+  }
+  return `${encabezado} — con un ejemplo resuelto 🧮:<br>${metodo.ejemplo}<br><br>Ahora inténtalo tú con tu propio ejercicio, usando el mismo método. Si te trabas en algún paso, dime exactamente cuál y seguimos desde ahí.`;
+}
+
+// ¿El estudiante está pidiendo otra forma de explicación? (en vez de un tema nuevo)
+function esPeticionDeOtraExplicacionAria(pregunta){
+  return /no entendi|no entiendo|explicamelo de otra forma|explicamelo diferente|de otra manera|no me quedo claro|sigo sin entender|otra explicacion|no le entendi/.test(normalizaTexto(pregunta));
+}
+
+// ── ANDAMIAJE SOCRÁTICO: detectar sí/no a la pregunta guía ──
+function esRespuestaAfirmativaAria(t){
+  return /^\s*(si|sí|s|claro|obvio|si\s*se|si\s*la\s*se|si\s*lo\s*se|si\s*entiendo|ajam|aja|de\s*una|ya\s*se|la\s*se|lo\s*se)\b/.test(normalizaTexto(t));
+}
+function esRespuestaNegativaAria(t){
+  return /^\s*(no|no\s*se|no\s*la\s*se|no\s*lo\s*se|no\s*entiendo|nel|no\s*realmente|ni\s*idea|no\s*mucho)\b/.test(normalizaTexto(t));
+}
+
+// Primer contacto con un método: si tiene pregunta guía y aún no se hizo esta sesión,
+// ARIA pregunta primero y ESPERA la respuesta antes de soltar la explicación completa.
+function iniciarOExplicarMetodoAria(metodo){
+  const conector = (typeof conectarConTemaAnteriorAria === 'function') ? conectarConTemaAnteriorAria(metodo) : '';
+  if (metodo.preguntaGuia && !ariaMetodosYaIniciados.has(metodo.id)){
+    ariaMetodosYaIniciados.add(metodo.id);
+    ariaEsperandoSocratico = { metodo };
+    return `${conector}Antes de explicarte, una pregunta rápida 🤔 ${metodo.preguntaGuia}`;
+  }
+  const explicacion = armarExplicacionMetodoAria(metodo, 0);
+  return conector ? conector + explicacion : explicacion;
+}
+
+// ── REFUERZO PROACTIVO: si ya preguntó por este método antes, no espera a que
+// insista — ofrece más detalle de una vez, sin necesidad de que el estudiante lo pida.
+function registrarUsoMetodoAria(id){
+  ariaContadorMetodo[id] = (ariaContadorMetodo[id] || 0) + 1;
+  return ariaContadorMetodo[id];
+}
+function manejarMetodoEncontradoAria(metodo){
+  const usos = registrarUsoMetodoAria(metodo.id);
+  if (usos >= 2){
+    // Ya preguntó por esto antes (o quedó registrado por un fallo de quiz relacionado):
+    // se salta la pregunta socrática y da de una vez pasos + analogía juntos.
+    ariaMetodosYaIniciados.add(metodo.id);
+    ariaUltimoMetodoExplicado = { metodo, nivel: 1 };
+    if (typeof registrarTemaEnSesionAria === 'function') registrarTemaEnSesionAria(metodo, 1, true);
+    const pasos = metodo.pasos.map((p,i)=>`${i+1}) ${p}`).join('<br>');
+    return `👀 Veo que esto te ha costado un poco — vamos con calma y más detalle 💪<br><br>` +
+           `📘 <strong>${metodo.titulo}</strong>:<br>${pasos}<br><br>` +
+           `Dicho de otra forma: ${metodo.analogia}<br><br>` +
+           `¿Quieres además una comparación visual o un ejemplo ya resuelto?`;
+  }
+  return iniciarOExplicarMetodoAria(metodo);
+}
+
+// Búsquedas en el banco de métodos (exacta y tolerante a errores de escritura)
+function buscarMetodoExactoAria(pregunta){
+  const n = normalizaTexto(pregunta);
+  for (const m of METODOS_ARIA_INDICE){
+    if (m.disparadoresNorm.some(d => n.includes(d))) return m;
+  }
+  return null;
+}
+function buscarMetodoTolerante(pregunta){
+  const palabras = normalizaTexto(pregunta).split(/[^a-z0-9ñ]+/).filter(p => p.length > 3);
+  if (!palabras.length) return null;
+  let mejor = null, mejorPuntaje = 0;
+  METODOS_ARIA_INDICE.forEach(m => {
+    const clave = m.textoBusquedaNorm.split(/[^a-z0-9ñ]+/).filter(p => p.length > 3);
+    let puntaje = 0;
+    palabras.forEach(pe => { if (clave.some(pc => seParecenAria(pe, pc))) puntaje++; });
+    if (puntaje > mejorPuntaje){ mejorPuntaje = puntaje; mejor = m; }
+  });
+  return mejorPuntaje >= 2 ? mejor : null;
+}
+
+// ── Registro de dudas no resueltas: insumo para el Panel Docente ──
+function registrarDudaNoResueltaAria(pregunta){
+  try{
+    const clave = 'aria_dudas_no_resueltas';
+    const lista = JSON.parse(localStorage.getItem(clave) || '[]');
+    lista.push({ pregunta: String(pregunta).slice(0,200), fecha: new Date().toISOString() });
+    localStorage.setItem(clave, JSON.stringify(lista.slice(-100)));
+  } catch(e){ /* si no hay localStorage disponible, simplemente no se registra */ }
+}
+
+// ── API pública para el refuerzo proactivo por FALLOS DE QUIZ (no solo por chat) ──
+// La clase la llama así cuando el estudiante falla 2 veces la misma pregunta y esa
+// pregunta está asociada a un método del banco: registrarFalloQuizComoMetodoAria('regla_de_tres_simple')
+function registrarFalloQuizComoMetodoAria(metodoId){
+  const metodo = METODOS_ARIA_INDICE.find(m => m.id === metodoId);
+  if (!metodo) return null;
+  registrarUsoMetodoAria(metodoId); // cuenta como "primer uso" -> la próxima vez ya será refuerzo
+  return metodo;
+}
+
+// ═══════════════════════════════════════════════════════════════════════
+// PUNTO DE ENTRADA DE LA CASCADA
+// ═══════════════════════════════════════════════════════════════════════
+function cascadaDeIntentosAria(pregunta){
+  // -3) ¿Hay un ejercicio activo esperando la respuesta del estudiante? (v2.5)
+  if (typeof ariaEjercicioActivo !== 'undefined' && ariaEjercicioActivo){
+    const resultadoEjercicio = evaluarRespuestaEjercicioAria(pregunta);
+    if (resultadoEjercicio) return resultadoEjercicio;
+  }
+  // -2) ¿ARIA ofreció un ejercicio y está esperando sí/no? (v2.5)
+  if (typeof ariaOfertaEjercicioPendiente !== 'undefined' && ariaOfertaEjercicioPendiente){
+    const { metodo } = ariaOfertaEjercicioPendiente;
+    ariaOfertaEjercicioPendiente = null;
+    if (esRespuestaAfirmativaAria(pregunta)){
+      const ejercicio = generarEjercicioMetodoAria(metodo);
+      if (ejercicio) return ejercicio;
+    }
+    // Negativa o ambigua: sigue la conversación con normalidad (no se queda esperando).
+  }
+  // -1) ¿ARIA está esperando la respuesta a una pregunta socrática? Resolver eso PRIMERO,
+  //     antes de tratar el mensaje como una pregunta nueva.
+  if (ariaEsperandoSocratico){
+    const { metodo } = ariaEsperandoSocratico;
+    ariaEsperandoSocratico = null;
+    if (esRespuestaNegativaAria(pregunta)){
+      return `${metodo.microFundamento}<br><br>Ahora sí, vamos con el método completo 😊:<br><br>` + armarExplicacionMetodoAria(metodo, 0);
+    }
+    // Afirmativa o ambigua: no nos quedamos esperando para siempre, pasamos a explicar.
+    return armarExplicacionMetodoAria(metodo, 0);
+  }
+
+  // 0) Continuar profundizando en lo último explicado, si el estudiante lo pide
+  if (esPeticionDeOtraExplicacionAria(pregunta) && ariaUltimoMetodoExplicado){
+    const siguienteNivel = Math.min(3, ariaUltimoMetodoExplicado.nivel + 1);
+    return armarExplicacionMetodoAria(ariaUltimoMetodoExplicado.metodo, siguienteNivel);
+  }
+
+  // 1) Coincidencia exacta en el banco de métodos (alta confianza) — con andamiaje/refuerzo
+  const metodoExacto = buscarMetodoExactoAria(pregunta);
+  if (metodoExacto) return manejarMetodoEncontradoAria(metodoExacto);
+
+  // 2) Explicación profunda leyendo TODA la clase (Prioridad 30-C, si está cargada)
+  if (typeof esPreguntaDeExplicacionAria === 'function' && esPreguntaDeExplicacionAria(pregunta)){
+    if (typeof ARIA_INDICE_CLASE !== 'undefined' && !ARIA_INDICE_CLASE.length &&
+        typeof indexarContenidoClaseAria === 'function') indexarContenidoClaseAria();
+    if (typeof explicarConceptoOProcesoAria === 'function'){
+      const explicacionProfunda = explicarConceptoOProcesoAria(pregunta);
+      if (explicacionProfunda) return explicacionProfunda;
+    }
+  }
+
+  // 3) Búsqueda general en el contenido de la clase (umbral normal)
+  if (typeof buscarEnClaseAria === 'function'){
+    const desdeClase = buscarEnClaseAria(pregunta);
+    if (desdeClase) return desdeClase;
+  }
+
+  // 4) Último intento: banco de métodos con tolerancia a errores de escritura
+  const metodoTolerante = buscarMetodoTolerante(pregunta);
+  if (metodoTolerante) return manejarMetodoEncontradoAria(metodoTolerante);
+
+  // 5) Honestidad final — ARIA nunca inventa, pero deja constancia de la duda
+  registrarDudaNoResueltaAria(pregunta);
+  return null;
+}
+
+</script>
+
+<!--ARIA_SPRITES_AQUI-->
+
+<script>
+// ── Agrupación por categoría (para variedad: varias imágenes pueden compartir categoría) ──
+const ARIA_IMG_POR_CATEGORIA = {};
+Object.values(ARIA_AVATAR_IMG).forEach(img => {
+  (ARIA_IMG_POR_CATEGORIA[img.cat] = ARIA_IMG_POR_CATEGORIA[img.cat] || []).push(img.src);
+});
+
+function elegirImagenAria(categoria){
+  const pool = ARIA_IMG_POR_CATEGORIA[categoria] || ARIA_IMG_POR_CATEGORIA['pensando'];
+  return pool[Math.floor(Math.random() * pool.length)];
+}
+
+// ── Heurística: decide qué expresión mostrar según la pregunta y la respuesta ya generadas.
+// No modifica responderAria() ni su orden de prioridades — solo "lee" el resultado para
+// decidir qué cara poner. Si nada calza, usa 'pensando' como expresión neutra por defecto. ──
+function categoriaExpresionAria(pregunta, respuesta){
+  const p = normalizaTexto(pregunta || '');
+  const r = normalizaTexto(respuesta || '');
+
+  if (/no esta bien|no se hace|no lo voy a responder|profe luis lo|el profe lo va a saber|queda anotado|no me gusta que me hables/.test(r)) return 'alerta';
+  if (/busque en wikipedia/.test(r)) return 'academico';
+  if (/jaja|que tierno|no puedo ser novia|no puedo ser novio/.test(r)) return 'pena';
+  if (/todavia estoy aprendiendo|sigo aprendiendo|dias de creada|nacihoy mismo|no tengo esa informacion|esa no la conozco|me quedo grande/.test(r)) return 'confundida';
+  if (/^(hola|buenos dias|buenas tardes|buenas noches|hey|holaa*)\b/.test(p) && p.length < 30) return 'saludo';
+  if (/chao|adios|hasta luego|nos vemos|me voy|hasta manana/.test(p)) return 'despedida';
+  if (/correcto|excelente|felicidades|lo lograste|muy bien hecho|lo conseguiste/.test(r)) return 'logro';
+  if (/tu puedes|animo|no te rindas|sigue intentando|vas muy bien/.test(r)) return 'animo';
+  if (/lo estas haciendo genial|genial|que bien|buen trabajo|muy bien/.test(r)) return 'genial';
+  if (/no entiendo nada|es muy dificil|no puedo con esto|es muy complicado|me equivoque|fracase/.test(p)) return 'triste';
+  if (/dame una pista|ayudame con esto|no se como empezar|estoy atascado|estoy atascada/.test(p)) return 'pista';
+  if (/practica|ejercicio|resolver|calcula|operacion/.test(p)) return 'practica';
+  if (/matematicas|tecnologia|ciencia|hipotesis|experimento|historia|valores|respeto|responsabilidad/.test(p)) return 'academico';
+  if (/gracias|te quiero|eres genial|me caes bien|te felicito/.test(p)) return 'carino';
+  if (/\?$/.test((pregunta||'').trim())) return 'duda';
+  return 'pensando';
+}
+
+</script>
+
+<script>
+// ═══════════════════════════════════════════════════════════════════════
+// v2.1 — ARIA CON EXPRESIVIDAD FÍSICA: 6 poses oficiales + animación por estado
+// Cada pose ya trae su globo de texto dibujado, así que se muestra como "reacción"
+// flotante (sobre el botón de ARIA) y también reemplaza el avatar de las categorías afines.
+// ═══════════════════════════════════════════════════════════════════════
+/* ARIA_SPRITES: definido en el bloque de sprites (aria_sprites_base64.js) */
+
+// Qué pose reemplaza a qué categoría del avatar (las demás categorías siguen igual)
+const ARIA_SPRITE_POR_CATEGORIA = {
+  logro:'correcto', animo:'tu_puedes', despedida:'nos_vemos', dormida:'sigues_aqui',
+  triste:'dificil', confundida:'dificil', carino:'genial', genial:'genial'
+};
+Object.keys(ARIA_SPRITE_POR_CATEGORIA).forEach(cat => {
+  ARIA_IMG_POR_CATEGORIA[cat] = [ARIA_SPRITES[ARIA_SPRITE_POR_CATEGORIA[cat]]];
+});
+
+// Estado de reacción -> pose + animación CSS
+const ARIA_REACCIONES = {
+  correcto:    { sprite:'correcto',    anim:'aria-anim-saltar'  },
+  genial:      { sprite:'genial',      anim:'aria-anim-rebotar' },
+  ayuda:       { sprite:'sigues_aqui', anim:'aria-anim-latir'   },
+  animo:       { sprite:'tu_puedes',   anim:'aria-anim-saltar'  },
+  dificil:     { sprite:'dificil',     anim:'aria-anim-temblar' },
+  despedida:   { sprite:'nos_vemos',   anim:'aria-anim-saludar' }
+};
+
+let ariaReaccionTimer = null;
+// API pública: la clase la llama así -> ariaReaccionar('correcto') / ('dificil') / ...
+function ariaReaccionar(estado, ms){
+  const r = ARIA_REACCIONES[estado];
+  if (!r) return;
+  let cont = document.getElementById('aria-reaccion');
+  if (!cont){
+    cont = document.createElement('div');
+    cont.id = 'aria-reaccion';
+    cont.innerHTML = '<img alt="ARIA reacciona">';
+    document.body.appendChild(cont);
+  }
+  const img = cont.querySelector('img');
+  img.src = ARIA_SPRITES[r.sprite];
+  cont.className = '';
+  void cont.offsetWidth;                 // reinicia la animación si se repite el estado
+  cont.className = 'aria-reaccion-visible ' + r.anim;
+  clearTimeout(ariaReaccionTimer);
+  ariaReaccionTimer = setTimeout(() => { cont.className = ''; }, ms || 3200);
+}
+window.ariaReaccionar = ariaReaccionar;
+</script>
+
+<script>
+// ── Selección de voz: femenina, latinoamericana, evitando el acento de España ──
+let ARIA_VOZ_ELEGIDA = null;
+
+function elegirVozFemeninaLatina(){
+  if (!window.speechSynthesis) return null;
+  const voces = window.speechSynthesis.getVoices() || [];
+  if (!voces.length) return null;
+
+  const candidatasEs = voces.filter(v => v.lang.toLowerCase().startsWith('es'));
+  if (!candidatasEs.length) return null;
+
+  const codigosLatam = ['es-419','es-us','es-mx','es-co','es-ar','es-cl','es-pe','es-ve',
+                         'es-ec','es-gt','es-do','es-hn','es-sv','es-ni','es-py','es-bo',
+                         'es-uy','es-pr','es-cr','es-pa'];
+  const nombresFemeninos = ['female','mujer','paulina','sabina','helena','lucia','lupe',
+                             'esperanza','camila','valentina','isabela','monica','marisol',
+                             'soledad','rosa','carmen','maria','fernanda','dalia','ines',
+                             'francisca','catalina','angelica','estefania','mia'];
+
+  const esLatam = v => codigosLatam.some(cod => v.lang.toLowerCase().startsWith(cod));
+  const pareceFemenina = v => nombresFemeninos.some(n => v.name.toLowerCase().includes(n));
+
+  return (
+    candidatasEs.find(v => esLatam(v) && pareceFemenina(v)) ||
+    candidatasEs.find(esLatam) ||
+    candidatasEs.find(v => pareceFemenina(v) && !v.lang.toLowerCase().startsWith('es-es')) ||
+    candidatasEs.find(v => !v.lang.toLowerCase().startsWith('es-es')) ||
+    candidatasEs[0]
+  );
+}
+
+function inicializarVozAria(){
+  ARIA_VOZ_ELEGIDA = elegirVozFemeninaLatina();
+}
+if (window.speechSynthesis){
+  inicializarVozAria();
+  window.speechSynthesis.onvoiceschanged = inicializarVozAria;
+}
+
+</script>
+
+<script>
+// ============================================================
+// LECTOR DEL CONTENIDO DE LA CLASE — ARIA puede responder sobre
+// cualquier diapositiva/slide que ya esté en el HTML de la clase
+// ============================================================
+const ARIA_PALABRAS_VACIAS = new Set(['para','como','sobre','donde','cuando','porque','cual',
+  'cuales','esta','estos','estas','desde','entre','pero','este','esto','sirve','sirven',
+  'hacer','puedo','quiero','saber','tiene','tienen','hace','dime','explica','explicame']);
+
+// Intenta reconocer automáticamente cómo está armada la clase (distintas clases de HTML del
+// profe Luis pueden usar distintos nombres de contenedor para cada diapositiva/pantalla)
+function indexarContenidoClaseAria(){
+  const selectoresPosibles = [
+    '.slide', '.diapositiva', '.pantalla', '[data-slide]',
+    '.contenido-slide', '.screen', 'main section', 'section'
+  ];
+  let nodos = [];
+  for (const sel of selectoresPosibles){
+    const encontrados = document.querySelectorAll(sel);
+    if (encontrados.length >= 2){ nodos = Array.from(encontrados); break; }
+  }
+  if (!nodos.length) return [];
+
+  const indice = [];
+  nodos.forEach((nodo, i) => {
+    const titEl = nodo.querySelector('h1,h2,h3,.titulo-slide,.slide-titulo,.titulo');
+    const titulo = titEl ? titEl.textContent.trim() : ('la parte ' + (i + 1) + ' de la clase');
+    let texto = (nodo.innerText || nodo.textContent || '').trim().replace(/\s+/g, ' ');
+    if (texto.length < 25) return; // ignora slides casi vacías (portadas, transiciones)
+    indice.push({ titulo, texto, textoNorm: normalizaTexto(texto), nodo });
+  });
+  return indice;
+}
+
+// ============================================================
+// DETECCIÓN DE LA DIAPOSITIVA ACTUAL — para que ARIA sepa
+// exactamente dónde está el estudiante en este momento y pueda
+// orientarlo sobre "qué debo hacer aquí" sin dar respuestas.
+// Funciona por heurística genérica porque cada clase del profe
+// Luis puede navegar sus diapositivas de forma distinta.
+// ============================================================
+function estaVisibleAria(el){
+  if (!el || !el.isConnected) return false;
+  const estilo = window.getComputedStyle(el);
+  if (estilo.display === 'none' || estilo.visibility === 'hidden' || parseFloat(estilo.opacity || '1') === 0) return false;
+  if (el.offsetParent === null && estilo.position !== 'fixed') return false;
+  const rect = el.getBoundingClientRect();
+  if (rect.width < 5 && rect.height < 5) return false;
+  return true;
+}
+
+function obtenerSlideActualAria(){
+  if (!ARIA_INDICE_CLASE.length) return null;
+
+  // 1) Prioriza marcadores explícitos de "activa/actual" si la clase los usa
+  const selectoresActivos = [
+    '.active', '.activa', '.activo', '.slide-actual', '.current',
+    '[aria-current="true"]', '[aria-current="step"]', '.is-active', '.show', '.mostrar'
+  ];
+  for (const item of ARIA_INDICE_CLASE){
+    if (!item.nodo) continue;
+    for (const sel of selectoresActivos){
+      if (item.nodo.matches && item.nodo.matches(sel) && estaVisibleAria(item.nodo)) return item;
+    }
+  }
+
+  // 2) Si no hay marcador claro, busca cuál diapositiva está realmente visible en pantalla
+  const visibles = ARIA_INDICE_CLASE.filter(item => item.nodo && estaVisibleAria(item.nodo));
+  if (visibles.length === 1) return visibles[0];
+  if (visibles.length > 1){
+    // Si varias son "visibles" a la vez (layout raro), toma la más centrada en la pantalla
+    const centroPantalla = window.innerHeight / 2;
+    visibles.sort((a, b) => {
+      const ra = a.nodo.getBoundingClientRect(), rb = b.nodo.getBoundingClientRect();
+      return Math.abs((ra.top + ra.bottom) / 2 - centroPantalla) - Math.abs((rb.top + rb.bottom) / 2 - centroPantalla);
+    });
+    return visibles[0];
+  }
+  return null;
+}
+
+// Heurística de TIPO de diapositiva: quiz/evaluación vs. explicación de concepto vs. actividad
+function detectarTipoSlideAria(item){
+  if (!item || !item.nodo) return 'general';
+  const nodo = item.nodo;
+  const tieneOpciones = !!nodo.querySelector(
+    'input[type="radio"], input[type="checkbox"], .opcion, .opciones, .opcion-quiz, .respuesta-opcion, .quiz-opcion, .alternativa'
+  );
+  const tieneBotonVerificar = !!Array.from(nodo.querySelectorAll('button, .btn'))
+    .find(b => /verificar|comprobar|revisar respuesta|enviar respuesta|responder|corregir/.test(normalizaTexto(b.textContent || '')));
+  const claseIndicaQuiz = /quiz|pregunta|evaluacion|examen|test/.test(normalizaTexto(nodo.className || ''));
+  const textoIndicaQuiz = /^\s*(a\)|b\)|c\)|1\)|2\))/m.test(item.texto) || /¿.*\?/.test(item.texto);
+
+  if (tieneOpciones || tieneBotonVerificar || claseIndicaQuiz){
+    return 'quiz';
+  }
+  const tieneArrastrar = !!nodo.querySelector('[draggable="true"], .arrastrable, .dropzone, .drag');
+  const tieneInputTexto = !!nodo.querySelector('input[type="text"], textarea');
+  if (tieneArrastrar || tieneInputTexto){
+    return 'actividad';
+  }
+  if (textoIndicaQuiz && (nodo.querySelectorAll('li,p').length <= 6)){
+    return 'quiz';
+  }
+  return 'concepto';
+}
+
+// Frases de orientación por tipo de diapositiva — varias variantes para que no suene repetitivo,
+// y con mención al profe Luis solo en algunas (no todas) para que se sienta natural.
+const ARIA_ORIENTACION_POR_TIPO = {
+  quiz: [
+    'Aquí estás en una pregunta 🧩 Lee con calma el enunciado, revisa bien la información que te dio el profe Luis en las diapositivas anteriores, y luego mira cada opción una por una. Si de alguna estás segur@ de que NO es la correcta, descártala primero — así te quedan menos opciones para pensar. Yo no puedo darte la respuesta, ¡pero confío en que la puedes resolver! 💪',
+    'Esta parte es de evaluación, así que te toca pensar un poquito 😊 Vuelve a leer la pregunta despacio y fíjate qué palabras clave tiene. Luego revisa las opciones: descarta primero las que veas claramente que no encajan, y entre las que queden, elige la que mejor se explique con lo que vimos en la clase. No te doy la respuesta, pero sí puedo ayudarte a pensar si me cuentas en qué opción dudas.',
+    'Ojo, esta es una pregunta de la clase del profe Luis 📋 Antes de responder, repasa lo que se explicó en las diapositivas anteriores — ahí suele estar la pista. Analiza cada opción y ve descartando las que no tengan sentido; eso te deja con menos para escoger. ¡Tú puedes!'
+  ],
+  concepto: [
+    'Aquí el profe Luis te está explicando un concepto nuevo 📖 Te recomiendo leerlo con calma y fijarte muy bien en los ejemplos — casi siempre ahí está la clave para entenderlo. Cuando termines de leer, si te queda una duda puntual, pregúntamela con gusto.',
+    'En esta diapositiva hay una explicación importante. Lo mejor es que la leas completa, sin saltarte partes, y revises bien los ejemplos que te dan — eso te va a ayudar mucho en lo que sigue después. Si algo no te queda claro, dime exactamente qué parte y te ayudo a entenderla.',
+    'Esta parte es de teoría 🧠 Léela con calma y presta atención a los ejemplos que te da el profe Luis; muchas veces la actividad que sigue se resuelve fijándose justo en esos ejemplos.'
+  ],
+  actividad: [
+    'Esta es una actividad para practicar 🙌 Lee bien las instrucciones antes de empezar y ve con calma paso por paso. Si te trabas en algo puntual, cuéntame qué parte y te doy una pista, sin darte la respuesta completa.',
+    'Aquí te toca poner manos a la obra 💪 Revisa las instrucciones de la diapositiva y recuerda lo que se explicó antes en la clase — eso te va a servir para resolverla. Si necesitas una pista puntual, aquí estoy.'
+  ],
+  general: [
+    'Mira con calma lo que dice esta parte de la clase 👀 Si me cuentas qué parte no entiendes, te ayudo a orientarte sin darte la respuesta directa.',
+    'Lee bien el contenido de esta diapositiva; si tienes una duda específica sobre algo de aquí, pregúntamela y te ayudo a pensarla.'
+  ]
+};
+
+function respuestaOrientacionSlideAria(){
+  const actual = obtenerSlideActualAria();
+  if (!actual){
+    return 'Lee con calma lo que dice esta parte de la clase 👀 Si me dices qué parte específica no entiendes, te ayudo a pensarla sin darte la respuesta directa.';
+  }
+  const tipo = detectarTipoSlideAria(actual);
+  const variantes = ARIA_ORIENTACION_POR_TIPO[tipo] || ARIA_ORIENTACION_POR_TIPO.general;
+  return elegirAlAzar(variantes);
+}
+
+// Detecta si el estudiante está preguntando "qué debo hacer aquí" en cualquiera de sus formas
+function esPreguntaOrientacionAria(pregunta){
+  const n = normalizaTexto(pregunta);
+  return /que (debo |tengo que |hay que )?hacer aqui|que hago aqui|que hago aca|que se hace aqui|que se hace aca|como hago esto|como se hace esto|que es esto|no entiendo que hacer|no se que hacer|ayuda con esto|en que voy|que sigue aqui|como resuelvo esto/.test(n);
+}
+
+// ============================================================
+// PREGUNTA DE QUIZ COPIADA/PEGADA — Prioridad 30-B del PROMPT_MAESTRO.
+// Si el estudiante pega o escribe (casi) literal una pregunta de evaluación,
+// ARIA orienta el PROCESO para pensarla, nunca revela ni descarta opciones.
+// Funciona en dos modos, para servir tanto en esta demo como integrada en
+// cualquier clase real:
+//  A) Modo "clase real": si la página expone las variables globales SL/GLOSARIO
+//     del PROMPT_MAESTRO, compara contra el texto exacto de cada pregunta y
+//     usa la pistaAyuda que el profe Luis haya escrito para esa pregunta.
+//  B) Modo genérico (esta demo, o una clase que aún no expone SL): busca
+//     dentro del contenido ya indexado (ARIA_INDICE_CLASE) qué diapositiva es
+//     de tipo "quiz" y compara el texto pegado contra el enunciado que haya
+//     dentro de ella.
+// ============================================================
+function similitudTextoAria(a, b){
+  const pa = new Set(normalizaTexto(a).split(/\W+/).filter(w => w.length > 3));
+  const pb = new Set(normalizaTexto(b).split(/\W+/).filter(w => w.length > 3));
+  if (!pa.size || !pb.size) return 0;
+  let comunes = 0;
+  pa.forEach(w => { if (pb.has(w)) comunes++; });
+  return comunes / Math.min(pa.size, pb.size);
+}
+
+function detectarPreguntaCopiadaAria(pregunta){
+  // Descarta preguntas muy cortas para evitar falsos positivos (ej. "¿qué es esto?")
+  if (normalizaTexto(pregunta).split(/\W+/).filter(w => w.length > 3).length < 4) return null;
+
+  // Modo A — clase real con SL/preguntas (Prioridad 5 + 30-B del PROMPT_MAESTRO)
+  if (typeof SL !== 'undefined' && Array.isArray(SL)){
+    let mejor = null, mejorScore = 0;
+    SL.forEach(s => {
+      if (!s.preguntas) return;
+      s.preguntas.forEach(p => {
+        const score = similitudTextoAria(pregunta, p.pregunta || '');
+        if (score > mejorScore){ mejorScore = score; mejor = { origen:'datos', preg:p }; }
+      });
+    });
+    if (mejorScore >= 0.55) return mejor;
+  }
+
+  // Modo B — genérico, usando lo ya indexado del DOM
+  if (typeof ARIA_INDICE_CLASE !== 'undefined' && ARIA_INDICE_CLASE.length){
+    let mejor = null, mejorScore = 0;
+    ARIA_INDICE_CLASE.forEach(item => {
+      if (!item.nodo || detectarTipoSlideAria(item) !== 'quiz') return;
+      const score = similitudTextoAria(pregunta, item.texto);
+      if (score > mejorScore){ mejorScore = score; mejor = { origen:'dom', item }; }
+    });
+    if (mejorScore >= 0.55) return mejor;
+  }
+  return null;
+}
+
+const ARIA_ORIENTACION_QUIZ_GENERICA = [
+  'Esa es una pregunta de evaluación 🧩 No te puedo dar la respuesta, pero sí ayudarte a pensarla: vuelve a leer el contexto de arriba con calma y fíjate en el dato clave. Luego compara cada una de las opciones contra ese dato — la que mejor encaje es tu respuesta.',
+  'El profe Luis diseñó esta pregunta para que pienses, no para copiarla 😊 Relee el contexto despacio: ¿qué información te está dando? Después mira las opciones una por una y pregúntate si cada una coincide con esa información. ¿En cuál dudas más? Cuéntame y te ayudo a pensarla, sin decirte cuál es.',
+  'Esta pregunta sí cuenta para tu nota, así que no puedo resolvértela — pero te acompaño a pensarla: vuelve a leer el contexto, identifica el dato más importante, y revisa las opciones comparándolas con ese dato. Ve con calma, tú puedes.',
+  'Como te explicaría el profe Luis en persona: primero relee el contexto de la pregunta, no la pregunta sola. Ahí casi siempre está la pista que necesitas para descartar las opciones que no encajan.'
+];
+
+function orientacionSocraticaAria(match){
+  if (match && match.origen === 'datos' && match.preg && match.preg.pistaAyuda){
+    return `🧭 ${match.preg.pistaAyuda}`;
+  }
+  return elegirAlAzar(ARIA_ORIENTACION_QUIZ_GENERICA);
+}
+
+let ARIA_INDICE_CLASE = [];
+function inicializarIndiceClaseAria(){
+  try { ARIA_INDICE_CLASE = indexarContenidoClaseAria(); }
+  catch(e){ ARIA_INDICE_CLASE = []; }
+}
+
+function extraerFragmentoRelevanteAria(texto, palabras){
+  const textoNorm = normalizaTexto(texto);
+  let pos = -1;
+  for (const p of palabras){ const i = textoNorm.indexOf(p); if (i >= 0){ pos = i; break; } }
+  if (pos < 0) pos = 0;
+  const inicio = Math.max(0, pos - 60);
+  let fragmento = texto.substring(inicio, inicio + 220).trim();
+  if (inicio > 0) fragmento = '...' + fragmento;
+  if (inicio + 220 < texto.length) fragmento += '...';
+  return fragmento;
+}
+
+// Búsqueda simple por coincidencia de palabras clave dentro de las diapositivas ya indexadas.
+// 🔒 v2.0: NUNCA devuelve contenido de una diapositiva de tipo "quiz" — el enunciado y las
+// opciones de una pregunta evaluable jamás se citan aquí, ni siquiera como "fragmento
+// relacionado". Si el mejor resultado es un quiz, se descarta y se sigue buscando en el
+// resto de la clase; si no queda nada más, se devuelve null (y responderAria cae en la
+// orientación socrática o en el diccionario).
+function buscarEnClaseAria(pregunta){
+  if (!ARIA_INDICE_CLASE.length) return null;
+  const palabras = aplicarSinonimosAria(normalizaTexto(pregunta))
+    .split(/[^a-z0-9ñ]+/)
+    .filter(p => p.length > 3 && !ARIA_PALABRAS_VACIAS.has(p));
+  if (!palabras.length) return null;
+
+  const candidatos = ARIA_INDICE_CLASE.filter(item => detectarTipoSlideAria(item) !== 'quiz');
+
+  let mejor = null, mejorPuntaje = 0;
+  candidatos.forEach(item => {
+    let puntaje = 0;
+    palabras.forEach(p => { if (item.textoNorm.includes(p)) puntaje++; });
+    if (puntaje > mejorPuntaje){ mejorPuntaje = puntaje; mejor = item; }
+  });
+
+  const minimoNecesario = Math.max(1, Math.ceil(palabras.length * 0.34));
+  if (!mejor || mejorPuntaje < minimoNecesario){
+    // Respaldo: si hubo AL MENOS una coincidencia real (aunque no llegue al umbral),
+    // se ofrece como pista humilde en vez de rendirse directo con "no sé" — así ARIA
+    // sí "analiza toda la clase" antes de darse por vencida.
+    if (mejor && mejorPuntaje >= 1){
+      const fragmento = extraerFragmentoRelevanteAria(mejor.texto, palabras);
+      return `No encontré algo exacto, pero esto de "${mejor.titulo}" podría estar relacionado 🤔 ${fragmento}`;
+    }
+    return null;
+  }
+
+  // Cuando SÍ hay un buen match en una diapositiva de concepto/actividad, se entrega una
+  // explicación completa (con pasos, si el texto los trae) en vez de solo un fragmento corto —
+  // ver explicarConceptoOProcesoAria(), que reutiliza este mismo "mejor" resultado.
+  return construirExplicacionDesdeItemAria(mejor, palabras);
+}
+
+// ============================================================
+// v2.0 — EXPLICACIÓN PROFUNDA DE CONCEPTOS Y PROCESOS ("¿cómo se hace esto?",
+// "explícame X", "¿cómo funciona X?") A PARTIR DE LO QUE YA DICE LA CLASE.
+// ARIA no inventa contenido nuevo: reordena y simplifica el vocabulario de lo que el
+// profe Luis ya escribió en esa diapositiva, y si detecta una secuencia de pasos
+// (numerados o con palabras como "primero/luego/después/finalmente") la presenta
+// como lista numerada para que sea más fácil de seguir.
+// ============================================================
+const ARIA_DISPARADORES_EXPLICACION = /explica(me)?|como se hace|c[oó]mo se hace|como funciona|c[oó]mo funciona|que es|qu[eé] es|para que sirve|para qu[eé] sirve|no entiendo como|no entiendo c[oó]mo|ens[eé]ñame|dime como|dime c[oó]mo|pasos para|proceso de|como puedo|c[oó]mo puedo|como resuelvo|c[oó]mo resuelvo|que significa|qu[eé] significa/;
+
+function esPreguntaDeExplicacionAria(pregunta){
+  return ARIA_DISPARADORES_EXPLICACION.test(normalizaTexto(pregunta));
+}
+
+// Reconoce una secuencia de pasos dentro de un bloque de texto: numerados (1. / 1) / Paso 1)
+// o marcados con palabras de secuencia (primero, luego, después, a continuación, finalmente...).
+function extraerPasosAria(texto){
+  const porNumero = texto.match(/(?:^|[\s.;])(\d{1,2}[\.\)]\s*[^\d]{6,200}?)(?=\s*\d{1,2}[\.\)]|$)/g);
+  if (porNumero && porNumero.length >= 2){
+    return porNumero.map(p => p.replace(/^[\s.;]+/, '').trim()).slice(0, 6);
+  }
+  const marcador = /\b(primero|para empezar|en primer lugar|luego|despues|después|a continuacion|a continuación|posteriormente|finalmente|por ultimo|por último|para terminar)\b/i;
+  if (marcador.test(texto)){
+    const frases = texto.split(/(?<=[\.\!\?])\s+/);
+    const relevantes = frases.filter(fr => marcador.test(fr));
+    if (relevantes.length >= 2) return relevantes.slice(0, 6);
+  }
+  return null;
+}
+
+// Baja levemente el registro del texto sin cambiar su significado — no es un resumen ni una
+// reescritura libre, solo cambia conectores/verbos formales por su equivalente cotidiano.
+function simplificarLenguajeAria(texto){
+  return String(texto)
+    .replace(/\butilizar\b/gi, 'usar')
+    .replace(/\butilizamos\b/gi, 'usamos')
+    .replace(/\butilizando\b/gi, 'usando')
+    .replace(/\bse utiliza\b/gi, 'se usa')
+    .replace(/\bpor consiguiente\b/gi, 'entonces')
+    .replace(/\bcon el fin de\b/gi, 'para')
+    .replace(/\bdicho de otra forma\b/gi, 'en otras palabras')
+    .replace(/\bconsiste en\b/gi, 'se trata de');
+}
+
+// Arma la respuesta final a partir de una diapositiva ya elegida: si el texto trae pasos
+// reconocibles, los numera; si no, entrega un fragmento más largo que el de
+// extraerFragmentoRelevanteAria() (porque aquí la intención es EXPLICAR, no solo ubicar).
+function construirExplicacionDesdeItemAria(item, palabras){
+  const pasos = extraerPasosAria(item.texto);
+  let cuerpo;
+  if (pasos && pasos.length >= 2){
+    cuerpo = pasos.map((p, i) => `${i + 1}) ${simplificarLenguajeAria(p)}`).join('<br>');
+  } else {
+    const fragmento = extraerFragmentoRelevanteAria(item.texto, palabras || []);
+    cuerpo = simplificarLenguajeAria(fragmento.length > 60 ? fragmento : item.texto.slice(0, 420).trim());
+  }
+  return `Vamos con calma 😊 Esto lo vimos en "<strong>${item.titulo}</strong>":<br>${cuerpo}<br><br>Si alguna parte no te queda clara, cuéntame exactamente cuál y te la explico de otra manera.`;
+}
+
+// Punto de entrada específico para preguntas de tipo "explícame/cómo se hace/qué es" —
+// reutiliza el mismo índice y el mismo bloqueo de contenido de quiz que buscarEnClaseAria(),
+// pero se dispara con prioridad más alta cuando la pregunta suena a pedido de explicación,
+// y con un umbral un poco más flexible (el estudiante que pide una explicación suele usar
+// menos palabras clave que el que busca un dato puntual).
+function explicarConceptoOProcesoAria(pregunta){
+  if (!ARIA_INDICE_CLASE.length) return null;
+  const palabras = aplicarSinonimosAria(normalizaTexto(pregunta))
+    .split(/[^a-z0-9ñ]+/)
+    .filter(p => p.length > 3 && !ARIA_PALABRAS_VACIAS.has(p));
+  if (!palabras.length) return null;
+
+  const candidatos = ARIA_INDICE_CLASE.filter(item => detectarTipoSlideAria(item) !== 'quiz');
+  let mejor = null, mejorPuntaje = 0;
+  candidatos.forEach(item => {
+    let puntaje = 0;
+    palabras.forEach(p => { if (item.textoNorm.includes(p)) puntaje++; });
+    if (puntaje > mejorPuntaje){ mejorPuntaje = puntaje; mejor = item; }
+  });
+
+  const minimoNecesario = Math.max(1, Math.ceil(palabras.length * 0.25));
+  if (!mejor || mejorPuntaje < minimoNecesario) return null;
+  return construirExplicacionDesdeItemAria(mejor, palabras);
+}
+
+// ============================================================
+// TEMA / OBJETIVO DE LA CLASE — preguntas tipo "¿qué voy a aprender hoy?",
+// "¿cuál es el tema?", "¿cuál es el objetivo?". Estas casi nunca se pueden
+// resolver por coincidencia de palabras clave (las diapositivas rara vez
+// contienen literalmente la palabra "tema" u "objetivo"), así que se
+// resuelven aparte, con dos modos:
+//  A) Clase real con CLASE_META (Prioridad 0 / v13.0 del PROMPT_MAESTRO):
+//     respuesta exacta, 100% confiable.
+//  B) Genérico (esta demo, o una clase sin CLASE_META todavía): usa la
+//     primera diapositiva sustancial indexada, o una cuyo título sugiera
+//     que es la de bienvenida/objetivo, como mejor estimación honesta.
+// ============================================================
+function esPreguntaTemaClaseAria(pregunta){
+  const n = normalizaTexto(pregunta);
+  return /que voy a aprender|cual es el tema|de que trata|que vamos a ver|que aprendere|cual es el objetivo|de que se trata|tema de hoy|tema de la clase|tema de esta clase/.test(n);
+}
+
+function respuestaTemaClaseAria(){
+  if (typeof CLASE_META !== 'undefined'){
+    return `📌 Hoy en <strong>${CLASE_META.materia}</strong> el tema es <strong>"${CLASE_META.tema}"</strong>. ${CLASE_META.objetivo}`;
+  }
+  if (!ARIA_INDICE_CLASE.length){
+    return 'Todavía no pude leer el contenido de la clase para decirte el tema exacto 🤔 Échale un vistazo a la primera diapositiva, ahí normalmente está.';
+  }
+  // Busca una slide cuyo título huela a "objetivo/bienvenida/tema"
+  const candidataPorTitulo = ARIA_INDICE_CLASE.find(item =>
+    /objetivo|bienvenid|hoy vas a|hoy aprenderas|tema de/.test(normalizaTexto(item.titulo))
+  );
+  const elegida = candidataPorTitulo || ARIA_INDICE_CLASE[0];
+  const fragmento = elegida.texto.slice(0, 220).trim();
+  return `Por lo que veo en "${elegida.titulo}" 👉 ${fragmento}${elegida.texto.length > 220 ? '…' : ''}`;
+}
+
+</script>
+
+<script>
+// ============================================================
+// DICCIONARIO AMPLIADO — más vocabulario y temas generales para que
+// ARIA responda mejor y caiga menos veces en "no lo sé"
+// ============================================================
+const ARIA_DICCIONARIO_AMPLIADO = [
+  // ── Aritmética ──
+  { claves:['que es sumar','para que sirve la suma','que es la suma'],
+    respuesta:'Sumar es juntar dos o más cantidades para saber cuánto hay en total. Ejemplo: si tienes 3 lápices y te regalan 2 más, 3+2=5 lápices.' },
+  { claves:['que es restar','para que sirve la resta','que es la resta'],
+    respuesta:'Restar es quitar una cantidad de otra para saber cuánto queda. Ejemplo: si tienes 8 dulces y comes 3, 8-3=5 dulces.' },
+  { claves:['que es multiplicar','para que sirve la multiplicacion','que es la multiplicacion'],
+    respuesta:'Multiplicar es sumar un mismo número varias veces de forma rápida. Ejemplo: 4×3 es lo mismo que sumar 4+4+4=12.' },
+  { claves:['que es dividir','para que sirve la division','que es la division'],
+    respuesta:'Dividir es repartir una cantidad en partes iguales. Ejemplo: si repartes 10 dulces entre 2 amigos, cada uno recibe 5.' },
+  { claves:['tabla del 2','tabla de multiplicar del 2'], respuesta:'La tabla del 2: 2×1=2, 2×2=4, 2×3=6, 2×4=8, 2×5=10, 2×6=12, 2×7=14, 2×8=16, 2×9=18, 2×10=20.' },
+  { claves:['tabla del 3','tabla de multiplicar del 3'], respuesta:'La tabla del 3: 3×1=3, 3×2=6, 3×3=9, 3×4=12, 3×5=15, 3×6=18, 3×7=21, 3×8=24, 3×9=27, 3×10=30.' },
+  { claves:['tabla del 5','tabla de multiplicar del 5'], respuesta:'La tabla del 5: 5×1=5, 5×2=10, 5×3=15, 5×4=20, 5×5=25, 5×6=30, 5×7=35, 5×8=40, 5×9=45, 5×10=50.' },
+  { claves:['que es una fraccion','que son las fracciones'],
+    respuesta:'Una fracción representa una parte de un todo. Por ejemplo, si divides una pizza en 4 partes iguales y comes 1, comiste 1/4 de la pizza.' },
+  { claves:['que es un numero primo','que son los numeros primos'],
+    respuesta:'Un número primo es aquel que solo se puede dividir exactamente entre 1 y entre sí mismo. Ejemplos: 2, 3, 5, 7, 11, 13.' },
+  { claves:['que es un numero par','numeros pares'],
+    respuesta:'Un número par es el que se puede dividir exactamente entre 2, sin dejar residuo. Ejemplos: 2, 4, 6, 8, 10.' },
+  { claves:['que es un numero impar','numeros impares'],
+    respuesta:'Un número impar es el que NO se puede dividir exactamente entre 2. Ejemplos: 1, 3, 5, 7, 9.' },
+  { claves:['que es el perimetro'],
+    respuesta:'El perímetro es la suma de la longitud de todos los lados de una figura. Por ejemplo, el perímetro de un cuadrado de lado 4 es 4+4+4+4=16.' },
+  { claves:['que es el area'],
+    respuesta:'El área es el espacio que ocupa una figura. Por ejemplo, el área de un rectángulo se calcula multiplicando su base por su altura.' },
+  { claves:['que es un angulo','que son los angulos'],
+    respuesta:'Un ángulo es el espacio que se forma entre dos líneas que se cruzan en un punto. Se mide en grados con un instrumento llamado transportador.' },
+  { claves:['que es un decimal','numeros decimales'],
+    respuesta:'Un número decimal tiene una parte entera y una parte que representa algo menor que una unidad, separadas por una coma o un punto. Ejemplo: 3,5.' },
+  { claves:['que es un poligono'],
+    respuesta:'Un polígono es una figura plana cerrada formada por líneas rectas. El triángulo, el cuadrado y el pentágono son polígonos.' },
+  { claves:['que es la geometria'],
+    respuesta:'La geometría es la parte de las matemáticas que estudia las formas, el tamaño y la posición de las figuras.' },
+
+  // ── Tecnología e informática ──
+  { claves:['que es un computador','que es una computadora','partes del computador'],
+    respuesta:'Un computador es una máquina que procesa información. Sus partes principales son: el monitor (pantalla), el teclado, el mouse (ratón), y la CPU (donde está el "cerebro" del computador).' },
+  { claves:['que es el hardware'],
+    respuesta:'El hardware son las partes físicas de un computador que puedes tocar: el teclado, el monitor, el mouse, la CPU, etc.' },
+  { claves:['que es el software'],
+    respuesta:'El software son los programas del computador, es decir, las instrucciones que le dicen qué hacer. No lo puedes tocar, solo lo ves funcionar en pantalla.' },
+  { claves:['que es internet'],
+    respuesta:'Internet es una red mundial que conecta millones de computadores para que puedan compartir información entre sí, como una gran telaraña de comunicación.' },
+  { claves:['que es un algoritmo'],
+    respuesta:'Un algoritmo es una lista de pasos ordenados para resolver un problema o hacer una tarea. Por ejemplo, una receta de cocina es un algoritmo.' },
+  { claves:['que es la programacion','que es programar'],
+    respuesta:'Programar es escribir instrucciones que un computador puede entender y seguir, para que haga algo específico, como un juego o una app.' },
+  { claves:['que es un robot'],
+    respuesta:'Un robot es una máquina que puede realizar tareas, a veces de forma automática, siguiendo instrucciones programadas por personas.' },
+  { claves:['que es la inteligencia artificial'],
+    respuesta:'La inteligencia artificial es cuando un programa de computador puede aprender patrones y "pensar" de cierta forma para ayudar a resolver tareas — ¡como yo! 😊' },
+  { claves:['que es un archivo'],
+    respuesta:'Un archivo es un conjunto de información guardada en el computador, como un documento, una foto o una canción, que tiene un nombre para identificarlo.' },
+  { claves:['que es una carpeta'],
+    respuesta:'Una carpeta es un espacio del computador donde puedes guardar y organizar varios archivos juntos, para encontrarlos más fácil.' },
+  { claves:['que es un navegador'],
+    respuesta:'Un navegador es un programa que usas para entrar a páginas de internet, como Chrome, Firefox o Edge.' },
+  { claves:['que es una contraseña segura','como crear una contraseña'],
+    respuesta:'Una contraseña segura combina letras mayúsculas, minúsculas, números y símbolos, y nunca debe compartirse con desconocidos.' },
+  { claves:['que es la ciudadania digital','ciudadania digital'],
+    respuesta:'La ciudadanía digital es saber comportarse con respeto y responsabilidad cuando usamos internet y la tecnología, igual que en la vida real.' },
+  { claves:['cuidados en internet','seguridad en internet','como cuidarme en internet'],
+    respuesta:'En internet debes: no dar tus datos personales a desconocidos, pedir permiso a un adulto antes de descargar algo, y contarle a un adulto si algo te incomoda.' },
+  { claves:['que es un correo electronico','que es el email'],
+    respuesta:'Un correo electrónico (o email) es un mensaje que se envía por internet de una persona a otra, usando una dirección especial como ejemplo@correo.com.' },
+
+  // ── Valores y convivencia ──
+  { claves:['que es el respeto'],
+    respuesta:'El respeto es tratar a los demás como te gustaría que te trataran a ti: escuchando, sin burlarte y aceptando las diferencias.' },
+  { claves:['que es la responsabilidad'],
+    respuesta:'La responsabilidad es cumplir con tus deberes y tareas, y asumir las consecuencias de tus propias decisiones.' },
+  { claves:['que es la honestidad'],
+    respuesta:'La honestidad es decir siempre la verdad y actuar de forma correcta, aunque nadie te esté mirando.' },
+  { claves:['que es la empatia'],
+    respuesta:'La empatía es la capacidad de ponerte en el lugar de otra persona y entender cómo se siente.' },
+  { claves:['que es el trabajo en equipo'],
+    respuesta:'El trabajo en equipo es cuando varias personas colaboran juntas, aportando ideas, para lograr un mismo objetivo.' },
+
+  // ── Cultura general (Colombia) ──
+  { claves:['capital de colombia'], respuesta:'La capital de Colombia es Bogotá.' },
+  { claves:['moneda de colombia'], respuesta:'La moneda oficial de Colombia es el peso colombiano.' },
+  { claves:['simbolos patrios de colombia','simbolos patrios'],
+    respuesta:'Los símbolos patrios de Colombia son: la bandera (amarillo, azul y rojo), el escudo nacional y el himno nacional.' },
+  { claves:['colores de la bandera de colombia'],
+    respuesta:'La bandera de Colombia tiene tres colores: amarillo (la mitad), azul y rojo.' },
+
+  // ── Sobre ARIA misma ──
+  // (las preguntas "quién te creó", "eres real", "cuántos años tienes" ahora
+  // las maneja respuestaConversacionSocialAria(), con varias variantes)
+
+  // ── Ciencias naturales ──
+  { claves:['estados del agua','estado solido liquido gaseoso'],
+    respuesta:'El agua puede estar en 3 estados: sólido (hielo), líquido (agua normal) y gaseoso (vapor). Cambia de estado según la temperatura.' },
+  { claves:['partes de la planta','partes de una planta'],
+    respuesta:'Las partes principales de una planta son: raíz (absorbe agua y nutrientes), tallo (sostiene la planta), hojas (hacen la fotosíntesis), flor y fruto.' },
+  { claves:['que es la fotosintesis'],
+    respuesta:'La fotosíntesis es el proceso en el que las plantas usan la luz del sol, el agua y el aire para fabricar su propio alimento y liberar oxígeno.' },
+  { claves:['sistema solar','planetas del sistema solar'],
+    respuesta:'El sistema solar tiene 8 planetas: Mercurio, Venus, Tierra, Marte, Júpiter, Saturno, Urano y Neptuno, todos girando alrededor del Sol.' },
+  { claves:['cuantos huesos tiene el cuerpo humano'],
+    respuesta:'El cuerpo humano de un adulto tiene 206 huesos.' },
+  { claves:['organos del cuerpo humano','organos principales'],
+    respuesta:'Algunos órganos principales del cuerpo son: el corazón (bombea la sangre), los pulmones (para respirar), el cerebro (piensa y controla el cuerpo) y el estómago (digiere los alimentos).' },
+  { claves:['los 5 sentidos','cuales son los sentidos'],
+    respuesta:'Los 5 sentidos son: vista (ojos), oído (oídos), olfato (nariz), gusto (lengua) y tacto (piel).' },
+  { claves:['que es un ecosistema'],
+    respuesta:'Un ecosistema es un lugar donde conviven seres vivos (plantas, animales) junto con elementos como el agua, el aire y el suelo, relacionándose entre sí.' },
+  { claves:['que es reciclar','importancia de reciclar'],
+    respuesta:'Reciclar es transformar materiales usados (como papel, plástico o vidrio) en materiales nuevos, para cuidar el medio ambiente y no desperdiciar recursos.' },
+  { claves:['animales vertebrados'],
+    respuesta:'Los animales vertebrados tienen columna vertebral (huesos en la espalda). Se dividen en mamíferos, aves, peces, reptiles y anfibios.' },
+  { claves:['animales invertebrados'],
+    respuesta:'Los animales invertebrados NO tienen columna vertebral. Ejemplos: insectos, arañas, caracoles y medusas.' },
+
+  // ── Lenguaje ──
+  { claves:['que es un sustantivo'],
+    respuesta:'Un sustantivo es la palabra que nombra personas, animales, lugares o cosas. Ejemplos: niño, perro, escuela, silla.' },
+  { claves:['que es un verbo'],
+    respuesta:'Un verbo es la palabra que indica una acción, lo que hace alguien o algo. Ejemplos: correr, saltar, comer, estudiar.' },
+  { claves:['que es un adjetivo'],
+    respuesta:'Un adjetivo es la palabra que describe cómo es un sustantivo. Ejemplos: grande, bonito, rápido, azul.' },
+  { claves:['que es un sinonimo'],
+    respuesta:'Los sinónimos son palabras diferentes que significan casi lo mismo. Ejemplo: "feliz" y "contento" son sinónimos.' },
+  { claves:['que es un antonimo'],
+    respuesta:'Los antónimos son palabras que significan lo contrario. Ejemplo: "grande" y "pequeño" son antónimos.' },
+
+  // ── Emociones y salud ──
+  { claves:['como controlar el enojo','que hacer cuando estoy enojado'],
+    respuesta:'Cuando sientas mucho enojo, respira profundo varias veces, cuenta hasta diez, y cuéntale a un adulto de confianza cómo te sientes.' },
+  { claves:['importancia de dormir bien','por que hay que dormir'],
+    respuesta:'Dormir bien ayuda a que tu cuerpo y tu cerebro descansen, crezcan y recuerden mejor lo que aprendiste en el día.' },
+  { claves:['importancia de lavarse las manos'],
+    respuesta:'Lavarse las manos con agua y jabón ayuda a eliminar los gérmenes y evita que te enfermes o contagies a otras personas.' },
+
+  // ── Geografía y cultura ──
+  { claves:['regiones de colombia','cuantas regiones tiene colombia'],
+    respuesta:'Colombia tiene 6 regiones naturales: Caribe, Pacífica, Andina, Orinoquía, Amazonía e Insular.' },
+  { claves:['rio mas largo de colombia'],
+    respuesta:'El río más largo de Colombia es el río Magdalena.' },
+  { claves:['continentes del mundo','cuantos continentes hay'],
+    respuesta:'El mundo tiene 5 continentes: América, Europa, Asia, África y Oceanía (algunos también cuentan la Antártida).' },
+  { claves:['que es un mapa'],
+    respuesta:'Un mapa es un dibujo que representa un lugar (un país, una ciudad, el mundo) de forma pequeña, para poder ubicarse y estudiarlo.' },
+
+  // ── Más matemáticas ──
+  { claves:['que es un numero romano','numeros romanos'],
+    respuesta:'Los números romanos usan letras para representar cantidades: I=1, V=5, X=10, L=50, C=100. Ejemplo: VII = 7.' },
+  { claves:['que es la probabilidad'],
+    respuesta:'La probabilidad mide qué tan posible es que algo ocurra. Por ejemplo, al lanzar una moneda hay 50% de probabilidad de que caiga cara.' },
+  { claves:['que es un promedio'],
+    respuesta:'El promedio se calcula sumando varios números y dividiendo el resultado entre la cantidad de números que sumaste.' },
+  { claves:['que es el sistema metrico','unidades de medida'],
+    respuesta:'El sistema métrico usa unidades como el metro (longitud), el kilogramo (peso/masa) y el litro (volumen) para medir cosas.' },
+  { claves:['tabla del 4'], respuesta:'La tabla del 4: 4×1=4, 4×2=8, 4×3=12, 4×4=16, 4×5=20, 4×6=24, 4×7=28, 4×8=32, 4×9=36, 4×10=40.' },
+  { claves:['tabla del 6'], respuesta:'La tabla del 6: 6×1=6, 6×2=12, 6×3=18, 6×4=24, 6×5=30, 6×6=36, 6×7=42, 6×8=48, 6×9=54, 6×10=60.' },
+  { claves:['tabla del 7'], respuesta:'La tabla del 7: 7×1=7, 7×2=14, 7×3=21, 7×4=28, 7×5=35, 7×6=42, 7×7=49, 7×8=56, 7×9=63, 7×10=70.' },
+
+  // ── Más tecnología ──
+  { claves:['que es una app','que es una aplicacion'],
+    respuesta:'Una app (aplicación) es un programa que se instala en un celular, tablet o computador para hacer una tarea específica, como jugar, aprender o comunicarte.' },
+  { claves:['que es la nube','guardar en la nube'],
+    respuesta:'"La nube" es guardar información en internet, en vez de solo en tu computador, para poder acceder a ella desde cualquier lugar.' },
+  { claves:['que es un virus informatico'],
+    respuesta:'Un virus informático es un programa dañino que puede afectar el funcionamiento de un computador. Por eso es importante no abrir archivos de desconocidos.' },
+  { claves:['diferencia entre datos e informacion'],
+    respuesta:'Los datos son números o palabras sueltas sin un orden claro (ej. "8, mañana, lluvia"). La información es cuando esos datos se organizan y tienen sentido (ej. "mañana lloverá 8 horas").' },
+
+  // ── Aún más matemáticas ──
+  { claves:['tabla del 8'], respuesta:'La tabla del 8: 8×1=8, 8×2=16, 8×3=24, 8×4=32, 8×5=40, 8×6=48, 8×7=56, 8×8=64, 8×9=72, 8×10=80.' },
+  { claves:['tabla del 9'], respuesta:'La tabla del 9: 9×1=9, 9×2=18, 9×3=27, 9×4=36, 9×5=45, 9×6=54, 9×7=63, 9×8=72, 9×9=81, 9×10=90.' },
+  { claves:['tabla del 10'], respuesta:'La tabla del 10: 10×1=10, 10×2=20, 10×3=30, 10×4=40, 10×5=50, 10×6=60, 10×7=70, 10×8=80, 10×9=90, 10×10=100.' },
+  { claves:['fracciones equivalentes'],
+    respuesta:'Dos fracciones son equivalentes cuando representan la misma cantidad aunque se vean diferentes. Ejemplo: 1/2 es lo mismo que 2/4 o 4/8.' },
+  { claves:['que es el minimo comun multiplo','mcm'],
+    respuesta:'El mínimo común múltiplo (MCM) es el número más pequeño que es múltiplo de dos o más números a la vez. Ejemplo: el MCM de 3 y 4 es 12.' },
+  { claves:['que es el maximo comun divisor','mcd'],
+    respuesta:'El máximo común divisor (MCD) es el número más grande que divide exactamente a dos o más números. Ejemplo: el MCD de 8 y 12 es 4.' },
+  { claves:['que es un triangulo','tipos de triangulos'],
+    respuesta:'Un triángulo es una figura de 3 lados y 3 ángulos. Puede ser equilátero (3 lados iguales), isósceles (2 lados iguales) o escaleno (3 lados diferentes).' },
+  { claves:['que es un cuadrilatero'],
+    respuesta:'Un cuadrilátero es una figura plana de 4 lados. Ejemplos: cuadrado, rectángulo, rombo y trapecio.' },
+  { claves:['que es el volumen'],
+    respuesta:'El volumen es el espacio que ocupa un cuerpo en tres dimensiones (largo, ancho y alto). Se mide, por ejemplo, en centímetros cúbicos o litros.' },
+  { claves:['que es una ecuacion'],
+    respuesta:'Una ecuación es una igualdad matemática que tiene un valor desconocido (una incógnita, casi siempre representada con una letra como "x") que hay que descubrir.' },
+
+  // ── Ciencias naturales (física y química básica) ──
+  { claves:['que es la gravedad'],
+    respuesta:'La gravedad es la fuerza que atrae los objetos hacia el centro de la Tierra, por eso las cosas caen al suelo en vez de flotar.' },
+  { claves:['que es la materia'],
+    respuesta:'La materia es todo lo que ocupa un espacio y tiene peso: el aire, el agua, una silla, tu propio cuerpo. Todo lo que existe está hecho de materia.' },
+  { claves:['que es un atomo'],
+    respuesta:'Un átomo es la partícula más pequeña en la que se puede dividir la materia y seguir teniendo las propiedades de ese material.' },
+  { claves:['que es la energia'],
+    respuesta:'La energía es la capacidad de hacer que algo se mueva, cambie o funcione. Hay varios tipos: energía solar, eléctrica, eólica (del viento) y más.' },
+  { claves:['que es el ciclo del agua'],
+    respuesta:'El ciclo del agua tiene 4 pasos principales: evaporación (el agua sube al cielo), condensación (forma las nubes), precipitación (cae como lluvia) y recolección (vuelve a ríos y mares).' },
+  { claves:['que son los seres vivos','caracteristicas de los seres vivos'],
+    respuesta:'Los seres vivos nacen, crecen, se reproducen y mueren. Además, se alimentan, respiran y responden a lo que pasa a su alrededor.' },
+  { claves:['diferencia entre clima y tiempo atmosferico'],
+    respuesta:'El tiempo atmosférico es cómo está el clima en un momento específico (hoy llueve). El clima es el patrón que se repite en una región durante muchos años (esta zona es cálida y lluviosa).' },
+
+  // ── Historia ──
+  { claves:['quien fue simon bolivar'],
+    respuesta:'Simón Bolívar fue un militar y político venezolano que luchó por la independencia de varios países de Sudamérica, entre ellos Colombia. Por eso le dicen "El Libertador".' },
+  { claves:['independencia de colombia','20 de julio'],
+    respuesta:'Colombia celebra su independencia el 20 de julio de 1810, día en que comenzó el movimiento contra el dominio español.' },
+  { claves:['quienes eran los indigenas muiscas','muiscas'],
+    respuesta:'Los Muiscas fueron un pueblo indígena que vivió en la zona donde hoy está Bogotá y Boyacá, conocidos por su trabajo en orfebrería (objetos de oro), como la Balsa Muisca.' },
+  { claves:['que fue la colonia en colombia'],
+    respuesta:'La Colonia fue el periodo en que España gobernó el territorio de lo que hoy es Colombia, desde la conquista hasta la independencia en 1810-1819.' },
+
+  // ── Arte y música ──
+  { claves:['que son los colores primarios'],
+    respuesta:'Los colores primarios son el amarillo, el azul y el rojo. Mezclándolos entre sí se pueden crear todos los demás colores.' },
+  { claves:['que es un instrumento musical'],
+    respuesta:'Un instrumento musical es un objeto que se usa para crear sonidos musicales, como la guitarra, el piano, el tambor o la flauta.' },
+  { claves:['que es un cuadro','que es una pintura'],
+    respuesta:'Un cuadro (o pintura) es una obra de arte hecha aplicando color sobre una superficie, como un lienzo o un papel, para representar algo o expresar una idea.' },
+
+  // ── Deportes ──
+  { claves:['reglas basicas del futbol'],
+    respuesta:'En el fútbol dos equipos de 11 jugadores intentan meter el balón en la portería contraria usando los pies (o la cabeza), sin usar las manos, excepto el arquero.' },
+  { claves:['importancia del ejercicio','por que hacer ejercicio'],
+    respuesta:'Hacer ejercicio fortalece tu corazón y tus músculos, te ayuda a dormir mejor y libera energía positiva en tu cuerpo.' },
+
+  // ── Lenguaje (más) ──
+  { claves:['que es una silaba'],
+    respuesta:'Una sílaba es cada uno de los golpes de voz en los que se divide una palabra. Ejemplo: "ca-sa" tiene 2 sílabas.' },
+  { claves:['que es un texto narrativo'],
+    respuesta:'Un texto narrativo cuenta una historia, con personajes y hechos que ocurren en un orden, como los cuentos y las fábulas.' },
+  { claves:['que es una fabula'],
+    respuesta:'Una fábula es un cuento corto, generalmente con animales como personajes, que termina dejando una enseñanza o moraleja.' },
+  { claves:['que es un signo de puntuacion'],
+    respuesta:'Los signos de puntuación (como el punto, la coma o los signos de interrogación) ayudan a organizar un texto y a entender mejor lo que se quiere decir.' },
+
+];
+
+// ── Sinónimos y jerga común de estudiantes: se reemplazan ANTES de buscar, así
+// "compu", "profe" o "mate" también activan las respuestas de "computador", "profesor" o "matematicas" ──
+const ARIA_SINONIMOS = [
+  [/\bcompu\b/g, 'computador'],
+  [/\bprofe\b/g, 'profesor'],
+  [/\bmate\b/g, 'matematicas'],
+  [/\bmates\b/g, 'matematicas'],
+  [/\btecno\b/g, 'tecnologia'],
+  [/\bcel\b/g, 'celular'],
+  [/\bwifi\b/g, 'internet'],
+  [/\bmulti(plicacion)?\b/g, 'multiplicacion'],
+  [/\bdivi(sion)?\b/g, 'division'],
+  [/\bfrac(cion)?\b/g, 'fraccion'],
+  [/\bmulti(plicar)?\b/g, 'multiplicacion'],
+  [/\bsumar?\b/g, 'suma'],
+  [/\brestar?\b/g, 'resta'],
+  [/\bgeo\b/g, 'geometria'],
+  [/\bnat(urales)?\b/g, 'ciencias naturales'],
+  [/\bsoc(iales)?\b/g, 'ciencias sociales'],
+  [/\blenguaje\b/g, 'lenguaje'],
+  [/\beduc(acion)? fisica\b/g, 'ejercicio'],
+  [/\bmusi(ca)?\b/g, 'musica'],
+  [/\bhadrones\b/g, 'hadrones'],
+  [/\badrones\b/g, 'hadrones'],
+  [/\bbolivar\b/g, 'simon bolivar'],
+];
+
+function aplicarSinonimosAria(textoNorm){
+  let t = textoNorm;
+  ARIA_SINONIMOS.forEach(([patron, reemplazo]) => { t = t.replace(patron, reemplazo); });
+  return t;
+}
+
+function respuestaDiccionarioAmpliadoAria(pregunta){
+  const p = aplicarSinonimosAria(normalizaTexto(pregunta));
+  for (const item of ARIA_DICCIONARIO_AMPLIADO){
+    if (item.claves.some(clave => p.includes(normalizaTexto(clave)))) return item.respuesta;
+  }
+  return null;
+}
+
+</script>
+
+<script>
+// ============================================================
+// CONSULTA OPCIONAL A WIKIPEDIA — último recurso, solo si ni la clase
+// ni el diccionario ampliado supieron responder. Requiere internet.
+// La API de Wikipedia es pública y gratuita: NO necesita ninguna clave
+// secreta, así que no hay ningún dato sensible que pueda filtrarse.
+// ============================================================
+const ARIA_PERMITIR_WIKIPEDIA = true; // el profe Luis puede poner esto en false para desactivarlo
+
+// Filtro de seguridad: si el resumen de Wikipedia contiene alguna de estas palabras,
+// ARIA prefiere no mostrarlo (mejor decir "no lo sé" que arriesgar contenido no apto).
+// El profe Luis puede ampliar esta lista con el tiempo.
+const ARIA_PALABRAS_NO_APTAS_WIKI = [
+  'sexual','sexo','violacion','suicid','pornograf','droga','cocaina','heroina',
+  'marihuana','asesinat','genocidio','tortura','terroris','arma de fuego',
+  'pistola','explosivo','desnud','masacre','abuso'
+];
+
+function contenidoSeguroParaNinosAria(texto){
+  const n = normalizaTexto(texto);
+  return !ARIA_PALABRAS_NO_APTAS_WIKI.some(p => n.includes(p));
+}
+
+// 👉 Copia aquí, TAL CUAL (sin cambiarles ni una coma), las frases de "no lo sé, sigo
+// aprendiendo" que ya usa tu responderAria() original. Así el widget sabe cuándo intentar
+// Wikipedia como bonus, sin tener que tocar la función responderAria() para nada más.
+const ARIA_FRASES_NO_SE_CONOCIDAS = [
+  'todavia estoy aprendiendo',
+  'sigo aprendiendo',
+  'no se responder eso',
+  'esa no la conozco'
+];
+
+function esRespuestaDeNoSeAria(respuesta){
+  const r = normalizaTexto(respuesta || '');
+  return ARIA_FRASES_NO_SE_CONOCIDAS.some(frase => r.includes(normalizaTexto(frase)));
+}
+
+// Busca el título de artículo más parecido usando "opensearch" (rápido, pero exige
+// que el texto esté bien escrito porque compara por prefijo, ej. "hadrones" con h).
+async function buscarTituloPorOpensearchAria(termino, signal){
+  const url = `https://es.wikipedia.org/w/api.php?action=opensearch&search=${encodeURIComponent(termino)}&limit=1&namespace=0&format=json&origin=*`;
+  const res = await fetch(url, { signal });
+  if (!res.ok) throw new Error('opensearch respondió ' + res.status);
+  const datos = await res.json();
+  return (datos && datos[1] && datos[1][0]) || null;
+}
+
+// Plan B: búsqueda de texto completo (más tolerante a errores de tipeo, ej. "adrones"
+// sin h). Se usa solo si la primera búsqueda no encontró nada.
+async function buscarTituloPorTextoCompletoAria(termino, signal){
+  const url = `https://es.wikipedia.org/w/api.php?action=query&list=search&srsearch=${encodeURIComponent(termino)}&srlimit=1&format=json&origin=*`;
+  const res = await fetch(url, { signal });
+  if (!res.ok) throw new Error('query/search respondió ' + res.status);
+  const datos = await res.json();
+  const primero = datos && datos.query && datos.query.search && datos.query.search[0];
+  return (primero && primero.title) || null;
+}
+
+// Caché simple en memoria: si alguien repite la misma pregunta, no se vuelve a llamar a Wikipedia
+const ARIA_CACHE_WIKI = new Map();
+
+async function buscarEnWikipediaAria(pregunta){
+  if (!ARIA_PERMITIR_WIKIPEDIA) return null;
+  if (typeof navigator !== 'undefined' && navigator.onLine === false){
+    console.warn('[ARIA/Wikipedia] Se omitió la búsqueda: el navegador reporta que no hay conexión (navigator.onLine=false).');
+    return null;
+  }
+
+  const termino = (typeof extraerTerminoBusquedaWikiAria === 'function')
+    ? extraerTerminoBusquedaWikiAria(pregunta)
+    : pregunta.replace(/[¿?¡!]/g, '').trim().toLowerCase();
+  if (!termino) return null;
+
+  if (ARIA_CACHE_WIKI.has(termino)){
+    return ARIA_CACHE_WIKI.get(termino);
+  }
+
+  const controlador = new AbortController();
+  const tiempoFuera = setTimeout(() => controlador.abort(), 6000);
+
+  try {
+    // 1) Intento rápido por prefijo, y si no hay resultado, intento por texto completo
+    let titulo = null;
+    try {
+      titulo = await buscarTituloPorOpensearchAria(termino, controlador.signal);
+    } catch (e1){
+      console.warn('[ARIA/Wikipedia] opensearch falló, se intenta con búsqueda de texto completo:', e1);
+    }
+    if (!titulo){
+      try {
+        titulo = await buscarTituloPorTextoCompletoAria(termino, controlador.signal);
+      } catch (e2){
+        console.error('[ARIA/Wikipedia] búsqueda de texto completo también falló:', e2);
+      }
+    }
+    if (!titulo){
+      console.info('[ARIA/Wikipedia] No se encontró ningún artículo para: "' + termino + '"');
+      return null;
+    }
+
+    // 2) Traer el resumen (extracto corto) de ese artículo
+    const urlResumen = `https://es.wikipedia.org/api/rest_v1/page/summary/${encodeURIComponent(titulo)}`;
+    const resResumen = await fetch(urlResumen, { signal: controlador.signal });
+    if (!resResumen.ok){
+      console.error('[ARIA/Wikipedia] El resumen del artículo "' + titulo + '" respondió ' + resResumen.status);
+      return null;
+    }
+    const datosResumen = await resResumen.json();
+
+    if (datosResumen.type === 'disambiguation'){
+      console.info('[ARIA/Wikipedia] "' + titulo + '" es un título ambiguo (página de desambiguación); se descarta por seguridad.');
+      return null;
+    }
+    const extracto = datosResumen.extract;
+    if (!extracto || extracto.length < 20) return null;
+    if (!contenidoSeguroParaNinosAria(extracto)){
+      console.info('[ARIA/Wikipedia] El resumen de "' + titulo + '" contenía una palabra filtrada; se descarta por seguridad para niños.');
+      return null;
+    }
+
+    const corto = extracto.length > 320 ? extracto.slice(0, 320).trim() + '...' : extracto;
+    const url = datosResumen.content_urls && datosResumen.content_urls.desktop
+      ? datosResumen.content_urls.desktop.page : null;
+
+    let html = `Busqué en Wikipedia sobre "<strong>${datosResumen.title}</strong>" 🌐<br>${corto}`;
+    if (url) html += `<br><a href="${url}" target="_blank" rel="noopener">Ver artículo completo</a>`;
+    ARIA_CACHE_WIKI.set(termino, html);
+    return html;
+  } catch (e){
+    // sin internet, tiempo agotado, CORS bloqueado (típico al abrir el .html con doble clic
+    // en vez de servirlo por http/https), o cualquier otra falla -> se registra para diagnóstico
+    console.error('[ARIA/Wikipedia] Falló la consulta a Wikipedia:', e);
+    return null;
+  } finally {
+    clearTimeout(tiempoFuera);
+  }
+}
+
+</script>
+
+<script>
+// ============================================================
+// ARIA AVATAR VISUAL v1.6 — controlador (arrastre + voz + panel + chat)
+// Depende de: responderAria(pregunta), normalizaTexto(texto)  [ya definidas]
+// ============================================================
+(function(){
+  let vozActiva = false; // 🔴 SIEMPRE inicia apagada — nunca se recuerda encendida entre sesiones
+  let idleTimer = null;
+  let placeholderTimer = null;
+
+  const ARIA_PLACEHOLDERS = [
+    'Escríbele a ARIA...',
+    'Pregúntame algo de la clase...',
+    'Ej: ¿qué es un ángulo?',
+    '¿En qué te ayudo hoy?'
+  ];
+
+  const $fab        = document.getElementById('aria-fab');
+  const $fabImg     = document.getElementById('aria-fab-img');
+  const $avatarImg  = document.getElementById('aria-avatar-img');
+  const $chat       = document.getElementById('aria-chat');
+  const $panel      = document.getElementById('aria-panel');
+  const $vozBtn     = document.getElementById('aria-voz-btn');
+  const $sonidoBtn  = document.getElementById('aria-sonido-btn');
+  const $cerrarBtn  = document.getElementById('aria-cerrar-btn');
+  const $input      = document.getElementById('aria-input');
+  const $enviarBtn  = document.getElementById('aria-enviar-btn');
+
+  function actualizarImagen(categoria){
+    const src = elegirImagenAria(categoria);
+    if (window.ARIA_FX){ ARIA_FX.cambiar([$fabImg, $avatarImg], src); return; } // v2.8.0 — cambio suave
+    if ($fabImg) $fabImg.src = src;
+    if ($avatarImg) $avatarImg.src = src;
+  }
+
+  // Agrega un mensaje al historial de chat visible y hace scroll hasta el final
+  function agregarMensajeAria(rol, html){
+    const div = document.createElement('div');
+    div.className = 'aria-msg ' + (rol === 'usuario' ? 'aria-msg-usuario' : 'aria-msg-aria');
+    div.innerHTML = html;
+    $chat.appendChild(div);
+    $chat.scrollTop = $chat.scrollHeight;
+    return div;
+  }
+
+  // Burbuja de "ARIA está pensando..." — se agrega y se quita del propio historial
+  function mostrarEscribiendo(){
+    const div = document.createElement('div');
+    div.className = 'aria-msg aria-msg-aria aria-escribiendo';
+    div.id = 'aria-escribiendo-burbuja';
+    div.innerHTML = '<span></span><span></span><span></span>';
+    $chat.appendChild(div);
+    $chat.scrollTop = $chat.scrollHeight;
+  }
+  function ocultarEscribiendo(){
+    const div = document.getElementById('aria-escribiendo-burbuja');
+    if (div) div.remove();
+    if (window.ARIA_FX) ARIA_FX.pensando(false); // v2.8.0
+  }
+
+  function rotarPlaceholder(){
+    let i = 0;
+    placeholderTimer = setInterval(() => {
+      if (document.activeElement === $input || $input.value) return; // no cambiar si está escribiendo
+      i = (i + 1) % ARIA_PLACEHOLDERS.length;
+      $input.placeholder = ARIA_PLACEHOLDERS[i];
+    }, 3500);
+  }
+
+  function abrirPanel(){
+    $panel.classList.add('aria-abierto');
+    $fab.style.display = 'none';
+    if (window.ariaSonar) ariaSonar('notificacion');
+    reiniciarIdle();
+  }
+
+  function cerrarPanel(){
+    $panel.classList.remove('aria-abierto');
+    $fab.style.display = '';
+    if (window.speechSynthesis) window.speechSynthesis.cancel();
+    clearTimeout(idleTimer);
+  }
+
+  // Si el estudiante deja el panel abierto sin usarlo, ARIA "se duerme" — discreta, no insiste
+  function reiniciarIdle(){
+    clearTimeout(idleTimer);
+    idleTimer = setTimeout(() => actualizarImagen('dormida'), 90000);
+  }
+
+  function hablar(texto){
+    if (!vozActiva || !window.speechSynthesis) return;
+    window.speechSynthesis.cancel();
+    const limpio = String(texto).replace(/<[^>]+>/g, '');
+    const u = new SpeechSynthesisUtterance(limpio);
+    if (ARIA_VOZ_ELEGIDA) u.voice = ARIA_VOZ_ELEGIDA;
+    u.lang = ARIA_VOZ_ELEGIDA ? ARIA_VOZ_ELEGIDA.lang : 'es-419';
+    u.pitch = 1.12;
+    u.rate = 1.15;
+    // v2.8.0 — el avatar "habla": pulsa mientras suena la voz (el token evita que un audio cancelado apague al nuevo)
+    const tk = ++window.__ariaHablaTk;
+    u.onstart = () => { if (window.ARIA_FX && tk === window.__ariaHablaTk) ARIA_FX.hablando(true, limpio.length * 85 + 1500); };
+    u.onend = u.onerror = () => { if (window.ARIA_FX && tk === window.__ariaHablaTk) ARIA_FX.hablando(false); };
+    u.onboundary = (e) => { if (window.ARIA_FX && tk === window.__ariaHablaTk && e.name === 'word') ARIA_FX.palabra(); };
+    window.speechSynthesis.speak(u);
+  }
+
+  // Punto único de entrada: se llama cada vez que ARIA responde algo, desde donde sea
+  function reaccionarAria(pregunta, respuesta, emocionForzada){
+    if (window.ARIA_FX) ARIA_FX.pensando(false);
+    // v2.8.0 — Si Gemini eligió una emoción válida, se usa; si no, siguen las reglas de siempre.
+    let categoria = (emocionForzada && ARIA_IMG_POR_CATEGORIA[emocionForzada])
+      ? emocionForzada : categoriaExpresionAria(pregunta, respuesta);
+    // v2.5 — Resumen de fin de clase: se agrega SOLO cuando ARIA detecta una despedida real,
+    // y solo si de verdad se tocó algún tema del banco de métodos en esta sesión.
+    if (categoria === 'despedida' && typeof generarResumenFinDeClaseAria === 'function'){
+      const resumen = generarResumenFinDeClaseAria();
+      if (resumen) respuesta = respuesta + '<br><br>' + resumen;
+    }
+    actualizarImagen(categoria);
+    if (window.ARIA_FX) ARIA_FX.reaccionar(categoria); // v2.8.0 — aura + partículas
+    agregarMensajeAria('aria', respuesta);
+    if (window.ariaSonar) ariaSonar(categoria === 'logro' ? 'logro' : (categoria === 'despedida' ? 'despedida' : 'notificacion'));
+    hablar(respuesta);
+    reiniciarIdle();
+    if ($avatarImg){
+      $avatarImg.classList.remove('aria-rebotar');
+      void $avatarImg.offsetWidth; // fuerza reinicio de la animación aunque se repita seguido
+      $avatarImg.classList.add('aria-rebotar');
+    }
+  }
+  window.ARIA_AVATAR_REACCIONAR = reaccionarAria; // 🔗 hook público
+  window.ARIA_ABRIR_PANEL = abrirPanel;
+  // 🔗 Hook público para refuerzo proactivo (ver Prioridad 30-F): abre el panel de ARIA
+  // y le hace decir algo SIN que el estudiante haya preguntado nada — para cuando falla
+  // 2 veces la misma pregunta de un quiz.
+  window.ARIA_MENSAJE_PROACTIVO = function(mensaje, categoria){
+    abrirPanel();
+    actualizarImagen(categoria || 'triste');
+    if (window.ARIA_FX) ARIA_FX.reaccionar(categoria || 'triste');
+    agregarMensajeAria('aria', mensaje);
+    hablar(mensaje);
+    reiniciarIdle();
+  };
+
+  function enviar(textoForzado){
+    const texto = (textoForzado || $input.value || '').trim();
+    if (!texto) return;
+    $input.value = '';
+    agregarMensajeAria('usuario', escaparHtmlAria(texto));
+    if (window.ariaSonar) ariaSonar('clic');
+    mostrarEscribiendo();
+    actualizarImagen('pensando');
+    if (window.ARIA_FX) ARIA_FX.pensando(true); // v2.8.0 — se inclina y brilla mientras "piensa"
+
+    // Pequeña pausa simulando que "piensa" — se ve más viva y natural
+    setTimeout(async () => {
+      let respuesta = responderAria(texto);
+
+      // v2.7 — Si ni la clase ni el diccionario supieron responder, ARIA intenta con una IA
+      // real (Gemini) como primer respaldo — a diferencia de Wikipedia, puede entender
+      // preguntas abiertas o de conversación, no solo datos puntuales. Todas las protecciones
+      // de código (anti-quiz, lenguaje, románticas) YA se revisaron antes en responderAria(),
+      // así que para cuando llegamos aquí, la pregunta ya pasó esos filtros.
+      let emocionIA = null;
+      if (esRespuestaDeNoSeAria(respuesta) && typeof preguntarIAExternaAria === 'function'){
+        const desdeIA = await preguntarIAExternaAria(texto, null);
+        if (desdeIA){ respuesta = desdeIA; emocionIA = window.ARIA_EMOCION_IA || null; }
+      }
+
+      // Si la IA real no está configurada, no respondió, o se agotó el cupo de la sesión,
+      // intenta Wikipedia como respaldo — pero SOLO si el mensaje de verdad parece una
+      // pregunta de datos (v2.6), para no mostrar un artículo al azar sin relación.
+      const pareceFactual = typeof pareceConsultaFactualAria === 'function' ? pareceConsultaFactualAria(texto) : true;
+      if (esRespuestaDeNoSeAria(respuesta) && pareceFactual && typeof buscarEnWikipediaAria === 'function'){
+        const desdeWikipedia = await buscarEnWikipediaAria(texto);
+        if (desdeWikipedia) respuesta = desdeWikipedia;
+      }
+
+      ocultarEscribiendo();
+      reaccionarAria(texto, respuesta, emocionIA);
+    }, 380);
+  }
+
+  $cerrarBtn.addEventListener('click', cerrarPanel);
+  $enviarBtn.addEventListener('click', () => enviar());
+  $input.addEventListener('keydown', e => { if (e.key === 'Enter') enviar(); });
+
+  $vozBtn.addEventListener('click', () => {
+    vozActiva = !vozActiva;
+    if (vozActiva){
+      $vozBtn.textContent = '🔊 Voz activada (toca para apagar)';
+      $vozBtn.classList.remove('aria-voz-off');
+      $vozBtn.classList.add('aria-voz-on');
+    } else {
+      $vozBtn.textContent = '🔇 Activar voz';
+      $vozBtn.classList.remove('aria-voz-on');
+      $vozBtn.classList.add('aria-voz-off');
+      if (window.speechSynthesis) window.speechSynthesis.cancel();
+    }
+  });
+
+  function pintarBotonSonido(){
+    const activo = window.ariaSonidoEstaActivo ? ariaSonidoEstaActivo() : true;
+    $sonidoBtn.textContent = activo ? '🔈 Sonidos: activados' : '🔇 Sonidos: apagados';
+    $sonidoBtn.classList.toggle('aria-voz-on', activo);
+    $sonidoBtn.classList.toggle('aria-voz-off', !activo);
+  }
+  pintarBotonSonido();
+  $sonidoBtn.addEventListener('click', () => {
+    if (window.ariaAlternarSonido) ariaAlternarSonido();
+    pintarBotonSonido();
+  });
+
+  // ── Arrastre libre del ícono flotante (mouse + táctil, vía Pointer Events) ──
+  function habilitarArrastre(el, alSoltarSinMover){
+    let arrastrando = false, seMovio = false, offsetX = 0, offsetY = 0, startX = 0, startY = 0;
+    const UMBRAL = 6;
+
+    el.addEventListener('pointerdown', (e) => {
+      arrastrando = true; seMovio = false;
+      el.classList.add('aria-arrastrando');
+      const rect = el.getBoundingClientRect();
+      offsetX = e.clientX - rect.left;
+      offsetY = e.clientY - rect.top;
+      startX = e.clientX; startY = e.clientY;
+      el.style.left = rect.left + 'px';
+      el.style.top = rect.top + 'px';
+      el.style.right = 'auto';
+      el.style.bottom = 'auto';
+      el.setPointerCapture(e.pointerId);
+    });
+
+    el.addEventListener('pointermove', (e) => {
+      if (!arrastrando) return;
+      if (Math.abs(e.clientX - startX) > UMBRAL || Math.abs(e.clientY - startY) > UMBRAL) seMovio = true;
+      const w = el.offsetWidth, h = el.offsetHeight;
+      let nx = e.clientX - offsetX;
+      let ny = e.clientY - offsetY;
+      nx = Math.max(4, Math.min(window.innerWidth - w - 4, nx));
+      ny = Math.max(4, Math.min(window.innerHeight - h - 4, ny));
+      el.style.left = nx + 'px';
+      el.style.top = ny + 'px';
+    });
+
+    function terminar(e){
+      if (!arrastrando) return;
+      arrastrando = false;
+      el.classList.remove('aria-arrastrando');
+      if (!seMovio && typeof alSoltarSinMover === 'function') alSoltarSinMover();
+    }
+    el.addEventListener('pointerup', terminar);
+    el.addEventListener('pointercancel', terminar);
+  }
+  habilitarArrastre($fab, abrirPanel);
+
+  // Imagen inicial discreta antes de la primera interacción
+  actualizarImagen('saludo');
+  agregarMensajeAria('aria', '¡Hola! Si quieres que te hable, activa mi voz aquí abajo. Si no, solo escríbeme 💜');
+  rotarPlaceholder();
+
+  // Índice del contenido de la clase (para poder responder sobre cualquier diapositiva)
+  if (document.readyState === 'complete') inicializarIndiceClaseAria();
+  else window.addEventListener('load', inicializarIndiceClaseAria);
+})();
+</script>
