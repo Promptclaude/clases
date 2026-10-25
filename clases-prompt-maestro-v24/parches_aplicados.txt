@@ -1,0 +1,52 @@
+1. Título v23
+2. Cabecera 00
+3. Visión v23
+4. Etapa 2 incluye 29
+5. Precedencia v23
+6. Precedencia quiz
+7. Conteo prioridades
+8. Lista sección 5
+9. 0-C principio y tabla → 39.2
+10. 0-C comentario
+11. 0-C mensaje bloqueo
+12. 0-C handlers → 39
+13. P3 tabla
+14. P4 sopa
+15. P4 checklist
+16. P5 formato
+17. P5 resumen del quiz
+18. 8-O puedeAvanzar → 39.6
+19. 8-O aplicarEstadoAvance → 39.6
+20. 8-O revalidarAvance (c)
+21. 8-O render
+22. 8-O comentario temporizadores
+23. 8-S limpia rescate
+24. 8-O checklist
+25. 8-P push
+26. 8-P cola de responderQuiz
+27. 8-P htmlRetroQuiz → 40
+28. 8-U updScore → 41
+29. 8-U tabla
+30. 8-V sello estricto → 42
+31. 8-V save fallo visible
+32. 8-B esEstudianteNuevo → 42
+33. 8-F entrada index → 42
+34. 8-F checklist
+35. 8 index normalizar
+36. 34-C.3 historia
+37. 35.3 regla 2
+38. 35 checklist
+39. 90 bloqueo
+40. Módulo 29 insertado
+41. 0-C handlers v23
+42. 90 drag
+43. 90 match
+44. 90 fill
+45. 90 mensaje
+46. 90 puedeAvanzar
+47. Semáforo firma
+48. Semáforo verde
+49. Semáforo amarillo
+50. Semáforo rojo
+51. Semáforo registrar
+52. CLASE_API v23
