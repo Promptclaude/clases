@@ -1,0 +1,14 @@
+const fs=require('fs'),vm=require('vm');let f=0,n=0;const ok=(c,m)=>{n++;if(!c){f++;console.log('  ❌',m)}else console.log('  ✅',m)};
+function nuevo(){const box={setTimeout:(fn)=>0,console};vm.createContext(box);vm.runInContext(fs.readFileSync(__dirname+'/juego_fx_snippets.js','utf8')+';this.Juego=Juego;this.crearSfx=crearSfx;',box);
+  const reg=[];const ej={};['sfx','burst','hud','confeti','toast','aria','boss','pantalla'].forEach(k=>ej[k]=(v)=>reg.push(k+':'+v));
+  box.Juego.usar(ej);box.Juego._reloj(()=>{});return {J:box.Juego,reg,box};}
+console.log('T16 · Motor de efectos');
+{const{J,reg}=nuevo();const r=J.evento('acierto');ok(r.join()==='sfx,burst,hud,aria','acierto → sonido, destello, pulso del HUD y ARIA (hay '+r+')');}
+{const{J,reg}=nuevo();const r=J.evento('casi');ok(!r.includes('burst')&&!r.includes('hud'),'fallo (casi) NO lanza partículas ni pulso: es suave');ok(!JSON.stringify(J._tabla.casi).match(/shake|rojo|sacud/i),'la tabla del fallo no tiene sacudida ni rojo');ok(r.includes('aria'),'ARIA acompaña el fallo con empatía');}
+{const{J,reg}=nuevo();J.ajustar({movimiento:false});const r=J.evento('hito');ok(!r.includes('burst')&&!r.includes('confeti'),'sin movimiento: no hay partículas ni confeti');ok(r.includes('sfx')&&r.includes('aria'),'sin movimiento: sonido y ARIA siguen');}
+{const{J,reg}=nuevo();J.ajustar({sonido:false});const r=J.evento('hito');ok(!r.includes('sfx')&&r.includes('burst'),'sin sonido: nada suena pero lo visual sigue');}
+{const{J,reg}=nuevo();J.evento('acierto');J.evento('acierto');J.evento('acierto');const antes=reg.length;const r=J.evento('acierto');ok(r.length===0&&reg.length===antes,'saturado (3 activos): se descartan efectos de baja prioridad');const h=J.evento('hito');ok(h.length>0,'saturado: el hito (prioridad 3) nunca se descarta');}
+{const{box}=nuevo();const J=box.Juego;J.usar({burst:()=>{throw new Error('roto')},sfx:()=>{}});let lanzo=false;try{J.evento('acierto')}catch(e){lanzo=true}ok(!lanzo,'un efecto que falla NO rompe la clase');}
+{const{J,reg}=nuevo();const t=[];J._reloj((fn)=>t.push(fn));for(let i=0;i<3;i++)J.evento('acierto');ok(J._estado().combo===3,'combo cuenta aciertos seguidos');J.evento('casi');ok(J._estado().combo===0,'el combo se reinicia en silencio tras un fallo (sin castigo visual)');}
+{const{box}=nuevo();let notas=0;const ctx={currentTime:0,destination:{},createOscillator:()=>({type:'',frequency:{},connect(){},start(){notas++},stop(){}}),createGain:()=>({gain:{setValueAtTime(){},exponentialRampToValueAtTime(){}},connect(){}})};const sfx=box.crearSfx(()=>ctx);ok(sfx('nivel')===true&&notas===5,'sonido «nivel» = 5 notas sintetizadas sin archivos');ok(box.crearSfx(()=>null)('acierto')===false,'sin AudioContext: no falla, solo no suena');}
+console.log(`\n${n-f}/${n} OK`);process.exit(f?1:0);

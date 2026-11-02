@@ -1,0 +1,682 @@
+{
+ "version": 1,
+ "nota": "Referenciar por id. Fondos transparentes. Los SVG de kit-juego/svg escalan sin perder calidad.",
+ "assets": [
+  {
+   "id": "medalla-bronce",
+   "archivo": "premios/medalla-bronce.png",
+   "categoria": "premio",
+   "uso": "Medalla de bronce con laurel",
+   "tags": [
+    "medalla",
+    "logro",
+    "bronce",
+    "nivel"
+   ],
+   "texto_incluido": "",
+   "origen": "recorte limpiado de clases semana 1 (Aritmética 4°)",
+   "ancho": 182,
+   "alto": 168
+  },
+  {
+   "id": "medalla-plata",
+   "archivo": "premios/medalla-plata.png",
+   "categoria": "premio",
+   "uso": "Medalla de plata con alas",
+   "tags": [
+    "medalla",
+    "logro",
+    "plata",
+    "nivel"
+   ],
+   "texto_incluido": "",
+   "origen": "recorte limpiado de clases semana 1 (Aritmética 4°)",
+   "ancho": 182,
+   "alto": 164
+  },
+  {
+   "id": "medalla-oro",
+   "archivo": "premios/medalla-oro.png",
+   "categoria": "premio",
+   "uso": "Medalla de oro con alas",
+   "tags": [
+    "medalla",
+    "logro",
+    "oro",
+    "nivel"
+   ],
+   "texto_incluido": "",
+   "origen": "recorte limpiado de clases semana 1 (Aritmética 4°)",
+   "ancho": 182,
+   "alto": 176
+  },
+  {
+   "id": "corona",
+   "archivo": "premios/corona.png",
+   "categoria": "premio",
+   "uso": "Corona dorada con rubíes",
+   "tags": [
+    "corona",
+    "campeón",
+    "nivel máximo"
+   ],
+   "texto_incluido": "",
+   "origen": "recorte limpiado de clases semana 1 (Aritmética 4°)",
+   "ancho": 182,
+   "alto": 172
+  },
+  {
+   "id": "trofeo",
+   "archivo": "premios/trofeo.png",
+   "categoria": "premio",
+   "uso": "Trofeo dorado con estrella",
+   "tags": [
+    "trofeo",
+    "campeón",
+    "logro final"
+   ],
+   "texto_incluido": "",
+   "origen": "recorte limpiado de clases semana 1 (Aritmética 4°)",
+   "ancho": 182,
+   "alto": 165
+  },
+  {
+   "id": "aria-correcto",
+   "archivo": "aria/aria-correcto.png",
+   "categoria": "aria-cuerpo",
+   "uso": "Mascota ARIA (cuerpo) · ¡Correcto!",
+   "tags": [
+    "aria",
+    "mascota",
+    "acierto",
+    "celebración"
+   ],
+   "texto_incluido": "¡Correcto!",
+   "origen": "recorte limpiado de clases semana 1 (Aritmética 4°)",
+   "ancho": 408,
+   "alto": 389
+  },
+  {
+   "id": "aria-tu-puedes-saltando",
+   "archivo": "aria/aria-tu-puedes-saltando.png",
+   "categoria": "aria-cuerpo",
+   "uso": "Mascota ARIA (cuerpo) · ¡Tú puedes!",
+   "tags": [
+    "aria",
+    "mascota",
+    "ánimo",
+    "inicio de reto"
+   ],
+   "texto_incluido": "¡Tú puedes!",
+   "origen": "recorte limpiado de clases semana 1 (Aritmética 4°)",
+   "ancho": 403,
+   "alto": 366
+  },
+  {
+   "id": "aria-sigues-aqui",
+   "archivo": "aria/aria-sigues-aqui.png",
+   "categoria": "aria-cuerpo",
+   "uso": "Mascota ARIA (cuerpo) · ¿Sigues aquí? ¿Necesitas algo de ayuda?",
+   "tags": [
+    "aria",
+    "mascota",
+    "inactividad",
+    "ayuda"
+   ],
+   "texto_incluido": "¿Sigues aquí? ¿Necesitas algo de ayuda?",
+   "origen": "recorte limpiado de clases semana 1 (Aritmética 4°)",
+   "ancho": 423,
+   "alto": 332
+  },
+  {
+   "id": "aria-parece-dificil",
+   "archivo": "aria/aria-parece-dificil.png",
+   "categoria": "aria-cuerpo",
+   "uso": "Mascota ARIA (cuerpo) · ¡Uy! Parece difícil…",
+   "tags": [
+    "aria",
+    "mascota",
+    "fallo suave",
+    "empatía"
+   ],
+   "texto_incluido": "¡Uy! Parece difícil…",
+   "origen": "recorte limpiado de clases semana 1 (Aritmética 4°)",
+   "ancho": 390,
+   "alto": 376
+  },
+  {
+   "id": "aria-nos-vemos",
+   "archivo": "aria/aria-nos-vemos.png",
+   "categoria": "aria-cuerpo",
+   "uso": "Mascota ARIA (cuerpo) · ¡Nos vemos!",
+   "tags": [
+    "aria",
+    "mascota",
+    "despedida",
+    "cierre"
+   ],
+   "texto_incluido": "¡Nos vemos!",
+   "origen": "recorte limpiado de clases semana 1 (Aritmética 4°)",
+   "ancho": 403,
+   "alto": 361
+  },
+  {
+   "id": "aria-hola",
+   "archivo": "aria/aria-hola.png",
+   "categoria": "aria-busto",
+   "uso": "Mascota ARIA (busto) · ¡Hola!",
+   "tags": [
+    "aria",
+    "mascota",
+    "saludo",
+    "inicio"
+   ],
+   "texto_incluido": "¡Hola!",
+   "origen": "recorte limpiado de clases semana 1 (Aritmética 4°)",
+   "ancho": 249,
+   "alto": 177
+  },
+  {
+   "id": "aria-genial",
+   "archivo": "aria/aria-genial.png",
+   "categoria": "aria-busto",
+   "uso": "Mascota ARIA (busto) · ¡Genial!",
+   "tags": [
+    "aria",
+    "mascota",
+    "acierto",
+    "estrellas"
+   ],
+   "texto_incluido": "¡Genial!",
+   "origen": "recorte limpiado de clases semana 1 (Aritmética 4°)",
+   "ancho": 254,
+   "alto": 179
+  },
+  {
+   "id": "aria-tu-puedes",
+   "archivo": "aria/aria-tu-puedes.png",
+   "categoria": "aria-busto",
+   "uso": "Mascota ARIA (busto) · ¡Tú puedes!",
+   "tags": [
+    "aria",
+    "mascota",
+    "ánimo"
+   ],
+   "texto_incluido": "¡Tú puedes!",
+   "origen": "recorte limpiado de clases semana 1 (Aritmética 4°)",
+   "ancho": 259,
+   "alto": 153
+  },
+  {
+   "id": "aria-vamos",
+   "archivo": "aria/aria-vamos.png",
+   "categoria": "aria-busto",
+   "uso": "Mascota ARIA (busto) · ¡Vamos!",
+   "tags": [
+    "aria",
+    "mascota",
+    "ánimo",
+    "inicio"
+   ],
+   "texto_incluido": "¡Vamos!",
+   "origen": "recorte limpiado de clases semana 1 (Aritmética 4°)",
+   "ancho": 236,
+   "alto": 135
+  },
+  {
+   "id": "aria-listo",
+   "archivo": "aria/aria-listo.png",
+   "categoria": "aria-busto",
+   "uso": "Mascota ARIA (busto) · ¡Listo!",
+   "tags": [
+    "aria",
+    "mascota",
+    "completado"
+   ],
+   "texto_incluido": "¡Listo!",
+   "origen": "recorte limpiado de clases semana 1 (Aritmética 4°)",
+   "ancho": 250,
+   "alto": 134
+  },
+  {
+   "id": "aria-asi-se-hace",
+   "archivo": "aria/aria-asi-se-hace.png",
+   "categoria": "aria-busto",
+   "uso": "Mascota ARIA (busto) · ¡Así se hace!",
+   "tags": [
+    "aria",
+    "mascota",
+    "explicación",
+    "pizarra"
+   ],
+   "texto_incluido": "¡Así se hace!",
+   "origen": "recorte limpiado de clases semana 1 (Aritmética 4°)",
+   "ancho": 249,
+   "alto": 151
+  },
+  {
+   "id": "aria-vamos-juntos",
+   "archivo": "aria/aria-vamos-juntos.png",
+   "categoria": "aria-busto",
+   "uso": "Mascota ARIA (busto) · ¡Vamos juntos!",
+   "tags": [
+    "aria",
+    "mascota",
+    "práctica",
+    "calculadora"
+   ],
+   "texto_incluido": "¡Vamos juntos!",
+   "origen": "recorte limpiado de clases semana 1 (Aritmética 4°)",
+   "ancho": 222,
+   "alto": 155
+  },
+  {
+   "id": "aria-corazon",
+   "archivo": "aria/aria-corazon.png",
+   "categoria": "aria-busto",
+   "uso": "Mascota ARIA (busto) · (sin texto) corazón",
+   "tags": [
+    "aria",
+    "mascota",
+    "cariño",
+    "vidas"
+   ],
+   "texto_incluido": "",
+   "origen": "recorte limpiado de clases semana 1 (Aritmética 4°)",
+   "ancho": 207,
+   "alto": 178
+  },
+  {
+   "id": "estrella",
+   "archivo": "kit-juego/png/estrella.png",
+   "categoria": "kit-juego",
+   "uso": "Estrella de puntuación",
+   "tags": [
+    "kit",
+    "estrella"
+   ],
+   "texto_incluido": "",
+   "origen": "dibujo original (SVG) — sin marcas de terceros",
+   "ancho": 256,
+   "alto": 256
+  },
+  {
+   "id": "estrella-vacia",
+   "archivo": "kit-juego/png/estrella-vacia.png",
+   "categoria": "kit-juego",
+   "uso": "Estrella sin ganar",
+   "tags": [
+    "kit",
+    "estrella"
+   ],
+   "texto_incluido": "",
+   "origen": "dibujo original (SVG) — sin marcas de terceros",
+   "ancho": 256,
+   "alto": 256
+  },
+  {
+   "id": "moneda",
+   "archivo": "kit-juego/png/moneda.png",
+   "categoria": "kit-juego",
+   "uso": "Moneda",
+   "tags": [
+    "kit",
+    "moneda"
+   ],
+   "texto_incluido": "",
+   "origen": "dibujo original (SVG) — sin marcas de terceros",
+   "ancho": 256,
+   "alto": 256
+  },
+  {
+   "id": "gema",
+   "archivo": "kit-juego/png/gema.png",
+   "categoria": "kit-juego",
+   "uso": "Gema",
+   "tags": [
+    "kit",
+    "gema"
+   ],
+   "texto_incluido": "",
+   "origen": "dibujo original (SVG) — sin marcas de terceros",
+   "ancho": 256,
+   "alto": 256
+  },
+  {
+   "id": "corazon",
+   "archivo": "kit-juego/png/corazon.png",
+   "categoria": "kit-juego",
+   "uso": "Vida (llena)",
+   "tags": [
+    "kit",
+    "corazon"
+   ],
+   "texto_incluido": "",
+   "origen": "dibujo original (SVG) — sin marcas de terceros",
+   "ancho": 256,
+   "alto": 256
+  },
+  {
+   "id": "corazon-vacio",
+   "archivo": "kit-juego/png/corazon-vacio.png",
+   "categoria": "kit-juego",
+   "uso": "Vida gastada",
+   "tags": [
+    "kit",
+    "corazon"
+   ],
+   "texto_incluido": "",
+   "origen": "dibujo original (SVG) — sin marcas de terceros",
+   "ancho": 256,
+   "alto": 256
+  },
+  {
+   "id": "llama",
+   "archivo": "kit-juego/png/llama.png",
+   "categoria": "kit-juego",
+   "uso": "Racha",
+   "tags": [
+    "kit",
+    "llama"
+   ],
+   "texto_incluido": "",
+   "origen": "dibujo original (SVG) — sin marcas de terceros",
+   "ancho": 256,
+   "alto": 256
+  },
+  {
+   "id": "escudo",
+   "archivo": "kit-juego/png/escudo.png",
+   "categoria": "kit-juego",
+   "uso": "Escudo/insignia",
+   "tags": [
+    "kit",
+    "escudo"
+   ],
+   "texto_incluido": "",
+   "origen": "dibujo original (SVG) — sin marcas de terceros",
+   "ancho": 256,
+   "alto": 256
+  },
+  {
+   "id": "candado",
+   "archivo": "kit-juego/png/candado.png",
+   "categoria": "kit-juego",
+   "uso": "Bloqueado",
+   "tags": [
+    "kit",
+    "candado"
+   ],
+   "texto_incluido": "",
+   "origen": "dibujo original (SVG) — sin marcas de terceros",
+   "ancho": 256,
+   "alto": 256
+  },
+  {
+   "id": "candado-abierto",
+   "archivo": "kit-juego/png/candado-abierto.png",
+   "categoria": "kit-juego",
+   "uso": "Desbloqueado",
+   "tags": [
+    "kit",
+    "candado"
+   ],
+   "texto_incluido": "",
+   "origen": "dibujo original (SVG) — sin marcas de terceros",
+   "ancho": 256,
+   "alto": 256
+  },
+  {
+   "id": "cofre",
+   "archivo": "kit-juego/png/cofre.png",
+   "categoria": "kit-juego",
+   "uso": "Cofre cerrado",
+   "tags": [
+    "kit",
+    "cofre"
+   ],
+   "texto_incluido": "",
+   "origen": "dibujo original (SVG) — sin marcas de terceros",
+   "ancho": 256,
+   "alto": 256
+  },
+  {
+   "id": "cofre-abierto",
+   "archivo": "kit-juego/png/cofre-abierto.png",
+   "categoria": "kit-juego",
+   "uso": "Cofre abierto con premio",
+   "tags": [
+    "kit",
+    "cofre"
+   ],
+   "texto_incluido": "",
+   "origen": "dibujo original (SVG) — sin marcas de terceros",
+   "ancho": 256,
+   "alto": 256
+  },
+  {
+   "id": "ok",
+   "archivo": "kit-juego/png/ok.png",
+   "categoria": "kit-juego",
+   "uso": "Acierto",
+   "tags": [
+    "kit",
+    "ok"
+   ],
+   "texto_incluido": "",
+   "origen": "dibujo original (SVG) — sin marcas de terceros",
+   "ancho": 256,
+   "alto": 256
+  },
+  {
+   "id": "casi",
+   "archivo": "kit-juego/png/casi.png",
+   "categoria": "kit-juego",
+   "uso": "Casi/otra vez",
+   "tags": [
+    "kit",
+    "casi"
+   ],
+   "texto_incluido": "",
+   "origen": "dibujo original (SVG) — sin marcas de terceros",
+   "ancho": 256,
+   "alto": 256
+  },
+  {
+   "id": "pista",
+   "archivo": "kit-juego/png/pista.png",
+   "categoria": "kit-juego",
+   "uso": "Pista",
+   "tags": [
+    "kit",
+    "pista"
+   ],
+   "texto_incluido": "",
+   "origen": "dibujo original (SVG) — sin marcas de terceros",
+   "ancho": 256,
+   "alto": 256
+  },
+  {
+   "id": "destello",
+   "archivo": "kit-juego/png/destello.png",
+   "categoria": "kit-juego",
+   "uso": "Brillo/partícula",
+   "tags": [
+    "kit",
+    "destello"
+   ],
+   "texto_incluido": "",
+   "origen": "dibujo original (SVG) — sin marcas de terceros",
+   "ancho": 256,
+   "alto": 256
+  },
+  {
+   "id": "cohete",
+   "archivo": "kit-juego/png/cohete.png",
+   "categoria": "kit-juego",
+   "uso": "Cohete (siguiente)",
+   "tags": [
+    "kit",
+    "cohete"
+   ],
+   "texto_incluido": "",
+   "origen": "dibujo original (SVG) — sin marcas de terceros",
+   "ancho": 256,
+   "alto": 256
+  },
+  {
+   "id": "boton-azul",
+   "archivo": "kit-juego/png/boton-azul.png",
+   "categoria": "kit-juego",
+   "uso": "Botón sin texto: azul",
+   "tags": [
+    "kit",
+    "boton"
+   ],
+   "texto_incluido": "",
+   "origen": "dibujo original (SVG) — sin marcas de terceros",
+   "ancho": 720,
+   "alto": 224
+  },
+  {
+   "id": "boton-verde",
+   "archivo": "kit-juego/png/boton-verde.png",
+   "categoria": "kit-juego",
+   "uso": "Botón sin texto: verde",
+   "tags": [
+    "kit",
+    "boton"
+   ],
+   "texto_incluido": "",
+   "origen": "dibujo original (SVG) — sin marcas de terceros",
+   "ancho": 720,
+   "alto": 224
+  },
+  {
+   "id": "boton-naranja",
+   "archivo": "kit-juego/png/boton-naranja.png",
+   "categoria": "kit-juego",
+   "uso": "Botón sin texto: naranja",
+   "tags": [
+    "kit",
+    "boton"
+   ],
+   "texto_incluido": "",
+   "origen": "dibujo original (SVG) — sin marcas de terceros",
+   "ancho": 720,
+   "alto": 224
+  },
+  {
+   "id": "boton-violeta",
+   "archivo": "kit-juego/png/boton-violeta.png",
+   "categoria": "kit-juego",
+   "uso": "Botón sin texto: violeta",
+   "tags": [
+    "kit",
+    "boton"
+   ],
+   "texto_incluido": "",
+   "origen": "dibujo original (SVG) — sin marcas de terceros",
+   "ancho": 720,
+   "alto": 224
+  },
+  {
+   "id": "boton-dorado",
+   "archivo": "kit-juego/png/boton-dorado.png",
+   "categoria": "kit-juego",
+   "uso": "Botón sin texto: dorado",
+   "tags": [
+    "kit",
+    "boton"
+   ],
+   "texto_incluido": "",
+   "origen": "dibujo original (SVG) — sin marcas de terceros",
+   "ancho": 720,
+   "alto": 224
+  },
+  {
+   "id": "boton-rojo",
+   "archivo": "kit-juego/png/boton-rojo.png",
+   "categoria": "kit-juego",
+   "uso": "Botón sin texto: rojo",
+   "tags": [
+    "kit",
+    "boton"
+   ],
+   "texto_incluido": "",
+   "origen": "dibujo original (SVG) — sin marcas de terceros",
+   "ancho": 720,
+   "alto": 224
+  },
+  {
+   "id": "cinta",
+   "archivo": "kit-juego/png/cinta.png",
+   "categoria": "kit-juego",
+   "uso": "Cinta de título (sin texto)",
+   "tags": [
+    "kit",
+    "cinta"
+   ],
+   "texto_incluido": "",
+   "origen": "dibujo original (SVG) — sin marcas de terceros",
+   "ancho": 880,
+   "alto": 260
+  },
+  {
+   "id": "barra-xp-marco",
+   "archivo": "kit-juego/png/barra-xp-marco.png",
+   "categoria": "kit-juego",
+   "uso": "Marco de barra XP",
+   "tags": [
+    "kit",
+    "barra"
+   ],
+   "texto_incluido": "",
+   "origen": "dibujo original (SVG) — sin marcas de terceros",
+   "ancho": 800,
+   "alto": 104
+  },
+  {
+   "id": "barra-xp-relleno",
+   "archivo": "kit-juego/png/barra-xp-relleno.png",
+   "categoria": "kit-juego",
+   "uso": "Relleno de barra XP",
+   "tags": [
+    "kit",
+    "barra"
+   ],
+   "texto_incluido": "",
+   "origen": "dibujo original (SVG) — sin marcas de terceros",
+   "ancho": 768,
+   "alto": 64
+  },
+  {
+   "id": "globo",
+   "archivo": "kit-juego/png/globo.png",
+   "categoria": "kit-juego",
+   "uso": "Globo de diálogo (sin texto)",
+   "tags": [
+    "kit",
+    "globo"
+   ],
+   "texto_incluido": "",
+   "origen": "dibujo original (SVG) — sin marcas de terceros",
+   "ancho": 560,
+   "alto": 360
+  },
+  {
+   "id": "globo-pensar",
+   "archivo": "kit-juego/png/globo-pensar.png",
+   "categoria": "kit-juego",
+   "uso": "Globo de pensamiento",
+   "tags": [
+    "kit",
+    "globo"
+   ],
+   "texto_incluido": "",
+   "origen": "dibujo original (SVG) — sin marcas de terceros",
+   "ancho": 560,
+   "alto": 380
+  }
+ ]
+}
