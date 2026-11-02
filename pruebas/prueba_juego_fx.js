@@ -1,5 +1,5 @@
 const fs=require('fs'),vm=require('vm');let f=0,n=0;const ok=(c,m)=>{n++;if(!c){f++;console.log('  ❌',m)}else console.log('  ✅',m)};
-function nuevo(){const box={setTimeout:(fn)=>0,console};vm.createContext(box);vm.runInContext(fs.readFileSync(__dirname+'/juego_fx_snippets.js','utf8')+';this.Juego=Juego;this.crearSfx=crearSfx;',box);
+function nuevo(){const box={setTimeout:(fn)=>0,console};vm.createContext(box);vm.runInContext(fs.readFileSync(__dirname+'/../plantilla/motor/juego_fx_snippets.js','utf8')+';this.Juego=Juego;this.crearSfx=crearSfx;',box);
   const reg=[];const ej={};['sfx','burst','hud','confeti','toast','aria','boss','pantalla'].forEach(k=>ej[k]=(v)=>reg.push(k+':'+v));
   box.Juego.usar(ej);box.Juego._reloj(()=>{});return {J:box.Juego,reg,box};}
 console.log('T16 · Motor de efectos');

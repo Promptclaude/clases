@@ -1,0 +1,11 @@
+{
+  "name": "clases-aula-gamificada",
+  "version": "26.0.0",
+  "private": true,
+  "description": "Prompt maestro, motor de referencia, pack de imágenes y herramientas de calidad para las clases",
+  "scripts": {
+    "puerta": "python3 tools/puerta_de_calidad.py plantilla/clase_referencia.html",
+    "test": "node pruebas/prueba_v23_snippets.js && node pruebas/prueba_juego_fx.js && python3 pruebas/prueba_auditor.py && node tools/prueba_clase_e2e.js plantilla/clase_referencia.html && python3 tools/prueba_de_mutaciones.py plantilla/clase_referencia.html"
+  },
+  "devDependencies": { "jsdom": "^26.0.0" }
+}

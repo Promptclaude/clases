@@ -1,0 +1,157 @@
+#!/usr/bin/env node
+/* prueba_clase_e2e.js — pruebas con clics reales (jsdom) de una clase v26+.
+   Uso:  npm install jsdom   (una vez)   →   node tools/prueba_clase_e2e.js clase.html
+   Verifica T10–T22 (ver Prioridad 59/60). Sale con código 1 si algo falla. */
+const fs = require('fs'), path = require('path');
+const { JSDOM } = require('jsdom');
+const archivo = process.argv[2]; if (!archivo) { console.log('Uso: node tools/prueba_clase_e2e.js clase.html'); process.exit(2); }
+const HTML = fs.readFileSync(archivo, 'utf8');
+let pasos = 0, fallos = 0, bloque = '';
+const ok = (c, m) => { pasos++; if (!c) { fallos++; console.log('  ❌', m); } else console.log('  ✅', m); };
+const T = n => { bloque = n; console.log('\n' + n); };
+const sleep = ms => new Promise(r => setTimeout(r, ms));
+
+function abrir({ est = 'ana', grupo = '501', storage = null, test = {}, rompeStorage = false } = {}) {
+  const dom = new JSDOM(HTML, { runScripts: 'dangerously', pretendToBeVisual: true, url: `http://localhost/clase.html?est=${est}&grupo=${grupo}`,
+    beforeParse(w) {
+      w.__TEST__ = Object.assign({ factor: 0.02, rescateS: 0.4, sinIntro: true, antiDobleMs: 60 }, test);
+      if (storage) for (const [k, v] of Object.entries(storage)) w.localStorage.setItem(k, v);
+      if (rompeStorage) w.Storage.prototype.setItem = function () { throw new Error('cuota llena'); };
+    } });
+  return dom;
+}
+const snap = w => { const o = {}; for (let i = 0; i < w.localStorage.length; i++) { const k = w.localStorage.key(i); o[k] = w.localStorage.getItem(k); } return o; };
+const q = (w, s) => w.document.querySelector(s), qa = (w, s) => [...w.document.querySelectorAll(s)];
+const clic = el => el.dispatchEvent(new el.ownerDocument.defaultView.MouseEvent('click', { bubbles: true, cancelable: true }));
+const next = w => q(w, '#btn-next'), tipo = w => q(w, '#stage').dataset.tipo, hud = w => q(w, '#nota-hud').textContent;
+const habil = w => !next(w).disabled;
+async function esperaHabil(w, ms = 1500) { const t0 = Date.now(); while (Date.now() - t0 < ms) { if (habil(w)) return true; await sleep(20); } return habil(w); }
+const idxTipo = (w, ...tipos) => w.CLASE_API.SL.findIndex(x => tipos.includes(x.type));
+const idxEvaluables = w => w.CLASE_API.SL.map((x, i) => ['quiz', 'evalFinal'].includes(x.type) ? i : -1).filter(i => i >= 0);
+const ACTIVIDADES = ['tf', 'fill', 'drag', 'match', 'orden', 'wordsearch', 'interactive', 'minijuego', 'historia'];
+const cerrarModal = w => { if (!q(w, '#modal').hidden) { const b = q(w, '#modal button'); if (b) clic(b); } };
+
+async function jugarSlide(w, modo /* 'mal' | 'bien' */) {
+  const t = tipo(w), api = w.CLASE_API, s = api.SL[api.estado().slide];
+  if (t === 'info') await esperaHabil(w);
+  if (t === 'tf') s.items.forEach((it, i) => { const v = modo === 'bien' ? it.v : !it.v; clic(q(w, `[data-test=tf][data-i="${i}"][data-v="${v ? 1 : 0}"]`)); });
+  if (t === 'fill') { qa(w, '[data-test=fill-input]').forEach((inp, i) => { inp.value = modo === 'bien' ? s.items[i].ans[0] : 'zzz'; }); clic(q(w, '[data-test=verificar]')); }
+  if (t === 'drag') { const ids = s.chips.map((c, i) => i).slice(0, 2); for (const i of ids) { for (let k = 0; k < 2; k++) { clic(q(w, `[data-test=chip][data-i="${i}"]`)); const bien = s.chips[i].z, mala = s.zonas.find(z => z.id !== bien).id; clic(q(w, `[data-test=zona][data-z="${modo === 'bien' ? bien : mala}"]`)); if (modo === 'bien') break; } } }
+  if (t === 'minijuego') { for (let r = 0; r < s.rondas.length; r++) { const R = s.rondas[r], i = modo === 'bien' ? R.ok : (R.ok + 1) % R.ops.length; clic(q(w, `[data-test=mj-op][data-i="${i}"]`)); await sleep(60); } }
+  if (t === 'quiz' || t === 'evalFinal') { for (let n = 0; n < s.preguntas.length; n++) { const c = api.opcionCorrectaActual(); if (!c) break; const ops = qa(w, '[data-test=opcion]'); const el = modo === 'bien' ? ops.find(o => o.dataset.op === c.id) : ops.find(o => o.dataset.op !== c.id); clic(el); cerrarModal(w); await sleep(75); } }
+  if (ACTIVIDADES.includes(t) && !['tf', 'fill', 'drag', 'minijuego'].includes(t)) { await esperaHabil(w, 100); if (!habil(w)) { await sleep(520); const b = q(w, '#rescate-wrap button'); if (b) { clic(b); notas.push('«' + t + '» solo se probó con rescate'); } } }
+  return esperaHabil(w);
+}
+const notas = [];
+async function recorrer(w, modo, tope = 40) { let n = 0; const vistos = []; while (tipo(w) !== 'final' && n++ < tope) { const t = tipo(w); const h = await jugarSlide(w, modo); vistos.push(t + (h ? '' : '✗')); if (!h) return { ok: false, vistos, trabado: t }; clic(next(w)); } return { ok: tipo(w) === 'final', vistos }; }
+
+(async () => {
+  const base = abrir({ est: 'sonda' }).window, API0 = base.CLASE_API, SL0 = API0.SL, claseId = API0.claseId, semana = API0.semana;
+  const iQuiz = idxEvaluables(base), iAct = SL0.findIndex(x => ['drag', 'tf', 'fill', 'minijuego', 'match', 'orden', 'wordsearch', 'interactive', 'historia'].includes(x.type));
+  const iDrag = SL0.findIndex(x => ACTIVIDADES.includes(x.type)), iFinal = SL0.length - 1;
+  const NQ = SL0.filter(x => ['quiz', 'evalFinal'].includes(x.type)).reduce((a, x) => a + x.preguntas.length, 0), NQ1 = SL0[iQuiz[0]].preguntas.length, paso = 5 / NQ;
+  base.close();
+  console.log(`Clase: ${claseId} · ${SL0.length} slides · ${NQ} preguntas evaluables · motor ${API0.MOTOR_VERSION || '?'}`);
+
+  T('T10 · Responder todo mal NUNCA bloquea (recorrido completo hasta la pantalla final)');
+  { const w = abrir().window; const r = await recorrer(w, 'mal');
+    ok(r.ok, 'llega a la pantalla final respondiendo mal (' + r.vistos.join(' → ') + ')' + (r.trabado ? ' · TRABADO en ' + r.trabado : ''));
+    ok(w.CLASE_API.estado().aciertos === 0 && hud(w) === '0.0', 'la nota refleja los errores: 0 aciertos y HUD ' + hud(w));
+    ok(w.CLASE_API.ERRORES.length === 0, 'cero errores de JavaScript en todo el recorrido' + (w.CLASE_API.ERRORES.length ? ': ' + w.CLASE_API.ERRORES[0] : '')); notas.forEach(n => console.log('  ℹ️ ', n)); w.close(); }
+
+  T('T10b · Responder todo bien también llega al final con nota 5.0');
+  { const w = abrir({ est: 'bruno' }).window; const r = await recorrer(w, 'bien'); ok(r.ok, 'llega al final (' + r.vistos.length + ' slides)');
+    ok(q(w, '[data-test=final-nota]').textContent.includes('5.0'), 'nota oficial 5.0 en la pantalla final: «' + q(w, '[data-test=final-nota]').textContent.trim() + '»'); ok(!q(w, '[data-test=reintentar]'), 'con 5.0 no ofrece practicar de nuevo'); w.close(); }
+
+  T('T11 · «No me sale»: a los 25 s (0,4 s en la prueba) toda actividad sin nota ofrece salida; en quiz no existe');
+  if (iDrag < 0) console.log('  ⚠️  la clase no tiene actividades sin nota: no aplica');
+  else { const w = abrir({ est: 'carla' }).window; w.CLASE_API.irA(iDrag); const tp = tipo(w);
+    ok(!habil(w), `${tp} sin tocar: «Siguiente» apagado`); ok(q(w, '#razon-bloqueo').textContent.length > 8, 'dice por qué: «' + q(w, '#razon-bloqueo').textContent + '»');
+    await sleep(520); const b = q(w, '#rescate-wrap button'); ok(!!b, 'aparece el botón «No me sale»');
+    if (b) { clic(b); ok(habil(w), 'al usarlo «Siguiente» se habilita'); ok(w.CLASE_API.actividadesConAyuda() === 1, 'queda registrado como «con ayuda»'); ok(/Ya puedes continuar/.test(q(w, '#razon-bloqueo').textContent), 'la razón pasa a «Ya puedes continuar»'); }
+    w.CLASE_API.irA(iQuiz[0]); await sleep(560); ok(!q(w, '#rescate-wrap button') && !habil(w), 'en el quiz NO hay botón de rescate y «Siguiente» sigue apagado hasta responder'); w.close(); }
+
+  T('T12 · Quiz: responder mal avanza y la retroalimentación dice la correcta y en qué falló');
+  { const w = abrir({ est: 'dario' }).window; w.CLASE_API.irA(iQuiz[0]); const sid = SL0[iQuiz[0]].id;
+    const c = w.CLASE_API.opcionCorrectaActual(), mala = qa(w, '[data-test=opcion]').find(o => o.dataset.op !== c.id); clic(mala); const m = q(w, '#modal-cuerpo').textContent;
+    ok(!q(w, '#modal').hidden, 'se muestra la retroalimentación'); ok(/Tu respuesta/.test(m) && /La correcta/.test(m), 'muestra tu respuesta y la correcta'); ok(/En qué te equivocaste/.test(m), 'explica en qué se equivocó');
+    ok(/Así se resuelve/.test(m), 'explica cómo se resuelve'); ok(/Nota de este intento/.test(m), 'muestra la nota del intento'); ok(!/incorrecto|fallaste|\bmal\b/i.test(m), 'lenguaje de crecimiento: sin «incorrecto/fallaste/mal»');
+    ok((w.CLASE_API.estado().acts['quiz_idx_' + sid] || 0) === 1, 'el índice avanzó en el mismo clic (no depende de cerrar el modal)');
+    await sleep(75); clic(q(w, '[data-test=opcion]')); ok(w.CLASE_API.estado().acts['quiz_resps_' + sid].length === 2, 'se puede responder la siguiente con el modal aún abierto en pantalla'); w.close(); }
+
+  T('T16b · Doble toque rápido en el mismo lugar cuenta UNA sola respuesta (no contesta la pregunta siguiente por accidente)');
+  { const w = abrir({ est: 'eva' }).window, sid = SL0[iQuiz[0]].id; w.CLASE_API.irA(iQuiz[0]); clic(qa(w, '[data-test=opcion]')[0]); clic(qa(w, '[data-test=opcion]')[0]);
+    ok(w.CLASE_API.estado().acts['quiz_resps_' + sid].length === 1, 'una respuesta registrada, no dos (' + w.CLASE_API.estado().acts['quiz_resps_' + sid].length + ')');
+    await sleep(80); cerrarModal(w); clic(qa(w, '[data-test=opcion]')[0]); ok(w.CLASE_API.estado().acts['quiz_resps_' + sid].length === 2, 'pasado el instante, la siguiente respuesta sí cuenta'); w.close(); }
+
+  T('T13 · La nota se ve subir en vivo, también tras gastar una oportunidad');
+  { const w = abrir({ est: 'fabio' }).window, resp = async (modo) => { const c = w.CLASE_API.opcionCorrectaActual(), ops = qa(w, '[data-test=opcion]'); clic(modo ? ops.find(o => o.dataset.op === c.id) : ops.find(o => o.dataset.op !== c.id)); cerrarModal(w); await sleep(75); };
+    w.CLASE_API.irA(iQuiz[0]); const lect = [], esp = []; const k = Math.min(4, NQ1);
+    for (let i = 1; i <= k; i++) { await resp(true); lect.push(hud(w)); esp.push((i * paso).toFixed(1)); }
+    ok(lect.join() === esp.join(), `cada acierto sube el HUD en vivo: ${lect.join(' → ')} (esperado ${esp.join(' → ')})`);
+    for (let i = k; i < NQ1; i++) await resp(false); for (const j of iQuiz.slice(1)) { w.CLASE_API.irA(j); for (let n = 0; n < SL0[j].preguntas.length; n++) await resp(n === 0); }
+    const aciertos1 = k + (iQuiz.length > 1 ? 1 : 0), mejor = w.CLASE_API.notaOficial(); ok(Math.abs(mejor - aciertos1 * paso) < 0.01, `primer intento: ${aciertos1} de ${NQ} → nota oficial ${(aciertos1 * paso).toFixed(2)} (${mejor.toFixed(2)})`);
+    w.CLASE_API.irA(iFinal); clic(q(w, '[data-test=reintentar]')); ok(!q(w, '#modal').hidden, 'pide confirmación antes de gastar la oportunidad'); clic(q(w, '[data-test=confirmar-reintento]'));
+    ok(hud(w) === '0.0' && tipo(w) === SL0[iQuiz[0]].type, 'reintento: el HUD arranca en 0.0 y vuelve al quiz'); ok(new RegExp('Mejor nota: ' + mejor.toFixed(1).replace('.', '\\.')).test(q(w, '#nota-intento-hud').textContent), `aparte se ve «Mejor nota: ${mejor.toFixed(1)} (es la que cuenta)»`);
+    ok(qa(w, '#vidas-hud img').filter(i => /usada/.test(i.alt)).length === 1, 'las oportunidades muestran 1 usada');
+    const l2 = []; for (let i = 0; i < 3; i++) { await resp(true); l2.push(hud(w)); }
+    ok(parseFloat(l2[0]) > 0 && parseFloat(l2[0]) < parseFloat(l2[1]) && parseFloat(l2[1]) < parseFloat(l2[2]), 'tras gastar una oportunidad cada acierto mueve el número (aunque esté por debajo de la mejor): ' + l2.join(' → '));
+    ok(Math.abs(w.CLASE_API.notaOficial() - mejor) < 0.01, 'la nota OFICIAL sigue en ' + mejor.toFixed(1) + ' mientras no la supere'); w.close(); }
+
+  T('T19 · Máximo 2 oportunidades de práctica y la mejor nota nunca baja');
+  { const w = abrir({ est: 'gina' }).window; await recorrer(w, 'mal'); ok(w.CLASE_API.notaOficial() === 0, 'intento 1 todo mal: nota 0.0');
+    const reint = async (primero) => { clic(q(w, '[data-test=reintentar]')); clic(q(w, '[data-test=confirmar-reintento]')); let n = 0; while (tipo(w) !== 'final' && n++ < 10) { await jugarSlide(w, primero && tipo(w) && n === 1 ? 'bien' : 'mal'); clic(next(w)); } };
+    await reint(true); const n1 = NQ1 * paso; ok(tipo(w) === 'final' && Math.abs(w.CLASE_API.notaOficial() - n1) < 0.01, `oportunidad 1: acierta el primer quiz → nota oficial ${n1.toFixed(2)} (${w.CLASE_API.notaOficial().toFixed(2)})`);
+    ok(!!q(w, '[data-test=reintentar]'), 'le queda 1 oportunidad: el botón sigue disponible'); await reint(false);
+    ok(tipo(w) === 'final' && Math.abs(w.CLASE_API.notaOficial() - n1) < 0.01, `oportunidad 2 toda mal: la nota oficial NO baja (sigue ${n1.toFixed(2)})`);
+    ok(!q(w, '[data-test=reintentar]'), 'con 2 oportunidades gastadas ya no se ofrece una tercera'); ok(w.CLASE_API.estado().vidasUsadas === 2 && w.CLASE_API.estado().intentos === 3, 'vidasUsadas = 2, intentos = 3'); ok(w.CLASE_API.ERRORES.length === 0, 'sin errores de JavaScript'); w.close(); }
+
+  T('T14 · Primera apertura en cero (sin heredar), guardado inmediato y retomar donde iba');
+  { const sk = `aula:${claseId}:501:hugo`, sid = SL0[iQuiz[0]].id;
+    let d = abrir({ est: 'hugo', storage: { [sk]: JSON.stringify({ slide: 3, acts: {}, mejorNota: 4.5, aciertos: 9, intentos: 2, xp: 400 }) } }), w = d.window;
+    ok(hud(w) === '0.0' && w.CLASE_API.estado().slide === 0 && w.CLASE_API.estado().xp === 0, 'sesión SIN sello (nota 4.5): se ignora y la clase abre en 0.0 / slide 1'); w.close();
+    d = abrir({ est: 'hugo', storage: { [sk]: JSON.stringify({ studentId: 'hugo', grupo: '501', semana: semana + 1, claseId, slide: 3, acts: {}, mejorNota: 4.5 }) } }); ok(hud(d.window) === '0.0' && d.window.CLASE_API.estado().slide === 0, 'sesión sellada de OTRA semana: se ignora'); d.window.close();
+    d = abrir({ est: 'hugo', storage: { [sk]: JSON.stringify({ studentId: 'hugo', grupo: '777', semana, claseId, slide: 3, acts: {}, mejorNota: 4.5 }) } }); ok(hud(d.window) === '0.0', 'sesión sellada de OTRO grupo: se ignora'); d.window.close();
+    d = abrir({ est: 'hugo' }); w = d.window; w.CLASE_API.irA(iQuiz[0]); const k = Math.min(3, NQ1 - 1); for (let i = 0; i < k; i++) { const c = w.CLASE_API.opcionCorrectaActual(); clic(qa(w, '[data-test=opcion]').find(o => o.dataset.op === c.id)); cerrarModal(w); await sleep(75); }
+    const antes = { h: hud(w), e: w.CLASE_API.estado() }, almacenado = snap(w); w.close();
+    const w2 = abrir({ est: 'hugo', storage: almacenado }).window, e2 = w2.CLASE_API.estado();
+    ok(e2.slide === antes.e.slide && e2.acts['quiz_idx_' + sid] === k, `al reabrir vuelve al MISMO slide y a la MISMA pregunta (slide ${e2.slide + 1}, pregunta ${e2.acts['quiz_idx_' + sid] + 1})`); ok(hud(w2) === antes.h && e2.aciertos === k, `conserva la nota (${hud(w2)}) y los aciertos`);
+    const ent = Object.values(JSON.parse(almacenado['aula_progreso_v2']))[0];
+    ok(ent.slideActual === iQuiz[0] + 1 && ent.totalSlides === SL0.length, `el index recibe «Slide ${ent.slideActual} de ${ent.totalSlides}»`); ok(ent.preguntasRespondidas === k && ent.totalPreguntas === NQ && ent.version === 2 && ent.completada === false, `el index recibe preguntas (${k}/${NQ}), version 2 y completada=false`);
+    ok(typeof ent.nota === 'number' && typeof ent.mejorNota === 'number', 'el index recibe nota y mejor nota'); w2.close(); }
+
+  T('T15 · Si no se puede guardar, el estudiante lo ve');
+  { const w = abrir({ est: 'ivan', rompeStorage: true }).window; for (let i = 0; i < 3; i++) w.CLASE_API.irA(Math.min(i + 1, iFinal));
+    ok(q(w, '#aviso-guardado').style.display === 'block' && /No se pudo guardar/.test(q(w, '#aviso-guardado').textContent), 'aparece «No se pudo guardar…» tras 2 fallos seguidos'); w.close(); }
+
+  T('T17 · Generadores paramétricos: siempre UNA correcta, datos coherentes, determinista');
+  { const w = abrir({ est: 'juan' }).window, G = w.CLASE_API, gens = Object.keys(G.GENERADORES), bad = []; const num = x => parseFloat(String(x).replace(',', '.'));
+    if (!gens.length) console.log('  ⚠️  la clase no define generadores: no aplica');
+    for (const g of gens) for (let seed = 1; seed <= 400; seed++) { const a = G.GENERAR(g, seed), b = G.GENERAR(g, seed), cor = a.opciones.filter(o => o.correcta), tx = a.opciones.map(o => o.texto);
+      if (JSON.stringify(a) !== JSON.stringify(b)) bad.push(g + ' no determinista ' + seed); if (cor.length !== 1) bad.push(g + ' ' + seed + ': ' + cor.length + ' correctas'); if (new Set(tx).size !== tx.length) bad.push(g + ' ' + seed + ': opciones repetidas');
+      if (a.opciones.some(o => !o.correcta && !o.porQue)) bad.push(g + ' ' + seed + ': falta porQue');
+      if (g === 'comparar' && num(cor[0].texto) !== Math.max(...tx.map(num))) bad.push('comparar ' + seed + ': la correcta no es el mayor');
+      if (g === 'suma') { const m = a.enunciado.match(/Calcula ([\d,]+) \+ ([\d,]+)/); if (m && Math.abs(num(cor[0].texto) - Math.round((num(m[1]) + num(m[2])) * 100) / 100) > 1e-9) bad.push('suma ' + seed + ': ' + m[1] + '+' + m[2] + '≠' + cor[0].texto); } }
+    if (gens.length) ok(bad.length === 0, `${gens.length * 400} preguntas generadas válidas` + (bad.length ? ' · fallos: ' + bad.slice(0, 3).join(' | ') : '')); w.close(); }
+
+  T('T18 · Todo onclick="" del HTML apunta a una función que existe');
+  { const w = abrir({ est: 'kira' }).window, faltan = []; w.CLASE_API.irA(iQuiz[0]); clic(qa(w, '[data-test=opcion]')[0]);
+    const revisar = () => qa(w, '[onclick]').forEach(e => { const m = e.getAttribute('onclick').match(/^\s*([A-Za-z_$][\w$]*)\s*\(/); if (m && typeof w[m[1]] !== 'function') faltan.push(m[1]); }); revisar();
+    if (iDrag >= 0) { w.CLASE_API.irA(iDrag); await sleep(520); revisar(); } ok(faltan.length === 0, 'funciones de los onclick existen' + (faltan.length ? ': faltan ' + [...new Set(faltan)].join(', ') : '')); w.close(); }
+
+  T('T20 · Efectos: el fallo es suave; «reducir movimiento» apaga las partículas');
+  { let w = abrir({ est: 'lia' }).window; w.CLASE_API.irA(iQuiz[0]); let c = w.CLASE_API.opcionCorrectaActual();
+    clic(qa(w, '[data-test=opcion]').find(o => o.dataset.op !== c.id)); ok(qa(w, '.fx-chispa').length === 0, 'fallo: sin partículas'); cerrarModal(w);
+    await sleep(900); c = w.CLASE_API.opcionCorrectaActual(); clic(qa(w, '[data-test=opcion]').find(o => o.dataset.op === c.id)); ok(qa(w, '.fx-chispa').length > 0, 'acierto: hay destello de partículas'); w.close();
+    w = abrir({ est: 'lia2', test: { sinMovimiento: true } }).window; w.CLASE_API.irA(iQuiz[0]); c = w.CLASE_API.opcionCorrectaActual(); clic(qa(w, '[data-test=opcion]').find(o => o.dataset.op === c.id)); ok(qa(w, '.fx-chispa').length === 0, 'con «reducir movimiento»: acierto SIN partículas'); w.close(); }
+
+  T('T21 · Accesibilidad básica del DOM (todos los slides)');
+  { const w = abrir({ est: 'mara' }).window, malos = []; const rev = () => { qa(w, 'button').forEach(b => { if (!(b.textContent.trim() || b.getAttribute('aria-label'))) malos.push('botón sin nombre'); }); qa(w, 'img').forEach(i => { if (!i.hasAttribute('alt')) malos.push('img sin alt'); }); qa(w, 'input').forEach(i => { if (!i.getAttribute('aria-label')) malos.push('input sin etiqueta'); }); };
+    SL0.forEach((_, i) => { w.CLASE_API.irA(i); rev(); }); ok(w.document.documentElement.lang === 'es', 'html lang="es"'); ok(!!q(w, 'meta[name=viewport]'), 'meta viewport'); ok(malos.length === 0, 'botones, imágenes e inputs con nombre/alt' + (malos.length ? ': ' + [...new Set(malos)].join(', ') : '')); w.close(); }
+
+  T('T22 · Cada slide bloqueado explica por qué (nunca un botón gris mudo)');
+  { const w = abrir({ est: 'nico' }).window, mudos = []; SL0.forEach((s, i) => { w.CLASE_API.irA(i); if (!habil(w) && q(w, '#razon-bloqueo').textContent.trim().length < 8) mudos.push(s.type); });
+    ok(mudos.length === 0, 'todo slide bloqueado tiene #razon-bloqueo' + (mudos.length ? ': mudos ' + mudos.join(',') : '')); w.close(); }
+
+  console.log(`\n${pasos - fallos}/${pasos} comprobaciones OK${fallos ? ' · ' + fallos + ' ❌' : ''}`); process.exit(fallos ? 1 : 0);
+})().catch(e => { console.error('ERROR del runner:', e); process.exit(3); });

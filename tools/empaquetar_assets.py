@@ -31,6 +31,9 @@ def main():
     man = {x['id']: x for x in json.load(open(os.path.join(raiz, 'assets.json'), encoding='utf8'))['assets']}
     html = open(a.html, encoding='utf8').read()
     usados = sorted(set(re.findall(r'asset://([a-z0-9\-]+)', html)))
+    dinamicos = re.findall(r"asset://['\"]\s*\+", html)
+    if dinamicos:
+        print('❌ Hay', len(dinamicos), "referencias armadas con 'asset://' + nombre. El empaquetador no puede resolverlas: declara cada imagen como token literal completo (const IMG = { x: 'asset://x' }) y usa IMG.x."); sys.exit(2)
     faltan = [u for u in usados if u not in man]
     if faltan:
         print('❌ Assets que no existen en el manifiesto:', ', '.join(faltan)); print('   Disponibles:', ', '.join(sorted(man))); sys.exit(2)

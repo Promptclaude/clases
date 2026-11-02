@@ -1,0 +1,350 @@
+{
+ "meta": {
+  "claseId": "tec4_p4_s3_partes_pc",
+  "semana": 3,
+  "grado": 4,
+  "materia": "Tecnología e Informática",
+  "titulo": "Misión: las partes del computador",
+  "dba": "DBA: Reconoce y describe las partes de un computador y su función"
+ },
+ "slides": [
+  {
+   "id": "t01",
+   "type": "intro",
+   "titulo": "¡Misión: conoce tu computador!",
+   "mision": [
+    "🎯 Aprenderás: para qué sirve cada parte del computador.",
+    "👆 Harás: un reto de verdadero o falso, ubicarás piezas y jugarás una carrera.",
+    "🏆 Ganarás: estrellas y medallas."
+   ]
+  },
+  {
+   "id": "t02",
+   "type": "info",
+   "titulo": "Entrada y salida",
+   "texto": "Los dispositivos de entrada envían información al computador, como el teclado y el ratón. Los de salida muestran el resultado, como la pantalla y los parlantes.",
+   "aria": "asset://aria-asi-se-hace"
+  },
+  {
+   "id": "t03",
+   "type": "drag",
+   "titulo": "¿Entrada o salida?",
+   "zonas": [
+    {
+     "id": "e",
+     "nombre": "Entrada"
+    },
+    {
+     "id": "s",
+     "nombre": "Salida"
+    }
+   ],
+   "chips": [
+    {
+     "t": "Teclado",
+     "z": "e",
+     "porQue": "El teclado envía letras al computador: es de entrada."
+    },
+    {
+     "t": "Pantalla",
+     "z": "s",
+     "porQue": "La pantalla muestra lo que hace el computador: es de salida."
+    },
+    {
+     "t": "Ratón",
+     "z": "e",
+     "porQue": "El ratón envía movimientos y clics: es de entrada."
+    },
+    {
+     "t": "Parlantes",
+     "z": "s",
+     "porQue": "Los parlantes sacan el sonido: son de salida."
+    }
+   ]
+  },
+  {
+   "id": "t04",
+   "type": "tf",
+   "titulo": "¿Verdadero o falso?",
+   "items": [
+    {
+     "t": "El ratón es un dispositivo de salida.",
+     "v": false,
+     "porQue": "El ratón envía información al computador: es de entrada."
+    },
+    {
+     "t": "La CPU es el cerebro del computador.",
+     "v": true,
+     "porQue": "La CPU procesa la información y ejecuta las órdenes."
+    }
+   ]
+  },
+  {
+   "id": "t05",
+   "type": "quiz",
+   "titulo": "Quiz 1: partes y funciones",
+   "preguntas": [
+    {
+     "id": "q1",
+     "dba": "Partes del computador",
+     "nivel": "recordar",
+     "enunciado": "¿Qué parte muestra las imágenes del computador?",
+     "calc": null,
+     "opciones": [
+      {
+       "id": "a",
+       "texto": "La pantalla",
+       "correcta": true
+      },
+      {
+       "id": "b",
+       "texto": "El teclado",
+       "correcta": false,
+       "porQue": "El teclado sirve para escribir; no muestra imágenes."
+      },
+      {
+       "id": "c",
+       "texto": "El ratón",
+       "correcta": false,
+       "porQue": "El ratón mueve el puntero; no muestra imágenes."
+      },
+      {
+       "id": "d",
+       "texto": "La memoria",
+       "correcta": false,
+       "porQue": "La memoria guarda datos; no los muestra."
+      }
+     ],
+     "retroalimentacion": "La pantalla (monitor) es el dispositivo de salida que muestra imágenes.",
+     "errorComun": "Piensa si la parte envía o muestra información."
+    },
+    {
+     "id": "q2",
+     "dba": "Entrada y salida",
+     "nivel": "comprender",
+     "enunciado": "¿Cuál es un dispositivo de entrada?",
+     "calc": null,
+     "opciones": [
+      {
+       "id": "a",
+       "texto": "El teclado",
+       "correcta": true
+      },
+      {
+       "id": "b",
+       "texto": "La impresora",
+       "correcta": false,
+       "porQue": "La impresora saca información en papel: es de salida."
+      },
+      {
+       "id": "c",
+       "texto": "Los parlantes",
+       "correcta": false,
+       "porQue": "Los parlantes sacan sonido: son de salida."
+      },
+      {
+       "id": "d",
+       "texto": "El monitor",
+       "correcta": false,
+       "porQue": "El monitor muestra información: es de salida."
+      }
+     ],
+     "retroalimentacion": "El teclado envía letras y números al computador.",
+     "errorComun": "Entrada = envía; salida = muestra."
+    },
+    {
+     "id": "q3",
+     "dba": "Función de la CPU",
+     "nivel": "comprender",
+     "enunciado": "¿Para qué sirve la CPU?",
+     "calc": null,
+     "opciones": [
+      {
+       "id": "a",
+       "texto": "Procesar la información",
+       "correcta": true
+      },
+      {
+       "id": "b",
+       "texto": "Imprimir hojas",
+       "correcta": false,
+       "porQue": "Imprimir lo hace la impresora."
+      },
+      {
+       "id": "c",
+       "texto": "Dar sonido",
+       "correcta": false,
+       "porQue": "El sonido sale por los parlantes."
+      },
+      {
+       "id": "d",
+       "texto": "Mover el puntero",
+       "correcta": false,
+       "porQue": "El puntero lo mueve el ratón."
+      }
+     ],
+     "retroalimentacion": "La CPU procesa datos y ejecuta las instrucciones.",
+     "errorComun": "Recuerda: CPU = cerebro del computador."
+    }
+   ]
+  },
+  {
+   "id": "t06",
+   "type": "minijuego",
+   "juego": "carrera",
+   "titulo": "Carrera de dispositivos",
+   "rondas": [
+    {
+     "q": "¿Cuál es de salida?",
+     "ops": [
+      "Ratón",
+      "Teclado",
+      "Impresora"
+     ],
+     "ok": 2,
+     "porQue": "La impresora saca información en papel."
+    },
+    {
+     "q": "¿Cuál es de entrada?",
+     "ops": [
+      "Parlantes",
+      "Micrófono",
+      "Monitor"
+     ],
+     "ok": 1,
+     "porQue": "El micrófono envía sonido al computador."
+    }
+   ]
+  },
+  {
+   "id": "t07",
+   "type": "fill",
+   "titulo": "Completa",
+   "items": [
+    {
+     "antes": "El dispositivo que muestra imágenes se llama",
+     "ans": [
+      "pantalla",
+      "monitor"
+     ],
+     "despues": ".",
+     "porQue": "La pantalla o monitor muestra lo que hace el computador."
+    }
+   ]
+  },
+  {
+   "id": "t08",
+   "type": "evalFinal",
+   "titulo": "Reto final",
+   "preguntas": [
+    {
+     "id": "e1",
+     "dba": "Entrada y salida",
+     "nivel": "aplicar",
+     "enunciado": "¿Cuál es un dispositivo de salida?",
+     "calc": null,
+     "opciones": [
+      {
+       "id": "a",
+       "texto": "La impresora",
+       "correcta": true
+      },
+      {
+       "id": "b",
+       "texto": "El ratón",
+       "correcta": false,
+       "porQue": "El ratón envía información: es de entrada."
+      },
+      {
+       "id": "c",
+       "texto": "El teclado",
+       "correcta": false,
+       "porQue": "El teclado envía información: es de entrada."
+      },
+      {
+       "id": "d",
+       "texto": "El micrófono",
+       "correcta": false,
+       "porQue": "El micrófono envía sonido: es de entrada."
+      }
+     ],
+     "retroalimentacion": "La impresora saca la información en papel.",
+     "errorComun": "Salida = muestra o saca información."
+    },
+    {
+     "id": "e2",
+     "dba": "Almacenamiento",
+     "nivel": "recordar",
+     "enunciado": "¿Qué parte guarda los archivos aunque se apague el computador?",
+     "calc": null,
+     "opciones": [
+      {
+       "id": "a",
+       "texto": "El disco duro",
+       "correcta": true
+      },
+      {
+       "id": "b",
+       "texto": "La pantalla",
+       "correcta": false,
+       "porQue": "La pantalla solo muestra."
+      },
+      {
+       "id": "c",
+       "texto": "El ratón",
+       "correcta": false,
+       "porQue": "El ratón solo señala."
+      },
+      {
+       "id": "d",
+       "texto": "Los parlantes",
+       "correcta": false,
+       "porQue": "Los parlantes solo dan sonido."
+      }
+     ],
+     "retroalimentacion": "El disco duro guarda los archivos de forma permanente.",
+     "errorComun": "Busca la parte que almacena."
+    },
+    {
+     "id": "e3",
+     "dba": "Uso de dispositivos",
+     "nivel": "aplicar",
+     "enunciado": "Para escribir una carta necesitas principalmente…",
+     "calc": null,
+     "opciones": [
+      {
+       "id": "a",
+       "texto": "Un teclado",
+       "correcta": true
+      },
+      {
+       "id": "b",
+       "texto": "Unos parlantes",
+       "correcta": false,
+       "porQue": "Los parlantes no sirven para escribir."
+      },
+      {
+       "id": "c",
+       "texto": "Una impresora",
+       "correcta": false,
+       "porQue": "La impresora saca la carta ya escrita."
+      },
+      {
+       "id": "d",
+       "texto": "Un micrófono",
+       "correcta": false,
+       "porQue": "El micrófono capta sonido, no escribe letras."
+      }
+     ],
+     "retroalimentacion": "Con el teclado se escriben las letras.",
+     "errorComun": "Piensa qué parte te deja escribir."
+    }
+   ]
+  },
+  {
+   "id": "t09",
+   "type": "final",
+   "titulo": "¡Misión cumplida!"
+  }
+ ]
+}
