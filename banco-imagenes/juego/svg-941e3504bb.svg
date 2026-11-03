@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 160">
+  <defs>
+    <linearGradient id="g1" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFD23F"/><stop offset="1" stop-color="#F5A300"/>
+    </linearGradient>
+  </defs>
+  <rect x="10" y="10" width="380" height="140" rx="24" fill="url(#g1)" stroke="#B9660B" stroke-width="6"/>
+  <rect x="24" y="24" width="352" height="112" rx="16" fill="#7C3AED" stroke="#4C1D95" stroke-width="4"/>
+  <text x="200" y="68" text-anchor="middle" font-family="Fredoka One, sans-serif" font-size="30" fill="#FFD23F" stroke="#4C1D95" stroke-width="1">TORRE DE</text>
+  <text x="200" y="108" text-anchor="middle" font-family="Fredoka One, sans-serif" font-size="34" fill="#fff" stroke="#4C1D95" stroke-width="1">PRECIOS</text>
+  <polygon points="70,20 90,20 80,45" fill="#FFB800"/>
+  <polygon points="310,20 330,20 320,45" fill="#FFB800"/>
+</svg>

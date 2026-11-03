@@ -1,0 +1,12 @@
+<svg viewBox="0 0 360 260" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#2E1065"/>
+      <stop offset="1" stop-color="#7C3AED"/>
+    </linearGradient>
+  </defs>
+  <rect x="4" y="4" width="352" height="252" rx="18" fill="url(#g)" stroke="#FFB800" stroke-width="5"/>
+  <text x="180.0" y="119.60000000000001" text-anchor="middle" font-size="88.4">🧭</text>
+  <text x="180.0" y="171.6" text-anchor="middle" font-family="'Fredoka One', cursive" font-size="35.1" fill="#FFFFFF" font-weight="900">INVESTIGADORES WEB</text>
+  <text x="180.0" y="202.8" text-anchor="middle" font-family="Nunito, sans-serif" font-size="23.4" fill="#F1E8FE" opacity="0.9">¡A Buscar y Comparar!</text>
+</svg>

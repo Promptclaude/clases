@@ -8,6 +8,7 @@
 | **Puerta de calidad** y demás herramientas | `tools/` (`puerta_de_calidad.py`, `construir_clase.py`, `auditar_clase.py`, `prueba_clase_e2e.js`, …) |
 | Pruebas del repositorio | `pruebas/` · `npm test` |
 | **Pack de imágenes reutilizable** | `assets-reutilizables/` (ver su README y `vista-previa.png`) |
+| **Banco de imágenes y base de datos** (505 recursos clasificados) | `banco-imagenes/` (ver su README, `banco.json` y `vistas-previas/`) · módulo `prompt-modulos/33_banco_imagenes.md` |
 | Módulos del prompt sueltos | `prompt-modulos/` |
 | Versiones anteriores del prompt | `Prompt_Maestro_Clases_v24_…`, `…_v25_…`, `clases-prompt-maestro-v24/` |
 | Historial | `AUDITORIA_v22_y_CHANGELOG_v23.md`, `CHANGELOG_v25.md`, `CHANGELOG_v26.md` |
