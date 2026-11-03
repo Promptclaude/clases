@@ -6,3 +6,5 @@
 4. Referencia por id: `<img src="asset://id">` y empaqueta con `empaquetar_assets.py`.
 5. Si falta un recurso, créalo ORIGINAL (SVG propio o ilustración nueva), sin imitar personajes o marcas de terceros (Minecraft, Among Us, Fortnite, Mario, etc.), regístralo en `banco.json` y repórtalo al final como "recursos nuevos".
 6. Consistencia: mismos personajes (ARIA y NPC aprobados) en todas las clases de una misma materia.
+
+**Nota técnica:** `banco-imagenes/` es ahora la fuente de ids. `empaquetar_assets.py` y `construir_clase.py` lo leen por defecto y **bloquean** (error) cualquier imagen con estado `descartada`; avisan si es `especifica`, `uso_con_cuidado` o `por_revisar`. Cuando este módulo contradiga una mención anterior a `assets-reutilizables/`, manda este módulo (los 46 ids originales siguen existiendo con el mismo nombre).

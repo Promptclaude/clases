@@ -1,4 +1,74 @@
-# Auditoría del Prompt Maestro v22 → v23
+# Historial de cambios (versión vigente: v26 + módulo 33)
+
+> Las versiones anteriores del prompt (v24, v25) ya no están en el repositorio. Se pueden recuperar con `git checkout archivo-v24-v25`.
+
+## v26 + banco de imágenes (módulo 33)
+- Banco central `banco-imagenes/` (505 recursos, `banco.json`), `empaquetar_assets.py` y `construir_clase.py` lo leen por defecto; las imágenes `descartada` se bloquean.
+
+## v25 → v26 — Sistema de calidad: motor de referencia + puerta de entrega
+
+**Idea central:** el 100 % sin errores no se logra con más texto en el prompt, sino **(1)** escribiendo el motor de la clase **una sola vez**, probándolo a fondo y reutilizándolo, y **(2)** impidiendo que se entregue cualquier clase que no pase una puerta de calidad automática.
+
+## Nuevo
+| Qué | Dónde |
+|---|---|
+| **Motor de referencia** (clase completa y funcional: slides, nota en vivo, quiz con retroalimentación, reintento con 2 oportunidades, rescate «No me sale», guardado con sello, index v2, efectos, accesibilidad) | `plantilla/clase_referencia.src.html` (+ `plantilla/motor/`) |
+| Ejemplo de otra materia construido **solo cambiando datos** (Tecnología 4°) | `plantilla/ejemplos/tec4_partes_pc.datos.json` |
+| **Puerta de calidad** (un comando → informe VERDE/ROJO) | `tools/puerta_de_calidad.py` |
+| Auditoría estática (22 comprobaciones) y verificador de matemática exacta | `tools/auditar_clase.py`, `tools/verificar_matematica.py` |
+| **56 pruebas con clics reales** (T10–T22), genéricas: sirven para cualquier clase | `tools/prueba_clase_e2e.js` |
+| **Pruebas de mutaciones**: rompe la clase a propósito de 12 maneras y exige que se detecten | `tools/prueba_de_mutaciones.py` |
+| Constructor y actualizador de clases (`--datos`, `--datos-de`) | `tools/construir_clase.py` |
+| Módulo 32 del prompt (prioridades 58–64) | `Prompt_Maestro_Clases_v26_COMPLETO.md`, `prompt-modulos/32_*` |
+
+## Errores reales que las pruebas encontraron mientras se construía esto
+- Un **doble toque rápido contestaba dos preguntas** (el 2.º toque caía sobre el botón de la pregunta siguiente). Corregido con un intervalo mínimo entre respuestas.
+- Imágenes armadas con `'asset://' + nombre` quedaban **rotas** tras empaquetar. El empaquetador ahora lo rechaza y el motor usa tokens literales.
+- Las propias pruebas usaban posiciones fijas de la clase de ejemplo: se rehicieron **genéricas** y se comprobaron con una clase de otro tema.
+- Una «avería» de prueba (M9) resultó equivalente y no detectable: se reemplazó por una avería real.
+
+## Cómo se usa
+```
+npm install                                  # una sola vez
+python3 tools/construir_clase.py plantilla/clase_referencia.src.html --datos datos.json -o clase.html
+python3 tools/puerta_de_calidad.py clase.html --mutaciones     # VERDE = se puede entregar
+npm test                                     # todas las pruebas del repositorio (~2,5 min)
+```
+
+## Qué NO está verificado (honesto)
+- **Apariencia real en un navegador** y rendimiento en los equipos del laboratorio: las pruebas usan un DOM simulado (jsdom), sin pantalla.
+- **Tipos de slide sin implementar en el motor:** `match`, `orden`, `wordsearch`, `interactive`, `historia`, `repaso`, `practica` (su regla existe en el prompt, pero la plantilla aún no los trae; no usarlos hasta agregarlos con su prueba, Prioridad 64).
+- **Metacognición y repaso espaciado**: son normas de diseño; el motor aún no tiene un tipo propio para ellos.
+- Calidad pedagógica real (que el tema se entienda): requiere tu revisión.
+
+## v24 → v25 — Experiencia visual de videojuego + pack de imágenes reutilizable
+
+**Prompt:** `Prompt_Maestro_Clases_v25_COMPLETO.md` (módulo nuevo 31, prioridades 50–57; las v22–v24 se conservan intactas).
+**Nuevo en el repositorio:** `assets-reutilizables/` (46 imágenes + manifiesto), `tools/` (3 herramientas), `prompt-modulos/` (módulos 29, 30, 31 sueltos), `pruebas/` (motor de efectos y su prueba).
+
+## Qué trae el módulo 31
+| Prioridad | Norma |
+|---|---|
+| 50 | Dirección de arte unificada y **solo personajes/imágenes propios** (ARIA + originales; nada de marcas de terceros) |
+| 51 | Intro en 3 tiempos (≤ 4 s, «Presiona para empezar»), portada con misión y recompensas, zonas y transiciones |
+| 52 | **Motor central `Juego`**: todo efecto sale de un solo lugar; fallo suave (sin rojo ni sacudida), reduce-motion, sin sonido, máx. 3 efectos simultáneos, sonidos sintetizados (0 KB) |
+| 53 | XP de esfuerzo, niveles, monedas, cofres, tienda cosmética, racha con día de gracia, jefe final **solo de presentación** |
+| 54 | Portal «Aula Gamificada», liga por **XP de esfuerzo** con apodos (nunca por nota, sin lista de últimos), carrera de grupos |
+| 55 | ARIA expresiva: mapa momento → imagen, 1 reacción cada 8 s |
+| 56 | Pipeline del pack: limpiar recortes, detectar cortados, empaquetar solo lo usado (≤ 1,5 MB) |
+| 57 | Medidor visual (0–20) y cómo adaptar clases existentes |
+
+## Hallazgos sobre las imágenes de las clases actuales
+- Cada clase incrusta ~69 imágenes en base64 (3 MB+); los archivos pesan 4–9 MB y las imágenes se repiten entre clases.
+- Casi todos los recortes traían **fragmentos de la imagen vecina y halo blanco**; 18 de 31 expresiones de ARIA y los botones con texto fijo están **cortados por el borde** de la lámina (no recuperables sin el original).
+- Hay personajes y logos de videojuegos de terceros en las infografías y en varios recortes: **no se extrajeron** (repositorio público, derechos ajenos).
+
+## Verificado y no verificado
+✅ Lógica del motor de efectos (14 comprobaciones), herramientas de limpieza/empaquetado/extracción probadas con archivos reales, inspección visual del pack.
+⚠️ Sin verificar: apariencia y rendimiento de una clase v25 completa en navegador y en los equipos del laboratorio (hay que generar y recorrer la primera).
+
+## v22–v24 (auditoría y cambios)
+### Auditoría del Prompt Maestro v22 → v23
 
 **Alcance:** `Prompt_Maestro_Clases_v22_COMPLETO.md` (7 698 líneas), `CHANGELOG_v21_a_v22.md` y `AUDITORIA_clase_semana5_mat4_p4.md`.
 **Método:** lectura completa de las prioridades que tocan bloqueo, quiz, nota, vidas, guardado e index; búsqueda de contradicciones entre módulos; corrección con parches verificados uno a uno (52 reemplazos, cada uno comprobado como único); prueba de la lógica nueva en Node (56 comprobaciones, todas ✅).

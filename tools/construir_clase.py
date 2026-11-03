@@ -10,7 +10,7 @@ import argparse, json, os, re, subprocess, sys
 def main():
     ap = argparse.ArgumentParser(); ap.add_argument('plantilla'); ap.add_argument('-o', '--salida', required=True)
     ap.add_argument('--datos'); ap.add_argument('--datos-de', help='clase ya construida de la que se toman los datos (para pasarla al motor nuevo)'); ap.add_argument('--motor-dir', default=os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'plantilla', 'motor'))
-    ap.add_argument('--assets', default=os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'assets-reutilizables')); ap.add_argument('--presupuesto-mb', default='1.5')
+    ap.add_argument('--assets', default=os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'banco-imagenes')); ap.add_argument('--presupuesto-mb', default='1.5')
     a = ap.parse_args()
     t = open(a.plantilla, encoding='utf8').read()
     for marca, f in (('/*@@V23@@*/', 'v23_snippets.js'), ('/*@@FX@@*/', 'juego_fx_snippets.js')):

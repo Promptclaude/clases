@@ -20,15 +20,19 @@ from PIL import Image
 def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument('html'); ap.add_argument('-o', '--salida', required=True)
-    ap.add_argument('--assets', default=os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'assets-reutilizables'))
+    ap.add_argument('--assets', default=os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'banco-imagenes'))
     ap.add_argument('--modo', choices=['inline', 'ruta'], default='inline')
-    ap.add_argument('--prefijo-ruta', default='../assets-reutilizables/')
+    ap.add_argument('--prefijo-ruta', default='../banco-imagenes/')
     ap.add_argument('--presupuesto-mb', type=float, default=1.5)
     ap.add_argument('--calidad', type=int, default=85)
     a = ap.parse_args()
 
     raiz = os.path.abspath(a.assets)
-    man = {x['id']: x for x in json.load(open(os.path.join(raiz, 'assets.json'), encoding='utf8'))['assets']}
+    # Manifiesto: banco.json (banco-imagenes, preferido) o assets.json (pack antiguo assets-reutilizables)
+    if os.path.exists(os.path.join(raiz, 'banco.json')):
+        man = {x['id']: x for x in json.load(open(os.path.join(raiz, 'banco.json'), encoding='utf8'))['imagenes']}
+    else:
+        man = {x['id']: x for x in json.load(open(os.path.join(raiz, 'assets.json'), encoding='utf8'))['assets']}
     html = open(a.html, encoding='utf8').read()
     usados = sorted(set(re.findall(r'asset://([a-z0-9\-]+)', html)))
     dinamicos = re.findall(r"asset://['\"]\s*\+", html)
@@ -38,12 +42,21 @@ def main():
     if faltan:
         print('❌ Assets que no existen en el manifiesto:', ', '.join(faltan)); print('   Disponibles:', ', '.join(sorted(man))); sys.exit(2)
 
+    # Política por estado (solo banco.json): descartada = prohibida; el resto avisa
+    prohibidas = [u for u in usados if man[u].get('estado') == 'descartada']
+    if prohibidas:
+        print('❌ Imágenes DESCARTADAS (posible propiedad intelectual de terceros o baja calidad):', ', '.join(prohibidas)); sys.exit(2)
+    for u in usados:
+        est = man[u].get('estado')
+        if est == 'especifica': print(f'⚠️  {u}: tiene texto de otra clase (estado especifica). Úsala solo si el texto sirve aquí.')
+        elif est == 'uso_con_cuidado': print(f'⚠️  {u}: marca registrada; solo para identificar la red/servicio en una clase de internet.')
+        elif est == 'por_revisar': print(f'ℹ️  {u}: aún por revisar en el banco (sin texto, calidad {man[u].get("calidad","?")}/5).')
     reemplazo, peso = {}, {}
     for u in usados:
         m = man[u]; ruta = os.path.join(raiz, m['archivo'])
         if a.modo == 'ruta':
             reemplazo[u] = a.prefijo_ruta + m['archivo']; peso[u] = 0; continue
-        svg = os.path.join(raiz, 'kit-juego', 'svg', u + '.svg')
+        svg = os.path.join(raiz, m['svg']) if m.get('svg') else (ruta if ruta.endswith('.svg') else os.path.join(raiz, 'kit-juego', 'svg', u + '.svg'))
         if os.path.exists(svg):
             datos = open(svg, 'rb').read(); mime = 'image/svg+xml'
         else:
