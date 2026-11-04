@@ -1106,9 +1106,12 @@
    ],
    "veces_usada": 4,
    "tags": [
-    "tecnologia",
+    "avatar",
+    "login",
+    "perfil",
     "personaje",
-    "sprite"
+    "sprite",
+    "tecnologia"
    ],
    "area": "tecnologia",
    "grado": null,
@@ -1119,11 +1122,11 @@
    "tiene_texto": false,
    "texto": "vay",
    "calidad": 4,
-   "estado": "por_revisar",
+   "estado": "aprobada",
    "uso": "",
-   "archivo": "personajes/npc/0c5971d1a6.webp",
+   "archivo": "personajes/avatares/0c5971d1a6.webp",
    "categoria": "personajes",
-   "subcategoria": "npc"
+   "subcategoria": "avatares"
   },
   {
    "id": "img-6bcb39e2d7",
@@ -1136,9 +1139,12 @@
    ],
    "veces_usada": 4,
    "tags": [
-    "tecnologia",
+    "avatar",
+    "login",
+    "perfil",
     "personaje",
-    "sprite"
+    "sprite",
+    "tecnologia"
    ],
    "area": "tecnologia",
    "grado": null,
@@ -1149,11 +1155,11 @@
    "tiene_texto": false,
    "texto": "",
    "calidad": 4,
-   "estado": "por_revisar",
+   "estado": "aprobada",
    "uso": "",
-   "archivo": "personajes/npc/6bcb39e2d7.webp",
+   "archivo": "personajes/avatares/6bcb39e2d7.webp",
    "categoria": "personajes",
-   "subcategoria": "npc"
+   "subcategoria": "avatares"
   },
   {
    "id": "img-44a3300d59",
@@ -1166,9 +1172,12 @@
    ],
    "veces_usada": 4,
    "tags": [
-    "tecnologia",
+    "avatar",
+    "login",
+    "perfil",
     "personaje",
-    "sprite"
+    "sprite",
+    "tecnologia"
    ],
    "area": "tecnologia",
    "grado": null,
@@ -1179,11 +1188,11 @@
    "tiene_texto": false,
    "texto": "",
    "calidad": 4,
-   "estado": "por_revisar",
+   "estado": "aprobada",
    "uso": "",
-   "archivo": "personajes/npc/44a3300d59.webp",
+   "archivo": "personajes/avatares/44a3300d59.webp",
    "categoria": "personajes",
-   "subcategoria": "npc"
+   "subcategoria": "avatares"
   },
   {
    "id": "img-a4fb31cde7",
@@ -1196,9 +1205,12 @@
    ],
    "veces_usada": 4,
    "tags": [
-    "tecnologia",
+    "avatar",
+    "login",
+    "perfil",
     "personaje",
-    "sprite"
+    "sprite",
+    "tecnologia"
    ],
    "area": "tecnologia",
    "grado": null,
@@ -1209,11 +1221,11 @@
    "tiene_texto": false,
    "texto": "",
    "calidad": 4,
-   "estado": "por_revisar",
+   "estado": "aprobada",
    "uso": "",
-   "archivo": "personajes/npc/a4fb31cde7.webp",
+   "archivo": "personajes/avatares/a4fb31cde7.webp",
    "categoria": "personajes",
-   "subcategoria": "npc"
+   "subcategoria": "avatares"
   },
   {
    "id": "img-ffb72bb967",
@@ -1226,6 +1238,9 @@
    ],
    "veces_usada": 4,
    "tags": [
+    "avatar",
+    "login",
+    "perfil",
     "tecnologia",
     "tema"
    ],
@@ -1238,11 +1253,11 @@
    "tiene_texto": false,
    "texto": "",
    "calidad": 4,
-   "estado": "por_revisar",
+   "estado": "aprobada",
    "uso": "",
-   "archivo": "tematicos/por-clasificar/ffb72bb967.webp",
-   "categoria": "tematicos",
-   "subcategoria": "por-clasificar"
+   "archivo": "personajes/avatares/ffb72bb967.webp",
+   "categoria": "personajes",
+   "subcategoria": "avatares"
   },
   {
    "id": "img-9d77487412",
@@ -1255,9 +1270,12 @@
    ],
    "veces_usada": 4,
    "tags": [
-    "tecnologia",
+    "avatar",
+    "login",
+    "perfil",
     "personaje",
-    "sprite"
+    "sprite",
+    "tecnologia"
    ],
    "area": "tecnologia",
    "grado": null,
@@ -1268,11 +1286,11 @@
    "tiene_texto": false,
    "texto": "",
    "calidad": 4,
-   "estado": "por_revisar",
+   "estado": "aprobada",
    "uso": "",
-   "archivo": "personajes/npc/9d77487412.webp",
+   "archivo": "personajes/avatares/9d77487412.webp",
    "categoria": "personajes",
-   "subcategoria": "npc"
+   "subcategoria": "avatares"
   },
   {
    "id": "img-ebc9d25782",
@@ -1518,6 +1536,8 @@
    ],
    "veces_usada": 4,
    "tags": [
+    "marco",
+    "perfil",
     "tecnologia",
     "tema"
    ],
@@ -1530,11 +1550,11 @@
    "tiene_texto": false,
    "texto": "",
    "calidad": 5,
-   "estado": "por_revisar",
+   "estado": "aprobada",
    "uso": "",
-   "archivo": "tematicos/por-clasificar/c2fed4bd8b.webp",
-   "categoria": "tematicos",
-   "subcategoria": "por-clasificar"
+   "archivo": "interfaz/barras-y-marcos/c2fed4bd8b.webp",
+   "categoria": "interfaz",
+   "subcategoria": "barras-y-marcos"
   },
   {
    "id": "img-99fc104914",
@@ -1577,9 +1597,11 @@
    ],
    "veces_usada": 4,
    "tags": [
-    "tecnologia",
+    "escenario",
+    "espacio",
     "fondo",
-    "escenario"
+    "galaxia",
+    "tecnologia"
    ],
    "area": "tecnologia",
    "grado": null,
@@ -1590,11 +1612,11 @@
    "tiene_texto": false,
    "texto": "",
    "calidad": 5,
-   "estado": "por_revisar",
+   "estado": "aprobada",
    "uso": "",
-   "archivo": "escenarios/e67426a42d.webp",
+   "archivo": "escenarios/espacio/e67426a42d.webp",
    "categoria": "escenarios",
-   "subcategoria": ""
+   "subcategoria": "espacio"
   },
   {
    "id": "img-ce1eb82b4c",
@@ -1605,6 +1627,9 @@
    ],
    "veces_usada": 2,
    "tags": [
+    "4to",
+    "curso",
+    "insignia",
     "tecnologia",
     "tema"
    ],
@@ -1617,11 +1642,12 @@
    "tiene_texto": false,
    "texto": "",
    "calidad": 4,
-   "estado": "por_revisar",
+   "estado": "aprobada",
    "uso": "",
-   "archivo": "tematicos/por-clasificar/ce1eb82b4c.webp",
-   "categoria": "tematicos",
-   "subcategoria": "por-clasificar"
+   "archivo": "interfaz/insignias/ce1eb82b4c.webp",
+   "categoria": "interfaz",
+   "subcategoria": "insignias",
+   "nota": "número de curso horneado"
   },
   {
    "id": "img-96bf88ef05",
@@ -1632,6 +1658,9 @@
    ],
    "veces_usada": 2,
    "tags": [
+    "4to",
+    "curso",
+    "insignia",
     "tecnologia",
     "tema"
    ],
@@ -1644,11 +1673,12 @@
    "tiene_texto": false,
    "texto": "",
    "calidad": 4,
-   "estado": "por_revisar",
+   "estado": "aprobada",
    "uso": "",
-   "archivo": "tematicos/por-clasificar/96bf88ef05.webp",
-   "categoria": "tematicos",
-   "subcategoria": "por-clasificar"
+   "archivo": "interfaz/insignias/96bf88ef05.webp",
+   "categoria": "interfaz",
+   "subcategoria": "insignias",
+   "nota": "número de curso horneado"
   },
   {
    "id": "img-f451cdf8fe",
@@ -1671,11 +1701,13 @@
    "tiene_texto": false,
    "texto": "",
    "calidad": 4,
-   "estado": "por_revisar",
+   "estado": "descartada",
    "uso": "",
-   "archivo": "tematicos/por-clasificar/f451cdf8fe.webp",
-   "categoria": "tematicos",
-   "subcategoria": "por-clasificar"
+   "archivo": "_descartadas/posible-ip-terceros/f451cdf8fe.webp",
+   "categoria": "_descartadas",
+   "subcategoria": "posible-ip-terceros",
+   "nota": "personaje estilo Minecraft",
+   "motivo": "personaje estilo Minecraft"
   },
   {
    "id": "img-b13aea3fab",
@@ -1714,6 +1746,7 @@
    ],
    "veces_usada": 2,
    "tags": [
+    "boton",
     "tecnologia",
     "tema"
    ],
@@ -1726,11 +1759,12 @@
    "tiene_texto": false,
    "texto": "",
    "calidad": 4,
-   "estado": "por_revisar",
+   "estado": "aprobada",
    "uso": "",
-   "archivo": "tematicos/por-clasificar/63d43577e0.webp",
-   "categoria": "tematicos",
-   "subcategoria": "por-clasificar"
+   "archivo": "interfaz/botones/63d43577e0.webp",
+   "categoria": "interfaz",
+   "subcategoria": "botones",
+   "nota": "texto genérico de interfaz"
   },
   {
    "id": "img-4e8079fbd7",
@@ -1741,6 +1775,7 @@
    ],
    "veces_usada": 2,
    "tags": [
+    "boton",
     "tecnologia",
     "tema"
    ],
@@ -1753,11 +1788,12 @@
    "tiene_texto": false,
    "texto": "",
    "calidad": 4,
-   "estado": "por_revisar",
+   "estado": "aprobada",
    "uso": "",
-   "archivo": "tematicos/por-clasificar/4e8079fbd7.webp",
-   "categoria": "tematicos",
-   "subcategoria": "por-clasificar"
+   "archivo": "interfaz/botones/4e8079fbd7.webp",
+   "categoria": "interfaz",
+   "subcategoria": "botones",
+   "nota": "texto genérico de interfaz"
   },
   {
    "id": "img-985f62d4db",
@@ -1979,10 +2015,12 @@
    ],
    "veces_usada": 20,
    "tags": [
-    "aritmetica",
     "4°",
+    "aritmetica",
+    "icono",
     "juego",
-    "icono"
+    "logro",
+    "trofeo"
    ],
    "area": "aritmetica",
    "grado": 4,
@@ -1993,10 +2031,10 @@
    "tiene_texto": false,
    "texto": "",
    "calidad": 3,
-   "estado": "por_revisar",
+   "estado": "aprobada",
    "uso": "",
-   "archivo": "juego/498e03792a.png",
-   "categoria": "juego",
+   "archivo": "premios/498e03792a.png",
+   "categoria": "premios",
    "subcategoria": ""
   },
   {
@@ -2025,8 +2063,9 @@
    ],
    "veces_usada": 19,
    "tags": [
-    "aritmetica",
     "4°",
+    "aritmetica",
+    "boton",
     "tema"
    ],
    "area": "aritmetica",
@@ -2038,11 +2077,12 @@
    "tiene_texto": false,
    "texto": "",
    "calidad": 4,
-   "estado": "por_revisar",
+   "estado": "aprobada",
    "uso": "",
-   "archivo": "tematicos/por-clasificar/457b2ea19c.png",
-   "categoria": "tematicos",
-   "subcategoria": "por-clasificar"
+   "archivo": "interfaz/botones/457b2ea19c.png",
+   "categoria": "interfaz",
+   "subcategoria": "botones",
+   "nota": "texto genérico de interfaz"
   },
   {
    "id": "img-62118e7915",
@@ -2276,10 +2316,12 @@
    ],
    "veces_usada": 15,
    "tags": [
-    "aritmetica",
     "4°",
+    "aria",
+    "aritmetica",
+    "icono",
     "juego",
-    "icono"
+    "pose"
    ],
    "area": "aritmetica",
    "grado": 4,
@@ -2289,12 +2331,12 @@
    "transparente": true,
    "tiene_texto": false,
    "texto": "",
-   "calidad": 3,
-   "estado": "por_revisar",
+   "calidad": 4,
+   "estado": "aprobada",
    "uso": "",
-   "archivo": "juego/1c624c4cd9.png",
-   "categoria": "juego",
-   "subcategoria": ""
+   "archivo": "personajes/aria/1c624c4cd9.png",
+   "categoria": "personajes",
+   "subcategoria": "aria"
   },
   {
    "id": "img-4e245f4c79",
@@ -2399,8 +2441,9 @@
    ],
    "veces_usada": 15,
    "tags": [
-    "aritmetica",
     "4°",
+    "aritmetica",
+    "boton",
     "ui"
    ],
    "area": "aritmetica",
@@ -2411,12 +2454,13 @@
    "transparente": true,
    "tiene_texto": false,
    "texto": "",
-   "calidad": 3,
-   "estado": "por_revisar",
+   "calidad": 4,
+   "estado": "aprobada",
    "uso": "",
-   "archivo": "interfaz/barras-y-marcos/7c3a9cc368.png",
+   "archivo": "interfaz/botones/7c3a9cc368.png",
    "categoria": "interfaz",
-   "subcategoria": "barras-y-marcos"
+   "subcategoria": "botones",
+   "nota": "texto genérico de interfaz"
   },
   {
    "id": "img-c155e2d78c",
@@ -2439,8 +2483,9 @@
    ],
    "veces_usada": 14,
    "tags": [
-    "aritmetica",
     "4°",
+    "aritmetica",
+    "boton",
     "ui"
    ],
    "area": "aritmetica",
@@ -2451,12 +2496,13 @@
    "transparente": true,
    "tiene_texto": false,
    "texto": "",
-   "calidad": 3,
-   "estado": "por_revisar",
+   "calidad": 4,
+   "estado": "aprobada",
    "uso": "",
-   "archivo": "interfaz/barras-y-marcos/c155e2d78c.png",
+   "archivo": "interfaz/botones/c155e2d78c.png",
    "categoria": "interfaz",
-   "subcategoria": "barras-y-marcos"
+   "subcategoria": "botones",
+   "nota": "texto genérico de interfaz"
   },
   {
    "id": "img-3481d26761",
@@ -2521,8 +2567,9 @@
    ],
    "veces_usada": 15,
    "tags": [
-    "aritmetica",
     "4°",
+    "aritmetica",
+    "boton",
     "ui"
    ],
    "area": "aritmetica",
@@ -2533,12 +2580,13 @@
    "transparente": true,
    "tiene_texto": false,
    "texto": "",
-   "calidad": 3,
-   "estado": "por_revisar",
+   "calidad": 4,
+   "estado": "aprobada",
    "uso": "",
-   "archivo": "interfaz/barras-y-marcos/a144ff36a4.png",
+   "archivo": "interfaz/botones/a144ff36a4.png",
    "categoria": "interfaz",
-   "subcategoria": "barras-y-marcos"
+   "subcategoria": "botones",
+   "nota": "texto genérico de interfaz"
   },
   {
    "id": "img-494faa099b",
@@ -2558,8 +2606,8 @@
    ],
    "veces_usada": 11,
    "tags": [
-    "aritmetica",
     "4°",
+    "aritmetica",
     "ui"
    ],
    "area": "aritmetica",
@@ -2571,11 +2619,11 @@
    "tiene_texto": false,
    "texto": "",
    "calidad": 5,
-   "estado": "por_revisar",
+   "estado": "especifica",
    "uso": "",
-   "archivo": "interfaz/barras-y-marcos/494faa099b.png",
-   "categoria": "interfaz",
-   "subcategoria": "barras-y-marcos"
+   "archivo": "_especificas/aritmetica4/494faa099b.png",
+   "categoria": "_especificas",
+   "subcategoria": "aritmetica4"
   },
   {
    "id": "img-974a4406a1",
@@ -2598,8 +2646,10 @@
    ],
    "veces_usada": 14,
    "tags": [
-    "aritmetica",
     "4°",
+    "aritmetica",
+    "numeros",
+    "selector",
     "ui"
    ],
    "area": "aritmetica",
@@ -2611,7 +2661,7 @@
    "tiene_texto": false,
    "texto": "",
    "calidad": 4,
-   "estado": "por_revisar",
+   "estado": "aprobada",
    "uso": "",
    "archivo": "interfaz/barras-y-marcos/974a4406a1.png",
    "categoria": "interfaz",
@@ -3021,10 +3071,12 @@
    ],
    "veces_usada": 25,
    "tags": [
-    "aritmetica",
     "4°",
+    "aria",
+    "aritmetica",
+    "icono",
     "juego",
-    "icono"
+    "pose"
    ],
    "area": "aritmetica",
    "grado": 4,
@@ -3035,11 +3087,12 @@
    "tiene_texto": false,
    "texto": "",
    "calidad": 3,
-   "estado": "por_revisar",
+   "estado": "por_limpiar",
    "uso": "",
-   "archivo": "juego/43b966b649.webp",
-   "categoria": "juego",
-   "subcategoria": ""
+   "archivo": "personajes/aria/43b966b649.webp",
+   "categoria": "personajes",
+   "subcategoria": "aria",
+   "nota": "recorte con restos de otra pose; pasar por limpiar_recortes.py"
   },
   {
    "id": "img-9c33539016",
@@ -3073,10 +3126,12 @@
    ],
    "veces_usada": 25,
    "tags": [
-    "aritmetica",
     "4°",
+    "aria",
+    "aritmetica",
+    "icono",
     "juego",
-    "icono"
+    "pose"
    ],
    "area": "aritmetica",
    "grado": 4,
@@ -3087,11 +3142,12 @@
    "tiene_texto": false,
    "texto": "",
    "calidad": 3,
-   "estado": "por_revisar",
+   "estado": "por_limpiar",
    "uso": "",
-   "archivo": "juego/9c33539016.webp",
-   "categoria": "juego",
-   "subcategoria": ""
+   "archivo": "personajes/aria/9c33539016.webp",
+   "categoria": "personajes",
+   "subcategoria": "aria",
+   "nota": "recorte con restos de otra pose; pasar por limpiar_recortes.py"
   },
   {
    "id": "img-425aea1a6c",
@@ -3125,10 +3181,12 @@
    ],
    "veces_usada": 25,
    "tags": [
-    "aritmetica",
     "4°",
+    "aria",
+    "aritmetica",
+    "icono",
     "juego",
-    "icono"
+    "pose"
    ],
    "area": "aritmetica",
    "grado": 4,
@@ -3139,11 +3197,12 @@
    "tiene_texto": false,
    "texto": "",
    "calidad": 3,
-   "estado": "por_revisar",
+   "estado": "por_limpiar",
    "uso": "",
-   "archivo": "juego/425aea1a6c.webp",
-   "categoria": "juego",
-   "subcategoria": ""
+   "archivo": "personajes/aria/425aea1a6c.webp",
+   "categoria": "personajes",
+   "subcategoria": "aria",
+   "nota": "recorte con restos de otra pose; pasar por limpiar_recortes.py"
   },
   {
    "id": "img-f44eac904a",
@@ -3229,10 +3288,12 @@
    ],
    "veces_usada": 25,
    "tags": [
-    "aritmetica",
     "4°",
+    "aria",
+    "aritmetica",
+    "icono",
     "juego",
-    "icono"
+    "pose"
    ],
    "area": "aritmetica",
    "grado": 4,
@@ -3243,11 +3304,12 @@
    "tiene_texto": false,
    "texto": "",
    "calidad": 3,
-   "estado": "por_revisar",
+   "estado": "por_limpiar",
    "uso": "",
-   "archivo": "juego/8d55253290.webp",
-   "categoria": "juego",
-   "subcategoria": ""
+   "archivo": "personajes/aria/8d55253290.webp",
+   "categoria": "personajes",
+   "subcategoria": "aria",
+   "nota": "recorte con restos de otra pose; pasar por limpiar_recortes.py"
   },
   {
    "id": "img-c5b549f527",
@@ -3281,10 +3343,12 @@
    ],
    "veces_usada": 25,
    "tags": [
-    "aritmetica",
     "4°",
+    "aria",
+    "aritmetica",
+    "icono",
     "juego",
-    "icono"
+    "pose"
    ],
    "area": "aritmetica",
    "grado": 4,
@@ -3295,11 +3359,12 @@
    "tiene_texto": false,
    "texto": "",
    "calidad": 3,
-   "estado": "por_revisar",
+   "estado": "por_limpiar",
    "uso": "",
-   "archivo": "juego/c5b549f527.webp",
-   "categoria": "juego",
-   "subcategoria": ""
+   "archivo": "personajes/aria/c5b549f527.webp",
+   "categoria": "personajes",
+   "subcategoria": "aria",
+   "nota": "recorte con restos de otra pose; pasar por limpiar_recortes.py"
   },
   {
    "id": "img-f8c9310d92",
@@ -3385,10 +3450,12 @@
    ],
    "veces_usada": 25,
    "tags": [
-    "aritmetica",
     "4°",
+    "aria",
+    "aritmetica",
+    "icono",
     "juego",
-    "icono"
+    "pose"
    ],
    "area": "aritmetica",
    "grado": 4,
@@ -3399,11 +3466,12 @@
    "tiene_texto": false,
    "texto": "",
    "calidad": 3,
-   "estado": "por_revisar",
+   "estado": "por_limpiar",
    "uso": "",
-   "archivo": "juego/10088008d1.webp",
-   "categoria": "juego",
-   "subcategoria": ""
+   "archivo": "personajes/aria/10088008d1.webp",
+   "categoria": "personajes",
+   "subcategoria": "aria",
+   "nota": "recorte con restos de otra pose; pasar por limpiar_recortes.py"
   },
   {
    "id": "img-672458c994",
@@ -3437,10 +3505,12 @@
    ],
    "veces_usada": 25,
    "tags": [
-    "aritmetica",
     "4°",
+    "aria",
+    "aritmetica",
+    "icono",
     "juego",
-    "icono"
+    "pose"
    ],
    "area": "aritmetica",
    "grado": 4,
@@ -3451,11 +3521,12 @@
    "tiene_texto": false,
    "texto": "",
    "calidad": 3,
-   "estado": "por_revisar",
+   "estado": "por_limpiar",
    "uso": "",
-   "archivo": "juego/672458c994.webp",
-   "categoria": "juego",
-   "subcategoria": ""
+   "archivo": "personajes/aria/672458c994.webp",
+   "categoria": "personajes",
+   "subcategoria": "aria",
+   "nota": "recorte con restos de otra pose; pasar por limpiar_recortes.py"
   },
   {
    "id": "img-7ac34205fa",
@@ -3489,10 +3560,12 @@
    ],
    "veces_usada": 25,
    "tags": [
-    "aritmetica",
     "4°",
+    "aria",
+    "aritmetica",
+    "icono",
     "juego",
-    "icono"
+    "pose"
    ],
    "area": "aritmetica",
    "grado": 4,
@@ -3503,11 +3576,12 @@
    "tiene_texto": false,
    "texto": "",
    "calidad": 3,
-   "estado": "por_revisar",
+   "estado": "por_limpiar",
    "uso": "",
-   "archivo": "juego/7ac34205fa.webp",
-   "categoria": "juego",
-   "subcategoria": ""
+   "archivo": "personajes/aria/7ac34205fa.webp",
+   "categoria": "personajes",
+   "subcategoria": "aria",
+   "nota": "recorte con restos de otra pose; pasar por limpiar_recortes.py"
   },
   {
    "id": "img-cf4123d4af",
@@ -3541,10 +3615,12 @@
    ],
    "veces_usada": 25,
    "tags": [
-    "aritmetica",
     "4°",
+    "aria",
+    "aritmetica",
+    "icono",
     "juego",
-    "icono"
+    "pose"
    ],
    "area": "aritmetica",
    "grado": 4,
@@ -3555,11 +3631,12 @@
    "tiene_texto": false,
    "texto": "",
    "calidad": 3,
-   "estado": "por_revisar",
+   "estado": "por_limpiar",
    "uso": "",
-   "archivo": "juego/cf4123d4af.webp",
-   "categoria": "juego",
-   "subcategoria": ""
+   "archivo": "personajes/aria/cf4123d4af.webp",
+   "categoria": "personajes",
+   "subcategoria": "aria",
+   "nota": "recorte con restos de otra pose; pasar por limpiar_recortes.py"
   },
   {
    "id": "img-98cb06b852",
@@ -3593,10 +3670,12 @@
    ],
    "veces_usada": 25,
    "tags": [
-    "aritmetica",
     "4°",
+    "aria",
+    "aritmetica",
+    "icono",
     "juego",
-    "icono"
+    "pose"
    ],
    "area": "aritmetica",
    "grado": 4,
@@ -3607,11 +3686,12 @@
    "tiene_texto": false,
    "texto": "",
    "calidad": 3,
-   "estado": "por_revisar",
+   "estado": "por_limpiar",
    "uso": "",
-   "archivo": "juego/98cb06b852.webp",
-   "categoria": "juego",
-   "subcategoria": ""
+   "archivo": "personajes/aria/98cb06b852.webp",
+   "categoria": "personajes",
+   "subcategoria": "aria",
+   "nota": "recorte con restos de otra pose; pasar por limpiar_recortes.py"
   },
   {
    "id": "img-0ee78a4e64",
@@ -3645,10 +3725,12 @@
    ],
    "veces_usada": 25,
    "tags": [
-    "aritmetica",
     "4°",
+    "aria",
+    "aritmetica",
+    "icono",
     "juego",
-    "icono"
+    "pose"
    ],
    "area": "aritmetica",
    "grado": 4,
@@ -3659,11 +3741,12 @@
    "tiene_texto": false,
    "texto": "",
    "calidad": 3,
-   "estado": "por_revisar",
+   "estado": "por_limpiar",
    "uso": "",
-   "archivo": "juego/0ee78a4e64.webp",
-   "categoria": "juego",
-   "subcategoria": ""
+   "archivo": "personajes/aria/0ee78a4e64.webp",
+   "categoria": "personajes",
+   "subcategoria": "aria",
+   "nota": "recorte con restos de otra pose; pasar por limpiar_recortes.py"
   },
   {
    "id": "img-1ef9294c01",
@@ -3749,10 +3832,12 @@
    ],
    "veces_usada": 25,
    "tags": [
-    "aritmetica",
     "4°",
+    "aria",
+    "aritmetica",
+    "icono",
     "juego",
-    "icono"
+    "pose"
    ],
    "area": "aritmetica",
    "grado": 4,
@@ -3763,11 +3848,12 @@
    "tiene_texto": false,
    "texto": "",
    "calidad": 3,
-   "estado": "por_revisar",
+   "estado": "por_limpiar",
    "uso": "",
-   "archivo": "juego/ea2fec5c23.webp",
-   "categoria": "juego",
-   "subcategoria": ""
+   "archivo": "personajes/aria/ea2fec5c23.webp",
+   "categoria": "personajes",
+   "subcategoria": "aria",
+   "nota": "recorte con restos de otra pose; pasar por limpiar_recortes.py"
   },
   {
    "id": "img-895e039df1",
@@ -3801,10 +3887,12 @@
    ],
    "veces_usada": 25,
    "tags": [
-    "aritmetica",
     "4°",
+    "aria",
+    "aritmetica",
+    "icono",
     "juego",
-    "icono"
+    "pose"
    ],
    "area": "aritmetica",
    "grado": 4,
@@ -3815,11 +3903,12 @@
    "tiene_texto": false,
    "texto": "",
    "calidad": 3,
-   "estado": "por_revisar",
+   "estado": "por_limpiar",
    "uso": "",
-   "archivo": "juego/895e039df1.webp",
-   "categoria": "juego",
-   "subcategoria": ""
+   "archivo": "personajes/aria/895e039df1.webp",
+   "categoria": "personajes",
+   "subcategoria": "aria",
+   "nota": "recorte con restos de otra pose; pasar por limpiar_recortes.py"
   },
   {
    "id": "img-80649ee7d7",
@@ -3853,10 +3942,12 @@
    ],
    "veces_usada": 25,
    "tags": [
-    "aritmetica",
     "4°",
+    "aria",
+    "aritmetica",
+    "icono",
     "juego",
-    "icono"
+    "pose"
    ],
    "area": "aritmetica",
    "grado": 4,
@@ -3867,11 +3958,12 @@
    "tiene_texto": false,
    "texto": "",
    "calidad": 3,
-   "estado": "por_revisar",
+   "estado": "por_limpiar",
    "uso": "",
-   "archivo": "juego/80649ee7d7.webp",
-   "categoria": "juego",
-   "subcategoria": ""
+   "archivo": "personajes/aria/80649ee7d7.webp",
+   "categoria": "personajes",
+   "subcategoria": "aria",
+   "nota": "recorte con restos de otra pose; pasar por limpiar_recortes.py"
   },
   {
    "id": "img-b8914526d7",
@@ -4009,10 +4101,12 @@
    ],
    "veces_usada": 25,
    "tags": [
-    "aritmetica",
     "4°",
+    "aria",
+    "aritmetica",
+    "icono",
     "juego",
-    "icono"
+    "pose"
    ],
    "area": "aritmetica",
    "grado": 4,
@@ -4023,11 +4117,12 @@
    "tiene_texto": false,
    "texto": "",
    "calidad": 3,
-   "estado": "por_revisar",
+   "estado": "por_limpiar",
    "uso": "",
-   "archivo": "juego/4b1b070ba8.webp",
-   "categoria": "juego",
-   "subcategoria": ""
+   "archivo": "personajes/aria/4b1b070ba8.webp",
+   "categoria": "personajes",
+   "subcategoria": "aria",
+   "nota": "recorte con restos de otra pose; pasar por limpiar_recortes.py"
   },
   {
    "id": "img-37d4266506",
@@ -4113,10 +4208,12 @@
    ],
    "veces_usada": 25,
    "tags": [
-    "aritmetica",
     "4°",
+    "aria",
+    "aritmetica",
+    "icono",
     "juego",
-    "icono"
+    "pose"
    ],
    "area": "aritmetica",
    "grado": 4,
@@ -4127,11 +4224,12 @@
    "tiene_texto": false,
    "texto": "",
    "calidad": 3,
-   "estado": "por_revisar",
+   "estado": "por_limpiar",
    "uso": "",
-   "archivo": "juego/eb4563a994.webp",
-   "categoria": "juego",
-   "subcategoria": ""
+   "archivo": "personajes/aria/eb4563a994.webp",
+   "categoria": "personajes",
+   "subcategoria": "aria",
+   "nota": "recorte con restos de otra pose; pasar por limpiar_recortes.py"
   },
   {
    "id": "img-ae234bff0c",
@@ -4217,10 +4315,12 @@
    ],
    "veces_usada": 25,
    "tags": [
-    "aritmetica",
     "4°",
+    "aria",
+    "aritmetica",
+    "icono",
     "juego",
-    "icono"
+    "pose"
    ],
    "area": "aritmetica",
    "grado": 4,
@@ -4231,11 +4331,12 @@
    "tiene_texto": false,
    "texto": "",
    "calidad": 3,
-   "estado": "por_revisar",
+   "estado": "por_limpiar",
    "uso": "",
-   "archivo": "juego/f2003f920c.webp",
-   "categoria": "juego",
-   "subcategoria": ""
+   "archivo": "personajes/aria/f2003f920c.webp",
+   "categoria": "personajes",
+   "subcategoria": "aria",
+   "nota": "recorte con restos de otra pose; pasar por limpiar_recortes.py"
   },
   {
    "id": "img-332da91fa4",
@@ -4321,9 +4422,11 @@
    ],
    "veces_usada": 25,
    "tags": [
-    "aritmetica",
     "4°",
+    "aria",
+    "aritmetica",
     "personaje",
+    "pose",
     "sprite"
    ],
    "area": "aritmetica",
@@ -4335,11 +4438,11 @@
    "tiene_texto": false,
    "texto": "",
    "calidad": 4,
-   "estado": "por_revisar",
+   "estado": "aprobada",
    "uso": "",
-   "archivo": "personajes/npc/472034f35a.webp",
+   "archivo": "personajes/aria/472034f35a.webp",
    "categoria": "personajes",
-   "subcategoria": "npc"
+   "subcategoria": "aria"
   },
   {
    "id": "img-3ef6cc1161",
@@ -4425,9 +4528,11 @@
    ],
    "veces_usada": 25,
    "tags": [
-    "aritmetica",
     "4°",
+    "aria",
+    "aritmetica",
     "personaje",
+    "pose",
     "sprite"
    ],
    "area": "aritmetica",
@@ -4439,11 +4544,11 @@
    "tiene_texto": false,
    "texto": "",
    "calidad": 4,
-   "estado": "por_revisar",
+   "estado": "aprobada",
    "uso": "",
-   "archivo": "personajes/npc/a8c2437312.webp",
+   "archivo": "personajes/aria/a8c2437312.webp",
    "categoria": "personajes",
-   "subcategoria": "npc"
+   "subcategoria": "aria"
   },
   {
    "id": "img-165904dedb",
@@ -4598,8 +4703,10 @@
    ],
    "veces_usada": 1,
    "tags": [
-    "aritmetica",
     "4°",
+    "aritmetica",
+    "decimales",
+    "numeros",
     "tema"
    ],
    "area": "aritmetica",
@@ -4610,12 +4717,12 @@
    "transparente": true,
    "tiene_texto": false,
    "texto": "",
-   "calidad": 3,
-   "estado": "por_revisar",
+   "calidad": 4,
+   "estado": "aprobada",
    "uso": "",
-   "archivo": "tematicos/por-clasificar/0f7a4a9c92.png",
+   "archivo": "tematicos/decimales/0f7a4a9c92.png",
    "categoria": "tematicos",
-   "subcategoria": "por-clasificar"
+   "subcategoria": "decimales"
   },
   {
    "id": "img-9d389b138d",
@@ -4625,8 +4732,10 @@
    ],
    "veces_usada": 1,
    "tags": [
-    "aritmetica",
     "4°",
+    "aritmetica",
+    "decimales",
+    "numeros",
     "tema"
    ],
    "area": "aritmetica",
@@ -4637,12 +4746,12 @@
    "transparente": true,
    "tiene_texto": false,
    "texto": "",
-   "calidad": 3,
-   "estado": "por_revisar",
+   "calidad": 4,
+   "estado": "aprobada",
    "uso": "",
-   "archivo": "tematicos/por-clasificar/9d389b138d.png",
+   "archivo": "tematicos/decimales/9d389b138d.png",
    "categoria": "tematicos",
-   "subcategoria": "por-clasificar"
+   "subcategoria": "decimales"
   },
   {
    "id": "img-c23b49b1c9",
@@ -4652,10 +4761,12 @@
    ],
    "veces_usada": 1,
    "tags": [
-    "aritmetica",
     "4°",
+    "aritmetica",
+    "decimales",
+    "icono",
     "juego",
-    "icono"
+    "numeros"
    ],
    "area": "aritmetica",
    "grado": 4,
@@ -4665,12 +4776,12 @@
    "transparente": true,
    "tiene_texto": false,
    "texto": "",
-   "calidad": 3,
-   "estado": "por_revisar",
+   "calidad": 4,
+   "estado": "aprobada",
    "uso": "",
-   "archivo": "juego/c23b49b1c9.png",
-   "categoria": "juego",
-   "subcategoria": ""
+   "archivo": "tematicos/decimales/c23b49b1c9.png",
+   "categoria": "tematicos",
+   "subcategoria": "decimales"
   },
   {
    "id": "img-555851efce",
@@ -4708,8 +4819,10 @@
    ],
    "veces_usada": 1,
    "tags": [
-    "aritmetica",
     "4°",
+    "aritmetica",
+    "decimales",
+    "numeros",
     "tema"
    ],
    "area": "aritmetica",
@@ -4720,12 +4833,12 @@
    "transparente": true,
    "tiene_texto": false,
    "texto": "pis",
-   "calidad": 3,
-   "estado": "por_revisar",
+   "calidad": 4,
+   "estado": "aprobada",
    "uso": "",
-   "archivo": "tematicos/por-clasificar/c160823ca3.png",
+   "archivo": "tematicos/decimales/c160823ca3.png",
    "categoria": "tematicos",
-   "subcategoria": "por-clasificar"
+   "subcategoria": "decimales"
   },
   {
    "id": "img-e79ba7e884",
@@ -4791,8 +4904,11 @@
    ],
    "veces_usada": 1,
    "tags": [
-    "aritmetica",
     "4°",
+    "aritmetica",
+    "detective",
+    "lupa",
+    "pista",
     "tema"
    ],
    "area": "aritmetica",
@@ -4804,11 +4920,11 @@
    "tiene_texto": false,
    "texto": "",
    "calidad": 4,
-   "estado": "por_revisar",
+   "estado": "aprobada",
    "uso": "",
-   "archivo": "tematicos/por-clasificar/ff7acb8878.png",
+   "archivo": "tematicos/detectives/ff7acb8878.png",
    "categoria": "tematicos",
-   "subcategoria": "por-clasificar"
+   "subcategoria": "detectives"
   },
   {
    "id": "img-84400cabed",
@@ -4874,8 +4990,10 @@
    ],
    "veces_usada": 1,
    "tags": [
-    "aritmetica",
     "4°",
+    "aritmetica",
+    "decimales",
+    "numeros",
     "tema"
    ],
    "area": "aritmetica",
@@ -4887,11 +5005,11 @@
    "tiene_texto": false,
    "texto": "",
    "calidad": 4,
-   "estado": "por_revisar",
+   "estado": "aprobada",
    "uso": "",
-   "archivo": "tematicos/por-clasificar/1e260a517c.png",
+   "archivo": "tematicos/decimales/1e260a517c.png",
    "categoria": "tematicos",
-   "subcategoria": "por-clasificar"
+   "subcategoria": "decimales"
   },
   {
    "id": "img-4bbabfa656",
@@ -4957,10 +5075,13 @@
    ],
    "veces_usada": 1,
    "tags": [
-    "aritmetica",
     "4°",
+    "aritmetica",
+    "detective",
+    "icono",
     "juego",
-    "icono"
+    "lupa",
+    "pista"
    ],
    "area": "aritmetica",
    "grado": 4,
@@ -4970,12 +5091,12 @@
    "transparente": true,
    "tiene_texto": false,
    "texto": "",
-   "calidad": 3,
-   "estado": "por_revisar",
+   "calidad": 4,
+   "estado": "aprobada",
    "uso": "",
-   "archivo": "juego/9808acde86.png",
-   "categoria": "juego",
-   "subcategoria": ""
+   "archivo": "tematicos/detectives/9808acde86.png",
+   "categoria": "tematicos",
+   "subcategoria": "detectives"
   },
   {
    "id": "img-2e89e48086",
@@ -4985,10 +5106,13 @@
    ],
    "veces_usada": 1,
    "tags": [
-    "aritmetica",
     "4°",
+    "aritmetica",
+    "detective",
+    "icono",
     "juego",
-    "icono"
+    "lupa",
+    "pista"
    ],
    "area": "aritmetica",
    "grado": 4,
@@ -4998,12 +5122,12 @@
    "transparente": true,
    "tiene_texto": false,
    "texto": "",
-   "calidad": 3,
-   "estado": "por_revisar",
+   "calidad": 4,
+   "estado": "aprobada",
    "uso": "",
-   "archivo": "juego/2e89e48086.png",
-   "categoria": "juego",
-   "subcategoria": ""
+   "archivo": "tematicos/detectives/2e89e48086.png",
+   "categoria": "tematicos",
+   "subcategoria": "detectives"
   },
   {
    "id": "img-3729f46b32",
@@ -5013,8 +5137,10 @@
    ],
    "veces_usada": 1,
    "tags": [
-    "aritmetica",
     "4°",
+    "aritmetica",
+    "decimales",
+    "numeros",
     "personaje",
     "sprite"
    ],
@@ -5027,11 +5153,11 @@
    "tiene_texto": false,
    "texto": "",
    "calidad": 4,
-   "estado": "por_revisar",
+   "estado": "aprobada",
    "uso": "",
-   "archivo": "personajes/npc/3729f46b32.png",
-   "categoria": "personajes",
-   "subcategoria": "npc"
+   "archivo": "tematicos/decimales/3729f46b32.png",
+   "categoria": "tematicos",
+   "subcategoria": "decimales"
   },
   {
    "id": "img-dc80cfc6bc",
@@ -5097,8 +5223,8 @@
    ],
    "veces_usada": 1,
    "tags": [
-    "aritmetica",
     "4°",
+    "aritmetica",
     "personaje",
     "sprite"
    ],
@@ -5111,11 +5237,11 @@
    "tiene_texto": false,
    "texto": "",
    "calidad": 4,
-   "estado": "por_revisar",
+   "estado": "especifica",
    "uso": "",
-   "archivo": "personajes/npc/206f50d968.webp",
-   "categoria": "personajes",
-   "subcategoria": "npc"
+   "archivo": "_especificas/aritmetica4/206f50d968.webp",
+   "categoria": "_especificas",
+   "subcategoria": "aritmetica4"
   },
   {
    "id": "img-3ae4c5f0dc",
@@ -5153,10 +5279,13 @@
    ],
    "veces_usada": 1,
    "tags": [
-    "aritmetica",
     "4°",
+    "aritmetica",
+    "dividir",
+    "fabrica",
+    "icono",
     "juego",
-    "icono"
+    "multiplicar"
    ],
    "area": "aritmetica",
    "grado": 4,
@@ -5166,12 +5295,12 @@
    "transparente": true,
    "tiene_texto": false,
    "texto": "",
-   "calidad": 3,
-   "estado": "por_revisar",
+   "calidad": 4,
+   "estado": "aprobada",
    "uso": "",
-   "archivo": "juego/d4467ee4da.webp",
-   "categoria": "juego",
-   "subcategoria": ""
+   "archivo": "tematicos/fabrica/d4467ee4da.webp",
+   "categoria": "tematicos",
+   "subcategoria": "fabrica"
   },
   {
    "id": "img-288dbaf592",
@@ -5181,8 +5310,11 @@
    ],
    "veces_usada": 1,
    "tags": [
-    "aritmetica",
     "4°",
+    "aritmetica",
+    "dividir",
+    "fabrica",
+    "multiplicar",
     "personaje",
     "sprite"
    ],
@@ -5195,11 +5327,11 @@
    "tiene_texto": false,
    "texto": "",
    "calidad": 4,
-   "estado": "por_revisar",
+   "estado": "aprobada",
    "uso": "",
-   "archivo": "personajes/npc/288dbaf592.webp",
-   "categoria": "personajes",
-   "subcategoria": "npc"
+   "archivo": "tematicos/fabrica/288dbaf592.webp",
+   "categoria": "tematicos",
+   "subcategoria": "fabrica"
   },
   {
    "id": "img-07fde81e6a",
@@ -5209,8 +5341,11 @@
    ],
    "veces_usada": 1,
    "tags": [
-    "aritmetica",
     "4°",
+    "aritmetica",
+    "dividir",
+    "fabrica",
+    "multiplicar",
     "tema"
    ],
    "area": "aritmetica",
@@ -5221,12 +5356,12 @@
    "transparente": true,
    "tiene_texto": false,
    "texto": "",
-   "calidad": 3,
-   "estado": "por_revisar",
+   "calidad": 4,
+   "estado": "aprobada",
    "uso": "",
-   "archivo": "tematicos/por-clasificar/07fde81e6a.webp",
+   "archivo": "tematicos/fabrica/07fde81e6a.webp",
    "categoria": "tematicos",
-   "subcategoria": "por-clasificar"
+   "subcategoria": "fabrica"
   },
   {
    "id": "img-6e3399908a",
@@ -5236,10 +5371,12 @@
    ],
    "veces_usada": 1,
    "tags": [
-    "aritmetica",
     "4°",
+    "aritmetica",
+    "decimales",
+    "icono",
     "juego",
-    "icono"
+    "numeros"
    ],
    "area": "aritmetica",
    "grado": 4,
@@ -5249,12 +5386,12 @@
    "transparente": true,
    "tiene_texto": false,
    "texto": "",
-   "calidad": 3,
-   "estado": "por_revisar",
+   "calidad": 4,
+   "estado": "aprobada",
    "uso": "",
-   "archivo": "juego/6e3399908a.webp",
-   "categoria": "juego",
-   "subcategoria": ""
+   "archivo": "tematicos/decimales/6e3399908a.webp",
+   "categoria": "tematicos",
+   "subcategoria": "decimales"
   },
   {
    "id": "img-a99ea9c788",
@@ -5376,9 +5513,11 @@
    ],
    "veces_usada": 1,
    "tags": [
-    "aritmetica",
     "4°",
-    "tema"
+    "aritmetica",
+    "banner",
+    "tema",
+    "titulo"
    ],
    "area": "aritmetica",
    "grado": 4,
@@ -5389,11 +5528,11 @@
    "tiene_texto": false,
    "texto": "",
    "calidad": 4,
-   "estado": "por_revisar",
+   "estado": "aprobada",
    "uso": "",
-   "archivo": "tematicos/por-clasificar/45e6c285e0.webp",
-   "categoria": "tematicos",
-   "subcategoria": "por-clasificar"
+   "archivo": "interfaz/banners/45e6c285e0.webp",
+   "categoria": "interfaz",
+   "subcategoria": "banners"
   },
   {
    "id": "img-625cf7099c",
@@ -5431,10 +5570,13 @@
    ],
    "veces_usada": 1,
    "tags": [
-    "aritmetica",
     "4°",
+    "aritmetica",
+    "dividir",
+    "fabrica",
+    "icono",
     "juego",
-    "icono"
+    "multiplicar"
    ],
    "area": "aritmetica",
    "grado": 4,
@@ -5444,12 +5586,12 @@
    "transparente": true,
    "tiene_texto": false,
    "texto": "",
-   "calidad": 3,
-   "estado": "por_revisar",
+   "calidad": 4,
+   "estado": "aprobada",
    "uso": "",
-   "archivo": "juego/0cb13590d1.webp",
-   "categoria": "juego",
-   "subcategoria": ""
+   "archivo": "tematicos/fabrica/0cb13590d1.webp",
+   "categoria": "tematicos",
+   "subcategoria": "fabrica"
   },
   {
    "id": "img-fd65044325",
@@ -5524,10 +5666,12 @@
    ],
    "veces_usada": 4,
    "tags": [
-    "aritmetica",
     "4°",
+    "aria",
+    "aritmetica",
+    "icono",
     "juego",
-    "icono"
+    "pose"
    ],
    "area": "aritmetica",
    "grado": 4,
@@ -5537,12 +5681,12 @@
    "transparente": true,
    "tiene_texto": false,
    "texto": "",
-   "calidad": 3,
-   "estado": "por_revisar",
+   "calidad": 4,
+   "estado": "aprobada",
    "uso": "",
-   "archivo": "juego/e4fc364bc7.webp",
-   "categoria": "juego",
-   "subcategoria": ""
+   "archivo": "personajes/aria/e4fc364bc7.webp",
+   "categoria": "personajes",
+   "subcategoria": "aria"
   },
   {
    "id": "img-e269e926e5",
@@ -5612,10 +5756,12 @@
    ],
    "veces_usada": 2,
    "tags": [
-    "aritmetica",
     "4°",
+    "aritmetica",
+    "decimales",
+    "icono",
     "juego",
-    "icono"
+    "numeros"
    ],
    "area": "aritmetica",
    "grado": 4,
@@ -5625,12 +5771,12 @@
    "transparente": true,
    "tiene_texto": false,
    "texto": "",
-   "calidad": 3,
-   "estado": "por_revisar",
+   "calidad": 4,
+   "estado": "aprobada",
    "uso": "",
-   "archivo": "juego/e1a8887404.webp",
-   "categoria": "juego",
-   "subcategoria": ""
+   "archivo": "tematicos/decimales/e1a8887404.webp",
+   "categoria": "tematicos",
+   "subcategoria": "decimales"
   },
   {
    "id": "img-0cc7535c7f",
@@ -5640,8 +5786,10 @@
    ],
    "veces_usada": 1,
    "tags": [
-    "aritmetica",
     "4°",
+    "aritmetica",
+    "decimales",
+    "numeros",
     "personaje",
     "sprite"
    ],
@@ -5654,11 +5802,11 @@
    "tiene_texto": false,
    "texto": "",
    "calidad": 5,
-   "estado": "por_revisar",
+   "estado": "aprobada",
    "uso": "",
-   "archivo": "personajes/npc/0cc7535c7f.webp",
-   "categoria": "personajes",
-   "subcategoria": "npc"
+   "archivo": "tematicos/decimales/0cc7535c7f.webp",
+   "categoria": "tematicos",
+   "subcategoria": "decimales"
   },
   {
    "id": "img-a5eb1f541d",
@@ -5696,8 +5844,10 @@
    ],
    "veces_usada": 1,
    "tags": [
-    "aritmetica",
     "4°",
+    "aritmetica",
+    "decimales",
+    "numeros",
     "tema"
    ],
    "area": "aritmetica",
@@ -5709,11 +5859,11 @@
    "tiene_texto": false,
    "texto": "0,50",
    "calidad": 5,
-   "estado": "por_revisar",
+   "estado": "aprobada",
    "uso": "",
-   "archivo": "tematicos/por-clasificar/516bd53260.webp",
+   "archivo": "tematicos/decimales/516bd53260.webp",
    "categoria": "tematicos",
-   "subcategoria": "por-clasificar"
+   "subcategoria": "decimales"
   },
   {
    "id": "img-0847130fe8",
@@ -5807,10 +5957,12 @@
    ],
    "veces_usada": 1,
    "tags": [
-    "aritmetica",
     "4°",
+    "aritmetica",
+    "banner",
+    "icono",
     "juego",
-    "icono"
+    "titulo"
    ],
    "area": "aritmetica",
    "grado": 4,
@@ -5820,12 +5972,12 @@
    "transparente": true,
    "tiene_texto": false,
    "texto": "",
-   "calidad": 3,
-   "estado": "por_revisar",
+   "calidad": 4,
+   "estado": "aprobada",
    "uso": "",
-   "archivo": "juego/a2b9e77f73.webp",
-   "categoria": "juego",
-   "subcategoria": ""
+   "archivo": "interfaz/banners/a2b9e77f73.webp",
+   "categoria": "interfaz",
+   "subcategoria": "banners"
   },
   {
    "id": "img-74fa1717f9",
@@ -5835,8 +5987,10 @@
    ],
    "veces_usada": 1,
    "tags": [
-    "aritmetica",
     "4°",
+    "aritmetica",
+    "decimales",
+    "numeros",
     "tema"
    ],
    "area": "aritmetica",
@@ -5848,11 +6002,11 @@
    "tiene_texto": false,
    "texto": "",
    "calidad": 4,
-   "estado": "por_revisar",
+   "estado": "aprobada",
    "uso": "",
-   "archivo": "tematicos/por-clasificar/74fa1717f9.webp",
+   "archivo": "tematicos/decimales/74fa1717f9.webp",
    "categoria": "tematicos",
-   "subcategoria": "por-clasificar"
+   "subcategoria": "decimales"
   },
   {
    "id": "img-26d97204d8",
@@ -6086,10 +6240,12 @@
    ],
    "veces_usada": 1,
    "tags": [
-    "aritmetica",
     "4°",
+    "aritmetica",
+    "banner",
+    "icono",
     "juego",
-    "icono"
+    "titulo"
    ],
    "area": "aritmetica",
    "grado": 4,
@@ -6099,12 +6255,12 @@
    "transparente": true,
    "tiene_texto": false,
    "texto": "",
-   "calidad": 3,
-   "estado": "por_revisar",
+   "calidad": 4,
+   "estado": "aprobada",
    "uso": "",
-   "archivo": "juego/9f6bfc91b5.webp",
-   "categoria": "juego",
-   "subcategoria": ""
+   "archivo": "interfaz/banners/9f6bfc91b5.webp",
+   "categoria": "interfaz",
+   "subcategoria": "banners"
   },
   {
    "id": "img-63a5e05baa",
@@ -6142,10 +6298,13 @@
    ],
    "veces_usada": 1,
    "tags": [
-    "aritmetica",
     "4°",
+    "aritmetica",
+    "dinero",
     "personaje",
-    "sprite"
+    "precios",
+    "sprite",
+    "tienda"
    ],
    "area": "aritmetica",
    "grado": 4,
@@ -6156,11 +6315,11 @@
    "tiene_texto": false,
    "texto": "(250)",
    "calidad": 4,
-   "estado": "por_revisar",
+   "estado": "aprobada",
    "uso": "",
-   "archivo": "personajes/npc/61bad75756.webp",
-   "categoria": "personajes",
-   "subcategoria": "npc"
+   "archivo": "tematicos/dinero/61bad75756.webp",
+   "categoria": "tematicos",
+   "subcategoria": "dinero"
   },
   {
    "id": "img-623d96f1aa",
@@ -6535,6 +6694,7 @@
    ],
    "veces_usada": 2,
    "tags": [
+    "boton",
     "tecnologia",
     "ui"
    ],
@@ -6547,11 +6707,12 @@
    "tiene_texto": false,
    "texto": "",
    "calidad": 4,
-   "estado": "por_revisar",
+   "estado": "aprobada",
    "uso": "",
-   "archivo": "interfaz/barras-y-marcos/ae5fecbb36.webp",
+   "archivo": "interfaz/botones/ae5fecbb36.webp",
    "categoria": "interfaz",
-   "subcategoria": "barras-y-marcos"
+   "subcategoria": "botones",
+   "nota": "texto genérico de interfaz"
   },
   {
    "id": "img-0272e0d6a6",
@@ -6995,25 +7156,28 @@
    ],
    "veces_usada": 4,
    "tags": [
-    "aritmetica",
     "5°",
+    "aritmetica",
+    "avatar",
+    "icono",
     "juego",
-    "icono"
+    "perfil"
    ],
    "area": "aritmetica",
    "grado": 5,
    "semana": 2,
-   "archivo": "juego/svg-1075a4ea8c.svg",
-   "categoria": "juego",
-   "subcategoria": "",
+   "archivo": "personajes/avatares/svg-1075a4ea8c.svg",
+   "categoria": "personajes",
+   "subcategoria": "avatares",
    "ancho": null,
    "alto": null,
    "transparente": true,
    "tiene_texto": false,
    "texto": "",
-   "estado": "por_revisar",
-   "calidad": 3,
-   "uso": "SVG extraído de clase"
+   "estado": "aprobada",
+   "calidad": 4,
+   "uso": "SVG extraído de clase",
+   "nota": "avatar vectorial"
   },
   {
    "id": "img-194a87c2fc",
@@ -7026,25 +7190,28 @@
    ],
    "veces_usada": 4,
    "tags": [
-    "aritmetica",
     "5°",
+    "aritmetica",
+    "avatar",
+    "icono",
     "juego",
-    "icono"
+    "perfil"
    ],
    "area": "aritmetica",
    "grado": 5,
    "semana": 2,
-   "archivo": "juego/svg-194a87c2fc.svg",
-   "categoria": "juego",
-   "subcategoria": "",
+   "archivo": "personajes/avatares/svg-194a87c2fc.svg",
+   "categoria": "personajes",
+   "subcategoria": "avatares",
    "ancho": null,
    "alto": null,
    "transparente": true,
    "tiene_texto": false,
    "texto": "",
-   "estado": "por_revisar",
-   "calidad": 3,
-   "uso": "SVG extraído de clase"
+   "estado": "aprobada",
+   "calidad": 4,
+   "uso": "SVG extraído de clase",
+   "nota": "avatar vectorial"
   },
   {
    "id": "img-3cccbdf935",
@@ -7065,17 +7232,18 @@
    "area": "aritmetica",
    "grado": 5,
    "semana": 2,
-   "archivo": "juego/svg-3cccbdf935.svg",
-   "categoria": "juego",
-   "subcategoria": "",
+   "archivo": "_especificas/tecnologia5/svg-3cccbdf935.svg",
+   "categoria": "_especificas",
+   "subcategoria": "tecnologia5",
    "ancho": null,
    "alto": null,
    "transparente": true,
-   "tiene_texto": false,
+   "tiene_texto": true,
    "texto": "",
-   "estado": "por_revisar",
+   "estado": "especifica",
    "calidad": 3,
-   "uso": "SVG extraído de clase"
+   "uso": "SVG extraído de clase",
+   "nota": "tarjeta de título con texto (emoji dependen de la fuente del navegador)"
   },
   {
    "id": "img-2b398cb752",
@@ -7088,25 +7256,28 @@
    ],
    "veces_usada": 4,
    "tags": [
-    "aritmetica",
     "5°",
+    "aritmetica",
+    "avatar",
+    "icono",
     "juego",
-    "icono"
+    "perfil"
    ],
    "area": "aritmetica",
    "grado": 5,
    "semana": 2,
-   "archivo": "juego/svg-2b398cb752.svg",
-   "categoria": "juego",
-   "subcategoria": "",
+   "archivo": "personajes/avatares/svg-2b398cb752.svg",
+   "categoria": "personajes",
+   "subcategoria": "avatares",
    "ancho": null,
    "alto": null,
    "transparente": true,
    "tiene_texto": false,
    "texto": "",
-   "estado": "por_revisar",
-   "calidad": 3,
-   "uso": "SVG extraído de clase"
+   "estado": "aprobada",
+   "calidad": 4,
+   "uso": "SVG extraído de clase",
+   "nota": "avatar vectorial"
   },
   {
    "id": "img-3ffd08fdf0",
@@ -7127,10 +7298,12 @@
    ],
    "veces_usada": 12,
    "tags": [
-    "aritmetica",
     "5°",
+    "aria",
+    "aritmetica",
+    "icono",
     "juego",
-    "icono"
+    "pose"
    ],
    "area": "aritmetica",
    "grado": 5,
@@ -7140,12 +7313,12 @@
    "transparente": true,
    "tiene_texto": false,
    "texto": "",
-   "calidad": 3,
-   "estado": "por_revisar",
+   "calidad": 4,
+   "estado": "aprobada",
    "uso": "",
-   "archivo": "juego/3ffd08fdf0.png",
-   "categoria": "juego",
-   "subcategoria": ""
+   "archivo": "personajes/aria/3ffd08fdf0.png",
+   "categoria": "personajes",
+   "subcategoria": "aria"
   },
   {
    "id": "img-a84c12dd7f",
@@ -7164,25 +7337,28 @@
    ],
    "veces_usada": 10,
    "tags": [
-    "aritmetica",
     "5°",
+    "aritmetica",
+    "avatar",
+    "icono",
     "juego",
-    "icono"
+    "perfil"
    ],
    "area": "aritmetica",
    "grado": 5,
    "semana": 2,
-   "archivo": "juego/svg-a84c12dd7f.svg",
-   "categoria": "juego",
-   "subcategoria": "",
+   "archivo": "personajes/avatares/svg-a84c12dd7f.svg",
+   "categoria": "personajes",
+   "subcategoria": "avatares",
    "ancho": null,
    "alto": null,
    "transparente": true,
    "tiene_texto": false,
    "texto": "",
-   "estado": "por_revisar",
-   "calidad": 3,
-   "uso": "SVG extraído de clase"
+   "estado": "aprobada",
+   "calidad": 4,
+   "uso": "SVG extraído de clase",
+   "nota": "avatar vectorial"
   },
   {
    "id": "img-f5660159b8",
@@ -7197,8 +7373,9 @@
    ],
    "veces_usada": 6,
    "tags": [
-    "aritmetica",
     "5°",
+    "aritmetica",
+    "boton",
     "tema"
    ],
    "area": "aritmetica",
@@ -7209,12 +7386,13 @@
    "transparente": false,
    "tiene_texto": false,
    "texto": "",
-   "calidad": 3,
-   "estado": "por_revisar",
+   "calidad": 4,
+   "estado": "aprobada",
    "uso": "",
-   "archivo": "tematicos/por-clasificar/f5660159b8.png",
-   "categoria": "tematicos",
-   "subcategoria": "por-clasificar"
+   "archivo": "interfaz/botones/f5660159b8.png",
+   "categoria": "interfaz",
+   "subcategoria": "botones",
+   "nota": "texto genérico de interfaz"
   },
   {
    "id": "img-f6d1375370",
@@ -7261,8 +7439,9 @@
    ],
    "veces_usada": 6,
    "tags": [
-    "aritmetica",
     "5°",
+    "aritmetica",
+    "boton",
     "tema"
    ],
    "area": "aritmetica",
@@ -7273,12 +7452,13 @@
    "transparente": false,
    "tiene_texto": false,
    "texto": "",
-   "calidad": 3,
-   "estado": "por_revisar",
+   "calidad": 4,
+   "estado": "aprobada",
    "uso": "",
-   "archivo": "tematicos/por-clasificar/390d68c02c.png",
-   "categoria": "tematicos",
-   "subcategoria": "por-clasificar"
+   "archivo": "interfaz/botones/390d68c02c.png",
+   "categoria": "interfaz",
+   "subcategoria": "botones",
+   "nota": "texto genérico de interfaz"
   },
   {
    "id": "img-c675eb616e",
@@ -7394,8 +7574,10 @@
    ],
    "veces_usada": 4,
    "tags": [
-    "aritmetica",
     "5°",
+    "aritmetica",
+    "numeros",
+    "selector",
     "tema"
    ],
    "area": "aritmetica",
@@ -7406,12 +7588,12 @@
    "transparente": false,
    "tiene_texto": false,
    "texto": "",
-   "calidad": 3,
-   "estado": "por_revisar",
+   "calidad": 4,
+   "estado": "aprobada",
    "uso": "",
-   "archivo": "tematicos/por-clasificar/92798581ee.png",
-   "categoria": "tematicos",
-   "subcategoria": "por-clasificar"
+   "archivo": "interfaz/barras-y-marcos/92798581ee.png",
+   "categoria": "interfaz",
+   "subcategoria": "barras-y-marcos"
   },
   {
    "id": "img-0639eddbc1",
@@ -7421,9 +7603,12 @@
    ],
    "veces_usada": 1,
    "tags": [
-    "aritmetica",
     "5°",
-    "tema"
+    "aritmetica",
+    "dinero",
+    "precios",
+    "tema",
+    "tienda"
    ],
    "area": "aritmetica",
    "grado": 5,
@@ -7433,12 +7618,12 @@
    "transparente": false,
    "tiene_texto": false,
    "texto": "",
-   "calidad": 3,
-   "estado": "por_revisar",
+   "calidad": 4,
+   "estado": "aprobada",
    "uso": "",
-   "archivo": "tematicos/por-clasificar/0639eddbc1.png",
+   "archivo": "tematicos/dinero/0639eddbc1.png",
    "categoria": "tematicos",
-   "subcategoria": "por-clasificar"
+   "subcategoria": "dinero"
   },
   {
    "id": "img-a7862dd7e1",
@@ -7448,9 +7633,12 @@
    ],
    "veces_usada": 1,
    "tags": [
-    "aritmetica",
     "5°",
-    "tema"
+    "aritmetica",
+    "dinero",
+    "precios",
+    "tema",
+    "tienda"
    ],
    "area": "aritmetica",
    "grado": 5,
@@ -7460,12 +7648,12 @@
    "transparente": false,
    "tiene_texto": false,
    "texto": "",
-   "calidad": 3,
-   "estado": "por_revisar",
+   "calidad": 4,
+   "estado": "aprobada",
    "uso": "",
-   "archivo": "tematicos/por-clasificar/a7862dd7e1.png",
+   "archivo": "tematicos/dinero/a7862dd7e1.png",
    "categoria": "tematicos",
-   "subcategoria": "por-clasificar"
+   "subcategoria": "dinero"
   },
   {
    "id": "img-62b71d9372",
@@ -7587,9 +7775,12 @@
    ],
    "veces_usada": 1,
    "tags": [
-    "aritmetica",
     "5°",
-    "tema"
+    "aritmetica",
+    "dinero",
+    "precios",
+    "tema",
+    "tienda"
    ],
    "area": "aritmetica",
    "grado": 5,
@@ -7599,12 +7790,12 @@
    "transparente": false,
    "tiene_texto": false,
    "texto": "",
-   "calidad": 3,
-   "estado": "por_revisar",
+   "calidad": 4,
+   "estado": "aprobada",
    "uso": "",
-   "archivo": "tematicos/por-clasificar/5e0bbb98fe.png",
+   "archivo": "tematicos/dinero/5e0bbb98fe.png",
    "categoria": "tematicos",
-   "subcategoria": "por-clasificar"
+   "subcategoria": "dinero"
   },
   {
    "id": "img-b39f471bdc",
@@ -7614,8 +7805,8 @@
    ],
    "veces_usada": 1,
    "tags": [
-    "aritmetica",
     "5°",
+    "aritmetica",
     "tema"
    ],
    "area": "aritmetica",
@@ -7627,11 +7818,11 @@
    "tiene_texto": false,
    "texto": "",
    "calidad": 3,
-   "estado": "por_revisar",
+   "estado": "especifica",
    "uso": "",
-   "archivo": "tematicos/por-clasificar/b39f471bdc.png",
-   "categoria": "tematicos",
-   "subcategoria": "por-clasificar"
+   "archivo": "_especificas/aritmetica4/b39f471bdc.png",
+   "categoria": "_especificas",
+   "subcategoria": "aritmetica4"
   },
   {
    "id": "img-5d1eb1b6fa",
@@ -7753,9 +7944,12 @@
    ],
    "veces_usada": 1,
    "tags": [
-    "aritmetica",
     "5°",
-    "tema"
+    "aritmetica",
+    "dinero",
+    "precios",
+    "tema",
+    "tienda"
    ],
    "area": "aritmetica",
    "grado": 5,
@@ -7766,11 +7960,11 @@
    "tiene_texto": false,
    "texto": "",
    "calidad": 5,
-   "estado": "por_revisar",
+   "estado": "aprobada",
    "uso": "",
-   "archivo": "tematicos/por-clasificar/604d788761.webp",
+   "archivo": "tematicos/dinero/604d788761.webp",
    "categoria": "tematicos",
-   "subcategoria": "por-clasificar"
+   "subcategoria": "dinero"
   },
   {
    "id": "img-48a071188b",
@@ -7813,8 +8007,10 @@
    ],
    "veces_usada": 6,
    "tags": [
-    "aritmetica",
     "5°",
+    "aria",
+    "aritmetica",
+    "pose",
     "tema"
    ],
    "area": "aritmetica",
@@ -7825,12 +8021,12 @@
    "transparente": false,
    "tiene_texto": false,
    "texto": "",
-   "calidad": 3,
-   "estado": "por_revisar",
+   "calidad": 4,
+   "estado": "aprobada",
    "uso": "",
-   "archivo": "tematicos/por-clasificar/ed2dd54038.png",
-   "categoria": "tematicos",
-   "subcategoria": "por-clasificar"
+   "archivo": "personajes/aria/ed2dd54038.png",
+   "categoria": "personajes",
+   "subcategoria": "aria"
   },
   {
    "id": "img-3489a45f7e",
@@ -8013,17 +8209,18 @@
    "area": "aritmetica",
    "grado": 5,
    "semana": 2,
-   "archivo": "juego/svg-941e3504bb.svg",
-   "categoria": "juego",
-   "subcategoria": "",
+   "archivo": "_especificas/aritmetica5/svg-941e3504bb.svg",
+   "categoria": "_especificas",
+   "subcategoria": "aritmetica5",
    "ancho": null,
    "alto": null,
    "transparente": true,
-   "tiene_texto": false,
+   "tiene_texto": true,
    "texto": "",
-   "estado": "por_revisar",
+   "estado": "especifica",
    "calidad": 3,
-   "uso": "SVG extraído de clase"
+   "uso": "SVG extraído de clase",
+   "nota": "tarjeta de título"
   },
   {
    "id": "img-7e69f773ab",
@@ -8038,8 +8235,9 @@
    ],
    "veces_usada": 6,
    "tags": [
-    "aritmetica",
     "5°",
+    "aritmetica",
+    "boton",
     "tema"
    ],
    "area": "aritmetica",
@@ -8050,12 +8248,13 @@
    "transparente": false,
    "tiene_texto": false,
    "texto": "",
-   "calidad": 3,
-   "estado": "por_revisar",
+   "calidad": 4,
+   "estado": "aprobada",
    "uso": "",
-   "archivo": "tematicos/por-clasificar/7e69f773ab.png",
-   "categoria": "tematicos",
-   "subcategoria": "por-clasificar"
+   "archivo": "interfaz/botones/7e69f773ab.png",
+   "categoria": "interfaz",
+   "subcategoria": "botones",
+   "nota": "texto genérico de interfaz"
   },
   {
    "id": "img-cedb4c1ab9",
@@ -8065,8 +8264,10 @@
    ],
    "veces_usada": 1,
    "tags": [
-    "aritmetica",
     "5°",
+    "aritmetica",
+    "decimales",
+    "numeros",
     "personaje",
     "sprite"
    ],
@@ -8079,11 +8280,11 @@
    "tiene_texto": false,
    "texto": "",
    "calidad": 4,
-   "estado": "por_revisar",
+   "estado": "aprobada",
    "uso": "",
-   "archivo": "personajes/npc/cedb4c1ab9.webp",
-   "categoria": "personajes",
-   "subcategoria": "npc"
+   "archivo": "tematicos/decimales/cedb4c1ab9.webp",
+   "categoria": "tematicos",
+   "subcategoria": "decimales"
   },
   {
    "id": "img-8d806f5e00",
@@ -8121,8 +8322,10 @@
    ],
    "veces_usada": 1,
    "tags": [
-    "aritmetica",
     "5°",
+    "aritmetica",
+    "decimales",
+    "numeros",
     "personaje",
     "sprite"
    ],
@@ -8135,11 +8338,11 @@
    "tiene_texto": false,
    "texto": "100",
    "calidad": 4,
-   "estado": "por_revisar",
+   "estado": "aprobada",
    "uso": "",
-   "archivo": "personajes/npc/e40b4531cb.webp",
-   "categoria": "personajes",
-   "subcategoria": "npc"
+   "archivo": "tematicos/decimales/e40b4531cb.webp",
+   "categoria": "tematicos",
+   "subcategoria": "decimales"
   },
   {
    "id": "img-84090aa4cb",
@@ -8261,8 +8464,8 @@
    ],
    "veces_usada": 1,
    "tags": [
-    "aritmetica",
     "5°",
+    "aritmetica",
     "tema"
    ],
    "area": "aritmetica",
@@ -8274,11 +8477,11 @@
    "tiene_texto": false,
    "texto": "ANA",
    "calidad": 5,
-   "estado": "por_revisar",
+   "estado": "especifica",
    "uso": "",
-   "archivo": "tematicos/por-clasificar/231e35f8b5.webp",
-   "categoria": "tematicos",
-   "subcategoria": "por-clasificar"
+   "archivo": "_especificas/aritmetica4/231e35f8b5.webp",
+   "categoria": "_especificas",
+   "subcategoria": "aritmetica4"
   },
   {
    "id": "img-7f81aed373",
@@ -8344,8 +8547,10 @@
    ],
    "veces_usada": 1,
    "tags": [
-    "aritmetica",
     "5°",
+    "aritmetica",
+    "decimales",
+    "numeros",
     "tema"
    ],
    "area": "aritmetica",
@@ -8357,11 +8562,11 @@
    "tiene_texto": false,
    "texto": "",
    "calidad": 4,
-   "estado": "por_revisar",
+   "estado": "aprobada",
    "uso": "",
-   "archivo": "tematicos/por-clasificar/8995c501b5.webp",
+   "archivo": "tematicos/decimales/8995c501b5.webp",
    "categoria": "tematicos",
-   "subcategoria": "por-clasificar"
+   "subcategoria": "decimales"
   },
   {
    "id": "img-f2193e0d36",
@@ -8371,8 +8576,10 @@
    ],
    "veces_usada": 1,
    "tags": [
-    "aritmetica",
     "5°",
+    "aritmetica",
+    "decimales",
+    "numeros",
     "personaje",
     "sprite"
    ],
@@ -8385,11 +8592,11 @@
    "tiene_texto": false,
    "texto": "",
    "calidad": 4,
-   "estado": "por_revisar",
+   "estado": "aprobada",
    "uso": "",
-   "archivo": "personajes/npc/f2193e0d36.webp",
-   "categoria": "personajes",
-   "subcategoria": "npc"
+   "archivo": "tematicos/decimales/f2193e0d36.webp",
+   "categoria": "tematicos",
+   "subcategoria": "decimales"
   },
   {
    "id": "img-57d0c7fa85",
@@ -8399,8 +8606,8 @@
    ],
    "veces_usada": 1,
    "tags": [
-    "aritmetica",
     "5°",
+    "aritmetica",
     "tema"
    ],
    "area": "aritmetica",
@@ -8412,11 +8619,11 @@
    "tiene_texto": false,
    "texto": "",
    "calidad": 3,
-   "estado": "por_revisar",
+   "estado": "especifica",
    "uso": "",
-   "archivo": "tematicos/por-clasificar/57d0c7fa85.webp",
-   "categoria": "tematicos",
-   "subcategoria": "por-clasificar"
+   "archivo": "_especificas/aritmetica4/57d0c7fa85.webp",
+   "categoria": "_especificas",
+   "subcategoria": "aritmetica4"
   },
   {
    "id": "img-373493fce2",
@@ -8569,8 +8776,10 @@
    ],
    "veces_usada": 1,
    "tags": [
-    "aritmetica",
     "5°",
+    "aritmetica",
+    "decimales",
+    "numeros",
     "tema"
    ],
    "area": "aritmetica",
@@ -8582,11 +8791,11 @@
    "tiene_texto": false,
    "texto": "3,50",
    "calidad": 4,
-   "estado": "por_revisar",
+   "estado": "aprobada",
    "uso": "",
-   "archivo": "tematicos/por-clasificar/36fbfedd9b.png",
+   "archivo": "tematicos/decimales/36fbfedd9b.png",
    "categoria": "tematicos",
-   "subcategoria": "por-clasificar"
+   "subcategoria": "decimales"
   },
   {
    "id": "img-252cac139a",
@@ -8683,9 +8892,11 @@
    ],
    "veces_usada": 4,
    "tags": [
-    "aritmetica",
     "5°",
-    "tema"
+    "aritmetica",
+    "banner",
+    "tema",
+    "titulo"
    ],
    "area": "aritmetica",
    "grado": 5,
@@ -8696,11 +8907,11 @@
    "tiene_texto": false,
    "texto": "",
    "calidad": 4,
-   "estado": "por_revisar",
+   "estado": "aprobada",
    "uso": "",
-   "archivo": "tematicos/por-clasificar/fe2048d0d8.png",
-   "categoria": "tematicos",
-   "subcategoria": "por-clasificar"
+   "archivo": "interfaz/banners/fe2048d0d8.png",
+   "categoria": "interfaz",
+   "subcategoria": "banners"
   },
   {
    "id": "img-c5a78d65bc",
@@ -8710,8 +8921,8 @@
    ],
    "veces_usada": 1,
    "tags": [
-    "aritmetica",
     "5°",
+    "aritmetica",
     "tema"
    ],
    "area": "aritmetica",
@@ -8723,11 +8934,11 @@
    "tiene_texto": false,
    "texto": "",
    "calidad": 5,
-   "estado": "por_revisar",
+   "estado": "especifica",
    "uso": "",
-   "archivo": "tematicos/por-clasificar/c5a78d65bc.png",
-   "categoria": "tematicos",
-   "subcategoria": "por-clasificar"
+   "archivo": "_especificas/aritmetica4/c5a78d65bc.png",
+   "categoria": "_especificas",
+   "subcategoria": "aritmetica4"
   },
   {
    "id": "img-487d8f59c0",
@@ -8799,9 +9010,12 @@
    ],
    "veces_usada": 4,
    "tags": [
-    "aritmetica",
     "5°",
-    "tema"
+    "aritmetica",
+    "dinero",
+    "precios",
+    "tema",
+    "tienda"
    ],
    "area": "aritmetica",
    "grado": 5,
@@ -8812,11 +9026,11 @@
    "tiene_texto": false,
    "texto": "",
    "calidad": 4,
-   "estado": "por_revisar",
+   "estado": "aprobada",
    "uso": "",
-   "archivo": "tematicos/por-clasificar/f60fcd2455.jpg",
+   "archivo": "tematicos/dinero/f60fcd2455.jpg",
    "categoria": "tematicos",
-   "subcategoria": "por-clasificar"
+   "subcategoria": "dinero"
   },
   {
    "id": "img-963207c141",
@@ -8826,8 +9040,8 @@
    ],
    "veces_usada": 1,
    "tags": [
-    "aritmetica",
     "5°",
+    "aritmetica",
     "personaje",
     "sprite"
    ],
@@ -8840,7 +9054,7 @@
    "tiene_texto": false,
    "texto": "",
    "calidad": 4,
-   "estado": "por_revisar",
+   "estado": "aprobada",
    "uso": "",
    "archivo": "personajes/npc/963207c141.webp",
    "categoria": "personajes",
@@ -8854,9 +9068,12 @@
    ],
    "veces_usada": 1,
    "tags": [
-    "aritmetica",
     "5°",
-    "tema"
+    "aritmetica",
+    "dinero",
+    "precios",
+    "tema",
+    "tienda"
    ],
    "area": "aritmetica",
    "grado": 5,
@@ -8867,11 +9084,11 @@
    "tiene_texto": false,
    "texto": "",
    "calidad": 5,
-   "estado": "por_revisar",
+   "estado": "aprobada",
    "uso": "",
-   "archivo": "tematicos/por-clasificar/0550365a60.webp",
+   "archivo": "tematicos/dinero/0550365a60.webp",
    "categoria": "tematicos",
-   "subcategoria": "por-clasificar"
+   "subcategoria": "dinero"
   },
   {
    "id": "img-8fbaeb4b4b",
@@ -8881,9 +9098,12 @@
    ],
    "veces_usada": 1,
    "tags": [
-    "aritmetica",
     "5°",
-    "tema"
+    "aritmetica",
+    "dinero",
+    "precios",
+    "tema",
+    "tienda"
    ],
    "area": "aritmetica",
    "grado": 5,
@@ -8894,11 +9114,11 @@
    "tiene_texto": false,
    "texto": "",
    "calidad": 4,
-   "estado": "por_revisar",
+   "estado": "aprobada",
    "uso": "",
-   "archivo": "tematicos/por-clasificar/8fbaeb4b4b.webp",
+   "archivo": "tematicos/dinero/8fbaeb4b4b.webp",
    "categoria": "tematicos",
-   "subcategoria": "por-clasificar"
+   "subcategoria": "dinero"
   },
   {
    "id": "img-922719d345",
@@ -8908,8 +9128,8 @@
    ],
    "veces_usada": 1,
    "tags": [
-    "aritmetica",
     "5°",
+    "aritmetica",
     "personaje",
     "sprite"
    ],
@@ -8922,7 +9142,7 @@
    "tiene_texto": false,
    "texto": "",
    "calidad": 4,
-   "estado": "por_revisar",
+   "estado": "aprobada",
    "uso": "",
    "archivo": "personajes/npc/922719d345.webp",
    "categoria": "personajes",
@@ -8936,10 +9156,13 @@
    ],
    "veces_usada": 1,
    "tags": [
-    "aritmetica",
     "5°",
+    "aritmetica",
+    "dinero",
     "personaje",
-    "sprite"
+    "precios",
+    "sprite",
+    "tienda"
    ],
    "area": "aritmetica",
    "grado": 5,
@@ -8950,11 +9173,11 @@
    "tiene_texto": false,
    "texto": "",
    "calidad": 4,
-   "estado": "por_revisar",
+   "estado": "aprobada",
    "uso": "",
-   "archivo": "personajes/npc/6ba5a1f508.webp",
-   "categoria": "personajes",
-   "subcategoria": "npc"
+   "archivo": "tematicos/dinero/6ba5a1f508.webp",
+   "categoria": "tematicos",
+   "subcategoria": "dinero"
   },
   {
    "id": "img-d3669ff3f5",
@@ -8964,8 +9187,11 @@
    ],
    "veces_usada": 1,
    "tags": [
-    "aritmetica",
     "5°",
+    "aritmetica",
+    "dinero",
+    "precios",
+    "tienda",
     "ui"
    ],
    "area": "aritmetica",
@@ -8977,11 +9203,11 @@
    "tiene_texto": false,
    "texto": "",
    "calidad": 5,
-   "estado": "por_revisar",
+   "estado": "aprobada",
    "uso": "",
-   "archivo": "interfaz/barras-y-marcos/d3669ff3f5.webp",
-   "categoria": "interfaz",
-   "subcategoria": "barras-y-marcos"
+   "archivo": "tematicos/dinero/d3669ff3f5.webp",
+   "categoria": "tematicos",
+   "subcategoria": "dinero"
   },
   {
    "id": "img-34b3e02b4b",
@@ -8991,10 +9217,13 @@
    ],
    "veces_usada": 1,
    "tags": [
-    "aritmetica",
     "5°",
+    "aritmetica",
+    "dinero",
     "personaje",
-    "sprite"
+    "precios",
+    "sprite",
+    "tienda"
    ],
    "area": "aritmetica",
    "grado": 5,
@@ -9005,11 +9234,11 @@
    "tiene_texto": false,
    "texto": "",
    "calidad": 4,
-   "estado": "por_revisar",
+   "estado": "aprobada",
    "uso": "",
-   "archivo": "personajes/npc/34b3e02b4b.webp",
-   "categoria": "personajes",
-   "subcategoria": "npc"
+   "archivo": "tematicos/dinero/34b3e02b4b.webp",
+   "categoria": "tematicos",
+   "subcategoria": "dinero"
   },
   {
    "id": "img-b4c51762a3",
@@ -9140,8 +9369,10 @@
    ],
    "veces_usada": 3,
    "tags": [
-    "aritmetica",
     "5°",
+    "aritmetica",
+    "decimales",
+    "numeros",
     "personaje",
     "sprite"
    ],
@@ -9154,11 +9385,11 @@
    "tiene_texto": false,
    "texto": "",
    "calidad": 5,
-   "estado": "por_revisar",
+   "estado": "aprobada",
    "uso": "",
-   "archivo": "personajes/npc/590a4b7a45.png",
-   "categoria": "personajes",
-   "subcategoria": "npc"
+   "archivo": "tematicos/decimales/590a4b7a45.png",
+   "categoria": "tematicos",
+   "subcategoria": "decimales"
   },
   {
    "id": "img-5a0a583d63",
@@ -9230,8 +9461,8 @@
    ],
    "veces_usada": 3,
    "tags": [
-    "aritmetica",
     "5°",
+    "aritmetica",
     "tema"
    ],
    "area": "aritmetica",
@@ -9243,11 +9474,11 @@
    "tiene_texto": false,
    "texto": "",
    "calidad": 5,
-   "estado": "por_revisar",
+   "estado": "especifica",
    "uso": "",
-   "archivo": "tematicos/por-clasificar/2e8e195ca9.png",
-   "categoria": "tematicos",
-   "subcategoria": "por-clasificar"
+   "archivo": "_especificas/aritmetica4/2e8e195ca9.png",
+   "categoria": "_especificas",
+   "subcategoria": "aritmetica4"
   },
   {
    "id": "img-b71d08f8fb",
@@ -9259,9 +9490,12 @@
    ],
    "veces_usada": 3,
    "tags": [
-    "aritmetica",
     "5°",
-    "tema"
+    "aritmetica",
+    "dinero",
+    "precios",
+    "tema",
+    "tienda"
    ],
    "area": "aritmetica",
    "grado": 5,
@@ -9272,11 +9506,11 @@
    "tiene_texto": false,
    "texto": "2,50",
    "calidad": 4,
-   "estado": "por_revisar",
+   "estado": "aprobada",
    "uso": "",
-   "archivo": "tematicos/por-clasificar/b71d08f8fb.png",
+   "archivo": "tematicos/dinero/b71d08f8fb.png",
    "categoria": "tematicos",
-   "subcategoria": "por-clasificar"
+   "subcategoria": "dinero"
   },
   {
    "id": "img-42fe53aa6c",
@@ -9288,9 +9522,12 @@
    ],
    "veces_usada": 3,
    "tags": [
-    "aritmetica",
     "5°",
-    "tema"
+    "aritmetica",
+    "dinero",
+    "precios",
+    "tema",
+    "tienda"
    ],
    "area": "aritmetica",
    "grado": 5,
@@ -9301,11 +9538,11 @@
    "tiene_texto": false,
    "texto": "",
    "calidad": 5,
-   "estado": "por_revisar",
+   "estado": "aprobada",
    "uso": "",
-   "archivo": "tematicos/por-clasificar/42fe53aa6c.png",
+   "archivo": "tematicos/dinero/42fe53aa6c.png",
    "categoria": "tematicos",
-   "subcategoria": "por-clasificar"
+   "subcategoria": "dinero"
   },
   {
    "id": "img-1edd40eb5d",
@@ -9539,8 +9776,8 @@
    ],
    "veces_usada": 1,
    "tags": [
-    "aritmetica",
     "5°",
+    "aritmetica",
     "tema"
    ],
    "area": "aritmetica",
@@ -9552,11 +9789,11 @@
    "tiene_texto": false,
    "texto": "",
    "calidad": 3,
-   "estado": "por_revisar",
+   "estado": "especifica",
    "uso": "",
-   "archivo": "tematicos/por-clasificar/3cf3814f25.webp",
-   "categoria": "tematicos",
-   "subcategoria": "por-clasificar"
+   "archivo": "_especificas/aritmetica4/3cf3814f25.webp",
+   "categoria": "_especificas",
+   "subcategoria": "aritmetica4"
   },
   {
    "id": "img-bea7fbb297",
@@ -9871,9 +10108,11 @@
    ],
    "veces_usada": 1,
    "tags": [
-    "portal",
+    "aria",
+    "icono",
     "juego",
-    "icono"
+    "portal",
+    "pose"
    ],
    "area": "portal",
    "grado": null,
@@ -9883,12 +10122,12 @@
    "transparente": true,
    "tiene_texto": false,
    "texto": "",
-   "calidad": 3,
-   "estado": "por_revisar",
+   "calidad": 4,
+   "estado": "aprobada",
    "uso": "",
-   "archivo": "juego/a42a4d8980.webp",
-   "categoria": "juego",
-   "subcategoria": ""
+   "archivo": "personajes/aria/a42a4d8980.webp",
+   "categoria": "personajes",
+   "subcategoria": "aria"
   },
   {
    "id": "img-33a41a49c7",
@@ -9898,9 +10137,11 @@
    ],
    "veces_usada": 1,
    "tags": [
-    "portal",
+    "aria",
+    "icono",
     "juego",
-    "icono"
+    "portal",
+    "pose"
    ],
    "area": "portal",
    "grado": null,
@@ -9910,12 +10151,12 @@
    "transparente": true,
    "tiene_texto": false,
    "texto": "",
-   "calidad": 3,
-   "estado": "por_revisar",
+   "calidad": 4,
+   "estado": "aprobada",
    "uso": "",
-   "archivo": "juego/33a41a49c7.webp",
-   "categoria": "juego",
-   "subcategoria": ""
+   "archivo": "personajes/aria/33a41a49c7.webp",
+   "categoria": "personajes",
+   "subcategoria": "aria"
   },
   {
    "id": "img-df6acf85a1",
@@ -9925,9 +10166,11 @@
    ],
    "veces_usada": 1,
    "tags": [
-    "portal",
+    "aria",
+    "icono",
     "juego",
-    "icono"
+    "portal",
+    "pose"
    ],
    "area": "portal",
    "grado": null,
@@ -9937,12 +10180,12 @@
    "transparente": true,
    "tiene_texto": false,
    "texto": "",
-   "calidad": 3,
-   "estado": "por_revisar",
+   "calidad": 4,
+   "estado": "aprobada",
    "uso": "",
-   "archivo": "juego/df6acf85a1.webp",
-   "categoria": "juego",
-   "subcategoria": ""
+   "archivo": "personajes/aria/df6acf85a1.webp",
+   "categoria": "personajes",
+   "subcategoria": "aria"
   },
   {
    "id": "img-f2c916e8ec",
@@ -9952,9 +10195,11 @@
    ],
    "veces_usada": 1,
    "tags": [
-    "portal",
+    "aria",
+    "icono",
     "juego",
-    "icono"
+    "portal",
+    "pose"
    ],
    "area": "portal",
    "grado": null,
@@ -9964,12 +10209,12 @@
    "transparente": true,
    "tiene_texto": false,
    "texto": "",
-   "calidad": 3,
-   "estado": "por_revisar",
+   "calidad": 4,
+   "estado": "aprobada",
    "uso": "",
-   "archivo": "juego/f2c916e8ec.webp",
-   "categoria": "juego",
-   "subcategoria": ""
+   "archivo": "personajes/aria/f2c916e8ec.webp",
+   "categoria": "personajes",
+   "subcategoria": "aria"
   },
   {
    "id": "img-17fc266687",
@@ -10066,8 +10311,10 @@
    ],
    "veces_usada": 1,
    "tags": [
-    "portal",
+    "aria",
     "personaje",
+    "portal",
+    "pose",
     "sprite"
    ],
    "area": "portal",
@@ -10078,12 +10325,12 @@
    "transparente": true,
    "tiene_texto": false,
    "texto": "",
-   "calidad": 3,
-   "estado": "por_revisar",
+   "calidad": 4,
+   "estado": "aprobada",
    "uso": "",
-   "archivo": "personajes/npc/d2e1c7590d.webp",
+   "archivo": "personajes/aria/d2e1c7590d.webp",
    "categoria": "personajes",
-   "subcategoria": "npc"
+   "subcategoria": "aria"
   },
   {
    "id": "img-5963c77cbe",
@@ -10093,8 +10340,10 @@
    ],
    "veces_usada": 1,
    "tags": [
-    "portal",
+    "aria",
     "personaje",
+    "portal",
+    "pose",
     "sprite"
    ],
    "area": "portal",
@@ -10105,12 +10354,12 @@
    "transparente": true,
    "tiene_texto": false,
    "texto": "",
-   "calidad": 3,
-   "estado": "por_revisar",
+   "calidad": 4,
+   "estado": "aprobada",
    "uso": "",
-   "archivo": "personajes/npc/5963c77cbe.webp",
+   "archivo": "personajes/aria/5963c77cbe.webp",
    "categoria": "personajes",
-   "subcategoria": "npc"
+   "subcategoria": "aria"
   },
   {
    "id": "img-61a1f180b9",
@@ -10120,9 +10369,11 @@
    ],
    "veces_usada": 1,
    "tags": [
-    "portal",
+    "aria",
+    "icono",
     "juego",
-    "icono"
+    "portal",
+    "pose"
    ],
    "area": "portal",
    "grado": null,
@@ -10132,12 +10383,12 @@
    "transparente": true,
    "tiene_texto": false,
    "texto": "",
-   "calidad": 3,
-   "estado": "por_revisar",
+   "calidad": 4,
+   "estado": "aprobada",
    "uso": "",
-   "archivo": "juego/61a1f180b9.webp",
-   "categoria": "juego",
-   "subcategoria": ""
+   "archivo": "personajes/aria/61a1f180b9.webp",
+   "categoria": "personajes",
+   "subcategoria": "aria"
   },
   {
    "id": "img-323fb37ae1",
@@ -10147,7 +10398,9 @@
    ],
    "veces_usada": 1,
    "tags": [
+    "aria",
     "portal",
+    "pose",
     "tema"
    ],
    "area": "portal",
@@ -10158,12 +10411,12 @@
    "transparente": true,
    "tiene_texto": false,
    "texto": "",
-   "calidad": 3,
-   "estado": "por_revisar",
+   "calidad": 4,
+   "estado": "aprobada",
    "uso": "",
-   "archivo": "tematicos/por-clasificar/323fb37ae1.webp",
-   "categoria": "tematicos",
-   "subcategoria": "por-clasificar"
+   "archivo": "personajes/aria/323fb37ae1.webp",
+   "categoria": "personajes",
+   "subcategoria": "aria"
   },
   {
    "id": "img-545876eca1",
@@ -10173,9 +10426,11 @@
    ],
    "veces_usada": 1,
    "tags": [
-    "portal",
+    "aria",
+    "icono",
     "juego",
-    "icono"
+    "portal",
+    "pose"
    ],
    "area": "portal",
    "grado": null,
@@ -10185,12 +10440,12 @@
    "transparente": true,
    "tiene_texto": false,
    "texto": "",
-   "calidad": 3,
-   "estado": "por_revisar",
+   "calidad": 4,
+   "estado": "aprobada",
    "uso": "",
-   "archivo": "juego/545876eca1.webp",
-   "categoria": "juego",
-   "subcategoria": ""
+   "archivo": "personajes/aria/545876eca1.webp",
+   "categoria": "personajes",
+   "subcategoria": "aria"
   },
   {
    "id": "img-68691abafa",
@@ -10200,9 +10455,11 @@
    ],
    "veces_usada": 1,
    "tags": [
-    "portal",
+    "aria",
+    "icono",
     "juego",
-    "icono"
+    "portal",
+    "pose"
    ],
    "area": "portal",
    "grado": null,
@@ -10212,12 +10469,12 @@
    "transparente": true,
    "tiene_texto": false,
    "texto": "",
-   "calidad": 3,
-   "estado": "por_revisar",
+   "calidad": 4,
+   "estado": "aprobada",
    "uso": "",
-   "archivo": "juego/68691abafa.webp",
-   "categoria": "juego",
-   "subcategoria": ""
+   "archivo": "personajes/aria/68691abafa.webp",
+   "categoria": "personajes",
+   "subcategoria": "aria"
   },
   {
    "id": "img-5d7d7a0b97",
@@ -10539,8 +10796,8 @@
    ],
    "veces_usada": 1,
    "tags": [
-    "portal",
     "personaje",
+    "portal",
     "sprite"
    ],
    "area": "portal",
@@ -10552,11 +10809,13 @@
    "tiene_texto": false,
    "texto": "",
    "calidad": 3,
-   "estado": "por_revisar",
+   "estado": "descartada",
    "uso": "",
-   "archivo": "personajes/npc/061c994200.webp",
-   "categoria": "personajes",
-   "subcategoria": "npc"
+   "archivo": "_descartadas/posible-ip-terceros/061c994200.webp",
+   "categoria": "_descartadas",
+   "subcategoria": "posible-ip-terceros",
+   "nota": "personaje estilo Fortnite",
+   "motivo": "personaje estilo Fortnite"
   },
   {
    "id": "img-db2486a762",
@@ -10566,8 +10825,10 @@
    ],
    "veces_usada": 1,
    "tags": [
-    "portal",
+    "aria",
     "personaje",
+    "portal",
+    "pose",
     "sprite"
    ],
    "area": "portal",
@@ -10578,12 +10839,12 @@
    "transparente": true,
    "tiene_texto": false,
    "texto": "",
-   "calidad": 3,
-   "estado": "por_revisar",
+   "calidad": 4,
+   "estado": "aprobada",
    "uso": "",
-   "archivo": "personajes/npc/db2486a762.webp",
+   "archivo": "personajes/aria/db2486a762.webp",
    "categoria": "personajes",
-   "subcategoria": "npc"
+   "subcategoria": "aria"
   },
   {
    "id": "img-fabed2cb7c",
@@ -10619,8 +10880,8 @@
    ],
    "veces_usada": 1,
    "tags": [
-    "portal",
     "personaje",
+    "portal",
     "sprite"
    ],
    "area": "portal",
@@ -10632,11 +10893,13 @@
    "tiene_texto": false,
    "texto": "",
    "calidad": 3,
-   "estado": "por_revisar",
+   "estado": "descartada",
    "uso": "",
-   "archivo": "personajes/npc/3f08363e74.webp",
-   "categoria": "personajes",
-   "subcategoria": "npc"
+   "archivo": "_descartadas/posible-ip-terceros/3f08363e74.webp",
+   "categoria": "_descartadas",
+   "subcategoria": "posible-ip-terceros",
+   "nota": "personaje estilo Fortnite",
+   "motivo": "personaje estilo Fortnite"
   },
   {
    "id": "img-6355362e04",
@@ -10856,9 +11119,11 @@
    ],
    "veces_usada": 1,
    "tags": [
-    "portal",
+    "bandera-colombia",
+    "colegio",
+    "icono",
     "juego",
-    "icono"
+    "portal"
    ],
    "area": "portal",
    "grado": null,
@@ -10869,11 +11134,11 @@
    "tiene_texto": false,
    "texto": "",
    "calidad": 3,
-   "estado": "por_revisar",
+   "estado": "aprobada",
    "uso": "",
-   "archivo": "juego/0b394c7c48.webp",
-   "categoria": "juego",
-   "subcategoria": ""
+   "archivo": "escenarios/colegio/0b394c7c48.webp",
+   "categoria": "escenarios",
+   "subcategoria": "colegio"
   },
   {
    "id": "img-1b2b6967ab",
@@ -10883,6 +11148,7 @@
    ],
    "veces_usada": 1,
    "tags": [
+    "personaje",
     "portal",
     "tema"
    ],
@@ -10894,12 +11160,12 @@
    "transparente": true,
    "tiene_texto": false,
    "texto": "",
-   "calidad": 3,
-   "estado": "por_revisar",
+   "calidad": 4,
+   "estado": "aprobada",
    "uso": "",
-   "archivo": "tematicos/por-clasificar/1b2b6967ab.webp",
-   "categoria": "tematicos",
-   "subcategoria": "por-clasificar"
+   "archivo": "personajes/npc/1b2b6967ab.webp",
+   "categoria": "personajes",
+   "subcategoria": "npc"
   },
   {
    "id": "img-bde28a06d1",
@@ -10909,6 +11175,7 @@
    ],
    "veces_usada": 1,
    "tags": [
+    "personaje",
     "portal",
     "tema"
    ],
@@ -10920,12 +11187,12 @@
    "transparente": true,
    "tiene_texto": false,
    "texto": "",
-   "calidad": 3,
-   "estado": "por_revisar",
+   "calidad": 4,
+   "estado": "aprobada",
    "uso": "",
-   "archivo": "tematicos/por-clasificar/bde28a06d1.webp",
-   "categoria": "tematicos",
-   "subcategoria": "por-clasificar"
+   "archivo": "personajes/npc/bde28a06d1.webp",
+   "categoria": "personajes",
+   "subcategoria": "npc"
   },
   {
    "id": "img-08a9fa9a5f",
@@ -10993,8 +11260,11 @@
    ],
    "veces_usada": 2,
    "tags": [
-    "tecnologia",
     "4°",
+    "busqueda-web",
+    "internet",
+    "redes",
+    "tecnologia",
     "tema"
    ],
    "area": "tecnologia",
@@ -11005,12 +11275,12 @@
    "transparente": true,
    "tiene_texto": false,
    "texto": "",
-   "calidad": 3,
-   "estado": "por_revisar",
+   "calidad": 4,
+   "estado": "aprobada",
    "uso": "",
-   "archivo": "tematicos/por-clasificar/a140eb8aea.png",
+   "archivo": "tematicos/internet/a140eb8aea.png",
    "categoria": "tematicos",
-   "subcategoria": "por-clasificar"
+   "subcategoria": "internet"
   },
   {
    "id": "img-1fc303406d",
@@ -11021,10 +11291,13 @@
    ],
    "veces_usada": 2,
    "tags": [
-    "tecnologia",
     "4°",
+    "busqueda-web",
+    "icono",
+    "internet",
     "juego",
-    "icono"
+    "redes",
+    "tecnologia"
    ],
    "area": "tecnologia",
    "grado": 4,
@@ -11034,12 +11307,12 @@
    "transparente": true,
    "tiene_texto": false,
    "texto": "non",
-   "calidad": 3,
-   "estado": "por_revisar",
+   "calidad": 4,
+   "estado": "aprobada",
    "uso": "",
-   "archivo": "juego/1fc303406d.png",
-   "categoria": "juego",
-   "subcategoria": ""
+   "archivo": "tematicos/internet/1fc303406d.png",
+   "categoria": "tematicos",
+   "subcategoria": "internet"
   },
   {
    "id": "img-e364ae9ad7",
@@ -11082,10 +11355,13 @@
    ],
    "veces_usada": 2,
    "tags": [
-    "tecnologia",
     "4°",
+    "busqueda-web",
+    "internet",
     "personaje",
-    "sprite"
+    "redes",
+    "sprite",
+    "tecnologia"
    ],
    "area": "tecnologia",
    "grado": 4,
@@ -11096,11 +11372,11 @@
    "tiene_texto": false,
    "texto": "",
    "calidad": 4,
-   "estado": "por_revisar",
+   "estado": "aprobada",
    "uso": "",
-   "archivo": "personajes/npc/1bb9982a45.png",
-   "categoria": "personajes",
-   "subcategoria": "npc"
+   "archivo": "tematicos/internet/1bb9982a45.png",
+   "categoria": "tematicos",
+   "subcategoria": "internet"
   },
   {
    "id": "img-a2f65d034e",
@@ -11111,8 +11387,11 @@
    ],
    "veces_usada": 2,
    "tags": [
-    "tecnologia",
     "4°",
+    "busqueda-web",
+    "internet",
+    "redes",
+    "tecnologia",
     "tema"
    ],
    "area": "tecnologia",
@@ -11123,12 +11402,12 @@
    "transparente": true,
    "tiene_texto": false,
    "texto": "",
-   "calidad": 3,
-   "estado": "por_revisar",
+   "calidad": 4,
+   "estado": "aprobada",
    "uso": "",
-   "archivo": "tematicos/por-clasificar/a2f65d034e.png",
+   "archivo": "tematicos/internet/a2f65d034e.png",
    "categoria": "tematicos",
-   "subcategoria": "por-clasificar"
+   "subcategoria": "internet"
   },
   {
    "id": "img-b62fb7e8f3",
@@ -11139,8 +11418,11 @@
    ],
    "veces_usada": 2,
    "tags": [
-    "tecnologia",
     "4°",
+    "busqueda-web",
+    "internet",
+    "redes",
+    "tecnologia",
     "tema"
    ],
    "area": "tecnologia",
@@ -11151,12 +11433,12 @@
    "transparente": true,
    "tiene_texto": false,
    "texto": "",
-   "calidad": 3,
-   "estado": "por_revisar",
+   "calidad": 4,
+   "estado": "aprobada",
    "uso": "",
-   "archivo": "tematicos/por-clasificar/b62fb7e8f3.png",
+   "archivo": "tematicos/internet/b62fb7e8f3.png",
    "categoria": "tematicos",
-   "subcategoria": "por-clasificar"
+   "subcategoria": "internet"
   },
   {
    "id": "img-cd48f097d2",
@@ -11359,10 +11641,13 @@
    ],
    "veces_usada": 2,
    "tags": [
-    "tecnologia",
     "4°",
     "personaje",
-    "sprite"
+    "privacidad",
+    "seguridad",
+    "sprite",
+    "tecnologia",
+    "virus"
    ],
    "area": "tecnologia",
    "grado": 4,
@@ -11373,11 +11658,11 @@
    "tiene_texto": false,
    "texto": "",
    "calidad": 4,
-   "estado": "por_revisar",
+   "estado": "aprobada",
    "uso": "",
-   "archivo": "personajes/npc/b57d024a54.png",
-   "categoria": "personajes",
-   "subcategoria": "npc"
+   "archivo": "tematicos/seguridad-digital/b57d024a54.png",
+   "categoria": "tematicos",
+   "subcategoria": "seguridad-digital"
   },
   {
    "id": "img-7fe78e06c7",
@@ -11388,9 +11673,12 @@
    ],
    "veces_usada": 2,
    "tags": [
-    "tecnologia",
     "4°",
-    "tema"
+    "privacidad",
+    "seguridad",
+    "tecnologia",
+    "tema",
+    "virus"
    ],
    "area": "tecnologia",
    "grado": 4,
@@ -11401,11 +11689,11 @@
    "tiene_texto": false,
    "texto": "",
    "calidad": 4,
-   "estado": "por_revisar",
+   "estado": "aprobada",
    "uso": "",
-   "archivo": "tematicos/por-clasificar/7fe78e06c7.png",
+   "archivo": "tematicos/seguridad-digital/7fe78e06c7.png",
    "categoria": "tematicos",
-   "subcategoria": "por-clasificar"
+   "subcategoria": "seguridad-digital"
   },
   {
    "id": "img-a190712cce",
@@ -11416,10 +11704,13 @@
    ],
    "veces_usada": 2,
    "tags": [
-    "tecnologia",
     "4°",
+    "busqueda-web",
+    "internet",
     "personaje",
-    "sprite"
+    "redes",
+    "sprite",
+    "tecnologia"
    ],
    "area": "tecnologia",
    "grado": 4,
@@ -11430,11 +11721,11 @@
    "tiene_texto": false,
    "texto": "",
    "calidad": 4,
-   "estado": "por_revisar",
+   "estado": "aprobada",
    "uso": "",
-   "archivo": "personajes/npc/a190712cce.png",
-   "categoria": "personajes",
-   "subcategoria": "npc"
+   "archivo": "tematicos/internet/a190712cce.png",
+   "categoria": "tematicos",
+   "subcategoria": "internet"
   },
   {
    "id": "img-cb1731b409",
@@ -11445,10 +11736,13 @@
    ],
    "veces_usada": 2,
    "tags": [
-    "tecnologia",
     "4°",
     "personaje",
-    "sprite"
+    "privacidad",
+    "seguridad",
+    "sprite",
+    "tecnologia",
+    "virus"
    ],
    "area": "tecnologia",
    "grado": 4,
@@ -11459,11 +11753,11 @@
    "tiene_texto": false,
    "texto": "",
    "calidad": 4,
-   "estado": "por_revisar",
+   "estado": "aprobada",
    "uso": "",
-   "archivo": "personajes/npc/cb1731b409.png",
-   "categoria": "personajes",
-   "subcategoria": "npc"
+   "archivo": "tematicos/seguridad-digital/cb1731b409.png",
+   "categoria": "tematicos",
+   "subcategoria": "seguridad-digital"
   },
   {
    "id": "img-9db3515ffb",
@@ -11474,8 +11768,10 @@
    ],
    "veces_usada": 2,
    "tags": [
-    "tecnologia",
     "4°",
+    "ciudad",
+    "digital",
+    "tecnologia",
     "tema"
    ],
    "area": "tecnologia",
@@ -11487,11 +11783,11 @@
    "tiene_texto": false,
    "texto": "",
    "calidad": 5,
-   "estado": "por_revisar",
+   "estado": "aprobada",
    "uso": "",
-   "archivo": "tematicos/por-clasificar/9db3515ffb.png",
-   "categoria": "tematicos",
-   "subcategoria": "por-clasificar"
+   "archivo": "escenarios/ciudad-digital/9db3515ffb.png",
+   "categoria": "escenarios",
+   "subcategoria": "ciudad-digital"
   },
   {
    "id": "img-956e498b9a",
@@ -11502,10 +11798,12 @@
    ],
    "veces_usada": 2,
    "tags": [
-    "tecnologia",
     "4°",
+    "logro",
     "personaje",
-    "sprite"
+    "sprite",
+    "tecnologia",
+    "trofeo"
    ],
    "area": "tecnologia",
    "grado": 4,
@@ -11516,11 +11814,11 @@
    "tiene_texto": false,
    "texto": "",
    "calidad": 4,
-   "estado": "por_revisar",
+   "estado": "aprobada",
    "uso": "",
-   "archivo": "personajes/npc/956e498b9a.png",
-   "categoria": "personajes",
-   "subcategoria": "npc"
+   "archivo": "premios/956e498b9a.png",
+   "categoria": "premios",
+   "subcategoria": ""
   },
   {
    "id": "img-70e8249162",
@@ -11531,10 +11829,12 @@
    ],
    "veces_usada": 2,
    "tags": [
-    "tecnologia",
     "4°",
+    "aria",
     "personaje",
-    "sprite"
+    "pose",
+    "sprite",
+    "tecnologia"
    ],
    "area": "tecnologia",
    "grado": 4,
@@ -11545,11 +11845,11 @@
    "tiene_texto": false,
    "texto": "",
    "calidad": 4,
-   "estado": "por_revisar",
+   "estado": "aprobada",
    "uso": "",
-   "archivo": "personajes/npc/70e8249162.png",
+   "archivo": "personajes/aria/70e8249162.png",
    "categoria": "personajes",
-   "subcategoria": "npc"
+   "subcategoria": "aria"
   },
   {
    "id": "img-4401d4760a",
@@ -11955,10 +12255,13 @@
    ],
    "veces_usada": 1,
    "tags": [
-    "tecnologia",
     "4°",
+    "escenario",
     "fondo",
-    "escenario"
+    "privacidad",
+    "seguridad",
+    "tecnologia",
+    "virus"
    ],
    "area": "tecnologia",
    "grado": 4,
@@ -11969,11 +12272,11 @@
    "tiene_texto": false,
    "texto": "",
    "calidad": 5,
-   "estado": "por_revisar",
+   "estado": "aprobada",
    "uso": "",
-   "archivo": "escenarios/d72d0443ae.jpg",
-   "categoria": "escenarios",
-   "subcategoria": ""
+   "archivo": "tematicos/seguridad-digital/d72d0443ae.jpg",
+   "categoria": "tematicos",
+   "subcategoria": "seguridad-digital"
   },
   {
    "id": "img-cc631ebd85",
@@ -12011,10 +12314,13 @@
    ],
    "veces_usada": 1,
    "tags": [
-    "tecnologia",
     "4°",
+    "escenario",
     "fondo",
-    "escenario"
+    "privacidad",
+    "seguridad",
+    "tecnologia",
+    "virus"
    ],
    "area": "tecnologia",
    "grado": 4,
@@ -12025,11 +12331,11 @@
    "tiene_texto": false,
    "texto": "",
    "calidad": 5,
-   "estado": "por_revisar",
+   "estado": "aprobada",
    "uso": "",
-   "archivo": "escenarios/1eedb92639.jpg",
-   "categoria": "escenarios",
-   "subcategoria": ""
+   "archivo": "tematicos/seguridad-digital/1eedb92639.jpg",
+   "categoria": "tematicos",
+   "subcategoria": "seguridad-digital"
   },
   {
    "id": "img-39c724df66",
@@ -12097,10 +12403,10 @@
    ],
    "veces_usada": 1,
    "tags": [
-    "tecnologia",
     "4°",
+    "escenario",
     "fondo",
-    "escenario"
+    "tecnologia"
    ],
    "area": "tecnologia",
    "grado": 4,
@@ -12111,11 +12417,13 @@
    "tiene_texto": false,
    "texto": "",
    "calidad": 5,
-   "estado": "por_revisar",
+   "estado": "descartada",
    "uso": "",
-   "archivo": "escenarios/7587fc5d87.png",
-   "categoria": "escenarios",
-   "subcategoria": ""
+   "archivo": "_descartadas/posible-ip-terceros/7587fc5d87.png",
+   "categoria": "_descartadas",
+   "subcategoria": "posible-ip-terceros",
+   "nota": "logo Microsoft Word",
+   "motivo": "logo Microsoft Word"
   },
   {
    "id": "img-3456576d85",
@@ -12265,8 +12573,9 @@
    ],
    "veces_usada": 1,
    "tags": [
-    "tecnologia",
     "4°",
+    "personaje",
+    "tecnologia",
     "tema"
    ],
    "area": "tecnologia",
@@ -12278,11 +12587,11 @@
    "tiene_texto": false,
    "texto": "",
    "calidad": 4,
-   "estado": "por_revisar",
+   "estado": "aprobada",
    "uso": "",
-   "archivo": "tematicos/por-clasificar/b3dcbd82e0.png",
-   "categoria": "tematicos",
-   "subcategoria": "por-clasificar"
+   "archivo": "personajes/npc/b3dcbd82e0.png",
+   "categoria": "personajes",
+   "subcategoria": "npc"
   },
   {
    "id": "img-5802a580ea",
@@ -12572,10 +12881,13 @@
    ],
    "veces_usada": 1,
    "tags": [
-    "tecnologia",
     "4°",
+    "celda",
+    "fila",
     "personaje",
-    "sprite"
+    "sprite",
+    "tabla",
+    "tecnologia"
    ],
    "area": "tecnologia",
    "grado": 4,
@@ -12586,11 +12898,11 @@
    "tiene_texto": false,
    "texto": "",
    "calidad": 4,
-   "estado": "por_revisar",
+   "estado": "aprobada",
    "uso": "",
-   "archivo": "personajes/npc/8152594b75.png",
-   "categoria": "personajes",
-   "subcategoria": "npc"
+   "archivo": "infografias/8152594b75.png",
+   "categoria": "infografias",
+   "subcategoria": ""
   },
   {
    "id": "img-65a517e142",
@@ -12740,10 +13052,11 @@
    ],
    "veces_usada": 1,
    "tags": [
-    "tecnologia",
     "4°",
+    "icono",
     "juego",
-    "icono"
+    "personaje",
+    "tecnologia"
    ],
    "area": "tecnologia",
    "grado": 4,
@@ -12753,12 +13066,12 @@
    "transparente": true,
    "tiene_texto": false,
    "texto": "",
-   "calidad": 3,
-   "estado": "por_revisar",
+   "calidad": 4,
+   "estado": "aprobada",
    "uso": "",
-   "archivo": "juego/50085c2524.png",
-   "categoria": "juego",
-   "subcategoria": ""
+   "archivo": "personajes/npc/50085c2524.png",
+   "categoria": "personajes",
+   "subcategoria": "npc"
   },
   {
    "id": "img-ffb7c94607",
@@ -12880,9 +13193,12 @@
    ],
    "veces_usada": 1,
    "tags": [
-    "tecnologia",
     "4°",
-    "tema"
+    "privacidad",
+    "seguridad",
+    "tecnologia",
+    "tema",
+    "virus"
    ],
    "area": "tecnologia",
    "grado": 4,
@@ -12893,11 +13209,11 @@
    "tiene_texto": false,
    "texto": "",
    "calidad": 5,
-   "estado": "por_revisar",
+   "estado": "aprobada",
    "uso": "",
-   "archivo": "tematicos/por-clasificar/14cb23e10e.png",
+   "archivo": "tematicos/seguridad-digital/14cb23e10e.png",
    "categoria": "tematicos",
-   "subcategoria": "por-clasificar"
+   "subcategoria": "seguridad-digital"
   },
   {
    "id": "img-184b98b8f7",
@@ -12935,8 +13251,8 @@
    ],
    "veces_usada": 1,
    "tags": [
-    "tecnologia",
     "4°",
+    "tecnologia",
     "tema"
    ],
    "area": "tecnologia",
@@ -12948,11 +13264,11 @@
    "tiene_texto": false,
    "texto": "",
    "calidad": 4,
-   "estado": "por_revisar",
+   "estado": "especifica",
    "uso": "",
-   "archivo": "tematicos/por-clasificar/f41eb6d0a8.png",
-   "categoria": "tematicos",
-   "subcategoria": "por-clasificar"
+   "archivo": "_especificas/tecnologia5/f41eb6d0a8.png",
+   "categoria": "_especificas",
+   "subcategoria": "tecnologia5"
   },
   {
    "id": "img-57404319ca",
@@ -12990,10 +13306,10 @@
    ],
    "veces_usada": 1,
    "tags": [
-    "tecnologia",
     "5°",
+    "escenario",
     "fondo",
-    "escenario"
+    "tecnologia"
    ],
    "area": "tecnologia",
    "grado": 5,
@@ -13004,11 +13320,11 @@
    "tiene_texto": false,
    "texto": "",
    "calidad": 5,
-   "estado": "por_revisar",
+   "estado": "especifica",
    "uso": "",
-   "archivo": "escenarios/d6885143a3.webp",
-   "categoria": "escenarios",
-   "subcategoria": ""
+   "archivo": "_especificas/tecnologia5/d6885143a3.webp",
+   "categoria": "_especificas",
+   "subcategoria": "tecnologia5"
   },
   {
    "id": "img-9bcc8dc84e",
@@ -13029,17 +13345,18 @@
    "area": "tecnologia",
    "grado": 5,
    "semana": 2,
-   "archivo": "juego/svg-9bcc8dc84e.svg",
-   "categoria": "juego",
-   "subcategoria": "",
+   "archivo": "_especificas/tecnologia5/svg-9bcc8dc84e.svg",
+   "categoria": "_especificas",
+   "subcategoria": "tecnologia5",
    "ancho": null,
    "alto": null,
    "transparente": true,
-   "tiene_texto": false,
+   "tiene_texto": true,
    "texto": "",
-   "estado": "por_revisar",
+   "estado": "especifica",
    "calidad": 3,
-   "uso": "SVG extraído de clase"
+   "uso": "SVG extraído de clase",
+   "nota": "tarjeta de título con texto (emoji dependen de la fuente del navegador)"
   },
   {
    "id": "img-5d0ef830a9",
@@ -13115,17 +13432,18 @@
    "area": "tecnologia",
    "grado": 5,
    "semana": 2,
-   "archivo": "juego/svg-82496a7165.svg",
-   "categoria": "juego",
-   "subcategoria": "",
+   "archivo": "_especificas/tecnologia5/svg-82496a7165.svg",
+   "categoria": "_especificas",
+   "subcategoria": "tecnologia5",
    "ancho": null,
    "alto": null,
    "transparente": true,
-   "tiene_texto": false,
+   "tiene_texto": true,
    "texto": "",
-   "estado": "por_revisar",
+   "estado": "especifica",
    "calidad": 3,
-   "uso": "SVG extraído de clase"
+   "uso": "SVG extraído de clase",
+   "nota": "tarjeta de título con texto (emoji dependen de la fuente del navegador)"
   },
   {
    "id": "img-27b4c360cb",
@@ -13145,17 +13463,18 @@
    "area": "tecnologia",
    "grado": 5,
    "semana": 2,
-   "archivo": "juego/svg-27b4c360cb.svg",
-   "categoria": "juego",
-   "subcategoria": "",
+   "archivo": "_especificas/tecnologia5/svg-27b4c360cb.svg",
+   "categoria": "_especificas",
+   "subcategoria": "tecnologia5",
    "ancho": null,
    "alto": null,
    "transparente": true,
-   "tiene_texto": false,
+   "tiene_texto": true,
    "texto": "",
-   "estado": "por_revisar",
+   "estado": "especifica",
    "calidad": 3,
-   "uso": "SVG extraído de clase"
+   "uso": "SVG extraído de clase",
+   "nota": "tarjeta de título con texto (emoji dependen de la fuente del navegador)"
   },
   {
    "id": "img-5bcd0fba6c",
@@ -13175,17 +13494,18 @@
    "area": "tecnologia",
    "grado": 5,
    "semana": 2,
-   "archivo": "juego/svg-5bcd0fba6c.svg",
-   "categoria": "juego",
-   "subcategoria": "",
+   "archivo": "_especificas/tecnologia5/svg-5bcd0fba6c.svg",
+   "categoria": "_especificas",
+   "subcategoria": "tecnologia5",
    "ancho": null,
    "alto": null,
    "transparente": true,
-   "tiene_texto": false,
+   "tiene_texto": true,
    "texto": "",
-   "estado": "por_revisar",
+   "estado": "especifica",
    "calidad": 3,
-   "uso": "SVG extraído de clase"
+   "uso": "SVG extraído de clase",
+   "nota": "tarjeta de título con texto (emoji dependen de la fuente del navegador)"
   },
   {
    "id": "img-4eff769e7f",
@@ -13234,17 +13554,18 @@
    "area": "tecnologia",
    "grado": 5,
    "semana": 2,
-   "archivo": "juego/svg-93f7764732.svg",
-   "categoria": "juego",
-   "subcategoria": "",
+   "archivo": "_especificas/tecnologia5/svg-93f7764732.svg",
+   "categoria": "_especificas",
+   "subcategoria": "tecnologia5",
    "ancho": null,
    "alto": null,
    "transparente": true,
-   "tiene_texto": false,
+   "tiene_texto": true,
    "texto": "",
-   "estado": "por_revisar",
+   "estado": "especifica",
    "calidad": 3,
-   "uso": "SVG extraído de clase"
+   "uso": "SVG extraído de clase",
+   "nota": "tarjeta de título con texto (emoji dependen de la fuente del navegador)"
   },
   {
    "id": "img-cf10c09456",
@@ -13265,17 +13586,18 @@
    "area": "tecnologia",
    "grado": 5,
    "semana": 2,
-   "archivo": "juego/svg-cf10c09456.svg",
-   "categoria": "juego",
-   "subcategoria": "",
+   "archivo": "_especificas/tecnologia5/svg-cf10c09456.svg",
+   "categoria": "_especificas",
+   "subcategoria": "tecnologia5",
    "ancho": null,
    "alto": null,
    "transparente": true,
-   "tiene_texto": false,
+   "tiene_texto": true,
    "texto": "",
-   "estado": "por_revisar",
+   "estado": "especifica",
    "calidad": 3,
-   "uso": "SVG extraído de clase"
+   "uso": "SVG extraído de clase",
+   "nota": "tarjeta de título con texto (emoji dependen de la fuente del navegador)"
   },
   {
    "id": "img-f7dfbe9ba6",
@@ -13295,17 +13617,18 @@
    "area": "tecnologia",
    "grado": 5,
    "semana": 2,
-   "archivo": "juego/svg-f7dfbe9ba6.svg",
-   "categoria": "juego",
-   "subcategoria": "",
+   "archivo": "_especificas/tecnologia5/svg-f7dfbe9ba6.svg",
+   "categoria": "_especificas",
+   "subcategoria": "tecnologia5",
    "ancho": null,
    "alto": null,
    "transparente": true,
-   "tiene_texto": false,
+   "tiene_texto": true,
    "texto": "",
-   "estado": "por_revisar",
+   "estado": "especifica",
    "calidad": 3,
-   "uso": "SVG extraído de clase"
+   "uso": "SVG extraído de clase",
+   "nota": "tarjeta de título con texto (emoji dependen de la fuente del navegador)"
   },
   {
    "id": "img-a6f92bda85",
@@ -13315,8 +13638,11 @@
    ],
    "veces_usada": 1,
    "tags": [
-    "tecnologia",
     "5°",
+    "busqueda-web",
+    "internet",
+    "redes",
+    "tecnologia",
     "tema"
    ],
    "area": "tecnologia",
@@ -13328,11 +13654,11 @@
    "tiene_texto": false,
    "texto": "",
    "calidad": 4,
-   "estado": "por_revisar",
+   "estado": "aprobada",
    "uso": "",
-   "archivo": "tematicos/por-clasificar/a6f92bda85.jpg",
+   "archivo": "tematicos/internet/a6f92bda85.jpg",
    "categoria": "tematicos",
-   "subcategoria": "por-clasificar"
+   "subcategoria": "internet"
   },
   {
    "id": "img-d8f2a2480e",
@@ -13342,8 +13668,11 @@
    ],
    "veces_usada": 1,
    "tags": [
-    "tecnologia",
     "5°",
+    "busqueda-web",
+    "internet",
+    "redes",
+    "tecnologia",
     "tema"
    ],
    "area": "tecnologia",
@@ -13355,11 +13684,11 @@
    "tiene_texto": false,
    "texto": "",
    "calidad": 5,
-   "estado": "por_revisar",
+   "estado": "aprobada",
    "uso": "",
-   "archivo": "tematicos/por-clasificar/d8f2a2480e.jpg",
+   "archivo": "tematicos/internet/d8f2a2480e.jpg",
    "categoria": "tematicos",
-   "subcategoria": "por-clasificar"
+   "subcategoria": "internet"
   },
   {
    "id": "img-6d90e2b49c",
@@ -13379,17 +13708,18 @@
    "area": "tecnologia",
    "grado": 5,
    "semana": 2,
-   "archivo": "juego/svg-6d90e2b49c.svg",
-   "categoria": "juego",
-   "subcategoria": "",
+   "archivo": "_especificas/tecnologia5/svg-6d90e2b49c.svg",
+   "categoria": "_especificas",
+   "subcategoria": "tecnologia5",
    "ancho": null,
    "alto": null,
    "transparente": true,
-   "tiene_texto": false,
+   "tiene_texto": true,
    "texto": "",
-   "estado": "por_revisar",
+   "estado": "especifica",
    "calidad": 3,
-   "uso": "SVG extraído de clase"
+   "uso": "SVG extraído de clase",
+   "nota": "tarjeta de título con texto (emoji dependen de la fuente del navegador)"
   },
   {
    "id": "img-0518ba7dd3",
@@ -13455,10 +13785,10 @@
    ],
    "veces_usada": 1,
    "tags": [
-    "tecnologia",
     "5°",
     "personaje",
-    "sprite"
+    "sprite",
+    "tecnologia"
    ],
    "area": "tecnologia",
    "grado": 5,
@@ -13468,8 +13798,8 @@
    "transparente": true,
    "tiene_texto": false,
    "texto": "",
-   "calidad": 3,
-   "estado": "por_revisar",
+   "calidad": 4,
+   "estado": "aprobada",
    "uso": "",
    "archivo": "personajes/npc/311d1969a7.png",
    "categoria": "personajes",
@@ -13483,10 +13813,11 @@
    ],
    "veces_usada": 1,
    "tags": [
-    "tecnologia",
     "5°",
+    "icono",
     "juego",
-    "icono"
+    "personaje",
+    "tecnologia"
    ],
    "area": "tecnologia",
    "grado": 5,
@@ -13496,12 +13827,12 @@
    "transparente": true,
    "tiene_texto": false,
    "texto": "",
-   "calidad": 3,
-   "estado": "por_revisar",
+   "calidad": 4,
+   "estado": "aprobada",
    "uso": "",
-   "archivo": "juego/560b5dfa13.png",
-   "categoria": "juego",
-   "subcategoria": ""
+   "archivo": "personajes/npc/560b5dfa13.png",
+   "categoria": "personajes",
+   "subcategoria": "npc"
   },
   {
    "id": "img-6af8e28159",
@@ -13511,10 +13842,11 @@
    ],
    "veces_usada": 1,
    "tags": [
-    "tecnologia",
     "5°",
+    "icono",
     "juego",
-    "icono"
+    "personaje",
+    "tecnologia"
    ],
    "area": "tecnologia",
    "grado": 5,
@@ -13524,12 +13856,12 @@
    "transparente": true,
    "tiene_texto": false,
    "texto": "",
-   "calidad": 3,
-   "estado": "por_revisar",
+   "calidad": 4,
+   "estado": "aprobada",
    "uso": "",
-   "archivo": "juego/6af8e28159.png",
-   "categoria": "juego",
-   "subcategoria": ""
+   "archivo": "personajes/npc/6af8e28159.png",
+   "categoria": "personajes",
+   "subcategoria": "npc"
   },
   {
    "id": "img-60e577a1df",
@@ -13539,10 +13871,10 @@
    ],
    "veces_usada": 1,
    "tags": [
-    "tecnologia",
     "5°",
     "personaje",
-    "sprite"
+    "sprite",
+    "tecnologia"
    ],
    "area": "tecnologia",
    "grado": 5,
@@ -13553,11 +13885,11 @@
    "tiene_texto": false,
    "texto": "",
    "calidad": 4,
-   "estado": "por_revisar",
+   "estado": "especifica",
    "uso": "",
-   "archivo": "personajes/npc/60e577a1df.png",
-   "categoria": "personajes",
-   "subcategoria": "npc"
+   "archivo": "_especificas/tecnologia5/60e577a1df.png",
+   "categoria": "_especificas",
+   "subcategoria": "tecnologia5"
   },
   {
    "id": "img-c71b153458",
@@ -13595,10 +13927,11 @@
    ],
    "veces_usada": 1,
    "tags": [
-    "tecnologia",
     "5°",
+    "boton",
+    "icono",
     "juego",
-    "icono"
+    "tecnologia"
    ],
    "area": "tecnologia",
    "grado": 5,
@@ -13608,12 +13941,13 @@
    "transparente": true,
    "tiene_texto": false,
    "texto": "",
-   "calidad": 3,
-   "estado": "por_revisar",
+   "calidad": 4,
+   "estado": "aprobada",
    "uso": "",
-   "archivo": "juego/7b5caf16e1.png",
-   "categoria": "juego",
-   "subcategoria": ""
+   "archivo": "interfaz/botones/7b5caf16e1.png",
+   "categoria": "interfaz",
+   "subcategoria": "botones",
+   "nota": "texto genérico de interfaz"
   },
   {
    "id": "img-63f2a91361",
@@ -13632,17 +13966,18 @@
    "area": "tecnologia",
    "grado": 5,
    "semana": 3,
-   "archivo": "juego/svg-63f2a91361.svg",
-   "categoria": "juego",
-   "subcategoria": "",
+   "archivo": "_especificas/tecnologia5/svg-63f2a91361.svg",
+   "categoria": "_especificas",
+   "subcategoria": "tecnologia5",
    "ancho": null,
    "alto": null,
    "transparente": true,
-   "tiene_texto": false,
+   "tiene_texto": true,
    "texto": "",
-   "estado": "por_revisar",
+   "estado": "especifica",
    "calidad": 3,
-   "uso": "SVG extraído de clase"
+   "uso": "SVG extraído de clase",
+   "nota": "tarjeta de título con texto (emoji dependen de la fuente del navegador)"
   },
   {
    "id": "img-53d2649509",
@@ -13661,17 +13996,18 @@
    "area": "tecnologia",
    "grado": 5,
    "semana": 3,
-   "archivo": "juego/svg-53d2649509.svg",
-   "categoria": "juego",
-   "subcategoria": "",
+   "archivo": "_especificas/tecnologia5/svg-53d2649509.svg",
+   "categoria": "_especificas",
+   "subcategoria": "tecnologia5",
    "ancho": null,
    "alto": null,
    "transparente": true,
-   "tiene_texto": false,
+   "tiene_texto": true,
    "texto": "",
-   "estado": "por_revisar",
+   "estado": "especifica",
    "calidad": 3,
-   "uso": "SVG extraído de clase"
+   "uso": "SVG extraído de clase",
+   "nota": "tarjeta de título con texto (emoji dependen de la fuente del navegador)"
   },
   {
    "id": "img-dd78d77806",
@@ -13690,17 +14026,18 @@
    "area": "tecnologia",
    "grado": 5,
    "semana": 3,
-   "archivo": "juego/svg-dd78d77806.svg",
-   "categoria": "juego",
-   "subcategoria": "",
+   "archivo": "_especificas/tecnologia5/svg-dd78d77806.svg",
+   "categoria": "_especificas",
+   "subcategoria": "tecnologia5",
    "ancho": null,
    "alto": null,
    "transparente": true,
-   "tiene_texto": false,
+   "tiene_texto": true,
    "texto": "",
-   "estado": "por_revisar",
+   "estado": "especifica",
    "calidad": 3,
-   "uso": "SVG extraído de clase"
+   "uso": "SVG extraído de clase",
+   "nota": "tarjeta de título con texto (emoji dependen de la fuente del navegador)"
   },
   {
    "id": "img-013b93bd3e",
@@ -13719,17 +14056,18 @@
    "area": "tecnologia",
    "grado": 5,
    "semana": 3,
-   "archivo": "juego/svg-013b93bd3e.svg",
-   "categoria": "juego",
-   "subcategoria": "",
+   "archivo": "_especificas/tecnologia5/svg-013b93bd3e.svg",
+   "categoria": "_especificas",
+   "subcategoria": "tecnologia5",
    "ancho": null,
    "alto": null,
    "transparente": true,
-   "tiene_texto": false,
+   "tiene_texto": true,
    "texto": "",
-   "estado": "por_revisar",
+   "estado": "especifica",
    "calidad": 3,
-   "uso": "SVG extraído de clase"
+   "uso": "SVG extraído de clase",
+   "nota": "tarjeta de título con texto (emoji dependen de la fuente del navegador)"
   },
   {
    "id": "img-59df210e32",
@@ -13748,17 +14086,18 @@
    "area": "tecnologia",
    "grado": 5,
    "semana": 3,
-   "archivo": "juego/svg-59df210e32.svg",
-   "categoria": "juego",
-   "subcategoria": "",
+   "archivo": "_especificas/tecnologia5/svg-59df210e32.svg",
+   "categoria": "_especificas",
+   "subcategoria": "tecnologia5",
    "ancho": null,
    "alto": null,
    "transparente": true,
-   "tiene_texto": false,
+   "tiene_texto": true,
    "texto": "",
-   "estado": "por_revisar",
+   "estado": "especifica",
    "calidad": 3,
-   "uso": "SVG extraído de clase"
+   "uso": "SVG extraído de clase",
+   "nota": "tarjeta de título con texto (emoji dependen de la fuente del navegador)"
   },
   {
    "id": "img-514e8d9679",
@@ -13777,17 +14116,18 @@
    "area": "tecnologia",
    "grado": 5,
    "semana": 3,
-   "archivo": "juego/svg-514e8d9679.svg",
-   "categoria": "juego",
-   "subcategoria": "",
+   "archivo": "_especificas/tecnologia5/svg-514e8d9679.svg",
+   "categoria": "_especificas",
+   "subcategoria": "tecnologia5",
    "ancho": null,
    "alto": null,
    "transparente": true,
-   "tiene_texto": false,
+   "tiene_texto": true,
    "texto": "",
-   "estado": "por_revisar",
+   "estado": "especifica",
    "calidad": 3,
-   "uso": "SVG extraído de clase"
+   "uso": "SVG extraído de clase",
+   "nota": "tarjeta de título con texto (emoji dependen de la fuente del navegador)"
   },
   {
    "id": "img-18effd436a",
@@ -13806,17 +14146,18 @@
    "area": "tecnologia",
    "grado": 5,
    "semana": 3,
-   "archivo": "juego/svg-18effd436a.svg",
-   "categoria": "juego",
-   "subcategoria": "",
+   "archivo": "_especificas/tecnologia5/svg-18effd436a.svg",
+   "categoria": "_especificas",
+   "subcategoria": "tecnologia5",
    "ancho": null,
    "alto": null,
    "transparente": true,
-   "tiene_texto": false,
+   "tiene_texto": true,
    "texto": "",
-   "estado": "por_revisar",
+   "estado": "especifica",
    "calidad": 3,
-   "uso": "SVG extraído de clase"
+   "uso": "SVG extraído de clase",
+   "nota": "tarjeta de título con texto (emoji dependen de la fuente del navegador)"
   },
   {
    "id": "img-12fb28bed4",
@@ -13835,17 +14176,18 @@
    "area": "tecnologia",
    "grado": 5,
    "semana": 3,
-   "archivo": "juego/svg-12fb28bed4.svg",
-   "categoria": "juego",
-   "subcategoria": "",
+   "archivo": "_especificas/tecnologia5/svg-12fb28bed4.svg",
+   "categoria": "_especificas",
+   "subcategoria": "tecnologia5",
    "ancho": null,
    "alto": null,
    "transparente": true,
-   "tiene_texto": false,
+   "tiene_texto": true,
    "texto": "",
-   "estado": "por_revisar",
+   "estado": "especifica",
    "calidad": 3,
-   "uso": "SVG extraído de clase"
+   "uso": "SVG extraído de clase",
+   "nota": "tarjeta de título con texto (emoji dependen de la fuente del navegador)"
   },
   {
    "id": "img-5e2e7ea1ff",
@@ -13864,17 +14206,18 @@
    "area": "tecnologia",
    "grado": 5,
    "semana": 3,
-   "archivo": "juego/svg-5e2e7ea1ff.svg",
-   "categoria": "juego",
-   "subcategoria": "",
+   "archivo": "_especificas/tecnologia5/svg-5e2e7ea1ff.svg",
+   "categoria": "_especificas",
+   "subcategoria": "tecnologia5",
    "ancho": null,
    "alto": null,
    "transparente": true,
-   "tiene_texto": false,
+   "tiene_texto": true,
    "texto": "",
-   "estado": "por_revisar",
+   "estado": "especifica",
    "calidad": 3,
-   "uso": "SVG extraído de clase"
+   "uso": "SVG extraído de clase",
+   "nota": "tarjeta de título con texto (emoji dependen de la fuente del navegador)"
   },
   {
    "id": "img-bbb8a0add6",
@@ -13893,17 +14236,18 @@
    "area": "tecnologia",
    "grado": 5,
    "semana": 3,
-   "archivo": "juego/svg-bbb8a0add6.svg",
-   "categoria": "juego",
-   "subcategoria": "",
+   "archivo": "_especificas/tecnologia5/svg-bbb8a0add6.svg",
+   "categoria": "_especificas",
+   "subcategoria": "tecnologia5",
    "ancho": null,
    "alto": null,
    "transparente": true,
-   "tiene_texto": false,
+   "tiene_texto": true,
    "texto": "",
-   "estado": "por_revisar",
+   "estado": "especifica",
    "calidad": 3,
-   "uso": "SVG extraído de clase"
+   "uso": "SVG extraído de clase",
+   "nota": "tarjeta de título con texto (emoji dependen de la fuente del navegador)"
   },
   {
    "id": "img-a5cc30f83e",
@@ -13922,17 +14266,18 @@
    "area": "tecnologia",
    "grado": 5,
    "semana": 3,
-   "archivo": "juego/svg-a5cc30f83e.svg",
-   "categoria": "juego",
-   "subcategoria": "",
+   "archivo": "_especificas/tecnologia5/svg-a5cc30f83e.svg",
+   "categoria": "_especificas",
+   "subcategoria": "tecnologia5",
    "ancho": null,
    "alto": null,
    "transparente": true,
-   "tiene_texto": false,
+   "tiene_texto": true,
    "texto": "",
-   "estado": "por_revisar",
+   "estado": "especifica",
    "calidad": 3,
-   "uso": "SVG extraído de clase"
+   "uso": "SVG extraído de clase",
+   "nota": "tarjeta de título con texto (emoji dependen de la fuente del navegador)"
   },
   {
    "id": "img-71bea799da",
@@ -13951,17 +14296,18 @@
    "area": "tecnologia",
    "grado": 5,
    "semana": 3,
-   "archivo": "juego/svg-71bea799da.svg",
-   "categoria": "juego",
-   "subcategoria": "",
+   "archivo": "_especificas/tecnologia5/svg-71bea799da.svg",
+   "categoria": "_especificas",
+   "subcategoria": "tecnologia5",
    "ancho": null,
    "alto": null,
    "transparente": true,
-   "tiene_texto": false,
+   "tiene_texto": true,
    "texto": "",
-   "estado": "por_revisar",
+   "estado": "especifica",
    "calidad": 3,
-   "uso": "SVG extraído de clase"
+   "uso": "SVG extraído de clase",
+   "nota": "tarjeta de título con texto (emoji dependen de la fuente del navegador)"
   },
   {
    "id": "img-3f3be880ed",
@@ -13980,17 +14326,18 @@
    "area": "tecnologia",
    "grado": 5,
    "semana": 3,
-   "archivo": "juego/svg-3f3be880ed.svg",
-   "categoria": "juego",
-   "subcategoria": "",
+   "archivo": "_especificas/tecnologia5/svg-3f3be880ed.svg",
+   "categoria": "_especificas",
+   "subcategoria": "tecnologia5",
    "ancho": null,
    "alto": null,
    "transparente": true,
-   "tiene_texto": false,
+   "tiene_texto": true,
    "texto": "",
-   "estado": "por_revisar",
+   "estado": "especifica",
    "calidad": 3,
-   "uso": "SVG extraído de clase"
+   "uso": "SVG extraído de clase",
+   "nota": "tarjeta de título con texto (emoji dependen de la fuente del navegador)"
   },
   {
    "id": "img-1f3ed75cb5",
@@ -14009,17 +14356,18 @@
    "area": "tecnologia",
    "grado": 5,
    "semana": 3,
-   "archivo": "juego/svg-1f3ed75cb5.svg",
-   "categoria": "juego",
-   "subcategoria": "",
+   "archivo": "_especificas/tecnologia5/svg-1f3ed75cb5.svg",
+   "categoria": "_especificas",
+   "subcategoria": "tecnologia5",
    "ancho": null,
    "alto": null,
    "transparente": true,
-   "tiene_texto": false,
+   "tiene_texto": true,
    "texto": "",
-   "estado": "por_revisar",
+   "estado": "especifica",
    "calidad": 3,
-   "uso": "SVG extraído de clase"
+   "uso": "SVG extraído de clase",
+   "nota": "tarjeta de título con texto (emoji dependen de la fuente del navegador)"
   },
   {
    "id": "img-f636d6afdc",
@@ -14038,17 +14386,18 @@
    "area": "tecnologia",
    "grado": 5,
    "semana": 3,
-   "archivo": "juego/svg-f636d6afdc.svg",
-   "categoria": "juego",
-   "subcategoria": "",
+   "archivo": "_especificas/tecnologia5/svg-f636d6afdc.svg",
+   "categoria": "_especificas",
+   "subcategoria": "tecnologia5",
    "ancho": null,
    "alto": null,
    "transparente": true,
-   "tiene_texto": false,
+   "tiene_texto": true,
    "texto": "",
-   "estado": "por_revisar",
+   "estado": "especifica",
    "calidad": 3,
-   "uso": "SVG extraído de clase"
+   "uso": "SVG extraído de clase",
+   "nota": "tarjeta de título con texto (emoji dependen de la fuente del navegador)"
   },
   {
    "id": "img-2c891b06d8",
@@ -14067,17 +14416,18 @@
    "area": "tecnologia",
    "grado": 5,
    "semana": 3,
-   "archivo": "juego/svg-2c891b06d8.svg",
-   "categoria": "juego",
-   "subcategoria": "",
+   "archivo": "_especificas/tecnologia5/svg-2c891b06d8.svg",
+   "categoria": "_especificas",
+   "subcategoria": "tecnologia5",
    "ancho": null,
    "alto": null,
    "transparente": true,
-   "tiene_texto": false,
+   "tiene_texto": true,
    "texto": "",
-   "estado": "por_revisar",
+   "estado": "especifica",
    "calidad": 3,
-   "uso": "SVG extraído de clase"
+   "uso": "SVG extraído de clase",
+   "nota": "tarjeta de título con texto (emoji dependen de la fuente del navegador)"
   },
   {
    "id": "img-ba385cb4b4",
@@ -14096,17 +14446,18 @@
    "area": "tecnologia",
    "grado": 5,
    "semana": 3,
-   "archivo": "juego/svg-ba385cb4b4.svg",
-   "categoria": "juego",
-   "subcategoria": "",
+   "archivo": "_especificas/tecnologia5/svg-ba385cb4b4.svg",
+   "categoria": "_especificas",
+   "subcategoria": "tecnologia5",
    "ancho": null,
    "alto": null,
    "transparente": true,
-   "tiene_texto": false,
+   "tiene_texto": true,
    "texto": "",
-   "estado": "por_revisar",
+   "estado": "especifica",
    "calidad": 3,
-   "uso": "SVG extraído de clase"
+   "uso": "SVG extraído de clase",
+   "nota": "tarjeta de título con texto (emoji dependen de la fuente del navegador)"
   },
   {
    "id": "img-840c2fa126",
@@ -14117,8 +14468,9 @@
    ],
    "veces_usada": 2,
    "tags": [
-    "tecnologia",
     "5°",
+    "personaje",
+    "tecnologia",
     "tema"
    ],
    "area": "tecnologia",
@@ -14129,12 +14481,12 @@
    "transparente": true,
    "tiene_texto": false,
    "texto": "",
-   "calidad": 3,
-   "estado": "por_revisar",
+   "calidad": 4,
+   "estado": "aprobada",
    "uso": "",
-   "archivo": "tematicos/por-clasificar/840c2fa126.png",
-   "categoria": "tematicos",
-   "subcategoria": "por-clasificar"
+   "archivo": "personajes/npc/840c2fa126.png",
+   "categoria": "personajes",
+   "subcategoria": "npc"
   },
   {
    "id": "img-05439514ae",
@@ -14174,8 +14526,11 @@
    ],
    "veces_usada": 2,
    "tags": [
-    "tecnologia",
     "5°",
+    "busqueda-web",
+    "internet",
+    "redes",
+    "tecnologia",
     "tema"
    ],
    "area": "tecnologia",
@@ -14186,12 +14541,12 @@
    "transparente": true,
    "tiene_texto": false,
    "texto": "",
-   "calidad": 3,
-   "estado": "por_revisar",
+   "calidad": 4,
+   "estado": "aprobada",
    "uso": "",
-   "archivo": "tematicos/por-clasificar/2268b3b168.png",
+   "archivo": "tematicos/internet/2268b3b168.png",
    "categoria": "tematicos",
-   "subcategoria": "por-clasificar"
+   "subcategoria": "internet"
   },
   {
    "id": "img-f5087fdd54",
@@ -14260,10 +14615,13 @@
    ],
    "veces_usada": 2,
    "tags": [
-    "tecnologia",
     "5°",
     "personaje",
-    "sprite"
+    "privacidad",
+    "seguridad",
+    "sprite",
+    "tecnologia",
+    "virus"
    ],
    "area": "tecnologia",
    "grado": 5,
@@ -14274,11 +14632,11 @@
    "tiene_texto": false,
    "texto": "",
    "calidad": 4,
-   "estado": "por_revisar",
+   "estado": "aprobada",
    "uso": "",
-   "archivo": "personajes/npc/b4a99b045f.png",
-   "categoria": "personajes",
-   "subcategoria": "npc"
+   "archivo": "tematicos/seguridad-digital/b4a99b045f.png",
+   "categoria": "tematicos",
+   "subcategoria": "seguridad-digital"
   },
   {
    "id": "img-7fde278980",
@@ -14404,8 +14762,11 @@
    ],
    "veces_usada": 1,
    "tags": [
-    "tecnologia",
     "5°",
+    "busqueda-web",
+    "internet",
+    "redes",
+    "tecnologia",
     "tema"
    ],
    "area": "tecnologia",
@@ -14417,11 +14778,11 @@
    "tiene_texto": false,
    "texto": "",
    "calidad": 5,
-   "estado": "por_revisar",
+   "estado": "aprobada",
    "uso": "",
-   "archivo": "tematicos/por-clasificar/aec75e67dd.png",
+   "archivo": "tematicos/internet/aec75e67dd.png",
    "categoria": "tematicos",
-   "subcategoria": "por-clasificar"
+   "subcategoria": "internet"
   },
   {
    "id": "img-4ddf50bedd",
@@ -14431,8 +14792,11 @@
    ],
    "veces_usada": 1,
    "tags": [
-    "tecnologia",
     "5°",
+    "busqueda-web",
+    "internet",
+    "redes",
+    "tecnologia",
     "tema"
    ],
    "area": "tecnologia",
@@ -14444,11 +14808,11 @@
    "tiene_texto": false,
    "texto": "",
    "calidad": 4,
-   "estado": "por_revisar",
+   "estado": "aprobada",
    "uso": "",
-   "archivo": "tematicos/por-clasificar/4ddf50bedd.png",
+   "archivo": "tematicos/internet/4ddf50bedd.png",
    "categoria": "tematicos",
-   "subcategoria": "por-clasificar"
+   "subcategoria": "internet"
   },
   {
    "id": "img-5774a15707",
@@ -14458,8 +14822,11 @@
    ],
    "veces_usada": 1,
    "tags": [
-    "tecnologia",
     "5°",
+    "busqueda-web",
+    "internet",
+    "redes",
+    "tecnologia",
     "tema"
    ],
    "area": "tecnologia",
@@ -14471,11 +14838,11 @@
    "tiene_texto": false,
    "texto": "",
    "calidad": 5,
-   "estado": "por_revisar",
+   "estado": "aprobada",
    "uso": "",
-   "archivo": "tematicos/por-clasificar/5774a15707.png",
+   "archivo": "tematicos/internet/5774a15707.png",
    "categoria": "tematicos",
-   "subcategoria": "por-clasificar"
+   "subcategoria": "internet"
   },
   {
    "id": "img-364e19bd78",
@@ -14485,8 +14852,11 @@
    ],
    "veces_usada": 1,
    "tags": [
-    "tecnologia",
     "5°",
+    "busqueda-web",
+    "internet",
+    "redes",
+    "tecnologia",
     "tema"
    ],
    "area": "tecnologia",
@@ -14498,11 +14868,11 @@
    "tiene_texto": false,
    "texto": "",
    "calidad": 4,
-   "estado": "por_revisar",
+   "estado": "aprobada",
    "uso": "",
-   "archivo": "tematicos/por-clasificar/364e19bd78.png",
+   "archivo": "tematicos/internet/364e19bd78.png",
    "categoria": "tematicos",
-   "subcategoria": "por-clasificar"
+   "subcategoria": "internet"
   },
   {
    "id": "img-5a80c8c90f",
@@ -14512,8 +14882,11 @@
    ],
    "veces_usada": 1,
    "tags": [
-    "tecnologia",
     "5°",
+    "busqueda-web",
+    "internet",
+    "redes",
+    "tecnologia",
     "tema"
    ],
    "area": "tecnologia",
@@ -14525,11 +14898,11 @@
    "tiene_texto": false,
    "texto": "",
    "calidad": 4,
-   "estado": "por_revisar",
+   "estado": "aprobada",
    "uso": "",
-   "archivo": "tematicos/por-clasificar/5a80c8c90f.png",
+   "archivo": "tematicos/internet/5a80c8c90f.png",
    "categoria": "tematicos",
-   "subcategoria": "por-clasificar"
+   "subcategoria": "internet"
   },
   {
    "id": "img-6d8c221e63",
@@ -14539,9 +14912,12 @@
    ],
    "veces_usada": 1,
    "tags": [
-    "tecnologia",
     "5°",
-    "tema"
+    "privacidad",
+    "seguridad",
+    "tecnologia",
+    "tema",
+    "virus"
    ],
    "area": "tecnologia",
    "grado": 5,
@@ -14552,11 +14928,11 @@
    "tiene_texto": false,
    "texto": "",
    "calidad": 4,
-   "estado": "por_revisar",
+   "estado": "aprobada",
    "uso": "",
-   "archivo": "tematicos/por-clasificar/6d8c221e63.png",
+   "archivo": "tematicos/seguridad-digital/6d8c221e63.png",
    "categoria": "tematicos",
-   "subcategoria": "por-clasificar"
+   "subcategoria": "seguridad-digital"
   },
   {
    "id": "img-21261bbb28",
@@ -14566,8 +14942,11 @@
    ],
    "veces_usada": 1,
    "tags": [
-    "tecnologia",
     "5°",
+    "busqueda-web",
+    "internet",
+    "redes",
+    "tecnologia",
     "tema"
    ],
    "area": "tecnologia",
@@ -14579,11 +14958,11 @@
    "tiene_texto": false,
    "texto": "",
    "calidad": 4,
-   "estado": "por_revisar",
+   "estado": "aprobada",
    "uso": "",
-   "archivo": "tematicos/por-clasificar/21261bbb28.png",
+   "archivo": "tematicos/internet/21261bbb28.png",
    "categoria": "tematicos",
-   "subcategoria": "por-clasificar"
+   "subcategoria": "internet"
   },
   {
    "id": "img-69f4056d68",
@@ -14603,17 +14982,18 @@
    "area": "tecnologia",
    "grado": 5,
    "semana": 3,
-   "archivo": "juego/svg-69f4056d68.svg",
-   "categoria": "juego",
-   "subcategoria": "",
+   "archivo": "_especificas/tecnologia5/svg-69f4056d68.svg",
+   "categoria": "_especificas",
+   "subcategoria": "tecnologia5",
    "ancho": null,
    "alto": null,
    "transparente": true,
-   "tiene_texto": false,
+   "tiene_texto": true,
    "texto": "",
-   "estado": "por_revisar",
+   "estado": "especifica",
    "calidad": 3,
-   "uso": "SVG extraído de clase"
+   "uso": "SVG extraído de clase",
+   "nota": "tarjeta de título con texto (emoji dependen de la fuente del navegador)"
   },
   {
    "id": "img-e9c50bab08",
@@ -14633,17 +15013,18 @@
    "area": "tecnologia",
    "grado": 5,
    "semana": 3,
-   "archivo": "juego/svg-e9c50bab08.svg",
-   "categoria": "juego",
-   "subcategoria": "",
+   "archivo": "_especificas/tecnologia5/svg-e9c50bab08.svg",
+   "categoria": "_especificas",
+   "subcategoria": "tecnologia5",
    "ancho": null,
    "alto": null,
    "transparente": true,
-   "tiene_texto": false,
+   "tiene_texto": true,
    "texto": "",
-   "estado": "por_revisar",
+   "estado": "especifica",
    "calidad": 3,
-   "uso": "SVG extraído de clase"
+   "uso": "SVG extraído de clase",
+   "nota": "tarjeta de título con texto (emoji dependen de la fuente del navegador)"
   },
   {
    "id": "img-571d43cd14",
@@ -14663,17 +15044,18 @@
    "area": "tecnologia",
    "grado": 5,
    "semana": 3,
-   "archivo": "juego/svg-571d43cd14.svg",
-   "categoria": "juego",
-   "subcategoria": "",
+   "archivo": "_especificas/tecnologia5/svg-571d43cd14.svg",
+   "categoria": "_especificas",
+   "subcategoria": "tecnologia5",
    "ancho": null,
    "alto": null,
    "transparente": true,
-   "tiene_texto": false,
+   "tiene_texto": true,
    "texto": "",
-   "estado": "por_revisar",
+   "estado": "especifica",
    "calidad": 3,
-   "uso": "SVG extraído de clase"
+   "uso": "SVG extraído de clase",
+   "nota": "tarjeta de título con texto (emoji dependen de la fuente del navegador)"
   },
   {
    "id": "img-4accdc47b3",
@@ -14693,17 +15075,18 @@
    "area": "tecnologia",
    "grado": 5,
    "semana": 3,
-   "archivo": "juego/svg-4accdc47b3.svg",
-   "categoria": "juego",
-   "subcategoria": "",
+   "archivo": "_especificas/tecnologia5/svg-4accdc47b3.svg",
+   "categoria": "_especificas",
+   "subcategoria": "tecnologia5",
    "ancho": null,
    "alto": null,
    "transparente": true,
-   "tiene_texto": false,
+   "tiene_texto": true,
    "texto": "",
-   "estado": "por_revisar",
+   "estado": "especifica",
    "calidad": 3,
-   "uso": "SVG extraído de clase"
+   "uso": "SVG extraído de clase",
+   "nota": "tarjeta de título con texto (emoji dependen de la fuente del navegador)"
   },
   {
    "id": "img-c7c5297d8b",
@@ -14713,9 +15096,12 @@
    ],
    "veces_usada": 1,
    "tags": [
-    "tecnologia",
     "5°",
-    "tema"
+    "privacidad",
+    "seguridad",
+    "tecnologia",
+    "tema",
+    "virus"
    ],
    "area": "tecnologia",
    "grado": 5,
@@ -14726,11 +15112,11 @@
    "tiene_texto": false,
    "texto": "",
    "calidad": 5,
-   "estado": "por_revisar",
+   "estado": "aprobada",
    "uso": "",
-   "archivo": "tematicos/por-clasificar/c7c5297d8b.png",
+   "archivo": "tematicos/seguridad-digital/c7c5297d8b.png",
    "categoria": "tematicos",
-   "subcategoria": "por-clasificar"
+   "subcategoria": "seguridad-digital"
   },
   {
    "id": "img-357e6e34a3",
@@ -14740,9 +15126,12 @@
    ],
    "veces_usada": 1,
    "tags": [
-    "tecnologia",
     "5°",
-    "tema"
+    "privacidad",
+    "seguridad",
+    "tecnologia",
+    "tema",
+    "virus"
    ],
    "area": "tecnologia",
    "grado": 5,
@@ -14753,11 +15142,11 @@
    "tiene_texto": false,
    "texto": "",
    "calidad": 5,
-   "estado": "por_revisar",
+   "estado": "aprobada",
    "uso": "",
-   "archivo": "tematicos/por-clasificar/357e6e34a3.png",
+   "archivo": "tematicos/seguridad-digital/357e6e34a3.png",
    "categoria": "tematicos",
-   "subcategoria": "por-clasificar"
+   "subcategoria": "seguridad-digital"
   },
   {
    "id": "img-c9d19b9929",
@@ -14795,8 +15184,11 @@
    ],
    "veces_usada": 1,
    "tags": [
-    "tecnologia",
     "5°",
+    "busqueda-web",
+    "internet",
+    "redes",
+    "tecnologia",
     "tema"
    ],
    "area": "tecnologia",
@@ -14808,11 +15200,11 @@
    "tiene_texto": false,
    "texto": "",
    "calidad": 5,
-   "estado": "por_revisar",
+   "estado": "aprobada",
    "uso": "",
-   "archivo": "tematicos/por-clasificar/a66dc20f74.png",
+   "archivo": "tematicos/internet/a66dc20f74.png",
    "categoria": "tematicos",
-   "subcategoria": "por-clasificar"
+   "subcategoria": "internet"
   },
   {
    "id": "img-785d3fdafb",
@@ -14822,8 +15214,11 @@
    ],
    "veces_usada": 1,
    "tags": [
-    "tecnologia",
     "5°",
+    "busqueda-web",
+    "internet",
+    "redes",
+    "tecnologia",
     "tema"
    ],
    "area": "tecnologia",
@@ -14835,11 +15230,11 @@
    "tiene_texto": false,
    "texto": "",
    "calidad": 5,
-   "estado": "por_revisar",
+   "estado": "aprobada",
    "uso": "",
-   "archivo": "tematicos/por-clasificar/785d3fdafb.png",
+   "archivo": "tematicos/internet/785d3fdafb.png",
    "categoria": "tematicos",
-   "subcategoria": "por-clasificar"
+   "subcategoria": "internet"
   },
   {
    "id": "img-0ca0b55e74",
@@ -14849,8 +15244,11 @@
    ],
    "veces_usada": 1,
    "tags": [
-    "tecnologia",
     "5°",
+    "busqueda-web",
+    "internet",
+    "redes",
+    "tecnologia",
     "tema"
    ],
    "area": "tecnologia",
@@ -14862,11 +15260,11 @@
    "tiene_texto": false,
    "texto": "",
    "calidad": 5,
-   "estado": "por_revisar",
+   "estado": "aprobada",
    "uso": "",
-   "archivo": "tematicos/por-clasificar/0ca0b55e74.png",
+   "archivo": "tematicos/internet/0ca0b55e74.png",
    "categoria": "tematicos",
-   "subcategoria": "por-clasificar"
+   "subcategoria": "internet"
   },
   {
    "id": "img-c2e0d66051",
@@ -14876,8 +15274,8 @@
    ],
    "veces_usada": 1,
    "tags": [
-    "tecnologia",
     "5°",
+    "tecnologia",
     "ui"
    ],
    "area": "tecnologia",
@@ -14889,11 +15287,11 @@
    "tiene_texto": false,
    "texto": "",
    "calidad": 5,
-   "estado": "por_revisar",
+   "estado": "especifica",
    "uso": "",
-   "archivo": "interfaz/barras-y-marcos/c2e0d66051.png",
-   "categoria": "interfaz",
-   "subcategoria": "barras-y-marcos"
+   "archivo": "_especificas/tecnologia5/c2e0d66051.png",
+   "categoria": "_especificas",
+   "subcategoria": "tecnologia5"
   },
   {
    "id": "img-924df83698",
@@ -14959,8 +15357,8 @@
    ],
    "veces_usada": 1,
    "tags": [
-    "tecnologia",
     "5°",
+    "tecnologia",
     "tema"
    ],
    "area": "tecnologia",
@@ -14972,11 +15370,11 @@
    "tiene_texto": false,
    "texto": "",
    "calidad": 5,
-   "estado": "por_revisar",
+   "estado": "especifica",
    "uso": "",
-   "archivo": "tematicos/por-clasificar/1c6c438a4d.webp",
-   "categoria": "tematicos",
-   "subcategoria": "por-clasificar"
+   "archivo": "_especificas/tecnologia5/1c6c438a4d.webp",
+   "categoria": "_especificas",
+   "subcategoria": "tecnologia5"
   },
   {
    "id": "img-45ee20ce3f",
@@ -14986,8 +15384,8 @@
    ],
    "veces_usada": 1,
    "tags": [
-    "tecnologia",
     "5°",
+    "tecnologia",
     "tema"
    ],
    "area": "tecnologia",
@@ -14999,11 +15397,11 @@
    "tiene_texto": false,
    "texto": "",
    "calidad": 5,
-   "estado": "por_revisar",
+   "estado": "especifica",
    "uso": "",
-   "archivo": "tematicos/por-clasificar/45ee20ce3f.webp",
-   "categoria": "tematicos",
-   "subcategoria": "por-clasificar"
+   "archivo": "_especificas/tecnologia5/45ee20ce3f.webp",
+   "categoria": "_especificas",
+   "subcategoria": "tecnologia5"
   },
   {
    "id": "img-d233ed3fb1",
@@ -15125,8 +15523,8 @@
    ],
    "veces_usada": 1,
    "tags": [
-    "tecnologia",
     "5°",
+    "tecnologia",
     "tema"
    ],
    "area": "tecnologia",
@@ -15138,11 +15536,11 @@
    "tiene_texto": false,
    "texto": "",
    "calidad": 5,
-   "estado": "por_revisar",
+   "estado": "especifica",
    "uso": "",
-   "archivo": "tematicos/por-clasificar/8f9de5e871.webp",
-   "categoria": "tematicos",
-   "subcategoria": "por-clasificar"
+   "archivo": "_especificas/tecnologia5/8f9de5e871.webp",
+   "categoria": "_especificas",
+   "subcategoria": "tecnologia5"
   },
   {
    "id": "img-5291543f5b",

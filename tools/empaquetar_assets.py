@@ -50,6 +50,7 @@ def main():
         est = man[u].get('estado')
         if est == 'especifica': print(f'⚠️  {u}: tiene texto de otra clase (estado especifica). Úsala solo si el texto sirve aquí.')
         elif est == 'uso_con_cuidado': print(f'⚠️  {u}: marca registrada; solo para identificar la red/servicio en una clase de internet.')
+        elif est == 'por_limpiar': print(f'⚠️  {u}: recorte con restos de otra pose; conviene pasarlo por limpiar_recortes.py antes de usarlo en una clase final.')
         elif est == 'por_revisar': print(f'ℹ️  {u}: aún por revisar en el banco (sin texto, calidad {man[u].get("calidad","?")}/5).')
     reemplazo, peso = {}, {}
     for u in usados:

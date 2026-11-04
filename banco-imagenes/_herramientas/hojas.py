@@ -1,6 +1,6 @@
 import json, os, warnings; warnings.filterwarnings('ignore')
 from PIL import Image, ImageDraw
-R='banco-imagenes'; os.makedirs(R+'/vistas-previas',exist_ok=True)
+R=os.path.join(os.path.dirname(os.path.abspath(__file__)),'..'); os.makedirs(R+'/vistas-previas',exist_ok=True)
 b=json.load(open(R+'/banco.json'))['imagenes']
 def hoja(nombre,lst,T=150,cols=12,maxn=144):
     lst=[x for x in lst if not x['archivo'].endswith('.svg')][:maxn]
