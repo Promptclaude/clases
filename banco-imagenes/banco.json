@@ -3074,6 +3074,7 @@
     "4°",
     "aria",
     "aritmetica",
+    "busto",
     "icono",
     "juego",
     "pose"
@@ -3081,18 +3082,18 @@
    "area": "aritmetica",
    "grado": 4,
    "semana": 1,
-   "ancho": 260,
-   "alto": 172,
+   "ancho": 249,
+   "alto": 177,
    "transparente": true,
-   "tiene_texto": false,
+   "tiene_texto": true,
    "texto": "",
-   "calidad": 3,
-   "estado": "por_limpiar",
+   "calidad": 4,
+   "estado": "aprobada",
    "uso": "",
-   "archivo": "personajes/aria/43b966b649.webp",
+   "archivo": "personajes/aria/43b966b649.png",
    "categoria": "personajes",
    "subcategoria": "aria",
-   "nota": "recorte con restos de otra pose; pasar por limpiar_recortes.py"
+   "nota": "limpiada con limpiar_recortes.py --busto (desvanecido inferior)"
   },
   {
    "id": "img-9c33539016",
@@ -3142,12 +3143,12 @@
    "tiene_texto": false,
    "texto": "",
    "calidad": 3,
-   "estado": "por_limpiar",
+   "estado": "descartada",
    "uso": "",
-   "archivo": "personajes/aria/9c33539016.webp",
-   "categoria": "personajes",
-   "subcategoria": "aria",
-   "nota": "recorte con restos de otra pose; pasar por limpiar_recortes.py"
+   "archivo": "_descartadas/recortes-cortados/9c33539016.webp",
+   "categoria": "_descartadas",
+   "subcategoria": "recortes-cortados",
+   "motivo": "pose de ARIA cortada por el borde de la lámina original; no recuperable. Regenerarla pidiendo la lámina completa"
   },
   {
    "id": "img-425aea1a6c",
@@ -3197,12 +3198,12 @@
    "tiene_texto": false,
    "texto": "",
    "calidad": 3,
-   "estado": "por_limpiar",
+   "estado": "descartada",
    "uso": "",
-   "archivo": "personajes/aria/425aea1a6c.webp",
-   "categoria": "personajes",
-   "subcategoria": "aria",
-   "nota": "recorte con restos de otra pose; pasar por limpiar_recortes.py"
+   "archivo": "_descartadas/recortes-cortados/425aea1a6c.webp",
+   "categoria": "_descartadas",
+   "subcategoria": "recortes-cortados",
+   "motivo": "pose de ARIA cortada por el borde de la lámina original; no recuperable. Regenerarla pidiendo la lámina completa"
   },
   {
    "id": "img-f44eac904a",
@@ -3304,12 +3305,12 @@
    "tiene_texto": false,
    "texto": "",
    "calidad": 3,
-   "estado": "por_limpiar",
+   "estado": "descartada",
    "uso": "",
-   "archivo": "personajes/aria/8d55253290.webp",
-   "categoria": "personajes",
-   "subcategoria": "aria",
-   "nota": "recorte con restos de otra pose; pasar por limpiar_recortes.py"
+   "archivo": "_descartadas/recortes-cortados/8d55253290.webp",
+   "categoria": "_descartadas",
+   "subcategoria": "recortes-cortados",
+   "motivo": "pose de ARIA cortada por el borde de la lámina original; no recuperable. Regenerarla pidiendo la lámina completa"
   },
   {
    "id": "img-c5b549f527",
@@ -3359,12 +3360,12 @@
    "tiene_texto": false,
    "texto": "",
    "calidad": 3,
-   "estado": "por_limpiar",
+   "estado": "descartada",
    "uso": "",
-   "archivo": "personajes/aria/c5b549f527.webp",
-   "categoria": "personajes",
-   "subcategoria": "aria",
-   "nota": "recorte con restos de otra pose; pasar por limpiar_recortes.py"
+   "archivo": "_descartadas/recortes-cortados/c5b549f527.webp",
+   "categoria": "_descartadas",
+   "subcategoria": "recortes-cortados",
+   "motivo": "pose de ARIA cortada por el borde de la lámina original; no recuperable. Regenerarla pidiendo la lámina completa"
   },
   {
    "id": "img-f8c9310d92",
@@ -3453,6 +3454,7 @@
     "4°",
     "aria",
     "aritmetica",
+    "busto",
     "icono",
     "juego",
     "pose"
@@ -3460,18 +3462,18 @@
    "area": "aritmetica",
    "grado": 4,
    "semana": 1,
-   "ancho": 260,
-   "alto": 172,
+   "ancho": 259,
+   "alto": 153,
    "transparente": true,
-   "tiene_texto": false,
+   "tiene_texto": true,
    "texto": "",
-   "calidad": 3,
-   "estado": "por_limpiar",
+   "calidad": 4,
+   "estado": "aprobada",
    "uso": "",
-   "archivo": "personajes/aria/10088008d1.webp",
+   "archivo": "personajes/aria/10088008d1.png",
    "categoria": "personajes",
    "subcategoria": "aria",
-   "nota": "recorte con restos de otra pose; pasar por limpiar_recortes.py"
+   "nota": "limpiada con limpiar_recortes.py --busto (desvanecido inferior)"
   },
   {
    "id": "img-672458c994",
@@ -3521,12 +3523,12 @@
    "tiene_texto": false,
    "texto": "",
    "calidad": 3,
-   "estado": "por_limpiar",
+   "estado": "descartada",
    "uso": "",
-   "archivo": "personajes/aria/672458c994.webp",
-   "categoria": "personajes",
-   "subcategoria": "aria",
-   "nota": "recorte con restos de otra pose; pasar por limpiar_recortes.py"
+   "archivo": "_descartadas/recortes-cortados/672458c994.webp",
+   "categoria": "_descartadas",
+   "subcategoria": "recortes-cortados",
+   "motivo": "pose de ARIA cortada por el borde de la lámina original; no recuperable. Regenerarla pidiendo la lámina completa"
   },
   {
    "id": "img-7ac34205fa",
@@ -3576,12 +3578,12 @@
    "tiene_texto": false,
    "texto": "",
    "calidad": 3,
-   "estado": "por_limpiar",
+   "estado": "descartada",
    "uso": "",
-   "archivo": "personajes/aria/7ac34205fa.webp",
-   "categoria": "personajes",
-   "subcategoria": "aria",
-   "nota": "recorte con restos de otra pose; pasar por limpiar_recortes.py"
+   "archivo": "_descartadas/recortes-cortados/7ac34205fa.webp",
+   "categoria": "_descartadas",
+   "subcategoria": "recortes-cortados",
+   "motivo": "pose de ARIA cortada por el borde de la lámina original; no recuperable. Regenerarla pidiendo la lámina completa"
   },
   {
    "id": "img-cf4123d4af",
@@ -3631,12 +3633,12 @@
    "tiene_texto": false,
    "texto": "",
    "calidad": 3,
-   "estado": "por_limpiar",
+   "estado": "descartada",
    "uso": "",
-   "archivo": "personajes/aria/cf4123d4af.webp",
-   "categoria": "personajes",
-   "subcategoria": "aria",
-   "nota": "recorte con restos de otra pose; pasar por limpiar_recortes.py"
+   "archivo": "_descartadas/recortes-cortados/cf4123d4af.webp",
+   "categoria": "_descartadas",
+   "subcategoria": "recortes-cortados",
+   "motivo": "pose de ARIA cortada por el borde de la lámina original; no recuperable. Regenerarla pidiendo la lámina completa"
   },
   {
    "id": "img-98cb06b852",
@@ -3686,12 +3688,12 @@
    "tiene_texto": false,
    "texto": "",
    "calidad": 3,
-   "estado": "por_limpiar",
+   "estado": "descartada",
    "uso": "",
-   "archivo": "personajes/aria/98cb06b852.webp",
-   "categoria": "personajes",
-   "subcategoria": "aria",
-   "nota": "recorte con restos de otra pose; pasar por limpiar_recortes.py"
+   "archivo": "_descartadas/recortes-cortados/98cb06b852.webp",
+   "categoria": "_descartadas",
+   "subcategoria": "recortes-cortados",
+   "motivo": "pose de ARIA cortada por el borde de la lámina original; no recuperable. Regenerarla pidiendo la lámina completa"
   },
   {
    "id": "img-0ee78a4e64",
@@ -3741,12 +3743,12 @@
    "tiene_texto": false,
    "texto": "",
    "calidad": 3,
-   "estado": "por_limpiar",
+   "estado": "descartada",
    "uso": "",
-   "archivo": "personajes/aria/0ee78a4e64.webp",
-   "categoria": "personajes",
-   "subcategoria": "aria",
-   "nota": "recorte con restos de otra pose; pasar por limpiar_recortes.py"
+   "archivo": "_descartadas/recortes-cortados/0ee78a4e64.webp",
+   "categoria": "_descartadas",
+   "subcategoria": "recortes-cortados",
+   "motivo": "pose de ARIA cortada por el borde de la lámina original; no recuperable. Regenerarla pidiendo la lámina completa"
   },
   {
    "id": "img-1ef9294c01",
@@ -3848,12 +3850,12 @@
    "tiene_texto": false,
    "texto": "",
    "calidad": 3,
-   "estado": "por_limpiar",
+   "estado": "descartada",
    "uso": "",
-   "archivo": "personajes/aria/ea2fec5c23.webp",
-   "categoria": "personajes",
-   "subcategoria": "aria",
-   "nota": "recorte con restos de otra pose; pasar por limpiar_recortes.py"
+   "archivo": "_descartadas/recortes-cortados/ea2fec5c23.webp",
+   "categoria": "_descartadas",
+   "subcategoria": "recortes-cortados",
+   "motivo": "pose de ARIA cortada por el borde de la lámina original; no recuperable. Regenerarla pidiendo la lámina completa"
   },
   {
    "id": "img-895e039df1",
@@ -3903,12 +3905,12 @@
    "tiene_texto": false,
    "texto": "",
    "calidad": 3,
-   "estado": "por_limpiar",
+   "estado": "descartada",
    "uso": "",
-   "archivo": "personajes/aria/895e039df1.webp",
-   "categoria": "personajes",
-   "subcategoria": "aria",
-   "nota": "recorte con restos de otra pose; pasar por limpiar_recortes.py"
+   "archivo": "_descartadas/recortes-cortados/895e039df1.webp",
+   "categoria": "_descartadas",
+   "subcategoria": "recortes-cortados",
+   "motivo": "pose de ARIA cortada por el borde de la lámina original; no recuperable. Regenerarla pidiendo la lámina completa"
   },
   {
    "id": "img-80649ee7d7",
@@ -3958,12 +3960,12 @@
    "tiene_texto": false,
    "texto": "",
    "calidad": 3,
-   "estado": "por_limpiar",
+   "estado": "descartada",
    "uso": "",
-   "archivo": "personajes/aria/80649ee7d7.webp",
-   "categoria": "personajes",
-   "subcategoria": "aria",
-   "nota": "recorte con restos de otra pose; pasar por limpiar_recortes.py"
+   "archivo": "_descartadas/recortes-cortados/80649ee7d7.webp",
+   "categoria": "_descartadas",
+   "subcategoria": "recortes-cortados",
+   "motivo": "pose de ARIA cortada por el borde de la lámina original; no recuperable. Regenerarla pidiendo la lámina completa"
   },
   {
    "id": "img-b8914526d7",
@@ -4117,12 +4119,12 @@
    "tiene_texto": false,
    "texto": "",
    "calidad": 3,
-   "estado": "por_limpiar",
+   "estado": "descartada",
    "uso": "",
-   "archivo": "personajes/aria/4b1b070ba8.webp",
-   "categoria": "personajes",
-   "subcategoria": "aria",
-   "nota": "recorte con restos de otra pose; pasar por limpiar_recortes.py"
+   "archivo": "_descartadas/recortes-cortados/4b1b070ba8.webp",
+   "categoria": "_descartadas",
+   "subcategoria": "recortes-cortados",
+   "motivo": "pose de ARIA cortada por el borde de la lámina original; no recuperable. Regenerarla pidiendo la lámina completa"
   },
   {
    "id": "img-37d4266506",
@@ -4211,6 +4213,7 @@
     "4°",
     "aria",
     "aritmetica",
+    "busto",
     "icono",
     "juego",
     "pose"
@@ -4218,18 +4221,18 @@
    "area": "aritmetica",
    "grado": 4,
    "semana": 1,
-   "ancho": 260,
-   "alto": 172,
+   "ancho": 249,
+   "alto": 151,
    "transparente": true,
-   "tiene_texto": false,
+   "tiene_texto": true,
    "texto": "",
-   "calidad": 3,
-   "estado": "por_limpiar",
+   "calidad": 4,
+   "estado": "aprobada",
    "uso": "",
-   "archivo": "personajes/aria/eb4563a994.webp",
+   "archivo": "personajes/aria/eb4563a994.png",
    "categoria": "personajes",
    "subcategoria": "aria",
-   "nota": "recorte con restos de otra pose; pasar por limpiar_recortes.py"
+   "nota": "limpiada con limpiar_recortes.py"
   },
   {
    "id": "img-ae234bff0c",
@@ -4331,12 +4334,12 @@
    "tiene_texto": false,
    "texto": "",
    "calidad": 3,
-   "estado": "por_limpiar",
+   "estado": "descartada",
    "uso": "",
-   "archivo": "personajes/aria/f2003f920c.webp",
-   "categoria": "personajes",
-   "subcategoria": "aria",
-   "nota": "recorte con restos de otra pose; pasar por limpiar_recortes.py"
+   "archivo": "_descartadas/recortes-cortados/f2003f920c.webp",
+   "categoria": "_descartadas",
+   "subcategoria": "recortes-cortados",
+   "motivo": "pose de ARIA cortada por el borde de la lámina original; no recuperable. Regenerarla pidiendo la lámina completa"
   },
   {
    "id": "img-332da91fa4",

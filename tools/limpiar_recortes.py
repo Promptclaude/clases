@@ -6,7 +6,7 @@ quedaron al recortar; (2) quita el halo blanco/sucio del contorno; (3) recorta e
 sujeto está CORTADO por el borde de la imagen original (no se puede arreglar: hay que re-exportar la lámina).
   --busto  desvanece suavemente el borde inferior (para mascotas de medio cuerpo cuyo corte es recto)
 Salida: carpeta de limpias + informe.json:  ok | cortada (con qué lados) | sin-transparencia | vacia
-Uso:  python3 tools/limpiar_recortes.py carpeta_entrada carpeta_salida [--busto] [--registrar assets-reutilizables/assets.json --categoria aria]
+Uso:  python3 tools/limpiar_recortes.py carpeta_entrada carpeta_salida [--busto] [--registrar banco-imagenes/banco.json --categoria personajes/aria]
 Criterio «ok» = el sujeto no toca ningún borde (tolerancia 2 px).  Solo las «ok» se copian a salida/ok/ ; las demás a salida/revisar/.
 """
 import argparse, json, os, sys
@@ -61,13 +61,15 @@ def main():
     for k, v in inf.items():
         if v['estado'] == 'cortada': print(f'   cortada: {k} → lados {v["lados_cortados"]}  (re-exporta la lámina original sin recortar ese lado)')
     if a.registrar:
-        man = json.load(open(a.registrar, encoding='utf8')); ids = {x['id'] for x in man['assets']}; base = os.path.dirname(os.path.abspath(a.registrar)); nuevos = 0
+        man = json.load(open(a.registrar, encoding='utf8')); lista = man['imagenes'] if 'imagenes' in man else man['assets']; es_banco = 'imagenes' in man; ids = {x['id'] for x in lista}; base = os.path.dirname(os.path.abspath(a.registrar)); nuevos = 0
         for k in ok:
             id_ = os.path.splitext(inf[k]['archivo'])[0]
             if id_ in ids: continue
             destino = os.path.join(base, a.categoria); os.makedirs(destino, exist_ok=True)
             img = Image.open(os.path.join(a.salida, 'ok', inf[k]['archivo'])); img.save(os.path.join(destino, inf[k]['archivo']), optimize=True)
-            man['assets'].append({'id': id_, 'archivo': f'{a.categoria}/{inf[k]["archivo"]}', 'categoria': a.categoria, 'uso': '(completar)', 'tags': [], 'texto_incluido': '', 'origen': 'subido y limpiado con limpiar_recortes.py', 'ancho': img.width, 'alto': img.height}); nuevos += 1
+            cat, _, sub = a.categoria.partition('/')
+            reg = {'id': id_, 'archivo': f'{a.categoria}/{inf[k]["archivo"]}', 'categoria': cat, 'subcategoria': sub, 'estado': 'por_revisar', 'calidad': 4, 'transparente': True, 'tiene_texto': False, 'usada_en': []} if es_banco else None
+            lista.append(reg | {'uso': '(completar)', 'tags': [], 'texto': '', 'origen': 'subido y limpiado con limpiar_recortes.py', 'ancho': img.width, 'alto': img.height}) if es_banco else lista.append({'id': id_, 'archivo': f'{a.categoria}/{inf[k]["archivo"]}', 'categoria': a.categoria, 'uso': '(completar)', 'tags': [], 'texto_incluido': '', 'origen': 'subido y limpiado con limpiar_recortes.py', 'ancho': img.width, 'alto': img.height}); nuevos += 1
         json.dump(man, open(a.registrar, 'w', encoding='utf8'), ensure_ascii=False, indent=1); print(f'📒 {nuevos} assets nuevos registrados en el manifiesto (completa "uso" y "tags")')
 
 if __name__ == '__main__': main()

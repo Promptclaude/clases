@@ -7,7 +7,6 @@
 | Ejemplo de otra materia solo con datos | `plantilla/ejemplos/` |
 | **Puerta de calidad** y demás herramientas | `tools/` (`puerta_de_calidad.py`, `construir_clase.py`, `auditar_clase.py`, `prueba_clase_e2e.js`, …) |
 | Pruebas del repositorio | `pruebas/` · `npm test` |
-| Pack original de 46 imágenes (ya incluido en el banco) | `assets-reutilizables/` |
 | **Banco de imágenes y base de datos** (505 recursos revisados y clasificados) | `banco-imagenes/` (ver su README, `banco.json` y `vistas-previas/`) · módulo `prompt-modulos/33_banco_imagenes.md` |
 | Módulos del prompt sueltos | `prompt-modulos/` |
 | Historial | `CHANGELOG.md` (versiones previas recuperables con `git checkout archivo-v24-v25`) |

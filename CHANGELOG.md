@@ -3,7 +3,8 @@
 > Las versiones anteriores del prompt (v24, v25) ya no están en el repositorio. Se pueden recuperar con `git checkout archivo-v24-v25`.
 
 ## v26 + banco de imágenes (módulo 33)
-- Revisión completa del banco: 181 imágenes aprobadas por tema (decimales, dinero, detectives, fábrica, internet, seguridad digital…), 250 específicas, 48 descartadas por posible propiedad intelectual o baja resolución, 17 poses de ARIA por limpiar.
+- Se retira `assets-reutilizables/` (sus 46 imágenes y ids viven ahora en `banco-imagenes/`); el prompt, `limpiar_recortes.py --registrar` y el empaquetador apuntan al banco.
+- Revisión completa del banco: 181 imágenes aprobadas por tema (decimales, dinero, detectives, fábrica, internet, seguridad digital…), 250 específicas, 62 descartadas (propiedad intelectual, baja resolución o recorte cortado), 14 poses de ARIA cortadas por el borde (no recuperables, a regenerar) y 3 limpiadas con `limpiar_recortes.py`.
 - Banco central `banco-imagenes/` (505 recursos, `banco.json`), `empaquetar_assets.py` y `construir_clase.py` lo leen por defecto; las imágenes `descartada` se bloquean.
 
 ## v25 → v26 — Sistema de calidad: motor de referencia + puerta de entrega

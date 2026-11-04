@@ -6,7 +6,7 @@ Consulta: `python3 _herramientas/buscar_banco.py gema --cat juego --sin-texto` �
 ## Carpetas (todas revisadas una a una)
 | Carpeta | Contenido |
 |---|---|
-| `personajes/aria/` | Mascota ARIA: poses de cuerpo y busto (48) |
+| `personajes/aria/` | Mascota ARIA: poses de cuerpo y busto (34, todas limpias) |
 | `personajes/avatares/` | Avatares de perfil para el login (10) |
 | `personajes/npc/` | Personajes de apoyo: detective, obrero, corredor, niños, mascota candado… (16) |
 | `interfaz/botones/` · `banners/` · `barras-y-marcos/` · `insignias/` | Botones, títulos, marcos, selectores, insignias de curso |
@@ -16,10 +16,10 @@ Consulta: `python3 _herramientas/buscar_banco.py gema --cat juego --sin-texto` �
 | `infografias/` | Tabla con columna/celda/fila (y futuras) |
 | `tematicos/` | `decimales/` · `dinero/` (tienda, precios) · `detectives/` · `fabrica/` · `internet/` · `seguridad-digital/` · `logos-redes-sociales/` |
 | `_especificas/` | Imágenes con texto de una clase concreta (250): solo sirven allí |
-| `_descartadas/` | `posible-ip-terceros/` (estilo Fortnite, Minecraft, Among Us, logo Word) y `baja-resolucion/` |
+| `_descartadas/` | `posible-ip-terceros/` (estilo Fortnite, Minecraft, Among Us, logo Word), `baja-resolucion/` y `recortes-cortados/` (14 poses de ARIA cortadas por el borde de la lámina original; hay que regenerarlas) |
 
 ## Estados (`estado`)
-`aprobada` (181) lista para usar · `por_limpiar` (17) poses de ARIA con restos del recorte, pasar por `tools/limpiar_recortes.py` · `uso_con_cuidado` (9) marcas registradas, solo para identificar una red en clase de internet · `especifica` (250) solo en su clase · `descartada` (48) el empaquetador la bloquea.
+`aprobada` (184) lista para usar · `por_limpiar` (0) · `uso_con_cuidado` (9) marcas registradas, solo para identificar una red en clase de internet · `especifica` (250) solo en su clase · `descartada` (62) el empaquetador la bloquea.
 
 ## Campos de `banco.json`
 id · archivo · svg · categoria · subcategoria · uso · tags · ancho/alto · transparente · tiene_texto/texto (OCR) · calidad 1–5 · nota/motivo · area/grado/semana de origen · usada_en · veces_usada · estado.

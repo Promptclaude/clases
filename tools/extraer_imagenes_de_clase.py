@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 extraer_imagenes_de_clase.py — saca a archivos las imágenes base64 incrustadas en una clase vieja (sin modificar la clase).
-Quita duplicados (por contenido) y escribe un informe. Después: limpiar_recortes.py → assets-reutilizables.
+Quita duplicados (por contenido) y escribe un informe. Después: limpiar_recortes.py → banco-imagenes.
 Uso:  python3 tools/extraer_imagenes_de_clase.py clase.html carpeta_salida
 """
 import base64, hashlib, io, json, os, re, sys

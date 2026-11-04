@@ -135,13 +135,13 @@ Toda imagen se pide como `asset://id` (ver 56). **Prohibido** pegar imágenes en
 
 ## 🔴 PRIORIDAD 56 · ABSOLUTA — PIPELINE DEL PACK DE IMÁGENES REUTILIZABLE
 
-**Carpeta:** `assets-reutilizables/` con `assets.json` (manifiesto), `aria/`, `premios/`, `kit-juego/{svg,png}/` y las categorías nuevas que se agreguen. **Se referencia por id** (`asset://aria-hola`); nunca por ruta a mano.
+**Carpeta:** `banco-imagenes/` con `banco.json` (manifiesto: categoría, tags, calidad, estado), `personajes/`, `interfaz/`, `premios/`, `juego/`, `escenarios/`, `tematicos/` y las categorías nuevas que se agreguen. Los 46 ids del pack original (`aria-hola`, `estrella`…) siguen existiendo en el banco. **Se referencia por id** (`asset://aria-hola`); nunca por ruta a mano.
 **Herramientas** (`tools/`): `extraer_imagenes_de_clase.py` (saca las imágenes base64 de una clase vieja), `limpiar_recortes.py` (recorta, quita halos, quita fragmentos vecinos y **detecta recortes cortados**), `empaquetar_assets.py` (mete en la clase solo los `asset://` usados; falla si el peso pasa de 1,5 MB o si un id no existe).
 
 **Flujo para subir un pack nuevo:**
 1. Dejar las imágenes en `assets-entrada/`.
-2. `python3 tools/limpiar_recortes.py assets-entrada salida [--busto] --registrar assets-reutilizables/assets.json --categoria <carpeta>` → las **ok** pasan al pack; las **cortadas** quedan en `salida/revisar/` con el lado cortado (hay que re-exportar la lámina original).
-3. Completar `uso` y `tags` en el manifiesto.
+2. `python3 tools/limpiar_recortes.py assets-entrada salida [--busto] --registrar banco-imagenes/banco.json --categoria <categoria/subcarpeta>` → las **ok** pasan al banco; las **cortadas** quedan en `salida/revisar/` con el lado cortado (hay que re-exportar la lámina original).
+3. Completar `uso` y `tags` en `banco.json` y subir `estado` de `por_revisar` a `aprobada` tras mirar la vista previa.
 4. Construir cada clase y **empaquetar**: `python3 tools/empaquetar_assets.py clase.html -o clase_final.html`.
 
 **Criterios para que una imagen entre al pack (todas):** fondo transparente real · el sujeto **no toca ningún borde** · sin halo blanco/sucio · lado mayor ≥ 256 px · un sujeto (más elementos pegados como estrellas o globo) · **sin personajes ni marcas de terceros** (50.1) · nombre en minúsculas con guiones, en español (`aria-hola`, `medalla-oro`).

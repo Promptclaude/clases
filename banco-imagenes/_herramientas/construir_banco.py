@@ -1,4 +1,5 @@
 import warnings; warnings.filterwarnings('ignore')
+# NOTA: script histórico de la construcción inicial del banco. Leía el pack antiguo assets-reutilizables/ (ya retirado; recuperable con git tag archivo-v24-v25). Para ampliar el banco usa tools/limpiar_recortes.py --registrar banco-imagenes/banco.json
 import json, os, re, shutil, subprocess, io, tempfile
 from PIL import Image
 import numpy as np, cv2

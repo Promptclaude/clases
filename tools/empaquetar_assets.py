@@ -2,7 +2,7 @@
 """
 empaquetar_assets.py — mete en una clase SOLO las imágenes del pack que realmente usa.
 
-En la clase se escribe  asset://id  (id = el de assets-reutilizables/assets.json), por ejemplo:
+En la clase se escribe  asset://id  (id = el de banco-imagenes/banco.json), por ejemplo:
     <img src="asset://aria-hola" alt="ARIA saluda">      background:url(asset://cofre)
 Modos:
   --modo inline  (por defecto)  reemplaza cada asset:// por un data: URI optimizado → UN SOLO .html que funciona sin internet.
@@ -12,7 +12,7 @@ Controles de calidad (la herramienta falla si no se cumplen):
   · todo asset:// debe existir en el manifiesto  → salida 2
   · el peso total de lo incrustado no puede pasar --presupuesto-mb (por defecto 1.5)  → salida 1
   · avisa de imágenes base64 grandes que NO vienen del pack (se recomienda pasarlas al pack)
-Uso:  python3 tools/empaquetar_assets.py clase.html -o clase_final.html [--assets assets-reutilizables] [--modo inline|ruta]
+Uso:  python3 tools/empaquetar_assets.py clase.html -o clase_final.html [--assets banco-imagenes] [--modo inline|ruta]
 """
 import argparse, base64, io, json, os, re, sys
 from PIL import Image
