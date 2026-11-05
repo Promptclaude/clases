@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 /* prueba_clase_e2e.js — pruebas con clics reales (jsdom) de una clase v26+.
    Uso:  npm install jsdom   (una vez)   →   node tools/prueba_clase_e2e.js clase.html
-   Verifica T10–T22 (ver Prioridad 59/60). Sale con código 1 si algo falla. */
+   Verifica T10–T23 (ver Prioridad 59/60). Sale con código 1 si algo falla. */
 const fs = require('fs'), path = require('path');
 const { JSDOM } = require('jsdom');
 const archivo = process.argv[2]; if (!archivo) { console.log('Uso: node tools/prueba_clase_e2e.js clase.html'); process.exit(2); }
@@ -28,7 +28,8 @@ const habil = w => !next(w).disabled;
 async function esperaHabil(w, ms = 1500) { const t0 = Date.now(); while (Date.now() - t0 < ms) { if (habil(w)) return true; await sleep(20); } return habil(w); }
 const idxTipo = (w, ...tipos) => w.CLASE_API.SL.findIndex(x => tipos.includes(x.type));
 const idxEvaluables = w => w.CLASE_API.SL.map((x, i) => ['quiz', 'evalFinal'].includes(x.type) ? i : -1).filter(i => i >= 0);
-const ACTIVIDADES = ['tf', 'fill', 'drag', 'match', 'orden', 'wordsearch', 'interactive', 'minijuego', 'historia'];
+const NUEVOS27 = ['cuadricula', 'recta', 'comparar', 'podio', 'abierta', 'cuaderno'];
+const ACTIVIDADES = ['tf', 'fill', 'drag', 'match', 'orden', 'wordsearch', 'interactive', 'minijuego', 'historia', ...NUEVOS27];
 const cerrarModal = w => { if (!q(w, '#modal').hidden) { const b = q(w, '#modal button'); if (b) clic(b); } };
 
 async function jugarSlide(w, modo /* 'mal' | 'bien' */) {
@@ -37,17 +38,35 @@ async function jugarSlide(w, modo /* 'mal' | 'bien' */) {
   if (t === 'tf') s.items.forEach((it, i) => { const v = modo === 'bien' ? it.v : !it.v; clic(q(w, `[data-test=tf][data-i="${i}"][data-v="${v ? 1 : 0}"]`)); });
   if (t === 'fill') { qa(w, '[data-test=fill-input]').forEach((inp, i) => { inp.value = modo === 'bien' ? s.items[i].ans[0] : 'zzz'; }); clic(q(w, '[data-test=verificar]')); }
   if (t === 'drag') { const ids = s.chips.map((c, i) => i).slice(0, 2); for (const i of ids) { for (let k = 0; k < 2; k++) { clic(q(w, `[data-test=chip][data-i="${i}"]`)); const bien = s.chips[i].z, mala = s.zonas.find(z => z.id !== bien).id; clic(q(w, `[data-test=zona][data-z="${modo === 'bien' ? bien : mala}"]`)); if (modo === 'bien') break; } } }
+  if (NUEVOS27.includes(t)) await jugarNuevo27(w, s, t, modo);
   if (t === 'minijuego') { for (let r = 0; r < s.rondas.length; r++) { const R = s.rondas[r], i = modo === 'bien' ? R.ok : (R.ok + 1) % R.ops.length; clic(q(w, `[data-test=mj-op][data-i="${i}"]`)); await sleep(60); } }
   if (t === 'quiz' || t === 'evalFinal') { for (let n = 0; n < s.preguntas.length; n++) { const c = api.opcionCorrectaActual(); if (!c) break; const ops = qa(w, '[data-test=opcion]'); const el = modo === 'bien' ? ops.find(o => o.dataset.op === c.id) : ops.find(o => o.dataset.op !== c.id); clic(el); cerrarModal(w); await sleep(75); } }
-  if (ACTIVIDADES.includes(t) && !['tf', 'fill', 'drag', 'minijuego'].includes(t)) { await esperaHabil(w, 100); if (!habil(w)) { await sleep(520); const b = q(w, '#rescate-wrap button'); if (b) { clic(b); notas.push('«' + t + '» solo se probó con rescate'); } } }
+  if (ACTIVIDADES.includes(t) && !['tf', 'fill', 'drag', 'minijuego', ...NUEVOS27].includes(t)) { await esperaHabil(w, 100); if (!habil(w)) { await sleep(520); const b = q(w, '#rescate-wrap button'); if (b) { clic(b); notas.push('«' + t + '» solo se probó con rescate'); } } }
   return esperaHabil(w);
 }
+
+// v27: actividades nuevas (cuadrícula, recta, comparar, podio, abierta, cuaderno) jugadas con clics reales
+async function jugarNuevo27(w, s, t, modo) {
+  const sel = (a, i, extra = '') => q(w, `[data-test=${a}][data-i="${i}"]${extra}`), ver = i => clic(sel('verificar-item', i));
+  if (t === 'abierta') { qa(w, '[data-test=abierta-txt]').forEach(x => { x.value = 'Respondo con mis propias palabras escribiendo bastantes palabras aqui'; x.dispatchEvent(new w.Event('input', { bubbles: true })); }); clic(q(w, '[data-test=abierta-guardar]')); return; }
+  if (t === 'cuaderno') { const c = q(w, '[data-test=cuaderno-ok]'); c.checked = true; c.dispatchEvent(new w.Event('change', { bubbles: true })); return; }
+  for (let i = 0; i < s.items.length; i++) {
+    const x = s.items[i], bien = modo === 'bien';
+    if (t === 'cuadricula') { const n = bien ? x.objetivo : 1; for (let c = 0; c < n; c++) clic(sel('cuad-celda', i, `[data-c="${c}"]`)); }
+    if (t === 'recta') { const p = x.paso || 0.1, d = x.divisiones || 10, ok = Math.round((x.valor - (x.inicio || 0)) / p); clic(sel('marca', i, `[data-m="${bien ? ok : (ok + 1) % (d + 1)}"]`)); }
+    if (t === 'comparar') { const a = parseFloat(x.a.replace(',', '.')), b = parseFloat(x.b.replace(',', '.')), real = a < b ? '<' : a > b ? '>' : '='; clic(sel('cmp', i, `[data-v="${bien ? real : (real === '<' ? '>' : '<')}"]`)); }
+    if (t === 'podio') { const e = sel('puesto', i); e.value = String(bien ? x.puesto : (x.puesto % s.items.length) + 1); e.dispatchEvent(new w.Event('change', { bubbles: true })); }
+    ver(i);
+    if (!bien) { const b2 = q(w, `[data-test=verificar-item][data-i="${i}"]`); if (b2) clic(b2); }   // 2.º intento: se resuelve solo
+  }
+}
+const sel0 = (w, a, i, c) => q(w, `[data-test=${a}][data-i="${i}"][data-c="${c}"]`);
 const notas = [];
 async function recorrer(w, modo, tope = 40) { let n = 0; const vistos = []; while (tipo(w) !== 'final' && n++ < tope) { const t = tipo(w); const h = await jugarSlide(w, modo); vistos.push(t + (h ? '' : '✗')); if (!h) return { ok: false, vistos, trabado: t }; clic(next(w)); } return { ok: tipo(w) === 'final', vistos }; }
 
 (async () => {
   const base = abrir({ est: 'sonda' }).window, API0 = base.CLASE_API, SL0 = API0.SL, claseId = API0.claseId, semana = API0.semana;
-  const iQuiz = idxEvaluables(base), iAct = SL0.findIndex(x => ['drag', 'tf', 'fill', 'minijuego', 'match', 'orden', 'wordsearch', 'interactive', 'historia'].includes(x.type));
+  const iQuiz = idxEvaluables(base), iAct = SL0.findIndex(x => ACTIVIDADES.includes(x.type));
   const iDrag = SL0.findIndex(x => ACTIVIDADES.includes(x.type)), iFinal = SL0.length - 1;
   const NQ = SL0.filter(x => ['quiz', 'evalFinal'].includes(x.type)).reduce((a, x) => a + x.preguntas.length, 0), NQ1 = SL0[iQuiz[0]].preguntas.length, paso = 5 / NQ;
   base.close();
@@ -152,6 +171,31 @@ async function recorrer(w, modo, tope = 40) { let n = 0; const vistos = []; whil
   T('T22 · Cada slide bloqueado explica por qué (nunca un botón gris mudo)');
   { const w = abrir({ est: 'nico' }).window, mudos = []; SL0.forEach((s, i) => { w.CLASE_API.irA(i); if (!habil(w) && q(w, '#razon-bloqueo').textContent.trim().length < 8) mudos.push(s.type); });
     ok(mudos.length === 0, 'todo slide bloqueado tiene #razon-bloqueo' + (mudos.length ? ': mudos ' + mudos.join(',') : '')); w.close(); }
+
+  T('T23 · Actividades v27: 2 intentos por punto, pista, medio punto y «Ahora tú»');
+  { const iC = SL0.findIndex(x => x.type === 'cuadricula'), iA = SL0.findIndex(x => x.type === 'abierta'), iR = SL0.findIndex(x => x.type === 'recta');
+    if (iC < 0) console.log('  ⚠️  la clase no usa actividades v27: no aplica');
+    else { const w = abrir({ est: 'olga' }).window, API = w.CLASE_API, sc = SL0[iC]; API.irA(iC);
+      const fb = i => q(w, `.v27-it[data-i="${i}"] [data-test=item-fb]`).textContent, vacio = () => clic(q(w, '[data-test=verificar-item][data-i="0"]'));
+      ok(sc.ejemplo ? !!q(w, '[data-test=ejemplo]') : true, 'si la actividad trae «ejemplo», se muestra el ejemplo resuelto con «Ahora tú»');
+      vacio(); ok(fb(0) === '', 'verificar sin responder no gasta intento');
+      clic(sel0(w, 'cuad-celda', 0, 0)); clic(q(w, '[data-test=verificar-item][data-i="0"]'));
+      ok(/te queda 1 intento/.test(fb(0)), '1.er error: avisa que queda 1 intento (sin la palabra «incorrecto»)');
+      clic(q(w, '[data-test=pista-item][data-i="0"]')); ok(!!q(w, '.v27-it[data-i="0"] [data-test=pista-txt]'), 'el botón 💡 Pista muestra la pista del punto');
+      for (let c = 1; c < sc.items[0].objetivo; c++) clic(sel0(w, 'cuad-celda', 0, c)); clic(q(w, '[data-test=verificar-item][data-i="0"]'));
+      ok(/2\.º intento/.test(fb(0)), 'acertar en el 2.º intento queda reconocido (medio punto)');
+      clic(sel0(w, 'cuad-celda', 1, 0)); clic(q(w, '[data-test=verificar-item][data-i="1"]')); clic(q(w, '[data-test=verificar-item][data-i="1"]'));
+      ok(/Así se resuelve/.test(fb(1)), '2 errores: muestra cómo se resuelve y sigue');
+      for (let i = 2; i < sc.items.length; i++) { for (let c = 0; c < sc.items[i].objetivo; c++) clic(sel0(w, 'cuad-celda', i, c)); clic(q(w, `[data-test=verificar-item][data-i="${i}"]`)); }
+      ok(habil(w), 'al resolver todos los puntos se habilita «Siguiente»');
+      const guard = JSON.parse(w.localStorage.getItem(API.SKEY)); const pts = guard.acts['pts_' + sc.id];
+      ok(Math.abs(pts - (0.5 + 0 + (sc.items.length - 2))) < 1e-9, 'puntos guardados para el docente: 0,5 + 0 + ' + (sc.items.length - 2) + ' = ' + pts);
+      ok(API.estado().aciertos === 0 && hud(w) === '0.0', 'estas actividades NO tocan la nota del quiz (HUD ' + hud(w) + ')');
+      if (iA >= 0) { API.irA(iA); const need = SL0[iA].minPalabras || 5; clic(q(w, '[data-test=abierta-guardar]')); ok(!habil(w), 'abierta: con respuestas vacías no se guarda ni avanza');
+        qa(w, '[data-test=abierta-txt]').forEach(x => { x.value = 'una dos'; x.dispatchEvent(new w.Event('input', { bubbles: true })); }); clic(q(w, '[data-test=abierta-guardar]')); ok(!habil(w), 'abierta: con menos de ' + need + ' palabras no avanza');
+        qa(w, '[data-test=abierta-txt]').forEach(x => { x.value = 'palabra '.repeat(need); x.dispatchEvent(new w.Event('input', { bubbles: true })); }); clic(q(w, '[data-test=abierta-guardar]')); ok(habil(w), 'abierta: con las palabras mínimas guarda y avanza'); }
+      if (iR >= 0) { API.irA(iR); await sleep(520); ok(!habil(w) && !!q(w, '#rescate-wrap button'), 'recta: sin responder aparece «No me sale» y Siguiente sigue apagado'); }
+      w.close(); } }
 
   console.log(`\n${pasos - fallos}/${pasos} comprobaciones OK${fallos ? ' · ' + fallos + ' ❌' : ''}`); process.exit(fallos ? 1 : 0);
 })().catch(e => { console.error('ERROR del runner:', e); process.exit(3); });

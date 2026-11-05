@@ -2,7 +2,8 @@
 
 > Las versiones anteriores del prompt (v24, v25) ya no están en el repositorio. Se pueden recuperar con `git checkout archivo-v24-v25`.
 
-## v26 + banco de imágenes (módulo 33)
+## v26 + banco de imágenes (módulo 33) + actividades v27 (módulo 34)
+- **Motor 27.0:** 6 tipos de actividad nuevos inspirados en «Proceso de subir de grado»: `cuadricula`, `recta`, `comparar`, `podio` (2 intentos por punto, 💡 Pista, 1/0,5/0 puntos para el docente), `abierta` (redactar, revisa el docente) y `cuaderno` (hoja a mano, imprimible); campo `ejemplo` («Ejemplo resuelto → Ahora tú») en cualquier actividad. Auditor con validación de datos (marcas exactas en la recta, signo correcto, puestos 1..n). Prueba e2e T23 y clase de ejemplo `mat4_decimales`.
 - Se retira `assets-reutilizables/` (sus 46 imágenes y ids viven ahora en `banco-imagenes/`); el prompt, `limpiar_recortes.py --registrar` y el empaquetador apuntan al banco.
 - Revisión completa del banco: 181 imágenes aprobadas por tema (decimales, dinero, detectives, fábrica, internet, seguridad digital…), 250 específicas, 62 descartadas (propiedad intelectual, baja resolución o recorte cortado), 14 poses de ARIA cortadas por el borde (no recuperables, a regenerar) y 3 limpiadas con `limpiar_recortes.py`.
 - Banco central `banco-imagenes/` (505 recursos, `banco.json`), `empaquetar_assets.py` y `construir_clase.py` lo leen por defecto; las imágenes `descartada` se bloquean.

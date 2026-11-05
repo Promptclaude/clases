@@ -6,7 +6,7 @@ Uso:  python3 tools/auditar_clase.py clase.html [--json informe.json]
 import json, os, re, subprocess, sys
 PROHIBIDAS = ['incorrecto', 'fallaste', 'estás mal', 'error tuyo']
 MARCAS = ['fortnite', 'free fire', 'freefire', 'minecraft', 'among us', 'roblox', 'pokemon', 'pokémon', 'mario bros', 'disney', 'marvel', 'nintendo', 'epic games', 'pixar', 'brawl stars', 'clash royale']
-TIPOS = {'intro', 'info', 'tf', 'fill', 'drag', 'match', 'orden', 'wordsearch', 'interactive', 'minijuego', 'historia', 'quiz', 'evalFinal', 'final', 'repaso', 'practica'}
+TIPOS = {'intro', 'info', 'tf', 'fill', 'drag', 'match', 'orden', 'wordsearch', 'interactive', 'minijuego', 'historia', 'quiz', 'evalFinal', 'final', 'repaso', 'practica', 'cuadricula', 'recta', 'comparar', 'podio', 'abierta', 'cuaderno'}
 IDS = ['nota-hud', 'nota-delta', 'aciertos-hud', 'nota-intento-hud', 'razon-bloqueo', 'rescate-wrap', 'aviso-guardado', 'btn-next', 'btn-prev', 'stage']
 UNICAS = ['puedeAvanzar', 'aplicarEstadoAvance', 'updScore', 'htmlRetroQuiz', 'sesionGuardadaEsValida', 'esEstudianteNuevo', 'construirEntradaEstudiante', 'pintarNota', 'marcarActividadHecha', 'razonBloqueo', 'almacen', 'save', 'load']
 def main():
@@ -53,6 +53,25 @@ def main():
                 run = run + 1 if a['type'] == b['type'] else 1
                 if run > 2: E.append(f"Más de 2 slides seguidas del tipo {b['type']} (Prioridad 46)"); break
             chk('dba' in D['meta'] and len(D['meta']['dba']) > 10, 'DBA declarado', 'Falta meta.dba')
+            def num(x): return float(str(x).replace(' ', '').replace(',', '.'))
+            for s in S:
+                t, its = s['type'], s.get('items', [])
+                if t in ('cuadricula', 'recta', 'comparar', 'podio'): chk(len(its) >= 2, '', f"{s['id']}: {t} necesita mínimo 2 puntos (items)")
+                if t == 'cuadricula':
+                    for k, x in enumerate(its): chk(isinstance(x.get('objetivo'), int) and 0 < x['objetivo'] <= x.get('total', 100) and bool(x.get('enunciado')), '', f"{s['id']}/{k}: cuadricula necesita enunciado y objetivo entero entre 1 y total")
+                if t == 'recta':
+                    for k, x in enumerate(its):
+                        p, d, a = x.get('paso', 0.1), x.get('divisiones', 10), x.get('inicio', 0); m = (x.get('valor', -1e9) - a) / p
+                        chk(abs(m - round(m)) < 1e-9 and 0 <= round(m) <= d, '', f"{s['id']}/{k}: el valor {x.get('valor')} no cae exactamente en una marca de la recta ({a} a {a + d * p})")
+                if t == 'comparar':
+                    for k, x in enumerate(its):
+                        try:
+                            real = '<' if num(x['a']) < num(x['b']) else '>' if num(x['a']) > num(x['b']) else '='
+                            chk('signo' not in x or x['signo'] == real, '', f"{s['id']}/{k}: signo declarado {x.get('signo')} pero {x['a']} {real} {x['b']}")
+                        except Exception: E.append(f"{s['id']}/{k}: comparar necesita a y b numéricos")
+                if t == 'podio': chk(sorted(x.get('puesto', 0) for x in its) == list(range(1, len(its) + 1)), '', f"{s['id']}: los puestos deben ser 1..{len(its)} sin repetir")
+                if t == 'abierta': chk(bool(s.get('prompts')) and all(len(p.split()) >= 4 for p in s['prompts']), '', f"{s['id']}: abierta necesita prompts (frases de mínimo 4 palabras)")
+                if t == 'cuaderno': chk(bool(s.get('partes')) and all(p.get('puntos') for p in s['partes']), '', f"{s['id']}: cuaderno necesita partes con puntos")
             gens = set(re.findall(r'\n\s{2}(\w+)\(rng, base\)', js)); nq = 0; evalu = 0
             for s in S:
                 if s['type'] == 'info':

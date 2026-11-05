@@ -1,0 +1,402 @@
+{
+ "meta": {
+  "claseId": "mat4_p4_s_decimales_nivelacion",
+  "semana": 1,
+  "grado": 4,
+  "materia": "Aritmética",
+  "titulo": "Misión decimales: valor, orden y comparación",
+  "dba": "DBA: Interpreta, compara y ordena números decimales usando la recta numérica y el valor posicional"
+ },
+ "slides": [
+  {
+   "id": "m01",
+   "type": "intro",
+   "titulo": "¡Misión decimales!",
+   "mision": [
+    "🎯 Aprenderás: a leer, ubicar y comparar números decimales.",
+    "👆 Harás: sombrear cuadrículas, usar la recta, comparar y ordenar un podio.",
+    "🏆 Ganarás: estrellas y medallas."
+   ]
+  },
+  {
+   "id": "m02",
+   "type": "info",
+   "titulo": "La coma separa lo entero de lo decimal",
+   "texto": "En 3,7 el 3 es la parte entera y el 7 son siete décimas. Un cero a la derecha no cambia el valor: 2,5 es igual a 2,50.",
+   "aria": "asset://aria-asi-se-hace",
+   "ejemplo": "En 12,05 hay 12 enteros, 0 décimas y 5 centésimas. Se lee «doce enteros con cinco centésimas»."
+  },
+  {
+   "id": "m03",
+   "type": "cuadricula",
+   "titulo": "Sombrea el decimal",
+   "intro": "La cuadrícula tiene 100 cuadritos. Cada cuadrito vale 0,01.",
+   "ejemplo": "Para 0,25 se sombrean 25 cuadritos: 2 filas completas y 5 más.",
+   "items": [
+    {
+     "enunciado": "Sombrea 0,37",
+     "objetivo": 37,
+     "pista": "0,37 son 37 centésimas: sombrea 37 cuadritos.",
+     "porQue": "0,37 = 37 centésimas = 37 cuadritos."
+    },
+    {
+     "enunciado": "Sombrea 0,5",
+     "objetivo": 50,
+     "pista": "0,5 es lo mismo que 0,50: son 50 centésimas.",
+     "porQue": "0,5 = 0,50 = 50 cuadritos, la mitad."
+    },
+    {
+     "enunciado": "Sombrea 0,08",
+     "objetivo": 8,
+     "pista": "0,08 son 8 centésimas.",
+     "porQue": "0,08 = 8 centésimas = 8 cuadritos."
+    }
+   ]
+  },
+  {
+   "id": "m04",
+   "type": "quiz",
+   "titulo": "Quiz 1: valor posicional",
+   "preguntas": [
+    {
+     "id": "q1",
+     "dba": "Valor posicional",
+     "nivel": "recordar",
+     "enunciado": "¿Qué valor tiene la cifra 7 en 5,874?",
+     "calc": null,
+     "retroalimentacion": "Después de la coma: 8 décimas, 7 centésimas y 4 milésimas.",
+     "errorComun": "El 7 está en el segundo lugar después de la coma: centésimas.",
+     "opciones": [
+      {
+       "id": "a",
+       "texto": "7 décimas",
+       "correcta": false,
+       "porQue": "El 7 está en el segundo lugar después de la coma: centésimas."
+      },
+      {
+       "id": "b",
+       "texto": "7 centésimas",
+       "correcta": true
+      },
+      {
+       "id": "c",
+       "texto": "7 milésimas",
+       "correcta": false,
+       "porQue": "El 7 está en el segundo lugar después de la coma: centésimas."
+      },
+      {
+       "id": "d",
+       "texto": "7 unidades",
+       "correcta": false,
+       "porQue": "El 7 está en el segundo lugar después de la coma: centésimas."
+      }
+     ]
+    },
+    {
+     "id": "q2",
+     "dba": "Valor posicional",
+     "nivel": "aplicar",
+     "enunciado": "¿Cómo se escribe «veintitrés enteros con cuatro centésimas»?",
+     "calc": null,
+     "retroalimentacion": "Las centésimas ocupan el 2.º lugar tras la coma, así que el lugar de las décimas lleva 0.",
+     "errorComun": "Si falta el lugar de las décimas se rellena con 0: 23,04.",
+     "opciones": [
+      {
+       "id": "a",
+       "texto": "23,4",
+       "correcta": false,
+       "porQue": "Si falta el lugar de las décimas se rellena con 0: 23,04."
+      },
+      {
+       "id": "b",
+       "texto": "23,04",
+       "correcta": true
+      },
+      {
+       "id": "c",
+       "texto": "23,004",
+       "correcta": false,
+       "porQue": "Si falta el lugar de las décimas se rellena con 0: 23,04."
+      },
+      {
+       "id": "d",
+       "texto": "234",
+       "correcta": false,
+       "porQue": "Si falta el lugar de las décimas se rellena con 0: 23,04."
+      }
+     ]
+    },
+    {
+     "id": "q3",
+     "dba": "Equivalencias",
+     "nivel": "analizar",
+     "enunciado": "¿Cuál número vale lo mismo que 2,50?",
+     "calc": null,
+     "retroalimentacion": "Un cero a la derecha de la última cifra decimal no cambia el valor.",
+     "errorComun": "2,50 y 2,5 son el mismo valor; los otros cambian de lugar las cifras.",
+     "opciones": [
+      {
+       "id": "a",
+       "texto": "2,05",
+       "correcta": false,
+       "porQue": "2,50 y 2,5 son el mismo valor; los otros cambian de lugar las cifras."
+      },
+      {
+       "id": "b",
+       "texto": "2,5",
+       "correcta": true
+      },
+      {
+       "id": "c",
+       "texto": "25",
+       "correcta": false,
+       "porQue": "2,50 y 2,5 son el mismo valor; los otros cambian de lugar las cifras."
+      },
+      {
+       "id": "d",
+       "texto": "2,005",
+       "correcta": false,
+       "porQue": "2,50 y 2,5 son el mismo valor; los otros cambian de lugar las cifras."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "m05",
+   "type": "recta",
+   "titulo": "Ubica en la recta",
+   "intro": "Cada marca vale 0,1.",
+   "ejemplo": "Entre 0 y 1 la marca 3 es 0,3. Entre 2 y 3 la marca 3 es 2,3.",
+   "items": [
+    {
+     "enunciado": "Toca la marca de 0,3",
+     "inicio": 0,
+     "valor": 0.3,
+     "porQue": "Se cuentan 3 marcas desde el 0."
+    },
+    {
+     "enunciado": "Toca la marca de 0,8",
+     "inicio": 0,
+     "valor": 0.8,
+     "porQue": "Se cuentan 8 marcas desde el 0."
+    },
+    {
+     "enunciado": "Toca la marca de 2,6 (recta de 2 a 3)",
+     "inicio": 2,
+     "valor": 2.6,
+     "porQue": "Se cuentan 6 marcas desde el 2."
+    }
+   ]
+  },
+  {
+   "id": "m06",
+   "type": "comparar",
+   "titulo": "Compara con <, > o =",
+   "ejemplo": "2,09 y 2,9: enteros iguales; décimas 0 y 9. Como 0 es menor que 9, 2,09 < 2,9.",
+   "items": [
+    {
+     "a": "0,5",
+     "b": "0,50",
+     "porQue": "Un cero a la derecha no cambia el valor."
+    },
+    {
+     "a": "3,04",
+     "b": "3,4",
+     "porQue": "Décimas: 0 es menor que 4."
+    },
+    {
+     "a": "7,25",
+     "b": "7,205",
+     "porQue": "Centésimas: 5 es mayor que 0."
+    },
+    {
+     "a": "12,09",
+     "b": "12,9",
+     "porQue": "Décimas: 0 es menor que 9."
+    }
+   ]
+  },
+  {
+   "id": "m07",
+   "type": "podio",
+   "titulo": "El podio de los 100 m",
+   "intro": "Gana quien tarda menos tiempo. Elige el puesto de cada corredor.",
+   "ejemplo": "Con 9,5 s · 9,05 s · 9,25 s: gana 9,05 s, luego 9,25 s y al final 9,5 s.",
+   "items": [
+    {
+     "texto": "Valentina · 15,3 s",
+     "puesto": 4,
+     "porQue": "15,3 equivale a 15,30, el mayor tiempo."
+    },
+    {
+     "texto": "Camilo · 15,03 s",
+     "puesto": 1,
+     "porQue": "15,03 es el menor tiempo."
+    },
+    {
+     "texto": "Sofía · 15,25 s",
+     "puesto": 3,
+     "porQue": "15,25 es mayor que 15,205."
+    },
+    {
+     "texto": "Julián · 15,205 s",
+     "puesto": 2,
+     "porQue": "15,205 es mayor que 15,03 y menor que 15,25."
+    }
+   ]
+  },
+  {
+   "id": "m08",
+   "type": "abierta",
+   "titulo": "Explica con tus palabras",
+   "intro": "Tu docente leerá tus respuestas.",
+   "minPalabras": 6,
+   "ejemplo": "«Para comparar 4,36 y 4,306 miro enteros, luego décimas y luego centésimas; 6 es mayor que 0, así que 4,36 es mayor».",
+   "prompts": [
+    "Pedro dice que 7,205 es mayor que 7,25 porque 205 es mayor que 25. Explícale qué opinas.",
+    "Escribe los pasos para comparar dos números decimales."
+   ]
+  },
+  {
+   "id": "m09",
+   "type": "evalFinal",
+   "titulo": "Reto final",
+   "preguntas": [
+    {
+     "id": "e1",
+     "dba": "Comparación",
+     "nivel": "aplicar",
+     "enunciado": "¿Cuál número es mayor?",
+     "calc": null,
+     "retroalimentacion": "Tiene 3 enteros y 4 décimas, más que los demás.",
+     "errorComun": "Se debe comparar primero la parte entera y luego las décimas.",
+     "opciones": [
+      {
+       "id": "a",
+       "texto": "3,04",
+       "correcta": false,
+       "porQue": "Se debe comparar primero la parte entera y luego las décimas."
+      },
+      {
+       "id": "b",
+       "texto": "0,34",
+       "correcta": false,
+       "porQue": "Se debe comparar primero la parte entera y luego las décimas."
+      },
+      {
+       "id": "c",
+       "texto": "3,4",
+       "correcta": true
+      },
+      {
+       "id": "d",
+       "texto": "3,004",
+       "correcta": false,
+       "porQue": "Se debe comparar primero la parte entera y luego las décimas."
+      }
+     ]
+    },
+    {
+     "id": "e2",
+     "dba": "Orden",
+     "nivel": "analizar",
+     "enunciado": "¿Cuál es el orden de menor a mayor?",
+     "calc": null,
+     "retroalimentacion": "Igualando cifras: 5,02 · 5,20 · 5,25.",
+     "errorComun": "Se debe igualar cifras con ceros: 5,20 está entre 5,02 y 5,25.",
+     "opciones": [
+      {
+       "id": "a",
+       "texto": "5,2 · 5,02 · 5,25",
+       "correcta": false,
+       "porQue": "Se debe igualar cifras con ceros: 5,20 está entre 5,02 y 5,25."
+      },
+      {
+       "id": "b",
+       "texto": "5,25 · 5,2 · 5,02",
+       "correcta": false,
+       "porQue": "Se debe igualar cifras con ceros: 5,20 está entre 5,02 y 5,25."
+      },
+      {
+       "id": "c",
+       "texto": "5,02 · 5,2 · 5,25",
+       "correcta": true
+      },
+      {
+       "id": "d",
+       "texto": "5,02 · 5,25 · 5,2",
+       "correcta": false,
+       "porQue": "Se debe igualar cifras con ceros: 5,20 está entre 5,02 y 5,25."
+      }
+     ]
+    },
+    {
+     "id": "e3",
+     "dba": "Recta numérica",
+     "nivel": "recordar",
+     "enunciado": "En una recta de 0 a 1 con 10 partes iguales, la 7.ª marca es…",
+     "calc": null,
+     "retroalimentacion": "Cada parte vale 0,1 y 7 partes valen 0,7.",
+     "errorComun": "Cada parte vale una décima, no una centésima.",
+     "opciones": [
+      {
+       "id": "a",
+       "texto": "0,07",
+       "correcta": false,
+       "porQue": "Cada parte vale una décima, no una centésima."
+      },
+      {
+       "id": "b",
+       "texto": "0,7",
+       "correcta": true
+      },
+      {
+       "id": "c",
+       "texto": "7",
+       "correcta": false,
+       "porQue": "Cada parte vale una décima, no una centésima."
+      },
+      {
+       "id": "d",
+       "texto": "1,7",
+       "correcta": false,
+       "porQue": "Cada parte vale una décima, no una centésima."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "m10",
+   "type": "cuaderno",
+   "titulo": "Trabajo escrito en tu cuaderno",
+   "encabezado": "Misión decimales · Aritmética 4.° · tu nombre y la fecha",
+   "partes": [
+    {
+     "titulo": "PARTE 1 · Investiga",
+     "instrucciones": "Responde con mínimo 4 renglones y escribe tus fuentes.",
+     "puntos": [
+      "¿Qué es un número decimal y para qué se usa?",
+      "Busca una profesión donde se usen decimales y cuenta cómo."
+     ]
+    },
+    {
+     "titulo": "PARTE 2 · Ejercicios",
+     "instrucciones": "Muestra siempre el procedimiento.",
+     "puntos": [
+      "Escribe en cifras: seis enteros con nueve centésimas.",
+      "Compara con <, > o =: 0,45 ___ 0,5.",
+      "Ordena de menor a mayor: 8,2 · 8,02 · 8,25 · 8,205.",
+      "Dibuja una recta de 0 a 1 y ubica 0,2 · 0,6 · 0,9."
+     ]
+    }
+   ]
+  },
+  {
+   "id": "m11",
+   "type": "final",
+   "titulo": "¡Misión cumplida!"
+  }
+ ]
+}

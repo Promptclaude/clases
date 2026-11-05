@@ -13,7 +13,7 @@ def main():
     ap.add_argument('--assets', default=os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'banco-imagenes')); ap.add_argument('--presupuesto-mb', default='1.5')
     a = ap.parse_args()
     t = open(a.plantilla, encoding='utf8').read()
-    for marca, f in (('/*@@V23@@*/', 'v23_snippets.js'), ('/*@@FX@@*/', 'juego_fx_snippets.js')):
+    for marca, f in (('/*@@V23@@*/', 'v23_snippets.js'), ('/*@@FX@@*/', 'juego_fx_snippets.js'), ('/*@@V27@@*/', 'v27_actividades_snippets.js')):
         assert marca in t, 'falta la marca ' + marca
         t = t.replace(marca, open(os.path.join(a.motor_dir, f), encoding='utf8').read())
     if a.datos_de:
