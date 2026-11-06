@@ -6,7 +6,7 @@ Uso:  python3 tools/auditar_clase.py clase.html [--json informe.json]
 import json, os, re, subprocess, sys
 PROHIBIDAS = ['incorrecto', 'fallaste', 'estás mal', 'error tuyo']
 MARCAS = ['fortnite', 'free fire', 'freefire', 'minecraft', 'among us', 'roblox', 'pokemon', 'pokémon', 'mario bros', 'disney', 'marvel', 'nintendo', 'epic games', 'pixar', 'brawl stars', 'clash royale']
-TIPOS = {'intro', 'info', 'tf', 'fill', 'drag', 'match', 'orden', 'wordsearch', 'interactive', 'minijuego', 'historia', 'quiz', 'evalFinal', 'final', 'repaso', 'practica', 'cuadricula', 'recta', 'comparar', 'podio', 'abierta', 'cuaderno', 'enlazar', 'ordenar', 'memoria', 'relampago', 'sopa', 'candado'}
+TIPOS = {'intro', 'info', 'tf', 'fill', 'drag', 'match', 'orden', 'wordsearch', 'interactive', 'minijuego', 'historia', 'quiz', 'evalFinal', 'final', 'repaso', 'practica', 'fraccion', 'cuadricula', 'recta', 'comparar', 'podio', 'abierta', 'cuaderno', 'enlazar', 'ordenar', 'memoria', 'relampago', 'sopa', 'candado'}
 IDS = ['nota-hud', 'nota-delta', 'aciertos-hud', 'nota-intento-hud', 'razon-bloqueo', 'rescate-wrap', 'aviso-guardado', 'btn-next', 'btn-prev', 'stage']
 UNICAS = ['puedeAvanzar', 'aplicarEstadoAvance', 'updScore', 'htmlRetroQuiz', 'sesionGuardadaEsValida', 'esEstudianteNuevo', 'construirEntradaEstudiante', 'pintarNota', 'marcarActividadHecha', 'razonBloqueo', 'almacen', 'save', 'load']
 def main():
@@ -65,10 +65,24 @@ def main():
             fin = [x for x in S if x['type'] == 'final']
             if fin and not fin[0].get('aprendiste'): A.append("La slide final no tiene «aprendiste» (3 logros): la pantalla de celebración queda sin «Lo que lograste hoy» (Prioridad 67)")
             elif fin: chk(1 <= len(fin[0]['aprendiste']) <= 4 and all(len(x.split()) <= 20 for x in fin[0]['aprendiste']), '', 'La slide final: «aprendiste» debe tener 1 a 4 logros de máximo 20 palabras')
-            def num(x): return float(str(x).replace(' ', '').replace(',', '.'))
+            def num(x):                      # «0,75» · «3/4» · «25 %»
+                t = str(x).strip(); pc = t.endswith('%'); u = t.replace('%', '').replace(' ', '')
+                if '/' in u: a, b = u.split('/'); v = float(a.replace(',', '.')) / float(b.replace(',', '.'))
+                else: v = float(u.replace(',', '.'))
+                return v / 100 if pc else v
+            for s in S:
+                for obj, nom in [(s, s['id'])] + [(q, s['id'] + '/' + q.get('id', '?')) for q in s.get('preguntas', [])]:
+                    if obj.get('imagen'): chk(bool(obj.get('alt')) and len(obj['alt'].split()) >= 2, '', f"{nom}: la imagen de apoyo necesita «alt» (describe la imagen en 2+ palabras, para lectores de pantalla)")
             for s in S:
                 t, its = s['type'], s.get('items', [])
-                if t in ('cuadricula', 'recta', 'comparar', 'podio'): chk(len(its) >= 2, '', f"{s['id']}: {t} necesita mínimo 2 puntos (items)")
+                if t in ('fraccion', 'cuadricula', 'recta', 'comparar', 'podio'): chk(len(its) >= 2, '', f"{s['id']}: {t} necesita mínimo 2 puntos (items)")
+                if t == 'fraccion':
+                    for k, x in enumerate(its): chk(isinstance(x.get('partes'), int) and 2 <= x['partes'] <= 12 and isinstance(x.get('objetivo'), int) and 1 <= x['objetivo'] <= x['partes'] and x.get('forma', 'pizza') in ('pizza', 'barra') and bool(x.get('enunciado')), '', f"{s['id']}/{k}: fraccion necesita enunciado, partes (2 a 12), objetivo (1 a partes) y forma pizza|barra")
+                if t == 'ordenar':
+                    try:
+                        vs = [num(z) for z in s.get('items', [])]; asc = s.get('orden', 'asc') != 'desc'
+                        chk(vs == sorted(vs, reverse=not asc), '', f"{s['id']}: los items de ordenar no están en el orden correcto ({'de menor a mayor' if asc else 'de mayor a menor'}): {s['items']}")
+                    except Exception: pass
                 if t == 'cuadricula':
                     for k, x in enumerate(its): chk(isinstance(x.get('objetivo'), int) and 0 < x['objetivo'] <= x.get('total', 100) and bool(x.get('enunciado')), '', f"{s['id']}/{k}: cuadricula necesita enunciado y objetivo entero entre 1 y total")
                 if t == 'recta':

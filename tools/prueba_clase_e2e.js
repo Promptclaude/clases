@@ -28,7 +28,8 @@ const habil = w => !next(w).disabled;
 async function esperaHabil(w, ms = 1500) { const t0 = Date.now(); while (Date.now() - t0 < ms) { if (habil(w)) return true; await sleep(20); } return habil(w); }
 const idxTipo = (w, ...tipos) => w.CLASE_API.SL.findIndex(x => tipos.includes(x.type));
 const idxEvaluables = w => w.CLASE_API.SL.map((x, i) => ['quiz', 'evalFinal'].includes(x.type) ? i : -1).filter(i => i >= 0);
-const NUEVOS27 = ['cuadricula', 'recta', 'comparar', 'podio', 'abierta', 'cuaderno'];
+const val27 = x => { const t = String(x).trim(), pc = t.endsWith('%'), u = t.replace('%', '').replace(/\s/g, ''); let v; if (u.includes('/')) { const [a, b] = u.split('/'); v = parseFloat(a.replace(',', '.')) / parseFloat(b.replace(',', '.')); } else v = parseFloat(u.replace(',', '.')); return pc ? v / 100 : v; };
+const NUEVOS27 = ['fraccion', 'cuadricula', 'recta', 'comparar', 'podio', 'abierta', 'cuaderno'];
 const NUEVOS28 = ['enlazar', 'ordenar', 'memoria', 'relampago', 'sopa', 'candado'];
 const ACTIVIDADES = ['tf', 'fill', 'drag', 'match', 'orden', 'wordsearch', 'interactive', 'minijuego', 'historia', ...NUEVOS27, ...NUEVOS28];
 const cerrarModal = w => { if (!q(w, '#modal').hidden) { const b = q(w, '#modal button'); if (b) clic(b); } };
@@ -55,8 +56,9 @@ async function jugarNuevo27(w, s, t, modo) {
   for (let i = 0; i < s.items.length; i++) {
     const x = s.items[i], bien = modo === 'bien';
     if (t === 'cuadricula') { const n = bien ? x.objetivo : 1; for (let c = 0; c < n; c++) clic(sel('cuad-celda', i, `[data-c="${c}"]`)); }
+    if (t === 'fraccion') { const n = bien ? x.objetivo : (x.objetivo === 1 ? 2 : 1); for (let c = 0; c < n; c++) clic(sel('frac-parte', i, `[data-c="${c}"]`)); }
     if (t === 'recta') { const p = x.paso || 0.1, d = x.divisiones || 10, ok = Math.round((x.valor - (x.inicio || 0)) / p); clic(sel('marca', i, `[data-m="${bien ? ok : (ok + 1) % (d + 1)}"]`)); }
-    if (t === 'comparar') { const a = parseFloat(x.a.replace(',', '.')), b = parseFloat(x.b.replace(',', '.')), real = a < b ? '<' : a > b ? '>' : '='; clic(sel('cmp', i, `[data-v="${bien ? real : (real === '<' ? '>' : '<')}"]`)); }
+    if (t === 'comparar') { const a = val27(x.a), b = val27(x.b), real = Math.abs(a - b) < 1e-9 ? '=' : a < b ? '<' : '>'; clic(sel('cmp', i, `[data-v="${bien ? real : (real === '<' ? '>' : '<')}"]`)); }
     if (t === 'podio') { const e = sel('puesto', i); e.value = String(bien ? x.puesto : (x.puesto % s.items.length) + 1); e.dispatchEvent(new w.Event('change', { bubbles: true })); }
     ver(i);
     if (!bien) { const b2 = q(w, `[data-test=verificar-item][data-i="${i}"]`); if (b2) clic(b2); }   // 2.º intento: se resuelve solo
@@ -257,5 +259,19 @@ async function recorrer(w, modo, tope = 40) { let n = 0; const vistos = []; whil
     ok(!!q(w, '[data-test=final-nota]'), 'la nota oficial sigue visible en la pantalla final');
     w.close(); }
 
+  T('T26 · Imágenes de apoyo, fracciones pintables y comparar con fracciones/porcentajes');
+  { const iI = SL0.findIndex(x => x.imagen), iF = SL0.findIndex(x => x.type === 'fraccion');
+    if (iI < 0 && iF < 0) console.log('  ⚠️  la clase no usa imágenes de apoyo ni fracciones: no aplica');
+    else { const w = abrir({ est: 'olga' }).window, API = w.CLASE_API, c = sel => { const e = q(w, sel); if (e) clic(e); };
+      if (iI >= 0) { API.irA(iI); const im = q(w, '[data-test=img-apoyo]'); ok(!!im && /^data:image/.test(im.src), 'la imagen de apoyo viene empaquetada (sin internet)'); ok(!!im && im.alt.split(' ').length >= 2 && !/Imagen de apoyo$/.test(im.alt), 'la imagen de apoyo tiene texto alternativo descriptivo: «' + (im ? im.alt : '') + '»'); }
+      const iQ = SL0.findIndex(x => (x.preguntas || []).some(p => p.imagen));
+      if (iQ >= 0) { API.irA(iQ); const k = SL0[iQ].preguntas.findIndex(p => p.imagen); for (let n = 0; n < k; n++) { const cc = API.opcionCorrectaActual(); clic(qa(w, '[data-test=opcion]').find(o => o.dataset.op === cc.id)); cerrarModal(w); await sleep(90); }
+        const iq = q(w, '[data-test=img-apoyo]'); ok(!!iq && /^data:image/.test(iq.src) && iq.alt.split(' ').length >= 3, 'quiz: la pregunta ' + (k + 1) + ' muestra su imagen de apoyo con «alt»: «' + (iq ? iq.alt.slice(0, 40) : '') + '…»'); ok(!!q(w, '[data-test=enunciado]') && qa(w, '[data-test=opcion]').length >= 3, 'quiz: con imagen, el enunciado y las opciones siguen visibles'); }
+      if (iF >= 0) { API.irA(iF); const s = SL0[iF], x0 = s.items[0];
+        ok(qa(w, '[data-test=frac-parte][data-i="0"]').length === x0.partes, 'fraccion: la figura se dibuja con ' + x0.partes + ' partes');
+        const mal = x0.objetivo === 1 ? 2 : 1; for (let k = 0; k < mal; k++) c(`[data-test=frac-parte][data-i="0"][data-c="${k}"]`); c('[data-test=verificar-item][data-i="0"]'); ok(/te queda 1 intento/.test(q(w, '.v27-it[data-i="0"] [data-test=item-fb]').textContent), 'fraccion: pintar de más/menos avisa y deja otro intento');
+        const p0 = q(w, '[data-test=frac-parte][data-i="0"][data-c="0"]'); p0.dispatchEvent(new w.KeyboardEvent('keydown', { key: 'Enter', bubbles: true })); await sleep(20);
+        ok(q(w, '[data-test=frac-parte][data-i="0"][data-c="0"]').getAttribute('aria-label').includes('pintada') !== (mal >= 1), 'fraccion: se puede pintar con teclado (Enter)');
+        w.close(); } } }
   console.log(`\n${pasos - fallos}/${pasos} comprobaciones OK${fallos ? ' · ' + fallos + ' ❌' : ''}`); process.exit(fallos ? 1 : 0);
 })().catch(e => { console.error('ERROR del runner:', e); process.exit(3); });

@@ -48,6 +48,7 @@ input[type=text]{font:inherit;font-size:1.05rem;padding:8px 10px;border:3px soli
 #fx-intro{position:fixed;inset:0;z-index:70;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;text-align:center;color:#fff;padding:20px;background:radial-gradient(ellipse at 50% 40%,#2a1470 0,#0b0630 60%,#030115 100%)}#fx-intro[hidden]{display:none}
 #fx-intro h1{font-size:2rem;color:#ffe27a;text-shadow:0 4px 0 #2B1B6B}
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.delta-vis{opacity:1}}
+.img-apoyo{display:block;max-width:100%;max-height:230px;margin:10px auto;border-radius:12px;object-fit:contain}
 </style>
 </head>
 <body>
@@ -282,7 +283,7 @@ function rQuiz(s) {
   const idx = st.acts['quiz_idx_' + s.id] || 0;
   if (idx >= s.preguntas.length) return rResumen(s);
   const v = vistaPregunta(s, idx);
-  return '<h2>' + esc(s.titulo) + '</h2><p><strong>Pregunta ' + (idx + 1) + ' de ' + s.preguntas.length + '</strong></p><p data-test="enunciado">' + esc(v.preg.enunciado) + '</p>' +
+  return '<h2>' + esc(s.titulo) + '</h2><p><strong>Pregunta ' + (idx + 1) + ' de ' + s.preguntas.length + '</strong></p><p data-test="enunciado">' + esc(v.preg.enunciado) + '</p>' + imgApoyo(v.preg) +
     '<div role="group" aria-label="Opciones">' + v.opcs.map(o => '<button type="button" class="btn opcion" data-test="opcion" data-accion="opcion" data-q="' + idx + '" data-op="' + esc(o.id) + '">' + esc(o.texto) + '</button>').join('') + '</div>';
 }
 function rResumen(s) {
@@ -311,7 +312,8 @@ function responderQuiz(sId, qIdx, opId) {
 
 /* ── actividades sin nota ── */
 const tarjeta = (m, c, p, g) => '<div class="tarjeta-reto"><p>🎯 <strong>Misión:</strong> ' + m + '</p><p>👆 <strong>Cómo:</strong> ' + c + '</p><p>✅ <strong>Para seguir:</strong> ' + p + '</p><p>📊 <strong>Progreso:</strong> <span data-test="prog">' + g + '</span></p></div>';
-function rInfo(s) { return '<h2>' + esc(s.titulo) + '</h2><p>' + esc(s.texto) + '</p>' + (s.aria ? '<img src="' + esc(s.aria) + '" alt="ARIA explica" width="190">' : ''); }
+const imgApoyo = o => o && o.imagen ? '<img class="img-apoyo" data-test="img-apoyo" src="' + esc(o.imagen) + '" alt="' + esc(o.alt || 'Imagen de apoyo') + '">' : '';
+function rInfo(s) { return '<h2>' + esc(s.titulo) + '</h2><p>' + esc(s.texto) + '</p>' + imgApoyo(s) + (s.aria ? '<img src="' + esc(s.aria) + '" alt="ARIA explica" width="190">' : ''); }
 function rIntro(s) { return '<h1>' + esc(s.titulo) + '</h1><ul>' + s.mision.map(m => '<li>' + esc(m) + '</li>').join('') + '</ul><p>Jugador: <strong>' + esc(NOMBRE) + '</strong> · Grupo ' + esc(GRUPO) + '</p>'; }
 function rTF(s) {
   const r = st.acts['tf_resps_' + s.id] || {};

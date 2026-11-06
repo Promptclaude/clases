@@ -48,6 +48,7 @@ input[type=text]{font:inherit;font-size:1.05rem;padding:8px 10px;border:3px soli
 #fx-intro{position:fixed;inset:0;z-index:70;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;text-align:center;color:#fff;padding:20px;background:radial-gradient(ellipse at 50% 40%,#2a1470 0,#0b0630 60%,#030115 100%)}#fx-intro[hidden]{display:none}
 #fx-intro h1{font-size:2rem;color:#ffe27a;text-shadow:0 4px 0 #2B1B6B}
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.delta-vis{opacity:1}}
+.img-apoyo{display:block;max-width:100%;max-height:230px;margin:10px auto;border-radius:12px;object-fit:contain}
 </style>
 </head>
 <body>
@@ -684,6 +685,7 @@ function razonBloqueo(s) {
     case 'orden':      return '🔢 Ordena como creas y pulsa «Verificar».';
     case 'wordsearch': return '🔍 Encuentra 1 palabra, o espera y pulsa «No me sale».';
     case 'interactive':return '👆 Toca al menos 1 elemento de la imagen.';
+    case 'fraccion':   return '🍕 Pinta las partes y pulsa «Verificar» (o «No me sale»).';
     case 'cuadricula': return '🟨 Sombrea los cuadritos y pulsa «Verificar» (o «No me sale»).';
     case 'recta':      return '📏 Toca una marca de la recta y pulsa «Verificar» (o «No me sale»).';
     case 'comparar':   return '⚖️ Elige &lt;, &gt; o = y pulsa «Verificar» (o «No me sale»).';
@@ -1058,7 +1060,7 @@ function rQuiz(s) {
   const idx = st.acts['quiz_idx_' + s.id] || 0;
   if (idx >= s.preguntas.length) return rResumen(s);
   const v = vistaPregunta(s, idx);
-  return '<h2>' + esc(s.titulo) + '</h2><p><strong>Pregunta ' + (idx + 1) + ' de ' + s.preguntas.length + '</strong></p><p data-test="enunciado">' + esc(v.preg.enunciado) + '</p>' +
+  return '<h2>' + esc(s.titulo) + '</h2><p><strong>Pregunta ' + (idx + 1) + ' de ' + s.preguntas.length + '</strong></p><p data-test="enunciado">' + esc(v.preg.enunciado) + '</p>' + imgApoyo(v.preg) +
     '<div role="group" aria-label="Opciones">' + v.opcs.map(o => '<button type="button" class="btn opcion" data-test="opcion" data-accion="opcion" data-q="' + idx + '" data-op="' + esc(o.id) + '">' + esc(o.texto) + '</button>').join('') + '</div>';
 }
 function rResumen(s) {
@@ -1087,7 +1089,8 @@ function responderQuiz(sId, qIdx, opId) {
 
 /* ── actividades sin nota ── */
 const tarjeta = (m, c, p, g) => '<div class="tarjeta-reto"><p>🎯 <strong>Misión:</strong> ' + m + '</p><p>👆 <strong>Cómo:</strong> ' + c + '</p><p>✅ <strong>Para seguir:</strong> ' + p + '</p><p>📊 <strong>Progreso:</strong> <span data-test="prog">' + g + '</span></p></div>';
-function rInfo(s) { return '<h2>' + esc(s.titulo) + '</h2><p>' + esc(s.texto) + '</p>' + (s.aria ? '<img src="' + esc(s.aria) + '" alt="ARIA explica" width="190">' : ''); }
+const imgApoyo = o => o && o.imagen ? '<img class="img-apoyo" data-test="img-apoyo" src="' + esc(o.imagen) + '" alt="' + esc(o.alt || 'Imagen de apoyo') + '">' : '';
+function rInfo(s) { return '<h2>' + esc(s.titulo) + '</h2><p>' + esc(s.texto) + '</p>' + imgApoyo(s) + (s.aria ? '<img src="' + esc(s.aria) + '" alt="ARIA explica" width="190">' : ''); }
 function rIntro(s) { return '<h1>' + esc(s.titulo) + '</h1><ul>' + s.mision.map(m => '<li>' + esc(m) + '</li>').join('') + '</ul><p>Jugador: <strong>' + esc(NOMBRE) + '</strong> · Grupo ' + esc(GRUPO) + '</p>'; }
 function rTF(s) {
   const r = st.acts['tf_resps_' + s.id] || {};
@@ -1130,8 +1133,8 @@ const RENDER = { intro: rIntro, info: rInfo, tf: rTF, fill: rFill, drag: rDrag, 
 // Regla del motor que se mantiene: NINGUNA de estas actividades toca la nota del quiz ni retiene a nadie.
 // Los puntos (1 · 0,5 · 0) quedan en st.acts['pts_<id>'] solo como dato para el docente.
 
-Object.assign(CLAVE_HECHO, { cuadricula: 'cuad_done_', recta: 'recta_done_', comparar: 'cmp_done_', podio: 'podio_done_', abierta: 'abierta_done_', cuaderno: 'cuaderno_done_' });
-['cuadricula', 'recta', 'comparar', 'podio', 'abierta', 'cuaderno'].forEach(t => { if (!TIPOS_ACTIVIDAD.includes(t)) TIPOS_ACTIVIDAD.push(t); });
+Object.assign(CLAVE_HECHO, { fraccion: 'frac_done_', cuadricula: 'cuad_done_', recta: 'recta_done_', comparar: 'cmp_done_', podio: 'podio_done_', abierta: 'abierta_done_', cuaderno: 'cuaderno_done_' });
+['fraccion', 'cuadricula', 'recta', 'comparar', 'podio', 'abierta', 'cuaderno'].forEach(t => { if (!TIPOS_ACTIVIDAD.includes(t)) TIPOS_ACTIVIDAD.push(t); });
 
 (function () {
   const css = document.createElement('style');
@@ -1140,6 +1143,7 @@ Object.assign(CLAVE_HECHO, { cuadricula: 'cuad_done_', recta: 'recta_done_', com
     '.v27-cuad{display:grid;grid-template-columns:repeat(10,1fr);gap:3px;max-width:340px;margin:8px 0}' +
     '.v27-cuad button{aspect-ratio:1;border:1px solid #64748b;background:#fff;border-radius:3px;cursor:pointer;padding:0}' +
     '.v27-cuad button.on{background:#fbbf24}.v27-cuad button:disabled{cursor:default}' +
+    '.v27-it svg path:focus{outline:3px solid #fbbf24}' +
     '.v27-recta{display:flex;gap:3px;align-items:flex-end;margin:8px 0;padding-bottom:4px}' +
     '.v27-recta button{flex:1 1 0;min-width:0;border:2px solid #64748b;background:#fff;border-radius:8px;padding:10px 0;cursor:pointer;font-size:.72rem;color:#1f2937}' +
     '.v27-recta button.on{background:#fbbf24;border-color:#b45309}' +
@@ -1152,13 +1156,25 @@ Object.assign(CLAVE_HECHO, { cuadricula: 'cuad_done_', recta: 'recta_done_', com
 })();
 
 const v27N = x => String(x).replace(/\s/g, '').replace(',', '.');
+// Valor numérico de «0,75» · «3/4» · «25 %» (fracciones y porcentajes incluidos)
+const v27Val = x => { const t = String(x).trim(), pc = t.endsWith('%'), u = t.replace('%', '').replace(/\s/g, ''); let v; if (u.includes('/')) { const [a, b] = u.split('/'); v = parseFloat(a.replace(',', '.')) / parseFloat(b.replace(',', '.')); } else v = parseFloat(u.replace(',', '.')); return pc ? v / 100 : v; };
 const v27Fmt = n => String(Math.round(n * 1000) / 1000).replace('.', ',');
 const v27Est = s => { const k = 'v27_' + s.id; if (!st.acts[k]) st.acts[k] = {}; return st.acts[k]; };
 const v27Item = (s, i) => { const e = v27Est(s); if (!e[i]) e[i] = { v: null, t: 0, r: null, h: 0 }; return e[i]; };
-const v27Items = s => s.type === 'cuadricula' || s.type === 'recta' || s.type === 'comparar' || s.type === 'podio' ? s.items : [];
+const v27Items = s => s.type === 'fraccion' || s.type === 'cuadricula' || s.type === 'recta' || s.type === 'comparar' || s.type === 'podio' ? s.items : [];
 
 // ── por tipo: qué se muestra, qué es correcto, pista y solución ──
 const V27 = {
+  fraccion: {
+    vacio: it => !(it.v && it.v.length),
+    ok: (s, i, v) => v.length === s.items[i].objetivo,
+    pista: (s, i) => s.items[i].pista || 'El todo está dividido en ' + s.items[i].partes + ' partes iguales: pinta las que indica el numerador.',
+    sol: (s, i) => 'Había que pintar ' + s.items[i].objetivo + ' de ' + s.items[i].partes + ' partes.',
+    ctl: (s, i, it, bloq) => { const x = s.items[i], n = x.partes, sel = it.v || [], barra = x.forma === 'barra', mk = (c, d) => '<path data-test="frac-parte" data-accion="v27-celda" data-i="' + i + '" data-c="' + c + '" d="' + d + '" fill="' + (sel.includes(c) ? '#fbbf24' : '#fff') + '" stroke="#475569" stroke-width="2" ' + (bloq ? '' : 'tabindex="0" role="button" style="cursor:pointer" ') + 'aria-label="Parte ' + (c + 1) + ' de ' + n + (sel.includes(c) ? ' pintada' : '') + '"/>';
+      let g = ''; if (barra) { const w = 240 / n; for (let c = 0; c < n; c++) g += mk(c, 'M' + (c * w + 4) + ' 14h' + w + 'v52h-' + w + 'Z'); return '<svg viewBox="0 0 248 80" width="260" role="group" aria-label="Barra dividida en ' + n + ' partes">' + g + '</svg><p>Pintadas: <strong>' + sel.length + '</strong> de ' + n + '</p>'; }
+      for (let c = 0; c < n; c++) { const a0 = -Math.PI / 2 + c * 2 * Math.PI / n, a1 = a0 + 2 * Math.PI / n, X = a => (62 + 56 * Math.cos(a)).toFixed(2), Y = a => (62 + 56 * Math.sin(a)).toFixed(2); g += mk(c, 'M62 62L' + X(a0) + ' ' + Y(a0) + 'A56 56 0 0 1 ' + X(a1) + ' ' + Y(a1) + 'Z'); }
+      return '<svg viewBox="0 0 124 124" width="170" role="group" aria-label="Pizza dividida en ' + n + ' partes">' + g + '</svg><p>Pintadas: <strong>' + sel.length + '</strong> de ' + n + '</p>'; }
+  },
   cuadricula: {
     vacio: it => !(it.v && it.v.length),
     ok: (s, i, v) => v.length === s.items[i].objetivo,
@@ -1178,7 +1194,7 @@ const V27 = {
   },
   comparar: {
     vacio: it => it.v == null,
-    signo: x => x.signo || (parseFloat(v27N(x.a)) < parseFloat(v27N(x.b)) ? '<' : parseFloat(v27N(x.a)) > parseFloat(v27N(x.b)) ? '>' : '='),
+    signo: x => x.signo || (Math.abs(v27Val(x.a) - v27Val(x.b)) < 1e-9 ? '=' : v27Val(x.a) < v27Val(x.b) ? '<' : '>'),
     ok(s, i, v) { return v === this.signo(s.items[i]); },
     pista: (s, i) => s.items[i].pista || 'Compara primero la parte entera; si es igual, las décimas, luego las centésimas. Iguala las cifras con ceros.',
     sol(s, i) { return s.items[i].a + ' ' + this.signo(s.items[i]) + ' ' + s.items[i].b; },
@@ -1196,7 +1212,7 @@ const v27Texto = (s, i) => { const x = s.items[i]; return s.type === 'comparar' 
 
 function rItems27(s) {
   const e = v27Est(s), n = s.items.length, hechos = s.items.filter((_, i) => v27Item(s, i).r !== null).length, T = V27[s.type];
-  const misiones = { cuadricula: 'Sombrea la cantidad de cuadritos que pide cada punto.', recta: 'Toca la marca de la recta que corresponde a cada número.', comparar: 'Elige el signo &lt;, &gt; o = para cada pareja.', podio: 'Elige el puesto de cada participante.' };
+  const misiones = { fraccion: 'Pinta las partes que indica cada fracción.', cuadricula: 'Sombrea la cantidad de cuadritos que pide cada punto.', recta: 'Toca la marca de la recta que corresponde a cada número.', comparar: 'Elige el signo &lt;, &gt; o = para cada pareja.', podio: 'Elige el puesto de cada participante.' };
   return '<h2>' + esc(s.titulo) + '</h2>' + (s.intro ? '<p>' + esc(s.intro) + '</p>' : '') +
     tarjeta(misiones[s.type], 'Cada punto tiene <strong>2 intentos</strong> y un botón 💡 Pista.', 'Resuelve cada punto (¡aunque dudes!) o pulsa «No me sale».', hechos + ' de ' + n + ' puntos') +
     s.items.map((x, i) => { const it = v27Item(s, i), bloq = it.r !== null, ok = it.r === 1 || it.r === 0.5;
@@ -1223,8 +1239,8 @@ function rCuaderno(s) {
 }
 
 // «ejemplo resuelto → ahora tú» en cualquier actividad con campo `ejemplo`
-const v27Ejemplo = html => s => { const h = html(s); if (!s.ejemplo) return h; const box = '<div class="v27-ex" data-test="ejemplo"><strong>📘 Ejemplo resuelto:</strong> ' + esc(s.ejemplo) + '<br><strong>✏️ Ahora tú:</strong> es lo mismo, solo cambian los datos.</div>', k = h.indexOf('</h2>'); return k < 0 ? box + h : h.slice(0, k + 5) + box + h.slice(k + 5); };
-Object.assign(RENDER, { cuadricula: rItems27, recta: rItems27, comparar: rItems27, podio: rItems27, abierta: rAbierta, cuaderno: rCuaderno });
+const v27Ejemplo = html => s => { const h = html(s); if (!s.ejemplo) return h; const box = '<div class="v27-ex" data-test="ejemplo"><strong>📘 Ejemplo resuelto:</strong> ' + esc(s.ejemplo) + '<br><strong>✏️ Ahora tú:</strong> es lo mismo, solo cambian los datos.</div>', k = h.indexOf('</h2>'); if (s.type === 'info') return h + box; return k < 0 ? box + h : h.slice(0, k + 5) + box + h.slice(k + 5); };   // lectura: primero el concepto, luego el ejemplo
+Object.assign(RENDER, { fraccion: rItems27, cuadricula: rItems27, recta: rItems27, comparar: rItems27, podio: rItems27, abierta: rAbierta, cuaderno: rCuaderno });
 Object.keys(RENDER).forEach(t => { if (!['intro', 'final', 'quiz', 'evalFinal'].includes(t)) RENDER[t] = v27Ejemplo(RENDER[t]); });
 
 // ── eventos ──
@@ -1259,6 +1275,7 @@ $('stage').addEventListener('change', e => {
   if (t.dataset.accion === 'v27-puesto') { const it = v27Item(s, +t.dataset.i); if (it.r !== null) return; it.v = t.value; save(); }
   if (t.dataset.accion === 'v27-cuaderno') { st.acts['cuaderno_ok_' + s.id] = t.checked; if (t.checked) { marcarActividadHecha(s.id, 'acierto'); sumarXP(10); Juego.evento('actividad'); } save(); render(false); }
 });
+$('stage').addEventListener('keydown', e => { const t = e.target; if ((e.key === 'Enter' || e.key === ' ') && t && t.dataset && t.dataset.test === 'frac-parte') { e.preventDefault(); t.dispatchEvent(new MouseEvent('click', { bubbles: true })); } });
 
 // ═══ v28 · 66 — JUEGOS DE APLICACIÓN: enlazar · ordenar · memoria · relampago · sopa · candado ═══
 // Misma regla de oro que v27: NO tocan la nota del quiz, nadie se queda atrapado («No me sale» a los 25 s),

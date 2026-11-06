@@ -1,0 +1,564 @@
+{
+ "meta": {
+  "claseId": "mat5_p4_s3_pizzeria_fracciones",
+  "semana": 3,
+  "grado": 5,
+  "materia": "Aritmética",
+  "titulo": "La pizzería de las fracciones",
+  "dba": "DBA: Reconoce y usa fracciones, decimales y porcentajes equivalentes en situaciones cotidianas"
+ },
+ "slides": [
+  {
+   "id": "p01",
+   "type": "intro",
+   "titulo": "¡Bienvenido a la pizzería!",
+   "mision": [
+    "🎯 Aprenderás: a pasar de fracción a decimal y a porcentaje.",
+    "👆 Harás: pintar pizzas, unir, ubicar en la recta y abrir el candado de la caja fuerte.",
+    "🏆 Ganarás: estrellas, medallas y un tesoro."
+   ]
+  },
+  {
+   "id": "p02",
+   "type": "info",
+   "titulo": "Tres formas de decir lo mismo",
+   "texto": "Una porción de una pizza partida en 4 partes iguales es 1/4, 0,25 o 25 %. Son tres formas de escribir la misma cantidad.",
+   "imagen": "asset://img-8995c501b5",
+   "alt": "Pizza partida en cuatro con una porción señalada: un cuarto es 0,25",
+   "ejemplo": "La mitad de la pizza: 1/2 = 0,5 = 50 %. Para pasar de fracción a decimal se divide: 1 ÷ 2 = 0,5."
+  },
+  {
+   "id": "p03",
+   "type": "fraccion",
+   "titulo": "Pinta la fracción",
+   "intro": "Toca las partes que hay que pintar.",
+   "ejemplo": "Para 1/4 de una pizza partida en 4 se pinta 1 parte: el numerador dice cuántas se pintan.",
+   "items": [
+    {
+     "enunciado": "Pinta 1/4 de la pizza",
+     "partes": 4,
+     "objetivo": 1,
+     "forma": "pizza",
+     "porQue": "1/4: la pizza tiene 4 partes y se pinta 1."
+    },
+    {
+     "enunciado": "Pinta 3/4 de la pizza",
+     "partes": 4,
+     "objetivo": 3,
+     "forma": "pizza",
+     "porQue": "3/4: de 4 partes se pintan 3."
+    },
+    {
+     "enunciado": "Pinta 3/8 de la barra",
+     "partes": 8,
+     "objetivo": 3,
+     "forma": "barra",
+     "porQue": "3/8: la barra tiene 8 partes y se pintan 3."
+    }
+   ]
+  },
+  {
+   "id": "p04",
+   "type": "enlazar",
+   "titulo": "Une la fracción con su decimal",
+   "intro": "Cada fracción tiene un decimal igual.",
+   "ejemplo": "1/2 se une con 0,5 porque 1 ÷ 2 = 0,5.",
+   "pares": [
+    {
+     "izq": "1/2",
+     "der": "0,5",
+     "porQue": "1 ÷ 2 = 0,5."
+    },
+    {
+     "izq": "1/4",
+     "der": "0,25",
+     "porQue": "1 ÷ 4 = 0,25."
+    },
+    {
+     "izq": "3/4",
+     "der": "0,75",
+     "porQue": "3 ÷ 4 = 0,75."
+    },
+    {
+     "izq": "1/10",
+     "der": "0,1",
+     "porQue": "1 ÷ 10 = 0,1."
+    },
+    {
+     "izq": "1/5",
+     "der": "0,2",
+     "porQue": "1 ÷ 5 = 0,2."
+    }
+   ]
+  },
+  {
+   "id": "p05",
+   "type": "quiz",
+   "titulo": "Quiz 1: fracciones y decimales",
+   "preguntas": [
+    {
+     "id": "q1",
+     "dba": "Equivalencias",
+     "nivel": "recordar",
+     "enunciado": "¿Qué decimal equivale a 1/2?",
+     "calc": null,
+     "retroalimentacion": "La mitad de 1 es 0,5.",
+     "errorComun": "Hay que dividir 1 entre 2, no escribir los números pegados.",
+     "opciones": [
+      {
+       "id": "a",
+       "texto": "0,2",
+       "correcta": false,
+       "porQue": "Hay que dividir 1 entre 2, no escribir los números pegados."
+      },
+      {
+       "id": "b",
+       "texto": "0,5",
+       "correcta": true
+      },
+      {
+       "id": "c",
+       "texto": "0,12",
+       "correcta": false,
+       "porQue": "Hay que dividir 1 entre 2, no escribir los números pegados."
+      },
+      {
+       "id": "d",
+       "texto": "2,1",
+       "correcta": false,
+       "porQue": "Hay que dividir 1 entre 2, no escribir los números pegados."
+      }
+     ]
+    },
+    {
+     "id": "q2",
+     "dba": "Porcentajes",
+     "nivel": "aplicar",
+     "enunciado": "El vaso tiene 1/2 de jugo. ¿Qué porcentaje del vaso tiene jugo?",
+     "calc": null,
+     "retroalimentacion": "La mitad es el 50 %.",
+     "errorComun": "1/2 es la mitad del vaso, es decir el 50 %.",
+     "opciones": [
+      {
+       "id": "a",
+       "texto": "25 %",
+       "correcta": false,
+       "porQue": "1/2 es la mitad del vaso, es decir el 50 %."
+      },
+      {
+       "id": "b",
+       "texto": "50 %",
+       "correcta": true
+      },
+      {
+       "id": "c",
+       "texto": "12 %",
+       "correcta": false,
+       "porQue": "1/2 es la mitad del vaso, es decir el 50 %."
+      },
+      {
+       "id": "d",
+       "texto": "100 %",
+       "correcta": false,
+       "porQue": "1/2 es la mitad del vaso, es decir el 50 %."
+      }
+     ],
+     "imagen": "asset://img-f2193e0d36",
+     "alt": "Vaso de jugo con naranjas y la cantidad de jugo señalada como un medio, igual a 0,50"
+    },
+    {
+     "id": "q3",
+     "dba": "Comparar",
+     "nivel": "analizar",
+     "enunciado": "¿Cuál es mayor: 3/4 o 0,7?",
+     "calc": null,
+     "retroalimentacion": "3/4 = 0,75 y 0,75 es mayor que 0,70.",
+     "errorComun": "Se debe pasar 3/4 a decimal (3 ÷ 4 = 0,75) antes de comparar.",
+     "opciones": [
+      {
+       "id": "a",
+       "texto": "3/4",
+       "correcta": true
+      },
+      {
+       "id": "b",
+       "texto": "0,7",
+       "correcta": false,
+       "porQue": "Se debe pasar 3/4 a decimal (3 ÷ 4 = 0,75) antes de comparar."
+      },
+      {
+       "id": "c",
+       "texto": "Son iguales",
+       "correcta": false,
+       "porQue": "Se debe pasar 3/4 a decimal (3 ÷ 4 = 0,75) antes de comparar."
+      },
+      {
+       "id": "d",
+       "texto": "No se puede saber",
+       "correcta": false,
+       "porQue": "Se debe pasar 3/4 a decimal (3 ÷ 4 = 0,75) antes de comparar."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "p06",
+   "type": "cuadricula",
+   "titulo": "Sombrea el porcentaje",
+   "intro": "La cuadrícula tiene 100 cuadritos: cada uno es el 1 %.",
+   "ejemplo": "El 30 % son 30 cuadritos de los 100.",
+   "items": [
+    {
+     "enunciado": "Sombrea el 25 %",
+     "objetivo": 25,
+     "pista": "25 % son 25 de cada 100 cuadritos.",
+     "porQue": "25 % = 25 cuadritos = 1/4 de la cuadrícula."
+    },
+    {
+     "enunciado": "Sombrea 1/2 de la cuadrícula",
+     "objetivo": 50,
+     "pista": "La mitad de 100 es 50.",
+     "porQue": "1/2 = 50 %: la mitad de 100 cuadritos."
+    },
+    {
+     "enunciado": "Sombrea 0,1 de la cuadrícula",
+     "objetivo": 10,
+     "pista": "0,1 es una décima: 10 de cada 100.",
+     "porQue": "0,1 = 10 %: 10 cuadritos."
+    }
+   ]
+  },
+  {
+   "id": "p07",
+   "type": "recta",
+   "titulo": "Ubica en la recta",
+   "intro": "La recta va de 0 a 1.",
+   "ejemplo": "Si la recta tiene 4 partes, cada marca vale 0,25: la 2.ª marca es 0,5.",
+   "items": [
+    {
+     "enunciado": "Toca 1/4 (0,25)",
+     "inicio": 0,
+     "paso": 0.25,
+     "divisiones": 4,
+     "valor": 0.25,
+     "porQue": "Cada marca vale 0,25: la 1.ª marca."
+    },
+    {
+     "enunciado": "Toca 3/4 (0,75)",
+     "inicio": 0,
+     "paso": 0.25,
+     "divisiones": 4,
+     "valor": 0.75,
+     "porQue": "Se cuentan 3 marcas de 0,25."
+    },
+    {
+     "enunciado": "Toca 0,5 en una recta de 10 partes",
+     "inicio": 0,
+     "paso": 0.1,
+     "divisiones": 10,
+     "valor": 0.5,
+     "porQue": "Cada marca vale 0,1: la 5.ª marca."
+    }
+   ]
+  },
+  {
+   "id": "p08",
+   "type": "comparar",
+   "titulo": "Compara con <, > o =",
+   "ejemplo": "3/4 y 0,7: 3 ÷ 4 = 0,75 y 0,75 es mayor que 0,7, así que 3/4 > 0,7.",
+   "items": [
+    {
+     "a": "3/4",
+     "b": "0,7",
+     "porQue": "3/4 = 0,75 y 0,75 > 0,70."
+    },
+    {
+     "a": "1/2",
+     "b": "0,50",
+     "porQue": "1/2 = 0,5 = 0,50."
+    },
+    {
+     "a": "1/4",
+     "b": "0,3",
+     "porQue": "1/4 = 0,25 y 0,25 < 0,30."
+    },
+    {
+     "a": "40 %",
+     "b": "1/2",
+     "porQue": "40 % = 0,4 y 1/2 = 0,5."
+    }
+   ]
+  },
+  {
+   "id": "p09",
+   "type": "relampago",
+   "titulo": "Relámpago: ¿son iguales?",
+   "intro": "Decide rápido si las dos cantidades valen lo mismo.",
+   "segundos": 8,
+   "vidas": 3,
+   "opciones": [
+    "Son iguales",
+    "No son iguales"
+   ],
+   "items": [
+    {
+     "texto": "1/2 y 0,5",
+     "correcta": 0,
+     "porQue": "1 ÷ 2 = 0,5."
+    },
+    {
+     "texto": "1/4 y 0,4",
+     "correcta": 1,
+     "porQue": "1/4 = 0,25, no 0,4."
+    },
+    {
+     "texto": "3/4 y 75 %",
+     "correcta": 0,
+     "porQue": "3/4 = 0,75 = 75 %."
+    },
+    {
+     "texto": "1/10 y 0,01",
+     "correcta": 1,
+     "porQue": "1/10 = 0,1; 0,01 es 1/100."
+    },
+    {
+     "texto": "2/4 y 1/2",
+     "correcta": 0,
+     "porQue": "2/4 se simplifica a 1/2."
+    },
+    {
+     "texto": "1/5 y 0,2",
+     "correcta": 0,
+     "porQue": "1 ÷ 5 = 0,2."
+    },
+    {
+     "texto": "1/2 y 25 %",
+     "correcta": 1,
+     "porQue": "1/2 es el 50 %."
+    },
+    {
+     "texto": "3/10 y 0,3",
+     "correcta": 0,
+     "porQue": "3 ÷ 10 = 0,3."
+    }
+   ]
+  },
+  {
+   "id": "p10",
+   "type": "memoria",
+   "titulo": "Memoria: fracción y porcentaje",
+   "intro": "Encuentra cada fracción con su porcentaje.",
+   "pares": [
+    {
+     "a": "1/2",
+     "b": "50 %",
+     "porQue": "La mitad es el 50 %."
+    },
+    {
+     "a": "1/4",
+     "b": "25 %",
+     "porQue": "Un cuarto es el 25 %."
+    },
+    {
+     "a": "3/4",
+     "b": "75 %",
+     "porQue": "Tres cuartos son el 75 %."
+    },
+    {
+     "a": "1/10",
+     "b": "10 %",
+     "porQue": "Un décimo es el 10 %."
+    }
+   ]
+  },
+  {
+   "id": "p11",
+   "type": "ordenar",
+   "titulo": "El orden de los sabores",
+   "instruccion": "Ordena de menor a mayor.",
+   "orden": "asc",
+   "items": [
+    "0,1",
+    "20 %",
+    "1/4",
+    "0,5",
+    "3/4"
+   ],
+   "porQue": "Se pasa todo a decimal: 0,1 · 0,2 · 0,25 · 0,5 · 0,75."
+  },
+  {
+   "id": "p12",
+   "type": "evalFinal",
+   "titulo": "Reto final",
+   "preguntas": [
+    {
+     "id": "e1",
+     "dba": "Equivalencias",
+     "nivel": "recordar",
+     "enunciado": "¿A qué fracción equivale 0,25?",
+     "calc": null,
+     "retroalimentacion": "0,25 son 25 centésimas: 1/4.",
+     "errorComun": "Se debe pensar en cuántas veces cabe 0,25 en 1: cabe 4 veces.",
+     "opciones": [
+      {
+       "id": "a",
+       "texto": "1/2",
+       "correcta": false,
+       "porQue": "Se debe pensar en cuántas veces cabe 0,25 en 1: cabe 4 veces."
+      },
+      {
+       "id": "b",
+       "texto": "1/4",
+       "correcta": true
+      },
+      {
+       "id": "c",
+       "texto": "1/5",
+       "correcta": false,
+       "porQue": "Se debe pensar en cuántas veces cabe 0,25 en 1: cabe 4 veces."
+      },
+      {
+       "id": "d",
+       "texto": "2/5",
+       "correcta": false,
+       "porQue": "Se debe pensar en cuántas veces cabe 0,25 en 1: cabe 4 veces."
+      }
+     ]
+    },
+    {
+     "id": "e2",
+     "dba": "Problemas",
+     "nivel": "aplicar",
+     "enunciado": "Una pizza tiene 8 porciones y Ana comió 2. ¿Qué fracción comió?",
+     "calc": null,
+     "retroalimentacion": "Comió 2 de 8 porciones: 2/8, que es 1/4.",
+     "errorComun": "La fracción pone primero lo que se comió y abajo el total de partes.",
+     "opciones": [
+      {
+       "id": "a",
+       "texto": "2/8",
+       "correcta": true
+      },
+      {
+       "id": "b",
+       "texto": "2/6",
+       "correcta": false,
+       "porQue": "La fracción pone primero lo que se comió y abajo el total de partes."
+      },
+      {
+       "id": "c",
+       "texto": "8/2",
+       "correcta": false,
+       "porQue": "La fracción pone primero lo que se comió y abajo el total de partes."
+      },
+      {
+       "id": "d",
+       "texto": "1/8",
+       "correcta": false,
+       "porQue": "La fracción pone primero lo que se comió y abajo el total de partes."
+      }
+     ]
+    },
+    {
+     "id": "e3",
+     "dba": "Orden",
+     "nivel": "analizar",
+     "enunciado": "¿Qué grupo está ordenado de menor a mayor?",
+     "calc": null,
+     "retroalimentacion": "1/4 = 0,25 · 0,5 · 3/4 = 0,75.",
+     "errorComun": "Se debe pasar todo a decimal para ordenar.",
+     "opciones": [
+      {
+       "id": "a",
+       "texto": "0,5 · 1/4 · 3/4",
+       "correcta": false,
+       "porQue": "Se debe pasar todo a decimal para ordenar."
+      },
+      {
+       "id": "b",
+       "texto": "1/4 · 0,5 · 3/4",
+       "correcta": true
+      },
+      {
+       "id": "c",
+       "texto": "3/4 · 1/4 · 0,5",
+       "correcta": false,
+       "porQue": "Se debe pasar todo a decimal para ordenar."
+      },
+      {
+       "id": "d",
+       "texto": "3/4 · 0,5 · 1/4",
+       "correcta": false,
+       "porQue": "Se debe pasar todo a decimal para ordenar."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "p13",
+   "type": "candado",
+   "titulo": "La caja fuerte de la pizzería",
+   "intro": "Resuelve los acertijos, junta los 4 dígitos y abre la caja fuerte.",
+   "tesoro": "¡La pizzería es tuya! Te ganaste una pizza de XP.",
+   "acertijos": [
+    {
+     "q": "¿Cuántos cuadritos son el 25 % de una cuadrícula de 100?",
+     "ops": [
+      "10",
+      "25",
+      "50"
+     ],
+     "ok": 1,
+     "digito": 3,
+     "porQue": "25 % de 100 = 25."
+    },
+    {
+     "q": "¿Qué fracción es igual a 0,5?",
+     "ops": [
+      "1/4",
+      "1/2",
+      "1/3"
+     ],
+     "ok": 1,
+     "digito": 8,
+     "porQue": "0,5 es la mitad: 1/2."
+    },
+    {
+     "q": "¿Cuál es 1/4 en decimal?",
+     "ops": [
+      "0,14",
+      "0,25",
+      "0,4"
+     ],
+     "ok": 1,
+     "digito": 1,
+     "porQue": "1 ÷ 4 = 0,25."
+    },
+    {
+     "q": "¿Qué fracción es el 75 %?",
+     "ops": [
+      "3/4",
+      "1/4",
+      "2/3"
+     ],
+     "ok": 0,
+     "digito": 6,
+     "porQue": "75 % = 0,75 = 3/4."
+    }
+   ]
+  },
+  {
+   "id": "p14",
+   "type": "final",
+   "titulo": "¡Misión cumplida!",
+   "aprendiste": [
+    "Pasas de fracción a decimal dividiendo.",
+    "Reconoces que 1/2, 0,5 y 50 % son lo mismo.",
+    "Ordenas y comparas fracciones, decimales y porcentajes."
+   ],
+   "siguiente": "Resolveremos problemas con porcentajes: descuentos en la tienda escolar."
+  }
+ ]
+}

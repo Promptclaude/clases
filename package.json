@@ -5,8 +5,9 @@
   "description": "Prompt maestro vigente, motor de referencia, banco de imágenes y herramientas de calidad para las clases",
   "scripts": {
     "puerta": "python3 tools/puerta_de_calidad.py plantilla/clase_referencia.html",
-    "test": "node pruebas/prueba_v23_snippets.js && node pruebas/prueba_juego_fx.js && python3 pruebas/prueba_auditor.py && node tools/prueba_clase_e2e.js plantilla/clase_referencia.html && node tools/prueba_clase_e2e.js plantilla/ejemplos/mat4_decimales.html && node tools/prueba_clase_e2e.js plantilla/ejemplos/tec4_juegos_hardware.html && python3 tools/prueba_de_mutaciones.py plantilla/clase_referencia.html",
-    "puerta-mat4": "python3 tools/puerta_de_calidad.py plantilla/ejemplos/mat4_decimales.html"
+    "test": "node pruebas/prueba_v23_snippets.js && node pruebas/prueba_juego_fx.js && python3 pruebas/prueba_auditor.py && node tools/prueba_clase_e2e.js plantilla/clase_referencia.html && node tools/prueba_clase_e2e.js plantilla/ejemplos/mat4_decimales.html && node tools/prueba_clase_e2e.js plantilla/ejemplos/tec4_juegos_hardware.html && node tools/prueba_clase_e2e.js plantilla/ejemplos/mat5_pizzeria_fracciones.html && python3 tools/prueba_de_mutaciones.py plantilla/clase_referencia.html",
+    "puerta-mat4": "python3 tools/puerta_de_calidad.py plantilla/ejemplos/mat4_decimales.html",
+    "test:rapido": "node pruebas/prueba_v23_snippets.js && node pruebas/prueba_juego_fx.js && python3 pruebas/prueba_auditor.py && node tools/prueba_clase_e2e.js plantilla/ejemplos/mat5_pizzeria_fracciones.html"
   },
   "devDependencies": {
     "jsdom": "^26.0.0"

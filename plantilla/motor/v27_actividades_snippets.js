@@ -4,8 +4,8 @@
 // Regla del motor que se mantiene: NINGUNA de estas actividades toca la nota del quiz ni retiene a nadie.
 // Los puntos (1 · 0,5 · 0) quedan en st.acts['pts_<id>'] solo como dato para el docente.
 
-Object.assign(CLAVE_HECHO, { cuadricula: 'cuad_done_', recta: 'recta_done_', comparar: 'cmp_done_', podio: 'podio_done_', abierta: 'abierta_done_', cuaderno: 'cuaderno_done_' });
-['cuadricula', 'recta', 'comparar', 'podio', 'abierta', 'cuaderno'].forEach(t => { if (!TIPOS_ACTIVIDAD.includes(t)) TIPOS_ACTIVIDAD.push(t); });
+Object.assign(CLAVE_HECHO, { fraccion: 'frac_done_', cuadricula: 'cuad_done_', recta: 'recta_done_', comparar: 'cmp_done_', podio: 'podio_done_', abierta: 'abierta_done_', cuaderno: 'cuaderno_done_' });
+['fraccion', 'cuadricula', 'recta', 'comparar', 'podio', 'abierta', 'cuaderno'].forEach(t => { if (!TIPOS_ACTIVIDAD.includes(t)) TIPOS_ACTIVIDAD.push(t); });
 
 (function () {
   const css = document.createElement('style');
@@ -14,6 +14,7 @@ Object.assign(CLAVE_HECHO, { cuadricula: 'cuad_done_', recta: 'recta_done_', com
     '.v27-cuad{display:grid;grid-template-columns:repeat(10,1fr);gap:3px;max-width:340px;margin:8px 0}' +
     '.v27-cuad button{aspect-ratio:1;border:1px solid #64748b;background:#fff;border-radius:3px;cursor:pointer;padding:0}' +
     '.v27-cuad button.on{background:#fbbf24}.v27-cuad button:disabled{cursor:default}' +
+    '.v27-it svg path:focus{outline:3px solid #fbbf24}' +
     '.v27-recta{display:flex;gap:3px;align-items:flex-end;margin:8px 0;padding-bottom:4px}' +
     '.v27-recta button{flex:1 1 0;min-width:0;border:2px solid #64748b;background:#fff;border-radius:8px;padding:10px 0;cursor:pointer;font-size:.72rem;color:#1f2937}' +
     '.v27-recta button.on{background:#fbbf24;border-color:#b45309}' +
@@ -26,13 +27,25 @@ Object.assign(CLAVE_HECHO, { cuadricula: 'cuad_done_', recta: 'recta_done_', com
 })();
 
 const v27N = x => String(x).replace(/\s/g, '').replace(',', '.');
+// Valor numérico de «0,75» · «3/4» · «25 %» (fracciones y porcentajes incluidos)
+const v27Val = x => { const t = String(x).trim(), pc = t.endsWith('%'), u = t.replace('%', '').replace(/\s/g, ''); let v; if (u.includes('/')) { const [a, b] = u.split('/'); v = parseFloat(a.replace(',', '.')) / parseFloat(b.replace(',', '.')); } else v = parseFloat(u.replace(',', '.')); return pc ? v / 100 : v; };
 const v27Fmt = n => String(Math.round(n * 1000) / 1000).replace('.', ',');
 const v27Est = s => { const k = 'v27_' + s.id; if (!st.acts[k]) st.acts[k] = {}; return st.acts[k]; };
 const v27Item = (s, i) => { const e = v27Est(s); if (!e[i]) e[i] = { v: null, t: 0, r: null, h: 0 }; return e[i]; };
-const v27Items = s => s.type === 'cuadricula' || s.type === 'recta' || s.type === 'comparar' || s.type === 'podio' ? s.items : [];
+const v27Items = s => s.type === 'fraccion' || s.type === 'cuadricula' || s.type === 'recta' || s.type === 'comparar' || s.type === 'podio' ? s.items : [];
 
 // ── por tipo: qué se muestra, qué es correcto, pista y solución ──
 const V27 = {
+  fraccion: {
+    vacio: it => !(it.v && it.v.length),
+    ok: (s, i, v) => v.length === s.items[i].objetivo,
+    pista: (s, i) => s.items[i].pista || 'El todo está dividido en ' + s.items[i].partes + ' partes iguales: pinta las que indica el numerador.',
+    sol: (s, i) => 'Había que pintar ' + s.items[i].objetivo + ' de ' + s.items[i].partes + ' partes.',
+    ctl: (s, i, it, bloq) => { const x = s.items[i], n = x.partes, sel = it.v || [], barra = x.forma === 'barra', mk = (c, d) => '<path data-test="frac-parte" data-accion="v27-celda" data-i="' + i + '" data-c="' + c + '" d="' + d + '" fill="' + (sel.includes(c) ? '#fbbf24' : '#fff') + '" stroke="#475569" stroke-width="2" ' + (bloq ? '' : 'tabindex="0" role="button" style="cursor:pointer" ') + 'aria-label="Parte ' + (c + 1) + ' de ' + n + (sel.includes(c) ? ' pintada' : '') + '"/>';
+      let g = ''; if (barra) { const w = 240 / n; for (let c = 0; c < n; c++) g += mk(c, 'M' + (c * w + 4) + ' 14h' + w + 'v52h-' + w + 'Z'); return '<svg viewBox="0 0 248 80" width="260" role="group" aria-label="Barra dividida en ' + n + ' partes">' + g + '</svg><p>Pintadas: <strong>' + sel.length + '</strong> de ' + n + '</p>'; }
+      for (let c = 0; c < n; c++) { const a0 = -Math.PI / 2 + c * 2 * Math.PI / n, a1 = a0 + 2 * Math.PI / n, X = a => (62 + 56 * Math.cos(a)).toFixed(2), Y = a => (62 + 56 * Math.sin(a)).toFixed(2); g += mk(c, 'M62 62L' + X(a0) + ' ' + Y(a0) + 'A56 56 0 0 1 ' + X(a1) + ' ' + Y(a1) + 'Z'); }
+      return '<svg viewBox="0 0 124 124" width="170" role="group" aria-label="Pizza dividida en ' + n + ' partes">' + g + '</svg><p>Pintadas: <strong>' + sel.length + '</strong> de ' + n + '</p>'; }
+  },
   cuadricula: {
     vacio: it => !(it.v && it.v.length),
     ok: (s, i, v) => v.length === s.items[i].objetivo,
@@ -52,7 +65,7 @@ const V27 = {
   },
   comparar: {
     vacio: it => it.v == null,
-    signo: x => x.signo || (parseFloat(v27N(x.a)) < parseFloat(v27N(x.b)) ? '<' : parseFloat(v27N(x.a)) > parseFloat(v27N(x.b)) ? '>' : '='),
+    signo: x => x.signo || (Math.abs(v27Val(x.a) - v27Val(x.b)) < 1e-9 ? '=' : v27Val(x.a) < v27Val(x.b) ? '<' : '>'),
     ok(s, i, v) { return v === this.signo(s.items[i]); },
     pista: (s, i) => s.items[i].pista || 'Compara primero la parte entera; si es igual, las décimas, luego las centésimas. Iguala las cifras con ceros.',
     sol(s, i) { return s.items[i].a + ' ' + this.signo(s.items[i]) + ' ' + s.items[i].b; },
@@ -70,7 +83,7 @@ const v27Texto = (s, i) => { const x = s.items[i]; return s.type === 'comparar' 
 
 function rItems27(s) {
   const e = v27Est(s), n = s.items.length, hechos = s.items.filter((_, i) => v27Item(s, i).r !== null).length, T = V27[s.type];
-  const misiones = { cuadricula: 'Sombrea la cantidad de cuadritos que pide cada punto.', recta: 'Toca la marca de la recta que corresponde a cada número.', comparar: 'Elige el signo &lt;, &gt; o = para cada pareja.', podio: 'Elige el puesto de cada participante.' };
+  const misiones = { fraccion: 'Pinta las partes que indica cada fracción.', cuadricula: 'Sombrea la cantidad de cuadritos que pide cada punto.', recta: 'Toca la marca de la recta que corresponde a cada número.', comparar: 'Elige el signo &lt;, &gt; o = para cada pareja.', podio: 'Elige el puesto de cada participante.' };
   return '<h2>' + esc(s.titulo) + '</h2>' + (s.intro ? '<p>' + esc(s.intro) + '</p>' : '') +
     tarjeta(misiones[s.type], 'Cada punto tiene <strong>2 intentos</strong> y un botón 💡 Pista.', 'Resuelve cada punto (¡aunque dudes!) o pulsa «No me sale».', hechos + ' de ' + n + ' puntos') +
     s.items.map((x, i) => { const it = v27Item(s, i), bloq = it.r !== null, ok = it.r === 1 || it.r === 0.5;
@@ -97,8 +110,8 @@ function rCuaderno(s) {
 }
 
 // «ejemplo resuelto → ahora tú» en cualquier actividad con campo `ejemplo`
-const v27Ejemplo = html => s => { const h = html(s); if (!s.ejemplo) return h; const box = '<div class="v27-ex" data-test="ejemplo"><strong>📘 Ejemplo resuelto:</strong> ' + esc(s.ejemplo) + '<br><strong>✏️ Ahora tú:</strong> es lo mismo, solo cambian los datos.</div>', k = h.indexOf('</h2>'); return k < 0 ? box + h : h.slice(0, k + 5) + box + h.slice(k + 5); };
-Object.assign(RENDER, { cuadricula: rItems27, recta: rItems27, comparar: rItems27, podio: rItems27, abierta: rAbierta, cuaderno: rCuaderno });
+const v27Ejemplo = html => s => { const h = html(s); if (!s.ejemplo) return h; const box = '<div class="v27-ex" data-test="ejemplo"><strong>📘 Ejemplo resuelto:</strong> ' + esc(s.ejemplo) + '<br><strong>✏️ Ahora tú:</strong> es lo mismo, solo cambian los datos.</div>', k = h.indexOf('</h2>'); if (s.type === 'info') return h + box; return k < 0 ? box + h : h.slice(0, k + 5) + box + h.slice(k + 5); };   // lectura: primero el concepto, luego el ejemplo
+Object.assign(RENDER, { fraccion: rItems27, cuadricula: rItems27, recta: rItems27, comparar: rItems27, podio: rItems27, abierta: rAbierta, cuaderno: rCuaderno });
 Object.keys(RENDER).forEach(t => { if (!['intro', 'final', 'quiz', 'evalFinal'].includes(t)) RENDER[t] = v27Ejemplo(RENDER[t]); });
 
 // ── eventos ──
@@ -133,3 +146,4 @@ $('stage').addEventListener('change', e => {
   if (t.dataset.accion === 'v27-puesto') { const it = v27Item(s, +t.dataset.i); if (it.r !== null) return; it.v = t.value; save(); }
   if (t.dataset.accion === 'v27-cuaderno') { st.acts['cuaderno_ok_' + s.id] = t.checked; if (t.checked) { marcarActividadHecha(s.id, 'acierto'); sumarXP(10); Juego.evento('actividad'); } save(); render(false); }
 });
+$('stage').addEventListener('keydown', e => { const t = e.target; if ((e.key === 'Enter' || e.key === ' ') && t && t.dataset && t.dataset.test === 'frac-parte') { e.preventDefault(); t.dispatchEvent(new MouseEvent('click', { bubbles: true })); } });
