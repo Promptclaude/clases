@@ -444,7 +444,13 @@
   {
    "id": "j11",
    "type": "final",
-   "titulo": "¡Misión cumplida!"
+   "titulo": "¡Misión cumplida!",
+   "aprendiste": [
+    "Diferencias el hardware (se toca) del software (no se toca).",
+    "Reconoces para qué sirve cada parte del computador.",
+    "Sabes apagar bien el equipo, paso a paso."
+   ],
+   "siguiente": "Vamos a conocer cómo se guarda la información: archivos y carpetas."
   }
  ]
 }

@@ -239,5 +239,23 @@ async function recorrer(w, modo, tope = 40) { let n = 0; const vistos = []; whil
       ok(API.estado().aciertos === 0 && hud(w) === '0.0', 'los juegos NO tocan la nota del quiz (HUD ' + hud(w) + ')');
       w.close(); } }
 
+  T('T25 · Bienvenida de ESTA clase, mapa de misión y pantalla final de celebración (v29)');
+  { const w = abrir({ est: 'olga', sinIntro: false }).window, API = w.CLASE_API, meta = API.SL ? null : null, M = JSON.parse(w.document.getElementById('datos-clase').textContent).meta;
+    const h1 = w.document.querySelector('#fx-intro h1'); ok(!h1 || h1.textContent.trim() === M.titulo.trim(), 'la bienvenida muestra el título de ESTA clase («' + (h1 ? h1.textContent.trim() : '—') + '»), no el de la plantilla');
+    ok(w.document.title.includes(M.titulo.slice(0, 20)), 'la pestaña del navegador dice «' + w.document.title + '»');
+    const ruta = () => qa(w, '#v29-ruta .n'); ok(ruta().length === SL0.length, 'el mapa de misión tiene un nodo por slide (' + ruta().length + ')');
+    ok(ruta().filter(x => x.classList.contains('ya')).length === 1, 'exactamente un nodo marca dónde estás');
+    API.irA(3); ok(ruta().filter(x => x.classList.contains('ok')).length === 3 && ruta()[3].classList.contains('ya'), 'al avanzar: 3 nodos ✔ y el 4.º resaltado');
+    ok(!!q(w, '#v29-ruta[aria-label]') && ruta().every(x => x.getAttribute('aria-hidden') === 'true'), 'el mapa es accesible (un solo aria-label, nodos decorativos)');
+    const iF = SL0.findIndex(x => x.type === 'final'); API.irA(iF);
+    ok(!!q(w, '[data-test=celebracion]') && !!q(w, '[data-test=medalla]'), 'la pantalla final muestra celebración y medalla');
+    ok(/data:image/.test(q(w, '[data-test=medalla]').src), 'la medalla viene empaquetada (funciona sin internet)');
+    ok(/⭐/.test(q(w, '[data-test=estrellas]').textContent), 'siempre hay al menos 1 estrella (nadie termina con las manos vacías)');
+    const nAct = SL0.filter(x => ['tf', 'fill', 'drag', 'minijuego', ...NUEVOS27, ...NUEVOS28].includes(x.type)).length; ok(new RegExp('de ' + nAct + ' juegos').test(q(w, '[data-test=chip-juegos]').textContent), 'cuenta los juegos de la clase: ' + q(w, '[data-test=chip-juegos]').textContent.trim());
+    ok(/olga/i.test(q(w, '[data-test=insignia]').textContent) && q(w, '[data-test=insignia]').textContent.includes(M.titulo.slice(0, 15)), 'la insignia lleva el nombre del estudiante y el título de la clase');
+    if (SL0[iF].aprendiste) ok(qa(w, '[data-test=logros] li').length === SL0[iF].aprendiste.length, '«Lo que lograste hoy» muestra los ' + SL0[iF].aprendiste.length + ' logros');
+    ok(!!q(w, '[data-test=final-nota]'), 'la nota oficial sigue visible en la pantalla final');
+    w.close(); }
+
   console.log(`\n${pasos - fallos}/${pasos} comprobaciones OK${fallos ? ' · ' + fallos + ' ❌' : ''}`); process.exit(fallos ? 1 : 0);
 })().catch(e => { console.error('ERROR del runner:', e); process.exit(3); });

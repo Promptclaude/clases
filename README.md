@@ -10,6 +10,7 @@
 | **Banco de imágenes y base de datos** (505 recursos revisados y clasificados) | `banco-imagenes/` (ver su README, `banco.json` y `vistas-previas/`) · módulo `prompt-modulos/33_banco_imagenes.md` |
 | **Actividades visuales tipo nivelación** (cuadrícula, recta, comparar, podio, abierta, cuaderno) | módulo `prompt-modulos/34_actividades_tipo_nivelacion.md` · ejemplo `plantilla/ejemplos/mat4_decimales.datos.json` · motor `plantilla/motor/v27_actividades_snippets.js` |
 | **Juegos de aplicación y ritmo de clase** (enlazar, ordenar, memoria, relámpago, sopa de letras, candado secreto) | módulo `prompt-modulos/35_juegos_y_ritmo_de_clase.md` · ejemplo `plantilla/ejemplos/tec4_juegos_hardware.datos.json` · motor `plantilla/motor/v28_juegos_snippets.js` |
+| **Mapa de misión y final de celebración** (medalla, estrellas, logros, insignia imprimible) | módulo `prompt-modulos/36_mapa_y_celebracion.md` · motor `plantilla/motor/v29_mapa_y_celebracion_snippets.js` |
 | Módulos del prompt sueltos | `prompt-modulos/` |
 | Historial | `CHANGELOG.md` (versiones previas recuperables con `git checkout archivo-v24-v25`) |
 

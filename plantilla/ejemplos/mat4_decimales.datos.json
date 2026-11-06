@@ -396,7 +396,13 @@
   {
    "id": "m11",
    "type": "final",
-   "titulo": "¡Misión cumplida!"
+   "titulo": "¡Misión cumplida!",
+   "aprendiste": [
+    "Lees y escribes decimales con décimas y centésimas.",
+    "Ubicas decimales en la recta numérica.",
+    "Comparas y ordenas decimales con seguridad."
+   ],
+   "siguiente": "Sumaremos y restaremos decimales en la tienda escolar."
   }
  ]
 }

@@ -58,6 +58,13 @@ def main():
             tj = {x['type'] for x in S if x['type'] in JUEGOS}; nj = sum(1 for x in S if x['type'] in JUEGOS)
             if len(S) >= 8 and len(tj) < 4: A.append(f"Variedad: solo {len(tj)} tipos de juego distintos ({', '.join(sorted(tj)) or 'ninguno'}); usa al menos 4 para que no sea monótona (Prioridad 66)")
             elif len(S) >= 8: OK.append(f"Variedad: {len(tj)} tipos de juego distintos en {nj} actividades")
+            # Bienvenida y pestaña deben ser de ESTA clase (no de la plantilla) · Prioridad 67
+            mi = re.search(r'<div id="fx-intro".*?<h1>(.*?)</h1>', html, re.S); ti = re.search(r'<title>(.*?)</title>', html, re.S)
+            chk(bool(mi) and mi.group(1).replace('&amp;', '&').strip() == D['meta']['titulo'].strip(), '', f"La pantalla de bienvenida dice «{mi.group(1) if mi else '?'}» pero la clase se llama «{D['meta']['titulo']}» (reconstruir con construir_clase.py)")
+            chk(bool(ti) and D['meta']['titulo'].replace('&', '&amp;')[:25] in ti.group(1), '', f"El título de la pestaña ({ti.group(1) if ti else '?'}) no corresponde a la clase")
+            fin = [x for x in S if x['type'] == 'final']
+            if fin and not fin[0].get('aprendiste'): A.append("La slide final no tiene «aprendiste» (3 logros): la pantalla de celebración queda sin «Lo que lograste hoy» (Prioridad 67)")
+            elif fin: chk(1 <= len(fin[0]['aprendiste']) <= 4 and all(len(x.split()) <= 20 for x in fin[0]['aprendiste']), '', 'La slide final: «aprendiste» debe tener 1 a 4 logros de máximo 20 palabras')
             def num(x): return float(str(x).replace(' ', '').replace(',', '.'))
             for s in S:
                 t, its = s['type'], s.get('items', [])
