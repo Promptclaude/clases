@@ -2,7 +2,8 @@
 
 > Las versiones anteriores del prompt (v24, v25) ya no están en el repositorio. Se pueden recuperar con `git checkout archivo-v24-v25`.
 
-## v26 + banco de imágenes (módulo 33) + actividades v27 (módulo 34)
+## v26 + banco de imágenes (módulo 33) + actividades v27 (módulo 34) + juegos v28 (módulo 35)
+- **Motor 28.0:** 6 juegos táctiles nuevos: `enlazar` (líneas de colores, tocar o arrastrar), `ordenar` («x de n en su lugar»), `memoria` (cartas, ⭐ por jugadas), `relampago` (vidas, racha, reloj con interruptor «sin reloj»), `sopa` (palabras por pista, cuadrícula estable al guardar/continuar) y `candado` (escape room con dígitos y tesoro). Auditor: valida datos de cada juego y avisa si la clase tiene menos de 4 tipos de juego (variedad). Prueba e2e T24 y clase de ejemplo `tec4_juegos_hardware`.
 - **Motor 27.0:** 6 tipos de actividad nuevos inspirados en «Proceso de subir de grado»: `cuadricula`, `recta`, `comparar`, `podio` (2 intentos por punto, 💡 Pista, 1/0,5/0 puntos para el docente), `abierta` (redactar, revisa el docente) y `cuaderno` (hoja a mano, imprimible); campo `ejemplo` («Ejemplo resuelto → Ahora tú») en cualquier actividad. Auditor con validación de datos (marcas exactas en la recta, signo correcto, puestos 1..n). Prueba e2e T23 y clase de ejemplo `mat4_decimales`.
 - Se retira `assets-reutilizables/` (sus 46 imágenes y ids viven ahora en `banco-imagenes/`); el prompt, `limpiar_recortes.py --registrar` y el empaquetador apuntan al banco.
 - Revisión completa del banco: 181 imágenes aprobadas por tema (decimales, dinero, detectives, fábrica, internet, seguridad digital…), 250 específicas, 62 descartadas (propiedad intelectual, baja resolución o recorte cortado), 14 poses de ARIA cortadas por el borde (no recuperables, a regenerar) y 3 limpiadas con `limpiar_recortes.py`.

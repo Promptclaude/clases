@@ -29,7 +29,8 @@ async function esperaHabil(w, ms = 1500) { const t0 = Date.now(); while (Date.no
 const idxTipo = (w, ...tipos) => w.CLASE_API.SL.findIndex(x => tipos.includes(x.type));
 const idxEvaluables = w => w.CLASE_API.SL.map((x, i) => ['quiz', 'evalFinal'].includes(x.type) ? i : -1).filter(i => i >= 0);
 const NUEVOS27 = ['cuadricula', 'recta', 'comparar', 'podio', 'abierta', 'cuaderno'];
-const ACTIVIDADES = ['tf', 'fill', 'drag', 'match', 'orden', 'wordsearch', 'interactive', 'minijuego', 'historia', ...NUEVOS27];
+const NUEVOS28 = ['enlazar', 'ordenar', 'memoria', 'relampago', 'sopa', 'candado'];
+const ACTIVIDADES = ['tf', 'fill', 'drag', 'match', 'orden', 'wordsearch', 'interactive', 'minijuego', 'historia', ...NUEVOS27, ...NUEVOS28];
 const cerrarModal = w => { if (!q(w, '#modal').hidden) { const b = q(w, '#modal button'); if (b) clic(b); } };
 
 async function jugarSlide(w, modo /* 'mal' | 'bien' */) {
@@ -39,6 +40,7 @@ async function jugarSlide(w, modo /* 'mal' | 'bien' */) {
   if (t === 'fill') { qa(w, '[data-test=fill-input]').forEach((inp, i) => { inp.value = modo === 'bien' ? s.items[i].ans[0] : 'zzz'; }); clic(q(w, '[data-test=verificar]')); }
   if (t === 'drag') { const ids = s.chips.map((c, i) => i).slice(0, 2); for (const i of ids) { for (let k = 0; k < 2; k++) { clic(q(w, `[data-test=chip][data-i="${i}"]`)); const bien = s.chips[i].z, mala = s.zonas.find(z => z.id !== bien).id; clic(q(w, `[data-test=zona][data-z="${modo === 'bien' ? bien : mala}"]`)); if (modo === 'bien') break; } } }
   if (NUEVOS27.includes(t)) await jugarNuevo27(w, s, t, modo);
+  if (NUEVOS28.includes(t)) await jugarNuevo28(w, s, t, modo);
   if (t === 'minijuego') { for (let r = 0; r < s.rondas.length; r++) { const R = s.rondas[r], i = modo === 'bien' ? R.ok : (R.ok + 1) % R.ops.length; clic(q(w, `[data-test=mj-op][data-i="${i}"]`)); await sleep(60); } }
   if (t === 'quiz' || t === 'evalFinal') { for (let n = 0; n < s.preguntas.length; n++) { const c = api.opcionCorrectaActual(); if (!c) break; const ops = qa(w, '[data-test=opcion]'); const el = modo === 'bien' ? ops.find(o => o.dataset.op === c.id) : ops.find(o => o.dataset.op !== c.id); clic(el); cerrarModal(w); await sleep(75); } }
   if (ACTIVIDADES.includes(t) && !['tf', 'fill', 'drag', 'minijuego', ...NUEVOS27].includes(t)) { await esperaHabil(w, 100); if (!habil(w)) { await sleep(520); const b = q(w, '#rescate-wrap button'); if (b) { clic(b); notas.push('«' + t + '» solo se probó con rescate'); } } }
@@ -61,6 +63,17 @@ async function jugarNuevo27(w, s, t, modo) {
   }
 }
 const sel0 = (w, a, i, c) => q(w, `[data-test=${a}][data-i="${i}"][data-c="${c}"]`);
+
+// v28: juegos (enlazar, ordenar, memoria, relámpago, sopa, candado) con clics reales. «bien» los resuelve; «mal» falla y sale por «No me sale».
+async function jugarNuevo28(w, s, t, modo) {
+  const bien = modo === 'bien', c = sel => { const e = q(w, sel); if (e) clic(e); };
+  if (t === 'enlazar') for (let i = 0; i < s.pares.length; i++) { c(`[data-test=enl-izq][data-i="${i}"]`); c(`[data-test=enl-der][data-k="${bien ? i : (i + 1) % s.pares.length}"]`); if (!bien) break; }
+  if (t === 'ordenar') { if (bien) for (let p = 0; p < s.items.length; p++) { const cur = qa(w, '[data-test=ord-item]').map(e => +e.dataset.k); if (cur[p] !== p) { c(`[data-test=ord-item][data-k="${p}"]`); c(`[data-test=ord-item][data-p="${p}"]`); } } c('[data-test=ord-comprobar]'); }
+  if (t === 'memoria') { const n = s.pares.length; if (bien) for (let p = 0; p < n; p++) { c(`[data-test=mem-carta][data-p="${p}"][data-l="a"]`); c(`[data-test=mem-carta][data-p="${p}"][data-l="b"]`); } else { c('[data-test=mem-carta][data-p="0"][data-l="a"]'); c('[data-test=mem-carta][data-p="1"][data-l="b"]'); } }
+  if (t === 'relampago') for (let i = 0; i < s.items.length + 1; i++) { if (!q(w, '[data-test=rel-op]')) break; c(`[data-test=rel-op][data-k="${bien ? s.items[i].correcta : 1 - s.items[i].correcta}"]`); c('[data-test=rel-sig]'); }
+  if (t === 'sopa') { if (bien) { const pos = w.V28.sopa(s).pos; for (const k of Object.keys(pos)) { const [r, cc, dr, dc, L] = pos[k]; c(`[data-test=sopa-celda][data-r="${r}"][data-c="${cc}"]`); c(`[data-test=sopa-celda][data-r="${r + dr * (L - 1)}"][data-c="${cc + dc * (L - 1)}"]`); } } else { c('[data-test=sopa-celda][data-r="0"][data-c="0"]'); c('[data-test=sopa-celda][data-r="0"][data-c="1"]'); } }
+  if (t === 'candado') { s.acertijos.forEach((a, j) => c(`[data-test=cand-op][data-j="${j}"][data-o="${bien ? a.ok : (a.ok + 1) % a.ops.length}"]`)); if (bien) { s.acertijos.forEach(a => c(`[data-test=cand-tecla][data-d="${a.digito}"]`)); c('[data-test=cand-abrir]'); } }
+}
 const notas = [];
 async function recorrer(w, modo, tope = 40) { let n = 0; const vistos = []; while (tipo(w) !== 'final' && n++ < tope) { const t = tipo(w); const h = await jugarSlide(w, modo); vistos.push(t + (h ? '' : '✗')); if (!h) return { ok: false, vistos, trabado: t }; clic(next(w)); } return { ok: tipo(w) === 'final', vistos }; }
 
@@ -195,6 +208,35 @@ async function recorrer(w, modo, tope = 40) { let n = 0; const vistos = []; whil
         qa(w, '[data-test=abierta-txt]').forEach(x => { x.value = 'una dos'; x.dispatchEvent(new w.Event('input', { bubbles: true })); }); clic(q(w, '[data-test=abierta-guardar]')); ok(!habil(w), 'abierta: con menos de ' + need + ' palabras no avanza');
         qa(w, '[data-test=abierta-txt]').forEach(x => { x.value = 'palabra '.repeat(need); x.dispatchEvent(new w.Event('input', { bubbles: true })); }); clic(q(w, '[data-test=abierta-guardar]')); ok(habil(w), 'abierta: con las palabras mínimas guarda y avanza'); }
       if (iR >= 0) { API.irA(iR); await sleep(520); ok(!habil(w) && !!q(w, '#rescate-wrap button'), 'recta: sin responder aparece «No me sale» y Siguiente sigue apagado'); }
+      w.close(); } }
+
+  T('T24 · Juegos v28: enlazar, ordenar, memoria, relámpago, sopa y candado (reglas, rescate y sin tocar la nota)');
+  { const hay = NUEVOS28.some(x => SL0.some(y => y.type === x)); if (!hay) console.log('  ⚠️  la clase no usa juegos v28: no aplica');
+    else { const w = abrir({ est: 'olga' }).window, API = w.CLASE_API, idx = t => SL0.findIndex(x => x.type === t), c = sel => { const e = q(w, sel); if (e) clic(e); }, txt = sel => (q(w, sel) || { textContent: '' }).textContent;
+      let i;
+      if ((i = idx('enlazar')) >= 0) { API.irA(i); const n = SL0[i].pares.length; c('[data-test=enl-izq][data-i="0"]'); c('[data-test=enl-der][data-k="1"]'); ok(/no van juntas/.test(txt('[data-test=enl-fb]')) && !habil(w), 'enlazar: una pareja equivocada avisa «casi» y no completa');
+        c('[data-test=enl-izq][data-i="0"]'); c('[data-test=enl-der][data-k="0"]'); await sleep(40); ok(!!q(w, '#v28-svg line'), 'enlazar: la pareja acertada dibuja su línea');
+        for (let k = 1; k < n; k++) { c(`[data-test=enl-izq][data-i="${k}"]`); c(`[data-test=enl-der][data-k="${k}"]`); } ok(habil(w), 'enlazar: con todas las parejas se habilita «Siguiente»'); }
+      if ((i = idx('ordenar')) >= 0) { API.irA(i); c('[data-test=ord-comprobar]'); ok(/en su lugar/.test(txt('[data-test=ord-fb]')) && !habil(w), 'ordenar: desordenado muestra «x de n en su lugar» y no completa');
+        const n = SL0[i].items.length; for (let p = 0; p < n; p++) { const cur = qa(w, '[data-test=ord-item]').map(e => +e.dataset.k); if (cur[p] !== p) { c(`[data-test=ord-item][data-k="${p}"]`); c(`[data-test=ord-item][data-p="${p}"]`); } } c('[data-test=ord-comprobar]'); ok(habil(w), 'ordenar: en el orden correcto completa'); }
+      if ((i = idx('memoria')) >= 0) { API.irA(i); c('[data-test=mem-carta][data-p="0"][data-l="a"]'); c('[data-test=mem-carta][data-p="1"][data-l="b"]'); ok(/No son pareja/.test(txt('[data-test=mem-fb]')), 'memoria: dos cartas distintas avisan que no son pareja');
+        await sleep(1000); ok(qa(w, '[data-test=mem-carta]').filter(e => e.textContent === '❓').length === 2 * SL0[i].pares.length, 'memoria: las cartas fallidas se voltean de nuevo');
+        const n = SL0[i].pares.length; for (let p = 0; p < n; p++) { c(`[data-test=mem-carta][data-p="${p}"][data-l="a"]`); c(`[data-test=mem-carta][data-p="${p}"][data-l="b"]`); } ok(habil(w) && /Todas las parejas/.test(txt('[data-test=mem-fb]')), 'memoria: con todas las parejas completa y da estrellas'); }
+      if ((i = idx('relampago')) >= 0) { const s = API.SL[i]; s.segundos = 0.15; API.irA(i); await sleep(400); ok(/Se acabó el tiempo/.test(txt('[data-test=rel-fb]')), 'relámpago: si se acaba el tiempo cuenta como fallo y muestra la respuesta'); s.segundos = 8;
+        c('[data-test=rel-sig]'); const v = txt('[data-test=rel-vidas]'); ok((v.match(/❤️/g) || []).length === (s.vidas || 3) - 1, 'relámpago: el tiempo agotado resta una vida');
+        c('[data-test=rel-op][data-k="' + s.items[1].correcta + '"]'); ok(/¡Eso!/.test(txt('[data-test=rel-fb]')), 'relámpago: acertar da «¡Eso!»'); ok(!!q(w, '[data-accion=v28-rel-reloj]'), 'relámpago: existe el interruptor «Jugar sin reloj» (accesibilidad)');
+        for (let k = 2; k <= s.items.length + 1; k++) { c('[data-test=rel-sig]'); if (!q(w, '[data-test=rel-op]')) break; c('[data-test=rel-op][data-k="' + (1 - s.items[Math.min(k, s.items.length - 1)].correcta) + '"]'); } c('[data-test=rel-sig]');
+        ok(!!q(w, '[data-test=rel-fin]') && habil(w), 'relámpago: sin vidas o sin frases termina la ronda y deja continuar (aunque falle)'); }
+      if ((i = idx('sopa')) >= 0) { API.irA(i); const s = SL0[i], A = w.V28.sopa(s), B = w.V28.sopa(s); ok(JSON.stringify(A) === JSON.stringify(B), 'sopa: la cuadrícula es la misma cada vez (se puede guardar y continuar)');
+        ok(Object.keys(A.pos).length === s.palabras.length, 'sopa: todas las palabras quedaron escondidas');
+        c('[data-test=sopa-celda][data-r="0"][data-c="0"]'); c('[data-test=sopa-celda][data-r="0"][data-c="0"]'); const k0 = Object.keys(A.pos)[0], [r, cc, dr, dc, L] = A.pos[k0];
+        c(`[data-test=sopa-celda][data-r="${r}"][data-c="${cc}"]`); c(`[data-test=sopa-celda][data-r="${r + dr * (L - 1)}"][data-c="${cc + dc * (L - 1)}"]`); ok(txt('[data-test=sopa-fb]').includes(k0) && qa(w, '.hall').length === L, 'sopa: marcar primera y última letra de una palabra la encuentra');
+        for (const k of Object.keys(A.pos).slice(1)) { const [r1, c1, d1, e1, L1] = A.pos[k]; c(`[data-test=sopa-celda][data-r="${r1}"][data-c="${c1}"]`); c(`[data-test=sopa-celda][data-r="${r1 + d1 * (L1 - 1)}"][data-c="${c1 + e1 * (L1 - 1)}"]`); } ok(habil(w), 'sopa: con todas las palabras completa'); }
+      if ((i = idx('candado')) >= 0) { API.irA(i); const s = SL0[i]; c('[data-test=cand-abrir]'); ok(/Primero resuelve/.test(txt('[data-test=cand-fb]')), 'candado: sin los dígitos no abre y explica por qué');
+        s.acertijos.forEach((a, j) => { c(`[data-test=cand-op][data-j="${j}"][data-o="${(a.ok + 1) % a.ops.length}"]`); c(`[data-test=cand-op][data-j="${j}"][data-o="${a.ok}"]`); }); ok(qa(w, '[data-test=cand-digito]').length === s.acertijos.length, 'candado: cada acertijo correcto revela su dígito (el error no bloquea)');
+        c('[data-test=cand-tecla][data-d="0"]'); c('[data-test=cand-tecla][data-d="0"]'); c('[data-test=cand-tecla][data-d="0"]'); c('[data-test=cand-abrir]'); ok(/no abre/.test(txt('[data-test=cand-fb]')) && !habil(w), 'candado: un código equivocado no abre y se puede reintentar');
+        s.acertijos.forEach(a => c(`[data-test=cand-tecla][data-d="${a.digito}"]`)); c('[data-test=cand-abrir]'); ok(!!q(w, '[data-test=cand-tesoro]') && habil(w), 'candado: el código correcto abre y muestra el tesoro'); }
+      ok(API.estado().aciertos === 0 && hud(w) === '0.0', 'los juegos NO tocan la nota del quiz (HUD ' + hud(w) + ')');
       w.close(); } }
 
   console.log(`\n${pasos - fallos}/${pasos} comprobaciones OK${fallos ? ' · ' + fallos + ' ❌' : ''}`); process.exit(fallos ? 1 : 0);

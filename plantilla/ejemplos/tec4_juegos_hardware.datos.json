@@ -1,0 +1,450 @@
+{
+ "meta": {
+  "claseId": "tec4_p4_s_juegos_hardware",
+  "semana": 1,
+  "grado": 4,
+  "materia": "Tecnología e Informática",
+  "titulo": "Misión hardware: arma tu computador",
+  "dba": "DBA: Identifica las partes de un computador y explica para qué sirve cada una"
+ },
+ "slides": [
+  {
+   "id": "j01",
+   "type": "intro",
+   "titulo": "¡Misión hardware!",
+   "mision": [
+    "🎯 Aprenderás: las partes del computador y para qué sirven.",
+    "👆 Harás: unir, ordenar, jugar contra reloj, buscar palabras y abrir un candado secreto.",
+    "🏆 Ganarás: estrellas, medallas y un tesoro."
+   ]
+  },
+  {
+   "id": "j02",
+   "type": "info",
+   "titulo": "Hardware: lo que se toca",
+   "texto": "El hardware son las partes físicas del computador, como el monitor, el teclado y el mouse. El software son los programas que no se tocan, como Paint.",
+   "aria": "asset://aria-asi-se-hace",
+   "ejemplo": "El teclado es hardware porque lo puedes tocar. Paint es software porque es un programa."
+  },
+  {
+   "id": "j03",
+   "type": "enlazar",
+   "titulo": "Une cada parte con su trabajo",
+   "intro": "Une cada dispositivo con lo que hace.",
+   "ejemplo": "El monitor muestra lo que haces: se une con «Muestra imágenes».",
+   "pares": [
+    {
+     "izq": "Monitor",
+     "der": "Muestra imágenes",
+     "porQue": "El monitor es el dispositivo de salida que nos deja ver."
+    },
+    {
+     "izq": "Teclado",
+     "der": "Escribe letras y números",
+     "porQue": "El teclado es un dispositivo de entrada."
+    },
+    {
+     "izq": "Mouse",
+     "der": "Mueve la flecha",
+     "porQue": "El mouse señala y elige en la pantalla."
+    },
+    {
+     "izq": "Parlantes",
+     "der": "Emiten sonido",
+     "porQue": "Los parlantes son de salida de audio."
+    },
+    {
+     "izq": "Procesador",
+     "der": "Piensa y calcula",
+     "porQue": "El procesador es el cerebro del computador."
+    }
+   ]
+  },
+  {
+   "id": "j04",
+   "type": "relampago",
+   "titulo": "Relámpago: ¿hardware o software?",
+   "intro": "Tienes pocos segundos por frase. ¡Cuida tus vidas!",
+   "segundos": 8,
+   "vidas": 3,
+   "opciones": [
+    "Hardware (se toca)",
+    "Software (no se toca)"
+   ],
+   "items": [
+    {
+     "texto": "El mouse",
+     "correcta": 0,
+     "porQue": "Es una pieza física."
+    },
+    {
+     "texto": "Paint",
+     "correcta": 1,
+     "porQue": "Es un programa."
+    },
+    {
+     "texto": "El monitor",
+     "correcta": 0,
+     "porQue": "Se puede tocar."
+    },
+    {
+     "texto": "Word",
+     "correcta": 1,
+     "porQue": "Es un programa para escribir."
+    },
+    {
+     "texto": "El teclado",
+     "correcta": 0,
+     "porQue": "Tiene teclas físicas."
+    },
+    {
+     "texto": "Un navegador de internet",
+     "correcta": 1,
+     "porQue": "Es un programa."
+    },
+    {
+     "texto": "La impresora",
+     "correcta": 0,
+     "porQue": "Es un dispositivo físico."
+    },
+    {
+     "texto": "Un juego del computador",
+     "correcta": 1,
+     "porQue": "Es software."
+    }
+   ]
+  },
+  {
+   "id": "j05",
+   "type": "quiz",
+   "titulo": "Quiz 1: partes del computador",
+   "preguntas": [
+    {
+     "id": "q1",
+     "dba": "Partes",
+     "nivel": "recordar",
+     "enunciado": "¿Cuál es un dispositivo de entrada?",
+     "calc": null,
+     "retroalimentacion": "Entrada es lo que usamos para dar datos al computador.",
+     "errorComun": "Monitor, parlantes e impresora entregan información: son de salida.",
+     "opciones": [
+      {
+       "id": "a",
+       "texto": "Monitor",
+       "correcta": false,
+       "porQue": "Monitor, parlantes e impresora entregan información: son de salida."
+      },
+      {
+       "id": "b",
+       "texto": "Teclado",
+       "correcta": true
+      },
+      {
+       "id": "c",
+       "texto": "Parlantes",
+       "correcta": false,
+       "porQue": "Monitor, parlantes e impresora entregan información: son de salida."
+      },
+      {
+       "id": "d",
+       "texto": "Impresora",
+       "correcta": false,
+       "porQue": "Monitor, parlantes e impresora entregan información: son de salida."
+      }
+     ]
+    },
+    {
+     "id": "q2",
+     "dba": "Partes",
+     "nivel": "aplicar",
+     "enunciado": "Quieres escuchar música en el computador. ¿Qué necesitas?",
+     "calc": null,
+     "retroalimentacion": "Los parlantes y audífonos convierten el audio en sonido.",
+     "errorComun": "El micrófono recibe sonido, no lo reproduce.",
+     "opciones": [
+      {
+       "id": "a",
+       "texto": "Un micrófono",
+       "correcta": false,
+       "porQue": "El micrófono recibe sonido, no lo reproduce."
+      },
+      {
+       "id": "b",
+       "texto": "Parlantes o audífonos",
+       "correcta": true
+      },
+      {
+       "id": "c",
+       "texto": "Un escáner",
+       "correcta": false,
+       "porQue": "El micrófono recibe sonido, no lo reproduce."
+      },
+      {
+       "id": "d",
+       "texto": "Una cámara web",
+       "correcta": false,
+       "porQue": "El micrófono recibe sonido, no lo reproduce."
+      }
+     ]
+    },
+    {
+     "id": "q3",
+     "dba": "Software",
+     "nivel": "analizar",
+     "enunciado": "¿Cuál de estos es software?",
+     "calc": null,
+     "retroalimentacion": "Paint es un programa: no se puede tocar.",
+     "errorComun": "Mouse, torre y pantalla son piezas físicas, es decir hardware.",
+     "opciones": [
+      {
+       "id": "a",
+       "texto": "El mouse",
+       "correcta": false,
+       "porQue": "Mouse, torre y pantalla son piezas físicas, es decir hardware."
+      },
+      {
+       "id": "b",
+       "texto": "La torre",
+       "correcta": false,
+       "porQue": "Mouse, torre y pantalla son piezas físicas, es decir hardware."
+      },
+      {
+       "id": "c",
+       "texto": "Paint",
+       "correcta": true
+      },
+      {
+       "id": "d",
+       "texto": "La pantalla",
+       "correcta": false,
+       "porQue": "Mouse, torre y pantalla son piezas físicas, es decir hardware."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "j06",
+   "type": "memoria",
+   "titulo": "Memoria: parejas de la torre",
+   "intro": "Encuentra cada componente con su función.",
+   "pares": [
+    {
+     "a": "RAM",
+     "b": "Memoria de trabajo",
+     "porQue": "La RAM guarda lo que usas ahora."
+    },
+    {
+     "a": "Disco duro",
+     "b": "Guarda tus archivos",
+     "porQue": "Conserva la información aunque se apague."
+    },
+    {
+     "a": "Procesador",
+     "b": "El cerebro",
+     "porQue": "Hace los cálculos."
+    },
+    {
+     "a": "Fuente de poder",
+     "b": "Da energía",
+     "porQue": "Reparte la electricidad a las piezas."
+    }
+   ]
+  },
+  {
+   "id": "j07",
+   "type": "ordenar",
+   "titulo": "Apaga bien el computador",
+   "instruccion": "Pon los pasos en el orden correcto.",
+   "items": [
+    "Guarda tu trabajo",
+    "Cierra los programas",
+    "Haz clic en Inicio",
+    "Elige Apagar",
+    "Espera a que se apague la pantalla"
+   ],
+   "porQue": "Así no pierdes tu trabajo ni dañas el equipo."
+  },
+  {
+   "id": "j08",
+   "type": "sopa",
+   "titulo": "Sopa de hardware",
+   "intro": "Lee la pista y encuentra la palabra escondida.",
+   "tam": 10,
+   "palabras": [
+    {
+     "palabra": "MOUSE",
+     "pista": "Mueve la flecha en la pantalla"
+    },
+    {
+     "palabra": "TECLADO",
+     "pista": "Tiene letras y números"
+    },
+    {
+     "palabra": "MONITOR",
+     "pista": "Muestra lo que haces"
+    },
+    {
+     "palabra": "IMPRESORA",
+     "pista": "Saca tu trabajo en papel"
+    }
+   ]
+  },
+  {
+   "id": "j09",
+   "type": "evalFinal",
+   "titulo": "Reto final",
+   "preguntas": [
+    {
+     "id": "e1",
+     "dba": "Salida",
+     "nivel": "recordar",
+     "enunciado": "¿Cuál es un dispositivo de salida?",
+     "calc": null,
+     "retroalimentacion": "La impresora entrega el resultado en papel.",
+     "errorComun": "Teclado, mouse y micrófono envían datos al computador: son de entrada.",
+     "opciones": [
+      {
+       "id": "a",
+       "texto": "Teclado",
+       "correcta": false,
+       "porQue": "Teclado, mouse y micrófono envían datos al computador: son de entrada."
+      },
+      {
+       "id": "b",
+       "texto": "Mouse",
+       "correcta": false,
+       "porQue": "Teclado, mouse y micrófono envían datos al computador: son de entrada."
+      },
+      {
+       "id": "c",
+       "texto": "Impresora",
+       "correcta": true
+      },
+      {
+       "id": "d",
+       "texto": "Micrófono",
+       "correcta": false,
+       "porQue": "Teclado, mouse y micrófono envían datos al computador: son de entrada."
+      }
+     ]
+    },
+    {
+     "id": "e2",
+     "dba": "Función",
+     "nivel": "aplicar",
+     "enunciado": "Si el computador no tuviera procesador, ¿qué pasaría?",
+     "calc": null,
+     "retroalimentacion": "El procesador es el cerebro: sin él nada funciona.",
+     "errorComun": "El procesador hace todos los cálculos, no solo una función.",
+     "opciones": [
+      {
+       "id": "a",
+       "texto": "Se vería sin colores",
+       "correcta": false,
+       "porQue": "El procesador hace todos los cálculos, no solo una función."
+      },
+      {
+       "id": "b",
+       "texto": "No podría hacer cálculos ni trabajar",
+       "correcta": true
+      },
+      {
+       "id": "c",
+       "texto": "Solo perdería el sonido",
+       "correcta": false,
+       "porQue": "El procesador hace todos los cálculos, no solo una función."
+      },
+      {
+       "id": "d",
+       "texto": "Solo se apagaría el mouse",
+       "correcta": false,
+       "porQue": "El procesador hace todos los cálculos, no solo una función."
+      }
+     ]
+    },
+    {
+     "id": "e3",
+     "dba": "Memoria",
+     "nivel": "analizar",
+     "enunciado": "¿Qué guarda tus archivos aunque apagues el computador?",
+     "calc": null,
+     "retroalimentacion": "El disco duro guarda de forma permanente.",
+     "errorComun": "La RAM se borra al apagar el equipo.",
+     "opciones": [
+      {
+       "id": "a",
+       "texto": "La RAM",
+       "correcta": false,
+       "porQue": "La RAM se borra al apagar el equipo."
+      },
+      {
+       "id": "b",
+       "texto": "El disco duro",
+       "correcta": true
+      },
+      {
+       "id": "c",
+       "texto": "El mouse",
+       "correcta": false,
+       "porQue": "La RAM se borra al apagar el equipo."
+      },
+      {
+       "id": "d",
+       "texto": "La pantalla",
+       "correcta": false,
+       "porQue": "La RAM se borra al apagar el equipo."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "j10",
+   "type": "candado",
+   "titulo": "El candado secreto",
+   "intro": "Resuelve los acertijos, junta los 3 dígitos y abre el candado.",
+   "tesoro": "¡Eres un experto en hardware! Te ganaste un tesoro de XP.",
+   "acertijos": [
+    {
+     "q": "¿Cuál es un dispositivo de ENTRADA?",
+     "ops": [
+      "Monitor",
+      "Teclado",
+      "Parlantes"
+     ],
+     "ok": 1,
+     "digito": 4,
+     "porQue": "El teclado envía datos al computador."
+    },
+    {
+     "q": "¿Cuál es un dispositivo de SALIDA?",
+     "ops": [
+      "Mouse",
+      "Micrófono",
+      "Impresora"
+     ],
+     "ok": 2,
+     "digito": 7,
+     "porQue": "La impresora entrega información en papel."
+    },
+    {
+     "q": "¿Cuál es SOFTWARE?",
+     "ops": [
+      "Mouse",
+      "Paint",
+      "Monitor"
+     ],
+     "ok": 1,
+     "digito": 2,
+     "porQue": "Paint es un programa, no se toca."
+    }
+   ]
+  },
+  {
+   "id": "j11",
+   "type": "final",
+   "titulo": "¡Misión cumplida!"
+  }
+ ]
+}

@@ -105,7 +105,7 @@ function razonBloqueo(s) {
     case 'podio':      return '🏅 Elige los puestos y pulsa «Verificar» (o «No me sale»).';
     case 'abierta':     return '✍️ Escribe tus respuestas y pulsa «Guardar respuesta».';
     case 'cuaderno':    return '📓 Marca la casilla cuando hayas hecho la hoja en tu cuaderno.';
-    default: return '';
+    default: return CLAVE_HECHO[s.type] ? '🎮 Termina el juego (acierte o no) o pulsa «No me sale».' : '';
   }
 }
 function pintarRazonBloqueo(s) {

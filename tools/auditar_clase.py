@@ -6,7 +6,7 @@ Uso:  python3 tools/auditar_clase.py clase.html [--json informe.json]
 import json, os, re, subprocess, sys
 PROHIBIDAS = ['incorrecto', 'fallaste', 'estás mal', 'error tuyo']
 MARCAS = ['fortnite', 'free fire', 'freefire', 'minecraft', 'among us', 'roblox', 'pokemon', 'pokémon', 'mario bros', 'disney', 'marvel', 'nintendo', 'epic games', 'pixar', 'brawl stars', 'clash royale']
-TIPOS = {'intro', 'info', 'tf', 'fill', 'drag', 'match', 'orden', 'wordsearch', 'interactive', 'minijuego', 'historia', 'quiz', 'evalFinal', 'final', 'repaso', 'practica', 'cuadricula', 'recta', 'comparar', 'podio', 'abierta', 'cuaderno'}
+TIPOS = {'intro', 'info', 'tf', 'fill', 'drag', 'match', 'orden', 'wordsearch', 'interactive', 'minijuego', 'historia', 'quiz', 'evalFinal', 'final', 'repaso', 'practica', 'cuadricula', 'recta', 'comparar', 'podio', 'abierta', 'cuaderno', 'enlazar', 'ordenar', 'memoria', 'relampago', 'sopa', 'candado'}
 IDS = ['nota-hud', 'nota-delta', 'aciertos-hud', 'nota-intento-hud', 'razon-bloqueo', 'rescate-wrap', 'aviso-guardado', 'btn-next', 'btn-prev', 'stage']
 UNICAS = ['puedeAvanzar', 'aplicarEstadoAvance', 'updScore', 'htmlRetroQuiz', 'sesionGuardadaEsValida', 'esEstudianteNuevo', 'construirEntradaEstudiante', 'pintarNota', 'marcarActividadHecha', 'razonBloqueo', 'almacen', 'save', 'load']
 def main():
@@ -53,6 +53,11 @@ def main():
                 run = run + 1 if a['type'] == b['type'] else 1
                 if run > 2: E.append(f"Más de 2 slides seguidas del tipo {b['type']} (Prioridad 46)"); break
             chk('dba' in D['meta'] and len(D['meta']['dba']) > 10, 'DBA declarado', 'Falta meta.dba')
+            # Variedad (Prioridad 66): una clase dinámica mezcla tipos de juego; avisa si es monótona
+            JUEGOS = {'tf', 'fill', 'drag', 'minijuego', 'cuadricula', 'recta', 'comparar', 'podio', 'enlazar', 'ordenar', 'memoria', 'relampago', 'sopa', 'candado'}
+            tj = {x['type'] for x in S if x['type'] in JUEGOS}; nj = sum(1 for x in S if x['type'] in JUEGOS)
+            if len(S) >= 8 and len(tj) < 4: A.append(f"Variedad: solo {len(tj)} tipos de juego distintos ({', '.join(sorted(tj)) or 'ninguno'}); usa al menos 4 para que no sea monótona (Prioridad 66)")
+            elif len(S) >= 8: OK.append(f"Variedad: {len(tj)} tipos de juego distintos en {nj} actividades")
             def num(x): return float(str(x).replace(' ', '').replace(',', '.'))
             for s in S:
                 t, its = s['type'], s.get('items', [])
@@ -71,6 +76,21 @@ def main():
                         except Exception: E.append(f"{s['id']}/{k}: comparar necesita a y b numéricos")
                 if t == 'podio': chk(sorted(x.get('puesto', 0) for x in its) == list(range(1, len(its) + 1)), '', f"{s['id']}: los puestos deben ser 1..{len(its)} sin repetir")
                 if t == 'abierta': chk(bool(s.get('prompts')) and all(len(p.split()) >= 4 for p in s['prompts']), '', f"{s['id']}: abierta necesita prompts (frases de mínimo 4 palabras)")
+                if t in ('enlazar', 'memoria'):
+                    pr = s.get('pares', []); chk(3 <= len(pr) <= 6, '', f"{s['id']}: {t} necesita entre 3 y 6 pares")
+                    ks = ('izq', 'der') if t == 'enlazar' else ('a', 'b'); tx = [x.get(k, '') for x in pr for k in ks]
+                    chk(all(tx) and len(set(tx)) == len(tx), '', f"{s['id']}: {t}: textos vacíos o repetidos (cada carta/elemento debe ser único)")
+                if t == 'ordenar': chk(3 <= len(s.get('items', [])) <= 6 and len(set(s.get('items', []))) == len(s.get('items', [])), '', f"{s['id']}: ordenar necesita 3 a 6 pasos distintos, escritos en el orden correcto")
+                if t == 'relampago':
+                    ops, itz = s.get('opciones', []), s.get('items', []); chk(len(ops) == 2 and len(itz) >= 6, '', f"{s['id']}: relampago necesita 2 opciones y mínimo 6 frases")
+                    chk(all(x.get('correcta') in (0, 1) and x.get('texto') for x in itz), '', f"{s['id']}: cada frase de relampago necesita texto y correcta 0 o 1")
+                    chk(len({x.get('correcta') for x in itz}) == 2, '', f"{s['id']}: relampago debe mezclar respuestas de las dos opciones (no todas iguales)")
+                if t == 'sopa':
+                    pl, tam = s.get('palabras', []), s.get('tam', 10); ws = [re.sub('[^A-ZÑ]', '', __import__('unicodedata').normalize('NFD', x.get('palabra', '')).upper().replace('Ñ', '\x01')).replace('\x01', 'Ñ') for x in pl]
+                    chk(3 <= len(pl) <= 8 and tam <= 12 and all(3 <= len(w) <= min(tam, 10) for w in ws) and len(set(ws)) == len(ws) and all(x.get('pista') for x in pl), '', f"{s['id']}: sopa necesita 3 a 8 palabras distintas de 3 a 10 letras (sin pasar el tamaño de la cuadrícula) y una pista por palabra")
+                if t == 'candado':
+                    ac = s.get('acertijos', []); chk(3 <= len(ac) <= 5, '', f"{s['id']}: candado necesita 3 a 5 acertijos")
+                    chk(all(isinstance(a.get('digito'), int) and 0 <= a['digito'] <= 9 and a.get('q') and isinstance(a.get('ok'), int) and 0 <= a['ok'] < len(a.get('ops', [])) and len(a.get('ops', [])) >= 3 for a in ac), '', f"{s['id']}: cada acertijo necesita q, 3+ ops, ok (índice) y digito 0-9")
                 if t == 'cuaderno': chk(bool(s.get('partes')) and all(p.get('puntos') for p in s['partes']), '', f"{s['id']}: cuaderno necesita partes con puntos")
             gens = set(re.findall(r'\n\s{2}(\w+)\(rng, base\)', js)); nq = 0; evalu = 0
             for s in S:
