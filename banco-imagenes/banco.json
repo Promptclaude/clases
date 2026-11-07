@@ -1047,7 +1047,13 @@
    "origen": "dibujo original (SVG) — sin marcas de terceros",
    "estado": "aprobada",
    "calidad": 5,
-   "usada_en": []
+   "usada_en": [],
+   "recorte": [
+    "izquierda",
+    "derecha",
+    "arriba",
+    "abajo"
+   ]
   },
   {
    "id": "globo",
@@ -1735,7 +1741,10 @@
    "uso": "",
    "archivo": "_especificas/tecnologia/b13aea3fab.webp",
    "categoria": "_especificas",
-   "subcategoria": "tecnologia"
+   "subcategoria": "tecnologia",
+   "recorte": [
+    "arriba"
+   ]
   },
   {
    "id": "img-63d43577e0",
@@ -1894,7 +1903,11 @@
    "uso": "",
    "archivo": "_especificas/aritmetica4/1fb08e2f21.png",
    "categoria": "_especificas",
-   "subcategoria": "aritmetica4"
+   "subcategoria": "aritmetica4",
+   "recorte": [
+    "derecha",
+    "abajo"
+   ]
   },
   {
    "id": "img-8051fa3f43",
@@ -1940,7 +1953,10 @@
    "uso": "",
    "archivo": "_especificas/aritmetica4/8051fa3f43.png",
    "categoria": "_especificas",
-   "subcategoria": "aritmetica4"
+   "subcategoria": "aritmetica4",
+   "recorte": [
+    "abajo"
+   ]
   },
   {
    "id": "img-dd3b7583b7",
@@ -1986,7 +2002,10 @@
    "uso": "",
    "archivo": "_especificas/aritmetica4/dd3b7583b7.png",
    "categoria": "_especificas",
-   "subcategoria": "aritmetica4"
+   "subcategoria": "aritmetica4",
+   "recorte": [
+    "abajo"
+   ]
   },
   {
    "id": "img-498e03792a",
@@ -2035,7 +2054,10 @@
    "uso": "",
    "archivo": "premios/498e03792a.png",
    "categoria": "premios",
-   "subcategoria": ""
+   "subcategoria": "",
+   "recorte": [
+    "izquierda"
+   ]
   },
   {
    "id": "img-457b2ea19c",
@@ -2128,7 +2150,11 @@
    "uso": "",
    "archivo": "_especificas/aritmetica4/62118e7915.png",
    "categoria": "_especificas",
-   "subcategoria": "aritmetica4"
+   "subcategoria": "aritmetica4",
+   "recorte": [
+    "derecha",
+    "abajo"
+   ]
   },
   {
    "id": "img-bd343f87c5",
@@ -2336,7 +2362,11 @@
    "uso": "",
    "archivo": "personajes/aria/1c624c4cd9.png",
    "categoria": "personajes",
-   "subcategoria": "aria"
+   "subcategoria": "aria",
+   "recorte": [
+    "izquierda",
+    "abajo"
+   ]
   },
   {
    "id": "img-4e245f4c79",
@@ -2417,7 +2447,12 @@
    "uso": "",
    "archivo": "_especificas/aritmetica4/c725f225c0.png",
    "categoria": "_especificas",
-   "subcategoria": "aritmetica4"
+   "subcategoria": "aritmetica4",
+   "recorte": [
+    "izquierda",
+    "derecha",
+    "abajo"
+   ]
   },
   {
    "id": "img-7c3a9cc368",
@@ -2543,7 +2578,13 @@
    "uso": "",
    "archivo": "_especificas/aritmetica4/3481d26761.png",
    "categoria": "_especificas",
-   "subcategoria": "aritmetica4"
+   "subcategoria": "aritmetica4",
+   "recorte": [
+    "izquierda",
+    "derecha",
+    "arriba",
+    "abajo"
+   ]
   },
   {
    "id": "img-a144ff36a4",
@@ -2623,7 +2664,11 @@
    "uso": "",
    "archivo": "_especificas/aritmetica4/494faa099b.png",
    "categoria": "_especificas",
-   "subcategoria": "aritmetica4"
+   "subcategoria": "aritmetica4",
+   "recorte": [
+    "arriba",
+    "abajo"
+   ]
   },
   {
    "id": "img-974a4406a1",
@@ -3255,7 +3300,11 @@
    "uso": "",
    "archivo": "_especificas/aritmetica4/f44eac904a.webp",
    "categoria": "_especificas",
-   "subcategoria": "aritmetica4"
+   "subcategoria": "aritmetica4",
+   "recorte": [
+    "izquierda",
+    "abajo"
+   ]
   },
   {
    "id": "img-8d55253290",
@@ -3417,7 +3466,13 @@
    "uso": "",
    "archivo": "_especificas/aritmetica4/f8c9310d92.webp",
    "categoria": "_especificas",
-   "subcategoria": "aritmetica4"
+   "subcategoria": "aritmetica4",
+   "recorte": [
+    "izquierda",
+    "derecha",
+    "arriba",
+    "abajo"
+   ]
   },
   {
    "id": "img-10088008d1",
@@ -3800,7 +3855,11 @@
    "uso": "",
    "archivo": "_especificas/aritmetica4/1ef9294c01.webp",
    "categoria": "_especificas",
-   "subcategoria": "aritmetica4"
+   "subcategoria": "aritmetica4",
+   "recorte": [
+    "arriba",
+    "abajo"
+   ]
   },
   {
    "id": "img-ea2fec5c23",
@@ -4017,7 +4076,12 @@
    "uso": "",
    "archivo": "_especificas/aritmetica4/b8914526d7.webp",
    "categoria": "_especificas",
-   "subcategoria": "aritmetica4"
+   "subcategoria": "aritmetica4",
+   "recorte": [
+    "izquierda",
+    "arriba",
+    "abajo"
+   ]
   },
   {
    "id": "img-773e248627",
@@ -4069,7 +4133,11 @@
    "uso": "",
    "archivo": "_especificas/aritmetica4/773e248627.webp",
    "categoria": "_especificas",
-   "subcategoria": "aritmetica4"
+   "subcategoria": "aritmetica4",
+   "recorte": [
+    "arriba",
+    "abajo"
+   ]
   },
   {
    "id": "img-4b1b070ba8",
@@ -4176,7 +4244,10 @@
    "uso": "",
    "archivo": "personajes/npc/37d4266506.webp",
    "categoria": "personajes",
-   "subcategoria": "npc"
+   "subcategoria": "npc",
+   "recorte": [
+    "arriba"
+   ]
   },
   {
    "id": "img-eb4563a994",
@@ -4284,7 +4355,10 @@
    "uso": "",
    "archivo": "_especificas/aritmetica4/ae234bff0c.webp",
    "categoria": "_especificas",
-   "subcategoria": "aritmetica4"
+   "subcategoria": "aritmetica4",
+   "recorte": [
+    "arriba"
+   ]
   },
   {
    "id": "img-f2003f920c",
@@ -4391,7 +4465,11 @@
    "uso": "",
    "archivo": "_especificas/aritmetica4/332da91fa4.webp",
    "categoria": "_especificas",
-   "subcategoria": "aritmetica4"
+   "subcategoria": "aritmetica4",
+   "recorte": [
+    "izquierda",
+    "derecha"
+   ]
   },
   {
    "id": "img-472034f35a",
@@ -4497,7 +4575,11 @@
    "uso": "",
    "archivo": "_especificas/aritmetica4/3ef6cc1161.webp",
    "categoria": "_especificas",
-   "subcategoria": "aritmetica4"
+   "subcategoria": "aritmetica4",
+   "recorte": [
+    "derecha",
+    "arriba"
+   ]
   },
   {
    "id": "img-a8c2437312",
@@ -4551,7 +4633,11 @@
    "uso": "",
    "archivo": "personajes/aria/a8c2437312.webp",
    "categoria": "personajes",
-   "subcategoria": "aria"
+   "subcategoria": "aria",
+   "recorte": [
+    "izquierda",
+    "arriba"
+   ]
   },
   {
    "id": "img-165904dedb",
@@ -4696,7 +4782,10 @@
    "uso": "",
    "archivo": "personajes/npc/6c5a4adccb.png",
    "categoria": "personajes",
-   "subcategoria": "npc"
+   "subcategoria": "npc",
+   "recorte": [
+    "abajo"
+   ]
   },
   {
    "id": "img-0f7a4a9c92",
@@ -4841,7 +4930,10 @@
    "uso": "",
    "archivo": "tematicos/decimales/c160823ca3.png",
    "categoria": "tematicos",
-   "subcategoria": "decimales"
+   "subcategoria": "decimales",
+   "recorte": [
+    "arriba"
+   ]
   },
   {
    "id": "img-e79ba7e884",
@@ -4897,7 +4989,10 @@
    "uso": "",
    "archivo": "_especificas/aritmetica4/9149f18b16.png",
    "categoria": "_especificas",
-   "subcategoria": "aritmetica4"
+   "subcategoria": "aritmetica4",
+   "recorte": [
+    "arriba"
+   ]
   },
   {
    "id": "img-ff7acb8878",
@@ -4927,7 +5022,10 @@
    "uso": "",
    "archivo": "tematicos/detectives/ff7acb8878.png",
    "categoria": "tematicos",
-   "subcategoria": "detectives"
+   "subcategoria": "detectives",
+   "recorte": [
+    "arriba"
+   ]
   },
   {
    "id": "img-84400cabed",
@@ -5012,7 +5110,10 @@
    "uso": "",
    "archivo": "tematicos/decimales/1e260a517c.png",
    "categoria": "tematicos",
-   "subcategoria": "decimales"
+   "subcategoria": "decimales",
+   "recorte": [
+    "arriba"
+   ]
   },
   {
    "id": "img-4bbabfa656",
@@ -5040,7 +5141,10 @@
    "uso": "",
    "archivo": "_especificas/aritmetica4/4bbabfa656.png",
    "categoria": "_especificas",
-   "subcategoria": "aritmetica4"
+   "subcategoria": "aritmetica4",
+   "recorte": [
+    "arriba"
+   ]
   },
   {
    "id": "img-18f3cc199b",
@@ -5068,7 +5172,11 @@
    "uso": "",
    "archivo": "_especificas/aritmetica4/18f3cc199b.png",
    "categoria": "_especificas",
-   "subcategoria": "aritmetica4"
+   "subcategoria": "aritmetica4",
+   "recorte": [
+    "arriba",
+    "abajo"
+   ]
   },
   {
    "id": "img-9808acde86",
@@ -5130,7 +5238,10 @@
    "uso": "",
    "archivo": "tematicos/detectives/2e89e48086.png",
    "categoria": "tematicos",
-   "subcategoria": "detectives"
+   "subcategoria": "detectives",
+   "recorte": [
+    "derecha"
+   ]
   },
   {
    "id": "img-3729f46b32",
@@ -5160,7 +5271,10 @@
    "uso": "",
    "archivo": "tematicos/decimales/3729f46b32.png",
    "categoria": "tematicos",
-   "subcategoria": "decimales"
+   "subcategoria": "decimales",
+   "recorte": [
+    "arriba"
+   ]
   },
   {
    "id": "img-dc80cfc6bc",
@@ -5188,7 +5302,10 @@
    "uso": "",
    "archivo": "_especificas/aritmetica4/dc80cfc6bc.png",
    "categoria": "_especificas",
-   "subcategoria": "aritmetica4"
+   "subcategoria": "aritmetica4",
+   "recorte": [
+    "arriba"
+   ]
   },
   {
    "id": "img-1495a677e8",
@@ -5216,7 +5333,10 @@
    "uso": "",
    "archivo": "_especificas/aritmetica4/1495a677e8.png",
    "categoria": "_especificas",
-   "subcategoria": "aritmetica4"
+   "subcategoria": "aritmetica4",
+   "recorte": [
+    "arriba"
+   ]
   },
   {
    "id": "img-206f50d968",
@@ -5809,7 +5929,10 @@
    "uso": "",
    "archivo": "tematicos/decimales/0cc7535c7f.webp",
    "categoria": "tematicos",
-   "subcategoria": "decimales"
+   "subcategoria": "decimales",
+   "recorte": [
+    "abajo"
+   ]
   },
   {
    "id": "img-a5eb1f541d",
@@ -5866,7 +5989,10 @@
    "uso": "",
    "archivo": "tematicos/decimales/516bd53260.webp",
    "categoria": "tematicos",
-   "subcategoria": "decimales"
+   "subcategoria": "decimales",
+   "recorte": [
+    "abajo"
+   ]
   },
   {
    "id": "img-0847130fe8",
@@ -5894,7 +6020,10 @@
    "uso": "",
    "archivo": "_especificas/aritmetica4/0847130fe8.webp",
    "categoria": "_especificas",
-   "subcategoria": "aritmetica4"
+   "subcategoria": "aritmetica4",
+   "recorte": [
+    "abajo"
+   ]
   },
   {
    "id": "img-e56b22bb2a",
@@ -5922,7 +6051,11 @@
    "uso": "",
    "archivo": "_especificas/aritmetica4/e56b22bb2a.webp",
    "categoria": "_especificas",
-   "subcategoria": "aritmetica4"
+   "subcategoria": "aritmetica4",
+   "recorte": [
+    "derecha",
+    "abajo"
+   ]
   },
   {
    "id": "img-b3182f0003",
@@ -5950,7 +6083,12 @@
    "uso": "",
    "archivo": "_especificas/aritmetica4/b3182f0003.webp",
    "categoria": "_especificas",
-   "subcategoria": "aritmetica4"
+   "subcategoria": "aritmetica4",
+   "recorte": [
+    "izquierda",
+    "arriba",
+    "abajo"
+   ]
   },
   {
    "id": "img-a2b9e77f73",
@@ -6009,7 +6147,10 @@
    "uso": "",
    "archivo": "tematicos/decimales/74fa1717f9.webp",
    "categoria": "tematicos",
-   "subcategoria": "decimales"
+   "subcategoria": "decimales",
+   "recorte": [
+    "abajo"
+   ]
   },
   {
    "id": "img-26d97204d8",
@@ -6233,7 +6374,10 @@
    "uso": "",
    "archivo": "_especificas/aritmetica4/a7bf0478bb.webp",
    "categoria": "_especificas",
-   "subcategoria": "aritmetica4"
+   "subcategoria": "aritmetica4",
+   "recorte": [
+    "izquierda"
+   ]
   },
   {
    "id": "img-9f6bfc91b5",
@@ -6798,7 +6942,12 @@
    "uso": "",
    "archivo": "_especificas/tecnologia/c632fb04ad.webp",
    "categoria": "_especificas",
-   "subcategoria": "tecnologia"
+   "subcategoria": "tecnologia",
+   "recorte": [
+    "izquierda",
+    "derecha",
+    "arriba"
+   ]
   },
   {
    "id": "img-62d1e10151",
@@ -7321,7 +7470,12 @@
    "uso": "",
    "archivo": "personajes/aria/3ffd08fdf0.png",
    "categoria": "personajes",
-   "subcategoria": "aria"
+   "subcategoria": "aria",
+   "recorte": [
+    "izquierda",
+    "arriba",
+    "abajo"
+   ]
   },
   {
    "id": "img-a84c12dd7f",
@@ -8682,7 +8836,10 @@
    "uso": "",
    "archivo": "_especificas/aritmetica5/b3f9536a9f.webp",
    "categoria": "_especificas",
-   "subcategoria": "aritmetica5"
+   "subcategoria": "aritmetica5",
+   "recorte": [
+    "arriba"
+   ]
   },
   {
    "id": "img-e79205be60",
@@ -8738,7 +8895,10 @@
    "uso": "",
    "archivo": "_especificas/aritmetica5/6be23be2b3.webp",
    "categoria": "_especificas",
-   "subcategoria": "aritmetica5"
+   "subcategoria": "aritmetica5",
+   "recorte": [
+    "arriba"
+   ]
   },
   {
    "id": "img-68914ac521",
@@ -9452,7 +9612,10 @@
    "uso": "",
    "archivo": "_especificas/aritmetica5/1ee40b38c6.png",
    "categoria": "_especificas",
-   "subcategoria": "aritmetica5"
+   "subcategoria": "aritmetica5",
+   "recorte": [
+    "arriba"
+   ]
   },
   {
    "id": "img-2e8e195ca9",
@@ -9481,7 +9644,10 @@
    "uso": "",
    "archivo": "_especificas/aritmetica4/2e8e195ca9.png",
    "categoria": "_especificas",
-   "subcategoria": "aritmetica4"
+   "subcategoria": "aritmetica4",
+   "recorte": [
+    "abajo"
+   ]
   },
   {
    "id": "img-b71d08f8fb",
@@ -10188,7 +10354,10 @@
    "uso": "",
    "archivo": "personajes/aria/df6acf85a1.webp",
    "categoria": "personajes",
-   "subcategoria": "aria"
+   "subcategoria": "aria",
+   "recorte": [
+    "abajo"
+   ]
   },
   {
    "id": "img-f2c916e8ec",
@@ -10847,7 +11016,11 @@
    "uso": "",
    "archivo": "personajes/aria/db2486a762.webp",
    "categoria": "personajes",
-   "subcategoria": "aria"
+   "subcategoria": "aria",
+   "recorte": [
+    "izquierda",
+    "abajo"
+   ]
   },
   {
    "id": "img-fabed2cb7c",
@@ -11141,7 +11314,10 @@
    "uso": "",
    "archivo": "escenarios/colegio/0b394c7c48.webp",
    "categoria": "escenarios",
-   "subcategoria": "colegio"
+   "subcategoria": "colegio",
+   "recorte": [
+    "abajo"
+   ]
   },
   {
    "id": "img-1b2b6967ab",
@@ -11168,7 +11344,10 @@
    "uso": "",
    "archivo": "personajes/npc/1b2b6967ab.webp",
    "categoria": "personajes",
-   "subcategoria": "npc"
+   "subcategoria": "npc",
+   "recorte": [
+    "abajo"
+   ]
   },
   {
    "id": "img-bde28a06d1",
@@ -11195,7 +11374,11 @@
    "uso": "",
    "archivo": "personajes/npc/bde28a06d1.webp",
    "categoria": "personajes",
-   "subcategoria": "npc"
+   "subcategoria": "npc",
+   "recorte": [
+    "derecha",
+    "abajo"
+   ]
   },
   {
    "id": "img-08a9fa9a5f",
@@ -11252,7 +11435,10 @@
    "uso": "",
    "archivo": "_especificas/tecnologia4/aaa6a86c6e.png",
    "categoria": "_especificas",
-   "subcategoria": "tecnologia4"
+   "subcategoria": "tecnologia4",
+   "recorte": [
+    "derecha"
+   ]
   },
   {
    "id": "img-a140eb8aea",
@@ -11283,7 +11469,12 @@
    "uso": "",
    "archivo": "tematicos/internet/a140eb8aea.png",
    "categoria": "tematicos",
-   "subcategoria": "internet"
+   "subcategoria": "internet",
+   "recorte": [
+    "izquierda",
+    "derecha",
+    "abajo"
+   ]
   },
   {
    "id": "img-1fc303406d",
@@ -11315,7 +11506,12 @@
    "uso": "",
    "archivo": "tematicos/internet/1fc303406d.png",
    "categoria": "tematicos",
-   "subcategoria": "internet"
+   "subcategoria": "internet",
+   "recorte": [
+    "izquierda",
+    "derecha",
+    "abajo"
+   ]
   },
   {
    "id": "img-e364ae9ad7",
@@ -11379,7 +11575,11 @@
    "uso": "",
    "archivo": "tematicos/internet/1bb9982a45.png",
    "categoria": "tematicos",
-   "subcategoria": "internet"
+   "subcategoria": "internet",
+   "recorte": [
+    "izquierda",
+    "abajo"
+   ]
   },
   {
    "id": "img-a2f65d034e",
@@ -11410,7 +11610,11 @@
    "uso": "",
    "archivo": "tematicos/internet/a2f65d034e.png",
    "categoria": "tematicos",
-   "subcategoria": "internet"
+   "subcategoria": "internet",
+   "recorte": [
+    "derecha",
+    "abajo"
+   ]
   },
   {
    "id": "img-b62fb7e8f3",
@@ -11441,7 +11645,12 @@
    "uso": "",
    "archivo": "tematicos/internet/b62fb7e8f3.png",
    "categoria": "tematicos",
-   "subcategoria": "internet"
+   "subcategoria": "internet",
+   "recorte": [
+    "izquierda",
+    "derecha",
+    "abajo"
+   ]
   },
   {
    "id": "img-cd48f097d2",
@@ -11665,7 +11874,12 @@
    "uso": "",
    "archivo": "tematicos/seguridad-digital/b57d024a54.png",
    "categoria": "tematicos",
-   "subcategoria": "seguridad-digital"
+   "subcategoria": "seguridad-digital",
+   "recorte": [
+    "derecha",
+    "arriba",
+    "abajo"
+   ]
   },
   {
    "id": "img-7fe78e06c7",
@@ -11696,7 +11910,13 @@
    "uso": "",
    "archivo": "tematicos/seguridad-digital/7fe78e06c7.png",
    "categoria": "tematicos",
-   "subcategoria": "seguridad-digital"
+   "subcategoria": "seguridad-digital",
+   "recorte": [
+    "izquierda",
+    "derecha",
+    "arriba",
+    "abajo"
+   ]
   },
   {
    "id": "img-a190712cce",
@@ -11728,7 +11948,13 @@
    "uso": "",
    "archivo": "tematicos/internet/a190712cce.png",
    "categoria": "tematicos",
-   "subcategoria": "internet"
+   "subcategoria": "internet",
+   "recorte": [
+    "izquierda",
+    "derecha",
+    "arriba",
+    "abajo"
+   ]
   },
   {
    "id": "img-cb1731b409",
@@ -11760,7 +11986,12 @@
    "uso": "",
    "archivo": "tematicos/seguridad-digital/cb1731b409.png",
    "categoria": "tematicos",
-   "subcategoria": "seguridad-digital"
+   "subcategoria": "seguridad-digital",
+   "recorte": [
+    "izquierda",
+    "arriba",
+    "abajo"
+   ]
   },
   {
    "id": "img-9db3515ffb",
@@ -11790,7 +12021,10 @@
    "uso": "",
    "archivo": "escenarios/ciudad-digital/9db3515ffb.png",
    "categoria": "escenarios",
-   "subcategoria": "ciudad-digital"
+   "subcategoria": "ciudad-digital",
+   "recorte": [
+    "derecha"
+   ]
   },
   {
    "id": "img-956e498b9a",
@@ -11821,7 +12055,11 @@
    "uso": "",
    "archivo": "premios/956e498b9a.png",
    "categoria": "premios",
-   "subcategoria": ""
+   "subcategoria": "",
+   "recorte": [
+    "izquierda",
+    "derecha"
+   ]
   },
   {
    "id": "img-70e8249162",
@@ -11852,7 +12090,11 @@
    "uso": "",
    "archivo": "personajes/aria/70e8249162.png",
    "categoria": "personajes",
-   "subcategoria": "aria"
+   "subcategoria": "aria",
+   "recorte": [
+    "izquierda",
+    "arriba"
+   ]
   },
   {
    "id": "img-4401d4760a",
@@ -12790,7 +13032,10 @@
    "uso": "",
    "archivo": "personajes/npc/399f401364.png",
    "categoria": "personajes",
-   "subcategoria": "npc"
+   "subcategoria": "npc",
+   "recorte": [
+    "izquierda"
+   ]
   },
   {
    "id": "img-f5ec3b4614",
@@ -12846,7 +13091,12 @@
    "uso": "",
    "archivo": "_especificas/tecnologia4/da2da87710.png",
    "categoria": "_especificas",
-   "subcategoria": "tecnologia4"
+   "subcategoria": "tecnologia4",
+   "recorte": [
+    "izquierda",
+    "derecha",
+    "arriba"
+   ]
   },
   {
    "id": "img-8707e59f63",
@@ -12874,7 +13124,10 @@
    "uso": "",
    "archivo": "_especificas/tecnologia4/8707e59f63.png",
    "categoria": "_especificas",
-   "subcategoria": "tecnologia4"
+   "subcategoria": "tecnologia4",
+   "recorte": [
+    "izquierda"
+   ]
   },
   {
    "id": "img-8152594b75",
@@ -12905,7 +13158,12 @@
    "uso": "",
    "archivo": "infografias/8152594b75.png",
    "categoria": "infografias",
-   "subcategoria": ""
+   "subcategoria": "",
+   "recorte": [
+    "izquierda",
+    "derecha",
+    "abajo"
+   ]
   },
   {
    "id": "img-65a517e142",
@@ -12933,7 +13191,13 @@
    "uso": "",
    "archivo": "_especificas/tecnologia4/65a517e142.png",
    "categoria": "_especificas",
-   "subcategoria": "tecnologia4"
+   "subcategoria": "tecnologia4",
+   "recorte": [
+    "izquierda",
+    "derecha",
+    "arriba",
+    "abajo"
+   ]
   },
   {
    "id": "img-1b08354553",
@@ -12961,7 +13225,12 @@
    "uso": "",
    "archivo": "_especificas/tecnologia4/1b08354553.png",
    "categoria": "_especificas",
-   "subcategoria": "tecnologia4"
+   "subcategoria": "tecnologia4",
+   "recorte": [
+    "izquierda",
+    "derecha",
+    "abajo"
+   ]
   },
   {
    "id": "img-18d65433a6",
@@ -12989,7 +13258,10 @@
    "uso": "",
    "archivo": "personajes/npc/18d65433a6.png",
    "categoria": "personajes",
-   "subcategoria": "npc"
+   "subcategoria": "npc",
+   "recorte": [
+    "izquierda"
+   ]
   },
   {
    "id": "img-907ed04c1c",
@@ -13017,7 +13289,10 @@
    "uso": "",
    "archivo": "_especificas/tecnologia4/907ed04c1c.png",
    "categoria": "_especificas",
-   "subcategoria": "tecnologia4"
+   "subcategoria": "tecnologia4",
+   "recorte": [
+    "izquierda"
+   ]
   },
   {
    "id": "img-2b6986e060",
@@ -13806,7 +14081,10 @@
    "uso": "",
    "archivo": "personajes/npc/311d1969a7.png",
    "categoria": "personajes",
-   "subcategoria": "npc"
+   "subcategoria": "npc",
+   "recorte": [
+    "derecha"
+   ]
   },
   {
    "id": "img-560b5dfa13",
@@ -13892,7 +14170,10 @@
    "uso": "",
    "archivo": "_especificas/tecnologia5/60e577a1df.png",
    "categoria": "_especificas",
-   "subcategoria": "tecnologia5"
+   "subcategoria": "tecnologia5",
+   "recorte": [
+    "arriba"
+   ]
   },
   {
    "id": "img-c71b153458",
@@ -13920,7 +14201,11 @@
    "uso": "",
    "archivo": "_especificas/tecnologia5/c71b153458.png",
    "categoria": "_especificas",
-   "subcategoria": "tecnologia5"
+   "subcategoria": "tecnologia5",
+   "recorte": [
+    "derecha",
+    "abajo"
+   ]
   },
   {
    "id": "img-7b5caf16e1",
@@ -14489,7 +14774,11 @@
    "uso": "",
    "archivo": "personajes/npc/840c2fa126.png",
    "categoria": "personajes",
-   "subcategoria": "npc"
+   "subcategoria": "npc",
+   "recorte": [
+    "derecha",
+    "abajo"
+   ]
   },
   {
    "id": "img-05439514ae",
@@ -14518,7 +14807,11 @@
    "uso": "",
    "archivo": "_especificas/tecnologia5/05439514ae.png",
    "categoria": "_especificas",
-   "subcategoria": "tecnologia5"
+   "subcategoria": "tecnologia5",
+   "recorte": [
+    "derecha",
+    "abajo"
+   ]
   },
   {
    "id": "img-2268b3b168",
@@ -14549,7 +14842,10 @@
    "uso": "",
    "archivo": "tematicos/internet/2268b3b168.png",
    "categoria": "tematicos",
-   "subcategoria": "internet"
+   "subcategoria": "internet",
+   "recorte": [
+    "derecha"
+   ]
   },
   {
    "id": "img-f5087fdd54",
@@ -14578,7 +14874,10 @@
    "uso": "",
    "archivo": "_especificas/tecnologia5/f5087fdd54.png",
    "categoria": "_especificas",
-   "subcategoria": "tecnologia5"
+   "subcategoria": "tecnologia5",
+   "recorte": [
+    "izquierda"
+   ]
   },
   {
    "id": "img-31e69ec563",
@@ -14607,7 +14906,11 @@
    "uso": "",
    "archivo": "personajes/npc/31e69ec563.png",
    "categoria": "personajes",
-   "subcategoria": "npc"
+   "subcategoria": "npc",
+   "recorte": [
+    "derecha",
+    "abajo"
+   ]
   },
   {
    "id": "img-b4a99b045f",
@@ -14639,7 +14942,12 @@
    "uso": "",
    "archivo": "tematicos/seguridad-digital/b4a99b045f.png",
    "categoria": "tematicos",
-   "subcategoria": "seguridad-digital"
+   "subcategoria": "seguridad-digital",
+   "recorte": [
+    "izquierda",
+    "derecha",
+    "arriba"
+   ]
   },
   {
    "id": "img-7fde278980",
@@ -14668,7 +14976,11 @@
    "uso": "",
    "archivo": "_especificas/tecnologia5/7fde278980.png",
    "categoria": "_especificas",
-   "subcategoria": "tecnologia5"
+   "subcategoria": "tecnologia5",
+   "recorte": [
+    "arriba",
+    "abajo"
+   ]
   },
   {
    "id": "img-b741374623",
@@ -14697,7 +15009,10 @@
    "uso": "",
    "archivo": "_especificas/tecnologia5/b741374623.png",
    "categoria": "_especificas",
-   "subcategoria": "tecnologia5"
+   "subcategoria": "tecnologia5",
+   "recorte": [
+    "abajo"
+   ]
   },
   {
    "id": "img-89cdb12876",
@@ -14726,7 +15041,10 @@
    "uso": "",
    "archivo": "_especificas/tecnologia5/89cdb12876.png",
    "categoria": "_especificas",
-   "subcategoria": "tecnologia5"
+   "subcategoria": "tecnologia5",
+   "recorte": [
+    "arriba"
+   ]
   },
   {
    "id": "img-08268a4ef7",
@@ -14755,7 +15073,10 @@
    "uso": "",
    "archivo": "_especificas/tecnologia5/08268a4ef7.png",
    "categoria": "_especificas",
-   "subcategoria": "tecnologia5"
+   "subcategoria": "tecnologia5",
+   "recorte": [
+    "arriba"
+   ]
   },
   {
    "id": "img-aec75e67dd",
@@ -15571,7 +15892,10 @@
    "uso": "",
    "archivo": "_especificas/tecnologia5/5291543f5b.webp",
    "categoria": "_especificas",
-   "subcategoria": "tecnologia5"
+   "subcategoria": "tecnologia5",
+   "recorte": [
+    "izquierda"
+   ]
   }
  ]
 }

@@ -24,6 +24,9 @@ Consulta: `python3 _herramientas/buscar_banco.py gema --cat juego --sin-texto` �
 ## Campos de `banco.json`
 id · archivo · svg · categoria · subcategoria · uso · tags · ancho/alto · transparente · tiene_texto/texto (OCR) · calidad 1–5 · nota/motivo · area/grado/semana de origen · usada_en · veces_usada · estado.
 
+## Recortes
+`_herramientas/medir_recortes.py` marca en `banco.json` el campo `recorte` (lados del lienzo que tocan la imagen) en personajes e ilustraciones: casi siempre es un recorte de una lámina. `buscar_banco.py --sin-recorte` las excluye y el empaquetador avisa al usarlas. Las de interfaz y los avatares circulares no se marcan (ocupan el lienzo por diseño).
+
 ## Reglas
 1. Preferir imágenes sin texto y con fondo transparente: son las reutilizables.
 2. Nunca personajes ni logos de terceros como recurso de clase (salvo `uso_con_cuidado`).

@@ -6,7 +6,7 @@ Uso:  python3 tools/auditar_clase.py clase.html [--json informe.json]
 import json, os, re, subprocess, sys
 PROHIBIDAS = ['incorrecto', 'fallaste', 'estás mal', 'error tuyo']
 MARCAS = ['fortnite', 'free fire', 'freefire', 'minecraft', 'among us', 'roblox', 'pokemon', 'pokémon', 'mario bros', 'disney', 'marvel', 'nintendo', 'epic games', 'pixar', 'brawl stars', 'clash royale']
-TIPOS = {'intro', 'info', 'tf', 'fill', 'drag', 'match', 'orden', 'wordsearch', 'interactive', 'minijuego', 'historia', 'quiz', 'evalFinal', 'final', 'repaso', 'practica', 'fraccion', 'cuadricula', 'recta', 'comparar', 'podio', 'abierta', 'cuaderno', 'enlazar', 'ordenar', 'memoria', 'relampago', 'sopa', 'candado'}
+TIPOS = {'intro', 'info', 'tf', 'fill', 'drag', 'match', 'orden', 'wordsearch', 'interactive', 'minijuego', 'historia', 'quiz', 'evalFinal', 'final', 'repaso', 'practica', 'detective', 'fraccion', 'cuadricula', 'recta', 'comparar', 'podio', 'abierta', 'cuaderno', 'enlazar', 'ordenar', 'memoria', 'relampago', 'sopa', 'candado'}
 IDS = ['nota-hud', 'nota-delta', 'aciertos-hud', 'nota-intento-hud', 'razon-bloqueo', 'rescate-wrap', 'aviso-guardado', 'btn-next', 'btn-prev', 'stage']
 UNICAS = ['puedeAvanzar', 'aplicarEstadoAvance', 'updScore', 'htmlRetroQuiz', 'sesionGuardadaEsValida', 'esEstudianteNuevo', 'construirEntradaEstudiante', 'pintarNota', 'marcarActividadHecha', 'razonBloqueo', 'almacen', 'save', 'load']
 def main():
@@ -54,7 +54,7 @@ def main():
                 if run > 2: E.append(f"Más de 2 slides seguidas del tipo {b['type']} (Prioridad 46)"); break
             chk('dba' in D['meta'] and len(D['meta']['dba']) > 10, 'DBA declarado', 'Falta meta.dba')
             # Variedad (Prioridad 66): una clase dinámica mezcla tipos de juego; avisa si es monótona
-            JUEGOS = {'tf', 'fill', 'drag', 'minijuego', 'cuadricula', 'recta', 'comparar', 'podio', 'enlazar', 'ordenar', 'memoria', 'relampago', 'sopa', 'candado'}
+            JUEGOS = {'detective', 'fraccion', 'tf', 'fill', 'drag', 'minijuego', 'cuadricula', 'recta', 'comparar', 'podio', 'enlazar', 'ordenar', 'memoria', 'relampago', 'sopa', 'candado'}
             tj = {x['type'] for x in S if x['type'] in JUEGOS}; nj = sum(1 for x in S if x['type'] in JUEGOS)
             if len(S) >= 8 and len(tj) < 4: A.append(f"Variedad: solo {len(tj)} tipos de juego distintos ({', '.join(sorted(tj)) or 'ninguno'}); usa al menos 4 para que no sea monótona (Prioridad 66)")
             elif len(S) >= 8: OK.append(f"Variedad: {len(tj)} tipos de juego distintos en {nj} actividades")
@@ -76,6 +76,11 @@ def main():
             for s in S:
                 t, its = s['type'], s.get('items', [])
                 if t in ('fraccion', 'cuadricula', 'recta', 'comparar', 'podio'): chk(len(its) >= 2, '', f"{s['id']}: {t} necesita mínimo 2 puntos (items)")
+                if t == 'detective':
+                    ls = s.get('lineas', []); segs = [p for l in ls for p in l if not p.get('fijo')]; pis = [p for p in segs if p.get('s')]
+                    chk(bool(s.get('contexto')) and len(ls) >= 3 and all(isinstance(l, list) and l for l in ls), '', f"{s['id']}: detective necesita contexto (ej. «✉️ Correo recibido») y mínimo 3 líneas")
+                    chk(3 <= len(pis) <= 6 and len(segs) - len(pis) >= 2, '', f"{s['id']}: detective necesita de 3 a 6 pistas (s:true) y al menos 2 partes normales que sirvan de falsa alarma")
+                    chk(all(p.get('porQue') and len(p['porQue'].split()) >= 4 for p in pis), '', f"{s['id']}: cada pista del detective necesita un porQue de 4+ palabras")
                 if t == 'fraccion':
                     for k, x in enumerate(its): chk(isinstance(x.get('partes'), int) and 2 <= x['partes'] <= 12 and isinstance(x.get('objetivo'), int) and 1 <= x['objetivo'] <= x['partes'] and x.get('forma', 'pizza') in ('pizza', 'barra') and bool(x.get('enunciado')), '', f"{s['id']}/{k}: fraccion necesita enunciado, partes (2 a 12), objetivo (1 a partes) y forma pizza|barra")
                 if t == 'ordenar':

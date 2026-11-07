@@ -1,0 +1,587 @@
+{
+ "meta": {
+  "claseId": "tec5_p4_s3_detectives_internet",
+  "semana": 3,
+  "grado": 5,
+  "materia": "Tecnología e Informática",
+  "titulo": "Detectives de internet: ¿real o falso?",
+  "dba": "DBA: Evalúa la confiabilidad de la información en internet y reconoce señales de engaño en noticias y correos fraudulentos"
+ },
+ "slides": [
+  {
+   "id": "d01",
+   "type": "intro",
+   "titulo": "¡Agencia de detectives de internet!",
+   "mision": [
+    "🎯 Aprenderás: a reconocer noticias y correos falsos.",
+    "👆 Harás: cazar pistas, unir señales, clasificar fuentes y abrir un candado.",
+    "🏆 Ganarás: la placa de Detective Digital."
+   ]
+  },
+  {
+   "id": "d02",
+   "type": "info",
+   "titulo": "Antes de creer, verifica",
+   "texto": "En internet hay información verdadera y falsa. Un buen detective revisa quién la escribió, cuándo la publicó y si otras páginas confiables dicen lo mismo.",
+   "imagen": "asset://img-a190712cce",
+   "alt": "Dos noticias: una marcada con una palomita verde y otra con una equis roja, junto a un autor y una fecha",
+   "ejemplo": "Una noticia con autor, fecha y fuente es más confiable que un mensaje anónimo que dice «¡compártelo ya!»."
+  },
+  {
+   "id": "d03",
+   "type": "detective",
+   "titulo": "Detective del correo",
+   "contexto": "✉️ Correo recibido",
+   "intro": "Este correo llegó a la bandeja de Ana. Encuentra las señales de engaño.",
+   "ejemplo": "Un remitente raro, como premios@gmai1.com, es una señal: el número 1 imita la letra l.",
+   "pista": "Mira el remitente, el asunto, la prisa, el enlace y lo que te piden.",
+   "lineas": [
+    [
+     {
+      "t": "De:",
+      "fijo": true
+     },
+     {
+      "t": "premios@gmai1.com",
+      "s": true,
+      "porQue": "El remitente escribe gmai1 con el número 1: es una dirección falsa."
+     }
+    ],
+    [
+     {
+      "t": "Para:",
+      "fijo": true
+     },
+     {
+      "t": "ana@colegio.edu.co"
+     }
+    ],
+    [
+     {
+      "t": "Asunto:",
+      "fijo": true
+     },
+     {
+      "t": "¡¡GANASTE un celular GRATIS!!",
+      "s": true,
+      "porQue": "Promete un premio que no pediste para llamar tu atención."
+     }
+    ],
+    [
+     {
+      "t": "Hola, Ana:"
+     },
+     {
+      "t": "este es un mensaje para ti."
+     }
+    ],
+    [
+     {
+      "t": "Tienes solo 2 horas para reclamar tu premio.",
+      "s": true,
+      "porQue": "Te meten prisa para que no pienses ni preguntes a un adulto."
+     }
+    ],
+    [
+     {
+      "t": "Entra aquí:"
+     },
+     {
+      "t": "http://premios-gratis.xyz/reclama",
+      "s": true,
+      "porQue": "El enlace no es de una empresa conocida y termina de forma rara."
+     }
+    ],
+    [
+     {
+      "t": "Escribe tu clave y tu dirección.",
+      "s": true,
+      "porQue": "Ninguna empresa seria pide claves ni direcciones por correo."
+     }
+    ],
+    [
+     {
+      "t": "Gracias por leer este mensaje."
+     }
+    ]
+   ]
+  },
+  {
+   "id": "d04",
+   "type": "enlazar",
+   "titulo": "Une la señal con su significado",
+   "intro": "Cada señal de engaño tiene una razón.",
+   "ejemplo": "«Te meten prisa» se une con «Quieren que no pienses».",
+   "pares": [
+    {
+     "izq": "Te meten prisa",
+     "der": "Quieren que no pienses",
+     "porQue": "La prisa evita que verifiques."
+    },
+    {
+     "izq": "Piden tu clave",
+     "der": "Ninguna empresa seria la pide",
+     "porQue": "Tu clave es secreta."
+    },
+    {
+     "izq": "Enlace raro",
+     "der": "Puede llevar a una página falsa",
+     "porQue": "Hay que revisar a dónde va."
+    },
+    {
+     "izq": "Sin autor ni fecha",
+     "der": "No sabes quién lo escribió",
+     "porQue": "Una fuente confiable se identifica."
+    },
+    {
+     "izq": "Premio sin concursar",
+     "der": "Es una trampa para robar datos",
+     "porQue": "Nadie regala premios sin motivo."
+    }
+   ]
+  },
+  {
+   "id": "d05",
+   "type": "quiz",
+   "titulo": "Quiz 1: señales de engaño",
+   "preguntas": [
+    {
+     "id": "q1",
+     "dba": "Verificar",
+     "nivel": "recordar",
+     "enunciado": "Un mensaje dice «¡Compártelo ya o pasará algo malo!». ¿Qué haces primero?",
+     "calc": null,
+     "retroalimentacion": "Primero se verifica; no se comparte por miedo.",
+     "errorComun": "Compartir sin verificar ayuda a que el engaño se riegue.",
+     "opciones": [
+      {
+       "id": "a",
+       "texto": "Lo comparto con todos",
+       "correcta": false,
+       "porQue": "Compartir sin verificar ayuda a que el engaño se riegue."
+      },
+      {
+       "id": "b",
+       "texto": "Verifico en una fuente confiable",
+       "correcta": true
+      },
+      {
+       "id": "c",
+       "texto": "Borro el celular",
+       "correcta": false,
+       "porQue": "Compartir sin verificar ayuda a que el engaño se riegue."
+      },
+      {
+       "id": "d",
+       "texto": "Respondo con mis datos",
+       "correcta": false,
+       "porQue": "Compartir sin verificar ayuda a que el engaño se riegue."
+      }
+     ]
+    },
+    {
+     "id": "q2",
+     "dba": "Seguridad",
+     "nivel": "aplicar",
+     "enunciado": "Un desconocido te pide la clave de tu juego. ¿Qué haces?",
+     "calc": null,
+     "retroalimentacion": "La clave es secreta y se cuenta a un adulto de confianza.",
+     "errorComun": "Las claves no se comparten con nadie, ni con un amable desconocido.",
+     "opciones": [
+      {
+       "id": "a",
+       "texto": "Se la doy si me cae bien",
+       "correcta": false,
+       "porQue": "Las claves no se comparten con nadie, ni con un amable desconocido."
+      },
+      {
+       "id": "b",
+       "texto": "No se la doy y le cuento a un adulto",
+       "correcta": true
+      },
+      {
+       "id": "c",
+       "texto": "La cambio por un premio",
+       "correcta": false,
+       "porQue": "Las claves no se comparten con nadie, ni con un amable desconocido."
+      },
+      {
+       "id": "d",
+       "texto": "La publico",
+       "correcta": false,
+       "porQue": "Las claves no se comparten con nadie, ni con un amable desconocido."
+      }
+     ],
+     "imagen": "asset://img-7fe78e06c7",
+     "alt": "Niño preocupado frente al computador con un mensaje de peligro y una figura encapuchada detrás"
+    },
+    {
+     "id": "q3",
+     "dba": "Fuentes",
+     "nivel": "analizar",
+     "enunciado": "¿Cuál es una fuente más confiable?",
+     "calc": null,
+     "retroalimentacion": "Una fuente confiable muestra quién es el autor y cuándo publicó.",
+     "errorComun": "Lo anónimo o reenviado sin datos no se puede comprobar.",
+     "opciones": [
+      {
+       "id": "a",
+       "texto": "Un mensaje reenviado sin autor",
+       "correcta": false,
+       "porQue": "Lo anónimo o reenviado sin datos no se puede comprobar."
+      },
+      {
+       "id": "b",
+       "texto": "Una página de un periódico con autor y fecha",
+       "correcta": true
+      },
+      {
+       "id": "c",
+       "texto": "Un video sin nombre",
+       "correcta": false,
+       "porQue": "Lo anónimo o reenviado sin datos no se puede comprobar."
+      },
+      {
+       "id": "d",
+       "texto": "Un comentario anónimo",
+       "correcta": false,
+       "porQue": "Lo anónimo o reenviado sin datos no se puede comprobar."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "d06",
+   "type": "drag",
+   "titulo": "Semáforo de confianza",
+   "zonas": [
+    {
+     "id": "c",
+     "nombre": "🟢 Confiable"
+    },
+    {
+     "id": "d",
+     "nombre": "🟡 Dudoso"
+    },
+    {
+     "id": "n",
+     "nombre": "🔴 No confiable"
+    }
+   ],
+   "chips": [
+    {
+     "t": "Noticia de un periódico con autor y fecha",
+     "z": "c",
+     "porQue": "Muestra autor y fecha: se puede comprobar."
+    },
+    {
+     "t": "Cadena de WhatsApp: «reenvía a 10 amigos»",
+     "z": "n",
+     "porQue": "Pide reenviar sin pruebas: es típico de engaños."
+    },
+    {
+     "t": "Blog personal que no cita fuentes",
+     "z": "d",
+     "porQue": "Puede tener razón, pero no muestra de dónde saca los datos."
+    },
+    {
+     "t": "Página oficial del colegio",
+     "z": "c",
+     "porQue": "Es la fuente oficial de su propia información."
+    },
+    {
+     "t": "Video alarmante sin autor",
+     "z": "n",
+     "porQue": "No se sabe quién lo hizo ni si es verdad."
+    }
+   ]
+  },
+  {
+   "id": "d07",
+   "type": "relampago",
+   "titulo": "Relámpago: ¿engaño o confianza?",
+   "intro": "Decide rápido qué tipo de señal es.",
+   "segundos": 8,
+   "vidas": 3,
+   "opciones": [
+    "🚩 Señal de engaño",
+    "✅ Señal de confianza"
+   ],
+   "items": [
+    {
+     "texto": "Tiene autor y fecha",
+     "correcta": 1,
+     "porQue": "Se puede comprobar."
+    },
+    {
+     "texto": "Dice «¡Última hora!!! Compártelo ya»",
+     "correcta": 0,
+     "porQue": "Busca que no verifiques."
+    },
+    {
+     "texto": "Cita fuentes que puedes consultar",
+     "correcta": 1,
+     "porQue": "Puedes comprobar lo que dice."
+    },
+    {
+     "texto": "Te pide tu contraseña",
+     "correcta": 0,
+     "porQue": "Nunca se da la contraseña."
+    },
+    {
+     "texto": "El enlace tiene errores de ortografía",
+     "correcta": 0,
+     "porQue": "Los sitios falsos imitan nombres con errores."
+    },
+    {
+     "texto": "Otras páginas confiables dicen lo mismo",
+     "correcta": 1,
+     "porQue": "Varias fuentes confirman."
+    },
+    {
+     "texto": "Promete dinero fácil",
+     "correcta": 0,
+     "porQue": "Es un gancho para estafar."
+    },
+    {
+     "texto": "Viene de la página oficial",
+     "correcta": 1,
+     "porQue": "La fuente oficial es confiable."
+    }
+   ]
+  },
+  {
+   "id": "d08",
+   "type": "sopa",
+   "titulo": "Sopa del detective",
+   "intro": "Lee la pista y encuentra la palabra.",
+   "tam": 10,
+   "palabras": [
+    {
+     "palabra": "AUTOR",
+     "pista": "Quien escribe la noticia"
+    },
+    {
+     "palabra": "FUENTE",
+     "pista": "De dónde sale la información"
+    },
+    {
+     "palabra": "FECHA",
+     "pista": "Cuándo se publicó"
+    },
+    {
+     "palabra": "ENLACE",
+     "pista": "Dirección que te lleva a otra página"
+    },
+    {
+     "palabra": "VIRUS",
+     "pista": "Programa dañino que se esconde"
+    },
+    {
+     "palabra": "CLAVE",
+     "pista": "Secreto que protege tu cuenta"
+    }
+   ]
+  },
+  {
+   "id": "d09",
+   "type": "ordenar",
+   "titulo": "Pasos del detective",
+   "instruccion": "Ordena los pasos para verificar una noticia.",
+   "items": [
+    "Lee con calma y no la compartas aún",
+    "Busca quién es el autor y la fecha",
+    "Compara con 2 páginas confiables",
+    "Decide si es real o falsa",
+    "Cuéntaselo a un adulto o a tu clase"
+   ],
+   "porQue": "Verificar primero evita que el engaño se riegue."
+  },
+  {
+   "id": "d10",
+   "type": "evalFinal",
+   "titulo": "Reto final",
+   "preguntas": [
+    {
+     "id": "e1",
+     "dba": "Fraudes",
+     "nivel": "recordar",
+     "enunciado": "¿Qué es un correo de phishing?",
+     "calc": null,
+     "retroalimentacion": "El phishing imita a una empresa para engañarte.",
+     "errorComun": "El phishing no es un programa útil: es un engaño.",
+     "opciones": [
+      {
+       "id": "a",
+       "texto": "Un correo falso que busca robar tus datos",
+       "correcta": true
+      },
+      {
+       "id": "b",
+       "texto": "Un programa para dibujar",
+       "correcta": false,
+       "porQue": "El phishing no es un programa útil: es un engaño."
+      },
+      {
+       "id": "c",
+       "texto": "Una red social",
+       "correcta": false,
+       "porQue": "El phishing no es un programa útil: es un engaño."
+      },
+      {
+       "id": "d",
+       "texto": "Un juego en línea",
+       "correcta": false,
+       "porQue": "El phishing no es un programa útil: es un engaño."
+      }
+     ]
+    },
+    {
+     "id": "e2",
+     "dba": "Señales",
+     "nivel": "aplicar",
+     "enunciado": "Un mensaje dice: «Reclama tu premio en 1 hora». ¿Qué señal no debes ignorar?",
+     "calc": null,
+     "retroalimentacion": "La prisa es una señal típica de engaño.",
+     "errorComun": "El color y la letra no dicen si es verdad; la prisa sí es sospechosa.",
+     "opciones": [
+      {
+       "id": "a",
+       "texto": "La prisa de 1 hora",
+       "correcta": true
+      },
+      {
+       "id": "b",
+       "texto": "El color del mensaje",
+       "correcta": false,
+       "porQue": "El color y la letra no dicen si es verdad; la prisa sí es sospechosa."
+      },
+      {
+       "id": "c",
+       "texto": "La hora de envío",
+       "correcta": false,
+       "porQue": "El color y la letra no dicen si es verdad; la prisa sí es sospechosa."
+      },
+      {
+       "id": "d",
+       "texto": "El tamaño de la letra",
+       "correcta": false,
+       "porQue": "El color y la letra no dicen si es verdad; la prisa sí es sospechosa."
+      }
+     ]
+    },
+    {
+     "id": "e3",
+     "dba": "Fuentes",
+     "nivel": "analizar",
+     "enunciado": "¿Qué dato hace más confiable una noticia?",
+     "calc": null,
+     "retroalimentacion": "Citar la fuente permite comprobar.",
+     "errorComun": "La urgencia y las mayúsculas no prueban nada.",
+     "opciones": [
+      {
+       "id": "a",
+       "texto": "Tiene muchos emojis",
+       "correcta": false,
+       "porQue": "La urgencia y las mayúsculas no prueban nada."
+      },
+      {
+       "id": "b",
+       "texto": "Cita su fuente y muestra autor y fecha",
+       "correcta": true
+      },
+      {
+       "id": "c",
+       "texto": "Dice que es urgente",
+       "correcta": false,
+       "porQue": "La urgencia y las mayúsculas no prueban nada."
+      },
+      {
+       "id": "d",
+       "texto": "Tiene muchas mayúsculas",
+       "correcta": false,
+       "porQue": "La urgencia y las mayúsculas no prueban nada."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "d11",
+   "type": "abierta",
+   "titulo": "Explica con tus palabras",
+   "intro": "Tu docente leerá tus respuestas.",
+   "minPalabras": 6,
+   "ejemplo": "«Un correo falso suele tener un remitente raro y me mete prisa para que no pregunte».",
+   "prompts": [
+    "Cuéntale a un amigo cómo reconoces un correo falso. Escribe al menos dos señales.",
+    "¿Qué harías si un mensaje te pide tu contraseña?"
+   ]
+  },
+  {
+   "id": "d12",
+   "type": "candado",
+   "titulo": "La caja fuerte de la agencia",
+   "intro": "Resuelve los acertijos, junta los 4 dígitos y abre la caja fuerte.",
+   "tesoro": "¡Eres Detective Digital! Recibes tu placa.",
+   "acertijos": [
+    {
+     "q": "¿Qué verificas primero en una noticia?",
+     "ops": [
+      "Los emojis",
+      "El autor y la fecha",
+      "El tamaño de letra"
+     ],
+     "ok": 1,
+     "digito": 5,
+     "porQue": "Quién la escribió y cuándo."
+    },
+    {
+     "q": "Si por correo piden tu clave, ¿es confiable?",
+     "ops": [
+      "No",
+      "Sí",
+      "Depende del color"
+     ],
+     "ok": 0,
+     "digito": 9,
+     "porQue": "Nunca se da la clave."
+    },
+    {
+     "q": "¿Qué haces con un enlace raro?",
+     "ops": [
+      "Lo abro rápido",
+      "Lo reenvío",
+      "No lo abro"
+     ],
+     "ok": 2,
+     "digito": 3,
+     "porQue": "Puede llevar a una página falsa."
+    },
+    {
+     "q": "Si algo te asusta en internet, ¿a quién se lo cuentas?",
+     "ops": [
+      "A un adulto de confianza",
+      "A nadie",
+      "Al desconocido"
+     ],
+     "ok": 0,
+     "digito": 7,
+     "porQue": "Un adulto te ayuda a resolverlo."
+    }
+   ]
+  },
+  {
+   "id": "d13",
+   "type": "final",
+   "titulo": "¡Misión cumplida, detective!",
+   "aprendiste": [
+    "Reconoces señales de un correo o mensaje falso.",
+    "Verificas autor, fecha y fuentes antes de creer o compartir.",
+    "Sabes qué hacer si te piden tu clave o un enlace raro."
+   ],
+   "siguiente": "Aprenderemos a crear contraseñas fuertes y a proteger tu cuenta."
+  }
+ ]
+}

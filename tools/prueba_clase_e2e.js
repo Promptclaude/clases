@@ -30,8 +30,9 @@ const idxTipo = (w, ...tipos) => w.CLASE_API.SL.findIndex(x => tipos.includes(x.
 const idxEvaluables = w => w.CLASE_API.SL.map((x, i) => ['quiz', 'evalFinal'].includes(x.type) ? i : -1).filter(i => i >= 0);
 const val27 = x => { const t = String(x).trim(), pc = t.endsWith('%'), u = t.replace('%', '').replace(/\s/g, ''); let v; if (u.includes('/')) { const [a, b] = u.split('/'); v = parseFloat(a.replace(',', '.')) / parseFloat(b.replace(',', '.')); } else v = parseFloat(u.replace(',', '.')); return pc ? v / 100 : v; };
 const NUEVOS27 = ['fraccion', 'cuadricula', 'recta', 'comparar', 'podio', 'abierta', 'cuaderno'];
+const NUEVOS31 = ['detective'];
 const NUEVOS28 = ['enlazar', 'ordenar', 'memoria', 'relampago', 'sopa', 'candado'];
-const ACTIVIDADES = ['tf', 'fill', 'drag', 'match', 'orden', 'wordsearch', 'interactive', 'minijuego', 'historia', ...NUEVOS27, ...NUEVOS28];
+const ACTIVIDADES = ['tf', 'fill', 'drag', 'match', 'orden', 'wordsearch', 'interactive', 'minijuego', 'historia', ...NUEVOS27, ...NUEVOS28, ...NUEVOS31];
 const cerrarModal = w => { if (!q(w, '#modal').hidden) { const b = q(w, '#modal button'); if (b) clic(b); } };
 
 async function jugarSlide(w, modo /* 'mal' | 'bien' */) {
@@ -42,6 +43,7 @@ async function jugarSlide(w, modo /* 'mal' | 'bien' */) {
   if (t === 'drag') { const ids = s.chips.map((c, i) => i).slice(0, 2); for (const i of ids) { for (let k = 0; k < 2; k++) { clic(q(w, `[data-test=chip][data-i="${i}"]`)); const bien = s.chips[i].z, mala = s.zonas.find(z => z.id !== bien).id; clic(q(w, `[data-test=zona][data-z="${modo === 'bien' ? bien : mala}"]`)); if (modo === 'bien') break; } } }
   if (NUEVOS27.includes(t)) await jugarNuevo27(w, s, t, modo);
   if (NUEVOS28.includes(t)) await jugarNuevo28(w, s, t, modo);
+  if (t === 'detective') { const cl = (s.lineas.flatMap((l, i) => l.map((p, j) => ({ p, k: i + ',' + j }))).filter(x => !x.p.fijo)); const mk = x => clic(q(w, `[data-test=det-seg][data-k="${x.k}"]`)); if (modo === 'bien') { cl.filter(x => x.p.s).forEach(mk); clic(q(w, '[data-test=det-revisar]')); } else { mk(cl.find(x => !x.p.s)); clic(q(w, '[data-test=det-revisar]')); clic(q(w, '[data-test=det-revisar]')); } }
   if (t === 'minijuego') { for (let r = 0; r < s.rondas.length; r++) { const R = s.rondas[r], i = modo === 'bien' ? R.ok : (R.ok + 1) % R.ops.length; clic(q(w, `[data-test=mj-op][data-i="${i}"]`)); await sleep(60); } }
   if (t === 'quiz' || t === 'evalFinal') { for (let n = 0; n < s.preguntas.length; n++) { const c = api.opcionCorrectaActual(); if (!c) break; const ops = qa(w, '[data-test=opcion]'); const el = modo === 'bien' ? ops.find(o => o.dataset.op === c.id) : ops.find(o => o.dataset.op !== c.id); clic(el); cerrarModal(w); await sleep(75); } }
   if (ACTIVIDADES.includes(t) && !['tf', 'fill', 'drag', 'minijuego', ...NUEVOS27].includes(t)) { await esperaHabil(w, 100); if (!habil(w)) { await sleep(520); const b = q(w, '#rescate-wrap button'); if (b) { clic(b); notas.push('«' + t + '» solo se probó con rescate'); } } }
@@ -253,7 +255,7 @@ async function recorrer(w, modo, tope = 40) { let n = 0; const vistos = []; whil
     ok(!!q(w, '[data-test=celebracion]') && !!q(w, '[data-test=medalla]'), 'la pantalla final muestra celebración y medalla');
     ok(/data:image/.test(q(w, '[data-test=medalla]').src), 'la medalla viene empaquetada (funciona sin internet)');
     ok(/⭐/.test(q(w, '[data-test=estrellas]').textContent), 'siempre hay al menos 1 estrella (nadie termina con las manos vacías)');
-    const nAct = SL0.filter(x => ['tf', 'fill', 'drag', 'minijuego', ...NUEVOS27, ...NUEVOS28].includes(x.type)).length; ok(new RegExp('de ' + nAct + ' juegos').test(q(w, '[data-test=chip-juegos]').textContent), 'cuenta los juegos de la clase: ' + q(w, '[data-test=chip-juegos]').textContent.trim());
+    const nAct = SL0.filter(x => ['tf', 'fill', 'drag', 'minijuego', ...NUEVOS27, ...NUEVOS28, ...NUEVOS31].includes(x.type)).length; ok(new RegExp('de ' + nAct + ' juegos').test(q(w, '[data-test=chip-juegos]').textContent), 'cuenta los juegos de la clase: ' + q(w, '[data-test=chip-juegos]').textContent.trim());
     ok(/olga/i.test(q(w, '[data-test=insignia]').textContent) && q(w, '[data-test=insignia]').textContent.includes(M.titulo.slice(0, 15)), 'la insignia lleva el nombre del estudiante y el título de la clase');
     if (SL0[iF].aprendiste) ok(qa(w, '[data-test=logros] li').length === SL0[iF].aprendiste.length, '«Lo que lograste hoy» muestra los ' + SL0[iF].aprendiste.length + ' logros');
     ok(!!q(w, '[data-test=final-nota]'), 'la nota oficial sigue visible en la pantalla final');
@@ -273,5 +275,21 @@ async function recorrer(w, modo, tope = 40) { let n = 0; const vistos = []; whil
         const p0 = q(w, '[data-test=frac-parte][data-i="0"][data-c="0"]'); p0.dispatchEvent(new w.KeyboardEvent('keydown', { key: 'Enter', bubbles: true })); await sleep(20);
         ok(q(w, '[data-test=frac-parte][data-i="0"][data-c="0"]').getAttribute('aria-label').includes('pintada') !== (mal >= 1), 'fraccion: se puede pintar con teclado (Enter)');
         w.close(); } } }
+  T('T27 · Detective: 2 revisiones, falsas alarmas, pistas explicadas y sin tocar la nota');
+  { const iD = SL0.findIndex(x => x.type === 'detective'); if (iD < 0) console.log('  ⚠️  la clase no usa detective: no aplica');
+    else { const w = abrir({ est: 'olga' }).window, API = w.CLASE_API, s = SL0[iD]; API.irA(iD); const c = sel => { const e = q(w, sel); if (e) clic(e); }, txt = sel => (q(w, sel) || { textContent: '' }).textContent;
+      const todos = s.lineas.flatMap((l, i) => l.map((p, j) => ({ p, k: i + ',' + j }))).filter(x => !x.p.fijo), pis = todos.filter(x => x.p.s), falsa = todos.find(x => !x.p.s);
+      c('[data-test=det-revisar]'); ok(!habil(w) && txt('[data-test=det-fb]') === '', 'detective: revisar sin marcar nada no gasta la revisión');
+      pis.slice(0, pis.length - 1).forEach(x => c(`[data-test=det-seg][data-k="${x.k}"]`)); c(`[data-test=det-seg][data-k="${falsa.k}"]`); c('[data-test=det-revisar]');
+      ok(new RegExp('Encontraste ' + (pis.length - 1) + ' de ' + pis.length + ' pistas y 1 señal').test(txt('[data-test=det-fb]')) && !habil(w), 'detective: dice cuántas pistas hay y cuántas falsas alarmas, sin decir cuáles');
+      ok(!q(w, '[data-test=det-porque]'), 'detective: mientras no termina, las pistas NO se revelan');
+      c('[data-test=det-pista]'); ok(!!q(w, '[data-test=det-pista-txt]'), 'detective: el botón 💡 Pista ayuda');
+      c(`[data-test=det-seg][data-k="${falsa.k}"]`); c(`[data-test=det-seg][data-k="${pis[pis.length - 1].k}"]`); c('[data-test=det-revisar]');
+      ok(habil(w) && /2\.ª revisión/.test(txt('[data-test=det-fb]')), 'detective: lograrlo en la 2.ª revisión completa con medio punto');
+      ok(qa(w, '[data-test=det-porque] li').length === pis.length, 'detective: al terminar explica cada pista (' + pis.length + ')');
+      ok(API.estado().aciertos === 0 && hud(w) === '0.0', 'detective NO toca la nota del quiz (HUD ' + hud(w) + ')'); w.close();
+      const w2 = abrir({ est: 'pedro' }).window; w2.CLASE_API.irA(iD); const c2 = sel => { const e = q(w2, sel); if (e) clic(e); };
+      c2(`[data-test=det-seg][data-k="${falsa.k}"]`); c2('[data-test=det-revisar]'); c2('[data-test=det-revisar]'); ok(habil(w2) && qa(w2, '.v31-seg.miss').length === pis.length, 'detective: tras 2 revisiones fallidas muestra las pistas que faltaron y deja continuar'); w2.close(); } }
+
   console.log(`\n${pasos - fallos}/${pasos} comprobaciones OK${fallos ? ' · ' + fallos + ' ❌' : ''}`); process.exit(fallos ? 1 : 0);
 })().catch(e => { console.error('ERROR del runner:', e); process.exit(3); });

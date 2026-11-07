@@ -12,6 +12,7 @@
 | **Juegos de aplicación y ritmo de clase** (enlazar, ordenar, memoria, relámpago, sopa de letras, candado secreto) | módulo `prompt-modulos/35_juegos_y_ritmo_de_clase.md` · ejemplo `plantilla/ejemplos/tec4_juegos_hardware.datos.json` · motor `plantilla/motor/v28_juegos_snippets.js` |
 | **Mapa de misión y final de celebración** (medalla, estrellas, logros, insignia imprimible) | módulo `prompt-modulos/36_mapa_y_celebracion.md` · motor `plantilla/motor/v29_mapa_y_celebracion_snippets.js` |
 | **Imágenes de apoyo, fracciones y flujo para crear una clase** | módulo `prompt-modulos/37_imagenes_fracciones_y_flujo.md` · ejemplo real `plantilla/ejemplos/mat5_pizzeria_fracciones.datos.json` · `npm run test:rapido` (la batería completa `npm test` tarda varios minutos) |
+| **Juego detective y calidad de imágenes** (señales de engaño, recortes del banco) | módulo `prompt-modulos/38_detective_y_recortes.md` · ejemplo real `plantilla/ejemplos/tec5_detectives_internet.datos.json` · motor `plantilla/motor/v31_detective_snippets.js` |
 | Módulos del prompt sueltos | `prompt-modulos/` |
 | Historial | `CHANGELOG.md` (versiones previas recuperables con `git checkout archivo-v24-v25`) |
 
