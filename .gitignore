@@ -1,2 +1,5 @@
-node_modules/
+*.pyc
 *.tmp.html
+__pycache__/
+informe_calidad.md
+node_modules/
