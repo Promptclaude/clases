@@ -8911,3 +8911,15 @@ El estudiante toca las partes **sospechosas** 🚩 de un mensaje y pulsa «Revis
 
 ### Pruebas
 El e2e (T27) comprueba: revisar sin marcar no gasta revisión, el aviso «x de n pistas y y falsas alarmas» sin revelar, la pista, lograrlo en la 2.ª revisión, la explicación final de cada pista y que tras 2 fallos muestra lo que faltó y deja continuar. Ejemplo real: `plantilla/ejemplos/tec5_detectives_internet.datos.json`.
+
+
+---
+
+## 🟡 PRIORIDAD 70 · MEDIA — NUEVAS IMÁGENES PARA EL BANCO (herramientas de recorte y kit de matemáticas)
+
+1. **Imágenes que sube el docente** (PNG/JPG/WebP o láminas con varias figuras): NO las uses crudas. Pásalas por `banco-imagenes/_herramientas/agregar_al_banco.py` (quita el fondo, separa la lámina con `--lamina`, recorta, mide calidad/texto/cortes, evita duplicados y las registra). Revisa la hoja `vistas-previas/nuevas-<prefijo>.png` y sube a `aprobada` solo lo que se vea bien.
+2. **Cortes**: una figura cortada por el borde de la lámina NO se arregla con código: infórmalo y pide la lámina completa o regenérala. Nunca «inventes» las partes que faltan.
+3. **No descargues de internet por tu cuenta.** Las imágenes de otras fuentes solo entran si las sube el docente y son de licencia CC0/dominio público o propias; anota la fuente en `uso`. Nada de marcas, juegos ni personajes de terceros.
+4. **Para matemáticas usa primero el kit SVG** (`categoria: matematicas`): círculos y barras de fracciones (vacías y pintadas), bloques de base 10, figuras geométricas, monedas y billetes genéricos. Son originales, escalan sin perder calidad y pesan menos de 1 KB. Ejemplo: `"imagen":"asset://mate-circulo-3-4","alt":"Círculo dividido en cuatro partes con tres pintadas"`. Si falta algo de matemáticas (reloj, regleta, termómetro, balanza), **dibújalo en SVG** con `generar_kit_matematicas.py` como modelo.
+5. **Restos y recortes**: `reparar_recortes.py` limpia pedazos de figuras vecinas (con original guardado en `_originales/`); `medir_recortes.py` actualiza el campo `recorte`.
+6. En el informe final de cada clase, lista **las imágenes que faltaron** para que el docente las genere con la receta de `banco-imagenes/GUIA_NUEVAS_IMAGENES.md` (fondo verde liso #00B140, láminas 3×3 separadas, sin texto).

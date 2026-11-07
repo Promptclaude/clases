@@ -13,6 +13,7 @@ Consulta: `python3 _herramientas/buscar_banco.py gema --cat juego --sin-texto` �
 | `premios/` | Trofeos, medallas, coronas, "misión completada" |
 | `juego/` | Estrellas, monedas, gemas, vidas, cofres… (PNG + SVG) |
 | `escenarios/` | `espacio/` · `colegio/` · `ciudad-digital/` |
+| `matematicas/` | **Kit SVG original** (64): fracciones (círculos y barras, vacías y pintadas), bloques base 10, figuras geométricas, monedas y billetes genéricos |
 | `infografias/` | Tabla con columna/celda/fila (y futuras) |
 | `tematicos/` | `decimales/` · `dinero/` (tienda, precios) · `detectives/` · `fabrica/` · `internet/` · `seguridad-digital/` · `logos-redes-sociales/` |
 | `_especificas/` | Imágenes con texto de una clase concreta (250): solo sirven allí |
@@ -23,6 +24,9 @@ Consulta: `python3 _herramientas/buscar_banco.py gema --cat juego --sin-texto` �
 
 ## Campos de `banco.json`
 id · archivo · svg · categoria · subcategoria · uso · tags · ancho/alto · transparente · tiene_texto/texto (OCR) · calidad 1–5 · nota/motivo · area/grado/semana de origen · usada_en · veces_usada · estado.
+
+## Herramientas nuevas
+Ver `GUIA_NUEVAS_IMAGENES.md`: cómo pedirme imágenes, qué puedo y qué no puedo hacer, receta para tu generador de IA (fondo verde liso) y lista de lo que más falta. `_originales/` guarda las imágenes antes de limpiar restos (reversible).
 
 ## Recortes
 `_herramientas/medir_recortes.py` marca en `banco.json` el campo `recorte` (lados del lienzo que tocan la imagen) en personajes e ilustraciones: casi siempre es un recorte de una lámina. `buscar_banco.py --sin-recorte` las excluye y el empaquetador avisa al usarlas. Las de interfaz y los avatares circulares no se marcan (ocupan el lienzo por diseño).

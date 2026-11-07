@@ -1,7 +1,7 @@
 {
  "version": 1,
  "generado": "2026-11-03",
- "total": 505,
+ "total": 569,
  "campos": {
   "estado": "aprobada | por_revisar | especifica | descartada",
   "calidad": "1-5 (resolución+nitidez)",
@@ -1731,7 +1731,7 @@
    "area": "tecnologia",
    "grado": null,
    "semana": 0,
-   "ancho": 379,
+   "ancho": 378,
    "alto": 350,
    "transparente": true,
    "tiene_texto": true,
@@ -1739,12 +1739,11 @@
    "calidad": 4,
    "estado": "especifica",
    "uso": "",
-   "archivo": "_especificas/tecnologia/b13aea3fab.webp",
+   "archivo": "_especificas/tecnologia/b13aea3fab.png",
    "categoria": "_especificas",
    "subcategoria": "tecnologia",
-   "recorte": [
-    "arriba"
-   ]
+   "nota": "restos de figuras vecinas quitados (original en _originales/)",
+   "limpiada": true
   },
   {
    "id": "img-63d43577e0",
@@ -2045,7 +2044,7 @@
    "grado": 4,
    "semana": 1,
    "ancho": 180,
-   "alto": 163,
+   "alto": 162,
    "transparente": true,
    "tiene_texto": false,
    "texto": "",
@@ -2055,9 +2054,8 @@
    "archivo": "premios/498e03792a.png",
    "categoria": "premios",
    "subcategoria": "",
-   "recorte": [
-    "izquierda"
-   ]
+   "nota": "restos de figuras vecinas quitados (original en _originales/)",
+   "limpiada": true
   },
   {
    "id": "img-457b2ea19c",
@@ -2353,7 +2351,7 @@
    "grado": 4,
    "semana": 1,
    "ancho": 192,
-   "alto": 300,
+   "alto": 294,
    "transparente": true,
    "tiene_texto": false,
    "texto": "",
@@ -2363,8 +2361,9 @@
    "archivo": "personajes/aria/1c624c4cd9.png",
    "categoria": "personajes",
    "subcategoria": "aria",
+   "nota": "restos de figuras vecinas quitados (original en _originales/)",
+   "limpiada": true,
    "recorte": [
-    "izquierda",
     "abajo"
    ]
   },
@@ -2448,9 +2447,10 @@
    "archivo": "_especificas/aritmetica4/c725f225c0.png",
    "categoria": "_especificas",
    "subcategoria": "aritmetica4",
+   "nota": "restos de figuras vecinas quitados (original en _originales/)",
+   "limpiada": true,
    "recorte": [
     "izquierda",
-    "derecha",
     "abajo"
    ]
   },
@@ -2568,7 +2568,7 @@
    "area": "aritmetica",
    "grado": 4,
    "semana": 1,
-   "ancho": 210,
+   "ancho": 206,
    "alto": 43,
    "transparente": true,
    "tiene_texto": true,
@@ -2579,9 +2579,10 @@
    "archivo": "_especificas/aritmetica4/3481d26761.png",
    "categoria": "_especificas",
    "subcategoria": "aritmetica4",
+   "nota": "restos de figuras vecinas quitados (original en _originales/)",
+   "limpiada": true,
    "recorte": [
     "izquierda",
-    "derecha",
     "arriba",
     "abajo"
    ]
@@ -3464,13 +3465,13 @@
    "calidad": 3,
    "estado": "especifica",
    "uso": "",
-   "archivo": "_especificas/aritmetica4/f8c9310d92.webp",
+   "archivo": "_especificas/aritmetica4/f8c9310d92.png",
    "categoria": "_especificas",
    "subcategoria": "aritmetica4",
+   "nota": "restos de figuras vecinas quitados (original en _originales/)",
+   "limpiada": true,
    "recorte": [
-    "izquierda",
     "derecha",
-    "arriba",
     "abajo"
    ]
   },
@@ -3845,7 +3846,7 @@
    "area": "aritmetica",
    "grado": 4,
    "semana": 1,
-   "ancho": 260,
+   "ancho": 232,
    "alto": 172,
    "transparente": true,
    "tiene_texto": true,
@@ -3853,11 +3854,12 @@
    "calidad": 3,
    "estado": "especifica",
    "uso": "",
-   "archivo": "_especificas/aritmetica4/1ef9294c01.webp",
+   "archivo": "_especificas/aritmetica4/1ef9294c01.png",
    "categoria": "_especificas",
    "subcategoria": "aritmetica4",
+   "nota": "restos de figuras vecinas quitados (original en _originales/)",
+   "limpiada": true,
    "recorte": [
-    "arriba",
     "abajo"
    ]
   },
@@ -4066,7 +4068,7 @@
    "area": "aritmetica",
    "grado": 4,
    "semana": 1,
-   "ancho": 260,
+   "ancho": 237,
    "alto": 172,
    "transparente": true,
    "tiene_texto": true,
@@ -4074,9 +4076,11 @@
    "calidad": 3,
    "estado": "especifica",
    "uso": "",
-   "archivo": "_especificas/aritmetica4/b8914526d7.webp",
+   "archivo": "_especificas/aritmetica4/b8914526d7.png",
    "categoria": "_especificas",
    "subcategoria": "aritmetica4",
+   "nota": "restos de figuras vecinas quitados (original en _originales/)",
+   "limpiada": true,
    "recorte": [
     "izquierda",
     "arriba",
@@ -4123,7 +4127,7 @@
    "area": "aritmetica",
    "grado": 4,
    "semana": 1,
-   "ancho": 260,
+   "ancho": 246,
    "alto": 172,
    "transparente": true,
    "tiene_texto": true,
@@ -4131,11 +4135,12 @@
    "calidad": 3,
    "estado": "especifica",
    "uso": "",
-   "archivo": "_especificas/aritmetica4/773e248627.webp",
+   "archivo": "_especificas/aritmetica4/773e248627.png",
    "categoria": "_especificas",
    "subcategoria": "aritmetica4",
+   "nota": "restos de figuras vecinas quitados (original en _originales/)",
+   "limpiada": true,
    "recorte": [
-    "arriba",
     "abajo"
    ]
   },
@@ -4234,20 +4239,19 @@
    "area": "aritmetica",
    "grado": 4,
    "semana": 1,
-   "ancho": 260,
-   "alto": 172,
+   "ancho": 240,
+   "alto": 170,
    "transparente": true,
    "tiene_texto": false,
    "texto": "",
    "calidad": 4,
    "estado": "aprobada",
    "uso": "",
-   "archivo": "personajes/npc/37d4266506.webp",
+   "archivo": "personajes/npc/37d4266506.png",
    "categoria": "personajes",
    "subcategoria": "npc",
-   "recorte": [
-    "arriba"
-   ]
+   "nota": "restos de figuras vecinas quitados (original en _originales/)",
+   "limpiada": true
   },
   {
    "id": "img-eb4563a994",
@@ -4345,7 +4349,7 @@
    "area": "aritmetica",
    "grado": 4,
    "semana": 1,
-   "ancho": 260,
+   "ancho": 218,
    "alto": 172,
    "transparente": true,
    "tiene_texto": true,
@@ -4353,12 +4357,11 @@
    "calidad": 3,
    "estado": "especifica",
    "uso": "",
-   "archivo": "_especificas/aritmetica4/ae234bff0c.webp",
+   "archivo": "_especificas/aritmetica4/ae234bff0c.png",
    "categoria": "_especificas",
    "subcategoria": "aritmetica4",
-   "recorte": [
-    "arriba"
-   ]
+   "nota": "restos de figuras vecinas quitados (original en _originales/)",
+   "limpiada": true
   },
   {
    "id": "img-f2003f920c",
@@ -4456,20 +4459,18 @@
    "grado": 4,
    "semana": 1,
    "ancho": 420,
-   "alto": 338,
+   "alto": 336,
    "transparente": true,
    "tiene_texto": true,
    "texto": "genia",
    "calidad": 4,
    "estado": "especifica",
    "uso": "",
-   "archivo": "_especificas/aritmetica4/332da91fa4.webp",
+   "archivo": "_especificas/aritmetica4/332da91fa4.png",
    "categoria": "_especificas",
    "subcategoria": "aritmetica4",
-   "recorte": [
-    "izquierda",
-    "derecha"
-   ]
+   "nota": "restos de figuras vecinas quitados (original en _originales/)",
+   "limpiada": true
   },
   {
    "id": "img-472034f35a",
@@ -4565,7 +4566,7 @@
    "area": "aritmetica",
    "grado": 4,
    "semana": 1,
-   "ancho": 411,
+   "ancho": 410,
    "alto": 420,
    "transparente": true,
    "tiene_texto": true,
@@ -4573,13 +4574,11 @@
    "calidad": 4,
    "estado": "especifica",
    "uso": "",
-   "archivo": "_especificas/aritmetica4/3ef6cc1161.webp",
+   "archivo": "_especificas/aritmetica4/3ef6cc1161.png",
    "categoria": "_especificas",
    "subcategoria": "aritmetica4",
-   "recorte": [
-    "derecha",
-    "arriba"
-   ]
+   "nota": "restos de figuras vecinas quitados (original en _originales/)",
+   "limpiada": true
   },
   {
    "id": "img-a8c2437312",
@@ -4624,20 +4623,18 @@
    "grado": 4,
    "semana": 1,
    "ancho": 420,
-   "alto": 395,
+   "alto": 394,
    "transparente": true,
    "tiene_texto": false,
    "texto": "",
    "calidad": 4,
    "estado": "aprobada",
    "uso": "",
-   "archivo": "personajes/aria/a8c2437312.webp",
+   "archivo": "personajes/aria/a8c2437312.png",
    "categoria": "personajes",
    "subcategoria": "aria",
-   "recorte": [
-    "izquierda",
-    "arriba"
-   ]
+   "nota": "restos de figuras vecinas quitados (original en _originales/)",
+   "limpiada": true
   },
   {
    "id": "img-165904dedb",
@@ -4920,8 +4917,8 @@
    "area": "aritmetica",
    "grado": 4,
    "semana": 2,
-   "ancho": 217,
-   "alto": 254,
+   "ancho": 216,
+   "alto": 251,
    "transparente": true,
    "tiene_texto": false,
    "texto": "pis",
@@ -4931,9 +4928,8 @@
    "archivo": "tematicos/decimales/c160823ca3.png",
    "categoria": "tematicos",
    "subcategoria": "decimales",
-   "recorte": [
-    "arriba"
-   ]
+   "nota": "restos de figuras vecinas quitados (original en _originales/)",
+   "limpiada": true
   },
   {
    "id": "img-e79ba7e884",
@@ -5023,9 +5019,8 @@
    "archivo": "tematicos/detectives/ff7acb8878.png",
    "categoria": "tematicos",
    "subcategoria": "detectives",
-   "recorte": [
-    "arriba"
-   ]
+   "nota": "restos de figuras vecinas quitados (original en _originales/)",
+   "limpiada": true
   },
   {
    "id": "img-84400cabed",
@@ -5100,7 +5095,7 @@
    "area": "aritmetica",
    "grado": 4,
    "semana": 2,
-   "ancho": 338,
+   "ancho": 335,
    "alto": 290,
    "transparente": true,
    "tiene_texto": false,
@@ -5111,9 +5106,8 @@
    "archivo": "tematicos/decimales/1e260a517c.png",
    "categoria": "tematicos",
    "subcategoria": "decimales",
-   "recorte": [
-    "arriba"
-   ]
+   "nota": "restos de figuras vecinas quitados (original en _originales/)",
+   "limpiada": true
   },
   {
    "id": "img-4bbabfa656",
@@ -5132,7 +5126,7 @@
    "grado": 4,
    "semana": 2,
    "ancho": 308,
-   "alto": 290,
+   "alto": 285,
    "transparente": true,
    "tiene_texto": true,
    "texto": "Pista clave mover una posicion izquierda mover una derecha",
@@ -5142,9 +5136,8 @@
    "archivo": "_especificas/aritmetica4/4bbabfa656.png",
    "categoria": "_especificas",
    "subcategoria": "aritmetica4",
-   "recorte": [
-    "arriba"
-   ]
+   "nota": "restos de figuras vecinas quitados (original en _originales/)",
+   "limpiada": true
   },
   {
    "id": "img-18f3cc199b",
@@ -5173,10 +5166,8 @@
    "archivo": "_especificas/aritmetica4/18f3cc199b.png",
    "categoria": "_especificas",
    "subcategoria": "aritmetica4",
-   "recorte": [
-    "arriba",
-    "abajo"
-   ]
+   "nota": "restos de figuras vecinas quitados (original en _originales/)",
+   "limpiada": true
   },
   {
    "id": "img-9808acde86",
@@ -5229,7 +5220,7 @@
    "grado": 4,
    "semana": 2,
    "ancho": 247,
-   "alto": 226,
+   "alto": 164,
    "transparente": true,
    "tiene_texto": false,
    "texto": "",
@@ -5239,6 +5230,8 @@
    "archivo": "tematicos/detectives/2e89e48086.png",
    "categoria": "tematicos",
    "subcategoria": "detectives",
+   "nota": "restos de figuras vecinas quitados (original en _originales/)",
+   "limpiada": true,
    "recorte": [
     "derecha"
    ]
@@ -5262,7 +5255,7 @@
    "grado": 4,
    "semana": 2,
    "ancho": 331,
-   "alto": 246,
+   "alto": 213,
    "transparente": true,
    "tiene_texto": false,
    "texto": "",
@@ -5272,9 +5265,8 @@
    "archivo": "tematicos/decimales/3729f46b32.png",
    "categoria": "tematicos",
    "subcategoria": "decimales",
-   "recorte": [
-    "arriba"
-   ]
+   "nota": "restos de figuras vecinas quitados (original en _originales/)",
+   "limpiada": true
   },
   {
    "id": "img-dc80cfc6bc",
@@ -5292,8 +5284,8 @@
    "area": "aritmetica",
    "grado": 4,
    "semana": 2,
-   "ancho": 352,
-   "alto": 236,
+   "ancho": 350,
+   "alto": 228,
    "transparente": true,
    "tiene_texto": true,
    "texto": "Loque descubrimos Posicién Valor Ejemplo Unidades Décimas Centésimas 0,01 Milésimas 0,001",
@@ -5303,9 +5295,8 @@
    "archivo": "_especificas/aritmetica4/dc80cfc6bc.png",
    "categoria": "_especificas",
    "subcategoria": "aritmetica4",
-   "recorte": [
-    "arriba"
-   ]
+   "nota": "restos de figuras vecinas quitados (original en _originales/)",
+   "limpiada": true
   },
   {
    "id": "img-1495a677e8",
@@ -5323,8 +5314,8 @@
    "area": "aritmetica",
    "grado": 4,
    "semana": 2,
-   "ancho": 319,
-   "alto": 236,
+   "ancho": 313,
+   "alto": 231,
    "transparente": true,
    "tiene_texto": true,
    "texto": "cerrado! ‘semana",
@@ -5334,6 +5325,8 @@
    "archivo": "_especificas/aritmetica4/1495a677e8.png",
    "categoria": "_especificas",
    "subcategoria": "aritmetica4",
+   "nota": "restos de figuras vecinas quitados (original en _originales/)",
+   "limpiada": true,
    "recorte": [
     "arriba"
    ]
@@ -7471,9 +7464,10 @@
    "archivo": "personajes/aria/3ffd08fdf0.png",
    "categoria": "personajes",
    "subcategoria": "aria",
+   "nota": "restos de figuras vecinas quitados (original en _originales/)",
+   "limpiada": true,
    "recorte": [
     "izquierda",
-    "arriba",
     "abajo"
    ]
   },
@@ -9634,8 +9628,8 @@
    "area": "aritmetica",
    "grado": 5,
    "semana": 5,
-   "ancho": 611,
-   "alto": 441,
+   "ancho": 609,
+   "alto": 439,
    "transparente": true,
    "tiene_texto": false,
    "texto": "",
@@ -9645,9 +9639,8 @@
    "archivo": "_especificas/aritmetica4/2e8e195ca9.png",
    "categoria": "_especificas",
    "subcategoria": "aritmetica4",
-   "recorte": [
-    "abajo"
-   ]
+   "nota": "restos de figuras vecinas quitados (original en _originales/)",
+   "limpiada": true
   },
   {
    "id": "img-b71d08f8fb",
@@ -11372,9 +11365,11 @@
    "calidad": 4,
    "estado": "aprobada",
    "uso": "",
-   "archivo": "personajes/npc/bde28a06d1.webp",
+   "archivo": "personajes/npc/bde28a06d1.png",
    "categoria": "personajes",
    "subcategoria": "npc",
+   "nota": "restos de figuras vecinas quitados (original en _originales/)",
+   "limpiada": true,
    "recorte": [
     "derecha",
     "abajo"
@@ -11636,7 +11631,7 @@
    "grado": 4,
    "semana": 1,
    "ancho": 240,
-   "alto": 193,
+   "alto": 192,
    "transparente": true,
    "tiene_texto": false,
    "texto": "",
@@ -11646,8 +11641,9 @@
    "archivo": "tematicos/internet/b62fb7e8f3.png",
    "categoria": "tematicos",
    "subcategoria": "internet",
+   "nota": "restos de figuras vecinas quitados (original en _originales/)",
+   "limpiada": true,
    "recorte": [
-    "izquierda",
     "derecha",
     "abajo"
    ]
@@ -11864,7 +11860,7 @@
    "area": "tecnologia",
    "grado": 4,
    "semana": 1,
-   "ancho": 384,
+   "ancho": 373,
    "alto": 208,
    "transparente": true,
    "tiene_texto": false,
@@ -11875,9 +11871,10 @@
    "archivo": "tematicos/seguridad-digital/b57d024a54.png",
    "categoria": "tematicos",
    "subcategoria": "seguridad-digital",
+   "nota": "restos de figuras vecinas quitados (original en _originales/)",
+   "limpiada": true,
    "recorte": [
     "derecha",
-    "arriba",
     "abajo"
    ]
   },
@@ -11911,8 +11908,9 @@
    "archivo": "tematicos/seguridad-digital/7fe78e06c7.png",
    "categoria": "tematicos",
    "subcategoria": "seguridad-digital",
+   "nota": "restos de figuras vecinas quitados (original en _originales/)",
+   "limpiada": true,
    "recorte": [
-    "izquierda",
     "derecha",
     "arriba",
     "abajo"
@@ -11949,9 +11947,9 @@
    "archivo": "tematicos/internet/a190712cce.png",
    "categoria": "tematicos",
    "subcategoria": "internet",
+   "nota": "restos de figuras vecinas quitados (original en _originales/)",
+   "limpiada": true,
    "recorte": [
-    "izquierda",
-    "derecha",
     "arriba",
     "abajo"
    ]
@@ -12046,7 +12044,7 @@
    "grado": 4,
    "semana": 1,
    "ancho": 448,
-   "alto": 284,
+   "alto": 277,
    "transparente": true,
    "tiene_texto": false,
    "texto": "",
@@ -12056,8 +12054,9 @@
    "archivo": "premios/956e498b9a.png",
    "categoria": "premios",
    "subcategoria": "",
+   "nota": "restos de figuras vecinas quitados (original en _originales/)",
+   "limpiada": true,
    "recorte": [
-    "izquierda",
     "derecha"
    ]
   },
@@ -12080,7 +12079,7 @@
    "area": "tecnologia",
    "grado": 4,
    "semana": 1,
-   "ancho": 448,
+   "ancho": 435,
    "alto": 284,
    "transparente": true,
    "tiene_texto": false,
@@ -12091,8 +12090,9 @@
    "archivo": "personajes/aria/70e8249162.png",
    "categoria": "personajes",
    "subcategoria": "aria",
+   "nota": "restos de figuras vecinas quitados (original en _originales/)",
+   "limpiada": true,
    "recorte": [
-    "izquierda",
     "arriba"
    ]
   },
@@ -13148,7 +13148,7 @@
    "area": "tecnologia",
    "grado": 4,
    "semana": 6,
-   "ancho": 461,
+   "ancho": 459,
    "alto": 296,
    "transparente": true,
    "tiene_texto": false,
@@ -13159,8 +13159,9 @@
    "archivo": "infografias/8152594b75.png",
    "categoria": "infografias",
    "subcategoria": "",
+   "nota": "restos de figuras vecinas quitados (original en _originales/)",
+   "limpiada": true,
    "recorte": [
-    "izquierda",
     "derecha",
     "abajo"
    ]
@@ -14082,9 +14083,8 @@
    "archivo": "personajes/npc/311d1969a7.png",
    "categoria": "personajes",
    "subcategoria": "npc",
-   "recorte": [
-    "derecha"
-   ]
+   "nota": "restos de figuras vecinas quitados (original en _originales/)",
+   "limpiada": true
   },
   {
    "id": "img-560b5dfa13",
@@ -14171,9 +14171,8 @@
    "archivo": "_especificas/tecnologia5/60e577a1df.png",
    "categoria": "_especificas",
    "subcategoria": "tecnologia5",
-   "recorte": [
-    "arriba"
-   ]
+   "nota": "restos de figuras vecinas quitados (original en _originales/)",
+   "limpiada": true
   },
   {
    "id": "img-c71b153458",
@@ -14764,8 +14763,8 @@
    "area": "tecnologia",
    "grado": 5,
    "semana": 3,
-   "ancho": 278,
-   "alto": 346,
+   "ancho": 276,
+   "alto": 344,
    "transparente": true,
    "tiene_texto": false,
    "texto": "",
@@ -14775,6 +14774,8 @@
    "archivo": "personajes/npc/840c2fa126.png",
    "categoria": "personajes",
    "subcategoria": "npc",
+   "nota": "restos de figuras vecinas quitados (original en _originales/)",
+   "limpiada": true,
    "recorte": [
     "derecha",
     "abajo"
@@ -14864,8 +14865,8 @@
    "area": "tecnologia",
    "grado": 5,
    "semana": 3,
-   "ancho": 473,
-   "alto": 368,
+   "ancho": 471,
+   "alto": 366,
    "transparente": true,
    "tiene_texto": true,
    "texto": "Volcan ena ctividad: VOLC HACE ERU mantiene alerta Comparte ahora antes region. que sea tarde.",
@@ -14875,9 +14876,8 @@
    "archivo": "_especificas/tecnologia5/f5087fdd54.png",
    "categoria": "_especificas",
    "subcategoria": "tecnologia5",
-   "recorte": [
-    "izquierda"
-   ]
+   "nota": "restos de figuras vecinas quitados (original en _originales/)",
+   "limpiada": true
   },
   {
    "id": "img-31e69ec563",
@@ -14933,7 +14933,7 @@
    "grado": 5,
    "semana": 3,
    "ancho": 405,
-   "alto": 372,
+   "alto": 371,
    "transparente": true,
    "tiene_texto": false,
    "texto": "",
@@ -14943,10 +14943,10 @@
    "archivo": "tematicos/seguridad-digital/b4a99b045f.png",
    "categoria": "tematicos",
    "subcategoria": "seguridad-digital",
+   "nota": "restos de figuras vecinas quitados (original en _originales/)",
+   "limpiada": true,
    "recorte": [
-    "izquierda",
-    "derecha",
-    "arriba"
+    "derecha"
    ]
   },
   {
@@ -14977,8 +14977,9 @@
    "archivo": "_especificas/tecnologia5/7fde278980.png",
    "categoria": "_especificas",
    "subcategoria": "tecnologia5",
+   "nota": "restos de figuras vecinas quitados (original en _originales/)",
+   "limpiada": true,
    "recorte": [
-    "arriba",
     "abajo"
    ]
   },
@@ -15896,6 +15897,1542 @@
    "recorte": [
     "izquierda"
    ]
+  },
+  {
+   "id": "mate-circulo-2-vacio",
+   "archivo": "matematicas/fracciones/mate-circulo-2-vacio.svg",
+   "svg": null,
+   "categoria": "matematicas",
+   "subcategoria": "fracciones",
+   "uso": "Círculo en 2 partes iguales, sin pintar",
+   "tags": [
+    "2-partes",
+    "circulo",
+    "fracciones",
+    "matematicas",
+    "partes"
+   ],
+   "ancho": 124,
+   "alto": 124,
+   "transparente": true,
+   "tiene_texto": false,
+   "texto": "",
+   "origen": "dibujada por Claude en SVG (original)",
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": []
+  },
+  {
+   "id": "mate-barra-2-vacia",
+   "archivo": "matematicas/fracciones/mate-barra-2-vacia.svg",
+   "svg": null,
+   "categoria": "matematicas",
+   "subcategoria": "fracciones",
+   "uso": "Barra en 2 partes iguales, sin pintar",
+   "tags": [
+    "2-partes",
+    "barra",
+    "fracciones",
+    "matematicas",
+    "partes"
+   ],
+   "ancho": 252,
+   "alto": 64,
+   "transparente": true,
+   "tiene_texto": false,
+   "texto": "",
+   "origen": "dibujada por Claude en SVG (original)",
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": []
+  },
+  {
+   "id": "mate-circulo-3-vacio",
+   "archivo": "matematicas/fracciones/mate-circulo-3-vacio.svg",
+   "svg": null,
+   "categoria": "matematicas",
+   "subcategoria": "fracciones",
+   "uso": "Círculo en 3 partes iguales, sin pintar",
+   "tags": [
+    "3-partes",
+    "circulo",
+    "fracciones",
+    "matematicas",
+    "partes"
+   ],
+   "ancho": 124,
+   "alto": 124,
+   "transparente": true,
+   "tiene_texto": false,
+   "texto": "",
+   "origen": "dibujada por Claude en SVG (original)",
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": []
+  },
+  {
+   "id": "mate-barra-3-vacia",
+   "archivo": "matematicas/fracciones/mate-barra-3-vacia.svg",
+   "svg": null,
+   "categoria": "matematicas",
+   "subcategoria": "fracciones",
+   "uso": "Barra en 3 partes iguales, sin pintar",
+   "tags": [
+    "3-partes",
+    "barra",
+    "fracciones",
+    "matematicas",
+    "partes"
+   ],
+   "ancho": 252,
+   "alto": 64,
+   "transparente": true,
+   "tiene_texto": false,
+   "texto": "",
+   "origen": "dibujada por Claude en SVG (original)",
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": []
+  },
+  {
+   "id": "mate-circulo-4-vacio",
+   "archivo": "matematicas/fracciones/mate-circulo-4-vacio.svg",
+   "svg": null,
+   "categoria": "matematicas",
+   "subcategoria": "fracciones",
+   "uso": "Círculo en 4 partes iguales, sin pintar",
+   "tags": [
+    "4-partes",
+    "circulo",
+    "fracciones",
+    "matematicas",
+    "partes"
+   ],
+   "ancho": 124,
+   "alto": 124,
+   "transparente": true,
+   "tiene_texto": false,
+   "texto": "",
+   "origen": "dibujada por Claude en SVG (original)",
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": []
+  },
+  {
+   "id": "mate-barra-4-vacia",
+   "archivo": "matematicas/fracciones/mate-barra-4-vacia.svg",
+   "svg": null,
+   "categoria": "matematicas",
+   "subcategoria": "fracciones",
+   "uso": "Barra en 4 partes iguales, sin pintar",
+   "tags": [
+    "4-partes",
+    "barra",
+    "fracciones",
+    "matematicas",
+    "partes"
+   ],
+   "ancho": 252,
+   "alto": 64,
+   "transparente": true,
+   "tiene_texto": false,
+   "texto": "",
+   "origen": "dibujada por Claude en SVG (original)",
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": []
+  },
+  {
+   "id": "mate-circulo-5-vacio",
+   "archivo": "matematicas/fracciones/mate-circulo-5-vacio.svg",
+   "svg": null,
+   "categoria": "matematicas",
+   "subcategoria": "fracciones",
+   "uso": "Círculo en 5 partes iguales, sin pintar",
+   "tags": [
+    "5-partes",
+    "circulo",
+    "fracciones",
+    "matematicas",
+    "partes"
+   ],
+   "ancho": 124,
+   "alto": 124,
+   "transparente": true,
+   "tiene_texto": false,
+   "texto": "",
+   "origen": "dibujada por Claude en SVG (original)",
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": []
+  },
+  {
+   "id": "mate-barra-5-vacia",
+   "archivo": "matematicas/fracciones/mate-barra-5-vacia.svg",
+   "svg": null,
+   "categoria": "matematicas",
+   "subcategoria": "fracciones",
+   "uso": "Barra en 5 partes iguales, sin pintar",
+   "tags": [
+    "5-partes",
+    "barra",
+    "fracciones",
+    "matematicas",
+    "partes"
+   ],
+   "ancho": 252,
+   "alto": 64,
+   "transparente": true,
+   "tiene_texto": false,
+   "texto": "",
+   "origen": "dibujada por Claude en SVG (original)",
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": []
+  },
+  {
+   "id": "mate-circulo-6-vacio",
+   "archivo": "matematicas/fracciones/mate-circulo-6-vacio.svg",
+   "svg": null,
+   "categoria": "matematicas",
+   "subcategoria": "fracciones",
+   "uso": "Círculo en 6 partes iguales, sin pintar",
+   "tags": [
+    "6-partes",
+    "circulo",
+    "fracciones",
+    "matematicas",
+    "partes"
+   ],
+   "ancho": 124,
+   "alto": 124,
+   "transparente": true,
+   "tiene_texto": false,
+   "texto": "",
+   "origen": "dibujada por Claude en SVG (original)",
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": []
+  },
+  {
+   "id": "mate-barra-6-vacia",
+   "archivo": "matematicas/fracciones/mate-barra-6-vacia.svg",
+   "svg": null,
+   "categoria": "matematicas",
+   "subcategoria": "fracciones",
+   "uso": "Barra en 6 partes iguales, sin pintar",
+   "tags": [
+    "6-partes",
+    "barra",
+    "fracciones",
+    "matematicas",
+    "partes"
+   ],
+   "ancho": 252,
+   "alto": 64,
+   "transparente": true,
+   "tiene_texto": false,
+   "texto": "",
+   "origen": "dibujada por Claude en SVG (original)",
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": []
+  },
+  {
+   "id": "mate-circulo-8-vacio",
+   "archivo": "matematicas/fracciones/mate-circulo-8-vacio.svg",
+   "svg": null,
+   "categoria": "matematicas",
+   "subcategoria": "fracciones",
+   "uso": "Círculo en 8 partes iguales, sin pintar",
+   "tags": [
+    "8-partes",
+    "circulo",
+    "fracciones",
+    "matematicas",
+    "partes"
+   ],
+   "ancho": 124,
+   "alto": 124,
+   "transparente": true,
+   "tiene_texto": false,
+   "texto": "",
+   "origen": "dibujada por Claude en SVG (original)",
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": []
+  },
+  {
+   "id": "mate-barra-8-vacia",
+   "archivo": "matematicas/fracciones/mate-barra-8-vacia.svg",
+   "svg": null,
+   "categoria": "matematicas",
+   "subcategoria": "fracciones",
+   "uso": "Barra en 8 partes iguales, sin pintar",
+   "tags": [
+    "8-partes",
+    "barra",
+    "fracciones",
+    "matematicas",
+    "partes"
+   ],
+   "ancho": 252,
+   "alto": 64,
+   "transparente": true,
+   "tiene_texto": false,
+   "texto": "",
+   "origen": "dibujada por Claude en SVG (original)",
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": []
+  },
+  {
+   "id": "mate-circulo-10-vacio",
+   "archivo": "matematicas/fracciones/mate-circulo-10-vacio.svg",
+   "svg": null,
+   "categoria": "matematicas",
+   "subcategoria": "fracciones",
+   "uso": "Círculo en 10 partes iguales, sin pintar",
+   "tags": [
+    "10-partes",
+    "circulo",
+    "fracciones",
+    "matematicas",
+    "partes"
+   ],
+   "ancho": 124,
+   "alto": 124,
+   "transparente": true,
+   "tiene_texto": false,
+   "texto": "",
+   "origen": "dibujada por Claude en SVG (original)",
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": []
+  },
+  {
+   "id": "mate-barra-10-vacia",
+   "archivo": "matematicas/fracciones/mate-barra-10-vacia.svg",
+   "svg": null,
+   "categoria": "matematicas",
+   "subcategoria": "fracciones",
+   "uso": "Barra en 10 partes iguales, sin pintar",
+   "tags": [
+    "10-partes",
+    "barra",
+    "fracciones",
+    "matematicas",
+    "partes"
+   ],
+   "ancho": 252,
+   "alto": 64,
+   "transparente": true,
+   "tiene_texto": false,
+   "texto": "",
+   "origen": "dibujada por Claude en SVG (original)",
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": []
+  },
+  {
+   "id": "mate-circulo-12-vacio",
+   "archivo": "matematicas/fracciones/mate-circulo-12-vacio.svg",
+   "svg": null,
+   "categoria": "matematicas",
+   "subcategoria": "fracciones",
+   "uso": "Círculo en 12 partes iguales, sin pintar",
+   "tags": [
+    "12-partes",
+    "circulo",
+    "fracciones",
+    "matematicas",
+    "partes"
+   ],
+   "ancho": 124,
+   "alto": 124,
+   "transparente": true,
+   "tiene_texto": false,
+   "texto": "",
+   "origen": "dibujada por Claude en SVG (original)",
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": []
+  },
+  {
+   "id": "mate-barra-12-vacia",
+   "archivo": "matematicas/fracciones/mate-barra-12-vacia.svg",
+   "svg": null,
+   "categoria": "matematicas",
+   "subcategoria": "fracciones",
+   "uso": "Barra en 12 partes iguales, sin pintar",
+   "tags": [
+    "12-partes",
+    "barra",
+    "fracciones",
+    "matematicas",
+    "partes"
+   ],
+   "ancho": 252,
+   "alto": 64,
+   "transparente": true,
+   "tiene_texto": false,
+   "texto": "",
+   "origen": "dibujada por Claude en SVG (original)",
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": []
+  },
+  {
+   "id": "mate-circulo-1-2",
+   "archivo": "matematicas/fracciones/mate-circulo-1-2.svg",
+   "svg": null,
+   "categoria": "matematicas",
+   "subcategoria": "fracciones",
+   "uso": "Círculo con 1/2 pintado",
+   "tags": [
+    "1/2",
+    "circulo",
+    "fraccion",
+    "fracciones",
+    "matematicas"
+   ],
+   "ancho": 124,
+   "alto": 124,
+   "transparente": true,
+   "tiene_texto": false,
+   "texto": "",
+   "origen": "dibujada por Claude en SVG (original)",
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": []
+  },
+  {
+   "id": "mate-barra-1-2",
+   "archivo": "matematicas/fracciones/mate-barra-1-2.svg",
+   "svg": null,
+   "categoria": "matematicas",
+   "subcategoria": "fracciones",
+   "uso": "Barra con 1/2 pintado",
+   "tags": [
+    "1/2",
+    "barra",
+    "fraccion",
+    "fracciones",
+    "matematicas"
+   ],
+   "ancho": 252,
+   "alto": 64,
+   "transparente": true,
+   "tiene_texto": false,
+   "texto": "",
+   "origen": "dibujada por Claude en SVG (original)",
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": []
+  },
+  {
+   "id": "mate-circulo-1-3",
+   "archivo": "matematicas/fracciones/mate-circulo-1-3.svg",
+   "svg": null,
+   "categoria": "matematicas",
+   "subcategoria": "fracciones",
+   "uso": "Círculo con 1/3 pintado",
+   "tags": [
+    "1/3",
+    "circulo",
+    "fraccion",
+    "fracciones",
+    "matematicas"
+   ],
+   "ancho": 124,
+   "alto": 124,
+   "transparente": true,
+   "tiene_texto": false,
+   "texto": "",
+   "origen": "dibujada por Claude en SVG (original)",
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": []
+  },
+  {
+   "id": "mate-barra-1-3",
+   "archivo": "matematicas/fracciones/mate-barra-1-3.svg",
+   "svg": null,
+   "categoria": "matematicas",
+   "subcategoria": "fracciones",
+   "uso": "Barra con 1/3 pintado",
+   "tags": [
+    "1/3",
+    "barra",
+    "fraccion",
+    "fracciones",
+    "matematicas"
+   ],
+   "ancho": 252,
+   "alto": 64,
+   "transparente": true,
+   "tiene_texto": false,
+   "texto": "",
+   "origen": "dibujada por Claude en SVG (original)",
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": []
+  },
+  {
+   "id": "mate-circulo-2-3",
+   "archivo": "matematicas/fracciones/mate-circulo-2-3.svg",
+   "svg": null,
+   "categoria": "matematicas",
+   "subcategoria": "fracciones",
+   "uso": "Círculo con 2/3 pintado",
+   "tags": [
+    "2/3",
+    "circulo",
+    "fraccion",
+    "fracciones",
+    "matematicas"
+   ],
+   "ancho": 124,
+   "alto": 124,
+   "transparente": true,
+   "tiene_texto": false,
+   "texto": "",
+   "origen": "dibujada por Claude en SVG (original)",
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": []
+  },
+  {
+   "id": "mate-barra-2-3",
+   "archivo": "matematicas/fracciones/mate-barra-2-3.svg",
+   "svg": null,
+   "categoria": "matematicas",
+   "subcategoria": "fracciones",
+   "uso": "Barra con 2/3 pintado",
+   "tags": [
+    "2/3",
+    "barra",
+    "fraccion",
+    "fracciones",
+    "matematicas"
+   ],
+   "ancho": 252,
+   "alto": 64,
+   "transparente": true,
+   "tiene_texto": false,
+   "texto": "",
+   "origen": "dibujada por Claude en SVG (original)",
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": []
+  },
+  {
+   "id": "mate-circulo-1-4",
+   "archivo": "matematicas/fracciones/mate-circulo-1-4.svg",
+   "svg": null,
+   "categoria": "matematicas",
+   "subcategoria": "fracciones",
+   "uso": "Círculo con 1/4 pintado",
+   "tags": [
+    "1/4",
+    "circulo",
+    "fraccion",
+    "fracciones",
+    "matematicas"
+   ],
+   "ancho": 124,
+   "alto": 124,
+   "transparente": true,
+   "tiene_texto": false,
+   "texto": "",
+   "origen": "dibujada por Claude en SVG (original)",
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": []
+  },
+  {
+   "id": "mate-barra-1-4",
+   "archivo": "matematicas/fracciones/mate-barra-1-4.svg",
+   "svg": null,
+   "categoria": "matematicas",
+   "subcategoria": "fracciones",
+   "uso": "Barra con 1/4 pintado",
+   "tags": [
+    "1/4",
+    "barra",
+    "fraccion",
+    "fracciones",
+    "matematicas"
+   ],
+   "ancho": 252,
+   "alto": 64,
+   "transparente": true,
+   "tiene_texto": false,
+   "texto": "",
+   "origen": "dibujada por Claude en SVG (original)",
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": []
+  },
+  {
+   "id": "mate-circulo-3-4",
+   "archivo": "matematicas/fracciones/mate-circulo-3-4.svg",
+   "svg": null,
+   "categoria": "matematicas",
+   "subcategoria": "fracciones",
+   "uso": "Círculo con 3/4 pintado",
+   "tags": [
+    "3/4",
+    "circulo",
+    "fraccion",
+    "fracciones",
+    "matematicas"
+   ],
+   "ancho": 124,
+   "alto": 124,
+   "transparente": true,
+   "tiene_texto": false,
+   "texto": "",
+   "origen": "dibujada por Claude en SVG (original)",
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": []
+  },
+  {
+   "id": "mate-barra-3-4",
+   "archivo": "matematicas/fracciones/mate-barra-3-4.svg",
+   "svg": null,
+   "categoria": "matematicas",
+   "subcategoria": "fracciones",
+   "uso": "Barra con 3/4 pintado",
+   "tags": [
+    "3/4",
+    "barra",
+    "fraccion",
+    "fracciones",
+    "matematicas"
+   ],
+   "ancho": 252,
+   "alto": 64,
+   "transparente": true,
+   "tiene_texto": false,
+   "texto": "",
+   "origen": "dibujada por Claude en SVG (original)",
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": []
+  },
+  {
+   "id": "mate-circulo-1-5",
+   "archivo": "matematicas/fracciones/mate-circulo-1-5.svg",
+   "svg": null,
+   "categoria": "matematicas",
+   "subcategoria": "fracciones",
+   "uso": "Círculo con 1/5 pintado",
+   "tags": [
+    "1/5",
+    "circulo",
+    "fraccion",
+    "fracciones",
+    "matematicas"
+   ],
+   "ancho": 124,
+   "alto": 124,
+   "transparente": true,
+   "tiene_texto": false,
+   "texto": "",
+   "origen": "dibujada por Claude en SVG (original)",
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": []
+  },
+  {
+   "id": "mate-barra-1-5",
+   "archivo": "matematicas/fracciones/mate-barra-1-5.svg",
+   "svg": null,
+   "categoria": "matematicas",
+   "subcategoria": "fracciones",
+   "uso": "Barra con 1/5 pintado",
+   "tags": [
+    "1/5",
+    "barra",
+    "fraccion",
+    "fracciones",
+    "matematicas"
+   ],
+   "ancho": 252,
+   "alto": 64,
+   "transparente": true,
+   "tiene_texto": false,
+   "texto": "",
+   "origen": "dibujada por Claude en SVG (original)",
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": []
+  },
+  {
+   "id": "mate-circulo-2-5",
+   "archivo": "matematicas/fracciones/mate-circulo-2-5.svg",
+   "svg": null,
+   "categoria": "matematicas",
+   "subcategoria": "fracciones",
+   "uso": "Círculo con 2/5 pintado",
+   "tags": [
+    "2/5",
+    "circulo",
+    "fraccion",
+    "fracciones",
+    "matematicas"
+   ],
+   "ancho": 124,
+   "alto": 124,
+   "transparente": true,
+   "tiene_texto": false,
+   "texto": "",
+   "origen": "dibujada por Claude en SVG (original)",
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": []
+  },
+  {
+   "id": "mate-barra-2-5",
+   "archivo": "matematicas/fracciones/mate-barra-2-5.svg",
+   "svg": null,
+   "categoria": "matematicas",
+   "subcategoria": "fracciones",
+   "uso": "Barra con 2/5 pintado",
+   "tags": [
+    "2/5",
+    "barra",
+    "fraccion",
+    "fracciones",
+    "matematicas"
+   ],
+   "ancho": 252,
+   "alto": 64,
+   "transparente": true,
+   "tiene_texto": false,
+   "texto": "",
+   "origen": "dibujada por Claude en SVG (original)",
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": []
+  },
+  {
+   "id": "mate-circulo-3-5",
+   "archivo": "matematicas/fracciones/mate-circulo-3-5.svg",
+   "svg": null,
+   "categoria": "matematicas",
+   "subcategoria": "fracciones",
+   "uso": "Círculo con 3/5 pintado",
+   "tags": [
+    "3/5",
+    "circulo",
+    "fraccion",
+    "fracciones",
+    "matematicas"
+   ],
+   "ancho": 124,
+   "alto": 124,
+   "transparente": true,
+   "tiene_texto": false,
+   "texto": "",
+   "origen": "dibujada por Claude en SVG (original)",
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": []
+  },
+  {
+   "id": "mate-barra-3-5",
+   "archivo": "matematicas/fracciones/mate-barra-3-5.svg",
+   "svg": null,
+   "categoria": "matematicas",
+   "subcategoria": "fracciones",
+   "uso": "Barra con 3/5 pintado",
+   "tags": [
+    "3/5",
+    "barra",
+    "fraccion",
+    "fracciones",
+    "matematicas"
+   ],
+   "ancho": 252,
+   "alto": 64,
+   "transparente": true,
+   "tiene_texto": false,
+   "texto": "",
+   "origen": "dibujada por Claude en SVG (original)",
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": []
+  },
+  {
+   "id": "mate-circulo-1-6",
+   "archivo": "matematicas/fracciones/mate-circulo-1-6.svg",
+   "svg": null,
+   "categoria": "matematicas",
+   "subcategoria": "fracciones",
+   "uso": "Círculo con 1/6 pintado",
+   "tags": [
+    "1/6",
+    "circulo",
+    "fraccion",
+    "fracciones",
+    "matematicas"
+   ],
+   "ancho": 124,
+   "alto": 124,
+   "transparente": true,
+   "tiene_texto": false,
+   "texto": "",
+   "origen": "dibujada por Claude en SVG (original)",
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": []
+  },
+  {
+   "id": "mate-barra-1-6",
+   "archivo": "matematicas/fracciones/mate-barra-1-6.svg",
+   "svg": null,
+   "categoria": "matematicas",
+   "subcategoria": "fracciones",
+   "uso": "Barra con 1/6 pintado",
+   "tags": [
+    "1/6",
+    "barra",
+    "fraccion",
+    "fracciones",
+    "matematicas"
+   ],
+   "ancho": 252,
+   "alto": 64,
+   "transparente": true,
+   "tiene_texto": false,
+   "texto": "",
+   "origen": "dibujada por Claude en SVG (original)",
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": []
+  },
+  {
+   "id": "mate-circulo-5-6",
+   "archivo": "matematicas/fracciones/mate-circulo-5-6.svg",
+   "svg": null,
+   "categoria": "matematicas",
+   "subcategoria": "fracciones",
+   "uso": "Círculo con 5/6 pintado",
+   "tags": [
+    "5/6",
+    "circulo",
+    "fraccion",
+    "fracciones",
+    "matematicas"
+   ],
+   "ancho": 124,
+   "alto": 124,
+   "transparente": true,
+   "tiene_texto": false,
+   "texto": "",
+   "origen": "dibujada por Claude en SVG (original)",
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": []
+  },
+  {
+   "id": "mate-barra-5-6",
+   "archivo": "matematicas/fracciones/mate-barra-5-6.svg",
+   "svg": null,
+   "categoria": "matematicas",
+   "subcategoria": "fracciones",
+   "uso": "Barra con 5/6 pintado",
+   "tags": [
+    "5/6",
+    "barra",
+    "fraccion",
+    "fracciones",
+    "matematicas"
+   ],
+   "ancho": 252,
+   "alto": 64,
+   "transparente": true,
+   "tiene_texto": false,
+   "texto": "",
+   "origen": "dibujada por Claude en SVG (original)",
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": []
+  },
+  {
+   "id": "mate-circulo-1-8",
+   "archivo": "matematicas/fracciones/mate-circulo-1-8.svg",
+   "svg": null,
+   "categoria": "matematicas",
+   "subcategoria": "fracciones",
+   "uso": "Círculo con 1/8 pintado",
+   "tags": [
+    "1/8",
+    "circulo",
+    "fraccion",
+    "fracciones",
+    "matematicas"
+   ],
+   "ancho": 124,
+   "alto": 124,
+   "transparente": true,
+   "tiene_texto": false,
+   "texto": "",
+   "origen": "dibujada por Claude en SVG (original)",
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": []
+  },
+  {
+   "id": "mate-barra-1-8",
+   "archivo": "matematicas/fracciones/mate-barra-1-8.svg",
+   "svg": null,
+   "categoria": "matematicas",
+   "subcategoria": "fracciones",
+   "uso": "Barra con 1/8 pintado",
+   "tags": [
+    "1/8",
+    "barra",
+    "fraccion",
+    "fracciones",
+    "matematicas"
+   ],
+   "ancho": 252,
+   "alto": 64,
+   "transparente": true,
+   "tiene_texto": false,
+   "texto": "",
+   "origen": "dibujada por Claude en SVG (original)",
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": []
+  },
+  {
+   "id": "mate-circulo-3-8",
+   "archivo": "matematicas/fracciones/mate-circulo-3-8.svg",
+   "svg": null,
+   "categoria": "matematicas",
+   "subcategoria": "fracciones",
+   "uso": "Círculo con 3/8 pintado",
+   "tags": [
+    "3/8",
+    "circulo",
+    "fraccion",
+    "fracciones",
+    "matematicas"
+   ],
+   "ancho": 124,
+   "alto": 124,
+   "transparente": true,
+   "tiene_texto": false,
+   "texto": "",
+   "origen": "dibujada por Claude en SVG (original)",
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": []
+  },
+  {
+   "id": "mate-barra-3-8",
+   "archivo": "matematicas/fracciones/mate-barra-3-8.svg",
+   "svg": null,
+   "categoria": "matematicas",
+   "subcategoria": "fracciones",
+   "uso": "Barra con 3/8 pintado",
+   "tags": [
+    "3/8",
+    "barra",
+    "fraccion",
+    "fracciones",
+    "matematicas"
+   ],
+   "ancho": 252,
+   "alto": 64,
+   "transparente": true,
+   "tiene_texto": false,
+   "texto": "",
+   "origen": "dibujada por Claude en SVG (original)",
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": []
+  },
+  {
+   "id": "mate-circulo-1-10",
+   "archivo": "matematicas/fracciones/mate-circulo-1-10.svg",
+   "svg": null,
+   "categoria": "matematicas",
+   "subcategoria": "fracciones",
+   "uso": "Círculo con 1/10 pintado",
+   "tags": [
+    "1/10",
+    "circulo",
+    "fraccion",
+    "fracciones",
+    "matematicas"
+   ],
+   "ancho": 124,
+   "alto": 124,
+   "transparente": true,
+   "tiene_texto": false,
+   "texto": "",
+   "origen": "dibujada por Claude en SVG (original)",
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": []
+  },
+  {
+   "id": "mate-barra-1-10",
+   "archivo": "matematicas/fracciones/mate-barra-1-10.svg",
+   "svg": null,
+   "categoria": "matematicas",
+   "subcategoria": "fracciones",
+   "uso": "Barra con 1/10 pintado",
+   "tags": [
+    "1/10",
+    "barra",
+    "fraccion",
+    "fracciones",
+    "matematicas"
+   ],
+   "ancho": 252,
+   "alto": 64,
+   "transparente": true,
+   "tiene_texto": false,
+   "texto": "",
+   "origen": "dibujada por Claude en SVG (original)",
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": []
+  },
+  {
+   "id": "mate-circulo-5-10",
+   "archivo": "matematicas/fracciones/mate-circulo-5-10.svg",
+   "svg": null,
+   "categoria": "matematicas",
+   "subcategoria": "fracciones",
+   "uso": "Círculo con 5/10 pintado",
+   "tags": [
+    "5/10",
+    "circulo",
+    "fraccion",
+    "fracciones",
+    "matematicas"
+   ],
+   "ancho": 124,
+   "alto": 124,
+   "transparente": true,
+   "tiene_texto": false,
+   "texto": "",
+   "origen": "dibujada por Claude en SVG (original)",
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": []
+  },
+  {
+   "id": "mate-barra-5-10",
+   "archivo": "matematicas/fracciones/mate-barra-5-10.svg",
+   "svg": null,
+   "categoria": "matematicas",
+   "subcategoria": "fracciones",
+   "uso": "Barra con 5/10 pintado",
+   "tags": [
+    "5/10",
+    "barra",
+    "fraccion",
+    "fracciones",
+    "matematicas"
+   ],
+   "ancho": 252,
+   "alto": 64,
+   "transparente": true,
+   "tiene_texto": false,
+   "texto": "",
+   "origen": "dibujada por Claude en SVG (original)",
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": []
+  },
+  {
+   "id": "mate-bloque-unidad",
+   "archivo": "matematicas/base10/mate-bloque-unidad.svg",
+   "svg": null,
+   "categoria": "matematicas",
+   "subcategoria": "base10",
+   "uso": "Bloque de base 10: unidad (1 cubito)",
+   "tags": [
+    "base10",
+    "bloques",
+    "matematicas",
+    "unidad",
+    "valor-posicional"
+   ],
+   "ancho": 34,
+   "alto": 34,
+   "transparente": true,
+   "tiene_texto": false,
+   "texto": "",
+   "origen": "dibujada por Claude en SVG (original)",
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": []
+  },
+  {
+   "id": "mate-bloque-decena",
+   "archivo": "matematicas/base10/mate-bloque-decena.svg",
+   "svg": null,
+   "categoria": "matematicas",
+   "subcategoria": "base10",
+   "uso": "Bloque de base 10: decena (barra de 10)",
+   "tags": [
+    "base10",
+    "bloques",
+    "decena",
+    "matematicas",
+    "valor-posicional"
+   ],
+   "ancho": 34,
+   "alto": 274,
+   "transparente": true,
+   "tiene_texto": false,
+   "texto": "",
+   "origen": "dibujada por Claude en SVG (original)",
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": []
+  },
+  {
+   "id": "mate-bloque-centena",
+   "archivo": "matematicas/base10/mate-bloque-centena.svg",
+   "svg": null,
+   "categoria": "matematicas",
+   "subcategoria": "base10",
+   "uso": "Bloque de base 10: centena (placa de 100)",
+   "tags": [
+    "base10",
+    "bloques",
+    "centena",
+    "matematicas",
+    "valor-posicional"
+   ],
+   "ancho": 274,
+   "alto": 274,
+   "transparente": true,
+   "tiene_texto": false,
+   "texto": "",
+   "origen": "dibujada por Claude en SVG (original)",
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": []
+  },
+  {
+   "id": "mate-bloque-millar",
+   "archivo": "matematicas/base10/mate-bloque-millar.svg",
+   "svg": null,
+   "categoria": "matematicas",
+   "subcategoria": "base10",
+   "uso": "Bloque de base 10: millar (cubo de 1000)",
+   "tags": [
+    "base10",
+    "bloques",
+    "matematicas",
+    "millar",
+    "valor-posicional"
+   ],
+   "ancho": 160,
+   "alto": 150,
+   "transparente": true,
+   "tiene_texto": false,
+   "texto": "",
+   "origen": "dibujada por Claude en SVG (original)",
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": []
+  },
+  {
+   "id": "mate-fig-triangulo",
+   "archivo": "matematicas/geometria/mate-fig-triangulo.svg",
+   "svg": null,
+   "categoria": "matematicas",
+   "subcategoria": "geometria",
+   "uso": "Triángulo (figura geométrica)",
+   "tags": [
+    "figura",
+    "geometria",
+    "matematicas",
+    "poligono",
+    "triangulo"
+   ],
+   "ancho": 124,
+   "alto": 124,
+   "transparente": true,
+   "tiene_texto": false,
+   "texto": "",
+   "origen": "dibujada por Claude en SVG (original)",
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": []
+  },
+  {
+   "id": "mate-fig-cuadrado",
+   "archivo": "matematicas/geometria/mate-fig-cuadrado.svg",
+   "svg": null,
+   "categoria": "matematicas",
+   "subcategoria": "geometria",
+   "uso": "Cuadrado (figura geométrica)",
+   "tags": [
+    "cuadrado",
+    "figura",
+    "geometria",
+    "matematicas",
+    "poligono"
+   ],
+   "ancho": 124,
+   "alto": 124,
+   "transparente": true,
+   "tiene_texto": false,
+   "texto": "",
+   "origen": "dibujada por Claude en SVG (original)",
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": []
+  },
+  {
+   "id": "mate-fig-rectangulo",
+   "archivo": "matematicas/geometria/mate-fig-rectangulo.svg",
+   "svg": null,
+   "categoria": "matematicas",
+   "subcategoria": "geometria",
+   "uso": "Rectángulo (figura geométrica)",
+   "tags": [
+    "figura",
+    "geometria",
+    "matematicas",
+    "poligono",
+    "rectangulo"
+   ],
+   "ancho": 124,
+   "alto": 124,
+   "transparente": true,
+   "tiene_texto": false,
+   "texto": "",
+   "origen": "dibujada por Claude en SVG (original)",
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": []
+  },
+  {
+   "id": "mate-fig-circulo",
+   "archivo": "matematicas/geometria/mate-fig-circulo.svg",
+   "svg": null,
+   "categoria": "matematicas",
+   "subcategoria": "geometria",
+   "uso": "Círculo (figura geométrica)",
+   "tags": [
+    "circulo",
+    "curva",
+    "figura",
+    "geometria",
+    "matematicas"
+   ],
+   "ancho": 124,
+   "alto": 124,
+   "transparente": true,
+   "tiene_texto": false,
+   "texto": "",
+   "origen": "dibujada por Claude en SVG (original)",
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": []
+  },
+  {
+   "id": "mate-fig-pentagono",
+   "archivo": "matematicas/geometria/mate-fig-pentagono.svg",
+   "svg": null,
+   "categoria": "matematicas",
+   "subcategoria": "geometria",
+   "uso": "Pentágono (figura geométrica)",
+   "tags": [
+    "figura",
+    "geometria",
+    "matematicas",
+    "pentagono",
+    "poligono"
+   ],
+   "ancho": 124,
+   "alto": 124,
+   "transparente": true,
+   "tiene_texto": false,
+   "texto": "",
+   "origen": "dibujada por Claude en SVG (original)",
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": []
+  },
+  {
+   "id": "mate-fig-hexagono",
+   "archivo": "matematicas/geometria/mate-fig-hexagono.svg",
+   "svg": null,
+   "categoria": "matematicas",
+   "subcategoria": "geometria",
+   "uso": "Hexágono (figura geométrica)",
+   "tags": [
+    "figura",
+    "geometria",
+    "hexagono",
+    "matematicas",
+    "poligono"
+   ],
+   "ancho": 124,
+   "alto": 124,
+   "transparente": true,
+   "tiene_texto": false,
+   "texto": "",
+   "origen": "dibujada por Claude en SVG (original)",
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": []
+  },
+  {
+   "id": "mate-fig-rombo",
+   "archivo": "matematicas/geometria/mate-fig-rombo.svg",
+   "svg": null,
+   "categoria": "matematicas",
+   "subcategoria": "geometria",
+   "uso": "Rombo (figura geométrica)",
+   "tags": [
+    "figura",
+    "geometria",
+    "matematicas",
+    "poligono",
+    "rombo"
+   ],
+   "ancho": 124,
+   "alto": 124,
+   "transparente": true,
+   "tiene_texto": false,
+   "texto": "",
+   "origen": "dibujada por Claude en SVG (original)",
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": []
+  },
+  {
+   "id": "mate-fig-trapecio",
+   "archivo": "matematicas/geometria/mate-fig-trapecio.svg",
+   "svg": null,
+   "categoria": "matematicas",
+   "subcategoria": "geometria",
+   "uso": "Trapecio (figura geométrica)",
+   "tags": [
+    "figura",
+    "geometria",
+    "matematicas",
+    "poligono",
+    "trapecio"
+   ],
+   "ancho": 124,
+   "alto": 124,
+   "transparente": true,
+   "tiene_texto": false,
+   "texto": "",
+   "origen": "dibujada por Claude en SVG (original)",
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": []
+  },
+  {
+   "id": "mate-fig-octogono",
+   "archivo": "matematicas/geometria/mate-fig-octogono.svg",
+   "svg": null,
+   "categoria": "matematicas",
+   "subcategoria": "geometria",
+   "uso": "Octágono (figura geométrica)",
+   "tags": [
+    "figura",
+    "geometria",
+    "matematicas",
+    "octogono",
+    "poligono"
+   ],
+   "ancho": 124,
+   "alto": 124,
+   "transparente": true,
+   "tiene_texto": false,
+   "texto": "",
+   "origen": "dibujada por Claude en SVG (original)",
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": []
+  },
+  {
+   "id": "mate-moneda-100",
+   "archivo": "matematicas/dinero/mate-moneda-100.svg",
+   "svg": null,
+   "categoria": "matematicas",
+   "subcategoria": "dinero",
+   "uso": "Moneda genérica de 100 (ilustración original, no es una moneda real)",
+   "tags": [
+    "100",
+    "dinero",
+    "matematicas",
+    "moneda",
+    "pesos"
+   ],
+   "ancho": 100,
+   "alto": 100,
+   "transparente": true,
+   "tiene_texto": false,
+   "texto": "",
+   "origen": "dibujada por Claude en SVG (original)",
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": []
+  },
+  {
+   "id": "mate-moneda-200",
+   "archivo": "matematicas/dinero/mate-moneda-200.svg",
+   "svg": null,
+   "categoria": "matematicas",
+   "subcategoria": "dinero",
+   "uso": "Moneda genérica de 200 (ilustración original, no es una moneda real)",
+   "tags": [
+    "200",
+    "dinero",
+    "matematicas",
+    "moneda",
+    "pesos"
+   ],
+   "ancho": 100,
+   "alto": 100,
+   "transparente": true,
+   "tiene_texto": false,
+   "texto": "",
+   "origen": "dibujada por Claude en SVG (original)",
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": []
+  },
+  {
+   "id": "mate-moneda-500",
+   "archivo": "matematicas/dinero/mate-moneda-500.svg",
+   "svg": null,
+   "categoria": "matematicas",
+   "subcategoria": "dinero",
+   "uso": "Moneda genérica de 500 (ilustración original, no es una moneda real)",
+   "tags": [
+    "500",
+    "dinero",
+    "matematicas",
+    "moneda",
+    "pesos"
+   ],
+   "ancho": 100,
+   "alto": 100,
+   "transparente": true,
+   "tiene_texto": false,
+   "texto": "",
+   "origen": "dibujada por Claude en SVG (original)",
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": []
+  },
+  {
+   "id": "mate-moneda-1000",
+   "archivo": "matematicas/dinero/mate-moneda-1000.svg",
+   "svg": null,
+   "categoria": "matematicas",
+   "subcategoria": "dinero",
+   "uso": "Moneda genérica de 1000 (ilustración original, no es una moneda real)",
+   "tags": [
+    "1000",
+    "dinero",
+    "matematicas",
+    "moneda",
+    "pesos"
+   ],
+   "ancho": 100,
+   "alto": 100,
+   "transparente": true,
+   "tiene_texto": false,
+   "texto": "",
+   "origen": "dibujada por Claude en SVG (original)",
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": []
+  },
+  {
+   "id": "mate-billete-2000",
+   "archivo": "matematicas/dinero/mate-billete-2000.svg",
+   "svg": null,
+   "categoria": "matematicas",
+   "subcategoria": "dinero",
+   "uso": "Billete genérico de 2000 (ilustración original, no es un billete real)",
+   "tags": [
+    "2000",
+    "billete",
+    "dinero",
+    "matematicas",
+    "pesos"
+   ],
+   "ancho": 200,
+   "alto": 100,
+   "transparente": true,
+   "tiene_texto": false,
+   "texto": "",
+   "origen": "dibujada por Claude en SVG (original)",
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": []
+  },
+  {
+   "id": "mate-billete-5000",
+   "archivo": "matematicas/dinero/mate-billete-5000.svg",
+   "svg": null,
+   "categoria": "matematicas",
+   "subcategoria": "dinero",
+   "uso": "Billete genérico de 5000 (ilustración original, no es un billete real)",
+   "tags": [
+    "5000",
+    "billete",
+    "dinero",
+    "matematicas",
+    "pesos"
+   ],
+   "ancho": 200,
+   "alto": 100,
+   "transparente": true,
+   "tiene_texto": false,
+   "texto": "",
+   "origen": "dibujada por Claude en SVG (original)",
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": []
+  },
+  {
+   "id": "mate-billete-10000",
+   "archivo": "matematicas/dinero/mate-billete-10000.svg",
+   "svg": null,
+   "categoria": "matematicas",
+   "subcategoria": "dinero",
+   "uso": "Billete genérico de 10000 (ilustración original, no es un billete real)",
+   "tags": [
+    "10000",
+    "billete",
+    "dinero",
+    "matematicas",
+    "pesos"
+   ],
+   "ancho": 200,
+   "alto": 100,
+   "transparente": true,
+   "tiene_texto": false,
+   "texto": "",
+   "origen": "dibujada por Claude en SVG (original)",
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": []
   }
  ]
 }
