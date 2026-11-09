@@ -23,8 +23,8 @@
    "type": "info",
    "titulo": "Antes de creer, verifica",
    "texto": "En internet hay información verdadera y falsa. Un buen detective revisa quién la escribió, cuándo la publicó y si otras páginas confiables dicen lo mismo.",
-   "imagen": "asset://img-a190712cce",
-   "alt": "Dos noticias: una marcada con una palomita verde y otra con una equis roja, junto a un autor y una fecha",
+   "imagen": "asset://lupa-sobre-una-pagina-web-con-tres-casilla-4dea",
+   "alt": "Lupa sobre una página web con tres casillas verificadas: autor, fecha y fuente",
    "ejemplo": "Una noticia con autor, fecha y fuente es más confiable que un mensaje anónimo que dice «¡compártelo ya!»."
   },
   {

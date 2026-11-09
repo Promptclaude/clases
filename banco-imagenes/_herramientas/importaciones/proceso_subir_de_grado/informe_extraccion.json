@@ -1,0 +1,3778 @@
+[
+ {
+  "h": "7e71647fbe",
+  "claves": [
+   "tienda"
+  ],
+  "docs": [
+   "Aritmetica4:tienda"
+  ],
+  "w": 420,
+  "h_": 242,
+  "texto": "Tienda Escolar",
+  "contexto": [
+   {
+    "doc": "Aritmetica4",
+    "clave": "tienda",
+    "slide": 25,
+    "tipo": "info",
+    "titulo": "Bloque 5 · La Tienda Escolar",
+    "texto": ",img:'tienda',h:` Los precios y los pesos también son decimales. Para operar con ellos: 1. Alinea las comas. 2. Completa con ceros. 3. Opera de derecha a izquie"
+   }
+  ]
+ },
+ {
+  "h": "555c41c21a",
+  "claves": [
+   "trofeo"
+  ],
+  "docs": [
+   "Aritmetica4:trofeo",
+   "Aritmetica5:trofeo",
+   "Tecnologia4:trofeo",
+   "Tecnologia5:trofeo"
+  ],
+  "w": 303,
+  "h_": 209,
+  "texto": "",
+  "contexto": []
+ },
+ {
+  "h": "acc78736ad",
+  "claves": [
+   "balanza"
+  ],
+  "docs": [
+   "Aritmetica4:balanza"
+  ],
+  "w": 273,
+  "h_": 270,
+  "texto": "",
+  "contexto": []
+ },
+ {
+  "h": "4548c010c0",
+  "claves": [
+   "mapa"
+  ],
+  "docs": [
+   "Aritmetica4:mapa",
+   "Tecnologia4:mapa",
+   "Tecnologia5:mapa"
+  ],
+  "w": 560,
+  "h_": 185,
+  "texto": "Bloque Bloque \"Bloque",
+  "contexto": [
+   {
+    "doc": "Aritmetica4",
+    "clave": "mapa",
+    "slide": 2,
+    "tipo": "info",
+    "titulo": "Tu mapa de misión",
+    "texto": ",img:'mapa',h:` Recorrerás 5 bloques y presentarás 4 quiz de 10 preguntas. Reino de los Decimales Taller de Detectives (×10 y ÷10) Fábrica de Bloques Carrera Nu"
+   },
+   {
+    "doc": "Tecnologia4",
+    "clave": "mapa",
+    "slide": 2,
+    "tipo": "info",
+    "titulo": "Tu mapa de misión",
+    "texto": ",img:'mapa',h:` Recorrerás 5 bloques y presentarás 4 quiz de 10 preguntas. Portal de Datos (buscar y tipos de información) Exploradores Web (páginas, URL y domi"
+   },
+   {
+    "doc": "Tecnologia5",
+    "clave": "mapa",
+    "slide": 2,
+    "tipo": "info",
+    "titulo": "Tu mapa de misión",
+    "texto": ",img:'mapa',h:` Recorrerás 5 bloques y presentarás 4 quiz de 10 preguntas. Portal de Datos (tipos de información y confiabilidad) Investigadores Web (palabras c"
+   }
+  ]
+ },
+ {
+  "h": "766ad2dd40",
+  "claves": [
+   "lupa"
+  ],
+  "docs": [
+   "Aritmetica4:lupa"
+  ],
+  "w": 273,
+  "h_": 285,
+  "texto": "",
+  "contexto": [
+   {
+    "doc": "Aritmetica4",
+    "clave": "lupa",
+    "slide": 9,
+    "tipo": "info",
+    "titulo": "Bloque 2 · Taller de Detectives",
+    "texto": ",img:'lupa',h:` Pista 1: al mover la coma una posición a la derecha el número se multiplica por 10. Pista 2: al mover la coma una posición a la izquierda se div"
+   }
+  ]
+ },
+ {
+  "h": "a73f3aded0",
+  "claves": [
+   "logo"
+  ],
+  "docs": [
+   "Aritmetica4:logo",
+   "Aritmetica5:logo",
+   "Tecnologia4:logo",
+   "Tecnologia5:logo"
+  ],
+  "w": 428,
+  "h_": 333,
+  "texto": "‘proceso",
+  "contexto": [
+   {
+    "doc": "Aritmetica4",
+    "clave": "logo",
+    "slide": 1,
+    "tipo": "info",
+    "titulo": "¡Bienvenido(a) al Proceso de Subir de Grado!",
+    "texto": ",img:'logo',side:'ar_ok',h:` Esta es tu semana de nivelación de Aritmética de 4.° . Vas a repasar en una sola clase todo lo visto: decimales, patrón ×10 y ÷10, "
+   },
+   {
+    "doc": "Aritmetica5",
+    "clave": "logo",
+    "slide": 1,
+    "tipo": "info",
+    "titulo": "¡Bienvenido(a) al Proceso de Subir de Grado!",
+    "texto": ",img:'logo',side:'ar_ok',h:` En esta misión repasarás todo lo que viste en Aritmética de 5.° y demostrarás que estás listo(a) para subir a sexto. 📖 1. Lee Cada "
+   },
+   {
+    "doc": "Tecnologia4",
+    "clave": "logo",
+    "slide": 1,
+    "tipo": "info",
+    "titulo": "¡Bienvenido(a) al Proceso de Subir de Grado!",
+    "texto": ",img:'logo',side:'ar_ok',h:` En esta misión repasarás todo lo que viste en Tecnología de 4.° : buscar y verificar información, navegar seguro, crear documentos "
+   },
+   {
+    "doc": "Tecnologia5",
+    "clave": "logo",
+    "slide": 1,
+    "tipo": "info",
+    "titulo": "¡Bienvenido(a) al Proceso de Subir de Grado!",
+    "texto": ",img:'logo',side:'ar_ok',h:` En esta misión repasarás todo lo que viste en Tecnología de 5.° : evaluar información, investigar bien en la web, dudar antes de cr"
+   }
+  ]
+ },
+ {
+  "h": "0fa8b1dd82",
+  "claves": [
+   "ar_ayuda"
+  ],
+  "docs": [
+   "Aritmetica4:ar_ayuda",
+   "Aritmetica5:ar_ayuda",
+   "Tecnologia4:ar_ayuda",
+   "Tecnologia5:ar_ayuda"
+  ],
+  "w": 420,
+  "h_": 319,
+  "texto": "éSigues aqui? algo ayuda?",
+  "contexto": [
+   {
+    "doc": "Aritmetica4",
+    "clave": "ar_ayuda",
+    "slide": 19,
+    "tipo": "info",
+    "titulo": "Bloque 4 · La recta numérica",
+    "texto": ",img:'ar_ayuda',h:` Entre 0 y 1 hay 10 partes iguales; cada una vale 0,1 . ${rl(0,true)} Entre 2 y 3 cada marca vale 0,1 también: la 4.ª marca después del 2 es "
+   },
+   {
+    "doc": "Aritmetica5",
+    "clave": "ar_ayuda",
+    "slide": 5,
+    "tipo": "info",
+    "titulo": "Comparar y ordenar precios (Torre de Precios)",
+    "texto": ",img:'ar_ayuda',h:` Compara la parte entera . Si es igual, compara las décimas , luego centésimas y milésimas. Para ordenar, iguala las cifras con ceros. Cuidad"
+   },
+   {
+    "doc": "Tecnologia4",
+    "clave": "ar_ayuda",
+    "slide": 5,
+    "tipo": "info",
+    "titulo": "Tipos de información en Internet",
+    "texto": ",img:'ar_ayuda',h:` En Internet encontramos información en distintos formatos: texto , imagen , video , audio e infografía (dibujos, datos y textos cortos que e"
+   },
+   {
+    "doc": "Tecnologia5",
+    "clave": "ar_ayuda",
+    "slide": 5,
+    "tipo": "info",
+    "titulo": "¿Es confiable esta información?",
+    "texto": ",img:'ar_ayuda',h:` Una información es confiable cuando tiene autor identificado, fecha clara y fuentes que se pueden comprobar. Ojo: los «me gusta» y los compa"
+   }
+  ]
+ },
+ {
+  "h": "0963509eaf",
+  "claves": [
+   "ar_dificil"
+  ],
+  "docs": [
+   "Aritmetica4:ar_dificil",
+   "Aritmetica5:ar_dificil",
+   "Tecnologia4:ar_dificil",
+   "Tecnologia5:ar_dificil"
+  ],
+  "w": 420,
+  "h_": 406,
+  "texto": "dificil... Aria",
+  "contexto": [
+   {
+    "doc": "Tecnologia4",
+    "clave": "ar_dificil",
+    "slide": 16,
+    "tipo": "info",
+    "titulo": "Bloque 3 · Riesgos en línea",
+    "texto": ",img:'ar_dificil',h:` Un riesgo en línea es una situación que puede causar daño: virus , desconocidos que piden datos, mensajes fraudulentos (premios falsos) o "
+   },
+   {
+    "doc": "Tecnologia5",
+    "clave": "ar_dificil",
+    "slide": 16,
+    "tipo": "info",
+    "titulo": "Bloque 3 · Hecho vs opinión y señales de alerta",
+    "texto": ",img:'ar_dificil',h:` Un hecho se puede comprobar (Bogotá es la capital de Colombia). Una opinión es lo que alguien piensa o siente (la pizza es la mejor comida"
+   }
+  ]
+ },
+ {
+  "h": "96f7e0553d",
+  "claves": [
+   "ar_adios"
+  ],
+  "docs": [
+   "Aritmetica4:ar_adios",
+   "Aritmetica5:ar_adios",
+   "Tecnologia4:ar_adios",
+   "Tecnologia5:ar_adios"
+  ],
+  "w": 420,
+  "h_": 376,
+  "texto": "",
+  "contexto": []
+ },
+ {
+  "h": "cfbca25ff6",
+  "claves": [
+   "podio"
+  ],
+  "docs": [
+   "Aritmetica4:podio"
+  ],
+  "w": 351,
+  "h_": 278,
+  "texto": "",
+  "contexto": [
+   {
+    "doc": "Aritmetica4",
+    "clave": "podio",
+    "slide": 21,
+    "tipo": "info",
+    "titulo": "Cómo comparar y ordenar",
+    "texto": ",img:'podio',h:` Compara la parte entera . Si es igual, compara las décimas . Luego centésimas y milésimas. Cuidado: 7,205 no es mayor que 7,25 aunque 205 sea m"
+   }
+  ]
+ },
+ {
+  "h": "9cffc892d8",
+  "claves": [
+   "ar_genial"
+  ],
+  "docs": [
+   "Aritmetica4:ar_genial",
+   "Aritmetica5:ar_genial",
+   "Tecnologia4:ar_genial",
+   "Tecnologia5:ar_genial"
+  ],
+  "w": 420,
+  "h_": 340,
+  "texto": "jLo stas genia",
+  "contexto": [
+   {
+    "doc": "Aritmetica4",
+    "clave": "ar_genial",
+    "slide": 10,
+    "tipo": "info",
+    "titulo": "El patrón en acción",
+    "texto": ",img:'ar_genial',h:` 4,5 × 10 = 45 &nbsp;·&nbsp; 0,7 × 10 = 7 52,4 ÷ 10 = 5,24 &nbsp;·&nbsp; 3 ÷ 10 = 0,3 Cada lugar vale 10 veces más que el de su derecha y 10"
+   },
+   {
+    "doc": "Aritmetica5",
+    "clave": "ar_genial",
+    "slide": 4,
+    "tipo": "info",
+    "titulo": "Bloque 1 · Valor posicional y lectura de decimales",
+    "texto": ",img:'ar_genial',h:` Un decimal tiene parte entera , coma y parte decimal . Tras la coma: décimas (0,1), centésimas (0,01) y milésimas (0,001). 35,206 → «treint"
+   },
+   {
+    "doc": "Tecnologia4",
+    "clave": "ar_genial",
+    "slide": 4,
+    "tipo": "info",
+    "titulo": "Bloque 1 · Buscar información en Internet",
+    "texto": ",img:'ar_genial',h:` Para encontrar información usamos un buscador (por ejemplo Bing o Google). Escribimos palabras clave : las palabras más importantes de lo q"
+   },
+   {
+    "doc": "Tecnologia5",
+    "clave": "ar_genial",
+    "slide": 4,
+    "tipo": "info",
+    "titulo": "Bloque 1 · Tipos de información y fuentes",
+    "texto": ",img:'ar_genial',h:` En Internet encontramos muchos tipos de contenido: noticias (hechos recientes), videos tutoriales (enseñan paso a paso), enciclopedias en l"
+   }
+  ]
+ },
+ {
+  "h": "6931d15552",
+  "claves": [
+   "boleto"
+  ],
+  "docs": [
+   "Aritmetica4:boleto"
+  ],
+  "w": 313,
+  "h_": 230,
+  "texto": "",
+  "contexto": [
+   {
+    "doc": "Aritmetica4",
+    "clave": "boleto",
+    "slide": 4,
+    "tipo": "info",
+    "titulo": "Bloque 1 · Los decimales",
+    "texto": ",img:'boleto',h:` En $3,7 la parte entera es 3 (antes de la coma) y la parte decimal es 7 (después de la coma). La coma separa lo entero de lo decimal. Un decim"
+   }
+  ]
+ },
+ {
+  "h": "1270fd7013",
+  "claves": [
+   "ar_puedes"
+  ],
+  "docs": [
+   "Aritmetica4:ar_puedes",
+   "Aritmetica5:ar_puedes",
+   "Tecnologia4:ar_puedes",
+   "Tecnologia5:ar_puedes"
+  ],
+  "w": 420,
+  "h_": 378,
+  "texto": "",
+  "contexto": [
+   {
+    "doc": "Aritmetica4",
+    "clave": "ar_puedes",
+    "slide": 27,
+    "tipo": "info",
+    "titulo": "Restar decimales y el vuelto",
+    "texto": ",img:'ar_puedes',h:` 9,00\\n − 4,35\\n ------\\n 4,65 Para comprobar una resta, suma: 4,65 + 4,35 = 9,00 ✔. `},"
+   },
+   {
+    "doc": "Aritmetica5",
+    "clave": "ar_puedes",
+    "slide": 13,
+    "tipo": "info",
+    "titulo": "De número decimal a fracción decimal",
+    "texto": ",img:'ar_puedes',h:` Escribe el número sin la coma como numerador y pon como denominador un 1 con tantos ceros como cifras decimales . 0,3 = 3/10 · 0,27 = 27/10"
+   },
+   {
+    "doc": "Tecnologia4",
+    "clave": "ar_puedes",
+    "slide": 7,
+    "tipo": "info",
+    "titulo": "¿Es confiable? Datos personales y uso responsable",
+    "texto": ",img:'ar_puedes',h:` Una información es confiable cuando tiene autor , fecha y fuentes . Desconfía si no dice quién la escribió o te presiona para compartirla. "
+   },
+   {
+    "doc": "Tecnologia5",
+    "clave": "ar_puedes",
+    "slide": 17,
+    "tipo": "info",
+    "titulo": "Verificar y el semáforo del pulgar",
+    "texto": ",img:'ar_puedes',h:` Verificar es comprobar si algo es cierto buscando en otras fuentes confiables. Hasta los videos se pueden editar o sacar de contexto. Semáf"
+   }
+  ]
+ },
+ {
+  "h": "184d91d056",
+  "claves": [
+   "fabrica"
+  ],
+  "docs": [
+   "Aritmetica4:fabrica"
+  ],
+  "w": 390,
+  "h_": 325,
+  "texto": "",
+  "contexto": [
+   {
+    "doc": "Aritmetica4",
+    "clave": "fabrica",
+    "slide": 14,
+    "tipo": "info",
+    "titulo": "Bloque 3 · La Fábrica de Bloques",
+    "texto": ",img:'fabrica',h:` Bloque unidad = 1 · Placa décima = 0,1 · Barra centésima = 0,01 · Cubito milésimo = 0,001 Con estas piezas armamos cualquier decimal. Si no h"
+   }
+  ]
+ },
+ {
+  "h": "cfab7eddc2",
+  "claves": [
+   "ar_ok"
+  ],
+  "docs": [
+   "Aritmetica4:ar_ok",
+   "Aritmetica5:ar_ok",
+   "Tecnologia4:ar_ok",
+   "Tecnologia5:ar_ok"
+  ],
+  "w": 420,
+  "h_": 401,
+  "texto": "Correcto!",
+  "contexto": [
+   {
+    "doc": "Aritmetica4",
+    "clave": "ar_ok",
+    "slide": 1,
+    "tipo": "info",
+    "titulo": "¡Bienvenido(a) al Proceso de Subir de Grado!",
+    "texto": ",img:'logo',side:'ar_ok',h:` Esta es tu semana de nivelación de Aritmética de 4.° . Vas a repasar en una sola clase todo lo visto: decimales, patrón ×10 y ÷10, "
+   },
+   {
+    "doc": "Aritmetica5",
+    "clave": "ar_ok",
+    "slide": 1,
+    "tipo": "info",
+    "titulo": "¡Bienvenido(a) al Proceso de Subir de Grado!",
+    "texto": ",img:'logo',side:'ar_ok',h:` En esta misión repasarás todo lo que viste en Aritmética de 5.° y demostrarás que estás listo(a) para subir a sexto. 📖 1. Lee Cada "
+   },
+   {
+    "doc": "Tecnologia4",
+    "clave": "ar_ok",
+    "slide": 1,
+    "tipo": "info",
+    "titulo": "¡Bienvenido(a) al Proceso de Subir de Grado!",
+    "texto": ",img:'logo',side:'ar_ok',h:` En esta misión repasarás todo lo que viste en Tecnología de 4.° : buscar y verificar información, navegar seguro, crear documentos "
+   },
+   {
+    "doc": "Tecnologia5",
+    "clave": "ar_ok",
+    "slide": 1,
+    "tipo": "info",
+    "titulo": "¡Bienvenido(a) al Proceso de Subir de Grado!",
+    "texto": ",img:'logo',side:'ar_ok',h:` En esta misión repasarás todo lo que viste en Tecnología de 5.° : evaluar información, investigar bien en la web, dudar antes de cr"
+   }
+  ]
+ },
+ {
+  "h": "21dea90fa5",
+  "claves": [
+   "estrella"
+  ],
+  "docs": [
+   "Aritmetica4:estrella",
+   "Aritmetica5:estrella",
+   "Tecnologia4:estrella",
+   "Tecnologia5:estrella"
+  ],
+  "w": 231,
+  "h_": 172,
+  "texto": "",
+  "contexto": [
+   {
+    "doc": "Aritmetica4",
+    "clave": "estrella",
+    "slide": 3,
+    "tipo": "info",
+    "titulo": "¿Cómo funciona y cómo se califica?",
+    "texto": ",img:'estrella',h:` Nota final sobre 5,0 Los 4 quiz valen 3,0 (40 preguntas). Las actividades valen 2,0 . En las actividades tienes 2 intentos : acertar al prim"
+   },
+   {
+    "doc": "Aritmetica5",
+    "clave": "estrella",
+    "slide": 3,
+    "tipo": "info",
+    "titulo": "¿Cómo funciona y cómo se califica?",
+    "texto": ",img:'estrella',h:` Nota final sobre 5,0 Los 4 quiz valen 3,0 (40 preguntas). Las actividades valen 2,0 . En las actividades hay 2 intentos por punto y un botón"
+   },
+   {
+    "doc": "Tecnologia4",
+    "clave": "estrella",
+    "slide": 3,
+    "tipo": "info",
+    "titulo": "¿Cómo funciona y cómo se califica?",
+    "texto": ",img:'estrella',h:` Nota final sobre 5,0 Los 4 quiz valen 3,0 (40 preguntas). Las actividades valen 2,0 . En las actividades hay 2 intentos por punto y un botón"
+   },
+   {
+    "doc": "Tecnologia5",
+    "clave": "estrella",
+    "slide": 3,
+    "tipo": "info",
+    "titulo": "¿Cómo funciona y cómo se califica?",
+    "texto": ",img:'estrella',h:` Nota final sobre 5,0 Los 4 quiz valen 3,0 (40 preguntas). Las actividades valen 2,0 . En las actividades hay 2 intentos por punto y un botón"
+   }
+  ]
+ },
+ {
+  "h": "b41e2a625c",
+  "claves": [
+   "tablero"
+  ],
+  "docs": [
+   "Aritmetica4:tablero"
+  ],
+  "w": 420,
+  "h_": 189,
+  "texto": "Unidades Decimas Centésimas",
+  "contexto": [
+   {
+    "doc": "Aritmetica4",
+    "clave": "tablero",
+    "slide": 5,
+    "tipo": "info",
+    "titulo": "Valor posicional y cómo leer",
+    "texto": ",img:'tablero',h:` Después de la coma: décimas (0,1), centésimas (0,01) y milésimas (0,001). 12,05 → «doce enteros con cinco centésimas» 0,375 → «375 milésimas»"
+   }
+  ]
+ },
+ {
+  "h": "cc7b2682bc",
+  "claves": [
+   "p1"
+  ],
+  "docs": [
+   "Aritmetica4:p1"
+  ],
+  "w": 407,
+  "h_": 325,
+  "texto": "",
+  "contexto": [
+   {
+    "doc": "Aritmetica4",
+    "clave": "p1",
+    "slide": 4,
+    "tipo": "info",
+    "titulo": "Bloque 1 · Los decimales",
+    "texto": ",img:'boleto',h:` En $3,7 la parte entera es 3 (antes de la coma) y la parte decimal es 7 (después de la coma). La coma separa lo entero de lo decimal. Un decim"
+   }
+  ]
+ },
+ {
+  "h": "c867f9fa85",
+  "claves": [
+   "p10"
+  ],
+  "docs": [
+   "Aritmetica4:p10"
+  ],
+  "w": 466,
+  "h_": 248,
+  "texto": "barras",
+  "contexto": [
+   {
+    "doc": "Aritmetica4",
+    "clave": "p10",
+    "slide": 16,
+    "tipo": "fill",
+    "titulo": "Actividad 7 · Arma el pedido",
+    "texto": ",intro:'Escribe el número decimal que representa cada pedido.',items:[[\"2 bloques, 3 placas, 1 barra y 4 cubitos =\",\"2,314\"],[\"1 bloque, 0 placas y 5 barras =\","
+   }
+  ]
+ },
+ {
+  "h": "94da4af3d1",
+  "claves": [
+   "p3"
+  ],
+  "docs": [
+   "Aritmetica4:p3"
+  ],
+  "w": 419,
+  "h_": 247,
+  "texto": "",
+  "contexto": [
+   {
+    "doc": "Aritmetica4",
+    "clave": "p3",
+    "slide": 7,
+    "tipo": "cuad",
+    "titulo": "Actividad 2 · Sombrea el decimal",
+    "texto": ",intro:'La cuadrícula tiene 100 cuadritos. Haz clic para sombrear 0,37 de ella.',n:37},"
+   }
+  ]
+ },
+ {
+  "h": "4f0fc14539",
+  "claves": [
+   "p17"
+  ],
+  "docs": [
+   "Aritmetica4:p17"
+  ],
+  "w": 469,
+  "h_": 288,
+  "texto": "baj@ coma",
+  "contexto": [
+   {
+    "doc": "Aritmetica4",
+    "clave": "p17",
+    "slide": 32,
+    "tipo": "quiz",
+    "titulo": "QUIZ 4 · Sumas, restas y problemas",
+    "texto": ",qs:Q4},"
+   }
+  ]
+ },
+ {
+  "h": "63ba2ee31b",
+  "claves": [
+   "p28"
+  ],
+  "docs": [
+   "Aritmetica4:p28"
+  ],
+  "w": 481,
+  "h_": 289,
+  "texto": "Vuelto: $1,85",
+  "contexto": [
+   {
+    "doc": "Aritmetica4",
+    "clave": "p28",
+    "slide": 33,
+    "tipo": "tf",
+    "titulo": "Actividad 20 · Reto final",
+    "texto": ",intro:'Verdadero o falso.',lab:['Verdadero','Falso'],items:[[\"0,5 es igual a 0,50.\",true,\"Verdadero: el cero final no cambia el valor.\"],[\"0,25 es mayor que 0,"
+   }
+  ]
+ },
+ {
+  "h": "060427c408",
+  "claves": [
+   "p16"
+  ],
+  "docs": [
+   "Aritmetica4:p16"
+  ],
+  "w": 379,
+  "h_": 270,
+  "texto": "4,05",
+  "contexto": [
+   {
+    "doc": "Aritmetica4",
+    "clave": "p16",
+    "slide": 31,
+    "tipo": "fill",
+    "titulo": "Actividad 17 · En el mercado",
+    "texto": ",intro:'En la balanza: manzanas 1,25 kg, bananos 0,75 kg y papas 2,5 kg.',items:[[\"¿Cuántos kg pesa toda la compra?\",\"4,5\"],[\"Si la bolsa resiste 10 kg, ¿cuánto"
+   }
+  ]
+ },
+ {
+  "h": "bd55d0e82f",
+  "claves": [
+   "p5"
+  ],
+  "docs": [
+   "Aritmetica4:p5"
+  ],
+  "w": 483,
+  "h_": 268,
+  "texto": "",
+  "contexto": [
+   {
+    "doc": "Aritmetica4",
+    "clave": "p5",
+    "slide": 11,
+    "tipo": "fill",
+    "titulo": "Actividad 4 · La máquina de los detectives",
+    "texto": ",intro:'Aplica × 10 o ÷ 10 según se indique.',items:[[\"0,6 × 10 =\",\"6\"],[\"3,45 × 10 =\",\"34,5\"],[\"80 ÷ 10 =\",\"8\"],[\"4,5 ÷ 10 =\",\"0,45\"],[\"0,07 × 10 =\",\"0,7\"],[\"1"
+   }
+  ]
+ },
+ {
+  "h": "2f695ccc55",
+  "claves": [
+   "p9"
+  ],
+  "docs": [
+   "Aritmetica4:p9"
+  ],
+  "w": 511,
+  "h_": 349,
+  "texto": "",
+  "contexto": [
+   {
+    "doc": "Aritmetica4",
+    "clave": "p9",
+    "slide": 12,
+    "tipo": "tf",
+    "titulo": "Actividad 5 · Detective del error",
+    "texto": ",intro:'¿Quién tiene razón? Marca si cada afirmación es correcta o incorrecta.',lab:['Correcto','Incorrecto'],items:[[\"Pedro: «2,5 × 10 = 2,50, porque le agregu"
+   }
+  ]
+ },
+ {
+  "h": "dbb24669e4",
+  "claves": [
+   "p2"
+  ],
+  "docs": [
+   "Aritmetica4:p2"
+  ],
+  "w": 458,
+  "h_": 319,
+  "texto": "",
+  "contexto": [
+   {
+    "doc": "Aritmetica4",
+    "clave": "p2",
+    "slide": 8,
+    "tipo": "match",
+    "titulo": "Actividad 3 · Une cada decimal con su lectura",
+    "texto": ",intro:'Elige cómo se lee cada número.',items:[[\"0,6\",\"seis décimas\"],[\"0,06\",\"seis centésimas\"],[\"0,006\",\"seis milésimas\"],[\"6,06\",\"seis enteros con seis centé"
+   }
+  ]
+ },
+ {
+  "h": "7fd8ca8bbd",
+  "claves": [
+   "p30"
+  ],
+  "docs": [
+   "Aritmetica4:p30"
+  ],
+  "w": 498,
+  "h_": 357,
+  "texto": "ubi grado!",
+  "contexto": []
+ },
+ {
+  "h": "3f79628cdd",
+  "claves": [
+   "p14"
+  ],
+  "docs": [
+   "Aritmetica4:p14"
+  ],
+  "w": 479,
+  "h_": 273,
+  "texto": "",
+  "contexto": [
+   {
+    "doc": "Aritmetica4",
+    "clave": "p14",
+    "slide": 25,
+    "tipo": "info",
+    "titulo": "Bloque 5 · La Tienda Escolar",
+    "texto": ",img:'tienda',h:` Los precios y los pesos también son decimales. Para operar con ellos: 1. Alinea las comas. 2. Completa con ceros. 3. Opera de derecha a izquie"
+   }
+  ]
+ },
+ {
+  "h": "06f8c3fcbd",
+  "claves": [
+   "p7"
+  ],
+  "docs": [
+   "Aritmetica4:p7"
+  ],
+  "w": 464,
+  "h_": 251,
+  "texto": "",
+  "contexto": [
+   {
+    "doc": "Aritmetica4",
+    "clave": "p7",
+    "slide": 10,
+    "tipo": "info",
+    "titulo": "El patrón en acción",
+    "texto": ",img:'ar_genial',h:` 4,5 × 10 = 45 &nbsp;·&nbsp; 0,7 × 10 = 7 52,4 ÷ 10 = 5,24 &nbsp;·&nbsp; 3 ÷ 10 = 0,3 Cada lugar vale 10 veces más que el de su derecha y 10"
+   }
+  ]
+ },
+ {
+  "h": "cd9908aa71",
+  "claves": [
+   "p21"
+  ],
+  "docs": [
+   "Aritmetica4:p21"
+  ],
+  "w": 475,
+  "h_": 184,
+  "texto": "",
+  "contexto": [
+   {
+    "doc": "Aritmetica4",
+    "clave": "p21",
+    "slide": 5,
+    "tipo": "info",
+    "titulo": "Valor posicional y cómo leer",
+    "texto": ",img:'tablero',h:` Después de la coma: décimas (0,1), centésimas (0,01) y milésimas (0,001). 12,05 → «doce enteros con cinco centésimas» 0,375 → «375 milésimas»"
+   }
+  ]
+ },
+ {
+  "h": "72b578212b",
+  "claves": [
+   "p23"
+  ],
+  "docs": [
+   "Aritmetica4:p23"
+  ],
+  "w": 486,
+  "h_": 284,
+  "texto": "",
+  "contexto": [
+   {
+    "doc": "Aritmetica4",
+    "clave": "p23",
+    "slide": 19,
+    "tipo": "info",
+    "titulo": "Bloque 4 · La recta numérica",
+    "texto": ",img:'ar_ayuda',h:` Entre 0 y 1 hay 10 partes iguales; cada una vale 0,1 . ${rl(0,true)} Entre 2 y 3 cada marca vale 0,1 también: la 4.ª marca después del 2 es "
+   }
+  ]
+ },
+ {
+  "h": "e96133ff6a",
+  "claves": [
+   "p15"
+  ],
+  "docs": [
+   "Aritmetica4:p15"
+  ],
+  "w": 494,
+  "h_": 264,
+  "texto": "",
+  "contexto": [
+   {
+    "doc": "Aritmetica4",
+    "clave": "p15",
+    "slide": 25,
+    "tipo": "info",
+    "titulo": "Bloque 5 · La Tienda Escolar",
+    "texto": ",img:'tienda',h:` Los precios y los pesos también son decimales. Para operar con ellos: 1. Alinea las comas. 2. Completa con ceros. 3. Opera de derecha a izquie"
+   }
+  ]
+ },
+ {
+  "h": "3cb9dd146f",
+  "claves": [
+   "p29"
+  ],
+  "docs": [
+   "Aritmetica4:p29"
+  ],
+  "w": 500,
+  "h_": 275,
+  "texto": "menor mayor",
+  "contexto": [
+   {
+    "doc": "Aritmetica4",
+    "clave": "p29",
+    "slide": 23,
+    "tipo": "ord",
+    "titulo": "Actividad 12 · El podio",
+    "texto": ",intro:'En la carrera de 100 m gana quien tarda menos . Elige el puesto de cada uno (1 a 4).',items:[[\"Valentina · 15,3 s\",4],[\"Camilo · 15,03 s\",1],[\"Sofía · 1"
+   }
+  ]
+ },
+ {
+  "h": "3d4a1cc938",
+  "claves": [
+   "p27"
+  ],
+  "docs": [
+   "Aritmetica4:p27"
+  ],
+  "w": 524,
+  "h_": 315,
+  "texto": "Con mis ropias palabras",
+  "contexto": [
+   {
+    "doc": "Aritmetica4",
+    "clave": "p27",
+    "slide": 13,
+    "tipo": "quiz",
+    "titulo": "QUIZ 1 · Decimales y patrón ×10 / ÷10",
+    "texto": ",qs:Q1},"
+   }
+  ]
+ },
+ {
+  "h": "aab6813bda",
+  "claves": [
+   "p8"
+  ],
+  "docs": [
+   "Aritmetica4:p8"
+  ],
+  "w": 477,
+  "h_": 242,
+  "texto": "",
+  "contexto": [
+   {
+    "doc": "Aritmetica4",
+    "clave": "p8",
+    "slide": 17,
+    "tipo": "fill",
+    "titulo": "Actividad 8 · Cambia las piezas",
+    "texto": ",intro:'Completa cada equivalencia con un número.',items:[[\"10 barras centésimas = ___ placa(s) décima(s)\",\"1\"],[\"1 bloque unidad = ___ cubitos milésimos\",\"1000"
+   }
+  ]
+ },
+ {
+  "h": "878bf6fd55",
+  "claves": [
+   "p12"
+  ],
+  "docs": [
+   "Aritmetica4:p12"
+  ],
+  "w": 470,
+  "h_": 306,
+  "texto": "",
+  "contexto": [
+   {
+    "doc": "Aritmetica4",
+    "clave": "p12",
+    "slide": 22,
+    "tipo": "cmp",
+    "titulo": "Actividad 11 · Compara con <, > o =",
+    "texto": ",intro:'Elige el signo correcto.',items:[[\"0,5\",\"0,50\",\"=\"],[\"3,04\",\"3,4\",\" \"],[\"12,09\",\"12,9\",\" \"],[\"5,046\",\"5,06\",\"<\"]]},"
+   }
+  ]
+ },
+ {
+  "h": "eaa2bc441a",
+  "claves": [
+   "p18"
+  ],
+  "docs": [
+   "Aritmetica4:p18"
+  ],
+  "w": 506,
+  "h_": 295,
+  "texto": "",
+  "contexto": [
+   {
+    "doc": "Aritmetica4",
+    "clave": "p18",
+    "slide": 33,
+    "tipo": "tf",
+    "titulo": "Actividad 20 · Reto final",
+    "texto": ",intro:'Verdadero o falso.',lab:['Verdadero','Falso'],items:[[\"0,5 es igual a 0,50.\",true,\"Verdadero: el cero final no cambia el valor.\"],[\"0,25 es mayor que 0,"
+   }
+  ]
+ },
+ {
+  "h": "113c29a92b",
+  "claves": [
+   "p4"
+  ],
+  "docs": [
+   "Aritmetica4:p4"
+  ],
+  "w": 477,
+  "h_": 225,
+  "texto": "0,5m 0103",
+  "contexto": [
+   {
+    "doc": "Aritmetica4",
+    "clave": "p4",
+    "slide": 21,
+    "tipo": "info",
+    "titulo": "Cómo comparar y ordenar",
+    "texto": ",img:'podio',h:` Compara la parte entera . Si es igual, compara las décimas . Luego centésimas y milésimas. Cuidado: 7,205 no es mayor que 7,25 aunque 205 sea m"
+   }
+  ]
+ },
+ {
+  "h": "720277f1df",
+  "claves": [
+   "p19"
+  ],
+  "docs": [
+   "Aritmetica4:p19"
+  ],
+  "w": 510,
+  "h_": 330,
+  "texto": "",
+  "contexto": []
+ },
+ {
+  "h": "d86466eb00",
+  "claves": [
+   "p22"
+  ],
+  "docs": [
+   "Aritmetica4:p22"
+  ],
+  "w": 481,
+  "h_": 250,
+  "texto": "",
+  "contexto": [
+   {
+    "doc": "Aritmetica4",
+    "clave": "p22",
+    "slide": 5,
+    "tipo": "info",
+    "titulo": "Valor posicional y cómo leer",
+    "texto": ",img:'tablero',h:` Después de la coma: décimas (0,1), centésimas (0,01) y milésimas (0,001). 12,05 → «doce enteros con cinco centésimas» 0,375 → «375 milésimas»"
+   }
+  ]
+ },
+ {
+  "h": "f7f302973a",
+  "claves": [
+   "p6"
+  ],
+  "docs": [
+   "Aritmetica4:p6"
+  ],
+  "w": 474,
+  "h_": 264,
+  "texto": "",
+  "contexto": [
+   {
+    "doc": "Aritmetica4",
+    "clave": "p6",
+    "slide": 11,
+    "tipo": "fill",
+    "titulo": "Actividad 4 · La máquina de los detectives",
+    "texto": ",intro:'Aplica × 10 o ÷ 10 según se indique.',items:[[\"0,6 × 10 =\",\"6\"],[\"3,45 × 10 =\",\"34,5\"],[\"80 ÷ 10 =\",\"8\"],[\"4,5 ÷ 10 =\",\"0,45\"],[\"0,07 × 10 =\",\"0,7\"],[\"1"
+   }
+  ]
+ },
+ {
+  "h": "ad48574ef3",
+  "claves": [
+   "p25"
+  ],
+  "docs": [
+   "Aritmetica4:p25"
+  ],
+  "w": 455,
+  "h_": 290,
+  "texto": "Arroz Papa 1,75 Yuca Lentejas Total:",
+  "contexto": []
+ },
+ {
+  "h": "8ca0272368",
+  "claves": [
+   "p13"
+  ],
+  "docs": [
+   "Aritmetica4:p13"
+  ],
+  "w": 488,
+  "h_": 246,
+  "texto": "",
+  "contexto": [
+   {
+    "doc": "Aritmetica4",
+    "clave": "p13",
+    "slide": 23,
+    "tipo": "ord",
+    "titulo": "Actividad 12 · El podio",
+    "texto": ",intro:'En la carrera de 100 m gana quien tarda menos . Elige el puesto de cada uno (1 a 4).',items:[[\"Valentina · 15,3 s\",4],[\"Camilo · 15,03 s\",1],[\"Sofía · 1"
+   }
+  ]
+ },
+ {
+  "h": "aeb549d73d",
+  "claves": [
+   "p20"
+  ],
+  "docs": [
+   "Aritmetica4:p20"
+  ],
+  "w": 494,
+  "h_": 352,
+  "texto": "",
+  "contexto": []
+ },
+ {
+  "h": "94c0f6533d",
+  "claves": [
+   "p24"
+  ],
+  "docs": [
+   "Aritmetica4:p24"
+  ],
+  "w": 479,
+  "h_": 264,
+  "texto": "24.135",
+  "contexto": [
+   {
+    "doc": "Aritmetica4",
+    "clave": "p24",
+    "slide": 19,
+    "tipo": "info",
+    "titulo": "Bloque 4 · La recta numérica",
+    "texto": ",img:'ar_ayuda',h:` Entre 0 y 1 hay 10 partes iguales; cada una vale 0,1 . ${rl(0,true)} Entre 2 y 3 cada marca vale 0,1 también: la 4.ª marca después del 2 es "
+   }
+  ]
+ },
+ {
+  "h": "8ffe91c3b0",
+  "claves": [
+   "p11"
+  ],
+  "docs": [
+   "Aritmetica4:p11"
+  ],
+  "w": 472,
+  "h_": 284,
+  "texto": "",
+  "contexto": [
+   {
+    "doc": "Aritmetica4",
+    "clave": "p11",
+    "slide": 22,
+    "tipo": "cmp",
+    "titulo": "Actividad 11 · Compara con <, > o =",
+    "texto": ",intro:'Elige el signo correcto.',items:[[\"0,5\",\"0,50\",\"=\"],[\"3,04\",\"3,4\",\" \"],[\"12,09\",\"12,9\",\" \"],[\"5,046\",\"5,06\",\"<\"]]},"
+   }
+  ]
+ },
+ {
+  "h": "a69aa69dfc",
+  "claves": [
+   "p26"
+  ],
+  "docs": [
+   "Aritmetica4:p26"
+  ],
+  "w": 521,
+  "h_": 293,
+  "texto": "decimales vida real",
+  "contexto": []
+ },
+ {
+  "h": "578b22352f",
+  "claves": [
+   "escudo"
+  ],
+  "docs": [
+   "Aritmetica4:escudo",
+   "Aritmetica5:escudo",
+   "Tecnologia4:escudo",
+   "Tecnologia5:escudo"
+  ],
+  "w": 200,
+  "h_": 242,
+  "texto": "COLEGIO INTEGRADO SIMON BOLIVAR CUCUTA",
+  "contexto": []
+ },
+ {
+  "h": "9f245c8307",
+  "claves": [
+   "f28"
+  ],
+  "docs": [
+   "Aritmetica5:f28"
+  ],
+  "w": 432,
+  "h_": 254,
+  "texto": "",
+  "contexto": [
+   {
+    "doc": "Aritmetica5",
+    "clave": "f28",
+    "slide": 35,
+    "tipo": "fill",
+    "titulo": "Actividad 19 · Proporciones y cambio",
+    "texto": ",intro:'Resuelve cada punto con proporción o regla de tres.',items:[[\"Si 1 kg de arroz cuesta $4, ¿cuánto cuestan 6 kg? ($)\",\"24\"],[\"Completa la proporción: 3/5"
+   }
+  ]
+ },
+ {
+  "h": "0ba9056c9a",
+  "claves": [
+   "f6"
+  ],
+  "docs": [
+   "Aritmetica5:f6"
+  ],
+  "w": 452,
+  "h_": 314,
+  "texto": "",
+  "contexto": [
+   {
+    "doc": "Aritmetica5",
+    "clave": "f6",
+    "slide": 8,
+    "tipo": "cmp",
+    "titulo": "Actividad 3 · Compara con <, > o =",
+    "texto": ",intro:'Elige el signo correcto.',items:[[\"3,4\",\"3,04\",\">\"],[\"0,7\",\"0,70\",\"=\"],[\"12,09\",\"12,9\",\" \"],[\"0,86\",\"0,806\",\">\"],[\"7,5\",\"7,05\",\">\"],[\"2,45\",\"2,450\",\"=\"]"
+   }
+  ]
+ },
+ {
+  "h": "77eb17d55e",
+  "claves": [
+   "f12"
+  ],
+  "docs": [
+   "Aritmetica5:f12"
+  ],
+  "w": 465,
+  "h_": 296,
+  "texto": "",
+  "contexto": [
+   {
+    "doc": "Aritmetica5",
+    "clave": "f12",
+    "slide": 19,
+    "tipo": "fill",
+    "titulo": "Actividad 10 · Sumas",
+    "texto": ",intro:'Suma alineando las comas.',items:[[\"4,6 + 2,35 =\",\"6,95\"],[\"12,5 + 8,75 =\",\"21,25\"],[\"0,85 + 0,6 + 1,3 =\",\"2,75\"],[\"3,07 + 15,9 =\",\"18,97\"],[\"9,5 + 0,75"
+   }
+  ]
+ },
+ {
+  "h": "252ff2fe9d",
+  "claves": [
+   "f29"
+  ],
+  "docs": [
+   "Aritmetica5:f29"
+  ],
+  "w": 479,
+  "h_": 306,
+  "texto": "",
+  "contexto": [
+   {
+    "doc": "Aritmetica5",
+    "clave": "f29",
+    "slide": 36,
+    "tipo": "quiz",
+    "titulo": "QUIZ 4 · Razones, proporciones y repaso",
+    "texto": ",qs:Q4}, O('Actividad 21 · Mi autoevaluación','Sé sincero(a): esto le sirve a tu docente para ayudarte.',['¿Qué tema me costó más y qué hice para entenderlo?','"
+   }
+  ]
+ },
+ {
+  "h": "38847bc082",
+  "claves": [
+   "f25"
+  ],
+  "docs": [
+   "Aritmetica5:f25"
+  ],
+  "w": 464,
+  "h_": 229,
+  "texto": "2,5x2",
+  "contexto": [
+   {
+    "doc": "Aritmetica5",
+    "clave": "f25",
+    "slide": 31,
+    "tipo": "fill",
+    "titulo": "Actividad 18 · Repartos",
+    "texto": ",intro:'Cuatro amigos pagan entre todos una cuenta de $18,40 por un paseo en bus. Además, 5 hermanos se reparten $12,50 en partes iguales.',items:[[\"¿Cuánto pag"
+   }
+  ]
+ },
+ {
+  "h": "d770f50103",
+  "claves": [
+   "f18"
+  ],
+  "docs": [
+   "Aritmetica5:f18"
+  ],
+  "w": 499,
+  "h_": 285,
+  "texto": "1,25",
+  "contexto": [
+   {
+    "doc": "Aritmetica5",
+    "clave": "f18",
+    "slide": 29,
+    "tipo": "info",
+    "titulo": "Cuando no se reparte exacto y la comprobación",
+    "texto": ",img:'ar_puedes',h:` Si sobra, pon la coma en el cociente y agrega un cero al residuo para seguir repartiendo. Comprobación: cociente × divisor = dividendo . `}"
+   }
+  ]
+ },
+ {
+  "h": "6a9f0ac2b5",
+  "claves": [
+   "f7"
+  ],
+  "docs": [
+   "Aritmetica5:f7"
+  ],
+  "w": 485,
+  "h_": 233,
+  "texto": "",
+  "contexto": [
+   {
+    "doc": "Aritmetica5",
+    "clave": "f7",
+    "slide": 5,
+    "tipo": "info",
+    "titulo": "Comparar y ordenar precios (Torre de Precios)",
+    "texto": ",img:'ar_ayuda',h:` Compara la parte entera . Si es igual, compara las décimas , luego centésimas y milésimas. Para ordenar, iguala las cifras con ceros. Cuidad"
+   }
+  ]
+ },
+ {
+  "h": "052f69219c",
+  "claves": [
+   "f8"
+  ],
+  "docs": [
+   "Aritmetica5:f8"
+  ],
+  "w": 465,
+  "h_": 224,
+  "texto": "",
+  "contexto": [
+   {
+    "doc": "Aritmetica5",
+    "clave": "f8",
+    "slide": 13,
+    "tipo": "info",
+    "titulo": "De número decimal a fracción decimal",
+    "texto": ",img:'ar_puedes',h:` Escribe el número sin la coma como numerador y pon como denominador un 1 con tantos ceros como cifras decimales . 0,3 = 3/10 · 0,27 = 27/10"
+   }
+  ]
+ },
+ {
+  "h": "4c3864af2f",
+  "claves": [
+   "f3"
+  ],
+  "docs": [
+   "Aritmetica5:f3"
+  ],
+  "w": 450,
+  "h_": 274,
+  "texto": "",
+  "contexto": [
+   {
+    "doc": "Aritmetica5",
+    "clave": "f3",
+    "slide": 6,
+    "tipo": "fill",
+    "titulo": "Actividad 1 · Escribe en cifras",
+    "texto": ",intro:'Escribe el número con coma decimal.',items:[[\"Nueve enteros con cinco décimas\",\"9,5\"],[\"Doce enteros con ocho centésimas\",\"12,08\"],[\"Cuarenta y tres cen"
+   }
+  ]
+ },
+ {
+  "h": "cfb091ef28",
+  "claves": [
+   "f24"
+  ],
+  "docs": [
+   "Aritmetica5:f24"
+  ],
+  "w": 470,
+  "h_": 289,
+  "texto": "agrego cero",
+  "contexto": [
+   {
+    "doc": "Aritmetica5",
+    "clave": "f24",
+    "slide": 31,
+    "tipo": "fill",
+    "titulo": "Actividad 18 · Repartos",
+    "texto": ",intro:'Cuatro amigos pagan entre todos una cuenta de $18,40 por un paseo en bus. Además, 5 hermanos se reparten $12,50 en partes iguales.',items:[[\"¿Cuánto pag"
+   }
+  ]
+ },
+ {
+  "h": "40312cddd9",
+  "claves": [
+   "f31"
+  ],
+  "docs": [
+   "Aritmetica5:f31"
+  ],
+  "w": 535,
+  "h_": 265,
+  "texto": "",
+  "contexto": [
+   {
+    "doc": "Aritmetica5",
+    "clave": "f31",
+    "slide": 2,
+    "tipo": "info",
+    "titulo": "Tu mapa de misión",
+    "texto": ",img:'f31',h:` Recorrerás 6 bloques y presentarás 4 quiz de 10 preguntas. Reino de los Decimales y Torre de Precios Galaxia Gemela (fracción ↔ decimal) Galaxia "
+   }
+  ]
+ },
+ {
+  "h": "1067c17269",
+  "claves": [
+   "f17"
+  ],
+  "docs": [
+   "Aritmetica5:f17"
+  ],
+  "w": 485,
+  "h_": 268,
+  "texto": "decima",
+  "contexto": [
+   {
+    "doc": "Aritmetica5",
+    "clave": "f17",
+    "slide": 26,
+    "tipo": "fill",
+    "titulo": "Actividad 15 · Problemas de la plaza",
+    "texto": ",intro:'En la plaza: manzanas $3,25 el kilo · papa $1,85 el kilo · piña $4,50 la unidad. Camilo compra 4 kg de manzanas, 3 kg de papa y 2 piñas.',items:[[\"¿Cuán"
+   }
+  ]
+ },
+ {
+  "h": "91ca46c7a1",
+  "claves": [
+   "f36"
+  ],
+  "docs": [
+   "Aritmetica5:f36"
+  ],
+  "w": 462,
+  "h_": 244,
+  "texto": "75/100 m=0,75m",
+  "contexto": [
+   {
+    "doc": "Aritmetica5",
+    "clave": "f36",
+    "slide": 14,
+    "tipo": "fill",
+    "titulo": "Actividad 7 · Fracción → decimal",
+    "texto": ",intro:'Escribe cada fracción como número decimal.',items:[[\"4/10 =\",\"0,4\"],[\"47/100 =\",\"0,47\"],[\"9/100 =\",\"0,09\"],[\"125/1000 =\",\"0,125\"],[\"6/1000 =\",\"0,006\"],["
+   }
+  ]
+ },
+ {
+  "h": "85c6782615",
+  "claves": [
+   "f16"
+  ],
+  "docs": [
+   "Aritmetica5:f16"
+  ],
+  "w": 491,
+  "h_": 298,
+  "texto": "$2,40",
+  "contexto": [
+   {
+    "doc": "Aritmetica5",
+    "clave": "f16",
+    "slide": 25,
+    "tipo": "fill",
+    "titulo": "Actividad 14 · Multiplicaciones",
+    "texto": ",intro:'Multiplica y ubica bien la coma.',items:[[\"1,5 × 6 =\",\"9\"],[\"2,35 × 3 =\",\"7,05\"],[\"0,8 × 6 =\",\"4,8\"],[\"4,25 × 2 =\",\"8,5\"],[\"12,4 × 5 =\",\"62\"],[\"0,35 × 7"
+   }
+  ]
+ },
+ {
+  "h": "9b0966813d",
+  "claves": [
+   "f9"
+  ],
+  "docs": [
+   "Aritmetica5:f9"
+  ],
+  "w": 450,
+  "h_": 301,
+  "texto": "100",
+  "contexto": [
+   {
+    "doc": "Aritmetica5",
+    "clave": "f9",
+    "slide": 13,
+    "tipo": "info",
+    "titulo": "De número decimal a fracción decimal",
+    "texto": ",img:'ar_puedes',h:` Escribe el número sin la coma como numerador y pon como denominador un 1 con tantos ceros como cifras decimales . 0,3 = 3/10 · 0,27 = 27/10"
+   }
+  ]
+ },
+ {
+  "h": "2040ac0f2b",
+  "claves": [
+   "f2"
+  ],
+  "docs": [
+   "Aritmetica5:f2"
+  ],
+  "w": 434,
+  "h_": 256,
+  "texto": "enteros ocho",
+  "contexto": [
+   {
+    "doc": "Aritmetica5",
+    "clave": "f2",
+    "slide": 4,
+    "tipo": "info",
+    "titulo": "Bloque 1 · Valor posicional y lectura de decimales",
+    "texto": ",img:'ar_genial',h:` Un decimal tiene parte entera , coma y parte decimal . Tras la coma: décimas (0,1), centésimas (0,01) y milésimas (0,001). 35,206 → «treint"
+   }
+  ]
+ },
+ {
+  "h": "18945b4153",
+  "claves": [
+   "f22"
+  ],
+  "docs": [
+   "Aritmetica5:f22"
+  ],
+  "w": 397,
+  "h_": 299,
+  "texto": "‘sube coma",
+  "contexto": [
+   {
+    "doc": "Aritmetica5",
+    "clave": "f22",
+    "slide": 30,
+    "tipo": "fill",
+    "titulo": "Actividad 17 · Divisiones",
+    "texto": ",intro:'Divide y ubica bien la coma.',items:[[\"9,6 ÷ 3 =\",\"3,2\"],[\"7,5 ÷ 5 =\",\"1,5\"],[\"12,6 ÷ 6 =\",\"2,1\"],[\"4,8 ÷ 4 =\",\"1,2\"],[\"0,9 ÷ 3 =\",\"0,3\"],[\"10 ÷ 4 =\",\"2"
+   }
+  ]
+ },
+ {
+  "h": "e3fbb6aced",
+  "claves": [
+   "f4"
+  ],
+  "docs": [
+   "Aritmetica5:f4"
+  ],
+  "w": 431,
+  "h_": 309,
+  "texto": "",
+  "contexto": [
+   {
+    "doc": "Aritmetica5",
+    "clave": "f4",
+    "slide": 10,
+    "tipo": "recta",
+    "titulo": "Actividad 5 · Ubica en la recta",
+    "texto": ",intro:'Haz clic en la marca que corresponde a cada número.',items:[[0,0.4],[0,0.9],[0,0.2],[2,2.5],[5,5.8]]}, O('Actividad 6 · Redacta','Escribe con tus propia"
+   }
+  ]
+ },
+ {
+  "h": "953c6b4dec",
+  "claves": [
+   "f26"
+  ],
+  "docs": [
+   "Aritmetica5:f26"
+  ],
+  "w": 448,
+  "h_": 247,
+  "texto": "",
+  "contexto": [
+   {
+    "doc": "Aritmetica5",
+    "clave": "f26",
+    "slide": 33,
+    "tipo": "info",
+    "titulo": "Bloque 6 · Razones y proporciones (Galaxia del Cambio)",
+    "texto": ",img:'ar_genial',h:` Una razón compara dos cantidades: 2 jugos por 3 galletas = 2 : 3 (o 2/3). Una proporción es la igualdad de dos razones: 1/3 = 2/6. Si 1 kg "
+   }
+  ]
+ },
+ {
+  "h": "d32da4c217",
+  "claves": [
+   "f27"
+  ],
+  "docs": [
+   "Aritmetica5:f27"
+  ],
+  "w": 508,
+  "h_": 250,
+  "texto": "",
+  "contexto": [
+   {
+    "doc": "Aritmetica5",
+    "clave": "f27",
+    "slide": 35,
+    "tipo": "fill",
+    "titulo": "Actividad 19 · Proporciones y cambio",
+    "texto": ",intro:'Resuelve cada punto con proporción o regla de tres.',items:[[\"Si 1 kg de arroz cuesta $4, ¿cuánto cuestan 6 kg? ($)\",\"24\"],[\"Completa la proporción: 3/5"
+   }
+  ]
+ },
+ {
+  "h": "db28485978",
+  "claves": [
+   "f14"
+  ],
+  "docs": [
+   "Aritmetica5:f14"
+  ],
+  "w": 491,
+  "h_": 301,
+  "texto": "$0,95",
+  "contexto": [
+   {
+    "doc": "Aritmetica5",
+    "clave": "f14",
+    "slide": 20,
+    "tipo": "fill",
+    "titulo": "Actividad 11 · Restas",
+    "texto": ",intro:'Resta alineando las comas.',items:[[\"9 − 3,45 =\",\"5,55\"],[\"15,2 − 6,8 =\",\"8,4\"],[\"20 − 12,75 =\",\"7,25\"],[\"7,004 − 2,5 =\",\"4,504\"],[\"0,9 − 0,35 =\",\"0,55\""
+   }
+  ]
+ },
+ {
+  "h": "a0cca8f835",
+  "claves": [
+   "f5"
+  ],
+  "docs": [
+   "Aritmetica5:f5"
+  ],
+  "w": 346,
+  "h_": 301,
+  "texto": "$4,05",
+  "contexto": [
+   {
+    "doc": "Aritmetica5",
+    "clave": "f5",
+    "slide": 5,
+    "tipo": "info",
+    "titulo": "Comparar y ordenar precios (Torre de Precios)",
+    "texto": ",img:'ar_ayuda',h:` Compara la parte entera . Si es igual, compara las décimas , luego centésimas y milésimas. Para ordenar, iguala las cifras con ceros. Cuidad"
+   }
+  ]
+ },
+ {
+  "h": "3ec51641d9",
+  "claves": [
+   "f39"
+  ],
+  "docs": [
+   "Aritmetica5:f39"
+  ],
+  "w": 535,
+  "h_": 340,
+  "texto": "jou bia sex",
+  "contexto": []
+ },
+ {
+  "h": "eb629da7e9",
+  "claves": [
+   "f15"
+  ],
+  "docs": [
+   "Aritmetica5:f15"
+  ],
+  "w": 499,
+  "h_": 315,
+  "texto": "page",
+  "contexto": [
+   {
+    "doc": "Aritmetica5",
+    "clave": "f15",
+    "slide": 21,
+    "tipo": "fill",
+    "titulo": "Actividad 12 · Problemas de la tienda",
+    "texto": ",intro:'Precios: cuaderno $4,85 · lápiz $0,95 · regla $1,60 · borrador $0,55. Valeria compra un cuaderno, una regla y un lápiz, y paga con $10.',items:[[\"¿Cuánt"
+   }
+  ]
+ },
+ {
+  "h": "79b1898069",
+  "claves": [
+   "f40"
+  ],
+  "docs": [
+   "Aritmetica5:f40"
+  ],
+  "w": 444,
+  "h_": 319,
+  "texto": "trabajo mano",
+  "contexto": []
+ },
+ {
+  "h": "79eeb21060",
+  "claves": [
+   "f11"
+  ],
+  "docs": [
+   "Aritmetica5:f11"
+  ],
+  "w": 394,
+  "h_": 295,
+  "texto": "",
+  "contexto": [
+   {
+    "doc": "Aritmetica5",
+    "clave": "f11",
+    "slide": 18,
+    "tipo": "info",
+    "titulo": "Restar decimales y el vuelto",
+    "texto": ",img:'ar_genial',h:` En una resta: minuendo − sustraendo = diferencia . Vuelto = lo que pagas − el total de la compra. Para comprobar una resta, suma: diferenci"
+   }
+  ]
+ },
+ {
+  "h": "26254d61e9",
+  "claves": [
+   "f20"
+  ],
+  "docs": [
+   "Aritmetica5:f20"
+  ],
+  "w": 459,
+  "h_": 276,
+  "texto": "",
+  "contexto": [
+   {
+    "doc": "Aritmetica5",
+    "clave": "f20",
+    "slide": 26,
+    "tipo": "fill",
+    "titulo": "Actividad 15 · Problemas de la plaza",
+    "texto": ",intro:'En la plaza: manzanas $3,25 el kilo · papa $1,85 el kilo · piña $4,50 la unidad. Camilo compra 4 kg de manzanas, 3 kg de papa y 2 piñas.',items:[[\"¿Cuán"
+   }
+  ]
+ },
+ {
+  "h": "8250cd7bd1",
+  "claves": [
+   "f38"
+  ],
+  "docs": [
+   "Aritmetica5:f38"
+  ],
+  "w": 451,
+  "h_": 295,
+  "texto": "Vuelto: Compra: $5,65 $4,35",
+  "contexto": [
+   {
+    "doc": "Aritmetica5",
+    "clave": "f38",
+    "slide": 22,
+    "tipo": "quiz",
+    "titulo": "QUIZ 2 · Fracciones, sumas y restas",
+    "texto": ",qs:Q2},"
+   }
+  ]
+ },
+ {
+  "h": "c19091b1a2",
+  "claves": [
+   "f37"
+  ],
+  "docs": [
+   "Aritmetica5:f37"
+  ],
+  "w": 520,
+  "h_": 298,
+  "texto": "coma escapo:",
+  "contexto": [
+   {
+    "doc": "Aritmetica5",
+    "clave": "f37",
+    "slide": 32,
+    "tipo": "quiz",
+    "titulo": "QUIZ 3 · Multiplicación y división de decimales",
+    "texto": ",qs:Q3},"
+   }
+  ]
+ },
+ {
+  "h": "1fc35c2236",
+  "claves": [
+   "f33"
+  ],
+  "docs": [
+   "Aritmetica5:f33"
+  ],
+  "w": 520,
+  "h_": 309,
+  "texto": "opias palabras",
+  "contexto": []
+ },
+ {
+  "h": "a7a2638df6",
+  "claves": [
+   "f23"
+  ],
+  "docs": [
+   "Aritmetica5:f23"
+  ],
+  "w": 513,
+  "h_": 287,
+  "texto": "$18,40 entre",
+  "contexto": [
+   {
+    "doc": "Aritmetica5",
+    "clave": "f23",
+    "slide": 33,
+    "tipo": "info",
+    "titulo": "Bloque 6 · Razones y proporciones (Galaxia del Cambio)",
+    "texto": ",img:'ar_genial',h:` Una razón compara dos cantidades: 2 jugos por 3 galletas = 2 : 3 (o 2/3). Una proporción es la igualdad de dos razones: 1/3 = 2/6. Si 1 kg "
+   }
+  ]
+ },
+ {
+  "h": "313790d9bf",
+  "claves": [
+   "f35"
+  ],
+  "docs": [
+   "Aritmetica5:f35"
+  ],
+  "w": 540,
+  "h_": 270,
+  "texto": "Plaza Arroz Papa 1,75 Yuca Lentejas Total",
+  "contexto": [
+   {
+    "doc": "Aritmetica5",
+    "clave": "f35",
+    "slide": 20,
+    "tipo": "fill",
+    "titulo": "Actividad 11 · Restas",
+    "texto": ",intro:'Resta alineando las comas.',items:[[\"9 − 3,45 =\",\"5,55\"],[\"15,2 − 6,8 =\",\"8,4\"],[\"20 − 12,75 =\",\"7,25\"],[\"7,004 − 2,5 =\",\"4,504\"],[\"0,9 − 0,35 =\",\"0,55\""
+   }
+  ]
+ },
+ {
+  "h": "453b116918",
+  "claves": [
+   "f1"
+  ],
+  "docs": [
+   "Aritmetica5:f1"
+  ],
+  "w": 464,
+  "h_": 191,
+  "texto": "Unidades Centésimas",
+  "contexto": [
+   {
+    "doc": "Aritmetica5",
+    "clave": "f1",
+    "slide": 4,
+    "tipo": "info",
+    "titulo": "Bloque 1 · Valor posicional y lectura de decimales",
+    "texto": ",img:'ar_genial',h:` Un decimal tiene parte entera , coma y parte decimal . Tras la coma: décimas (0,1), centésimas (0,01) y milésimas (0,001). 35,206 → «treint"
+   }
+  ]
+ },
+ {
+  "h": "9bc35f54a7",
+  "claves": [
+   "f10"
+  ],
+  "docs": [
+   "Aritmetica5:f10"
+  ],
+  "w": 476,
+  "h_": 367,
+  "texto": "",
+  "contexto": [
+   {
+    "doc": "Aritmetica5",
+    "clave": "f10",
+    "slide": 14,
+    "tipo": "fill",
+    "titulo": "Actividad 7 · Fracción → decimal",
+    "texto": ",intro:'Escribe cada fracción como número decimal.',items:[[\"4/10 =\",\"0,4\"],[\"47/100 =\",\"0,47\"],[\"9/100 =\",\"0,09\"],[\"125/1000 =\",\"0,125\"],[\"6/1000 =\",\"0,006\"],["
+   }
+  ]
+ },
+ {
+  "h": "a71aa2dbfa",
+  "claves": [
+   "f30"
+  ],
+  "docs": [
+   "Aritmetica5:f30"
+  ],
+  "w": 479,
+  "h_": 352,
+  "texto": "",
+  "contexto": [
+   {
+    "doc": "Aritmetica5",
+    "clave": "f30",
+    "slide": 36,
+    "tipo": "quiz",
+    "titulo": "QUIZ 4 · Razones, proporciones y repaso",
+    "texto": ",qs:Q4}, O('Actividad 21 · Mi autoevaluación','Sé sincero(a): esto le sirve a tu docente para ayudarte.',['¿Qué tema me costó más y qué hice para entenderlo?','"
+   }
+  ]
+ },
+ {
+  "h": "34cd2bdcfb",
+  "claves": [
+   "f34"
+  ],
+  "docs": [
+   "Aritmetica5:f34"
+  ],
+  "w": 465,
+  "h_": 269,
+  "texto": "",
+  "contexto": [
+   {
+    "doc": "Aritmetica5",
+    "clave": "f34",
+    "slide": 7,
+    "tipo": "match",
+    "titulo": "Actividad 2 · ¿Qué valor tiene la cifra?",
+    "texto": ",intro:'Elige el valor de la cifra señalada.',items:[[\"En 8,426 la cifra 4 vale\",\"4 décimas\"],[\"En 13,07 la cifra 7 vale\",\"7 centésimas\"],[\"En 0,358 la cifra 8 "
+   }
+  ]
+ },
+ {
+  "h": "5ac8cd94e8",
+  "claves": [
+   "f13"
+  ],
+  "docs": [
+   "Aritmetica5:f13"
+  ],
+  "w": 500,
+  "h_": 300,
+  "texto": "devuelvo?",
+  "contexto": [
+   {
+    "doc": "Aritmetica5",
+    "clave": "f13",
+    "slide": 22,
+    "tipo": "quiz",
+    "titulo": "QUIZ 2 · Fracciones, sumas y restas",
+    "texto": ",qs:Q2},"
+   }
+  ]
+ },
+ {
+  "h": "3ec0ef0b74",
+  "claves": [
+   "f19"
+  ],
+  "docs": [
+   "Aritmetica5:f19"
+  ],
+  "w": 482,
+  "h_": 296,
+  "texto": "",
+  "contexto": [
+   {
+    "doc": "Aritmetica5",
+    "clave": "f19",
+    "slide": 25,
+    "tipo": "fill",
+    "titulo": "Actividad 14 · Multiplicaciones",
+    "texto": ",intro:'Multiplica y ubica bien la coma.',items:[[\"1,5 × 6 =\",\"9\"],[\"2,35 × 3 =\",\"7,05\"],[\"0,8 × 6 =\",\"4,8\"],[\"4,25 × 2 =\",\"8,5\"],[\"12,4 × 5 =\",\"62\"],[\"0,35 × 7"
+   }
+  ]
+ },
+ {
+  "h": "437a0ac3ff",
+  "claves": [
+   "f21"
+  ],
+  "docs": [
+   "Aritmetica5:f21"
+  ],
+  "w": 459,
+  "h_": 305,
+  "texto": "",
+  "contexto": [
+   {
+    "doc": "Aritmetica5",
+    "clave": "f21",
+    "slide": 30,
+    "tipo": "fill",
+    "titulo": "Actividad 17 · Divisiones",
+    "texto": ",intro:'Divide y ubica bien la coma.',items:[[\"9,6 ÷ 3 =\",\"3,2\"],[\"7,5 ÷ 5 =\",\"1,5\"],[\"12,6 ÷ 6 =\",\"2,1\"],[\"4,8 ÷ 4 =\",\"1,2\"],[\"0,9 ÷ 3 =\",\"0,3\"],[\"10 ÷ 4 =\",\"2"
+   }
+  ]
+ },
+ {
+  "h": "5b72e26ddf",
+  "claves": [
+   "f32"
+  ],
+  "docs": [
+   "Aritmetica5:f32"
+  ],
+  "w": 451,
+  "h_": 310,
+  "texto": "",
+  "contexto": []
+ },
+ {
+  "h": "c72d865325",
+  "claves": [
+   "p27"
+  ],
+  "docs": [
+   "Tecnologia4:p27",
+   "Tecnologia5:p27"
+  ],
+  "w": 524,
+  "h_": 315,
+  "texto": "Con mis ropias palabras...",
+  "contexto": []
+ },
+ {
+  "h": "289abf69be",
+  "claves": [
+   "p30"
+  ],
+  "docs": [
+   "Tecnologia4:p30",
+   "Tecnologia5:p30"
+  ],
+  "w": 498,
+  "h_": 357,
+  "texto": "ubi grado!",
+  "contexto": []
+ },
+ {
+  "h": "36692f178c",
+  "claves": [
+   "nb40"
+  ],
+  "docs": [
+   "Tecnologia4:nb40",
+   "Tecnologia5:nb40"
+  ],
+  "w": 444,
+  "h_": 319,
+  "texto": "trabajo",
+  "contexto": []
+ },
+ {
+  "h": "2bc5ef4b2f",
+  "claves": [
+   "f28"
+  ],
+  "docs": [
+   "Tecnologia4:f28"
+  ],
+  "w": 486,
+  "h_": 260,
+  "texto": "formato",
+  "contexto": [
+   {
+    "doc": "Tecnologia4",
+    "clave": "f28",
+    "slide": 28,
+    "tipo": "info",
+    "titulo": "Bloque 5 · Fuente, tamaño y alineación",
+    "texto": ",img:'ar_genial',h:` La fuente es el tipo de letra y el tamaño se mide en puntos: para leer, 12; para subtítulos, más grande; para títulos, aún más. Alineación:"
+   }
+  ]
+ },
+ {
+  "h": "dbecd04f4e",
+  "claves": [
+   "f6"
+  ],
+  "docs": [
+   "Tecnologia4:f6"
+  ],
+  "w": 468,
+  "h_": 297,
+  "texto": "rtelo igos mal sue",
+  "contexto": [
+   {
+    "doc": "Tecnologia4",
+    "clave": "f6",
+    "slide": 8,
+    "tipo": "tf",
+    "titulo": "Actividad 2 · ¿Verdadero o falso?",
+    "texto": ",intro:'Decide si cada afirmación es verdadera.',lab:['Verdadero','Falso'],items:[[\"Un video puede ser una fuente de información.\",true,\"Verdadero.\"],[\"Toda la "
+   }
+  ]
+ },
+ {
+  "h": "ad6a239c4b",
+  "claves": [
+   "f12"
+  ],
+  "docs": [
+   "Tecnologia4:f12"
+  ],
+  "w": 451,
+  "h_": 304,
+  "texto": "dominio Autor Fecha Fuentes",
+  "contexto": [
+   {
+    "doc": "Tecnologia4",
+    "clave": "f12",
+    "slide": 12,
+    "tipo": "match",
+    "titulo": "Actividad 5 · Dominios y términos web",
+    "texto": ",intro:'Elige la opción correcta para cada frase.',items:[[\"El dominio .com suele indicar\",\"un sitio comercial\"],[\"El dominio .edu suele indicar\",\"un sitio educ"
+   }
+  ]
+ },
+ {
+  "h": "a6da483a5e",
+  "claves": [
+   "f29"
+  ],
+  "docs": [
+   "Tecnologia4:f29"
+  ],
+  "w": 476,
+  "h_": 352,
+  "texto": "",
+  "contexto": [
+   {
+    "doc": "Tecnologia4",
+    "clave": "f29",
+    "slide": 29,
+    "tipo": "info",
+    "titulo": "Márgenes, interlineado, orientación e imágenes",
+    "texto": ",img:'ar_ayuda',h:` Márgenes: espacio entre el texto y el borde de la hoja. Interlineado: espacio entre líneas. Orientación: vertical (más alta) u horizontal (m"
+   }
+  ]
+ },
+ {
+  "h": "9e1edde983",
+  "claves": [
+   "f25"
+  ],
+  "docs": [
+   "Tecnologia4:f25"
+  ],
+  "w": 499,
+  "h_": 226,
+  "texto": "Numeracion Cursiva",
+  "contexto": [
+   {
+    "doc": "Tecnologia4",
+    "clave": "f25",
+    "slide": 27,
+    "tipo": "quiz",
+    "titulo": "QUIZ 3 · Tablas, listas y estilos",
+    "texto": ",qs:Q3},"
+   }
+  ]
+ },
+ {
+  "h": "6055643261",
+  "claves": [
+   "f18"
+  ],
+  "docs": [
+   "Tecnologia4:f18"
+  ],
+  "w": 454,
+  "h_": 259,
+  "texto": "abrir",
+  "contexto": [
+   {
+    "doc": "Tecnologia4",
+    "clave": "f18",
+    "slide": 18,
+    "tipo": "tf",
+    "titulo": "Actividad 8 · ¿Segura o riesgosa?",
+    "texto": ",intro:'Clasifica cada situación.',lab:['Segura','Riesgosa'],items:[[\"Cerrar sesión al terminar de usar un computador compartido.\",true,\"Segura.\"],[\"Aceptar la "
+   }
+  ]
+ },
+ {
+  "h": "500baa0c25",
+  "claves": [
+   "f7"
+  ],
+  "docs": [
+   "Tecnologia4:f7"
+  ],
+  "w": 473,
+  "h_": 276,
+  "texto": "Direccion Teléfono Colegio",
+  "contexto": [
+   {
+    "doc": "Tecnologia4",
+    "clave": "f7",
+    "slide": 7,
+    "tipo": "info",
+    "titulo": "¿Es confiable? Datos personales y uso responsable",
+    "texto": ",img:'ar_puedes',h:` Una información es confiable cuando tiene autor , fecha y fuentes . Desconfía si no dice quién la escribió o te presiona para compartirla. "
+   }
+  ]
+ },
+ {
+  "h": "680ab9596f",
+  "claves": [
+   "f8"
+  ],
+  "docs": [
+   "Tecnologia4:f8"
+  ],
+  "w": 482,
+  "h_": 272,
+  "texto": "Fuente: pagina del",
+  "contexto": [
+   {
+    "doc": "Tecnologia4",
+    "clave": "f8",
+    "slide": 9,
+    "tipo": "fill",
+    "titulo": "Actividad 3 · Completa los espacios",
+    "texto": ",intro:'Escribe la palabra que falta.',items:[[\"La herramienta que nos ayuda a encontrar información en Internet se llama ___\",\"buscador\"],[\"Las palabras más im"
+   }
+  ]
+ },
+ {
+  "h": "28d13fbfcb",
+  "claves": [
+   "f3"
+  ],
+  "docs": [
+   "Tecnologia4:f3"
+  ],
+  "w": 487,
+  "h_": 240,
+  "texto": "Tipos",
+  "contexto": [
+   {
+    "doc": "Tecnologia4",
+    "clave": "f3",
+    "slide": 5,
+    "tipo": "info",
+    "titulo": "Tipos de información en Internet",
+    "texto": ",img:'ar_ayuda',h:` En Internet encontramos información en distintos formatos: texto , imagen , video , audio e infografía (dibujos, datos y textos cortos que e"
+   }
+  ]
+ },
+ {
+  "h": "6842a6cf05",
+  "claves": [
+   "f24"
+  ],
+  "docs": [
+   "Tecnologia4:f24"
+  ],
+  "w": 457,
+  "h_": 282,
+  "texto": "Jugo Lavar las naranjas Exprimirlas Colar jugo Servir",
+  "contexto": [
+   {
+    "doc": "Tecnologia4",
+    "clave": "f24",
+    "slide": 25,
+    "tipo": "match",
+    "titulo": "Actividad 13 · Herramienta ↔ función",
+    "texto": ",intro:'Elige para qué sirve cada herramienta de Word.',items:[[\"Negrita (N)\",\"resaltar con letra más gruesa\"],[\"Cursiva (K)\",\"inclinar el texto\"],[\"Subrayado ("
+   }
+  ]
+ },
+ {
+  "h": "c974ecbf25",
+  "claves": [
+   "f31"
+  ],
+  "docs": [
+   "Tecnologia4:f31"
+  ],
+  "w": 487,
+  "h_": 262,
+  "texto": "",
+  "contexto": [
+   {
+    "doc": "Tecnologia4",
+    "clave": "f31",
+    "slide": 31,
+    "tipo": "fill",
+    "titulo": "Actividad 17 · Completa los espacios",
+    "texto": ",intro:'Escribe la palabra que falta.',items:[[\"La separación entre el texto y los bordes de la hoja se llama ___\",\"margenes|margen\"],[\"El espacio entre una lín"
+   }
+  ]
+ },
+ {
+  "h": "030c130d08",
+  "claves": [
+   "f17"
+  ],
+  "docs": [
+   "Tecnologia4:f17"
+  ],
+  "w": 473,
+  "h_": 275,
+  "texto": "sesion",
+  "contexto": [
+   {
+    "doc": "Tecnologia4",
+    "clave": "f17",
+    "slide": 18,
+    "tipo": "tf",
+    "titulo": "Actividad 8 · ¿Segura o riesgosa?",
+    "texto": ",intro:'Clasifica cada situación.',lab:['Segura','Riesgosa'],items:[[\"Cerrar sesión al terminar de usar un computador compartido.\",true,\"Segura.\"],[\"Aceptar la "
+   }
+  ]
+ },
+ {
+  "h": "14c173d1da",
+  "claves": [
+   "f36"
+  ],
+  "docs": [
+   "Tecnologia4:f36"
+  ],
+  "w": 476,
+  "h_": 294,
+  "texto": "Arrastra dela esquina estirada",
+  "contexto": [
+   {
+    "doc": "Tecnologia4",
+    "clave": "f36",
+    "slide": 34,
+    "tipo": "tf",
+    "titulo": "Actividad 20 · Reto final",
+    "texto": ",intro:'Verdadero o falso.',lab:['Verdadero','Falso'],items:[[\"Un buscador y un navegador son lo mismo.\",false,\"Falso: Edge es navegador y Bing es buscador.\"],["
+   }
+  ]
+ },
+ {
+  "h": "75c5deaf36",
+  "claves": [
+   "f16"
+  ],
+  "docs": [
+   "Tecnologia4:f16"
+  ],
+  "w": 481,
+  "h_": 282,
+  "texto": "letras simbolos",
+  "contexto": [
+   {
+    "doc": "Tecnologia4",
+    "clave": "f16",
+    "slide": 18,
+    "tipo": "tf",
+    "titulo": "Actividad 8 · ¿Segura o riesgosa?",
+    "texto": ",intro:'Clasifica cada situación.',lab:['Segura','Riesgosa'],items:[[\"Cerrar sesión al terminar de usar un computador compartido.\",true,\"Segura.\"],[\"Aceptar la "
+   }
+  ]
+ },
+ {
+  "h": "18049470ce",
+  "claves": [
+   "f9"
+  ],
+  "docs": [
+   "Tecnologia4:f9"
+  ],
+  "w": 462,
+  "h_": 241,
+  "texto": "Buscador",
+  "contexto": [
+   {
+    "doc": "Tecnologia4",
+    "clave": "f9",
+    "slide": 11,
+    "tipo": "info",
+    "titulo": "Dominios y cómo reconocer una página confiable",
+    "texto": ",img:'ar_ayuda',h:` El dominio es el final de la dirección y da pistas: .com (comercial), .edu (educativo), .gov.co (gobierno de Colombia), .org (organizaciones"
+   }
+  ]
+ },
+ {
+  "h": "f443e66c27",
+  "claves": [
+   "f2"
+  ],
+  "docs": [
+   "Tecnologia4:f2"
+  ],
+  "w": 476,
+  "h_": 261,
+  "texto": "rus",
+  "contexto": [
+   {
+    "doc": "Tecnologia4",
+    "clave": "f2",
+    "slide": 4,
+    "tipo": "info",
+    "titulo": "Bloque 1 · Buscar información en Internet",
+    "texto": ",img:'ar_genial',h:` Para encontrar información usamos un buscador (por ejemplo Bing o Google). Escribimos palabras clave : las palabras más importantes de lo q"
+   }
+  ]
+ },
+ {
+  "h": "018536b666",
+  "claves": [
+   "f22"
+  ],
+  "docs": [
+   "Tecnologia4:f22"
+  ],
+  "w": 496,
+  "h_": 283,
+  "texto": "Materia Dia Hora 8:00 Martes Matematicas",
+  "contexto": [
+   {
+    "doc": "Tecnologia4",
+    "clave": "f22",
+    "slide": 29,
+    "tipo": "info",
+    "titulo": "Márgenes, interlineado, orientación e imágenes",
+    "texto": ",img:'ar_ayuda',h:` Márgenes: espacio entre el texto y el borde de la hoja. Interlineado: espacio entre líneas. Orientación: vertical (más alta) u horizontal (m"
+   }
+  ]
+ },
+ {
+  "h": "2c75d255f6",
+  "claves": [
+   "f4"
+  ],
+  "docs": [
+   "Tecnologia4:f4"
+  ],
+  "w": 466,
+  "h_": 278,
+  "texto": "Cuida agua",
+  "contexto": [
+   {
+    "doc": "Tecnologia4",
+    "clave": "f4",
+    "slide": 5,
+    "tipo": "info",
+    "titulo": "Tipos de información en Internet",
+    "texto": ",img:'ar_ayuda',h:` En Internet encontramos información en distintos formatos: texto , imagen , video , audio e infografía (dibujos, datos y textos cortos que e"
+   }
+  ]
+ },
+ {
+  "h": "11a99b3c2a",
+  "claves": [
+   "f26"
+  ],
+  "docs": [
+   "Tecnologia4:f26"
+  ],
+  "w": 487,
+  "h_": 291,
+  "texto": "mascota Luna muy curiosa. subrayado",
+  "contexto": [
+   {
+    "doc": "Tecnologia4",
+    "clave": "f26",
+    "slide": 26,
+    "tipo": "tf",
+    "titulo": "Actividad 14 · Detective del formato",
+    "texto": ",intro:'¿Usaron bien la herramienta?',lab:['Correcto','Incorrecto'],items:[[\"Para la lista de útiles escolares (sin orden) usa una lista con viñetas.\",true,\"Cor"
+   }
+  ]
+ },
+ {
+  "h": "fc50ee7ce4",
+  "claves": [
+   "f27"
+  ],
+  "docs": [
+   "Tecnologia4:f27"
+  ],
+  "w": 486,
+  "h_": 281,
+  "texto": "tabla",
+  "contexto": [
+   {
+    "doc": "Tecnologia4",
+    "clave": "f27",
+    "slide": 24,
+    "tipo": "fill",
+    "titulo": "Actividad 12 · Tablas y estilos",
+    "texto": ",intro:'Escribe la respuesta.',items:[[\"Una tabla de 3 filas y 5 columnas tiene ___ celdas en total\",\"15\"],[\"El cruce de una fila con una columna se llama ___\","
+   }
+  ]
+ },
+ {
+  "h": "522ac753ee",
+  "claves": [
+   "f14"
+  ],
+  "docs": [
+   "Tecnologia4:f14"
+  ],
+  "w": 440,
+  "h_": 292,
+  "texto": "ventana",
+  "contexto": [
+   {
+    "doc": "Tecnologia4",
+    "clave": "f14",
+    "slide": 17,
+    "tipo": "info",
+    "titulo": "Contraseñas seguras y buenas prácticas",
+    "texto": ",img:'ar_puedes',h:` Una contraseña segura mezcla letras, números y símbolos , es difícil de adivinar y es un secreto (solo la conoce un adulto de tu familia). "
+   }
+  ]
+ },
+ {
+  "h": "1748749208",
+  "claves": [
+   "f5"
+  ],
+  "docs": [
+   "Tecnologia4:f5"
+  ],
+  "w": 448,
+  "h_": 273,
+  "texto": "Confiable confiable autor fecha fuentes",
+  "contexto": [
+   {
+    "doc": "Tecnologia4",
+    "clave": "f5",
+    "slide": 7,
+    "tipo": "info",
+    "titulo": "¿Es confiable? Datos personales y uso responsable",
+    "texto": ",img:'ar_puedes',h:` Una información es confiable cuando tiene autor , fecha y fuentes . Desconfía si no dice quién la escribió o te presiona para compartirla. "
+   }
+  ]
+ },
+ {
+  "h": "f41e7c2016",
+  "claves": [
+   "f39"
+  ],
+  "docs": [
+   "Tecnologia4:f39"
+  ],
+  "w": 482,
+  "h_": 347,
+  "texto": "Lista chequeo Letra legible Margenes Imagen proporcional centrado",
+  "contexto": []
+ },
+ {
+  "h": "df47ad6305",
+  "claves": [
+   "f15"
+  ],
+  "docs": [
+   "Tecnologia4:f15"
+  ],
+  "w": 457,
+  "h_": 297,
+  "texto": "fraude Haz clic aqui",
+  "contexto": [
+   {
+    "doc": "Tecnologia4",
+    "clave": "f15",
+    "slide": 17,
+    "tipo": "info",
+    "titulo": "Contraseñas seguras y buenas prácticas",
+    "texto": ",img:'ar_puedes',h:` Una contraseña segura mezcla letras, números y símbolos , es difícil de adivinar y es un secreto (solo la conoce un adulto de tu familia). "
+   }
+  ]
+ },
+ {
+  "h": "6bc4e5e535",
+  "claves": [
+   "f40"
+  ],
+  "docs": [
+   "Tecnologia4:f40"
+  ],
+  "w": 501,
+  "h_": 373,
+  "texto": "jHay rrores for mato!",
+  "contexto": [
+   {
+    "doc": "Tecnologia4",
+    "clave": "f40",
+    "slide": 35,
+    "tipo": "nb",
+    "titulo": "📓 Trabajo escrito para entregar en tu cuaderno",
+    "texto": "},"
+   }
+  ]
+ },
+ {
+  "h": "5c7c0cb7a3",
+  "claves": [
+   "f11"
+  ],
+  "docs": [
+   "Tecnologia4:f11"
+  ],
+  "w": 481,
+  "h_": 231,
+  "texto": "com ‘org escuela gobierno organizacion",
+  "contexto": [
+   {
+    "doc": "Tecnologia4",
+    "clave": "f11",
+    "slide": 12,
+    "tipo": "match",
+    "titulo": "Actividad 5 · Dominios y términos web",
+    "texto": ",intro:'Elige la opción correcta para cada frase.',items:[[\"El dominio .com suele indicar\",\"un sitio comercial\"],[\"El dominio .edu suele indicar\",\"un sitio educ"
+   }
+  ]
+ },
+ {
+  "h": "4bfccd1595",
+  "claves": [
+   "f20"
+  ],
+  "docs": [
+   "Tecnologia4:f20"
+  ],
+  "w": 474,
+  "h_": 347,
+  "texto": "escudo digital",
+  "contexto": [
+   {
+    "doc": "Tecnologia4",
+    "clave": "f20",
+    "slide": 22,
+    "tipo": "info",
+    "titulo": "Bloque 4 · Tablas en Word",
+    "texto": ",img:'ar_genial',h:` Una tabla organiza datos en filas (horizontales) y columnas (verticales). El cruce de una fila con una columna es una celda . La primera fi"
+   }
+  ]
+ },
+ {
+  "h": "8a00285603",
+  "claves": [
+   "f38"
+  ],
+  "docs": [
+   "Tecnologia4:f38"
+  ],
+  "w": 481,
+  "h_": 294,
+  "texto": "sta mal",
+  "contexto": []
+ },
+ {
+  "h": "f8bbf2d01d",
+  "claves": [
+   "f37"
+  ],
+  "docs": [
+   "Tecnologia4:f37"
+  ],
+  "w": 453,
+  "h_": 290,
+  "texto": "Ajustar texto",
+  "contexto": [
+   {
+    "doc": "Tecnologia4",
+    "clave": "f37",
+    "slide": 34,
+    "tipo": "tf",
+    "titulo": "Actividad 20 · Reto final",
+    "texto": ",intro:'Verdadero o falso.',lab:['Verdadero','Falso'],items:[[\"Un buscador y un navegador son lo mismo.\",false,\"Falso: Edge es navegador y Bing es buscador.\"],["
+   }
+  ]
+ },
+ {
+  "h": "00022ff3f0",
+  "claves": [
+   "f33"
+  ],
+  "docs": [
+   "Tecnologia4:f33"
+  ],
+  "w": 447,
+  "h_": 292,
+  "texto": "Margenes",
+  "contexto": [
+   {
+    "doc": "Tecnologia4",
+    "clave": "f33",
+    "slide": 32,
+    "tipo": "tf",
+    "titulo": "Actividad 18 · Detective del formato",
+    "texto": ",intro:'¿Está bien editado?',lab:['Correcto','Incorrecto'],items:[[\"Un título importante puede ir centrado y con letra más grande.\",true,\"Correcto.\"],[\"Para un "
+   }
+  ]
+ },
+ {
+  "h": "5980c1d163",
+  "claves": [
+   "f23"
+  ],
+  "docs": [
+   "Tecnologia4:f23"
+  ],
+  "w": 485,
+  "h_": 297,
+  "texto": "Mis utiles Cuaderno Lapiz Regla Colores",
+  "contexto": [
+   {
+    "doc": "Tecnologia4",
+    "clave": "f23",
+    "slide": 25,
+    "tipo": "match",
+    "titulo": "Actividad 13 · Herramienta ↔ función",
+    "texto": ",intro:'Elige para qué sirve cada herramienta de Word.',items:[[\"Negrita (N)\",\"resaltar con letra más gruesa\"],[\"Cursiva (K)\",\"inclinar el texto\"],[\"Subrayado ("
+   }
+  ]
+ },
+ {
+  "h": "d065aa881c",
+  "claves": [
+   "f35"
+  ],
+  "docs": [
+   "Tecnologia4:f35"
+  ],
+  "w": 435,
+  "h_": 280,
+  "texto": "Orientacion",
+  "contexto": [
+   {
+    "doc": "Tecnologia4",
+    "clave": "f35",
+    "slide": 32,
+    "tipo": "tf",
+    "titulo": "Actividad 18 · Detective del formato",
+    "texto": ",intro:'¿Está bien editado?',lab:['Correcto','Incorrecto'],items:[[\"Un título importante puede ir centrado y con letra más grande.\",true,\"Correcto.\"],[\"Para un "
+   }
+  ]
+ },
+ {
+  "h": "9708b6ac3e",
+  "claves": [
+   "f1"
+  ],
+  "docs": [
+   "Tecnologia4:f1"
+  ],
+  "w": 458,
+  "h_": 251,
+  "texto": "",
+  "contexto": [
+   {
+    "doc": "Tecnologia4",
+    "clave": "f1",
+    "slide": 4,
+    "tipo": "info",
+    "titulo": "Bloque 1 · Buscar información en Internet",
+    "texto": ",img:'ar_genial',h:` Para encontrar información usamos un buscador (por ejemplo Bing o Google). Escribimos palabras clave : las palabras más importantes de lo q"
+   }
+  ]
+ },
+ {
+  "h": "b718833c8e",
+  "claves": [
+   "f10"
+  ],
+  "docs": [
+   "Tecnologia4:f10"
+  ],
+  "w": 476,
+  "h_": 229,
+  "texto": "",
+  "contexto": [
+   {
+    "doc": "Tecnologia4",
+    "clave": "f10",
+    "slide": 11,
+    "tipo": "info",
+    "titulo": "Dominios y cómo reconocer una página confiable",
+    "texto": ",img:'ar_ayuda',h:` El dominio es el final de la dirección y da pistas: .com (comercial), .edu (educativo), .gov.co (gobierno de Colombia), .org (organizaciones"
+   }
+  ]
+ },
+ {
+  "h": "cabeb1e72c",
+  "claves": [
+   "f30"
+  ],
+  "docs": [
+   "Tecnologia4:f30"
+  ],
+  "w": 489,
+  "h_": 351,
+  "texto": "",
+  "contexto": []
+ },
+ {
+  "h": "f5c5b656e9",
+  "claves": [
+   "f34"
+  ],
+  "docs": [
+   "Tecnologia4:f34"
+  ],
+  "w": 443,
+  "h_": 272,
+  "texto": "",
+  "contexto": [
+   {
+    "doc": "Tecnologia4",
+    "clave": "f34",
+    "slide": 33,
+    "tipo": "quiz",
+    "titulo": "QUIZ 4 · Edición de documentos y repaso",
+    "texto": ",qs:Q4},"
+   }
+  ]
+ },
+ {
+  "h": "978a35fcab",
+  "claves": [
+   "f13"
+  ],
+  "docs": [
+   "Tecnologia4:f13"
+  ],
+  "w": 480,
+  "h_": 331,
+  "texto": "Colom imales pel",
+  "contexto": [
+   {
+    "doc": "Tecnologia4",
+    "clave": "f13",
+    "slide": 10,
+    "tipo": "info",
+    "titulo": "Bloque 2 · Navegador, buscador y URL",
+    "texto": ",img:'ar_genial',h:` El navegador es el programa con el que entramos a Internet (por ejemplo Edge). El buscador es la herramienta que busca información (por eje"
+   }
+  ]
+ },
+ {
+  "h": "d04d82da50",
+  "claves": [
+   "f19"
+  ],
+  "docs": [
+   "Tecnologia4:f19"
+  ],
+  "w": 488,
+  "h_": 320,
+  "texto": "",
+  "contexto": [
+   {
+    "doc": "Tecnologia4",
+    "clave": "f19",
+    "slide": 17,
+    "tipo": "info",
+    "titulo": "Contraseñas seguras y buenas prácticas",
+    "texto": ",img:'ar_puedes',h:` Una contraseña segura mezcla letras, números y símbolos , es difícil de adivinar y es un secreto (solo la conoce un adulto de tu familia). "
+   }
+  ]
+ },
+ {
+  "h": "a03bcc9b72",
+  "claves": [
+   "f21"
+  ],
+  "docs": [
+   "Tecnologia4:f21"
+  ],
+  "w": 476,
+  "h_": 299,
+  "texto": "",
+  "contexto": [
+   {
+    "doc": "Tecnologia4",
+    "clave": "f21",
+    "slide": 24,
+    "tipo": "fill",
+    "titulo": "Actividad 12 · Tablas y estilos",
+    "texto": ",intro:'Escribe la respuesta.',items:[[\"Una tabla de 3 filas y 5 columnas tiene ___ celdas en total\",\"15\"],[\"El cruce de una fila con una columna se llama ___\","
+   }
+  ]
+ },
+ {
+  "h": "74724a640e",
+  "claves": [
+   "f32"
+  ],
+  "docs": [
+   "Tecnologia4:f32"
+  ],
+  "w": 474,
+  "h_": 258,
+  "texto": "",
+  "contexto": [
+   {
+    "doc": "Tecnologia4",
+    "clave": "f32",
+    "slide": 31,
+    "tipo": "fill",
+    "titulo": "Actividad 17 · Completa los espacios",
+    "texto": ",intro:'Escribe la palabra que falta.',items:[[\"La separación entre el texto y los bordes de la hoja se llama ___\",\"margenes|margen\"],[\"El espacio entre una lín"
+   }
+  ]
+ },
+ {
+  "h": "8d9b677b0a",
+  "claves": [
+   "f28"
+  ],
+  "docs": [
+   "Tecnologia5:f28"
+  ],
+  "w": 469,
+  "h_": 307,
+  "texto": "Antivirus actualizado distintas adulto",
+  "contexto": [
+   {
+    "doc": "Tecnologia5",
+    "clave": "f28",
+    "slide": 25,
+    "tipo": "tf",
+    "titulo": "Actividad 14 · Hábitos seguros e inseguros",
+    "texto": ",intro:'Clasifica cada hábito.',lab:['Seguro','Inseguro'],items:[[\"Mantener el antivirus actualizado.\",true,\"Seguro.\"],[\"Abrir un adjunto de un desconocido para"
+   }
+  ]
+ },
+ {
+  "h": "dddfb0c8a0",
+  "claves": [
+   "f6"
+  ],
+  "docs": [
+   "Tecnologia5:f6"
+  ],
+  "w": 493,
+  "h_": 266,
+  "texto": "gusta",
+  "contexto": [
+   {
+    "doc": "Tecnologia5",
+    "clave": "f6",
+    "slide": 5,
+    "tipo": "info",
+    "titulo": "¿Es confiable esta información?",
+    "texto": ",img:'ar_ayuda',h:` Una información es confiable cuando tiene autor identificado, fecha clara y fuentes que se pueden comprobar. Ojo: los «me gusta» y los compa"
+   }
+  ]
+ },
+ {
+  "h": "4026d36dca",
+  "claves": [
+   "f12"
+  ],
+  "docs": [
+   "Tecnologia5:f12"
+  ],
+  "w": 452,
+  "h_": 303,
+  "texto": "",
+  "contexto": [
+   {
+    "doc": "Tecnologia5",
+    "clave": "f12",
+    "slide": 12,
+    "tipo": "match",
+    "titulo": "Actividad 6 · Palabra ↔ significado",
+    "texto": ",intro:'Elige el significado de cada palabra.',items:[[\"Palabra clave\",\"palabra que escribo en el buscador para encontrar lo que necesito\"],[\"Pestaña\",\"parte de"
+   }
+  ]
+ },
+ {
+  "h": "0d4c7114e2",
+  "claves": [
+   "f29"
+  ],
+  "docs": [
+   "Tecnologia5:f29"
+  ],
+  "w": 408,
+  "h_": 289,
+  "texto": "Archivo sospechoso",
+  "contexto": [
+   {
+    "doc": "Tecnologia5",
+    "clave": "f29",
+    "slide": 29,
+    "tipo": "info",
+    "titulo": "Los pioneros de Internet",
+    "texto": ",img:'ar_ayuda',h:` Cerf y Kahn: TCP/IP, el idioma común. Tim Berners-Lee: propuso la Web (1989). Ray Tomlinson: primer correo entre dos computadores (1971) y l"
+   }
+  ]
+ },
+ {
+  "h": "0f4d565317",
+  "claves": [
+   "f25"
+  ],
+  "docs": [
+   "Tecnologia5:f25"
+  ],
+  "w": 457,
+  "h_": 274,
+  "texto": "",
+  "contexto": [
+   {
+    "doc": "Tecnologia5",
+    "clave": "f25",
+    "slide": 25,
+    "tipo": "tf",
+    "titulo": "Actividad 14 · Hábitos seguros e inseguros",
+    "texto": ",intro:'Clasifica cada hábito.',lab:['Seguro','Inseguro'],items:[[\"Mantener el antivirus actualizado.\",true,\"Seguro.\"],[\"Abrir un adjunto de un desconocido para"
+   }
+  ]
+ },
+ {
+  "h": "825ce6f05b",
+  "claves": [
+   "f18"
+  ],
+  "docs": [
+   "Tecnologia5:f18"
+  ],
+  "w": 475,
+  "h_": 318,
+  "texto": "omparo fuentes",
+  "contexto": [
+   {
+    "doc": "Tecnologia5",
+    "clave": "f18",
+    "slide": 18,
+    "tipo": "tf",
+    "titulo": "Actividad 9 · ¿Hecho u opinión?",
+    "texto": ",intro:'Clasifica cada frase.',lab:['Hecho','Opinión'],items:[[\"Bogotá es la capital de Colombia.\",true,\"Hecho: se puede comprobar.\"],[\"El fútbol es el deporte "
+   }
+  ]
+ },
+ {
+  "h": "263e3399cf",
+  "claves": [
+   "f7"
+  ],
+  "docs": [
+   "Tecnologia5:f7"
+  ],
+  "w": 480,
+  "h_": 264,
+  "texto": "Compra publicidad",
+  "contexto": [
+   {
+    "doc": "Tecnologia5",
+    "clave": "f7",
+    "slide": 4,
+    "tipo": "info",
+    "titulo": "Bloque 1 · Tipos de información y fuentes",
+    "texto": ",img:'ar_genial',h:` En Internet encontramos muchos tipos de contenido: noticias (hechos recientes), videos tutoriales (enseñan paso a paso), enciclopedias en l"
+   }
+  ]
+ },
+ {
+  "h": "3a998424d1",
+  "claves": [
+   "f8"
+  ],
+  "docs": [
+   "Tecnologia5:f8"
+  ],
+  "w": 442,
+  "h_": 247,
+  "texto": "Comparar Fecha Autor",
+  "contexto": [
+   {
+    "doc": "Tecnologia5",
+    "clave": "f8",
+    "slide": 7,
+    "tipo": "tf",
+    "titulo": "Actividad 2 · ¿Confiable o no?",
+    "texto": ",intro:'Marca si la información es confiable.',lab:['Confiable','No confiable'],items:[[\"Un artículo con autor, fecha y fuentes citadas.\",true,\"Confiable: se pu"
+   }
+  ]
+ },
+ {
+  "h": "5b19d7f6c7",
+  "claves": [
+   "f3"
+  ],
+  "docs": [
+   "Tecnologia5:f3"
+  ],
+  "w": 475,
+  "h_": 299,
+  "texto": "Como armar una maqueta paso paso",
+  "contexto": [
+   {
+    "doc": "Tecnologia5",
+    "clave": "f3",
+    "slide": 4,
+    "tipo": "info",
+    "titulo": "Bloque 1 · Tipos de información y fuentes",
+    "texto": ",img:'ar_genial',h:` En Internet encontramos muchos tipos de contenido: noticias (hechos recientes), videos tutoriales (enseñan paso a paso), enciclopedias en l"
+   }
+  ]
+ },
+ {
+  "h": "a847cec940",
+  "claves": [
+   "f24"
+  ],
+  "docs": [
+   "Tecnologia5:f24"
+  ],
+  "w": 408,
+  "h_": 299,
+  "texto": "ILOVEYOU LOVE-LETTER- FOR-YOU. TXT. “Correo",
+  "contexto": [
+   {
+    "doc": "Tecnologia5",
+    "clave": "f24",
+    "slide": 25,
+    "tipo": "tf",
+    "titulo": "Actividad 14 · Hábitos seguros e inseguros",
+    "texto": ",intro:'Clasifica cada hábito.',lab:['Seguro','Inseguro'],items:[[\"Mantener el antivirus actualizado.\",true,\"Seguro.\"],[\"Abrir un adjunto de un desconocido para"
+   }
+  ]
+ },
+ {
+  "h": "f5ceee6e9d",
+  "claves": [
+   "f31"
+  ],
+  "docs": [
+   "Tecnologia5:f31"
+  ],
+  "w": 461,
+  "h_": 310,
+  "texto": "",
+  "contexto": [
+   {
+    "doc": "Tecnologia5",
+    "clave": "f31",
+    "slide": 31,
+    "tipo": "fill",
+    "titulo": "Actividad 18 · Completa los espacios",
+    "texto": ",intro:'Escribe la palabra o el número que falta.',items:[[\"Internet es una red de ___ (de computadores conectados)\",\"redes\"],[\"La ___ (www) es el conjunto de p"
+   }
+  ]
+ },
+ {
+  "h": "fcf7e2bd26",
+  "claves": [
+   "f17"
+  ],
+  "docs": [
+   "Tecnologia5:f17"
+  ],
+  "w": 497,
+  "h_": 309,
+  "texto": "personas!",
+  "contexto": [
+   {
+    "doc": "Tecnologia5",
+    "clave": "f17",
+    "slide": 18,
+    "tipo": "tf",
+    "titulo": "Actividad 9 · ¿Hecho u opinión?",
+    "texto": ",intro:'Clasifica cada frase.',lab:['Hecho','Opinión'],items:[[\"Bogotá es la capital de Colombia.\",true,\"Hecho: se puede comprobar.\"],[\"El fútbol es el deporte "
+   }
+  ]
+ },
+ {
+  "h": "c1d32da303",
+  "claves": [
+   "f36"
+  ],
+  "docs": [
+   "Tecnologia5:f36"
+  ],
+  "w": 444,
+  "h_": 238,
+  "texto": "",
+  "contexto": [
+   {
+    "doc": "Tecnologia5",
+    "clave": "f36",
+    "slide": 32,
+    "tipo": "tf",
+    "titulo": "Actividad 19 · ¿Internet o la Web?",
+    "texto": ",intro:'¿A cuál se refiere cada frase?',lab:['Internet','La Web'],items:[[\"Es la red mundial que conecta computadores.\",true,\"Internet.\"],[\"Son páginas con text"
+   }
+  ]
+ },
+ {
+  "h": "fff4bd495d",
+  "claves": [
+   "f16"
+  ],
+  "docs": [
+   "Tecnologia5:f16"
+  ],
+  "w": 490,
+  "h_": 263,
+  "texto": "diner facil partelo",
+  "contexto": [
+   {
+    "doc": "Tecnologia5",
+    "clave": "f16",
+    "slide": 17,
+    "tipo": "info",
+    "titulo": "Verificar y el semáforo del pulgar",
+    "texto": ",img:'ar_puedes',h:` Verificar es comprobar si algo es cierto buscando en otras fuentes confiables. Hasta los videos se pueden editar o sacar de contexto. Semáf"
+   }
+  ]
+ },
+ {
+  "h": "f2abf9fb04",
+  "claves": [
+   "f9"
+  ],
+  "docs": [
+   "Tecnologia5:f9"
+  ],
+  "w": 491,
+  "h_": 201,
+  "texto": "",
+  "contexto": [
+   {
+    "doc": "Tecnologia5",
+    "clave": "f9",
+    "slide": 11,
+    "tipo": "info",
+    "titulo": "Comparar páginas, tomar notas y anotar la fuente",
+    "texto": ",img:'ar_ayuda',h:` Revisa varias páginas para comparar lo que dicen. Toma notas con tus propias palabras (no copies y pegues) y anota siempre la fuente : nombr"
+   }
+  ]
+ },
+ {
+  "h": "07d7a7e39a",
+  "claves": [
+   "f2"
+  ],
+  "docs": [
+   "Tecnologia5:f2"
+  ],
+  "w": 460,
+  "h_": 372,
+  "texto": "Noticias Autor: Ana Ruiz Fecha: marzo 2026",
+  "contexto": [
+   {
+    "doc": "Tecnologia5",
+    "clave": "f2",
+    "slide": 5,
+    "tipo": "info",
+    "titulo": "¿Es confiable esta información?",
+    "texto": ",img:'ar_ayuda',h:` Una información es confiable cuando tiene autor identificado, fecha clara y fuentes que se pueden comprobar. Ojo: los «me gusta» y los compa"
+   }
+  ]
+ },
+ {
+  "h": "383a7e04ea",
+  "claves": [
+   "f22"
+  ],
+  "docs": [
+   "Tecnologia5:f22"
+  ],
+  "w": 456,
+  "h_": 294,
+  "texto": "copia solo",
+  "contexto": [
+   {
+    "doc": "Tecnologia5",
+    "clave": "f22",
+    "slide": 24,
+    "tipo": "match",
+    "titulo": "Actividad 13 · Palabra ↔ significado",
+    "texto": ",intro:'Elige el significado de cada palabra.',items:[[\"Virus informático\",\"programa dañino que se copia y afecta el computador\"],[\"Gusano informático\",\"program"
+   }
+  ]
+ },
+ {
+  "h": "d598233d0b",
+  "claves": [
+   "f4"
+  ],
+  "docs": [
+   "Tecnologia5:f4"
+  ],
+  "w": 487,
+  "h_": 284,
+  "texto": "noticias Colombia hoy",
+  "contexto": [
+   {
+    "doc": "Tecnologia5",
+    "clave": "f4",
+    "slide": 10,
+    "tipo": "info",
+    "titulo": "Bloque 2 · Palabras clave y pestañas",
+    "texto": ",img:'ar_genial',h:` Para investigar bien, elige buenas palabras clave : claras y específicas. En el navegador usa las pestañas para abrir varias páginas a la v"
+   }
+  ]
+ },
+ {
+  "h": "49f112b0c7",
+  "claves": [
+   "f26"
+  ],
+  "docs": [
+   "Tecnologia5:f26"
+  ],
+  "w": 461,
+  "h_": 268,
+  "texto": "Vent",
+  "contexto": [
+   {
+    "doc": "Tecnologia5",
+    "clave": "f26",
+    "slide": 29,
+    "tipo": "info",
+    "titulo": "Los pioneros de Internet",
+    "texto": ",img:'ar_ayuda',h:` Cerf y Kahn: TCP/IP, el idioma común. Tim Berners-Lee: propuso la Web (1989). Ray Tomlinson: primer correo entre dos computadores (1971) y l"
+   }
+  ]
+ },
+ {
+  "h": "e48b0472aa",
+  "claves": [
+   "f27"
+  ],
+  "docs": [
+   "Tecnologia5:f27"
+  ],
+  "w": 417,
+  "h_": 302,
+  "texto": "",
+  "contexto": [
+   {
+    "doc": "Tecnologia5",
+    "clave": "f27",
+    "slide": 26,
+    "tipo": "fill",
+    "titulo": "Actividad 15 · Completa los espacios",
+    "texto": ",intro:'Escribe la palabra que falta.',items:[[\"Un programa que busca, bloquea y elimina virus se llama ___\",\"antivirus\"],[\"El virus ILOVEYOU se propagó en un a"
+   }
+  ]
+ },
+ {
+  "h": "35168e9239",
+  "claves": [
+   "f14"
+  ],
+  "docs": [
+   "Tecnologia5:f14"
+  ],
+  "w": 494,
+  "h_": 275,
+  "texto": "nas",
+  "contexto": [
+   {
+    "doc": "Tecnologia5",
+    "clave": "f14",
+    "slide": 13,
+    "tipo": "tf",
+    "titulo": "Actividad 7 · Buenas y malas prácticas al investigar",
+    "texto": ",intro:'Clasifica cada acción.',lab:['Buena práctica','Mala práctica'],items:[[\"Escribir 3 palabras clave claras para buscar.\",true,\"Buena práctica.\"],[\"Copiar "
+   }
+  ]
+ },
+ {
+  "h": "4dea79bd9d",
+  "claves": [
+   "f5"
+  ],
+  "docs": [
+   "Tecnologia5:f5"
+  ],
+  "w": 484,
+  "h_": 281,
+  "texto": "",
+  "contexto": [
+   {
+    "doc": "Tecnologia5",
+    "clave": "f5",
+    "slide": 5,
+    "tipo": "info",
+    "titulo": "¿Es confiable esta información?",
+    "texto": ",img:'ar_ayuda',h:` Una información es confiable cuando tiene autor identificado, fecha clara y fuentes que se pueden comprobar. Ojo: los «me gusta» y los compa"
+   }
+  ]
+ },
+ {
+  "h": "d276437a51",
+  "claves": [
+   "f39"
+  ],
+  "docs": [
+   "Tecnologia5:f39"
+  ],
+  "w": 453,
+  "h_": 382,
+  "texto": "junio 1994. primera internet",
+  "contexto": []
+ },
+ {
+  "h": "a613e7a0d6",
+  "claves": [
+   "f15"
+  ],
+  "docs": [
+   "Tecnologia5:f15"
+  ],
+  "w": 479,
+  "h_": 251,
+  "texto": "Bogota pizza capital mejor Colombia comida Hecho",
+  "contexto": [
+   {
+    "doc": "Tecnologia5",
+    "clave": "f15",
+    "slide": 17,
+    "tipo": "info",
+    "titulo": "Verificar y el semáforo del pulgar",
+    "texto": ",img:'ar_puedes',h:` Verificar es comprobar si algo es cierto buscando en otras fuentes confiables. Hasta los videos se pueden editar o sacar de contexto. Semáf"
+   }
+  ]
+ },
+ {
+  "h": "59ec1d00bd",
+  "claves": [
+   "f40"
+  ],
+  "docs": [
+   "Tecnologia5:f40"
+  ],
+  "w": 491,
+  "h_": 385,
+  "texto": "zcomo era sin Internet:",
+  "contexto": []
+ },
+ {
+  "h": "2a547327de",
+  "claves": [
+   "f11"
+  ],
+  "docs": [
+   "Tecnologia5:f11"
+  ],
+  "w": 471,
+  "h_": 314,
+  "texto": "",
+  "contexto": [
+   {
+    "doc": "Tecnologia5",
+    "clave": "f11",
+    "slide": 12,
+    "tipo": "match",
+    "titulo": "Actividad 6 · Palabra ↔ significado",
+    "texto": ",intro:'Elige el significado de cada palabra.',items:[[\"Palabra clave\",\"palabra que escribo en el buscador para encontrar lo que necesito\"],[\"Pestaña\",\"parte de"
+   }
+  ]
+ },
+ {
+  "h": "27cf89c4c4",
+  "claves": [
+   "f20"
+  ],
+  "docs": [
+   "Tecnologia5:f20"
+  ],
+  "w": 468,
+  "h_": 310,
+  "texto": "Los videos tambien pueden",
+  "contexto": [
+   {
+    "doc": "Tecnologia5",
+    "clave": "f20",
+    "slide": 17,
+    "tipo": "info",
+    "titulo": "Verificar y el semáforo del pulgar",
+    "texto": ",img:'ar_puedes',h:` Verificar es comprobar si algo es cierto buscando en otras fuentes confiables. Hasta los videos se pueden editar o sacar de contexto. Semáf"
+   }
+  ]
+ },
+ {
+  "h": "237e056aa7",
+  "claves": [
+   "f38"
+  ],
+  "docs": [
+   "Tecnologia5:f38"
+  ],
+  "w": 480,
+  "h_": 270,
+  "texto": "",
+  "contexto": [
+   {
+    "doc": "Tecnologia5",
+    "clave": "f38",
+    "slide": 31,
+    "tipo": "fill",
+    "titulo": "Actividad 18 · Completa los espacios",
+    "texto": ",intro:'Escribe la palabra o el número que falta.',items:[[\"Internet es una red de ___ (de computadores conectados)\",\"redes\"],[\"La ___ (www) es el conjunto de p"
+   }
+  ]
+ },
+ {
+  "h": "fd45828db4",
+  "claves": [
+   "f37"
+  ],
+  "docs": [
+   "Tecnologia5:f37"
+  ],
+  "w": 510,
+  "h_": 259,
+  "texto": "‘Los pioneros)",
+  "contexto": [
+   {
+    "doc": "Tecnologia5",
+    "clave": "f37",
+    "slide": 32,
+    "tipo": "tf",
+    "titulo": "Actividad 19 · ¿Internet o la Web?",
+    "texto": ",intro:'¿A cuál se refiere cada frase?',lab:['Internet','La Web'],items:[[\"Es la red mundial que conecta computadores.\",true,\"Internet.\"],[\"Son páginas con text"
+   }
+  ]
+ },
+ {
+  "h": "2a1cbe8c40",
+  "claves": [
+   "f33"
+  ],
+  "docs": [
+   "Tecnologia5:f33"
+  ],
+  "w": 473,
+  "h_": 241,
+  "texto": "ARPANET 1969",
+  "contexto": [
+   {
+    "doc": "Tecnologia5",
+    "clave": "f33",
+    "slide": 31,
+    "tipo": "fill",
+    "titulo": "Actividad 18 · Completa los espacios",
+    "texto": ",intro:'Escribe la palabra o el número que falta.',items:[[\"Internet es una red de ___ (de computadores conectados)\",\"redes\"],[\"La ___ (www) es el conjunto de p"
+   }
+  ]
+ },
+ {
+  "h": "ef4752134c",
+  "claves": [
+   "f23"
+  ],
+  "docs": [
+   "Tecnologia5:f23"
+  ],
+  "w": 374,
+  "h_": 306,
+  "texto": "Troyano",
+  "contexto": [
+   {
+    "doc": "Tecnologia5",
+    "clave": "f23",
+    "slide": 24,
+    "tipo": "match",
+    "titulo": "Actividad 13 · Palabra ↔ significado",
+    "texto": ",intro:'Elige el significado de cada palabra.',items:[[\"Virus informático\",\"programa dañino que se copia y afecta el computador\"],[\"Gusano informático\",\"program"
+   }
+  ]
+ },
+ {
+  "h": "21b7696d8b",
+  "claves": [
+   "f35"
+  ],
+  "docs": [
+   "Tecnologia5:f35"
+  ],
+  "w": 519,
+  "h_": 286,
+  "texto": "",
+  "contexto": [
+   {
+    "doc": "Tecnologia5",
+    "clave": "f35",
+    "slide": 32,
+    "tipo": "tf",
+    "titulo": "Actividad 19 · ¿Internet o la Web?",
+    "texto": ",intro:'¿A cuál se refiere cada frase?',lab:['Internet','La Web'],items:[[\"Es la red mundial que conecta computadores.\",true,\"Internet.\"],[\"Son páginas con text"
+   }
+  ]
+ },
+ {
+  "h": "c931500135",
+  "claves": [
+   "f1"
+  ],
+  "docs": [
+   "Tecnologia5:f1"
+  ],
+  "w": 456,
+  "h_": 321,
+  "texto": "deo tutorial Noticia Rumor",
+  "contexto": [
+   {
+    "doc": "Tecnologia5",
+    "clave": "f1",
+    "slide": 4,
+    "tipo": "info",
+    "titulo": "Bloque 1 · Tipos de información y fuentes",
+    "texto": ",img:'ar_genial',h:` En Internet encontramos muchos tipos de contenido: noticias (hechos recientes), videos tutoriales (enseñan paso a paso), enciclopedias en l"
+   }
+  ]
+ },
+ {
+  "h": "0de415b358",
+  "claves": [
+   "f10"
+  ],
+  "docs": [
+   "Tecnologia5:f10"
+  ],
+  "w": 457,
+  "h_": 241,
+  "texto": "Pagina",
+  "contexto": [
+   {
+    "doc": "Tecnologia5",
+    "clave": "f10",
+    "slide": 11,
+    "tipo": "info",
+    "titulo": "Comparar páginas, tomar notas y anotar la fuente",
+    "texto": ",img:'ar_ayuda',h:` Revisa varias páginas para comparar lo que dicen. Toma notas con tus propias palabras (no copies y pegues) y anota siempre la fuente : nombr"
+   }
+  ]
+ },
+ {
+  "h": "dc085054a3",
+  "claves": [
+   "f30"
+  ],
+  "docs": [
+   "Tecnologia5:f30"
+  ],
+  "w": 492,
+  "h_": 272,
+  "texto": "‘Malwa Familia del",
+  "contexto": [
+   {
+    "doc": "Tecnologia5",
+    "clave": "f30",
+    "slide": 26,
+    "tipo": "fill",
+    "titulo": "Actividad 15 · Completa los espacios",
+    "texto": ",intro:'Escribe la palabra que falta.',items:[[\"Un programa que busca, bloquea y elimina virus se llama ___\",\"antivirus\"],[\"El virus ILOVEYOU se propagó en un a"
+   }
+  ]
+ },
+ {
+  "h": "cd1f5cc910",
+  "claves": [
+   "f34"
+  ],
+  "docs": [
+   "Tecnologia5:f34"
+  ],
+  "w": 479,
+  "h_": 276,
+  "texto": "‘idioma comun",
+  "contexto": [
+   {
+    "doc": "Tecnologia5",
+    "clave": "f34",
+    "slide": 32,
+    "tipo": "tf",
+    "titulo": "Actividad 19 · ¿Internet o la Web?",
+    "texto": ",intro:'¿A cuál se refiere cada frase?',lab:['Internet','La Web'],items:[[\"Es la red mundial que conecta computadores.\",true,\"Internet.\"],[\"Son páginas con text"
+   }
+  ]
+ },
+ {
+  "h": "278571ef50",
+  "claves": [
+   "f13"
+  ],
+  "docs": [
+   "Tecnologia5:f13"
+  ],
+  "w": 494,
+  "h_": 291,
+  "texto": "Fuente Nombre Pagina",
+  "contexto": [
+   {
+    "doc": "Tecnologia5",
+    "clave": "f13",
+    "slide": 12,
+    "tipo": "match",
+    "titulo": "Actividad 6 · Palabra ↔ significado",
+    "texto": ",intro:'Elige el significado de cada palabra.',items:[[\"Palabra clave\",\"palabra que escribo en el buscador para encontrar lo que necesito\"],[\"Pestaña\",\"parte de"
+   }
+  ]
+ },
+ {
+  "h": "e62b2c94ce",
+  "claves": [
+   "f19"
+  ],
+  "docs": [
+   "Tecnologia5:f19"
+  ],
+  "w": 487,
+  "h_": 288,
+  "texto": "comparto",
+  "contexto": [
+   {
+    "doc": "Tecnologia5",
+    "clave": "f19",
+    "slide": 18,
+    "tipo": "tf",
+    "titulo": "Actividad 9 · ¿Hecho u opinión?",
+    "texto": ",intro:'Clasifica cada frase.',lab:['Hecho','Opinión'],items:[[\"Bogotá es la capital de Colombia.\",true,\"Hecho: se puede comprobar.\"],[\"El fútbol es el deporte "
+   }
+  ]
+ },
+ {
+  "h": "8e3eb7cc25",
+  "claves": [
+   "f21"
+  ],
+  "docs": [
+   "Tecnologia5:f21"
+  ],
+  "w": 439,
+  "h_": 305,
+  "texto": "",
+  "contexto": [
+   {
+    "doc": "Tecnologia5",
+    "clave": "f21",
+    "slide": 24,
+    "tipo": "match",
+    "titulo": "Actividad 13 · Palabra ↔ significado",
+    "texto": ",intro:'Elige el significado de cada palabra.',items:[[\"Virus informático\",\"programa dañino que se copia y afecta el computador\"],[\"Gusano informático\",\"program"
+   }
+  ]
+ },
+ {
+  "h": "f67411cde8",
+  "claves": [
+   "f32"
+  ],
+  "docs": [
+   "Tecnologia5:f32"
+  ],
+  "w": 485,
+  "h_": 279,
+  "texto": "Web tiendas carretera 100",
+  "contexto": [
+   {
+    "doc": "Tecnologia5",
+    "clave": "f32",
+    "slide": 31,
+    "tipo": "fill",
+    "titulo": "Actividad 18 · Completa los espacios",
+    "texto": ",intro:'Escribe la palabra o el número que falta.',items:[[\"Internet es una red de ___ (de computadores conectados)\",\"redes\"],[\"La ___ (www) es el conjunto de p"
+   }
+  ]
+ }
+]

@@ -8732,7 +8732,7 @@ Cada error que alguna vez existió tiene una prueba que lo vigila. **Si se cambi
 
 1. Antes de crear una clase, lista los recursos visuales que necesita (personaje, fondo, premios, íconos, tema).
 2. Consulta `banco-imagenes/banco.json` (o `python3 banco-imagenes/_herramientas/buscar_banco.py <palabras> --sin-texto`).
-3. Usa solo `estado: aprobada` o `por_revisar`, `tiene_texto: false` y `calidad >= 4`. Nunca `descartada`, `especifica` ni `uso_con_cuidado` (esta última solo si el tema es redes sociales).
+3. Usa solo `estado: aprobada` o `por_revisar` y `calidad >= 4`. Nunca `descartada`, `especifica` ni `uso_con_cuidado` (esta última solo si el tema es redes sociales). Si `tiene_texto: true`, úsala SOLO cuando `texto_es_contenido: true` (el texto es el contenido del concepto, como «0,25» o «Antivirus») y **léelo**: los números y rótulos de la imagen deben ser correctos para tu clase y para el grado. Busca por lo que CONTIENE: `python3 banco-imagenes/_herramientas/buscar_banco.py <palabras> --materia aritmetica --grado 5 --alt` (busca en descripción, texto de la imagen, etiquetas y la slide de origen) o navega `banco-imagenes/CATALOGO.md`. Copia el campo `alt` del banco como texto alternativo de la imagen.
 4. Referencia por id: `<img src="asset://id">` y empaqueta con `empaquetar_assets.py`.
 5. Si falta un recurso, créalo ORIGINAL (SVG propio o ilustración nueva), sin imitar personajes o marcas de terceros (Minecraft, Among Us, Fortnite, Mario, etc.), regístralo en `banco.json` y repórtalo al final como "recursos nuevos".
 6. Consistencia: mismos personajes (ARIA y NPC aprobados) en todas las clases de una misma materia.
@@ -8861,7 +8861,7 @@ Una clase debe ser **muy visual**. Las slides `info` y cada pregunta de `quiz`/`
 ```
 - `imagen` = `asset://<id>` de `banco-imagenes/banco.json` (módulo 33). Un id inexistente o `descartada` **detiene la construcción**.
 - `alt` es **obligatorio** (mínimo 2 palabras): describe la imagen para lectores de pantalla (el auditor da error si falta).
-- Una imagen por slide o pregunta, la más clara y relacionada con el concepto. Para buscar: `python3 banco-imagenes/_herramientas/buscar_banco.py <tema> --sin-texto`.
+- Una imagen por slide o pregunta, la más clara y relacionada con el concepto. Para buscar: `python3 banco-imagenes/_herramientas/buscar_banco.py <palabras> --alt` (por contenido; muestra el `alt` listo para copiar) o el `CATALOGO.md` con miniaturas.
 - En `info`, el orden es: **concepto → imagen → «Ejemplo resuelto / Ahora tú»**.
 
 ### 2. Juego `fraccion` (pintar partes de una pizza o una barra)

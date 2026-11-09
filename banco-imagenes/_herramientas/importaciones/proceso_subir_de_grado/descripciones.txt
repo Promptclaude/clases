@@ -1,0 +1,172 @@
+# formato: h6 | carpeta (categoria/subcategoria) | descripcion | tags separados por espacio
+7e7164 | tematicos/dinero | Puesto «Tienda Escolar» con cuaderno, lápiz, jugo y borrador, con precios $2,5 $1,0 $1,5 $0,5 | tienda precios escuela compra decimales
+555c41 | premios | Trofeo dorado con estrella y ramas de laurel | trofeo logro ganador
+acc787 | tematicos/medidas | Balanza digital roja con frutas (manzanas, naranjas y bananos) que marca 1,25 kg | balanza peso kilogramos decimales frutas
+4548c0 | interfaz/barras-y-marcos | Mapa de misión en el espacio con planetas «Bloque 1» a «Bloque 5» unidos por una ruta | mapa progreso bloques espacio
+766ad2 | tematicos/decimales | Lupa grande con huellas y la regla «×10 ÷10» (detective del patrón decimal) | lupa x10 dividir10 detective multiplicar patron
+a73f3a | interfaz/banners | Logo «Proceso de Subir de grado» con cohete, planetas y números | titulo cohete subir-de-grado nivelacion
+0fa8b1 | personajes/aria | ARIA con globo morado «¿Sigues aquí? ¿Necesitas algo de ayuda?» | aria ayuda pregunta
+096350 | personajes/aria | ARIA confundida con garabato sobre la cabeza y globo «¡Uy! Parece difícil…» | aria dificil confundida animo
+96f7e0 | personajes/aria | ARIA despidiéndose con la mano y globo «¡Nos vemos!» | aria despedida adios
+cfbca2 | premios | Podio 1.º 2.º 3.º con tres niños corredores en una pista de atletismo | podio carrera ordenar puestos atletismo
+9cffc8 | personajes/aria | ARIA con pulgar arriba y globo «¡Lo estás haciendo genial!» | aria felicitacion animo bien
+6931d1 | premios | Boleto dorado grande con el precio «$3,7» | boleto precio decimales dorado
+1270fd | personajes/aria | ARIA saltando de alegría con globo rosa «¡Tú puedes!» | aria animo tu-puedes
+184d91 | tematicos/fabrica | Fábrica con chimeneas y cinta transportadora que lleva bloques de colores | fabrica bloques cinta decimales construir
+cfab7e | personajes/aria | ARIA celebrando con globo verde «¡Correcto!» | aria correcto acierto celebracion
+21dea9 | juego | Estrella dorada brillante con destellos | estrella logro puntos
+b41e2a | tematicos/decimales | Tabla de valor posicional: Unidades 1 · Décimas 0,1 · Centésimas 0,01 · Milésimas 0,001 | valor-posicional tabla unidades decimas centesimas milesimas
+cc7b26 | tematicos/medidas | Jarra medidora de 1 litro con jugo de naranja que llega a 0,7 L | litros capacidad jarra decimales volumen
+c867f9 | tematicos/decimales | 10 barras amarillas de decena igual a 1 placa verde de centena (bloques de base 10) | base10 bloques decena centena equivalencia
+94da4a | tematicos/decimales | Cuadrícula de 100 cuadros con 25 pintados y el decimal 0,25 | cuadricula centesimas 0,25 representacion
+4f0fc1 | tematicos/decimales | Resta en el cuaderno 8,0 − 2,6 = 5,4 con la nota «baja la coma» | resta algoritmo coma cuaderno
+63ba2e | tematicos/dinero | Mano con monedas y el letrero «Vuelto: $1,85» | vuelto monedas dinero resta
+060427 | tematicos/decimales | Suma en columna 1,60 + 2,45 = 4,05 en el cuaderno con flecha en la coma | suma algoritmo coma columna cuaderno
+bd55d0 | tematicos/decimales | Máquina con engranajes que multiplica por 10: 2,8 → 28 | multiplicar x10 maquina patron decimales
+2f695c | tematicos/detectives | Detective niña con lupa frente a la pizarra «0,5×10=0,50» marcada con una X y la pregunta «¿Y la coma?» | detective error x10 coma
+dbb246 | tematicos/fracciones | Pizza partida en 10 con el decimal 0,3 señalado | pizza decimal fraccion decimal 0,3
+7fd8ca | premios | ARIA con birrete y diploma, pergamino «¡Subí de grado!» y cohete | aria diploma graduacion subir-de-grado celebracion
+3f7962 | tematicos/medidas | Cronómetro dorado que marca 9,05 s junto a un niño corriendo | cronometro tiempo segundos carrera decimales
+06f8c3 | tematicos/decimales | Personaje «coma» que se mueve de 3,5 a 35 con el globo «la coma se mueve» | coma multiplicar x10 mover-coma
+cd9908 | tematicos/decimales | Valor posicional del número 46,372 con decenas, unidades, décimas, centésimas y milésimas | valor-posicional lectura decimales 46,372
+72b578 | tematicos/medidas | Termómetro que marca 36,6 °C junto a un niño sudando por la fiebre | temperatura termometro grados decimales salud
+e96133 | tematicos/medidas | Tres niños corriendo con sus tiempos 9,5 s · 9,05 s · 9,25 s | tiempos carrera comparar decimales segundos
+3cb9dd | tematicos/decimales | Tres tarjetas 3,04 · 3,14 · 3,4 con una flecha «de menor a mayor» | ordenar comparar decimales menor-a-mayor
+3d4a1c | tematicos/trabajo-escrito | Niño escribiendo en su cuaderno con el globo «Con mis propias palabras…» | explicar escribir cuaderno propias-palabras
+aab681 | tematicos/decimales | Bandeja con bloques de base 10 (cubo, barras y cubitos) y fichas de número 1 · 4 · 2 · 5 | base10 bloques valor-posicional piezas
+878bf6 | tematicos/decimales | Recta numérica de 3 a 4 con una niña con bandera que marca 3,7 | recta-numerica ubicar decimales 3,7
+eaa2bc | tematicos/dinero | Niño con un helado ($2,30), una galleta ($0,85) y un billete de $5 | precios compra helado galleta billete decimales
+113c29 | tematicos/medidas | Cinta métrica extendida con una flecha en 0,5 m | longitud metro cinta-metrica decimales 0,5
+720277 | tematicos/medidas | Puesto de frutas con dos balanzas (1,5 kg y 0,75 kg) y un costal «máx. 5 kg» | peso kilogramos balanza mercado frutas
+d86466 | tematicos/decimales | «2,5 = 2,50» con un 0 final que duerme: el cero final no cambia el valor | equivalencia cero-final decimales igual
+f7f302 | tematicos/decimales | Máquina con engranajes que divide entre 10: 9 → 0,9 | dividir x10 maquina patron decimales
+ad4857 | tematicos/dinero | Lista de compras (arroz 2,5 kg, papa 1,75 kg, yuca 0,9 kg, lentejas 0,5 kg) con «Total: ?» y un carrito | compras suma decimales problema plaza
+8ca027 | tematicos/decimales | Balanza de platillos que compara 4,36 > 4,306 | comparar mayor-que balanza decimales
+aeb549 | tematicos/medidas | Dos niños caminando por un parque con distancias 1,25 km y 0,8 km | distancia kilometros comparar decimales caminar
+94c0f6 | tematicos/medidas | Marcador de natación: Carril 1 · 24,31 s y Carril 2 · 24,13 s | tiempos natacion comparar decimales segundos
+8ffe91 | tematicos/decimales | Niño saltando sobre la recta numérica de 0 a 1 con la marca en 0,4 | recta-numerica ubicar decimales 0,4
+a69aa6 | tematicos/decimales | Niña con una laptop y ARIA que muestra «decimales en la vida real» | decimales vida-real aria buscar
+578b22 | institucional | Escudo del Colegio Integrado Simón Bolívar de Cúcuta | escudo colegio institucional simon-bolivar cucuta
+9f245c | tematicos/razones | Tabla de proporción peso–precio (1 kg → $3, 2 kg → $6, 3 kg → $9, 5 kg → ?) con «×3» | proporcion razon tabla precio multiplicar
+0ba905 | tematicos/decimales | Balanza de platillos que compara 2,09 < 2,9 | comparar menor-que balanza decimales
+77eb17 | tematicos/decimales | Resta en el cuaderno 20,00 − 7,35 = 12,65 con «baja la coma» | resta algoritmo coma cuaderno
+252ff2 | tematicos/razones | Pergamino con la proporción 2/5 = 6/15 y los productos cruzados 2 × 15 = 5 × 6 | proporcion producto-cruzado fracciones razon
+38847b | tematicos/decimales | Comprobación «2,5 × 2 = 5» y «5 ÷ 2 = 2,5» con una palomita verde | multiplicacion division inversa comprobar decimales
+d770f5 | tematicos/detectives | Detective niña con lupa frente a la pizarra «1,25 × 4 = 50» marcada con X y «¿Y la coma?» | detective error multiplicar coma
+6a9f0a | tematicos/dinero | Escalera de precios $1,05 · $1,25 · $1,5 con flecha «de menor a mayor» | ordenar precios decimales menor-a-mayor
+052f69 | tematicos/fracciones | Barra de chocolate partida en 10 con «3/10 = 0,3» | fraccion-decimal chocolate 3/10 0,3
+4c3864 | tematicos/decimales | Cuadrícula de 100 cuadros con 48 pintados y el decimal 0,48 | cuadricula centesimas 0,48 representacion
+cfb091 | tematicos/decimales | Pizza partida en dos con «5 ÷ 2 = 2,5» y la nota «agrego un cero» | division decimal agregar-cero pizza reparto
+40312c | interfaz/barras-y-marcos | Mapa de misión: galaxia con planetas «Bloque 1» a «Bloque 6» y un cohete | mapa progreso bloques galaxia
+1067c1 | tematicos/decimales | Multiplicación en el cuaderno 2,4 × 3 → 24 × 3 = 72 → 7,2 con «1 cifra decimal» | multiplicacion cifras-decimales cuaderno procedimiento
+91ca46 | tematicos/medidas | Cinta métrica de 0 a 1 m con «75/100 m = 0,75 m» y una flecha en 0,75 | fraccion-decimal longitud metro 0,75
+85c678 | tematicos/dinero | Vendedor de frutas con el letrero «$2,40 el kilo» y una balanza que marca 3 kg | frutas precio kilo multiplicar decimales mercado
+9b0966 | tematicos/fracciones | Cuadrícula de 100 con 25 cuadros verdes y «25/100 = 0,25» | fraccion-decimal cuadricula 25/100 0,25
+2040ac | tematicos/decimales | Cartel dorado «$7,38 — siete enteros con treinta y ocho centésimas» | lectura escritura decimales cifras palabras 7,38
+18945b | tematicos/decimales | División en el cuaderno 8,8 ÷ 4 = 2,2 con «sube la coma» | division algoritmo coma cuaderno
+e3fbb6 | tematicos/decimales | Niño saltando sobre la recta numérica de 0 a 1 con la marca en 0,6 | recta-numerica ubicar decimales 0,6
+953c6b | tematicos/dinero | Alcancía de cerdito con monedas y «$14,40 ÷ 6» | division reparto alcancia dinero decimales
+d32da4 | tematicos/razones | Jugos y galletas con la razón «2 : 3» | razon proporcion jugos galletas
+db2848 | tematicos/dinero | Tienda con cuaderno $2,35, lápiz $0,95 y regla $1,80 | tienda precios suma resta decimales
+a0cca8 | tematicos/dinero | Edificio de tres pisos con los precios $4,05 · $4,5 · $4,50 (comparar y ordenar) | precios comparar equivalencia decimales
+3ec516 | premios | ARIA con cohete y pergamino «¡Subí a sexto!» | aria subir-de-grado quinto sexto celebracion
+eb629d | tematicos/dinero | Niño tendero con «Vuelto: $?», compra $5,65 y pagó $10 | vuelto resta dinero problema decimales
+79b189 | tematicos/trabajo-escrito | Cuaderno «Mi trabajo a mano» con lápiz y regla | cuaderno trabajo-escrito mano entregar
+79eeb2 | tematicos/decimales | Suma en el cuaderno 12,40 + 3,75 = 16,15 | suma algoritmo coma cuaderno
+26254d | tematicos/decimales | Estimación «3,75 × 4 ≈ 4 × 4 = 16» con una palomita verde | estimar redondear multiplicacion decimales
+8250cd | tematicos/dinero | Billete y monedas con «Compra: $5,65» y «Vuelto: $4,35» | vuelto resta billete monedas decimales
+c19091 | tematicos/detectives | Detective con forma de papa y lupa frente a la pizarra «7,2 ÷ 3 = 24» con X y «¡La coma se escapó!» | detective error division coma
+1fc35c | tematicos/trabajo-escrito | Niño escribiendo en su cuaderno con el globo «Con mis propias palabras…» | explicar escribir cuaderno propias-palabras
+a7a263 | tematicos/dinero | Bus escolar con cuatro niños y «$18,40 entre 4» | division reparto dinero decimales bus
+313790 | tematicos/dinero | Puesto «Plaza» con lista arroz 2,5 kg, papa 1,75 kg, yuca 0,9 kg, lentejas 0,5 kg y «Total: ?» | compras suma plaza mercado decimales
+453b11 | tematicos/decimales | Tablero de valor posicional con el número 35,206 (decenas a milésimas) | valor-posicional lectura decimales 35,206
+9bc35f | tematicos/fracciones | Portal mágico con la fracción 7/10 y el decimal 0,7 unidos por una flecha | fraccion-decimal equivalencia 7/10 0,7
+a71aa2 | tematicos/dinero | Casa de cambio «1 US$ = 4 mil pesos» y la pregunta «5 US$ = ?» | cambio-moneda proporcion dolares pesos
+34cd2b | tematicos/medidas | Marcador de salto de longitud: 5,36 m y 5,3 m junto al foso de arena | longitud metros comparar decimales salto
+5ac8cd | tematicos/dinero | Caja registradora con «Total: $8,60», un billete de $10 y «¿Cuánto devuelvo?» | vuelto resta caja dinero decimales
+3ec0ef | tematicos/decimales | Niño saltando sobre la recta numérica con «4 × 1,5» (saltos iguales) | multiplicacion recta-numerica saltos decimales
+437a0a | tematicos/dinero | Tres niños que reparten «$7,50 ÷ 3» y reciben $2,50 cada uno | division reparto dinero decimales
+5b72e2 | tematicos/internet | Niña con lupa y ARIA frente a una laptop que muestra la búsqueda «tasa de cambio hoy» | buscar internet tasa-cambio investigar aria
+c72d86 | tematicos/trabajo-escrito | Niño escribiendo en su cuaderno con el globo «Con mis propias palabras…» | explicar escribir cuaderno propias-palabras
+289abf | premios | ARIA con birrete y diploma, pergamino «¡Subí de grado!» y cohete | aria diploma graduacion subir-de-grado celebracion
+36692f | tematicos/trabajo-escrito | Cuaderno espiral «Mi trabajo a mano» con lápiz y regla | cuaderno trabajo-escrito mano entregar
+2bc5ef | tematicos/documentos-word | Comparación de un documento «Sin formato» (X roja) y «Con formato» (palomita verde) con un niño | formato texto documento antes-despues word
+dbecd0 | tematicos/verificar-informacion | ARIA con duda ante un mensaje «Compártelo a 10 amigos o tendrás mala suerte» y la pregunta «¿Será cierto?» | cadena whatsapp bulo verificar compartir aria
+ad6a23 | tematicos/verificar-informacion | ARIA con lista de chequeo: URL y dominio, autor, fecha, fuentes | lista-chequeo url dominio autor fecha fuentes aria
+a6da48 | tematicos/documentos-word | Niño frente a una laptop con una tabla en pantalla y el globo «¡Mi tabla!» | tabla documento word crear
+9e1edd | tematicos/documentos-word | Barra de formato con iconos Negrita, Cursiva, Subrayado, Color, Viñetas y Numeración | formato negrita cursiva subrayado color vinetas numeracion
+605564 | tematicos/seguridad-digital | Sobre con clip «Remitente desconocido» y una mano roja de «No abrir» | correo remitente-desconocido no-abrir phishing adjunto
+500baa | tematicos/seguridad-digital | Candado con «NO publicar»: dirección, teléfono y colegio | datos-personales privacidad no-publicar candado
+680ab9 | tematicos/internet | ARIA con lupa sobre un libro con «Fuente: página del colegio» | fuente citar investigar aria libro
+28d13f | tematicos/internet | Tarjetas «Tipos de información»: texto, imagen, video, audio e infografía | tipos-informacion texto imagen video audio infografia
+6842a6 | tematicos/documentos-word | Receta «Jugo de naranja» con 4 pasos numerados (lavar, exprimir, colar y servir) y un vaso con jugo | lista-numerada pasos receta documento word
+c974ec | tematicos/documentos-word | Tres tamaños de letra «Aa»: 12 lectura, 18 subtítulo y 24 título | tamano-letra fuente titulo subtitulo formato word
+030c13 | tematicos/seguridad-digital | Niño que pulsa «Cerrar sesión» en una computadora | cerrar-sesion cuenta seguridad computador compartido
+14c173 | tematicos/documentos-word | Dos fotos de gato: «estirada» (X) y «proporcional» (palomita) con «Arrastra de la esquina» | imagen proporcional ajustar tamano esquina word
+75c5de | tematicos/seguridad-digital | Candado con una contraseña segura «Luz#Mar5» y requisitos: letras, números, símbolos | contrasena clave segura candado simbolos
+180494 | tematicos/internet | Ventanas «Navegador» (brújula) y «Buscador» (lupa) | navegador buscador diferencia internet
+f443e6 | tematicos/internet | Búsqueda «animales Colombia para niños» con palabras clave señaladas y ARIA | buscador palabras-clave busqueda aria
+018536 | tematicos/documentos-word | Niño señalando una tabla de horario (día, materia, hora) | tabla horario filas columnas documento word
+2c75d2 | tematicos/documentos-word | Gota de agua con el cartel «Cuida el agua» y tres acciones (cierra el grifo, reutiliza, repara fugas) | lista viñetas ejemplo documento agua
+11a99b | tematicos/documentos-word | Gato Luna con un párrafo que usa negrita, cursiva, subrayado y color | formato texto negrita cursiva subrayado color ejemplo
+fc50ee | tematicos/documentos-word | ARIA que pulsa «Insertar tabla 3 × 4» sobre una tabla azul | tabla insertar filas columnas aria word
+522ac7 | tematicos/seguridad-digital | Escudo con candado rodeado de virus, intruso, fraude y ventana rara | amenazas malware virus fraude seguridad escudo
+174874 | tematicos/verificar-informacion | Tarjetas «Confiable» (autor, fecha, fuentes) y «No confiable» (sin autor, sin fuentes) | confiable fuente autor fecha verificar
+f41e7c | tematicos/documentos-word | ARIA con lista de chequeo: letra legible, márgenes, imagen proporcional y título centrado | lista-chequeo formato documento revisar aria
+df47ad | tematicos/seguridad-digital | Pantalla con sobre y anzuelo: «¡Ganaste un premio! Haz clic aquí» (fraude) | fraude phishing premio clic correo anzuelo
+6bc4e5 | tematicos/detectives | Detective niña con lupa sobre un documento: «¡Hay errores de formato!» | detective formato errores revisar documento
+5c7c0c | tematicos/internet | Banderines de dominios: .com tienda, .edu escuela, .gov.co gobierno, .org organización | dominios com edu gov org url
+4bfccd | tematicos/seguridad-digital | ARIA con un escudo dividido en cuatro (candado, puerta, mano, teléfono) y «Mi escudo digital» | escudo-digital seguridad habitos aria
+8a0028 | tematicos/detectives | Diploma con una lupa y la pregunta «¿Qué está mal?» | detective formato errores diploma revisar
+f8bbf2 | tematicos/documentos-word | Imagen de un loro dentro de un texto con flechas y el título «Ajustar texto» | imagen ajustar texto ajuste word
+00022f | tematicos/documentos-word | Hoja con márgenes señalados (superior, inferior, izquierdo y derecho) | margenes pagina documento word formato
+5980c1 | tematicos/documentos-word | Niña señalando una lista «Mis útiles»: cuaderno, lápiz, regla, colores | lista vinetas ejemplo utiles documento
+d065aa | tematicos/documentos-word | Dos hojas «Orientación»: vertical y horizontal | orientacion vertical horizontal pagina documento word
+9708b6 | tematicos/internet | ARIA con un planeta y cohete frente a la búsqueda «planetas del sistema solar para niños» | busqueda palabras-clave buscador aria sistema-solar
+b71883 | tematicos/internet | Barra de dirección: «URL = dirección completa» y «.gov.co = dominio» | url dominio direccion-web gov
+cabeb1 | tematicos/trabajo-escrito | Niña celebrando con los brazos arriba ante una laptop con palomita verde y estrellas | logro celebracion trabajo-terminado laptop
+f5c5b6 | tematicos/documentos-word | Dos textos «Interlineado»: sencillo y 1,5 | interlineado espacio texto formato word
+978a35 | tematicos/internet | Niña con lupa ante una laptop que muestra «animales en peligro de Colombia» con un jaguar | busqueda investigar navegador animales colombia
+d04d82 | tematicos/seguridad-digital | Niño incómodo que dice «¡Esto me incomoda!» y cuenta lo que vio a una persona adulta | pedir-ayuda adulto confianza incomodo riesgos-en-linea
+a03bcc | tematicos/documentos-word | Diagrama de tabla con encabezado, columna, fila y celda señalados | tabla partes encabezado fila columna celda word
+74724a | tematicos/documentos-word | Cuatro alineaciones de texto: izquierda, centrada, derecha y justificada | alineacion texto izquierda centrada derecha justificada
+8d9b67 | tematicos/seguridad-digital | ARIA con lista «Hábitos seguros»: antivirus actualizado, contraseñas distintas, no abrir adjuntos raros, avisar a un adulto | habitos-seguros antivirus contrasena adjuntos aria
+dddfb0 | tematicos/verificar-informacion | Pulgar con cartel «10.000 me gusta = verdad» tachado con una X | me-gusta popular-no-es-verdad verificar opinion
+4026d3 | tematicos/trabajo-escrito | Cuaderno con «Mis palabras» (palomita) y «copiar y pegar» (X) | parafrasear propias-palabras plagio copiar
+0d4c71 | tematicos/seguridad-digital | Archivo «foto.jpg.exe» con alerta roja y el letrero «Archivo sospechoso» | archivo-sospechoso exe extension virus adjunto
+0f4d56 | tematicos/historia-internet | Mapa del mundo con computadoras y flechas rojas que se expanden: «Año 2000» | historia internet expansion 2000 mundo
+825ce6 | tematicos/verificar-informacion | ARIA detective con lupa y «Comparo en otras fuentes» | comparar fuentes verificar detective aria
+263e33 | tematicos/verificar-informacion | Megáfono con «¡Oferta! Compra ya» y la etiqueta «publicidad» | publicidad oferta tipos-informacion persuadir
+3a9984 | tematicos/verificar-informacion | Escalera de 4 pasos para verificar: 1 Autor, 2 Fecha, 3 Fuentes, 4 Comparar | pasos verificar autor fecha fuentes comparar
+5b19d7 | tematicos/internet | ARIA con un video «Cómo armar una maqueta paso a paso» en una pantalla | video tutorial tipos-informacion aria
+a847ce | tematicos/seguridad-digital | Correo con el asunto «ILOVEYOU» y el archivo LOVE-LETTER-FOR-YOU.TXT.vbs con alerta roja | virus iloveyou correo gusano historia adjunto
+f5ceee | tematicos/historia-internet | Globo terráqueo conectado a muchas computadoras: «Internet: la red de redes» | internet red-de-redes definicion mundo computadoras
+fcf7e2 | tematicos/verificar-informacion | Señora con celular que dice «¡Reenvía a 10 personas!» y ARIA con duda | cadena reenviar bulo whatsapp aria verificar
+c1d32d | tematicos/historia-internet | Sobre con arroba: «1971 · primer correo» | historia correo-electronico 1971 arroba tomlinson
+fff4bd | tematicos/verificar-informacion | Pantalla con megáfono y titulares «MAYÚSCULAS, dinero fácil, ¡compártelo ya!» con alerta | desinformacion senales-engano mayusculas urgencia
+f2abf9 | tematicos/internet | Barra de búsqueda «volcanes activos de Colombia» con las palabras clave en burbujas | busqueda palabras-clave buscador volcanes colombia
+07d7a7 | tematicos/verificar-informacion | Página de «Noticias» con imagen y datos: autor Ana Ruiz, fecha 12 de marzo de 2026, fuente medio local | noticia autor fecha fuente confiable ejemplo
+383a7e | tematicos/seguridad-digital | Gusano de colores con cara enojada entre computadoras: «Se copia solo» | gusano malware se-copia-solo virus
+d59823 | tematicos/internet | Niña con lupa ante una laptop con la búsqueda «noticias de Colombia hoy» | busqueda noticias buscar investigar
+49f112 | tematicos/seguridad-digital | Laptop con reloj de arena, «Lento» y «Ventanas raras» como señales de virus | virus senales lento ventanas computador
+e48b04 | tematicos/seguridad-digital | Escudo con cruz y una lupa que revisa un virus verde: «Antivirus» | antivirus proteccion virus escudo lupa
+35168e | tematicos/internet | Ruta de investigación con paradas «Palabras clave», «Pestañas», «Notas» y «Fuente» | ruta investigacion palabras-clave pestanas notas fuente
+4dea79 | tematicos/verificar-informacion | Lupa sobre una página web con tres casillas verificadas: autor, fecha y fuente | verificar autor fecha fuente lupa pagina
+d27643 | tematicos/historia-internet | Mapa de Colombia con una torre de antena: «4 de junio de 1994 · primera conexión a Internet» | historia internet colombia 1994 conexion
+a613e7 | tematicos/verificar-informacion | Dos globos: «Bogotá es la capital de Colombia» (Hecho) y «La pizza es la mejor comida» (Opinión) | hecho opinion diferencia verificar ejemplo
+59ec1d | tematicos/historia-internet | Niño con micrófono entrevista a una abuela: «¿Cómo era sin Internet?» | historia entrevista abuela antes-del-internet
+2a5473 | tematicos/verificar-informacion | Tres páginas (imagen, video, mundo) comparadas con una lupa sobre un libro: «Comparo» | comparar paginas fuentes lupa
+27cf89 | tematicos/verificar-informacion | Video con tijeras y alerta: «Los videos también pueden engañar» | video editado enganar verificar desinformacion
+237e05 | tematicos/historia-internet | Una foto que se divide en «paquetes» que viajan en camión hasta una casa: «dirección IP» | paquetes direccion-ip como-viaja-informacion redes
+fd4582 | tematicos/historia-internet | «Los pioneros» en cuatro medallas: Hopper (compilador), Feinler (dominios), Cerf y Kahn (TCP/IP), Tomlinson (correo) | pioneros hopper feinler cerf kahn tomlinson historia
+2a1cbe | tematicos/historia-internet | Dos computadoras antiguas conectadas: «ARPANET · 1969» | arpanet 1969 historia red computadoras
+ef4752 | tematicos/seguridad-digital | Caballo de madera con lazo y un virus escondido: «Troyano» | troyano malware virus caballo
+21b769 | tematicos/historia-internet | Científico señalando una computadora y páginas web: «la Web · 1989» | web 1989 berners-lee historia paginas
+c93150 | tematicos/verificar-informacion | Seis tarjetas de tipos de información: noticia, video tutorial, enciclopedia, red social, publicidad y rumor | tipos-informacion noticia video enciclopedia publicidad rumor
+0de415 | tematicos/internet | Ventana de navegador con tres pestañas: Página 1, Página 2 y Página 3 | navegador pestanas paginas ventana
+dc0850 | tematicos/seguridad-digital | Familia del malware: virus, gusano, troyano y malware | malware virus gusano troyano familia
+cd1f5c | tematicos/historia-internet | Dos laptops que se saludan «Hola» y «Hello» con el rótulo «TCP/IP · idioma común» | tcp-ip protocolo idioma-comun redes
+278571 | tematicos/trabajo-escrito | Niña anotando en su cuaderno «Fuente: nombre de la página y fecha» | fuente citar cuaderno notas investigar
+e62b2c | tematicos/verificar-informacion | Semáforo del pulgar: rojo «No lo comparto», amarillo «Lo verifico», verde «Ya lo verifiqué» | semaforo compartir verificar decision
+8e3eb7 | tematicos/seguridad-digital | Laptop con un virus verde enojado y una alerta roja: «Virus» | virus alerta computador malware
+f67411 | tematicos/historia-internet | Calle: «Internet = la carretera» y «Web = tiendas y casas» | internet-vs-web analogia carretera tiendas

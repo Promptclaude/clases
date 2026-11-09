@@ -8,7 +8,7 @@ Una clase debe ser **muy visual**. Las slides `info` y cada pregunta de `quiz`/`
 ```
 - `imagen` = `asset://<id>` de `banco-imagenes/banco.json` (módulo 33). Un id inexistente o `descartada` **detiene la construcción**.
 - `alt` es **obligatorio** (mínimo 2 palabras): describe la imagen para lectores de pantalla (el auditor da error si falta).
-- Una imagen por slide o pregunta, la más clara y relacionada con el concepto. Para buscar: `python3 banco-imagenes/_herramientas/buscar_banco.py <tema> --sin-texto`.
+- Una imagen por slide o pregunta, la más clara y relacionada con el concepto. Para buscar: `python3 banco-imagenes/_herramientas/buscar_banco.py <palabras> --alt` (por contenido; muestra el `alt` listo para copiar) o el `CATALOGO.md` con miniaturas.
 - En `info`, el orden es: **concepto → imagen → «Ejemplo resuelto / Ahora tú»**.
 
 ### 2. Juego `fraccion` (pintar partes de una pizza o una barra)

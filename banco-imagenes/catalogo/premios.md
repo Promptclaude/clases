@@ -1,0 +1,19 @@
+# premios
+
+13 imágenes · [← volver al índice](../CATALOGO.md)
+
+| Imagen | Id y qué contiene | Materia · grado | Calidad |
+|:--:|---|---|:--:|
+| <img src="../premios/aria-con-birrete-y-diploma-pergamino-subi-289a.webp" width="110" alt="ARIA con birrete y diploma, pergamino ¡Subí de grado! y cohete"> | **`aria-con-birrete-y-diploma-pergamino-subi-289a`**<br>ARIA con birrete y diploma, pergamino «¡Subí de grado!» y cohete<br><sub>`4°` `5°` `aria` `celebracion` `diploma` `graduacion` `subir-de-grado`</sub> | tecnologia · grado 4, 5 | 5★ |
+| <img src="../premios/aria-con-birrete-y-diploma-pergamino-subi-7fd8.webp" width="110" alt="ARIA con birrete y diploma, pergamino ¡Subí de grado! y cohete"> | **`aria-con-birrete-y-diploma-pergamino-subi-7fd8`**<br>ARIA con birrete y diploma, pergamino «¡Subí de grado!» y cohete<br><sub>`4°` `aria` `aritmetica` `celebracion` `diploma` `graduacion` `subir-de-grado`</sub> | aritmetica · grado 4 | 5★ |
+| <img src="../premios/aria-con-cohete-y-pergamino-subi-a-sexto-3ec5.webp" width="110" alt="ARIA con cohete y pergamino ¡Subí a sexto!"> | **`aria-con-cohete-y-pergamino-subi-a-sexto-3ec5`**<br>ARIA con cohete y pergamino «¡Subí a sexto!»<br><sub>`5°` `aria` `aritmetica` `celebracion` `quinto` `sexto` `subir-de-grado`</sub> | aritmetica · grado 5 | 5★ |
+| <img src="../premios/corona.png" width="110" alt="Corona dorada con rubíes"> | **`corona`**<br>Corona dorada con rubíes<br><sub>`corona` `campeón` `nivel máximo` `premio` `logro`</sub> | — | 5★ |
+| <img src="../premios/medalla-bronce.png" width="110" alt="Medalla de bronce con laurel"> | **`medalla-bronce`**<br>Medalla de bronce con laurel<br><sub>`medalla` `logro` `bronce` `nivel` `premio`</sub> | — | 5★ |
+| <img src="../premios/medalla-oro.png" width="110" alt="Medalla de oro con alas"> | **`medalla-oro`**<br>Medalla de oro con alas<br><sub>`medalla` `logro` `oro` `nivel` `premio`</sub> | — | 5★ |
+| <img src="../premios/medalla-plata.png" width="110" alt="Medalla de plata con alas"> | **`medalla-plata`**<br>Medalla de plata con alas<br><sub>`medalla` `logro` `plata` `nivel` `premio`</sub> | — | 5★ |
+| <img src="../premios/trofeo.png" width="110" alt="Trofeo dorado con estrella"> | **`trofeo`**<br>Trofeo dorado con estrella<br><sub>`trofeo` `campeón` `logro final` `premio` `logro`</sub> | — | 5★ |
+| <img src="../premios/boleto-dorado-grande-con-el-precio-3-7-6931.webp" width="110" alt="Boleto dorado grande con el precio $3,7"> | **`boleto-dorado-grande-con-el-precio-3-7-6931`**<br>Boleto dorado grande con el precio «$3,7»<br><sub>`4°` `aritmetica` `boleto` `decimales` `dorado` `precio`</sub> | aritmetica · grado 4 | 4★ |
+| <img src="../premios/956e498b9a.png" width="110" alt=""> | **`img-956e498b9a`**<br><br><sub>`4°` `logro` `personaje` `sprite` `tecnologia` `trofeo`</sub> | — | 4★ ✂ |
+| <img src="../premios/podio-1-2-3-con-tres-ninos-corredores-en-u-cfbc.webp" width="110" alt="Podio 1.º 2.º 3.º con tres niños corredores en una pista de atletismo"> | **`podio-1-2-3-con-tres-ninos-corredores-en-u-cfbc`**<br>Podio 1.º 2.º 3.º con tres niños corredores en una pista de atletismo<br><sub>`4°` `aritmetica` `atletismo` `carrera` `ordenar` `podio` `puestos`</sub> | aritmetica · grado 4 | 4★ |
+| <img src="../premios/trofeo-dorado-con-estrella-y-ramas-de-laur-555c.webp" width="110" alt="Trofeo dorado con estrella y ramas de laurel"> | **`trofeo-dorado-con-estrella-y-ramas-de-laur-555c`**<br>Trofeo dorado con estrella y ramas de laurel<br><sub>`4°` `5°` `aritmetica` `ganador` `logro` `tecnologia` `trofeo`</sub> | aritmetica, tecnologia · grado 4, 5 | 4★ |
+| <img src="../premios/498e03792a.png" width="110" alt=""> | **`img-498e03792a`**<br><br><sub>`4°` `aritmetica` `icono` `juego` `logro` `trofeo`</sub> | — | 3★ |

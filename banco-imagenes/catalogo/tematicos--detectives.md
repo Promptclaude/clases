@@ -1,0 +1,14 @@
+# tematicos/detectives
+
+8 imágenes · [← volver al índice](../CATALOGO.md)
+
+| Imagen | Id y qué contiene | Materia · grado | Calidad |
+|:--:|---|---|:--:|
+| <img src="../tematicos/detectives/detective-con-forma-de-papa-y-lupa-frente-c190.webp" width="110" alt="Detective con forma de papa y lupa frente a la pizarra 7,2 ÷ 3 = 24 con X y ¡La coma se escapó!"> | **`detective-con-forma-de-papa-y-lupa-frente-c190`**<br>Detective con forma de papa y lupa frente a la pizarra «7,2 ÷ 3 = 24» con X y «¡La coma se escapó!»<br><sub>`5°` `aritmetica` `coma` `detective` `detectives` `division` `error`</sub> | aritmetica · grado 5 | 5★ |
+| <img src="../tematicos/detectives/detective-nina-con-lupa-frente-a-la-pizarr-2f69.webp" width="110" alt="Detective niña con lupa frente a la pizarra 0,5×10=0,50 marcada con una X y la pregunta ¿Y la coma?"> | **`detective-nina-con-lupa-frente-a-la-pizarr-2f69`**<br>Detective niña con lupa frente a la pizarra «0,5×10=0,50» marcada con una X y la pregunta «¿Y la coma?»<br><sub>`4°` `aritmetica` `coma` `detective` `detectives` `error` `x10`</sub> | aritmetica · grado 4 | 5★ |
+| <img src="../tematicos/detectives/detective-nina-con-lupa-frente-a-la-pizarr-d770.webp" width="110" alt="Detective niña con lupa frente a la pizarra 1,25 × 4 = 50 marcada con X y ¿Y la coma?"> | **`detective-nina-con-lupa-frente-a-la-pizarr-d770`**<br>Detective niña con lupa frente a la pizarra «1,25 × 4 = 50» marcada con X y «¿Y la coma?»<br><sub>`5°` `aritmetica` `coma` `detective` `detectives` `error` `multiplicar`</sub> | aritmetica · grado 5 | 5★ |
+| <img src="../tematicos/detectives/detective-nina-con-lupa-sobre-un-documento-6bc4.webp" width="110" alt="Detective niña con lupa sobre un documento: ¡Hay errores de formato!"> | **`detective-nina-con-lupa-sobre-un-documento-6bc4`**<br>Detective niña con lupa sobre un documento: «¡Hay errores de formato!»<br><sub>`4°` `detective` `detectives` `documento` `errores` `formato` `revisar`</sub> | tecnologia · grado 4 | 5★ |
+| <img src="../tematicos/detectives/diploma-con-una-lupa-y-la-pregunta-que-est-8a00.webp" width="110" alt="Diploma con una lupa y la pregunta ¿Qué está mal?"> | **`diploma-con-una-lupa-y-la-pregunta-que-est-8a00`**<br>Diploma con una lupa y la pregunta «¿Qué está mal?»<br><sub>`4°` `detective` `detectives` `diploma` `errores` `formato` `revisar`</sub> | tecnologia · grado 4 | 5★ |
+| <img src="../tematicos/detectives/2e89e48086.png" width="110" alt=""> | **`img-2e89e48086`**<br><br><sub>`4°` `aritmetica` `detective` `icono` `juego` `lupa` `pista`</sub> | — | 4★ ✂ |
+| <img src="../tematicos/detectives/9808acde86.png" width="110" alt=""> | **`img-9808acde86`**<br><br><sub>`4°` `aritmetica` `detective` `icono` `juego` `lupa` `pista`</sub> | — | 4★ |
+| <img src="../tematicos/detectives/ff7acb8878.png" width="110" alt=""> | **`img-ff7acb8878`**<br><br><sub>`4°` `aritmetica` `detective` `lupa` `pista` `tema`</sub> | — | 4★ |

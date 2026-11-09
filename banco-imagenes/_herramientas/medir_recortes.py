@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """medir_recortes.py — marca en banco.json qué imágenes (con fondo transparente) tocan el borde del lienzo.
 Una ilustración o personaje que toca el borde casi siempre es un RECORTE de una lámina: en pantalla se ve cortada.
-Campo que agrega: `recorte` = lista de lados (izquierda/derecha/arriba/abajo). Las categorías de interfaz
+Campo que agrega: `recorte` = lista de lados (izquierda/derecha/arriba/abajo). Las imágenes con `recorte_verificado: true` (revisadas a ojo) se omiten. Las categorías de interfaz
 (botones, barras, banners, marcos, insignias) y los avatares circulares ocupan el lienzo por diseño y no se marcan.
 Uso: python3 medir_recortes.py   (desde cualquier carpeta; reescribe banco.json)"""
 import json, os, warnings; warnings.filterwarnings('ignore')
@@ -12,6 +12,7 @@ POR_DISENO = {'interfaz', '_descartadas'}; UMBRAL = 0.12
 n = 0
 for x in B['imagenes']:
     x.pop('recorte', None)
+    if x.get('recorte_verificado'): continue          # revisada a ojo: está completa (figura recortada a su contenido)
     if x['archivo'].endswith('.svg') or not x.get('transparente') or x['categoria'] in POR_DISENO or x.get('subcategoria') == 'avatares' or x.get('subcategoria') == 'logos-redes-sociales': continue
     try: a = np.array(Image.open(os.path.join(R, x['archivo'])).convert('RGBA'))[:, :, 3] > 40
     except Exception: continue

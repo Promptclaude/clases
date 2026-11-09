@@ -13,6 +13,8 @@ Consulta: `python3 _herramientas/buscar_banco.py gema --cat juego --sin-texto` �
 | `premios/` | Trofeos, medallas, coronas, "misión completada" |
 | `juego/` | Estrellas, monedas, gemas, vidas, cofres… (PNG + SVG) |
 | `escenarios/` | `espacio/` · `colegio/` · `ciudad-digital/` |
+| `tematicos/` (nuevos temas) | `decimales` (30+), `dinero`, `medidas`, `razones`, `fracciones`, `detectives`, `trabajo-escrito` · Tecnología: `internet`, `seguridad-digital`, `documentos-word`, `verificar-informacion`, `historia-internet` |
+| `institucional/` | Escudo del colegio |
 | `matematicas/` | **Kit SVG original** (64): fracciones (círculos y barras, vacías y pintadas), bloques base 10, figuras geométricas, monedas y billetes genéricos |
 | `infografias/` | Tabla con columna/celda/fila (y futuras) |
 | `tematicos/` | `decimales/` · `dinero/` (tienda, precios) · `detectives/` · `fabrica/` · `internet/` · `seguridad-digital/` · `logos-redes-sociales/` |
@@ -21,6 +23,9 @@ Consulta: `python3 _herramientas/buscar_banco.py gema --cat juego --sin-texto` �
 
 ## Estados (`estado`)
 `aprobada` (184) lista para usar · `por_limpiar` (0) · `uso_con_cuidado` (9) marcas registradas, solo para identificar una red en clase de internet · `especifica` (250) solo en su clase · `descartada` (62) el empaquetador la bloquea.
+
+## Catálogo visual
+**[CATALOGO.md](CATALOGO.md)** — una página por tema con miniaturas, id, qué contiene cada imagen, `alt` y grado (se ve en GitHub). Se regenera con `python3 _herramientas/generar_catalogo.py`.
 
 ## Campos de `banco.json`
 id · archivo · svg · categoria · subcategoria · uso · tags · ancho/alto · transparente · tiene_texto/texto (OCR) · calidad 1–5 · nota/motivo · area/grado/semana de origen · usada_en · veces_usada · estado.
@@ -36,3 +41,7 @@ Ver `GUIA_NUEVAS_IMAGENES.md`: cómo pedirme imágenes, qué puedo y qué no pue
 2. Nunca personajes ni logos de terceros como recurso de clase (salvo `uso_con_cuidado`).
 3. Toda imagen nueva entra por `banco.json`; sin entrada no existe.
 4. Para ampliar: `_herramientas/extraer_todo.py` → `construir_banco.py` (clasifica y deduplica) y revisar las vistas previas.
+
+## Metadatos de las imágenes importadas de «Proceso de subir de grado»
+`descripcion` (qué contiene, 1 frase) · `alt` (texto alternativo listo para usar) · `tags` · `materia` y `grados` (aritmetica/tecnologia, 4.° y 5.°) · `texto` (lo que dice la imagen, por OCR) · `texto_es_contenido` (el texto ES el concepto: reutilizable en clases del tema) · `usada_en_origen` (slides donde se usaba) · `recorte_verificado` (revisada a ojo: está completa).
+La importación es reproducible: `_herramientas/importaciones/proceso_subir_de_grado/`.

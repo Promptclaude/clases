@@ -1,7 +1,7 @@
 {
  "version": 1,
  "generado": "2026-11-03",
- "total": 569,
+ "total": 734,
  "campos": {
   "estado": "aprobada | por_revisar | especifica | descartada",
   "calidad": "1-5 (resolución+nitidez)",
@@ -10210,14 +10210,19 @@
    "subcategoria": "aritmetica5"
   },
   {
-   "id": "img-8bedb79044",
+   "id": "escudo-colegio-simon-bolivar",
    "origen": "extraída de index.html",
    "usada_en": [
     "index.html"
    ],
    "veces_usada": 1,
    "tags": [
-    "portal"
+    "escudo",
+    "colegio",
+    "institucional",
+    "simon-bolivar",
+    "cucuta",
+    "logo"
    ],
    "area": "portal",
    "grado": null,
@@ -10227,13 +10232,16 @@
    "transparente": true,
    "tiene_texto": false,
    "texto": "",
-   "calidad": 3,
-   "estado": "descartada",
-   "uso": "",
-   "motivo": "53x64px",
-   "archivo": "_descartadas/baja-resolucion/8bedb79044.png",
-   "categoria": "_descartadas",
-   "subcategoria": "baja-resolucion"
+   "calidad": 2,
+   "estado": "aprobada",
+   "uso": "Escudo institucional (logo del colegio)",
+   "archivo": "institucional/escudo-colegio-simon-bolivar.png",
+   "categoria": "institucional",
+   "subcategoria": "",
+   "descripcion": "Escudo del Colegio Integrado Simón Bolívar de Cúcuta con el lema «Educamos para construir proyectos de vida con éxito»",
+   "alt": "Escudo del Colegio Integrado Simón Bolívar de Cúcuta",
+   "nota": "Solo 200 px de ancho: úsalo pequeño (≤ 120 px). Conviene pedir una versión grande al colegio.",
+   "texto_es_contenido": true
   },
   {
    "id": "img-d440c4e90d",
@@ -17433,6 +17441,7158 @@
    "estado": "aprobada",
    "calidad": 5,
    "usada_en": []
+  },
+  {
+   "id": "puesto-tienda-escolar-con-cuaderno-lapiz-j-7e71",
+   "archivo": "tematicos/dinero/puesto-tienda-escolar-con-cuaderno-lapiz-j-7e71.webp",
+   "svg": null,
+   "categoria": "tematicos",
+   "subcategoria": "dinero",
+   "descripcion": "Puesto «Tienda Escolar» con cuaderno, lápiz, jugo y borrador, con precios $2,5 $1,0 $1,5 $0,5",
+   "alt": "Puesto Tienda Escolar con cuaderno, lápiz, jugo y borrador, con precios $2,5 $1,0 $1,5 $0,5",
+   "uso": "Puesto «Tienda Escolar»",
+   "tags": [
+    "4°",
+    "aritmetica",
+    "compra",
+    "decimales",
+    "dinero",
+    "escuela",
+    "precios",
+    "tienda"
+   ],
+   "materia": [
+    "aritmetica"
+   ],
+   "grados": [
+    4
+   ],
+   "ancho": 420,
+   "alto": 242,
+   "transparente": true,
+   "tiene_texto": true,
+   "texto_es_contenido": true,
+   "texto": "Tienda Escolar",
+   "origen": "extraída de PROCESO_SUBIR_DE_GRADO (ari4) · clave «tienda» · 2026-11-08",
+   "usada_en_origen": [
+    {
+     "doc": "Aritmetica4",
+     "slide": 25,
+     "titulo": "Bloque 5 · La Tienda Escolar"
+    }
+   ],
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": [],
+   "recorte_verificado": true
+  },
+  {
+   "id": "trofeo-dorado-con-estrella-y-ramas-de-laur-555c",
+   "archivo": "premios/trofeo-dorado-con-estrella-y-ramas-de-laur-555c.webp",
+   "svg": null,
+   "categoria": "premios",
+   "subcategoria": "",
+   "descripcion": "Trofeo dorado con estrella y ramas de laurel",
+   "alt": "Trofeo dorado con estrella y ramas de laurel",
+   "uso": "Trofeo dorado",
+   "tags": [
+    "4°",
+    "5°",
+    "aritmetica",
+    "ganador",
+    "logro",
+    "tecnologia",
+    "trofeo"
+   ],
+   "materia": [
+    "aritmetica",
+    "tecnologia"
+   ],
+   "grados": [
+    4,
+    5
+   ],
+   "ancho": 303,
+   "alto": 209,
+   "transparente": true,
+   "tiene_texto": false,
+   "texto_es_contenido": false,
+   "texto": "",
+   "origen": "extraída de PROCESO_SUBIR_DE_GRADO (ari4, ari5, tec4, tec5) · clave «trofeo» · 2026-11-08",
+   "usada_en_origen": [],
+   "estado": "aprobada",
+   "calidad": 4,
+   "usada_en": [],
+   "recorte_verificado": true
+  },
+  {
+   "id": "balanza-digital-roja-con-frutas-manzanas-n-acc7",
+   "archivo": "tematicos/medidas/balanza-digital-roja-con-frutas-manzanas-n-acc7.webp",
+   "svg": null,
+   "categoria": "tematicos",
+   "subcategoria": "medidas",
+   "descripcion": "Balanza digital roja con frutas (manzanas, naranjas y bananos) que marca 1,25 kg",
+   "alt": "Balanza digital roja con frutas (manzanas, naranjas y bananos) que marca 1,25 kg",
+   "uso": "Balanza digital roja",
+   "tags": [
+    "4°",
+    "aritmetica",
+    "balanza",
+    "decimales",
+    "frutas",
+    "kilogramos",
+    "medidas",
+    "peso"
+   ],
+   "materia": [
+    "aritmetica"
+   ],
+   "grados": [
+    4
+   ],
+   "ancho": 273,
+   "alto": 270,
+   "transparente": true,
+   "tiene_texto": false,
+   "texto_es_contenido": false,
+   "texto": "",
+   "origen": "extraída de PROCESO_SUBIR_DE_GRADO (ari4) · clave «balanza» · 2026-11-08",
+   "usada_en_origen": [],
+   "estado": "aprobada",
+   "calidad": 4,
+   "usada_en": [],
+   "recorte_verificado": true
+  },
+  {
+   "id": "mapa-de-mision-en-el-espacio-con-planetas-4548",
+   "archivo": "interfaz/barras-y-marcos/mapa-de-mision-en-el-espacio-con-planetas-4548.webp",
+   "svg": null,
+   "categoria": "interfaz",
+   "subcategoria": "barras-y-marcos",
+   "descripcion": "Mapa de misión en el espacio con planetas «Bloque 1» a «Bloque 5» unidos por una ruta",
+   "alt": "Mapa de misión en el espacio con planetas Bloque 1 a Bloque 5 unidos por una ruta",
+   "uso": "Mapa de misión en el espacio",
+   "tags": [
+    "4°",
+    "5°",
+    "aritmetica",
+    "barras-y-marcos",
+    "bloques",
+    "espacio",
+    "mapa",
+    "progreso",
+    "tecnologia"
+   ],
+   "materia": [
+    "aritmetica",
+    "tecnologia"
+   ],
+   "grados": [
+    4,
+    5
+   ],
+   "ancho": 560,
+   "alto": 185,
+   "transparente": true,
+   "tiene_texto": true,
+   "texto_es_contenido": true,
+   "texto": "Bloque Bloque \"Bloque",
+   "origen": "extraída de PROCESO_SUBIR_DE_GRADO (ari4, tec4, tec5) · clave «mapa» · 2026-11-08",
+   "usada_en_origen": [
+    {
+     "doc": "Aritmetica4",
+     "slide": 2,
+     "titulo": "Tu mapa de misión"
+    },
+    {
+     "doc": "Tecnologia4",
+     "slide": 2,
+     "titulo": "Tu mapa de misión"
+    },
+    {
+     "doc": "Tecnologia5",
+     "slide": 2,
+     "titulo": "Tu mapa de misión"
+    }
+   ],
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": [],
+   "recorte_verificado": true
+  },
+  {
+   "id": "lupa-grande-con-huellas-y-la-regla-10-10-d-766a",
+   "archivo": "tematicos/decimales/lupa-grande-con-huellas-y-la-regla-10-10-d-766a.webp",
+   "svg": null,
+   "categoria": "tematicos",
+   "subcategoria": "decimales",
+   "descripcion": "Lupa grande con huellas y la regla «×10 ÷10» (detective del patrón decimal)",
+   "alt": "Lupa grande con huellas y la regla ×10 ÷10 (detective del patrón decimal)",
+   "uso": "Lupa grande",
+   "tags": [
+    "4°",
+    "aritmetica",
+    "decimales",
+    "detective",
+    "dividir10",
+    "lupa",
+    "multiplicar",
+    "patron",
+    "x10"
+   ],
+   "materia": [
+    "aritmetica"
+   ],
+   "grados": [
+    4
+   ],
+   "ancho": 273,
+   "alto": 285,
+   "transparente": true,
+   "tiene_texto": false,
+   "texto_es_contenido": false,
+   "texto": "",
+   "origen": "extraída de PROCESO_SUBIR_DE_GRADO (ari4) · clave «lupa» · 2026-11-08",
+   "usada_en_origen": [
+    {
+     "doc": "Aritmetica4",
+     "slide": 9,
+     "titulo": "Bloque 2 · Taller de Detectives"
+    }
+   ],
+   "estado": "aprobada",
+   "calidad": 4,
+   "usada_en": [],
+   "recorte_verificado": true
+  },
+  {
+   "id": "logo-proceso-de-subir-de-grado-con-cohete-a73f",
+   "archivo": "interfaz/banners/logo-proceso-de-subir-de-grado-con-cohete-a73f.webp",
+   "svg": null,
+   "categoria": "interfaz",
+   "subcategoria": "banners",
+   "descripcion": "Logo «Proceso de Subir de grado» con cohete, planetas y números",
+   "alt": "Logo Proceso de Subir de grado con cohete, planetas y números",
+   "uso": "Logo «Proceso de Subir de grado»",
+   "tags": [
+    "4°",
+    "5°",
+    "aritmetica",
+    "banners",
+    "cohete",
+    "nivelacion",
+    "subir-de-grado",
+    "tecnologia",
+    "titulo"
+   ],
+   "materia": [
+    "aritmetica",
+    "tecnologia"
+   ],
+   "grados": [
+    4,
+    5
+   ],
+   "ancho": 428,
+   "alto": 333,
+   "transparente": true,
+   "tiene_texto": true,
+   "texto_es_contenido": true,
+   "texto": "‘proceso",
+   "origen": "extraída de PROCESO_SUBIR_DE_GRADO (ari4, ari5, tec4, tec5) · clave «logo» · 2026-11-08",
+   "usada_en_origen": [
+    {
+     "doc": "Aritmetica4",
+     "slide": 1,
+     "titulo": "¡Bienvenido(a) al Proceso de Subir de Grado!"
+    },
+    {
+     "doc": "Aritmetica5",
+     "slide": 1,
+     "titulo": "¡Bienvenido(a) al Proceso de Subir de Grado!"
+    },
+    {
+     "doc": "Tecnologia4",
+     "slide": 1,
+     "titulo": "¡Bienvenido(a) al Proceso de Subir de Grado!"
+    },
+    {
+     "doc": "Tecnologia5",
+     "slide": 1,
+     "titulo": "¡Bienvenido(a) al Proceso de Subir de Grado!"
+    }
+   ],
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": [],
+   "recorte_verificado": true
+  },
+  {
+   "id": "podio-1-2-3-con-tres-ninos-corredores-en-u-cfbc",
+   "archivo": "premios/podio-1-2-3-con-tres-ninos-corredores-en-u-cfbc.webp",
+   "svg": null,
+   "categoria": "premios",
+   "subcategoria": "",
+   "descripcion": "Podio 1.º 2.º 3.º con tres niños corredores en una pista de atletismo",
+   "alt": "Podio 1.º 2.º 3.º con tres niños corredores en una pista de atletismo",
+   "uso": "Podio 1.º 2.º 3.º",
+   "tags": [
+    "4°",
+    "aritmetica",
+    "atletismo",
+    "carrera",
+    "ordenar",
+    "podio",
+    "puestos"
+   ],
+   "materia": [
+    "aritmetica"
+   ],
+   "grados": [
+    4
+   ],
+   "ancho": 351,
+   "alto": 278,
+   "transparente": true,
+   "tiene_texto": false,
+   "texto_es_contenido": false,
+   "texto": "",
+   "origen": "extraída de PROCESO_SUBIR_DE_GRADO (ari4) · clave «podio» · 2026-11-08",
+   "usada_en_origen": [
+    {
+     "doc": "Aritmetica4",
+     "slide": 21,
+     "titulo": "Cómo comparar y ordenar"
+    }
+   ],
+   "estado": "aprobada",
+   "calidad": 4,
+   "usada_en": [],
+   "recorte_verificado": true
+  },
+  {
+   "id": "aria-con-pulgar-arriba-y-globo-lo-estas-ha-9cff",
+   "archivo": "personajes/aria/aria-con-pulgar-arriba-y-globo-lo-estas-ha-9cff.webp",
+   "svg": null,
+   "categoria": "personajes",
+   "subcategoria": "aria",
+   "descripcion": "ARIA con pulgar arriba y globo «¡Lo estás haciendo genial!»",
+   "alt": "ARIA con pulgar arriba y globo ¡Lo estás haciendo genial!",
+   "uso": "ARIA",
+   "tags": [
+    "4°",
+    "5°",
+    "animo",
+    "aria",
+    "aritmetica",
+    "bien",
+    "felicitacion",
+    "tecnologia"
+   ],
+   "materia": [
+    "aritmetica",
+    "tecnologia"
+   ],
+   "grados": [
+    4,
+    5
+   ],
+   "ancho": 420,
+   "alto": 340,
+   "transparente": true,
+   "tiene_texto": true,
+   "texto_es_contenido": true,
+   "texto": "jLo stas genia",
+   "origen": "extraída de PROCESO_SUBIR_DE_GRADO (ari4, ari5, tec4, tec5) · clave «ar_genial» · 2026-11-08",
+   "usada_en_origen": [
+    {
+     "doc": "Aritmetica4",
+     "slide": 10,
+     "titulo": "El patrón en acción"
+    },
+    {
+     "doc": "Aritmetica5",
+     "slide": 4,
+     "titulo": "Bloque 1 · Valor posicional y lectura de decimales"
+    },
+    {
+     "doc": "Tecnologia4",
+     "slide": 4,
+     "titulo": "Bloque 1 · Buscar información en Internet"
+    },
+    {
+     "doc": "Tecnologia5",
+     "slide": 4,
+     "titulo": "Bloque 1 · Tipos de información y fuentes"
+    }
+   ],
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": [],
+   "recorte_verificado": true
+  },
+  {
+   "id": "boleto-dorado-grande-con-el-precio-3-7-6931",
+   "archivo": "premios/boleto-dorado-grande-con-el-precio-3-7-6931.webp",
+   "svg": null,
+   "categoria": "premios",
+   "subcategoria": "",
+   "descripcion": "Boleto dorado grande con el precio «$3,7»",
+   "alt": "Boleto dorado grande con el precio $3,7",
+   "uso": "Boleto dorado grande",
+   "tags": [
+    "4°",
+    "aritmetica",
+    "boleto",
+    "decimales",
+    "dorado",
+    "precio"
+   ],
+   "materia": [
+    "aritmetica"
+   ],
+   "grados": [
+    4
+   ],
+   "ancho": 313,
+   "alto": 230,
+   "transparente": true,
+   "tiene_texto": false,
+   "texto_es_contenido": false,
+   "texto": "",
+   "origen": "extraída de PROCESO_SUBIR_DE_GRADO (ari4) · clave «boleto» · 2026-11-08",
+   "usada_en_origen": [
+    {
+     "doc": "Aritmetica4",
+     "slide": 4,
+     "titulo": "Bloque 1 · Los decimales"
+    }
+   ],
+   "estado": "aprobada",
+   "calidad": 4,
+   "usada_en": [],
+   "recorte_verificado": true
+  },
+  {
+   "id": "fabrica-con-chimeneas-y-cinta-transportado-184d",
+   "archivo": "tematicos/fabrica/fabrica-con-chimeneas-y-cinta-transportado-184d.webp",
+   "svg": null,
+   "categoria": "tematicos",
+   "subcategoria": "fabrica",
+   "descripcion": "Fábrica con chimeneas y cinta transportadora que lleva bloques de colores",
+   "alt": "Fábrica con chimeneas y cinta transportadora que lleva bloques de colores",
+   "uso": "Fábrica",
+   "tags": [
+    "4°",
+    "aritmetica",
+    "bloques",
+    "cinta",
+    "construir",
+    "decimales",
+    "fabrica"
+   ],
+   "materia": [
+    "aritmetica"
+   ],
+   "grados": [
+    4
+   ],
+   "ancho": 390,
+   "alto": 325,
+   "transparente": true,
+   "tiene_texto": false,
+   "texto_es_contenido": false,
+   "texto": "",
+   "origen": "extraída de PROCESO_SUBIR_DE_GRADO (ari4) · clave «fabrica» · 2026-11-08",
+   "usada_en_origen": [
+    {
+     "doc": "Aritmetica4",
+     "slide": 14,
+     "titulo": "Bloque 3 · La Fábrica de Bloques"
+    }
+   ],
+   "estado": "aprobada",
+   "calidad": 4,
+   "usada_en": [],
+   "recorte_verificado": true
+  },
+  {
+   "id": "estrella-dorada-brillante-con-destellos-21de",
+   "archivo": "juego/estrella-dorada-brillante-con-destellos-21de.webp",
+   "svg": null,
+   "categoria": "juego",
+   "subcategoria": "",
+   "descripcion": "Estrella dorada brillante con destellos",
+   "alt": "Estrella dorada brillante con destellos",
+   "uso": "Estrella dorada brillante",
+   "tags": [
+    "4°",
+    "5°",
+    "aritmetica",
+    "estrella",
+    "logro",
+    "puntos",
+    "tecnologia"
+   ],
+   "materia": [
+    "aritmetica",
+    "tecnologia"
+   ],
+   "grados": [
+    4,
+    5
+   ],
+   "ancho": 231,
+   "alto": 172,
+   "transparente": true,
+   "tiene_texto": false,
+   "texto_es_contenido": false,
+   "texto": "",
+   "origen": "extraída de PROCESO_SUBIR_DE_GRADO (ari4, ari5, tec4, tec5) · clave «estrella» · 2026-11-08",
+   "usada_en_origen": [
+    {
+     "doc": "Aritmetica4",
+     "slide": 3,
+     "titulo": "¿Cómo funciona y cómo se califica?"
+    },
+    {
+     "doc": "Aritmetica5",
+     "slide": 3,
+     "titulo": "¿Cómo funciona y cómo se califica?"
+    },
+    {
+     "doc": "Tecnologia4",
+     "slide": 3,
+     "titulo": "¿Cómo funciona y cómo se califica?"
+    },
+    {
+     "doc": "Tecnologia5",
+     "slide": 3,
+     "titulo": "¿Cómo funciona y cómo se califica?"
+    }
+   ],
+   "estado": "aprobada",
+   "calidad": 4,
+   "usada_en": [],
+   "recorte_verificado": true
+  },
+  {
+   "id": "tabla-de-valor-posicional-unidades-1-decim-b41e",
+   "archivo": "tematicos/decimales/tabla-de-valor-posicional-unidades-1-decim-b41e.webp",
+   "svg": null,
+   "categoria": "tematicos",
+   "subcategoria": "decimales",
+   "descripcion": "Tabla de valor posicional: Unidades 1 · Décimas 0,1 · Centésimas 0,01 · Milésimas 0,001",
+   "alt": "Tabla de valor posicional: Unidades 1 · Décimas 0,1 · Centésimas 0,01 · Milésimas 0,001",
+   "uso": "Tabla de valor posicional",
+   "tags": [
+    "4°",
+    "aritmetica",
+    "centesimas",
+    "decimales",
+    "decimas",
+    "milesimas",
+    "tabla",
+    "unidades",
+    "valor-posicional"
+   ],
+   "materia": [
+    "aritmetica"
+   ],
+   "grados": [
+    4
+   ],
+   "ancho": 420,
+   "alto": 189,
+   "transparente": false,
+   "tiene_texto": true,
+   "texto_es_contenido": true,
+   "texto": "Unidades Decimas Centésimas",
+   "origen": "extraída de PROCESO_SUBIR_DE_GRADO (ari4) · clave «tablero» · 2026-11-08",
+   "usada_en_origen": [
+    {
+     "doc": "Aritmetica4",
+     "slide": 5,
+     "titulo": "Valor posicional y cómo leer"
+    }
+   ],
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": [],
+   "recorte_verificado": true
+  },
+  {
+   "id": "jarra-medidora-de-1-litro-con-jugo-de-nara-cc7b",
+   "archivo": "tematicos/medidas/jarra-medidora-de-1-litro-con-jugo-de-nara-cc7b.webp",
+   "svg": null,
+   "categoria": "tematicos",
+   "subcategoria": "medidas",
+   "descripcion": "Jarra medidora de 1 litro con jugo de naranja que llega a 0,7 L",
+   "alt": "Jarra medidora de 1 litro con jugo de naranja que llega a 0,7 L",
+   "uso": "Jarra medidora de 1 litro",
+   "tags": [
+    "4°",
+    "aritmetica",
+    "capacidad",
+    "decimales",
+    "jarra",
+    "litros",
+    "medidas",
+    "volumen"
+   ],
+   "materia": [
+    "aritmetica"
+   ],
+   "grados": [
+    4
+   ],
+   "ancho": 407,
+   "alto": 325,
+   "transparente": true,
+   "tiene_texto": false,
+   "texto_es_contenido": false,
+   "texto": "",
+   "origen": "extraída de PROCESO_SUBIR_DE_GRADO (ari4) · clave «p1» · 2026-11-08",
+   "usada_en_origen": [
+    {
+     "doc": "Aritmetica4",
+     "slide": 4,
+     "titulo": "Bloque 1 · Los decimales"
+    }
+   ],
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": [],
+   "recorte_verificado": true
+  },
+  {
+   "id": "10-barras-amarillas-de-decena-igual-a-1-pl-c867",
+   "archivo": "tematicos/decimales/10-barras-amarillas-de-decena-igual-a-1-pl-c867.webp",
+   "svg": null,
+   "categoria": "tematicos",
+   "subcategoria": "decimales",
+   "descripcion": "10 barras amarillas de decena igual a 1 placa verde de centena (bloques de base 10)",
+   "alt": "10 barras amarillas de decena igual a 1 placa verde de centena (bloques de base 10)",
+   "uso": "10 barras amarillas de decena igual a 1 placa verde de centena (bloques de base ",
+   "tags": [
+    "4°",
+    "aritmetica",
+    "base10",
+    "bloques",
+    "centena",
+    "decena",
+    "decimales",
+    "equivalencia"
+   ],
+   "materia": [
+    "aritmetica"
+   ],
+   "grados": [
+    4
+   ],
+   "ancho": 466,
+   "alto": 248,
+   "transparente": true,
+   "tiene_texto": true,
+   "texto_es_contenido": true,
+   "texto": "barras",
+   "origen": "extraída de PROCESO_SUBIR_DE_GRADO (ari4) · clave «p10» · 2026-11-08",
+   "usada_en_origen": [
+    {
+     "doc": "Aritmetica4",
+     "slide": 16,
+     "titulo": "Actividad 7 · Arma el pedido"
+    }
+   ],
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": [],
+   "recorte_verificado": true
+  },
+  {
+   "id": "cuadricula-de-100-cuadros-con-25-pintados-94da",
+   "archivo": "tematicos/decimales/cuadricula-de-100-cuadros-con-25-pintados-94da.webp",
+   "svg": null,
+   "categoria": "tematicos",
+   "subcategoria": "decimales",
+   "descripcion": "Cuadrícula de 100 cuadros con 25 pintados y el decimal 0,25",
+   "alt": "Cuadrícula de 100 cuadros con 25 pintados y el decimal 0,25",
+   "uso": "Cuadrícula de 100 cuadros",
+   "tags": [
+    "0,25",
+    "4°",
+    "aritmetica",
+    "centesimas",
+    "cuadricula",
+    "decimales",
+    "representacion"
+   ],
+   "materia": [
+    "aritmetica"
+   ],
+   "grados": [
+    4
+   ],
+   "ancho": 419,
+   "alto": 247,
+   "transparente": true,
+   "tiene_texto": false,
+   "texto_es_contenido": false,
+   "texto": "",
+   "origen": "extraída de PROCESO_SUBIR_DE_GRADO (ari4) · clave «p3» · 2026-11-08",
+   "usada_en_origen": [
+    {
+     "doc": "Aritmetica4",
+     "slide": 7,
+     "titulo": "Actividad 2 · Sombrea el decimal"
+    }
+   ],
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": [],
+   "recorte_verificado": true
+  },
+  {
+   "id": "resta-en-el-cuaderno-8-0-2-6-5-4-con-la-no-4f0f",
+   "archivo": "tematicos/decimales/resta-en-el-cuaderno-8-0-2-6-5-4-con-la-no-4f0f.webp",
+   "svg": null,
+   "categoria": "tematicos",
+   "subcategoria": "decimales",
+   "descripcion": "Resta en el cuaderno 8,0 − 2,6 = 5,4 con la nota «baja la coma»",
+   "alt": "Resta en el cuaderno 8,0 − 2,6 = 5,4 con la nota baja la coma",
+   "uso": "Resta en el cuaderno 8,0 − 2,6 = 5,4",
+   "tags": [
+    "4°",
+    "algoritmo",
+    "aritmetica",
+    "coma",
+    "cuaderno",
+    "decimales",
+    "resta"
+   ],
+   "materia": [
+    "aritmetica"
+   ],
+   "grados": [
+    4
+   ],
+   "ancho": 469,
+   "alto": 288,
+   "transparente": true,
+   "tiene_texto": true,
+   "texto_es_contenido": true,
+   "texto": "baj@ coma",
+   "origen": "extraída de PROCESO_SUBIR_DE_GRADO (ari4) · clave «p17» · 2026-11-08",
+   "usada_en_origen": [
+    {
+     "doc": "Aritmetica4",
+     "slide": 32,
+     "titulo": "QUIZ 4 · Sumas, restas y problemas"
+    }
+   ],
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": [],
+   "recorte_verificado": true
+  },
+  {
+   "id": "mano-con-monedas-y-el-letrero-vuelto-1-85-63ba",
+   "archivo": "tematicos/dinero/mano-con-monedas-y-el-letrero-vuelto-1-85-63ba.webp",
+   "svg": null,
+   "categoria": "tematicos",
+   "subcategoria": "dinero",
+   "descripcion": "Mano con monedas y el letrero «Vuelto: $1,85»",
+   "alt": "Mano con monedas y el letrero Vuelto: $1,85",
+   "uso": "Mano",
+   "tags": [
+    "4°",
+    "aritmetica",
+    "dinero",
+    "monedas",
+    "resta",
+    "vuelto"
+   ],
+   "materia": [
+    "aritmetica"
+   ],
+   "grados": [
+    4
+   ],
+   "ancho": 481,
+   "alto": 289,
+   "transparente": true,
+   "tiene_texto": true,
+   "texto_es_contenido": true,
+   "texto": "Vuelto: $1,85",
+   "origen": "extraída de PROCESO_SUBIR_DE_GRADO (ari4) · clave «p28» · 2026-11-08",
+   "usada_en_origen": [
+    {
+     "doc": "Aritmetica4",
+     "slide": 33,
+     "titulo": "Actividad 20 · Reto final"
+    }
+   ],
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": [],
+   "recorte_verificado": true
+  },
+  {
+   "id": "suma-en-columna-1-60-2-45-4-05-en-el-cuade-0604",
+   "archivo": "tematicos/decimales/suma-en-columna-1-60-2-45-4-05-en-el-cuade-0604.webp",
+   "svg": null,
+   "categoria": "tematicos",
+   "subcategoria": "decimales",
+   "descripcion": "Suma en columna 1,60 + 2,45 = 4,05 en el cuaderno con flecha en la coma",
+   "alt": "Suma en columna 1,60 + 2,45 = 4,05 en el cuaderno con flecha en la coma",
+   "uso": "Suma en columna 1,60 + 2,45 = 4,05 en el cuaderno",
+   "tags": [
+    "4°",
+    "algoritmo",
+    "aritmetica",
+    "columna",
+    "coma",
+    "cuaderno",
+    "decimales",
+    "suma"
+   ],
+   "materia": [
+    "aritmetica"
+   ],
+   "grados": [
+    4
+   ],
+   "ancho": 379,
+   "alto": 270,
+   "transparente": true,
+   "tiene_texto": false,
+   "texto_es_contenido": false,
+   "texto": "4,05",
+   "origen": "extraída de PROCESO_SUBIR_DE_GRADO (ari4) · clave «p16» · 2026-11-08",
+   "usada_en_origen": [
+    {
+     "doc": "Aritmetica4",
+     "slide": 31,
+     "titulo": "Actividad 17 · En el mercado"
+    }
+   ],
+   "estado": "aprobada",
+   "calidad": 4,
+   "usada_en": [],
+   "recorte_verificado": true
+  },
+  {
+   "id": "maquina-con-engranajes-que-multiplica-por-bd55",
+   "archivo": "tematicos/decimales/maquina-con-engranajes-que-multiplica-por-bd55.webp",
+   "svg": null,
+   "categoria": "tematicos",
+   "subcategoria": "decimales",
+   "descripcion": "Máquina con engranajes que multiplica por 10: 2,8 → 28",
+   "alt": "Máquina con engranajes que multiplica por 10: 2,8 → 28",
+   "uso": "Máquina",
+   "tags": [
+    "4°",
+    "aritmetica",
+    "decimales",
+    "maquina",
+    "multiplicar",
+    "patron",
+    "x10"
+   ],
+   "materia": [
+    "aritmetica"
+   ],
+   "grados": [
+    4
+   ],
+   "ancho": 483,
+   "alto": 268,
+   "transparente": true,
+   "tiene_texto": false,
+   "texto_es_contenido": false,
+   "texto": "",
+   "origen": "extraída de PROCESO_SUBIR_DE_GRADO (ari4) · clave «p5» · 2026-11-08",
+   "usada_en_origen": [
+    {
+     "doc": "Aritmetica4",
+     "slide": 11,
+     "titulo": "Actividad 4 · La máquina de los detectives"
+    }
+   ],
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": [],
+   "recorte_verificado": true
+  },
+  {
+   "id": "detective-nina-con-lupa-frente-a-la-pizarr-2f69",
+   "archivo": "tematicos/detectives/detective-nina-con-lupa-frente-a-la-pizarr-2f69.webp",
+   "svg": null,
+   "categoria": "tematicos",
+   "subcategoria": "detectives",
+   "descripcion": "Detective niña con lupa frente a la pizarra «0,5×10=0,50» marcada con una X y la pregunta «¿Y la coma?»",
+   "alt": "Detective niña con lupa frente a la pizarra 0,5×10=0,50 marcada con una X y la pregunta ¿Y la coma?",
+   "uso": "Detective niña",
+   "tags": [
+    "4°",
+    "aritmetica",
+    "coma",
+    "detective",
+    "detectives",
+    "error",
+    "x10"
+   ],
+   "materia": [
+    "aritmetica"
+   ],
+   "grados": [
+    4
+   ],
+   "ancho": 511,
+   "alto": 349,
+   "transparente": true,
+   "tiene_texto": false,
+   "texto_es_contenido": false,
+   "texto": "",
+   "origen": "extraída de PROCESO_SUBIR_DE_GRADO (ari4) · clave «p9» · 2026-11-08",
+   "usada_en_origen": [
+    {
+     "doc": "Aritmetica4",
+     "slide": 12,
+     "titulo": "Actividad 5 · Detective del error"
+    }
+   ],
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": [],
+   "recorte_verificado": true
+  },
+  {
+   "id": "pizza-partida-en-10-con-el-decimal-0-3-sen-dbb2",
+   "archivo": "tematicos/fracciones/pizza-partida-en-10-con-el-decimal-0-3-sen-dbb2.webp",
+   "svg": null,
+   "categoria": "tematicos",
+   "subcategoria": "fracciones",
+   "descripcion": "Pizza partida en 10 con el decimal 0,3 señalado",
+   "alt": "Pizza partida en 10 con el decimal 0,3 señalado",
+   "uso": "Pizza partida en 10",
+   "tags": [
+    "0,3",
+    "4°",
+    "aritmetica",
+    "decimal",
+    "fraccion",
+    "fracciones",
+    "pizza"
+   ],
+   "materia": [
+    "aritmetica"
+   ],
+   "grados": [
+    4
+   ],
+   "ancho": 458,
+   "alto": 319,
+   "transparente": true,
+   "tiene_texto": false,
+   "texto_es_contenido": false,
+   "texto": "",
+   "origen": "extraída de PROCESO_SUBIR_DE_GRADO (ari4) · clave «p2» · 2026-11-08",
+   "usada_en_origen": [
+    {
+     "doc": "Aritmetica4",
+     "slide": 8,
+     "titulo": "Actividad 3 · Une cada decimal con su lectura"
+    }
+   ],
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": [],
+   "recorte_verificado": true
+  },
+  {
+   "id": "aria-con-birrete-y-diploma-pergamino-subi-7fd8",
+   "archivo": "premios/aria-con-birrete-y-diploma-pergamino-subi-7fd8.webp",
+   "svg": null,
+   "categoria": "premios",
+   "subcategoria": "",
+   "descripcion": "ARIA con birrete y diploma, pergamino «¡Subí de grado!» y cohete",
+   "alt": "ARIA con birrete y diploma, pergamino ¡Subí de grado! y cohete",
+   "uso": "ARIA",
+   "tags": [
+    "4°",
+    "aria",
+    "aritmetica",
+    "celebracion",
+    "diploma",
+    "graduacion",
+    "subir-de-grado"
+   ],
+   "materia": [
+    "aritmetica"
+   ],
+   "grados": [
+    4
+   ],
+   "ancho": 498,
+   "alto": 357,
+   "transparente": true,
+   "tiene_texto": true,
+   "texto_es_contenido": true,
+   "texto": "ubi grado!",
+   "origen": "extraída de PROCESO_SUBIR_DE_GRADO (ari4) · clave «p30» · 2026-11-08",
+   "usada_en_origen": [],
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": [],
+   "recorte_verificado": true
+  },
+  {
+   "id": "cronometro-dorado-que-marca-9-05-s-junto-a-3f79",
+   "archivo": "tematicos/medidas/cronometro-dorado-que-marca-9-05-s-junto-a-3f79.webp",
+   "svg": null,
+   "categoria": "tematicos",
+   "subcategoria": "medidas",
+   "descripcion": "Cronómetro dorado que marca 9,05 s junto a un niño corriendo",
+   "alt": "Cronómetro dorado que marca 9,05 s junto a un niño corriendo",
+   "uso": "Cronómetro dorado que marca 9,05 s junto a un niño corriendo",
+   "tags": [
+    "4°",
+    "aritmetica",
+    "carrera",
+    "cronometro",
+    "decimales",
+    "medidas",
+    "segundos",
+    "tiempo"
+   ],
+   "materia": [
+    "aritmetica"
+   ],
+   "grados": [
+    4
+   ],
+   "ancho": 479,
+   "alto": 273,
+   "transparente": true,
+   "tiene_texto": false,
+   "texto_es_contenido": false,
+   "texto": "",
+   "origen": "extraída de PROCESO_SUBIR_DE_GRADO (ari4) · clave «p14» · 2026-11-08",
+   "usada_en_origen": [
+    {
+     "doc": "Aritmetica4",
+     "slide": 25,
+     "titulo": "Bloque 5 · La Tienda Escolar"
+    }
+   ],
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": [],
+   "recorte_verificado": true
+  },
+  {
+   "id": "personaje-coma-que-se-mueve-de-3-5-a-35-co-06f8",
+   "archivo": "tematicos/decimales/personaje-coma-que-se-mueve-de-3-5-a-35-co-06f8.webp",
+   "svg": null,
+   "categoria": "tematicos",
+   "subcategoria": "decimales",
+   "descripcion": "Personaje «coma» que se mueve de 3,5 a 35 con el globo «la coma se mueve»",
+   "alt": "Personaje coma que se mueve de 3,5 a 35 con el globo la coma se mueve",
+   "uso": "Personaje «coma» que se mueve de 3,5 a 35",
+   "tags": [
+    "4°",
+    "aritmetica",
+    "coma",
+    "decimales",
+    "mover-coma",
+    "multiplicar",
+    "x10"
+   ],
+   "materia": [
+    "aritmetica"
+   ],
+   "grados": [
+    4
+   ],
+   "ancho": 464,
+   "alto": 251,
+   "transparente": true,
+   "tiene_texto": false,
+   "texto_es_contenido": false,
+   "texto": "",
+   "origen": "extraída de PROCESO_SUBIR_DE_GRADO (ari4) · clave «p7» · 2026-11-08",
+   "usada_en_origen": [
+    {
+     "doc": "Aritmetica4",
+     "slide": 10,
+     "titulo": "El patrón en acción"
+    }
+   ],
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": [],
+   "recorte_verificado": true
+  },
+  {
+   "id": "valor-posicional-del-numero-46-372-con-dec-cd99",
+   "archivo": "tematicos/decimales/valor-posicional-del-numero-46-372-con-dec-cd99.webp",
+   "svg": null,
+   "categoria": "tematicos",
+   "subcategoria": "decimales",
+   "descripcion": "Valor posicional del número 46,372 con decenas, unidades, décimas, centésimas y milésimas",
+   "alt": "Valor posicional del número 46,372 con decenas, unidades, décimas, centésimas y milésimas",
+   "uso": "Valor posicional del número 46,372",
+   "tags": [
+    "46,372",
+    "4°",
+    "aritmetica",
+    "decimales",
+    "lectura",
+    "valor-posicional"
+   ],
+   "materia": [
+    "aritmetica"
+   ],
+   "grados": [
+    4
+   ],
+   "ancho": 475,
+   "alto": 184,
+   "transparente": false,
+   "tiene_texto": false,
+   "texto_es_contenido": false,
+   "texto": "",
+   "origen": "extraída de PROCESO_SUBIR_DE_GRADO (ari4) · clave «p21» · 2026-11-08",
+   "usada_en_origen": [
+    {
+     "doc": "Aritmetica4",
+     "slide": 5,
+     "titulo": "Valor posicional y cómo leer"
+    }
+   ],
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": [],
+   "recorte_verificado": true
+  },
+  {
+   "id": "termometro-que-marca-36-6-c-junto-a-un-nin-72b5",
+   "archivo": "tematicos/medidas/termometro-que-marca-36-6-c-junto-a-un-nin-72b5.webp",
+   "svg": null,
+   "categoria": "tematicos",
+   "subcategoria": "medidas",
+   "descripcion": "Termómetro que marca 36,6 °C junto a un niño sudando por la fiebre",
+   "alt": "Termómetro que marca 36,6 °C junto a un niño sudando por la fiebre",
+   "uso": "Termómetro que marca 36,6 °C junto a un niño sudando por la fiebre",
+   "tags": [
+    "4°",
+    "aritmetica",
+    "decimales",
+    "grados",
+    "medidas",
+    "salud",
+    "temperatura",
+    "termometro"
+   ],
+   "materia": [
+    "aritmetica"
+   ],
+   "grados": [
+    4
+   ],
+   "ancho": 486,
+   "alto": 284,
+   "transparente": true,
+   "tiene_texto": false,
+   "texto_es_contenido": false,
+   "texto": "",
+   "origen": "extraída de PROCESO_SUBIR_DE_GRADO (ari4) · clave «p23» · 2026-11-08",
+   "usada_en_origen": [
+    {
+     "doc": "Aritmetica4",
+     "slide": 19,
+     "titulo": "Bloque 4 · La recta numérica"
+    }
+   ],
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": [],
+   "recorte_verificado": true
+  },
+  {
+   "id": "tres-ninos-corriendo-con-sus-tiempos-9-5-s-e961",
+   "archivo": "tematicos/medidas/tres-ninos-corriendo-con-sus-tiempos-9-5-s-e961.webp",
+   "svg": null,
+   "categoria": "tematicos",
+   "subcategoria": "medidas",
+   "descripcion": "Tres niños corriendo con sus tiempos 9,5 s · 9,05 s · 9,25 s",
+   "alt": "Tres niños corriendo con sus tiempos 9,5 s · 9,05 s · 9,25 s",
+   "uso": "Tres niños corriendo",
+   "tags": [
+    "4°",
+    "aritmetica",
+    "carrera",
+    "comparar",
+    "decimales",
+    "medidas",
+    "segundos",
+    "tiempos"
+   ],
+   "materia": [
+    "aritmetica"
+   ],
+   "grados": [
+    4
+   ],
+   "ancho": 494,
+   "alto": 264,
+   "transparente": true,
+   "tiene_texto": false,
+   "texto_es_contenido": false,
+   "texto": "",
+   "origen": "extraída de PROCESO_SUBIR_DE_GRADO (ari4) · clave «p15» · 2026-11-08",
+   "usada_en_origen": [
+    {
+     "doc": "Aritmetica4",
+     "slide": 25,
+     "titulo": "Bloque 5 · La Tienda Escolar"
+    }
+   ],
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": [],
+   "recorte_verificado": true
+  },
+  {
+   "id": "tres-tarjetas-3-04-3-14-3-4-con-una-flecha-3cb9",
+   "archivo": "tematicos/decimales/tres-tarjetas-3-04-3-14-3-4-con-una-flecha-3cb9.webp",
+   "svg": null,
+   "categoria": "tematicos",
+   "subcategoria": "decimales",
+   "descripcion": "Tres tarjetas 3,04 · 3,14 · 3,4 con una flecha «de menor a mayor»",
+   "alt": "Tres tarjetas 3,04 · 3,14 · 3,4 con una flecha de menor a mayor",
+   "uso": "Tres tarjetas 3,04 · 3,14 · 3,4",
+   "tags": [
+    "4°",
+    "aritmetica",
+    "comparar",
+    "decimales",
+    "menor-a-mayor",
+    "ordenar"
+   ],
+   "materia": [
+    "aritmetica"
+   ],
+   "grados": [
+    4
+   ],
+   "ancho": 500,
+   "alto": 275,
+   "transparente": true,
+   "tiene_texto": true,
+   "texto_es_contenido": true,
+   "texto": "menor mayor",
+   "origen": "extraída de PROCESO_SUBIR_DE_GRADO (ari4) · clave «p29» · 2026-11-08",
+   "usada_en_origen": [
+    {
+     "doc": "Aritmetica4",
+     "slide": 23,
+     "titulo": "Actividad 12 · El podio"
+    }
+   ],
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": [],
+   "recorte_verificado": true
+  },
+  {
+   "id": "nino-escribiendo-en-su-cuaderno-con-el-glo-3d4a",
+   "archivo": "tematicos/trabajo-escrito/nino-escribiendo-en-su-cuaderno-con-el-glo-3d4a.webp",
+   "svg": null,
+   "categoria": "tematicos",
+   "subcategoria": "trabajo-escrito",
+   "descripcion": "Niño escribiendo en su cuaderno con el globo «Con mis propias palabras…»",
+   "alt": "Niño escribiendo en su cuaderno con el globo Con mis propias palabras…",
+   "uso": "Niño escribiendo en su cuaderno",
+   "tags": [
+    "4°",
+    "aritmetica",
+    "cuaderno",
+    "escribir",
+    "explicar",
+    "propias-palabras",
+    "trabajo-escrito"
+   ],
+   "materia": [
+    "aritmetica"
+   ],
+   "grados": [
+    4
+   ],
+   "ancho": 524,
+   "alto": 315,
+   "transparente": true,
+   "tiene_texto": true,
+   "texto_es_contenido": true,
+   "texto": "Con mis ropias palabras",
+   "origen": "extraída de PROCESO_SUBIR_DE_GRADO (ari4) · clave «p27» · 2026-11-08",
+   "usada_en_origen": [
+    {
+     "doc": "Aritmetica4",
+     "slide": 13,
+     "titulo": "QUIZ 1 · Decimales y patrón ×10 / ÷10"
+    }
+   ],
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": [],
+   "recorte_verificado": true
+  },
+  {
+   "id": "bandeja-con-bloques-de-base-10-cubo-barras-aab6",
+   "archivo": "tematicos/decimales/bandeja-con-bloques-de-base-10-cubo-barras-aab6.webp",
+   "svg": null,
+   "categoria": "tematicos",
+   "subcategoria": "decimales",
+   "descripcion": "Bandeja con bloques de base 10 (cubo, barras y cubitos) y fichas de número 1 · 4 · 2 · 5",
+   "alt": "Bandeja con bloques de base 10 (cubo, barras y cubitos) y fichas de número 1 · 4 · 2 · 5",
+   "uso": "Bandeja",
+   "tags": [
+    "4°",
+    "aritmetica",
+    "base10",
+    "bloques",
+    "decimales",
+    "piezas",
+    "valor-posicional"
+   ],
+   "materia": [
+    "aritmetica"
+   ],
+   "grados": [
+    4
+   ],
+   "ancho": 477,
+   "alto": 242,
+   "transparente": true,
+   "tiene_texto": false,
+   "texto_es_contenido": false,
+   "texto": "",
+   "origen": "extraída de PROCESO_SUBIR_DE_GRADO (ari4) · clave «p8» · 2026-11-08",
+   "usada_en_origen": [
+    {
+     "doc": "Aritmetica4",
+     "slide": 17,
+     "titulo": "Actividad 8 · Cambia las piezas"
+    }
+   ],
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": [],
+   "recorte_verificado": true
+  },
+  {
+   "id": "recta-numerica-de-3-a-4-con-una-nina-con-b-878b",
+   "archivo": "tematicos/decimales/recta-numerica-de-3-a-4-con-una-nina-con-b-878b.webp",
+   "svg": null,
+   "categoria": "tematicos",
+   "subcategoria": "decimales",
+   "descripcion": "Recta numérica de 3 a 4 con una niña con bandera que marca 3,7",
+   "alt": "Recta numérica de 3 a 4 con una niña con bandera que marca 3,7",
+   "uso": "Recta numérica de 3 a 4",
+   "tags": [
+    "3,7",
+    "4°",
+    "aritmetica",
+    "decimales",
+    "recta-numerica",
+    "ubicar"
+   ],
+   "materia": [
+    "aritmetica"
+   ],
+   "grados": [
+    4
+   ],
+   "ancho": 470,
+   "alto": 306,
+   "transparente": true,
+   "tiene_texto": false,
+   "texto_es_contenido": false,
+   "texto": "",
+   "origen": "extraída de PROCESO_SUBIR_DE_GRADO (ari4) · clave «p12» · 2026-11-08",
+   "usada_en_origen": [
+    {
+     "doc": "Aritmetica4",
+     "slide": 22,
+     "titulo": "Actividad 11 · Compara con <, > o ="
+    }
+   ],
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": [],
+   "recorte_verificado": true
+  },
+  {
+   "id": "nino-con-un-helado-2-30-una-galleta-0-85-y-eaa2",
+   "archivo": "tematicos/dinero/nino-con-un-helado-2-30-una-galleta-0-85-y-eaa2.webp",
+   "svg": null,
+   "categoria": "tematicos",
+   "subcategoria": "dinero",
+   "descripcion": "Niño con un helado ($2,30), una galleta ($0,85) y un billete de $5",
+   "alt": "Niño con un helado ($2,30), una galleta ($0,85) y un billete de $5",
+   "uso": "Niño",
+   "tags": [
+    "4°",
+    "aritmetica",
+    "billete",
+    "compra",
+    "decimales",
+    "dinero",
+    "galleta",
+    "helado",
+    "precios"
+   ],
+   "materia": [
+    "aritmetica"
+   ],
+   "grados": [
+    4
+   ],
+   "ancho": 506,
+   "alto": 295,
+   "transparente": true,
+   "tiene_texto": false,
+   "texto_es_contenido": false,
+   "texto": "",
+   "origen": "extraída de PROCESO_SUBIR_DE_GRADO (ari4) · clave «p18» · 2026-11-08",
+   "usada_en_origen": [
+    {
+     "doc": "Aritmetica4",
+     "slide": 33,
+     "titulo": "Actividad 20 · Reto final"
+    }
+   ],
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": [],
+   "recorte_verificado": true
+  },
+  {
+   "id": "cinta-metrica-extendida-con-una-flecha-en-113c",
+   "archivo": "tematicos/medidas/cinta-metrica-extendida-con-una-flecha-en-113c.webp",
+   "svg": null,
+   "categoria": "tematicos",
+   "subcategoria": "medidas",
+   "descripcion": "Cinta métrica extendida con una flecha en 0,5 m",
+   "alt": "Cinta métrica extendida con una flecha en 0,5 m",
+   "uso": "Cinta métrica extendida",
+   "tags": [
+    "0,5",
+    "4°",
+    "aritmetica",
+    "cinta-metrica",
+    "decimales",
+    "longitud",
+    "medidas",
+    "metro"
+   ],
+   "materia": [
+    "aritmetica"
+   ],
+   "grados": [
+    4
+   ],
+   "ancho": 477,
+   "alto": 225,
+   "transparente": true,
+   "tiene_texto": true,
+   "texto_es_contenido": true,
+   "texto": "0,5m 0103",
+   "origen": "extraída de PROCESO_SUBIR_DE_GRADO (ari4) · clave «p4» · 2026-11-08",
+   "usada_en_origen": [
+    {
+     "doc": "Aritmetica4",
+     "slide": 21,
+     "titulo": "Cómo comparar y ordenar"
+    }
+   ],
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": [],
+   "recorte_verificado": true
+  },
+  {
+   "id": "puesto-de-frutas-con-dos-balanzas-1-5-kg-y-7202",
+   "archivo": "tematicos/medidas/puesto-de-frutas-con-dos-balanzas-1-5-kg-y-7202.webp",
+   "svg": null,
+   "categoria": "tematicos",
+   "subcategoria": "medidas",
+   "descripcion": "Puesto de frutas con dos balanzas (1,5 kg y 0,75 kg) y un costal «máx. 5 kg»",
+   "alt": "Puesto de frutas con dos balanzas (1,5 kg y 0,75 kg) y un costal máx. 5 kg",
+   "uso": "Puesto de frutas",
+   "tags": [
+    "4°",
+    "aritmetica",
+    "balanza",
+    "frutas",
+    "kilogramos",
+    "medidas",
+    "mercado",
+    "peso"
+   ],
+   "materia": [
+    "aritmetica"
+   ],
+   "grados": [
+    4
+   ],
+   "ancho": 510,
+   "alto": 330,
+   "transparente": true,
+   "tiene_texto": false,
+   "texto_es_contenido": false,
+   "texto": "",
+   "origen": "extraída de PROCESO_SUBIR_DE_GRADO (ari4) · clave «p19» · 2026-11-08",
+   "usada_en_origen": [],
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": [],
+   "recorte_verificado": true
+  },
+  {
+   "id": "2-5-2-50-con-un-0-final-que-duerme-el-cero-d864",
+   "archivo": "tematicos/decimales/2-5-2-50-con-un-0-final-que-duerme-el-cero-d864.webp",
+   "svg": null,
+   "categoria": "tematicos",
+   "subcategoria": "decimales",
+   "descripcion": "«2,5 = 2,50» con un 0 final que duerme: el cero final no cambia el valor",
+   "alt": "2,5 = 2,50 con un 0 final que duerme: el cero final no cambia el valor",
+   "uso": "«2,5 = 2,50»",
+   "tags": [
+    "4°",
+    "aritmetica",
+    "cero-final",
+    "decimales",
+    "equivalencia",
+    "igual"
+   ],
+   "materia": [
+    "aritmetica"
+   ],
+   "grados": [
+    4
+   ],
+   "ancho": 481,
+   "alto": 250,
+   "transparente": true,
+   "tiene_texto": false,
+   "texto_es_contenido": false,
+   "texto": "",
+   "origen": "extraída de PROCESO_SUBIR_DE_GRADO (ari4) · clave «p22» · 2026-11-08",
+   "usada_en_origen": [
+    {
+     "doc": "Aritmetica4",
+     "slide": 5,
+     "titulo": "Valor posicional y cómo leer"
+    }
+   ],
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": [],
+   "recorte_verificado": true
+  },
+  {
+   "id": "maquina-con-engranajes-que-divide-entre-10-f7f3",
+   "archivo": "tematicos/decimales/maquina-con-engranajes-que-divide-entre-10-f7f3.webp",
+   "svg": null,
+   "categoria": "tematicos",
+   "subcategoria": "decimales",
+   "descripcion": "Máquina con engranajes que divide entre 10: 9 → 0,9",
+   "alt": "Máquina con engranajes que divide entre 10: 9 → 0,9",
+   "uso": "Máquina",
+   "tags": [
+    "4°",
+    "aritmetica",
+    "decimales",
+    "dividir",
+    "maquina",
+    "patron",
+    "x10"
+   ],
+   "materia": [
+    "aritmetica"
+   ],
+   "grados": [
+    4
+   ],
+   "ancho": 474,
+   "alto": 264,
+   "transparente": true,
+   "tiene_texto": false,
+   "texto_es_contenido": false,
+   "texto": "",
+   "origen": "extraída de PROCESO_SUBIR_DE_GRADO (ari4) · clave «p6» · 2026-11-08",
+   "usada_en_origen": [
+    {
+     "doc": "Aritmetica4",
+     "slide": 11,
+     "titulo": "Actividad 4 · La máquina de los detectives"
+    }
+   ],
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": [],
+   "recorte_verificado": true
+  },
+  {
+   "id": "lista-de-compras-arroz-2-5-kg-papa-1-75-kg-ad48",
+   "archivo": "tematicos/dinero/lista-de-compras-arroz-2-5-kg-papa-1-75-kg-ad48.webp",
+   "svg": null,
+   "categoria": "tematicos",
+   "subcategoria": "dinero",
+   "descripcion": "Lista de compras (arroz 2,5 kg, papa 1,75 kg, yuca 0,9 kg, lentejas 0,5 kg) con «Total: ?» y un carrito",
+   "alt": "Lista de compras (arroz 2,5 kg, papa 1,75 kg, yuca 0,9 kg, lentejas 0,5 kg) con Total: ? y un carrito",
+   "uso": "Lista de compras (arroz 2,5 kg, papa 1,75 kg, yuca 0,9 kg, lentejas 0,5 kg)",
+   "tags": [
+    "4°",
+    "aritmetica",
+    "compras",
+    "decimales",
+    "dinero",
+    "plaza",
+    "problema",
+    "suma"
+   ],
+   "materia": [
+    "aritmetica"
+   ],
+   "grados": [
+    4
+   ],
+   "ancho": 455,
+   "alto": 290,
+   "transparente": true,
+   "tiene_texto": true,
+   "texto_es_contenido": true,
+   "texto": "Arroz Papa 1,75 Yuca Lentejas Total:",
+   "origen": "extraída de PROCESO_SUBIR_DE_GRADO (ari4) · clave «p25» · 2026-11-08",
+   "usada_en_origen": [],
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": [],
+   "recorte_verificado": true
+  },
+  {
+   "id": "balanza-de-platillos-que-compara-4-36-4-30-8ca0",
+   "archivo": "tematicos/decimales/balanza-de-platillos-que-compara-4-36-4-30-8ca0.webp",
+   "svg": null,
+   "categoria": "tematicos",
+   "subcategoria": "decimales",
+   "descripcion": "Balanza de platillos que compara 4,36 > 4,306",
+   "alt": "Balanza de platillos que compara 4,36 > 4,306",
+   "uso": "Balanza de platillos que compara 4,36 > 4,306",
+   "tags": [
+    "4°",
+    "aritmetica",
+    "balanza",
+    "comparar",
+    "decimales",
+    "mayor-que"
+   ],
+   "materia": [
+    "aritmetica"
+   ],
+   "grados": [
+    4
+   ],
+   "ancho": 488,
+   "alto": 246,
+   "transparente": true,
+   "tiene_texto": false,
+   "texto_es_contenido": false,
+   "texto": "",
+   "origen": "extraída de PROCESO_SUBIR_DE_GRADO (ari4) · clave «p13» · 2026-11-08",
+   "usada_en_origen": [
+    {
+     "doc": "Aritmetica4",
+     "slide": 23,
+     "titulo": "Actividad 12 · El podio"
+    }
+   ],
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": [],
+   "recorte_verificado": true
+  },
+  {
+   "id": "dos-ninos-caminando-por-un-parque-con-dist-aeb5",
+   "archivo": "tematicos/medidas/dos-ninos-caminando-por-un-parque-con-dist-aeb5.webp",
+   "svg": null,
+   "categoria": "tematicos",
+   "subcategoria": "medidas",
+   "descripcion": "Dos niños caminando por un parque con distancias 1,25 km y 0,8 km",
+   "alt": "Dos niños caminando por un parque con distancias 1,25 km y 0,8 km",
+   "uso": "Dos niños caminando por un parque",
+   "tags": [
+    "4°",
+    "aritmetica",
+    "caminar",
+    "comparar",
+    "decimales",
+    "distancia",
+    "kilometros",
+    "medidas"
+   ],
+   "materia": [
+    "aritmetica"
+   ],
+   "grados": [
+    4
+   ],
+   "ancho": 494,
+   "alto": 352,
+   "transparente": true,
+   "tiene_texto": false,
+   "texto_es_contenido": false,
+   "texto": "",
+   "origen": "extraída de PROCESO_SUBIR_DE_GRADO (ari4) · clave «p20» · 2026-11-08",
+   "usada_en_origen": [],
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": [],
+   "recorte_verificado": true
+  },
+  {
+   "id": "marcador-de-natacion-carril-1-24-31-s-y-ca-94c0",
+   "archivo": "tematicos/medidas/marcador-de-natacion-carril-1-24-31-s-y-ca-94c0.webp",
+   "svg": null,
+   "categoria": "tematicos",
+   "subcategoria": "medidas",
+   "descripcion": "Marcador de natación: Carril 1 · 24,31 s y Carril 2 · 24,13 s",
+   "alt": "Marcador de natación: Carril 1 · 24,31 s y Carril 2 · 24,13 s",
+   "uso": "Marcador de natación",
+   "tags": [
+    "4°",
+    "aritmetica",
+    "comparar",
+    "decimales",
+    "medidas",
+    "natacion",
+    "segundos",
+    "tiempos"
+   ],
+   "materia": [
+    "aritmetica"
+   ],
+   "grados": [
+    4
+   ],
+   "ancho": 479,
+   "alto": 264,
+   "transparente": true,
+   "tiene_texto": true,
+   "texto_es_contenido": true,
+   "texto": "24.135",
+   "origen": "extraída de PROCESO_SUBIR_DE_GRADO (ari4) · clave «p24» · 2026-11-08",
+   "usada_en_origen": [
+    {
+     "doc": "Aritmetica4",
+     "slide": 19,
+     "titulo": "Bloque 4 · La recta numérica"
+    }
+   ],
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": [],
+   "recorte_verificado": true
+  },
+  {
+   "id": "nino-saltando-sobre-la-recta-numerica-de-0-8ffe",
+   "archivo": "tematicos/decimales/nino-saltando-sobre-la-recta-numerica-de-0-8ffe.webp",
+   "svg": null,
+   "categoria": "tematicos",
+   "subcategoria": "decimales",
+   "descripcion": "Niño saltando sobre la recta numérica de 0 a 1 con la marca en 0,4",
+   "alt": "Niño saltando sobre la recta numérica de 0 a 1 con la marca en 0,4",
+   "uso": "Niño saltando sobre la recta numérica de 0 a 1",
+   "tags": [
+    "0,4",
+    "4°",
+    "aritmetica",
+    "decimales",
+    "recta-numerica",
+    "ubicar"
+   ],
+   "materia": [
+    "aritmetica"
+   ],
+   "grados": [
+    4
+   ],
+   "ancho": 472,
+   "alto": 284,
+   "transparente": true,
+   "tiene_texto": false,
+   "texto_es_contenido": false,
+   "texto": "",
+   "origen": "extraída de PROCESO_SUBIR_DE_GRADO (ari4) · clave «p11» · 2026-11-08",
+   "usada_en_origen": [
+    {
+     "doc": "Aritmetica4",
+     "slide": 22,
+     "titulo": "Actividad 11 · Compara con <, > o ="
+    }
+   ],
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": [],
+   "recorte_verificado": true
+  },
+  {
+   "id": "nina-con-una-laptop-y-aria-que-muestra-dec-a69a",
+   "archivo": "tematicos/decimales/nina-con-una-laptop-y-aria-que-muestra-dec-a69a.webp",
+   "svg": null,
+   "categoria": "tematicos",
+   "subcategoria": "decimales",
+   "descripcion": "Niña con una laptop y ARIA que muestra «decimales en la vida real»",
+   "alt": "Niña con una laptop y ARIA que muestra decimales en la vida real",
+   "uso": "Niña",
+   "tags": [
+    "4°",
+    "aria",
+    "aritmetica",
+    "buscar",
+    "decimales",
+    "vida-real"
+   ],
+   "materia": [
+    "aritmetica"
+   ],
+   "grados": [
+    4
+   ],
+   "ancho": 521,
+   "alto": 293,
+   "transparente": true,
+   "tiene_texto": true,
+   "texto_es_contenido": true,
+   "texto": "decimales vida real",
+   "origen": "extraída de PROCESO_SUBIR_DE_GRADO (ari4) · clave «p26» · 2026-11-08",
+   "usada_en_origen": [],
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": [],
+   "recorte_verificado": true
+  },
+  {
+   "id": "tabla-de-proporcion-pesoprecio-1-kg-3-2-kg-9f24",
+   "archivo": "tematicos/razones/tabla-de-proporcion-pesoprecio-1-kg-3-2-kg-9f24.webp",
+   "svg": null,
+   "categoria": "tematicos",
+   "subcategoria": "razones",
+   "descripcion": "Tabla de proporción peso–precio (1 kg → $3, 2 kg → $6, 3 kg → $9, 5 kg → ?) con «×3»",
+   "alt": "Tabla de proporción peso–precio (1 kg → $3, 2 kg → $6, 3 kg → $9, 5 kg → ?) con ×3",
+   "uso": "Tabla de proporción peso–precio (1 kg → $3, 2 kg → $6, 3 kg → $9, 5 kg → ?)",
+   "tags": [
+    "5°",
+    "aritmetica",
+    "multiplicar",
+    "precio",
+    "proporcion",
+    "razon",
+    "razones",
+    "tabla"
+   ],
+   "materia": [
+    "aritmetica"
+   ],
+   "grados": [
+    5
+   ],
+   "ancho": 432,
+   "alto": 254,
+   "transparente": true,
+   "tiene_texto": false,
+   "texto_es_contenido": false,
+   "texto": "",
+   "origen": "extraída de PROCESO_SUBIR_DE_GRADO (ari5) · clave «f28» · 2026-11-08",
+   "usada_en_origen": [
+    {
+     "doc": "Aritmetica5",
+     "slide": 35,
+     "titulo": "Actividad 19 · Proporciones y cambio"
+    }
+   ],
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": [],
+   "recorte_verificado": true
+  },
+  {
+   "id": "balanza-de-platillos-que-compara-2-09-2-9-0ba9",
+   "archivo": "tematicos/decimales/balanza-de-platillos-que-compara-2-09-2-9-0ba9.webp",
+   "svg": null,
+   "categoria": "tematicos",
+   "subcategoria": "decimales",
+   "descripcion": "Balanza de platillos que compara 2,09 < 2,9",
+   "alt": "Balanza de platillos que compara 2,09 < 2,9",
+   "uso": "Balanza de platillos que compara 2,09 < 2,9",
+   "tags": [
+    "5°",
+    "aritmetica",
+    "balanza",
+    "comparar",
+    "decimales",
+    "menor-que"
+   ],
+   "materia": [
+    "aritmetica"
+   ],
+   "grados": [
+    5
+   ],
+   "ancho": 452,
+   "alto": 314,
+   "transparente": true,
+   "tiene_texto": false,
+   "texto_es_contenido": false,
+   "texto": "",
+   "origen": "extraída de PROCESO_SUBIR_DE_GRADO (ari5) · clave «f6» · 2026-11-08",
+   "usada_en_origen": [
+    {
+     "doc": "Aritmetica5",
+     "slide": 8,
+     "titulo": "Actividad 3 · Compara con <, > o ="
+    }
+   ],
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": [],
+   "recorte_verificado": true
+  },
+  {
+   "id": "resta-en-el-cuaderno-20-00-7-35-12-65-con-77eb",
+   "archivo": "tematicos/decimales/resta-en-el-cuaderno-20-00-7-35-12-65-con-77eb.webp",
+   "svg": null,
+   "categoria": "tematicos",
+   "subcategoria": "decimales",
+   "descripcion": "Resta en el cuaderno 20,00 − 7,35 = 12,65 con «baja la coma»",
+   "alt": "Resta en el cuaderno 20,00 − 7,35 = 12,65 con baja la coma",
+   "uso": "Resta en el cuaderno 20,00 − 7,35 = 12,65",
+   "tags": [
+    "5°",
+    "algoritmo",
+    "aritmetica",
+    "coma",
+    "cuaderno",
+    "decimales",
+    "resta"
+   ],
+   "materia": [
+    "aritmetica"
+   ],
+   "grados": [
+    5
+   ],
+   "ancho": 465,
+   "alto": 296,
+   "transparente": true,
+   "tiene_texto": false,
+   "texto_es_contenido": false,
+   "texto": "",
+   "origen": "extraída de PROCESO_SUBIR_DE_GRADO (ari5) · clave «f12» · 2026-11-08",
+   "usada_en_origen": [
+    {
+     "doc": "Aritmetica5",
+     "slide": 19,
+     "titulo": "Actividad 10 · Sumas"
+    }
+   ],
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": [],
+   "recorte_verificado": true
+  },
+  {
+   "id": "pergamino-con-la-proporcion-2-5-6-15-y-los-252f",
+   "archivo": "tematicos/razones/pergamino-con-la-proporcion-2-5-6-15-y-los-252f.webp",
+   "svg": null,
+   "categoria": "tematicos",
+   "subcategoria": "razones",
+   "descripcion": "Pergamino con la proporción 2/5 = 6/15 y los productos cruzados 2 × 15 = 5 × 6",
+   "alt": "Pergamino con la proporción 2/5 = 6/15 y los productos cruzados 2 × 15 = 5 × 6",
+   "uso": "Pergamino",
+   "tags": [
+    "5°",
+    "aritmetica",
+    "fracciones",
+    "producto-cruzado",
+    "proporcion",
+    "razon",
+    "razones"
+   ],
+   "materia": [
+    "aritmetica"
+   ],
+   "grados": [
+    5
+   ],
+   "ancho": 479,
+   "alto": 306,
+   "transparente": true,
+   "tiene_texto": false,
+   "texto_es_contenido": false,
+   "texto": "",
+   "origen": "extraída de PROCESO_SUBIR_DE_GRADO (ari5) · clave «f29» · 2026-11-08",
+   "usada_en_origen": [
+    {
+     "doc": "Aritmetica5",
+     "slide": 36,
+     "titulo": "QUIZ 4 · Razones, proporciones y repaso"
+    }
+   ],
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": [],
+   "recorte_verificado": true
+  },
+  {
+   "id": "comprobacion-2-5-2-5-y-5-2-2-5-con-una-pal-3884",
+   "archivo": "tematicos/decimales/comprobacion-2-5-2-5-y-5-2-2-5-con-una-pal-3884.webp",
+   "svg": null,
+   "categoria": "tematicos",
+   "subcategoria": "decimales",
+   "descripcion": "Comprobación «2,5 × 2 = 5» y «5 ÷ 2 = 2,5» con una palomita verde",
+   "alt": "Comprobación 2,5 × 2 = 5 y 5 ÷ 2 = 2,5 con una palomita verde",
+   "uso": "Comprobación «2,5 × 2 = 5» y «5 ÷ 2 = 2,5»",
+   "tags": [
+    "5°",
+    "aritmetica",
+    "comprobar",
+    "decimales",
+    "division",
+    "inversa",
+    "multiplicacion"
+   ],
+   "materia": [
+    "aritmetica"
+   ],
+   "grados": [
+    5
+   ],
+   "ancho": 464,
+   "alto": 229,
+   "transparente": true,
+   "tiene_texto": true,
+   "texto_es_contenido": true,
+   "texto": "2,5x2",
+   "origen": "extraída de PROCESO_SUBIR_DE_GRADO (ari5) · clave «f25» · 2026-11-08",
+   "usada_en_origen": [
+    {
+     "doc": "Aritmetica5",
+     "slide": 31,
+     "titulo": "Actividad 18 · Repartos"
+    }
+   ],
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": [],
+   "recorte_verificado": true
+  },
+  {
+   "id": "detective-nina-con-lupa-frente-a-la-pizarr-d770",
+   "archivo": "tematicos/detectives/detective-nina-con-lupa-frente-a-la-pizarr-d770.webp",
+   "svg": null,
+   "categoria": "tematicos",
+   "subcategoria": "detectives",
+   "descripcion": "Detective niña con lupa frente a la pizarra «1,25 × 4 = 50» marcada con X y «¿Y la coma?»",
+   "alt": "Detective niña con lupa frente a la pizarra 1,25 × 4 = 50 marcada con X y ¿Y la coma?",
+   "uso": "Detective niña",
+   "tags": [
+    "5°",
+    "aritmetica",
+    "coma",
+    "detective",
+    "detectives",
+    "error",
+    "multiplicar"
+   ],
+   "materia": [
+    "aritmetica"
+   ],
+   "grados": [
+    5
+   ],
+   "ancho": 499,
+   "alto": 285,
+   "transparente": true,
+   "tiene_texto": false,
+   "texto_es_contenido": false,
+   "texto": "1,25",
+   "origen": "extraída de PROCESO_SUBIR_DE_GRADO (ari5) · clave «f18» · 2026-11-08",
+   "usada_en_origen": [
+    {
+     "doc": "Aritmetica5",
+     "slide": 29,
+     "titulo": "Cuando no se reparte exacto y la comprobación"
+    }
+   ],
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": [],
+   "recorte_verificado": true
+  },
+  {
+   "id": "escalera-de-precios-1-05-1-25-1-5-con-flec-6a9f",
+   "archivo": "tematicos/dinero/escalera-de-precios-1-05-1-25-1-5-con-flec-6a9f.webp",
+   "svg": null,
+   "categoria": "tematicos",
+   "subcategoria": "dinero",
+   "descripcion": "Escalera de precios $1,05 · $1,25 · $1,5 con flecha «de menor a mayor»",
+   "alt": "Escalera de precios $1,05 · $1,25 · $1,5 con flecha de menor a mayor",
+   "uso": "Escalera de precios $1,05 · $1,25 · $1,5",
+   "tags": [
+    "5°",
+    "aritmetica",
+    "decimales",
+    "dinero",
+    "menor-a-mayor",
+    "ordenar",
+    "precios"
+   ],
+   "materia": [
+    "aritmetica"
+   ],
+   "grados": [
+    5
+   ],
+   "ancho": 485,
+   "alto": 233,
+   "transparente": true,
+   "tiene_texto": false,
+   "texto_es_contenido": false,
+   "texto": "",
+   "origen": "extraída de PROCESO_SUBIR_DE_GRADO (ari5) · clave «f7» · 2026-11-08",
+   "usada_en_origen": [
+    {
+     "doc": "Aritmetica5",
+     "slide": 5,
+     "titulo": "Comparar y ordenar precios (Torre de Precios)"
+    }
+   ],
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": [],
+   "recorte_verificado": true
+  },
+  {
+   "id": "barra-de-chocolate-partida-en-10-con-3-10-052f",
+   "archivo": "tematicos/fracciones/barra-de-chocolate-partida-en-10-con-3-10-052f.webp",
+   "svg": null,
+   "categoria": "tematicos",
+   "subcategoria": "fracciones",
+   "descripcion": "Barra de chocolate partida en 10 con «3/10 = 0,3»",
+   "alt": "Barra de chocolate partida en 10 con 3/10 = 0,3",
+   "uso": "Barra de chocolate partida en 10",
+   "tags": [
+    "0,3",
+    "3/10",
+    "5°",
+    "aritmetica",
+    "chocolate",
+    "fraccion-decimal",
+    "fracciones"
+   ],
+   "materia": [
+    "aritmetica"
+   ],
+   "grados": [
+    5
+   ],
+   "ancho": 465,
+   "alto": 224,
+   "transparente": true,
+   "tiene_texto": false,
+   "texto_es_contenido": false,
+   "texto": "",
+   "origen": "extraída de PROCESO_SUBIR_DE_GRADO (ari5) · clave «f8» · 2026-11-08",
+   "usada_en_origen": [
+    {
+     "doc": "Aritmetica5",
+     "slide": 13,
+     "titulo": "De número decimal a fracción decimal"
+    }
+   ],
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": [],
+   "recorte_verificado": true
+  },
+  {
+   "id": "cuadricula-de-100-cuadros-con-48-pintados-4c38",
+   "archivo": "tematicos/decimales/cuadricula-de-100-cuadros-con-48-pintados-4c38.webp",
+   "svg": null,
+   "categoria": "tematicos",
+   "subcategoria": "decimales",
+   "descripcion": "Cuadrícula de 100 cuadros con 48 pintados y el decimal 0,48",
+   "alt": "Cuadrícula de 100 cuadros con 48 pintados y el decimal 0,48",
+   "uso": "Cuadrícula de 100 cuadros",
+   "tags": [
+    "0,48",
+    "5°",
+    "aritmetica",
+    "centesimas",
+    "cuadricula",
+    "decimales",
+    "representacion"
+   ],
+   "materia": [
+    "aritmetica"
+   ],
+   "grados": [
+    5
+   ],
+   "ancho": 450,
+   "alto": 274,
+   "transparente": true,
+   "tiene_texto": false,
+   "texto_es_contenido": false,
+   "texto": "",
+   "origen": "extraída de PROCESO_SUBIR_DE_GRADO (ari5) · clave «f3» · 2026-11-08",
+   "usada_en_origen": [
+    {
+     "doc": "Aritmetica5",
+     "slide": 6,
+     "titulo": "Actividad 1 · Escribe en cifras"
+    }
+   ],
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": [],
+   "recorte_verificado": true
+  },
+  {
+   "id": "pizza-partida-en-dos-con-5-2-2-5-y-la-nota-cfb0",
+   "archivo": "tematicos/decimales/pizza-partida-en-dos-con-5-2-2-5-y-la-nota-cfb0.webp",
+   "svg": null,
+   "categoria": "tematicos",
+   "subcategoria": "decimales",
+   "descripcion": "Pizza partida en dos con «5 ÷ 2 = 2,5» y la nota «agrego un cero»",
+   "alt": "Pizza partida en dos con 5 ÷ 2 = 2,5 y la nota agrego un cero",
+   "uso": "Pizza partida en dos",
+   "tags": [
+    "5°",
+    "agregar-cero",
+    "aritmetica",
+    "decimal",
+    "decimales",
+    "division",
+    "pizza",
+    "reparto"
+   ],
+   "materia": [
+    "aritmetica"
+   ],
+   "grados": [
+    5
+   ],
+   "ancho": 470,
+   "alto": 289,
+   "transparente": true,
+   "tiene_texto": true,
+   "texto_es_contenido": true,
+   "texto": "agrego cero",
+   "origen": "extraída de PROCESO_SUBIR_DE_GRADO (ari5) · clave «f24» · 2026-11-08",
+   "usada_en_origen": [
+    {
+     "doc": "Aritmetica5",
+     "slide": 31,
+     "titulo": "Actividad 18 · Repartos"
+    }
+   ],
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": [],
+   "recorte_verificado": true
+  },
+  {
+   "id": "mapa-de-mision-galaxia-con-planetas-bloque-4031",
+   "archivo": "interfaz/barras-y-marcos/mapa-de-mision-galaxia-con-planetas-bloque-4031.webp",
+   "svg": null,
+   "categoria": "interfaz",
+   "subcategoria": "barras-y-marcos",
+   "descripcion": "Mapa de misión: galaxia con planetas «Bloque 1» a «Bloque 6» y un cohete",
+   "alt": "Mapa de misión: galaxia con planetas Bloque 1 a Bloque 6 y un cohete",
+   "uso": "Mapa de misión",
+   "tags": [
+    "5°",
+    "aritmetica",
+    "barras-y-marcos",
+    "bloques",
+    "galaxia",
+    "mapa",
+    "progreso"
+   ],
+   "materia": [
+    "aritmetica"
+   ],
+   "grados": [
+    5
+   ],
+   "ancho": 535,
+   "alto": 265,
+   "transparente": true,
+   "tiene_texto": false,
+   "texto_es_contenido": false,
+   "texto": "",
+   "origen": "extraída de PROCESO_SUBIR_DE_GRADO (ari5) · clave «f31» · 2026-11-08",
+   "usada_en_origen": [
+    {
+     "doc": "Aritmetica5",
+     "slide": 2,
+     "titulo": "Tu mapa de misión"
+    }
+   ],
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": [],
+   "recorte_verificado": true
+  },
+  {
+   "id": "multiplicacion-en-el-cuaderno-2-4-3-24-3-7-1067",
+   "archivo": "tematicos/decimales/multiplicacion-en-el-cuaderno-2-4-3-24-3-7-1067.webp",
+   "svg": null,
+   "categoria": "tematicos",
+   "subcategoria": "decimales",
+   "descripcion": "Multiplicación en el cuaderno 2,4 × 3 → 24 × 3 = 72 → 7,2 con «1 cifra decimal»",
+   "alt": "Multiplicación en el cuaderno 2,4 × 3 → 24 × 3 = 72 → 7,2 con 1 cifra decimal",
+   "uso": "Multiplicación en el cuaderno 2,4 × 3 → 24 × 3 = 72 → 7,2",
+   "tags": [
+    "5°",
+    "aritmetica",
+    "cifras-decimales",
+    "cuaderno",
+    "decimales",
+    "multiplicacion",
+    "procedimiento"
+   ],
+   "materia": [
+    "aritmetica"
+   ],
+   "grados": [
+    5
+   ],
+   "ancho": 485,
+   "alto": 268,
+   "transparente": true,
+   "tiene_texto": true,
+   "texto_es_contenido": true,
+   "texto": "decima",
+   "origen": "extraída de PROCESO_SUBIR_DE_GRADO (ari5) · clave «f17» · 2026-11-08",
+   "usada_en_origen": [
+    {
+     "doc": "Aritmetica5",
+     "slide": 26,
+     "titulo": "Actividad 15 · Problemas de la plaza"
+    }
+   ],
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": [],
+   "recorte_verificado": true
+  },
+  {
+   "id": "cinta-metrica-de-0-a-1-m-con-75-100-m-0-75-91ca",
+   "archivo": "tematicos/medidas/cinta-metrica-de-0-a-1-m-con-75-100-m-0-75-91ca.webp",
+   "svg": null,
+   "categoria": "tematicos",
+   "subcategoria": "medidas",
+   "descripcion": "Cinta métrica de 0 a 1 m con «75/100 m = 0,75 m» y una flecha en 0,75",
+   "alt": "Cinta métrica de 0 a 1 m con 75/100 m = 0,75 m y una flecha en 0,75",
+   "uso": "Cinta métrica de 0 a 1 m",
+   "tags": [
+    "0,75",
+    "5°",
+    "aritmetica",
+    "fraccion-decimal",
+    "longitud",
+    "medidas",
+    "metro"
+   ],
+   "materia": [
+    "aritmetica"
+   ],
+   "grados": [
+    5
+   ],
+   "ancho": 462,
+   "alto": 244,
+   "transparente": true,
+   "tiene_texto": true,
+   "texto_es_contenido": true,
+   "texto": "75/100 m=0,75m",
+   "origen": "extraída de PROCESO_SUBIR_DE_GRADO (ari5) · clave «f36» · 2026-11-08",
+   "usada_en_origen": [
+    {
+     "doc": "Aritmetica5",
+     "slide": 14,
+     "titulo": "Actividad 7 · Fracción → decimal"
+    }
+   ],
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": [],
+   "recorte_verificado": true
+  },
+  {
+   "id": "vendedor-de-frutas-con-el-letrero-2-40-el-85c6",
+   "archivo": "tematicos/dinero/vendedor-de-frutas-con-el-letrero-2-40-el-85c6.webp",
+   "svg": null,
+   "categoria": "tematicos",
+   "subcategoria": "dinero",
+   "descripcion": "Vendedor de frutas con el letrero «$2,40 el kilo» y una balanza que marca 3 kg",
+   "alt": "Vendedor de frutas con el letrero $2,40 el kilo y una balanza que marca 3 kg",
+   "uso": "Vendedor de frutas",
+   "tags": [
+    "5°",
+    "aritmetica",
+    "decimales",
+    "dinero",
+    "frutas",
+    "kilo",
+    "mercado",
+    "multiplicar",
+    "precio"
+   ],
+   "materia": [
+    "aritmetica"
+   ],
+   "grados": [
+    5
+   ],
+   "ancho": 491,
+   "alto": 298,
+   "transparente": true,
+   "tiene_texto": false,
+   "texto_es_contenido": false,
+   "texto": "$2,40",
+   "origen": "extraída de PROCESO_SUBIR_DE_GRADO (ari5) · clave «f16» · 2026-11-08",
+   "usada_en_origen": [
+    {
+     "doc": "Aritmetica5",
+     "slide": 25,
+     "titulo": "Actividad 14 · Multiplicaciones"
+    }
+   ],
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": [],
+   "recorte_verificado": true
+  },
+  {
+   "id": "cuadricula-de-100-con-25-cuadros-verdes-y-9b09",
+   "archivo": "tematicos/fracciones/cuadricula-de-100-con-25-cuadros-verdes-y-9b09.webp",
+   "svg": null,
+   "categoria": "tematicos",
+   "subcategoria": "fracciones",
+   "descripcion": "Cuadrícula de 100 con 25 cuadros verdes y «25/100 = 0,25»",
+   "alt": "Cuadrícula de 100 con 25 cuadros verdes y 25/100 = 0,25",
+   "uso": "Cuadrícula de 100",
+   "tags": [
+    "0,25",
+    "25/100",
+    "5°",
+    "aritmetica",
+    "cuadricula",
+    "fraccion-decimal",
+    "fracciones"
+   ],
+   "materia": [
+    "aritmetica"
+   ],
+   "grados": [
+    5
+   ],
+   "ancho": 450,
+   "alto": 301,
+   "transparente": true,
+   "tiene_texto": false,
+   "texto_es_contenido": false,
+   "texto": "100",
+   "origen": "extraída de PROCESO_SUBIR_DE_GRADO (ari5) · clave «f9» · 2026-11-08",
+   "usada_en_origen": [
+    {
+     "doc": "Aritmetica5",
+     "slide": 13,
+     "titulo": "De número decimal a fracción decimal"
+    }
+   ],
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": [],
+   "recorte_verificado": true
+  },
+  {
+   "id": "cartel-dorado-7-38-siete-enteros-con-trein-2040",
+   "archivo": "tematicos/decimales/cartel-dorado-7-38-siete-enteros-con-trein-2040.webp",
+   "svg": null,
+   "categoria": "tematicos",
+   "subcategoria": "decimales",
+   "descripcion": "Cartel dorado «$7,38 — siete enteros con treinta y ocho centésimas»",
+   "alt": "Cartel dorado $7,38 — siete enteros con treinta y ocho centésimas",
+   "uso": "Cartel dorado «$7,38 — siete enteros",
+   "tags": [
+    "5°",
+    "7,38",
+    "aritmetica",
+    "cifras",
+    "decimales",
+    "escritura",
+    "lectura",
+    "palabras"
+   ],
+   "materia": [
+    "aritmetica"
+   ],
+   "grados": [
+    5
+   ],
+   "ancho": 434,
+   "alto": 256,
+   "transparente": true,
+   "tiene_texto": true,
+   "texto_es_contenido": true,
+   "texto": "enteros ocho",
+   "origen": "extraída de PROCESO_SUBIR_DE_GRADO (ari5) · clave «f2» · 2026-11-08",
+   "usada_en_origen": [
+    {
+     "doc": "Aritmetica5",
+     "slide": 4,
+     "titulo": "Bloque 1 · Valor posicional y lectura de decimales"
+    }
+   ],
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": [],
+   "recorte_verificado": true
+  },
+  {
+   "id": "division-en-el-cuaderno-8-8-4-2-2-con-sube-1894",
+   "archivo": "tematicos/decimales/division-en-el-cuaderno-8-8-4-2-2-con-sube-1894.webp",
+   "svg": null,
+   "categoria": "tematicos",
+   "subcategoria": "decimales",
+   "descripcion": "División en el cuaderno 8,8 ÷ 4 = 2,2 con «sube la coma»",
+   "alt": "División en el cuaderno 8,8 ÷ 4 = 2,2 con sube la coma",
+   "uso": "División en el cuaderno 8,8 ÷ 4 = 2,2",
+   "tags": [
+    "5°",
+    "algoritmo",
+    "aritmetica",
+    "coma",
+    "cuaderno",
+    "decimales",
+    "division"
+   ],
+   "materia": [
+    "aritmetica"
+   ],
+   "grados": [
+    5
+   ],
+   "ancho": 397,
+   "alto": 299,
+   "transparente": true,
+   "tiene_texto": true,
+   "texto_es_contenido": true,
+   "texto": "‘sube coma",
+   "origen": "extraída de PROCESO_SUBIR_DE_GRADO (ari5) · clave «f22» · 2026-11-08",
+   "usada_en_origen": [
+    {
+     "doc": "Aritmetica5",
+     "slide": 30,
+     "titulo": "Actividad 17 · Divisiones"
+    }
+   ],
+   "estado": "aprobada",
+   "calidad": 4,
+   "usada_en": [],
+   "recorte_verificado": true
+  },
+  {
+   "id": "nino-saltando-sobre-la-recta-numerica-de-0-e3fb",
+   "archivo": "tematicos/decimales/nino-saltando-sobre-la-recta-numerica-de-0-e3fb.webp",
+   "svg": null,
+   "categoria": "tematicos",
+   "subcategoria": "decimales",
+   "descripcion": "Niño saltando sobre la recta numérica de 0 a 1 con la marca en 0,6",
+   "alt": "Niño saltando sobre la recta numérica de 0 a 1 con la marca en 0,6",
+   "uso": "Niño saltando sobre la recta numérica de 0 a 1",
+   "tags": [
+    "0,6",
+    "5°",
+    "aritmetica",
+    "decimales",
+    "recta-numerica",
+    "ubicar"
+   ],
+   "materia": [
+    "aritmetica"
+   ],
+   "grados": [
+    5
+   ],
+   "ancho": 431,
+   "alto": 309,
+   "transparente": true,
+   "tiene_texto": false,
+   "texto_es_contenido": false,
+   "texto": "",
+   "origen": "extraída de PROCESO_SUBIR_DE_GRADO (ari5) · clave «f4» · 2026-11-08",
+   "usada_en_origen": [
+    {
+     "doc": "Aritmetica5",
+     "slide": 10,
+     "titulo": "Actividad 5 · Ubica en la recta"
+    }
+   ],
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": [],
+   "recorte_verificado": true
+  },
+  {
+   "id": "alcancia-de-cerdito-con-monedas-y-14-40-6-953c",
+   "archivo": "tematicos/dinero/alcancia-de-cerdito-con-monedas-y-14-40-6-953c.webp",
+   "svg": null,
+   "categoria": "tematicos",
+   "subcategoria": "dinero",
+   "descripcion": "Alcancía de cerdito con monedas y «$14,40 ÷ 6»",
+   "alt": "Alcancía de cerdito con monedas y $14,40 ÷ 6",
+   "uso": "Alcancía de cerdito",
+   "tags": [
+    "5°",
+    "alcancia",
+    "aritmetica",
+    "decimales",
+    "dinero",
+    "division",
+    "reparto"
+   ],
+   "materia": [
+    "aritmetica"
+   ],
+   "grados": [
+    5
+   ],
+   "ancho": 448,
+   "alto": 247,
+   "transparente": true,
+   "tiene_texto": false,
+   "texto_es_contenido": false,
+   "texto": "",
+   "origen": "extraída de PROCESO_SUBIR_DE_GRADO (ari5) · clave «f26» · 2026-11-08",
+   "usada_en_origen": [
+    {
+     "doc": "Aritmetica5",
+     "slide": 33,
+     "titulo": "Bloque 6 · Razones y proporciones (Galaxia del Cambio)"
+    }
+   ],
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": [],
+   "recorte_verificado": true
+  },
+  {
+   "id": "jugos-y-galletas-con-la-razon-2-3-d32d",
+   "archivo": "tematicos/razones/jugos-y-galletas-con-la-razon-2-3-d32d.webp",
+   "svg": null,
+   "categoria": "tematicos",
+   "subcategoria": "razones",
+   "descripcion": "Jugos y galletas con la razón «2 : 3»",
+   "alt": "Jugos y galletas con la razón 2 : 3",
+   "uso": "Jugos y galletas",
+   "tags": [
+    "5°",
+    "aritmetica",
+    "galletas",
+    "jugos",
+    "proporcion",
+    "razon",
+    "razones"
+   ],
+   "materia": [
+    "aritmetica"
+   ],
+   "grados": [
+    5
+   ],
+   "ancho": 508,
+   "alto": 250,
+   "transparente": true,
+   "tiene_texto": false,
+   "texto_es_contenido": false,
+   "texto": "",
+   "origen": "extraída de PROCESO_SUBIR_DE_GRADO (ari5) · clave «f27» · 2026-11-08",
+   "usada_en_origen": [
+    {
+     "doc": "Aritmetica5",
+     "slide": 35,
+     "titulo": "Actividad 19 · Proporciones y cambio"
+    }
+   ],
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": [],
+   "recorte_verificado": true
+  },
+  {
+   "id": "tienda-con-cuaderno-2-35-lapiz-0-95-y-regl-db28",
+   "archivo": "tematicos/dinero/tienda-con-cuaderno-2-35-lapiz-0-95-y-regl-db28.webp",
+   "svg": null,
+   "categoria": "tematicos",
+   "subcategoria": "dinero",
+   "descripcion": "Tienda con cuaderno $2,35, lápiz $0,95 y regla $1,80",
+   "alt": "Tienda con cuaderno $2,35, lápiz $0,95 y regla $1,80",
+   "uso": "Tienda",
+   "tags": [
+    "5°",
+    "aritmetica",
+    "decimales",
+    "dinero",
+    "precios",
+    "resta",
+    "suma",
+    "tienda"
+   ],
+   "materia": [
+    "aritmetica"
+   ],
+   "grados": [
+    5
+   ],
+   "ancho": 491,
+   "alto": 301,
+   "transparente": true,
+   "tiene_texto": false,
+   "texto_es_contenido": false,
+   "texto": "$0,95",
+   "origen": "extraída de PROCESO_SUBIR_DE_GRADO (ari5) · clave «f14» · 2026-11-08",
+   "usada_en_origen": [
+    {
+     "doc": "Aritmetica5",
+     "slide": 20,
+     "titulo": "Actividad 11 · Restas"
+    }
+   ],
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": [],
+   "recorte_verificado": true
+  },
+  {
+   "id": "edificio-de-tres-pisos-con-los-precios-4-0-a0cc",
+   "archivo": "tematicos/dinero/edificio-de-tres-pisos-con-los-precios-4-0-a0cc.webp",
+   "svg": null,
+   "categoria": "tematicos",
+   "subcategoria": "dinero",
+   "descripcion": "Edificio de tres pisos con los precios $4,05 · $4,5 · $4,50 (comparar y ordenar)",
+   "alt": "Edificio de tres pisos con los precios $4,05 · $4,5 · $4,50 (comparar y ordenar)",
+   "uso": "Edificio de tres pisos",
+   "tags": [
+    "5°",
+    "aritmetica",
+    "comparar",
+    "decimales",
+    "dinero",
+    "equivalencia",
+    "precios"
+   ],
+   "materia": [
+    "aritmetica"
+   ],
+   "grados": [
+    5
+   ],
+   "ancho": 346,
+   "alto": 301,
+   "transparente": true,
+   "tiene_texto": false,
+   "texto_es_contenido": false,
+   "texto": "$4,05",
+   "origen": "extraída de PROCESO_SUBIR_DE_GRADO (ari5) · clave «f5» · 2026-11-08",
+   "usada_en_origen": [
+    {
+     "doc": "Aritmetica5",
+     "slide": 5,
+     "titulo": "Comparar y ordenar precios (Torre de Precios)"
+    }
+   ],
+   "estado": "aprobada",
+   "calidad": 4,
+   "usada_en": [],
+   "recorte_verificado": true
+  },
+  {
+   "id": "aria-con-cohete-y-pergamino-subi-a-sexto-3ec5",
+   "archivo": "premios/aria-con-cohete-y-pergamino-subi-a-sexto-3ec5.webp",
+   "svg": null,
+   "categoria": "premios",
+   "subcategoria": "",
+   "descripcion": "ARIA con cohete y pergamino «¡Subí a sexto!»",
+   "alt": "ARIA con cohete y pergamino ¡Subí a sexto!",
+   "uso": "ARIA",
+   "tags": [
+    "5°",
+    "aria",
+    "aritmetica",
+    "celebracion",
+    "quinto",
+    "sexto",
+    "subir-de-grado"
+   ],
+   "materia": [
+    "aritmetica"
+   ],
+   "grados": [
+    5
+   ],
+   "ancho": 535,
+   "alto": 340,
+   "transparente": true,
+   "tiene_texto": true,
+   "texto_es_contenido": true,
+   "texto": "jou bia sex",
+   "origen": "extraída de PROCESO_SUBIR_DE_GRADO (ari5) · clave «f39» · 2026-11-08",
+   "usada_en_origen": [],
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": [],
+   "recorte_verificado": true
+  },
+  {
+   "id": "nino-tendero-con-vuelto-compra-5-65-y-pago-eb62",
+   "archivo": "tematicos/dinero/nino-tendero-con-vuelto-compra-5-65-y-pago-eb62.webp",
+   "svg": null,
+   "categoria": "tematicos",
+   "subcategoria": "dinero",
+   "descripcion": "Niño tendero con «Vuelto: $?», compra $5,65 y pagó $10",
+   "alt": "Niño tendero con Vuelto: $?, compra $5,65 y pagó $10",
+   "uso": "Niño tendero",
+   "tags": [
+    "5°",
+    "aritmetica",
+    "decimales",
+    "dinero",
+    "problema",
+    "resta",
+    "vuelto"
+   ],
+   "materia": [
+    "aritmetica"
+   ],
+   "grados": [
+    5
+   ],
+   "ancho": 499,
+   "alto": 315,
+   "transparente": true,
+   "tiene_texto": true,
+   "texto_es_contenido": true,
+   "texto": "page",
+   "origen": "extraída de PROCESO_SUBIR_DE_GRADO (ari5) · clave «f15» · 2026-11-08",
+   "usada_en_origen": [
+    {
+     "doc": "Aritmetica5",
+     "slide": 21,
+     "titulo": "Actividad 12 · Problemas de la tienda"
+    }
+   ],
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": [],
+   "recorte_verificado": true
+  },
+  {
+   "id": "cuaderno-mi-trabajo-a-mano-con-lapiz-y-reg-79b1",
+   "archivo": "tematicos/trabajo-escrito/cuaderno-mi-trabajo-a-mano-con-lapiz-y-reg-79b1.webp",
+   "svg": null,
+   "categoria": "tematicos",
+   "subcategoria": "trabajo-escrito",
+   "descripcion": "Cuaderno «Mi trabajo a mano» con lápiz y regla",
+   "alt": "Cuaderno Mi trabajo a mano con lápiz y regla",
+   "uso": "Cuaderno «Mi trabajo a mano»",
+   "tags": [
+    "5°",
+    "aritmetica",
+    "cuaderno",
+    "entregar",
+    "mano",
+    "trabajo-escrito"
+   ],
+   "materia": [
+    "aritmetica"
+   ],
+   "grados": [
+    5
+   ],
+   "ancho": 444,
+   "alto": 319,
+   "transparente": true,
+   "tiene_texto": true,
+   "texto_es_contenido": true,
+   "texto": "trabajo mano",
+   "origen": "extraída de PROCESO_SUBIR_DE_GRADO (ari5) · clave «f40» · 2026-11-08",
+   "usada_en_origen": [],
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": [],
+   "recorte_verificado": true
+  },
+  {
+   "id": "suma-en-el-cuaderno-12-40-3-75-16-15-79ee",
+   "archivo": "tematicos/decimales/suma-en-el-cuaderno-12-40-3-75-16-15-79ee.webp",
+   "svg": null,
+   "categoria": "tematicos",
+   "subcategoria": "decimales",
+   "descripcion": "Suma en el cuaderno 12,40 + 3,75 = 16,15",
+   "alt": "Suma en el cuaderno 12,40 + 3,75 = 16,15",
+   "uso": "Suma en el cuaderno 12,40 + 3,75 = 16,15",
+   "tags": [
+    "5°",
+    "algoritmo",
+    "aritmetica",
+    "coma",
+    "cuaderno",
+    "decimales",
+    "suma"
+   ],
+   "materia": [
+    "aritmetica"
+   ],
+   "grados": [
+    5
+   ],
+   "ancho": 394,
+   "alto": 295,
+   "transparente": true,
+   "tiene_texto": false,
+   "texto_es_contenido": false,
+   "texto": "",
+   "origen": "extraída de PROCESO_SUBIR_DE_GRADO (ari5) · clave «f11» · 2026-11-08",
+   "usada_en_origen": [
+    {
+     "doc": "Aritmetica5",
+     "slide": 18,
+     "titulo": "Restar decimales y el vuelto"
+    }
+   ],
+   "estado": "aprobada",
+   "calidad": 4,
+   "usada_en": [],
+   "recorte_verificado": true
+  },
+  {
+   "id": "estimacion-3-75-4-4-4-16-con-una-palomita-2625",
+   "archivo": "tematicos/decimales/estimacion-3-75-4-4-4-16-con-una-palomita-2625.webp",
+   "svg": null,
+   "categoria": "tematicos",
+   "subcategoria": "decimales",
+   "descripcion": "Estimación «3,75 × 4 ≈ 4 × 4 = 16» con una palomita verde",
+   "alt": "Estimación 3,75 × 4 ≈ 4 × 4 = 16 con una palomita verde",
+   "uso": "Estimación «3,75 × 4 ≈ 4 × 4 = 16»",
+   "tags": [
+    "5°",
+    "aritmetica",
+    "decimales",
+    "estimar",
+    "multiplicacion",
+    "redondear"
+   ],
+   "materia": [
+    "aritmetica"
+   ],
+   "grados": [
+    5
+   ],
+   "ancho": 459,
+   "alto": 276,
+   "transparente": true,
+   "tiene_texto": false,
+   "texto_es_contenido": false,
+   "texto": "",
+   "origen": "extraída de PROCESO_SUBIR_DE_GRADO (ari5) · clave «f20» · 2026-11-08",
+   "usada_en_origen": [
+    {
+     "doc": "Aritmetica5",
+     "slide": 26,
+     "titulo": "Actividad 15 · Problemas de la plaza"
+    }
+   ],
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": [],
+   "recorte_verificado": true
+  },
+  {
+   "id": "billete-y-monedas-con-compra-5-65-y-vuelto-8250",
+   "archivo": "tematicos/dinero/billete-y-monedas-con-compra-5-65-y-vuelto-8250.webp",
+   "svg": null,
+   "categoria": "tematicos",
+   "subcategoria": "dinero",
+   "descripcion": "Billete y monedas con «Compra: $5,65» y «Vuelto: $4,35»",
+   "alt": "Billete y monedas con Compra: $5,65 y Vuelto: $4,35",
+   "uso": "Billete y monedas",
+   "tags": [
+    "5°",
+    "aritmetica",
+    "billete",
+    "decimales",
+    "dinero",
+    "monedas",
+    "resta",
+    "vuelto"
+   ],
+   "materia": [
+    "aritmetica"
+   ],
+   "grados": [
+    5
+   ],
+   "ancho": 451,
+   "alto": 295,
+   "transparente": true,
+   "tiene_texto": true,
+   "texto_es_contenido": true,
+   "texto": "Vuelto: Compra: $5,65 $4,35",
+   "origen": "extraída de PROCESO_SUBIR_DE_GRADO (ari5) · clave «f38» · 2026-11-08",
+   "usada_en_origen": [
+    {
+     "doc": "Aritmetica5",
+     "slide": 22,
+     "titulo": "QUIZ 2 · Fracciones, sumas y restas"
+    }
+   ],
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": [],
+   "recorte_verificado": true
+  },
+  {
+   "id": "detective-con-forma-de-papa-y-lupa-frente-c190",
+   "archivo": "tematicos/detectives/detective-con-forma-de-papa-y-lupa-frente-c190.webp",
+   "svg": null,
+   "categoria": "tematicos",
+   "subcategoria": "detectives",
+   "descripcion": "Detective con forma de papa y lupa frente a la pizarra «7,2 ÷ 3 = 24» con X y «¡La coma se escapó!»",
+   "alt": "Detective con forma de papa y lupa frente a la pizarra 7,2 ÷ 3 = 24 con X y ¡La coma se escapó!",
+   "uso": "Detective",
+   "tags": [
+    "5°",
+    "aritmetica",
+    "coma",
+    "detective",
+    "detectives",
+    "division",
+    "error"
+   ],
+   "materia": [
+    "aritmetica"
+   ],
+   "grados": [
+    5
+   ],
+   "ancho": 520,
+   "alto": 298,
+   "transparente": true,
+   "tiene_texto": true,
+   "texto_es_contenido": true,
+   "texto": "coma escapo:",
+   "origen": "extraída de PROCESO_SUBIR_DE_GRADO (ari5) · clave «f37» · 2026-11-08",
+   "usada_en_origen": [
+    {
+     "doc": "Aritmetica5",
+     "slide": 32,
+     "titulo": "QUIZ 3 · Multiplicación y división de decimales"
+    }
+   ],
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": [],
+   "recorte_verificado": true
+  },
+  {
+   "id": "nino-escribiendo-en-su-cuaderno-con-el-glo-1fc3",
+   "archivo": "tematicos/trabajo-escrito/nino-escribiendo-en-su-cuaderno-con-el-glo-1fc3.webp",
+   "svg": null,
+   "categoria": "tematicos",
+   "subcategoria": "trabajo-escrito",
+   "descripcion": "Niño escribiendo en su cuaderno con el globo «Con mis propias palabras…»",
+   "alt": "Niño escribiendo en su cuaderno con el globo Con mis propias palabras…",
+   "uso": "Niño escribiendo en su cuaderno",
+   "tags": [
+    "5°",
+    "aritmetica",
+    "cuaderno",
+    "escribir",
+    "explicar",
+    "propias-palabras",
+    "trabajo-escrito"
+   ],
+   "materia": [
+    "aritmetica"
+   ],
+   "grados": [
+    5
+   ],
+   "ancho": 520,
+   "alto": 309,
+   "transparente": true,
+   "tiene_texto": true,
+   "texto_es_contenido": true,
+   "texto": "opias palabras",
+   "origen": "extraída de PROCESO_SUBIR_DE_GRADO (ari5) · clave «f33» · 2026-11-08",
+   "usada_en_origen": [],
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": [],
+   "recorte_verificado": true
+  },
+  {
+   "id": "bus-escolar-con-cuatro-ninos-y-18-40-entre-a7a2",
+   "archivo": "tematicos/dinero/bus-escolar-con-cuatro-ninos-y-18-40-entre-a7a2.webp",
+   "svg": null,
+   "categoria": "tematicos",
+   "subcategoria": "dinero",
+   "descripcion": "Bus escolar con cuatro niños y «$18,40 entre 4»",
+   "alt": "Bus escolar con cuatro niños y $18,40 entre 4",
+   "uso": "Bus escolar",
+   "tags": [
+    "5°",
+    "aritmetica",
+    "bus",
+    "decimales",
+    "dinero",
+    "division",
+    "reparto"
+   ],
+   "materia": [
+    "aritmetica"
+   ],
+   "grados": [
+    5
+   ],
+   "ancho": 513,
+   "alto": 287,
+   "transparente": true,
+   "tiene_texto": true,
+   "texto_es_contenido": true,
+   "texto": "$18,40 entre",
+   "origen": "extraída de PROCESO_SUBIR_DE_GRADO (ari5) · clave «f23» · 2026-11-08",
+   "usada_en_origen": [
+    {
+     "doc": "Aritmetica5",
+     "slide": 33,
+     "titulo": "Bloque 6 · Razones y proporciones (Galaxia del Cambio)"
+    }
+   ],
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": [],
+   "recorte_verificado": true
+  },
+  {
+   "id": "puesto-plaza-con-lista-arroz-2-5-kg-papa-1-3137",
+   "archivo": "tematicos/dinero/puesto-plaza-con-lista-arroz-2-5-kg-papa-1-3137.webp",
+   "svg": null,
+   "categoria": "tematicos",
+   "subcategoria": "dinero",
+   "descripcion": "Puesto «Plaza» con lista arroz 2,5 kg, papa 1,75 kg, yuca 0,9 kg, lentejas 0,5 kg y «Total: ?»",
+   "alt": "Puesto Plaza con lista arroz 2,5 kg, papa 1,75 kg, yuca 0,9 kg, lentejas 0,5 kg y Total: ?",
+   "uso": "Puesto «Plaza»",
+   "tags": [
+    "5°",
+    "aritmetica",
+    "compras",
+    "decimales",
+    "dinero",
+    "mercado",
+    "plaza",
+    "suma"
+   ],
+   "materia": [
+    "aritmetica"
+   ],
+   "grados": [
+    5
+   ],
+   "ancho": 540,
+   "alto": 270,
+   "transparente": true,
+   "tiene_texto": true,
+   "texto_es_contenido": true,
+   "texto": "Plaza Arroz Papa 1,75 Yuca Lentejas Total",
+   "origen": "extraída de PROCESO_SUBIR_DE_GRADO (ari5) · clave «f35» · 2026-11-08",
+   "usada_en_origen": [
+    {
+     "doc": "Aritmetica5",
+     "slide": 20,
+     "titulo": "Actividad 11 · Restas"
+    }
+   ],
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": [],
+   "recorte_verificado": true
+  },
+  {
+   "id": "tablero-de-valor-posicional-con-el-numero-453b",
+   "archivo": "tematicos/decimales/tablero-de-valor-posicional-con-el-numero-453b.webp",
+   "svg": null,
+   "categoria": "tematicos",
+   "subcategoria": "decimales",
+   "descripcion": "Tablero de valor posicional con el número 35,206 (decenas a milésimas)",
+   "alt": "Tablero de valor posicional con el número 35,206 (decenas a milésimas)",
+   "uso": "Tablero de valor posicional",
+   "tags": [
+    "35,206",
+    "5°",
+    "aritmetica",
+    "decimales",
+    "lectura",
+    "valor-posicional"
+   ],
+   "materia": [
+    "aritmetica"
+   ],
+   "grados": [
+    5
+   ],
+   "ancho": 464,
+   "alto": 191,
+   "transparente": false,
+   "tiene_texto": true,
+   "texto_es_contenido": true,
+   "texto": "Unidades Centésimas",
+   "origen": "extraída de PROCESO_SUBIR_DE_GRADO (ari5) · clave «f1» · 2026-11-08",
+   "usada_en_origen": [
+    {
+     "doc": "Aritmetica5",
+     "slide": 4,
+     "titulo": "Bloque 1 · Valor posicional y lectura de decimales"
+    }
+   ],
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": [],
+   "recorte_verificado": true
+  },
+  {
+   "id": "portal-magico-con-la-fraccion-7-10-y-el-de-9bc3",
+   "archivo": "tematicos/fracciones/portal-magico-con-la-fraccion-7-10-y-el-de-9bc3.webp",
+   "svg": null,
+   "categoria": "tematicos",
+   "subcategoria": "fracciones",
+   "descripcion": "Portal mágico con la fracción 7/10 y el decimal 0,7 unidos por una flecha",
+   "alt": "Portal mágico con la fracción 7/10 y el decimal 0,7 unidos por una flecha",
+   "uso": "Portal mágico",
+   "tags": [
+    "0,7",
+    "5°",
+    "7/10",
+    "aritmetica",
+    "equivalencia",
+    "fraccion-decimal",
+    "fracciones"
+   ],
+   "materia": [
+    "aritmetica"
+   ],
+   "grados": [
+    5
+   ],
+   "ancho": 476,
+   "alto": 367,
+   "transparente": true,
+   "tiene_texto": false,
+   "texto_es_contenido": false,
+   "texto": "",
+   "origen": "extraída de PROCESO_SUBIR_DE_GRADO (ari5) · clave «f10» · 2026-11-08",
+   "usada_en_origen": [
+    {
+     "doc": "Aritmetica5",
+     "slide": 14,
+     "titulo": "Actividad 7 · Fracción → decimal"
+    }
+   ],
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": [],
+   "recorte_verificado": true
+  },
+  {
+   "id": "casa-de-cambio-1-us-4-mil-pesos-y-la-pregu-a71a",
+   "archivo": "tematicos/dinero/casa-de-cambio-1-us-4-mil-pesos-y-la-pregu-a71a.webp",
+   "svg": null,
+   "categoria": "tematicos",
+   "subcategoria": "dinero",
+   "descripcion": "Casa de cambio «1 US$ = 4 mil pesos» y la pregunta «5 US$ = ?»",
+   "alt": "Casa de cambio 1 US$ = 4 mil pesos y la pregunta 5 US$ = ?",
+   "uso": "Casa de cambio «1 US$ = 4 mil pesos» y la pregunta «5 US$ = ?»",
+   "tags": [
+    "5°",
+    "aritmetica",
+    "cambio-moneda",
+    "dinero",
+    "dolares",
+    "pesos",
+    "proporcion"
+   ],
+   "materia": [
+    "aritmetica"
+   ],
+   "grados": [
+    5
+   ],
+   "ancho": 479,
+   "alto": 352,
+   "transparente": true,
+   "tiene_texto": false,
+   "texto_es_contenido": false,
+   "texto": "",
+   "origen": "extraída de PROCESO_SUBIR_DE_GRADO (ari5) · clave «f30» · 2026-11-08",
+   "usada_en_origen": [
+    {
+     "doc": "Aritmetica5",
+     "slide": 36,
+     "titulo": "QUIZ 4 · Razones, proporciones y repaso"
+    }
+   ],
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": [],
+   "recorte_verificado": true
+  },
+  {
+   "id": "marcador-de-salto-de-longitud-5-36-m-y-5-3-34cd",
+   "archivo": "tematicos/medidas/marcador-de-salto-de-longitud-5-36-m-y-5-3-34cd.webp",
+   "svg": null,
+   "categoria": "tematicos",
+   "subcategoria": "medidas",
+   "descripcion": "Marcador de salto de longitud: 5,36 m y 5,3 m junto al foso de arena",
+   "alt": "Marcador de salto de longitud: 5,36 m y 5,3 m junto al foso de arena",
+   "uso": "Marcador de salto de longitud",
+   "tags": [
+    "5°",
+    "aritmetica",
+    "comparar",
+    "decimales",
+    "longitud",
+    "medidas",
+    "metros",
+    "salto"
+   ],
+   "materia": [
+    "aritmetica"
+   ],
+   "grados": [
+    5
+   ],
+   "ancho": 465,
+   "alto": 269,
+   "transparente": true,
+   "tiene_texto": false,
+   "texto_es_contenido": false,
+   "texto": "",
+   "origen": "extraída de PROCESO_SUBIR_DE_GRADO (ari5) · clave «f34» · 2026-11-08",
+   "usada_en_origen": [
+    {
+     "doc": "Aritmetica5",
+     "slide": 7,
+     "titulo": "Actividad 2 · ¿Qué valor tiene la cifra?"
+    }
+   ],
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": [],
+   "recorte_verificado": true
+  },
+  {
+   "id": "caja-registradora-con-total-8-60-un-billet-5ac8",
+   "archivo": "tematicos/dinero/caja-registradora-con-total-8-60-un-billet-5ac8.webp",
+   "svg": null,
+   "categoria": "tematicos",
+   "subcategoria": "dinero",
+   "descripcion": "Caja registradora con «Total: $8,60», un billete de $10 y «¿Cuánto devuelvo?»",
+   "alt": "Caja registradora con Total: $8,60, un billete de $10 y ¿Cuánto devuelvo?",
+   "uso": "Caja registradora",
+   "tags": [
+    "5°",
+    "aritmetica",
+    "caja",
+    "decimales",
+    "dinero",
+    "resta",
+    "vuelto"
+   ],
+   "materia": [
+    "aritmetica"
+   ],
+   "grados": [
+    5
+   ],
+   "ancho": 500,
+   "alto": 300,
+   "transparente": true,
+   "tiene_texto": true,
+   "texto_es_contenido": true,
+   "texto": "devuelvo?",
+   "origen": "extraída de PROCESO_SUBIR_DE_GRADO (ari5) · clave «f13» · 2026-11-08",
+   "usada_en_origen": [
+    {
+     "doc": "Aritmetica5",
+     "slide": 22,
+     "titulo": "QUIZ 2 · Fracciones, sumas y restas"
+    }
+   ],
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": [],
+   "recorte_verificado": true
+  },
+  {
+   "id": "nino-saltando-sobre-la-recta-numerica-con-3ec0",
+   "archivo": "tematicos/decimales/nino-saltando-sobre-la-recta-numerica-con-3ec0.webp",
+   "svg": null,
+   "categoria": "tematicos",
+   "subcategoria": "decimales",
+   "descripcion": "Niño saltando sobre la recta numérica con «4 × 1,5» (saltos iguales)",
+   "alt": "Niño saltando sobre la recta numérica con 4 × 1,5 (saltos iguales)",
+   "uso": "Niño saltando sobre la recta numérica",
+   "tags": [
+    "5°",
+    "aritmetica",
+    "decimales",
+    "multiplicacion",
+    "recta-numerica",
+    "saltos"
+   ],
+   "materia": [
+    "aritmetica"
+   ],
+   "grados": [
+    5
+   ],
+   "ancho": 482,
+   "alto": 296,
+   "transparente": true,
+   "tiene_texto": false,
+   "texto_es_contenido": false,
+   "texto": "",
+   "origen": "extraída de PROCESO_SUBIR_DE_GRADO (ari5) · clave «f19» · 2026-11-08",
+   "usada_en_origen": [
+    {
+     "doc": "Aritmetica5",
+     "slide": 25,
+     "titulo": "Actividad 14 · Multiplicaciones"
+    }
+   ],
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": [],
+   "recorte_verificado": true
+  },
+  {
+   "id": "tres-ninos-que-reparten-7-50-3-y-reciben-2-437a",
+   "archivo": "tematicos/dinero/tres-ninos-que-reparten-7-50-3-y-reciben-2-437a.webp",
+   "svg": null,
+   "categoria": "tematicos",
+   "subcategoria": "dinero",
+   "descripcion": "Tres niños que reparten «$7,50 ÷ 3» y reciben $2,50 cada uno",
+   "alt": "Tres niños que reparten $7,50 ÷ 3 y reciben $2,50 cada uno",
+   "uso": "Tres niños que reparten «$7,50 ÷ 3» y reciben $2,50 cada uno",
+   "tags": [
+    "5°",
+    "aritmetica",
+    "decimales",
+    "dinero",
+    "division",
+    "reparto"
+   ],
+   "materia": [
+    "aritmetica"
+   ],
+   "grados": [
+    5
+   ],
+   "ancho": 459,
+   "alto": 305,
+   "transparente": true,
+   "tiene_texto": false,
+   "texto_es_contenido": false,
+   "texto": "",
+   "origen": "extraída de PROCESO_SUBIR_DE_GRADO (ari5) · clave «f21» · 2026-11-08",
+   "usada_en_origen": [
+    {
+     "doc": "Aritmetica5",
+     "slide": 30,
+     "titulo": "Actividad 17 · Divisiones"
+    }
+   ],
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": [],
+   "recorte_verificado": true
+  },
+  {
+   "id": "nina-con-lupa-y-aria-frente-a-una-laptop-q-5b72",
+   "archivo": "tematicos/internet/nina-con-lupa-y-aria-frente-a-una-laptop-q-5b72.webp",
+   "svg": null,
+   "categoria": "tematicos",
+   "subcategoria": "internet",
+   "descripcion": "Niña con lupa y ARIA frente a una laptop que muestra la búsqueda «tasa de cambio hoy»",
+   "alt": "Niña con lupa y ARIA frente a una laptop que muestra la búsqueda tasa de cambio hoy",
+   "uso": "Niña",
+   "tags": [
+    "5°",
+    "aria",
+    "aritmetica",
+    "buscar",
+    "internet",
+    "investigar",
+    "tasa-cambio"
+   ],
+   "materia": [
+    "aritmetica"
+   ],
+   "grados": [
+    5
+   ],
+   "ancho": 451,
+   "alto": 310,
+   "transparente": true,
+   "tiene_texto": false,
+   "texto_es_contenido": false,
+   "texto": "",
+   "origen": "extraída de PROCESO_SUBIR_DE_GRADO (ari5) · clave «f32» · 2026-11-08",
+   "usada_en_origen": [],
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": [],
+   "recorte_verificado": true
+  },
+  {
+   "id": "nino-escribiendo-en-su-cuaderno-con-el-glo-c72d",
+   "archivo": "tematicos/trabajo-escrito/nino-escribiendo-en-su-cuaderno-con-el-glo-c72d.webp",
+   "svg": null,
+   "categoria": "tematicos",
+   "subcategoria": "trabajo-escrito",
+   "descripcion": "Niño escribiendo en su cuaderno con el globo «Con mis propias palabras…»",
+   "alt": "Niño escribiendo en su cuaderno con el globo Con mis propias palabras…",
+   "uso": "Niño escribiendo en su cuaderno",
+   "tags": [
+    "4°",
+    "5°",
+    "cuaderno",
+    "escribir",
+    "explicar",
+    "propias-palabras",
+    "tecnologia",
+    "trabajo-escrito"
+   ],
+   "materia": [
+    "tecnologia"
+   ],
+   "grados": [
+    4,
+    5
+   ],
+   "ancho": 524,
+   "alto": 315,
+   "transparente": true,
+   "tiene_texto": true,
+   "texto_es_contenido": true,
+   "texto": "Con mis ropias palabras...",
+   "origen": "extraída de PROCESO_SUBIR_DE_GRADO (tec4, tec5) · clave «p27» · 2026-11-08",
+   "usada_en_origen": [],
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": [],
+   "recorte_verificado": true
+  },
+  {
+   "id": "aria-con-birrete-y-diploma-pergamino-subi-289a",
+   "archivo": "premios/aria-con-birrete-y-diploma-pergamino-subi-289a.webp",
+   "svg": null,
+   "categoria": "premios",
+   "subcategoria": "",
+   "descripcion": "ARIA con birrete y diploma, pergamino «¡Subí de grado!» y cohete",
+   "alt": "ARIA con birrete y diploma, pergamino ¡Subí de grado! y cohete",
+   "uso": "ARIA",
+   "tags": [
+    "4°",
+    "5°",
+    "aria",
+    "celebracion",
+    "diploma",
+    "graduacion",
+    "subir-de-grado",
+    "tecnologia"
+   ],
+   "materia": [
+    "tecnologia"
+   ],
+   "grados": [
+    4,
+    5
+   ],
+   "ancho": 498,
+   "alto": 357,
+   "transparente": true,
+   "tiene_texto": true,
+   "texto_es_contenido": true,
+   "texto": "ubi grado!",
+   "origen": "extraída de PROCESO_SUBIR_DE_GRADO (tec4, tec5) · clave «p30» · 2026-11-08",
+   "usada_en_origen": [],
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": [],
+   "recorte_verificado": true
+  },
+  {
+   "id": "cuaderno-espiral-mi-trabajo-a-mano-con-lap-3669",
+   "archivo": "tematicos/trabajo-escrito/cuaderno-espiral-mi-trabajo-a-mano-con-lap-3669.webp",
+   "svg": null,
+   "categoria": "tematicos",
+   "subcategoria": "trabajo-escrito",
+   "descripcion": "Cuaderno espiral «Mi trabajo a mano» con lápiz y regla",
+   "alt": "Cuaderno espiral Mi trabajo a mano con lápiz y regla",
+   "uso": "Cuaderno espiral «Mi trabajo a mano»",
+   "tags": [
+    "4°",
+    "5°",
+    "cuaderno",
+    "entregar",
+    "mano",
+    "tecnologia",
+    "trabajo-escrito"
+   ],
+   "materia": [
+    "tecnologia"
+   ],
+   "grados": [
+    4,
+    5
+   ],
+   "ancho": 444,
+   "alto": 319,
+   "transparente": true,
+   "tiene_texto": true,
+   "texto_es_contenido": true,
+   "texto": "trabajo",
+   "origen": "extraída de PROCESO_SUBIR_DE_GRADO (tec4, tec5) · clave «nb40» · 2026-11-08",
+   "usada_en_origen": [],
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": [],
+   "recorte_verificado": true
+  },
+  {
+   "id": "comparacion-de-un-documento-sin-formato-x-2bc5",
+   "archivo": "tematicos/documentos-word/comparacion-de-un-documento-sin-formato-x-2bc5.webp",
+   "svg": null,
+   "categoria": "tematicos",
+   "subcategoria": "documentos-word",
+   "descripcion": "Comparación de un documento «Sin formato» (X roja) y «Con formato» (palomita verde) con un niño",
+   "alt": "Comparación de un documento Sin formato (X roja) y Con formato (palomita verde) con un niño",
+   "uso": "Comparación de un documento «Sin formato» (X roja) y «Con formato» (palomita ver",
+   "tags": [
+    "4°",
+    "antes-despues",
+    "documento",
+    "documentos-word",
+    "formato",
+    "tecnologia",
+    "texto",
+    "word"
+   ],
+   "materia": [
+    "tecnologia"
+   ],
+   "grados": [
+    4
+   ],
+   "ancho": 486,
+   "alto": 260,
+   "transparente": true,
+   "tiene_texto": true,
+   "texto_es_contenido": true,
+   "texto": "formato",
+   "origen": "extraída de PROCESO_SUBIR_DE_GRADO (tec4) · clave «f28» · 2026-11-08",
+   "usada_en_origen": [
+    {
+     "doc": "Tecnologia4",
+     "slide": 28,
+     "titulo": "Bloque 5 · Fuente, tamaño y alineación"
+    }
+   ],
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": [],
+   "recorte_verificado": true
+  },
+  {
+   "id": "aria-con-duda-ante-un-mensaje-compartelo-a-dbec",
+   "archivo": "tematicos/verificar-informacion/aria-con-duda-ante-un-mensaje-compartelo-a-dbec.webp",
+   "svg": null,
+   "categoria": "tematicos",
+   "subcategoria": "verificar-informacion",
+   "descripcion": "ARIA con duda ante un mensaje «Compártelo a 10 amigos o tendrás mala suerte» y la pregunta «¿Será cierto?»",
+   "alt": "ARIA con duda ante un mensaje Compártelo a 10 amigos o tendrás mala suerte y la pregunta ¿Será cierto?",
+   "uso": "ARIA",
+   "tags": [
+    "4°",
+    "aria",
+    "bulo",
+    "cadena",
+    "compartir",
+    "tecnologia",
+    "verificar",
+    "verificar-informacion",
+    "whatsapp"
+   ],
+   "materia": [
+    "tecnologia"
+   ],
+   "grados": [
+    4
+   ],
+   "ancho": 468,
+   "alto": 297,
+   "transparente": true,
+   "tiene_texto": true,
+   "texto_es_contenido": true,
+   "texto": "rtelo igos mal sue",
+   "origen": "extraída de PROCESO_SUBIR_DE_GRADO (tec4) · clave «f6» · 2026-11-08",
+   "usada_en_origen": [
+    {
+     "doc": "Tecnologia4",
+     "slide": 8,
+     "titulo": "Actividad 2 · ¿Verdadero o falso?"
+    }
+   ],
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": [],
+   "recorte_verificado": true
+  },
+  {
+   "id": "aria-con-lista-de-chequeo-url-y-dominio-au-ad6a",
+   "archivo": "tematicos/verificar-informacion/aria-con-lista-de-chequeo-url-y-dominio-au-ad6a.webp",
+   "svg": null,
+   "categoria": "tematicos",
+   "subcategoria": "verificar-informacion",
+   "descripcion": "ARIA con lista de chequeo: URL y dominio, autor, fecha, fuentes",
+   "alt": "ARIA con lista de chequeo: URL y dominio, autor, fecha, fuentes",
+   "uso": "ARIA",
+   "tags": [
+    "4°",
+    "aria",
+    "autor",
+    "dominio",
+    "fecha",
+    "fuentes",
+    "lista-chequeo",
+    "tecnologia",
+    "url",
+    "verificar-informacion"
+   ],
+   "materia": [
+    "tecnologia"
+   ],
+   "grados": [
+    4
+   ],
+   "ancho": 451,
+   "alto": 304,
+   "transparente": true,
+   "tiene_texto": true,
+   "texto_es_contenido": true,
+   "texto": "dominio Autor Fecha Fuentes",
+   "origen": "extraída de PROCESO_SUBIR_DE_GRADO (tec4) · clave «f12» · 2026-11-08",
+   "usada_en_origen": [
+    {
+     "doc": "Tecnologia4",
+     "slide": 12,
+     "titulo": "Actividad 5 · Dominios y términos web"
+    }
+   ],
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": [],
+   "recorte_verificado": true
+  },
+  {
+   "id": "nino-frente-a-una-laptop-con-una-tabla-en-a6da",
+   "archivo": "tematicos/documentos-word/nino-frente-a-una-laptop-con-una-tabla-en-a6da.webp",
+   "svg": null,
+   "categoria": "tematicos",
+   "subcategoria": "documentos-word",
+   "descripcion": "Niño frente a una laptop con una tabla en pantalla y el globo «¡Mi tabla!»",
+   "alt": "Niño frente a una laptop con una tabla en pantalla y el globo ¡Mi tabla!",
+   "uso": "Niño frente a una laptop",
+   "tags": [
+    "4°",
+    "crear",
+    "documento",
+    "documentos-word",
+    "tabla",
+    "tecnologia",
+    "word"
+   ],
+   "materia": [
+    "tecnologia"
+   ],
+   "grados": [
+    4
+   ],
+   "ancho": 476,
+   "alto": 352,
+   "transparente": true,
+   "tiene_texto": false,
+   "texto_es_contenido": false,
+   "texto": "",
+   "origen": "extraída de PROCESO_SUBIR_DE_GRADO (tec4) · clave «f29» · 2026-11-08",
+   "usada_en_origen": [
+    {
+     "doc": "Tecnologia4",
+     "slide": 29,
+     "titulo": "Márgenes, interlineado, orientación e imágenes"
+    }
+   ],
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": [],
+   "recorte_verificado": true
+  },
+  {
+   "id": "barra-de-formato-con-iconos-negrita-cursiv-9e1e",
+   "archivo": "tematicos/documentos-word/barra-de-formato-con-iconos-negrita-cursiv-9e1e.webp",
+   "svg": null,
+   "categoria": "tematicos",
+   "subcategoria": "documentos-word",
+   "descripcion": "Barra de formato con iconos Negrita, Cursiva, Subrayado, Color, Viñetas y Numeración",
+   "alt": "Barra de formato con iconos Negrita, Cursiva, Subrayado, Color, Viñetas y Numeración",
+   "uso": "Barra de formato",
+   "tags": [
+    "4°",
+    "color",
+    "cursiva",
+    "documentos-word",
+    "formato",
+    "negrita",
+    "numeracion",
+    "subrayado",
+    "tecnologia",
+    "vinetas"
+   ],
+   "materia": [
+    "tecnologia"
+   ],
+   "grados": [
+    4
+   ],
+   "ancho": 499,
+   "alto": 226,
+   "transparente": true,
+   "tiene_texto": true,
+   "texto_es_contenido": true,
+   "texto": "Numeracion Cursiva",
+   "origen": "extraída de PROCESO_SUBIR_DE_GRADO (tec4) · clave «f25» · 2026-11-08",
+   "usada_en_origen": [
+    {
+     "doc": "Tecnologia4",
+     "slide": 27,
+     "titulo": "QUIZ 3 · Tablas, listas y estilos"
+    }
+   ],
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": [],
+   "recorte_verificado": true
+  },
+  {
+   "id": "sobre-con-clip-remitente-desconocido-y-una-6055",
+   "archivo": "tematicos/seguridad-digital/sobre-con-clip-remitente-desconocido-y-una-6055.webp",
+   "svg": null,
+   "categoria": "tematicos",
+   "subcategoria": "seguridad-digital",
+   "descripcion": "Sobre con clip «Remitente desconocido» y una mano roja de «No abrir»",
+   "alt": "Sobre con clip Remitente desconocido y una mano roja de No abrir",
+   "uso": "Sobre",
+   "tags": [
+    "4°",
+    "adjunto",
+    "correo",
+    "no-abrir",
+    "phishing",
+    "remitente-desconocido",
+    "seguridad-digital",
+    "tecnologia"
+   ],
+   "materia": [
+    "tecnologia"
+   ],
+   "grados": [
+    4
+   ],
+   "ancho": 454,
+   "alto": 259,
+   "transparente": true,
+   "tiene_texto": true,
+   "texto_es_contenido": true,
+   "texto": "abrir",
+   "origen": "extraída de PROCESO_SUBIR_DE_GRADO (tec4) · clave «f18» · 2026-11-08",
+   "usada_en_origen": [
+    {
+     "doc": "Tecnologia4",
+     "slide": 18,
+     "titulo": "Actividad 8 · ¿Segura o riesgosa?"
+    }
+   ],
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": [],
+   "recorte_verificado": true
+  },
+  {
+   "id": "candado-con-no-publicar-direccion-telefono-500b",
+   "archivo": "tematicos/seguridad-digital/candado-con-no-publicar-direccion-telefono-500b.webp",
+   "svg": null,
+   "categoria": "tematicos",
+   "subcategoria": "seguridad-digital",
+   "descripcion": "Candado con «NO publicar»: dirección, teléfono y colegio",
+   "alt": "Candado con NO publicar: dirección, teléfono y colegio",
+   "uso": "Candado",
+   "tags": [
+    "4°",
+    "candado",
+    "datos-personales",
+    "no-publicar",
+    "privacidad",
+    "seguridad-digital",
+    "tecnologia"
+   ],
+   "materia": [
+    "tecnologia"
+   ],
+   "grados": [
+    4
+   ],
+   "ancho": 473,
+   "alto": 276,
+   "transparente": true,
+   "tiene_texto": true,
+   "texto_es_contenido": true,
+   "texto": "Direccion Teléfono Colegio",
+   "origen": "extraída de PROCESO_SUBIR_DE_GRADO (tec4) · clave «f7» · 2026-11-08",
+   "usada_en_origen": [
+    {
+     "doc": "Tecnologia4",
+     "slide": 7,
+     "titulo": "¿Es confiable? Datos personales y uso responsable"
+    }
+   ],
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": [],
+   "recorte_verificado": true
+  },
+  {
+   "id": "aria-con-lupa-sobre-un-libro-con-fuente-pa-680a",
+   "archivo": "tematicos/internet/aria-con-lupa-sobre-un-libro-con-fuente-pa-680a.webp",
+   "svg": null,
+   "categoria": "tematicos",
+   "subcategoria": "internet",
+   "descripcion": "ARIA con lupa sobre un libro con «Fuente: página del colegio»",
+   "alt": "ARIA con lupa sobre un libro con Fuente: página del colegio",
+   "uso": "ARIA",
+   "tags": [
+    "4°",
+    "aria",
+    "citar",
+    "fuente",
+    "internet",
+    "investigar",
+    "libro",
+    "tecnologia"
+   ],
+   "materia": [
+    "tecnologia"
+   ],
+   "grados": [
+    4
+   ],
+   "ancho": 482,
+   "alto": 272,
+   "transparente": true,
+   "tiene_texto": true,
+   "texto_es_contenido": true,
+   "texto": "Fuente: pagina del",
+   "origen": "extraída de PROCESO_SUBIR_DE_GRADO (tec4) · clave «f8» · 2026-11-08",
+   "usada_en_origen": [
+    {
+     "doc": "Tecnologia4",
+     "slide": 9,
+     "titulo": "Actividad 3 · Completa los espacios"
+    }
+   ],
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": [],
+   "recorte_verificado": true
+  },
+  {
+   "id": "tarjetas-tipos-de-informacion-texto-imagen-28d1",
+   "archivo": "tematicos/internet/tarjetas-tipos-de-informacion-texto-imagen-28d1.webp",
+   "svg": null,
+   "categoria": "tematicos",
+   "subcategoria": "internet",
+   "descripcion": "Tarjetas «Tipos de información»: texto, imagen, video, audio e infografía",
+   "alt": "Tarjetas Tipos de información: texto, imagen, video, audio e infografía",
+   "uso": "Tarjetas «Tipos de información»",
+   "tags": [
+    "4°",
+    "audio",
+    "imagen",
+    "infografia",
+    "internet",
+    "tecnologia",
+    "texto",
+    "tipos-informacion",
+    "video"
+   ],
+   "materia": [
+    "tecnologia"
+   ],
+   "grados": [
+    4
+   ],
+   "ancho": 487,
+   "alto": 240,
+   "transparente": true,
+   "tiene_texto": true,
+   "texto_es_contenido": true,
+   "texto": "Tipos",
+   "origen": "extraída de PROCESO_SUBIR_DE_GRADO (tec4) · clave «f3» · 2026-11-08",
+   "usada_en_origen": [
+    {
+     "doc": "Tecnologia4",
+     "slide": 5,
+     "titulo": "Tipos de información en Internet"
+    }
+   ],
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": [],
+   "recorte_verificado": true
+  },
+  {
+   "id": "receta-jugo-de-naranja-con-4-pasos-numerad-6842",
+   "archivo": "tematicos/documentos-word/receta-jugo-de-naranja-con-4-pasos-numerad-6842.webp",
+   "svg": null,
+   "categoria": "tematicos",
+   "subcategoria": "documentos-word",
+   "descripcion": "Receta «Jugo de naranja» con 4 pasos numerados (lavar, exprimir, colar y servir) y un vaso con jugo",
+   "alt": "Receta Jugo de naranja con 4 pasos numerados (lavar, exprimir, colar y servir) y un vaso con jugo",
+   "uso": "Receta «Jugo de naranja»",
+   "tags": [
+    "4°",
+    "documento",
+    "documentos-word",
+    "lista-numerada",
+    "pasos",
+    "receta",
+    "tecnologia",
+    "word"
+   ],
+   "materia": [
+    "tecnologia"
+   ],
+   "grados": [
+    4
+   ],
+   "ancho": 457,
+   "alto": 282,
+   "transparente": true,
+   "tiene_texto": true,
+   "texto_es_contenido": true,
+   "texto": "Jugo Lavar las naranjas Exprimirlas Colar jugo Servir",
+   "origen": "extraída de PROCESO_SUBIR_DE_GRADO (tec4) · clave «f24» · 2026-11-08",
+   "usada_en_origen": [
+    {
+     "doc": "Tecnologia4",
+     "slide": 25,
+     "titulo": "Actividad 13 · Herramienta ↔ función"
+    }
+   ],
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": [],
+   "recorte_verificado": true
+  },
+  {
+   "id": "tres-tamanos-de-letra-aa-12-lectura-18-sub-c974",
+   "archivo": "tematicos/documentos-word/tres-tamanos-de-letra-aa-12-lectura-18-sub-c974.webp",
+   "svg": null,
+   "categoria": "tematicos",
+   "subcategoria": "documentos-word",
+   "descripcion": "Tres tamaños de letra «Aa»: 12 lectura, 18 subtítulo y 24 título",
+   "alt": "Tres tamaños de letra Aa: 12 lectura, 18 subtítulo y 24 título",
+   "uso": "Tres tamaños de letra «Aa»",
+   "tags": [
+    "4°",
+    "documentos-word",
+    "formato",
+    "fuente",
+    "subtitulo",
+    "tamano-letra",
+    "tecnologia",
+    "titulo",
+    "word"
+   ],
+   "materia": [
+    "tecnologia"
+   ],
+   "grados": [
+    4
+   ],
+   "ancho": 487,
+   "alto": 262,
+   "transparente": true,
+   "tiene_texto": false,
+   "texto_es_contenido": false,
+   "texto": "",
+   "origen": "extraída de PROCESO_SUBIR_DE_GRADO (tec4) · clave «f31» · 2026-11-08",
+   "usada_en_origen": [
+    {
+     "doc": "Tecnologia4",
+     "slide": 31,
+     "titulo": "Actividad 17 · Completa los espacios"
+    }
+   ],
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": [],
+   "recorte_verificado": true
+  },
+  {
+   "id": "nino-que-pulsa-cerrar-sesion-en-una-comput-030c",
+   "archivo": "tematicos/seguridad-digital/nino-que-pulsa-cerrar-sesion-en-una-comput-030c.webp",
+   "svg": null,
+   "categoria": "tematicos",
+   "subcategoria": "seguridad-digital",
+   "descripcion": "Niño que pulsa «Cerrar sesión» en una computadora",
+   "alt": "Niño que pulsa Cerrar sesión en una computadora",
+   "uso": "Niño que pulsa «Cerrar sesión» en una computadora",
+   "tags": [
+    "4°",
+    "cerrar-sesion",
+    "compartido",
+    "computador",
+    "cuenta",
+    "seguridad",
+    "seguridad-digital",
+    "tecnologia"
+   ],
+   "materia": [
+    "tecnologia"
+   ],
+   "grados": [
+    4
+   ],
+   "ancho": 473,
+   "alto": 275,
+   "transparente": true,
+   "tiene_texto": true,
+   "texto_es_contenido": true,
+   "texto": "sesion",
+   "origen": "extraída de PROCESO_SUBIR_DE_GRADO (tec4) · clave «f17» · 2026-11-08",
+   "usada_en_origen": [
+    {
+     "doc": "Tecnologia4",
+     "slide": 18,
+     "titulo": "Actividad 8 · ¿Segura o riesgosa?"
+    }
+   ],
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": [],
+   "recorte_verificado": true
+  },
+  {
+   "id": "dos-fotos-de-gato-estirada-x-y-proporciona-14c1",
+   "archivo": "tematicos/documentos-word/dos-fotos-de-gato-estirada-x-y-proporciona-14c1.webp",
+   "svg": null,
+   "categoria": "tematicos",
+   "subcategoria": "documentos-word",
+   "descripcion": "Dos fotos de gato: «estirada» (X) y «proporcional» (palomita) con «Arrastra de la esquina»",
+   "alt": "Dos fotos de gato: estirada (X) y proporcional (palomita) con Arrastra de la esquina",
+   "uso": "Dos fotos de gato",
+   "tags": [
+    "4°",
+    "ajustar",
+    "documentos-word",
+    "esquina",
+    "imagen",
+    "proporcional",
+    "tamano",
+    "tecnologia",
+    "word"
+   ],
+   "materia": [
+    "tecnologia"
+   ],
+   "grados": [
+    4
+   ],
+   "ancho": 476,
+   "alto": 294,
+   "transparente": true,
+   "tiene_texto": true,
+   "texto_es_contenido": true,
+   "texto": "Arrastra dela esquina estirada",
+   "origen": "extraída de PROCESO_SUBIR_DE_GRADO (tec4) · clave «f36» · 2026-11-08",
+   "usada_en_origen": [
+    {
+     "doc": "Tecnologia4",
+     "slide": 34,
+     "titulo": "Actividad 20 · Reto final"
+    }
+   ],
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": [],
+   "recorte_verificado": true
+  },
+  {
+   "id": "candado-con-una-contrasena-segura-luz-mar5-75c5",
+   "archivo": "tematicos/seguridad-digital/candado-con-una-contrasena-segura-luz-mar5-75c5.webp",
+   "svg": null,
+   "categoria": "tematicos",
+   "subcategoria": "seguridad-digital",
+   "descripcion": "Candado con una contraseña segura «Luz#Mar5» y requisitos: letras, números, símbolos",
+   "alt": "Candado con una contraseña segura Luz#Mar5 y requisitos: letras, números, símbolos",
+   "uso": "Candado",
+   "tags": [
+    "4°",
+    "candado",
+    "clave",
+    "contrasena",
+    "segura",
+    "seguridad-digital",
+    "simbolos",
+    "tecnologia"
+   ],
+   "materia": [
+    "tecnologia"
+   ],
+   "grados": [
+    4
+   ],
+   "ancho": 481,
+   "alto": 282,
+   "transparente": true,
+   "tiene_texto": true,
+   "texto_es_contenido": true,
+   "texto": "letras simbolos",
+   "origen": "extraída de PROCESO_SUBIR_DE_GRADO (tec4) · clave «f16» · 2026-11-08",
+   "usada_en_origen": [
+    {
+     "doc": "Tecnologia4",
+     "slide": 18,
+     "titulo": "Actividad 8 · ¿Segura o riesgosa?"
+    }
+   ],
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": [],
+   "recorte_verificado": true
+  },
+  {
+   "id": "ventanas-navegador-brujula-y-buscador-lupa-1804",
+   "archivo": "tematicos/internet/ventanas-navegador-brujula-y-buscador-lupa-1804.webp",
+   "svg": null,
+   "categoria": "tematicos",
+   "subcategoria": "internet",
+   "descripcion": "Ventanas «Navegador» (brújula) y «Buscador» (lupa)",
+   "alt": "Ventanas Navegador (brújula) y Buscador (lupa)",
+   "uso": "Ventanas «Navegador» (brújula) y «Buscador» (lupa)",
+   "tags": [
+    "4°",
+    "buscador",
+    "diferencia",
+    "internet",
+    "navegador",
+    "tecnologia"
+   ],
+   "materia": [
+    "tecnologia"
+   ],
+   "grados": [
+    4
+   ],
+   "ancho": 462,
+   "alto": 241,
+   "transparente": true,
+   "tiene_texto": true,
+   "texto_es_contenido": true,
+   "texto": "Buscador",
+   "origen": "extraída de PROCESO_SUBIR_DE_GRADO (tec4) · clave «f9» · 2026-11-08",
+   "usada_en_origen": [
+    {
+     "doc": "Tecnologia4",
+     "slide": 11,
+     "titulo": "Dominios y cómo reconocer una página confiable"
+    }
+   ],
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": [],
+   "recorte_verificado": true
+  },
+  {
+   "id": "busqueda-animales-colombia-para-ninos-con-f443",
+   "archivo": "tematicos/internet/busqueda-animales-colombia-para-ninos-con-f443.webp",
+   "svg": null,
+   "categoria": "tematicos",
+   "subcategoria": "internet",
+   "descripcion": "Búsqueda «animales Colombia para niños» con palabras clave señaladas y ARIA",
+   "alt": "Búsqueda animales Colombia para niños con palabras clave señaladas y ARIA",
+   "uso": "Búsqueda «animales Colombia para niños»",
+   "tags": [
+    "4°",
+    "aria",
+    "buscador",
+    "busqueda",
+    "internet",
+    "palabras-clave",
+    "tecnologia"
+   ],
+   "materia": [
+    "tecnologia"
+   ],
+   "grados": [
+    4
+   ],
+   "ancho": 476,
+   "alto": 261,
+   "transparente": true,
+   "tiene_texto": false,
+   "texto_es_contenido": false,
+   "texto": "rus",
+   "origen": "extraída de PROCESO_SUBIR_DE_GRADO (tec4) · clave «f2» · 2026-11-08",
+   "usada_en_origen": [
+    {
+     "doc": "Tecnologia4",
+     "slide": 4,
+     "titulo": "Bloque 1 · Buscar información en Internet"
+    }
+   ],
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": [],
+   "recorte_verificado": true
+  },
+  {
+   "id": "nino-senalando-una-tabla-de-horario-dia-ma-0185",
+   "archivo": "tematicos/documentos-word/nino-senalando-una-tabla-de-horario-dia-ma-0185.webp",
+   "svg": null,
+   "categoria": "tematicos",
+   "subcategoria": "documentos-word",
+   "descripcion": "Niño señalando una tabla de horario (día, materia, hora)",
+   "alt": "Niño señalando una tabla de horario (día, materia, hora)",
+   "uso": "Niño señalando una tabla de horario (día, materia, hora)",
+   "tags": [
+    "4°",
+    "columnas",
+    "documento",
+    "documentos-word",
+    "filas",
+    "horario",
+    "tabla",
+    "tecnologia",
+    "word"
+   ],
+   "materia": [
+    "tecnologia"
+   ],
+   "grados": [
+    4
+   ],
+   "ancho": 496,
+   "alto": 283,
+   "transparente": true,
+   "tiene_texto": true,
+   "texto_es_contenido": true,
+   "texto": "Materia Dia Hora 8:00 Martes Matematicas",
+   "origen": "extraída de PROCESO_SUBIR_DE_GRADO (tec4) · clave «f22» · 2026-11-08",
+   "usada_en_origen": [
+    {
+     "doc": "Tecnologia4",
+     "slide": 29,
+     "titulo": "Márgenes, interlineado, orientación e imágenes"
+    }
+   ],
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": [],
+   "recorte_verificado": true
+  },
+  {
+   "id": "gota-de-agua-con-el-cartel-cuida-el-agua-y-2c75",
+   "archivo": "tematicos/documentos-word/gota-de-agua-con-el-cartel-cuida-el-agua-y-2c75.webp",
+   "svg": null,
+   "categoria": "tematicos",
+   "subcategoria": "documentos-word",
+   "descripcion": "Gota de agua con el cartel «Cuida el agua» y tres acciones (cierra el grifo, reutiliza, repara fugas)",
+   "alt": "Gota de agua con el cartel Cuida el agua y tres acciones (cierra el grifo, reutiliza, repara fugas)",
+   "uso": "Gota de agua",
+   "tags": [
+    "4°",
+    "agua",
+    "documento",
+    "documentos-word",
+    "ejemplo",
+    "lista",
+    "tecnologia",
+    "viñetas"
+   ],
+   "materia": [
+    "tecnologia"
+   ],
+   "grados": [
+    4
+   ],
+   "ancho": 466,
+   "alto": 278,
+   "transparente": true,
+   "tiene_texto": true,
+   "texto_es_contenido": true,
+   "texto": "Cuida agua",
+   "origen": "extraída de PROCESO_SUBIR_DE_GRADO (tec4) · clave «f4» · 2026-11-08",
+   "usada_en_origen": [
+    {
+     "doc": "Tecnologia4",
+     "slide": 5,
+     "titulo": "Tipos de información en Internet"
+    }
+   ],
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": [],
+   "recorte_verificado": true
+  },
+  {
+   "id": "gato-luna-con-un-parrafo-que-usa-negrita-c-11a9",
+   "archivo": "tematicos/documentos-word/gato-luna-con-un-parrafo-que-usa-negrita-c-11a9.webp",
+   "svg": null,
+   "categoria": "tematicos",
+   "subcategoria": "documentos-word",
+   "descripcion": "Gato Luna con un párrafo que usa negrita, cursiva, subrayado y color",
+   "alt": "Gato Luna con un párrafo que usa negrita, cursiva, subrayado y color",
+   "uso": "Gato Luna",
+   "tags": [
+    "4°",
+    "color",
+    "cursiva",
+    "documentos-word",
+    "ejemplo",
+    "formato",
+    "negrita",
+    "subrayado",
+    "tecnologia",
+    "texto"
+   ],
+   "materia": [
+    "tecnologia"
+   ],
+   "grados": [
+    4
+   ],
+   "ancho": 487,
+   "alto": 291,
+   "transparente": true,
+   "tiene_texto": true,
+   "texto_es_contenido": true,
+   "texto": "mascota Luna muy curiosa. subrayado",
+   "origen": "extraída de PROCESO_SUBIR_DE_GRADO (tec4) · clave «f26» · 2026-11-08",
+   "usada_en_origen": [
+    {
+     "doc": "Tecnologia4",
+     "slide": 26,
+     "titulo": "Actividad 14 · Detective del formato"
+    }
+   ],
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": [],
+   "recorte_verificado": true
+  },
+  {
+   "id": "aria-que-pulsa-insertar-tabla-3-4-sobre-un-fc50",
+   "archivo": "tematicos/documentos-word/aria-que-pulsa-insertar-tabla-3-4-sobre-un-fc50.webp",
+   "svg": null,
+   "categoria": "tematicos",
+   "subcategoria": "documentos-word",
+   "descripcion": "ARIA que pulsa «Insertar tabla 3 × 4» sobre una tabla azul",
+   "alt": "ARIA que pulsa Insertar tabla 3 × 4 sobre una tabla azul",
+   "uso": "ARIA que pulsa «Insertar tabla 3 × 4» sobre una tabla azul",
+   "tags": [
+    "4°",
+    "aria",
+    "columnas",
+    "documentos-word",
+    "filas",
+    "insertar",
+    "tabla",
+    "tecnologia",
+    "word"
+   ],
+   "materia": [
+    "tecnologia"
+   ],
+   "grados": [
+    4
+   ],
+   "ancho": 486,
+   "alto": 281,
+   "transparente": true,
+   "tiene_texto": true,
+   "texto_es_contenido": true,
+   "texto": "tabla",
+   "origen": "extraída de PROCESO_SUBIR_DE_GRADO (tec4) · clave «f27» · 2026-11-08",
+   "usada_en_origen": [
+    {
+     "doc": "Tecnologia4",
+     "slide": 24,
+     "titulo": "Actividad 12 · Tablas y estilos"
+    }
+   ],
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": [],
+   "recorte_verificado": true
+  },
+  {
+   "id": "escudo-con-candado-rodeado-de-virus-intrus-522a",
+   "archivo": "tematicos/seguridad-digital/escudo-con-candado-rodeado-de-virus-intrus-522a.webp",
+   "svg": null,
+   "categoria": "tematicos",
+   "subcategoria": "seguridad-digital",
+   "descripcion": "Escudo con candado rodeado de virus, intruso, fraude y ventana rara",
+   "alt": "Escudo con candado rodeado de virus, intruso, fraude y ventana rara",
+   "uso": "Escudo",
+   "tags": [
+    "4°",
+    "amenazas",
+    "escudo",
+    "fraude",
+    "malware",
+    "seguridad",
+    "seguridad-digital",
+    "tecnologia",
+    "virus"
+   ],
+   "materia": [
+    "tecnologia"
+   ],
+   "grados": [
+    4
+   ],
+   "ancho": 440,
+   "alto": 292,
+   "transparente": true,
+   "tiene_texto": true,
+   "texto_es_contenido": true,
+   "texto": "ventana",
+   "origen": "extraída de PROCESO_SUBIR_DE_GRADO (tec4) · clave «f14» · 2026-11-08",
+   "usada_en_origen": [
+    {
+     "doc": "Tecnologia4",
+     "slide": 17,
+     "titulo": "Contraseñas seguras y buenas prácticas"
+    }
+   ],
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": [],
+   "recorte_verificado": true
+  },
+  {
+   "id": "tarjetas-confiable-autor-fecha-fuentes-y-n-1748",
+   "archivo": "tematicos/verificar-informacion/tarjetas-confiable-autor-fecha-fuentes-y-n-1748.webp",
+   "svg": null,
+   "categoria": "tematicos",
+   "subcategoria": "verificar-informacion",
+   "descripcion": "Tarjetas «Confiable» (autor, fecha, fuentes) y «No confiable» (sin autor, sin fuentes)",
+   "alt": "Tarjetas Confiable (autor, fecha, fuentes) y No confiable (sin autor, sin fuentes)",
+   "uso": "Tarjetas «Confiable» (autor, fecha, fuentes) y «No confiable» (sin autor, sin fu",
+   "tags": [
+    "4°",
+    "autor",
+    "confiable",
+    "fecha",
+    "fuente",
+    "tecnologia",
+    "verificar",
+    "verificar-informacion"
+   ],
+   "materia": [
+    "tecnologia"
+   ],
+   "grados": [
+    4
+   ],
+   "ancho": 448,
+   "alto": 273,
+   "transparente": true,
+   "tiene_texto": true,
+   "texto_es_contenido": true,
+   "texto": "Confiable confiable autor fecha fuentes",
+   "origen": "extraída de PROCESO_SUBIR_DE_GRADO (tec4) · clave «f5» · 2026-11-08",
+   "usada_en_origen": [
+    {
+     "doc": "Tecnologia4",
+     "slide": 7,
+     "titulo": "¿Es confiable? Datos personales y uso responsable"
+    }
+   ],
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": [],
+   "recorte_verificado": true
+  },
+  {
+   "id": "aria-con-lista-de-chequeo-letra-legible-ma-f41e",
+   "archivo": "tematicos/documentos-word/aria-con-lista-de-chequeo-letra-legible-ma-f41e.webp",
+   "svg": null,
+   "categoria": "tematicos",
+   "subcategoria": "documentos-word",
+   "descripcion": "ARIA con lista de chequeo: letra legible, márgenes, imagen proporcional y título centrado",
+   "alt": "ARIA con lista de chequeo: letra legible, márgenes, imagen proporcional y título centrado",
+   "uso": "ARIA",
+   "tags": [
+    "4°",
+    "aria",
+    "documento",
+    "documentos-word",
+    "formato",
+    "lista-chequeo",
+    "revisar",
+    "tecnologia"
+   ],
+   "materia": [
+    "tecnologia"
+   ],
+   "grados": [
+    4
+   ],
+   "ancho": 482,
+   "alto": 347,
+   "transparente": true,
+   "tiene_texto": true,
+   "texto_es_contenido": true,
+   "texto": "Lista chequeo Letra legible Margenes Imagen proporcional centrado",
+   "origen": "extraída de PROCESO_SUBIR_DE_GRADO (tec4) · clave «f39» · 2026-11-08",
+   "usada_en_origen": [],
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": [],
+   "recorte_verificado": true
+  },
+  {
+   "id": "pantalla-con-sobre-y-anzuelo-ganaste-un-pr-df47",
+   "archivo": "tematicos/seguridad-digital/pantalla-con-sobre-y-anzuelo-ganaste-un-pr-df47.webp",
+   "svg": null,
+   "categoria": "tematicos",
+   "subcategoria": "seguridad-digital",
+   "descripcion": "Pantalla con sobre y anzuelo: «¡Ganaste un premio! Haz clic aquí» (fraude)",
+   "alt": "Pantalla con sobre y anzuelo: ¡Ganaste un premio! Haz clic aquí (fraude)",
+   "uso": "Pantalla",
+   "tags": [
+    "4°",
+    "anzuelo",
+    "clic",
+    "correo",
+    "fraude",
+    "phishing",
+    "premio",
+    "seguridad-digital",
+    "tecnologia"
+   ],
+   "materia": [
+    "tecnologia"
+   ],
+   "grados": [
+    4
+   ],
+   "ancho": 457,
+   "alto": 297,
+   "transparente": true,
+   "tiene_texto": true,
+   "texto_es_contenido": true,
+   "texto": "fraude Haz clic aqui",
+   "origen": "extraída de PROCESO_SUBIR_DE_GRADO (tec4) · clave «f15» · 2026-11-08",
+   "usada_en_origen": [
+    {
+     "doc": "Tecnologia4",
+     "slide": 17,
+     "titulo": "Contraseñas seguras y buenas prácticas"
+    }
+   ],
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": [],
+   "recorte_verificado": true
+  },
+  {
+   "id": "detective-nina-con-lupa-sobre-un-documento-6bc4",
+   "archivo": "tematicos/detectives/detective-nina-con-lupa-sobre-un-documento-6bc4.webp",
+   "svg": null,
+   "categoria": "tematicos",
+   "subcategoria": "detectives",
+   "descripcion": "Detective niña con lupa sobre un documento: «¡Hay errores de formato!»",
+   "alt": "Detective niña con lupa sobre un documento: ¡Hay errores de formato!",
+   "uso": "Detective niña",
+   "tags": [
+    "4°",
+    "detective",
+    "detectives",
+    "documento",
+    "errores",
+    "formato",
+    "revisar",
+    "tecnologia"
+   ],
+   "materia": [
+    "tecnologia"
+   ],
+   "grados": [
+    4
+   ],
+   "ancho": 501,
+   "alto": 373,
+   "transparente": true,
+   "tiene_texto": true,
+   "texto_es_contenido": true,
+   "texto": "jHay rrores for mato!",
+   "origen": "extraída de PROCESO_SUBIR_DE_GRADO (tec4) · clave «f40» · 2026-11-08",
+   "usada_en_origen": [
+    {
+     "doc": "Tecnologia4",
+     "slide": 35,
+     "titulo": "📓 Trabajo escrito para entregar en tu cuaderno"
+    }
+   ],
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": [],
+   "recorte_verificado": true
+  },
+  {
+   "id": "banderines-de-dominios-com-tienda-edu-escu-5c7c",
+   "archivo": "tematicos/internet/banderines-de-dominios-com-tienda-edu-escu-5c7c.webp",
+   "svg": null,
+   "categoria": "tematicos",
+   "subcategoria": "internet",
+   "descripcion": "Banderines de dominios: .com tienda, .edu escuela, .gov.co gobierno, .org organización",
+   "alt": "Banderines de dominios: .com tienda, .edu escuela, .gov.co gobierno, .org organización",
+   "uso": "Banderines de dominios",
+   "tags": [
+    "4°",
+    "com",
+    "dominios",
+    "edu",
+    "gov",
+    "internet",
+    "org",
+    "tecnologia",
+    "url"
+   ],
+   "materia": [
+    "tecnologia"
+   ],
+   "grados": [
+    4
+   ],
+   "ancho": 481,
+   "alto": 231,
+   "transparente": true,
+   "tiene_texto": true,
+   "texto_es_contenido": true,
+   "texto": "com ‘org escuela gobierno organizacion",
+   "origen": "extraída de PROCESO_SUBIR_DE_GRADO (tec4) · clave «f11» · 2026-11-08",
+   "usada_en_origen": [
+    {
+     "doc": "Tecnologia4",
+     "slide": 12,
+     "titulo": "Actividad 5 · Dominios y términos web"
+    }
+   ],
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": [],
+   "recorte_verificado": true
+  },
+  {
+   "id": "aria-con-un-escudo-dividido-en-cuatro-cand-4bfc",
+   "archivo": "tematicos/seguridad-digital/aria-con-un-escudo-dividido-en-cuatro-cand-4bfc.webp",
+   "svg": null,
+   "categoria": "tematicos",
+   "subcategoria": "seguridad-digital",
+   "descripcion": "ARIA con un escudo dividido en cuatro (candado, puerta, mano, teléfono) y «Mi escudo digital»",
+   "alt": "ARIA con un escudo dividido en cuatro (candado, puerta, mano, teléfono) y Mi escudo digital",
+   "uso": "ARIA",
+   "tags": [
+    "4°",
+    "aria",
+    "escudo-digital",
+    "habitos",
+    "seguridad",
+    "seguridad-digital",
+    "tecnologia"
+   ],
+   "materia": [
+    "tecnologia"
+   ],
+   "grados": [
+    4
+   ],
+   "ancho": 474,
+   "alto": 347,
+   "transparente": true,
+   "tiene_texto": true,
+   "texto_es_contenido": true,
+   "texto": "escudo digital",
+   "origen": "extraída de PROCESO_SUBIR_DE_GRADO (tec4) · clave «f20» · 2026-11-08",
+   "usada_en_origen": [
+    {
+     "doc": "Tecnologia4",
+     "slide": 22,
+     "titulo": "Bloque 4 · Tablas en Word"
+    }
+   ],
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": [],
+   "recorte_verificado": true
+  },
+  {
+   "id": "diploma-con-una-lupa-y-la-pregunta-que-est-8a00",
+   "archivo": "tematicos/detectives/diploma-con-una-lupa-y-la-pregunta-que-est-8a00.webp",
+   "svg": null,
+   "categoria": "tematicos",
+   "subcategoria": "detectives",
+   "descripcion": "Diploma con una lupa y la pregunta «¿Qué está mal?»",
+   "alt": "Diploma con una lupa y la pregunta ¿Qué está mal?",
+   "uso": "Diploma",
+   "tags": [
+    "4°",
+    "detective",
+    "detectives",
+    "diploma",
+    "errores",
+    "formato",
+    "revisar",
+    "tecnologia"
+   ],
+   "materia": [
+    "tecnologia"
+   ],
+   "grados": [
+    4
+   ],
+   "ancho": 481,
+   "alto": 294,
+   "transparente": true,
+   "tiene_texto": true,
+   "texto_es_contenido": true,
+   "texto": "sta mal",
+   "origen": "extraída de PROCESO_SUBIR_DE_GRADO (tec4) · clave «f38» · 2026-11-08",
+   "usada_en_origen": [],
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": [],
+   "recorte_verificado": true
+  },
+  {
+   "id": "imagen-de-un-loro-dentro-de-un-texto-con-f-f8bb",
+   "archivo": "tematicos/documentos-word/imagen-de-un-loro-dentro-de-un-texto-con-f-f8bb.webp",
+   "svg": null,
+   "categoria": "tematicos",
+   "subcategoria": "documentos-word",
+   "descripcion": "Imagen de un loro dentro de un texto con flechas y el título «Ajustar texto»",
+   "alt": "Imagen de un loro dentro de un texto con flechas y el título Ajustar texto",
+   "uso": "Imagen de un loro dentro de un texto",
+   "tags": [
+    "4°",
+    "ajustar",
+    "ajuste",
+    "documentos-word",
+    "imagen",
+    "tecnologia",
+    "texto",
+    "word"
+   ],
+   "materia": [
+    "tecnologia"
+   ],
+   "grados": [
+    4
+   ],
+   "ancho": 453,
+   "alto": 290,
+   "transparente": true,
+   "tiene_texto": true,
+   "texto_es_contenido": true,
+   "texto": "Ajustar texto",
+   "origen": "extraída de PROCESO_SUBIR_DE_GRADO (tec4) · clave «f37» · 2026-11-08",
+   "usada_en_origen": [
+    {
+     "doc": "Tecnologia4",
+     "slide": 34,
+     "titulo": "Actividad 20 · Reto final"
+    }
+   ],
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": [],
+   "recorte_verificado": true
+  },
+  {
+   "id": "hoja-con-margenes-senalados-superior-infer-0002",
+   "archivo": "tematicos/documentos-word/hoja-con-margenes-senalados-superior-infer-0002.webp",
+   "svg": null,
+   "categoria": "tematicos",
+   "subcategoria": "documentos-word",
+   "descripcion": "Hoja con márgenes señalados (superior, inferior, izquierdo y derecho)",
+   "alt": "Hoja con márgenes señalados (superior, inferior, izquierdo y derecho)",
+   "uso": "Hoja",
+   "tags": [
+    "4°",
+    "documento",
+    "documentos-word",
+    "formato",
+    "margenes",
+    "pagina",
+    "tecnologia",
+    "word"
+   ],
+   "materia": [
+    "tecnologia"
+   ],
+   "grados": [
+    4
+   ],
+   "ancho": 447,
+   "alto": 292,
+   "transparente": true,
+   "tiene_texto": true,
+   "texto_es_contenido": true,
+   "texto": "Margenes",
+   "origen": "extraída de PROCESO_SUBIR_DE_GRADO (tec4) · clave «f33» · 2026-11-08",
+   "usada_en_origen": [
+    {
+     "doc": "Tecnologia4",
+     "slide": 32,
+     "titulo": "Actividad 18 · Detective del formato"
+    }
+   ],
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": [],
+   "recorte_verificado": true
+  },
+  {
+   "id": "nina-senalando-una-lista-mis-utiles-cuader-5980",
+   "archivo": "tematicos/documentos-word/nina-senalando-una-lista-mis-utiles-cuader-5980.webp",
+   "svg": null,
+   "categoria": "tematicos",
+   "subcategoria": "documentos-word",
+   "descripcion": "Niña señalando una lista «Mis útiles»: cuaderno, lápiz, regla, colores",
+   "alt": "Niña señalando una lista Mis útiles: cuaderno, lápiz, regla, colores",
+   "uso": "Niña señalando una lista «Mis útiles»",
+   "tags": [
+    "4°",
+    "documento",
+    "documentos-word",
+    "ejemplo",
+    "lista",
+    "tecnologia",
+    "utiles",
+    "vinetas"
+   ],
+   "materia": [
+    "tecnologia"
+   ],
+   "grados": [
+    4
+   ],
+   "ancho": 485,
+   "alto": 297,
+   "transparente": true,
+   "tiene_texto": true,
+   "texto_es_contenido": true,
+   "texto": "Mis utiles Cuaderno Lapiz Regla Colores",
+   "origen": "extraída de PROCESO_SUBIR_DE_GRADO (tec4) · clave «f23» · 2026-11-08",
+   "usada_en_origen": [
+    {
+     "doc": "Tecnologia4",
+     "slide": 25,
+     "titulo": "Actividad 13 · Herramienta ↔ función"
+    }
+   ],
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": [],
+   "recorte_verificado": true
+  },
+  {
+   "id": "dos-hojas-orientacion-vertical-y-horizonta-d065",
+   "archivo": "tematicos/documentos-word/dos-hojas-orientacion-vertical-y-horizonta-d065.webp",
+   "svg": null,
+   "categoria": "tematicos",
+   "subcategoria": "documentos-word",
+   "descripcion": "Dos hojas «Orientación»: vertical y horizontal",
+   "alt": "Dos hojas Orientación: vertical y horizontal",
+   "uso": "Dos hojas «Orientación»",
+   "tags": [
+    "4°",
+    "documento",
+    "documentos-word",
+    "horizontal",
+    "orientacion",
+    "pagina",
+    "tecnologia",
+    "vertical",
+    "word"
+   ],
+   "materia": [
+    "tecnologia"
+   ],
+   "grados": [
+    4
+   ],
+   "ancho": 435,
+   "alto": 280,
+   "transparente": true,
+   "tiene_texto": true,
+   "texto_es_contenido": true,
+   "texto": "Orientacion",
+   "origen": "extraída de PROCESO_SUBIR_DE_GRADO (tec4) · clave «f35» · 2026-11-08",
+   "usada_en_origen": [
+    {
+     "doc": "Tecnologia4",
+     "slide": 32,
+     "titulo": "Actividad 18 · Detective del formato"
+    }
+   ],
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": [],
+   "recorte_verificado": true
+  },
+  {
+   "id": "aria-con-un-planeta-y-cohete-frente-a-la-b-9708",
+   "archivo": "tematicos/internet/aria-con-un-planeta-y-cohete-frente-a-la-b-9708.webp",
+   "svg": null,
+   "categoria": "tematicos",
+   "subcategoria": "internet",
+   "descripcion": "ARIA con un planeta y cohete frente a la búsqueda «planetas del sistema solar para niños»",
+   "alt": "ARIA con un planeta y cohete frente a la búsqueda planetas del sistema solar para niños",
+   "uso": "ARIA",
+   "tags": [
+    "4°",
+    "aria",
+    "buscador",
+    "busqueda",
+    "internet",
+    "palabras-clave",
+    "sistema-solar",
+    "tecnologia"
+   ],
+   "materia": [
+    "tecnologia"
+   ],
+   "grados": [
+    4
+   ],
+   "ancho": 458,
+   "alto": 251,
+   "transparente": true,
+   "tiene_texto": false,
+   "texto_es_contenido": false,
+   "texto": "",
+   "origen": "extraída de PROCESO_SUBIR_DE_GRADO (tec4) · clave «f1» · 2026-11-08",
+   "usada_en_origen": [
+    {
+     "doc": "Tecnologia4",
+     "slide": 4,
+     "titulo": "Bloque 1 · Buscar información en Internet"
+    }
+   ],
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": [],
+   "recorte_verificado": true
+  },
+  {
+   "id": "barra-de-direccion-url-direccion-completa-b718",
+   "archivo": "tematicos/internet/barra-de-direccion-url-direccion-completa-b718.webp",
+   "svg": null,
+   "categoria": "tematicos",
+   "subcategoria": "internet",
+   "descripcion": "Barra de dirección: «URL = dirección completa» y «.gov.co = dominio»",
+   "alt": "Barra de dirección: URL = dirección completa y .gov.co = dominio",
+   "uso": "Barra de dirección",
+   "tags": [
+    "4°",
+    "direccion-web",
+    "dominio",
+    "gov",
+    "internet",
+    "tecnologia",
+    "url"
+   ],
+   "materia": [
+    "tecnologia"
+   ],
+   "grados": [
+    4
+   ],
+   "ancho": 476,
+   "alto": 229,
+   "transparente": true,
+   "tiene_texto": false,
+   "texto_es_contenido": false,
+   "texto": "",
+   "origen": "extraída de PROCESO_SUBIR_DE_GRADO (tec4) · clave «f10» · 2026-11-08",
+   "usada_en_origen": [
+    {
+     "doc": "Tecnologia4",
+     "slide": 11,
+     "titulo": "Dominios y cómo reconocer una página confiable"
+    }
+   ],
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": [],
+   "recorte_verificado": true
+  },
+  {
+   "id": "nina-celebrando-con-los-brazos-arriba-ante-cabe",
+   "archivo": "tematicos/trabajo-escrito/nina-celebrando-con-los-brazos-arriba-ante-cabe.webp",
+   "svg": null,
+   "categoria": "tematicos",
+   "subcategoria": "trabajo-escrito",
+   "descripcion": "Niña celebrando con los brazos arriba ante una laptop con palomita verde y estrellas",
+   "alt": "Niña celebrando con los brazos arriba ante una laptop con palomita verde y estrellas",
+   "uso": "Niña celebrando",
+   "tags": [
+    "4°",
+    "celebracion",
+    "laptop",
+    "logro",
+    "tecnologia",
+    "trabajo-escrito",
+    "trabajo-terminado"
+   ],
+   "materia": [
+    "tecnologia"
+   ],
+   "grados": [
+    4
+   ],
+   "ancho": 489,
+   "alto": 351,
+   "transparente": true,
+   "tiene_texto": false,
+   "texto_es_contenido": false,
+   "texto": "",
+   "origen": "extraída de PROCESO_SUBIR_DE_GRADO (tec4) · clave «f30» · 2026-11-08",
+   "usada_en_origen": [],
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": [],
+   "recorte_verificado": true
+  },
+  {
+   "id": "dos-textos-interlineado-sencillo-y-1-5-f5c5",
+   "archivo": "tematicos/documentos-word/dos-textos-interlineado-sencillo-y-1-5-f5c5.webp",
+   "svg": null,
+   "categoria": "tematicos",
+   "subcategoria": "documentos-word",
+   "descripcion": "Dos textos «Interlineado»: sencillo y 1,5",
+   "alt": "Dos textos Interlineado: sencillo y 1,5",
+   "uso": "Dos textos «Interlineado»",
+   "tags": [
+    "4°",
+    "documentos-word",
+    "espacio",
+    "formato",
+    "interlineado",
+    "tecnologia",
+    "texto",
+    "word"
+   ],
+   "materia": [
+    "tecnologia"
+   ],
+   "grados": [
+    4
+   ],
+   "ancho": 443,
+   "alto": 272,
+   "transparente": true,
+   "tiene_texto": false,
+   "texto_es_contenido": false,
+   "texto": "",
+   "origen": "extraída de PROCESO_SUBIR_DE_GRADO (tec4) · clave «f34» · 2026-11-08",
+   "usada_en_origen": [
+    {
+     "doc": "Tecnologia4",
+     "slide": 33,
+     "titulo": "QUIZ 4 · Edición de documentos y repaso"
+    }
+   ],
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": [],
+   "recorte_verificado": true
+  },
+  {
+   "id": "nina-con-lupa-ante-una-laptop-que-muestra-978a",
+   "archivo": "tematicos/internet/nina-con-lupa-ante-una-laptop-que-muestra-978a.webp",
+   "svg": null,
+   "categoria": "tematicos",
+   "subcategoria": "internet",
+   "descripcion": "Niña con lupa ante una laptop que muestra «animales en peligro de Colombia» con un jaguar",
+   "alt": "Niña con lupa ante una laptop que muestra animales en peligro de Colombia con un jaguar",
+   "uso": "Niña",
+   "tags": [
+    "4°",
+    "animales",
+    "busqueda",
+    "colombia",
+    "internet",
+    "investigar",
+    "navegador",
+    "tecnologia"
+   ],
+   "materia": [
+    "tecnologia"
+   ],
+   "grados": [
+    4
+   ],
+   "ancho": 480,
+   "alto": 331,
+   "transparente": true,
+   "tiene_texto": true,
+   "texto_es_contenido": true,
+   "texto": "Colom imales pel",
+   "origen": "extraída de PROCESO_SUBIR_DE_GRADO (tec4) · clave «f13» · 2026-11-08",
+   "usada_en_origen": [
+    {
+     "doc": "Tecnologia4",
+     "slide": 10,
+     "titulo": "Bloque 2 · Navegador, buscador y URL"
+    }
+   ],
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": [],
+   "recorte_verificado": true
+  },
+  {
+   "id": "nino-incomodo-que-dice-esto-me-incomoda-y-d04d",
+   "archivo": "tematicos/seguridad-digital/nino-incomodo-que-dice-esto-me-incomoda-y-d04d.webp",
+   "svg": null,
+   "categoria": "tematicos",
+   "subcategoria": "seguridad-digital",
+   "descripcion": "Niño incómodo que dice «¡Esto me incomoda!» y cuenta lo que vio a una persona adulta",
+   "alt": "Niño incómodo que dice ¡Esto me incomoda! y cuenta lo que vio a una persona adulta",
+   "uso": "Niño incómodo que dice «¡Esto me incomoda!» y cuenta lo que vio a una persona ad",
+   "tags": [
+    "4°",
+    "adulto",
+    "confianza",
+    "incomodo",
+    "pedir-ayuda",
+    "riesgos-en-linea",
+    "seguridad-digital",
+    "tecnologia"
+   ],
+   "materia": [
+    "tecnologia"
+   ],
+   "grados": [
+    4
+   ],
+   "ancho": 488,
+   "alto": 320,
+   "transparente": true,
+   "tiene_texto": false,
+   "texto_es_contenido": false,
+   "texto": "",
+   "origen": "extraída de PROCESO_SUBIR_DE_GRADO (tec4) · clave «f19» · 2026-11-08",
+   "usada_en_origen": [
+    {
+     "doc": "Tecnologia4",
+     "slide": 17,
+     "titulo": "Contraseñas seguras y buenas prácticas"
+    }
+   ],
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": [],
+   "recorte_verificado": true
+  },
+  {
+   "id": "diagrama-de-tabla-con-encabezado-columna-f-a03b",
+   "archivo": "tematicos/documentos-word/diagrama-de-tabla-con-encabezado-columna-f-a03b.webp",
+   "svg": null,
+   "categoria": "tematicos",
+   "subcategoria": "documentos-word",
+   "descripcion": "Diagrama de tabla con encabezado, columna, fila y celda señalados",
+   "alt": "Diagrama de tabla con encabezado, columna, fila y celda señalados",
+   "uso": "Diagrama de tabla",
+   "tags": [
+    "4°",
+    "celda",
+    "columna",
+    "documentos-word",
+    "encabezado",
+    "fila",
+    "partes",
+    "tabla",
+    "tecnologia",
+    "word"
+   ],
+   "materia": [
+    "tecnologia"
+   ],
+   "grados": [
+    4
+   ],
+   "ancho": 476,
+   "alto": 299,
+   "transparente": true,
+   "tiene_texto": false,
+   "texto_es_contenido": false,
+   "texto": "",
+   "origen": "extraída de PROCESO_SUBIR_DE_GRADO (tec4) · clave «f21» · 2026-11-08",
+   "usada_en_origen": [
+    {
+     "doc": "Tecnologia4",
+     "slide": 24,
+     "titulo": "Actividad 12 · Tablas y estilos"
+    }
+   ],
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": [],
+   "recorte_verificado": true
+  },
+  {
+   "id": "cuatro-alineaciones-de-texto-izquierda-cen-7472",
+   "archivo": "tematicos/documentos-word/cuatro-alineaciones-de-texto-izquierda-cen-7472.webp",
+   "svg": null,
+   "categoria": "tematicos",
+   "subcategoria": "documentos-word",
+   "descripcion": "Cuatro alineaciones de texto: izquierda, centrada, derecha y justificada",
+   "alt": "Cuatro alineaciones de texto: izquierda, centrada, derecha y justificada",
+   "uso": "Cuatro alineaciones de texto",
+   "tags": [
+    "4°",
+    "alineacion",
+    "centrada",
+    "derecha",
+    "documentos-word",
+    "izquierda",
+    "justificada",
+    "tecnologia",
+    "texto"
+   ],
+   "materia": [
+    "tecnologia"
+   ],
+   "grados": [
+    4
+   ],
+   "ancho": 474,
+   "alto": 258,
+   "transparente": true,
+   "tiene_texto": false,
+   "texto_es_contenido": false,
+   "texto": "",
+   "origen": "extraída de PROCESO_SUBIR_DE_GRADO (tec4) · clave «f32» · 2026-11-08",
+   "usada_en_origen": [
+    {
+     "doc": "Tecnologia4",
+     "slide": 31,
+     "titulo": "Actividad 17 · Completa los espacios"
+    }
+   ],
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": [],
+   "recorte_verificado": true
+  },
+  {
+   "id": "aria-con-lista-habitos-seguros-antivirus-a-8d9b",
+   "archivo": "tematicos/seguridad-digital/aria-con-lista-habitos-seguros-antivirus-a-8d9b.webp",
+   "svg": null,
+   "categoria": "tematicos",
+   "subcategoria": "seguridad-digital",
+   "descripcion": "ARIA con lista «Hábitos seguros»: antivirus actualizado, contraseñas distintas, no abrir adjuntos raros, avisar a un adulto",
+   "alt": "ARIA con lista Hábitos seguros: antivirus actualizado, contraseñas distintas, no abrir adjuntos raros, avisar a un adulto",
+   "uso": "ARIA",
+   "tags": [
+    "5°",
+    "adjuntos",
+    "antivirus",
+    "aria",
+    "contrasena",
+    "habitos-seguros",
+    "seguridad-digital",
+    "tecnologia"
+   ],
+   "materia": [
+    "tecnologia"
+   ],
+   "grados": [
+    5
+   ],
+   "ancho": 469,
+   "alto": 307,
+   "transparente": true,
+   "tiene_texto": true,
+   "texto_es_contenido": true,
+   "texto": "Antivirus actualizado distintas adulto",
+   "origen": "extraída de PROCESO_SUBIR_DE_GRADO (tec5) · clave «f28» · 2026-11-08",
+   "usada_en_origen": [
+    {
+     "doc": "Tecnologia5",
+     "slide": 25,
+     "titulo": "Actividad 14 · Hábitos seguros e inseguros"
+    }
+   ],
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": [],
+   "recorte_verificado": true
+  },
+  {
+   "id": "pulgar-con-cartel-10-000-me-gusta-verdad-t-dddf",
+   "archivo": "tematicos/verificar-informacion/pulgar-con-cartel-10-000-me-gusta-verdad-t-dddf.webp",
+   "svg": null,
+   "categoria": "tematicos",
+   "subcategoria": "verificar-informacion",
+   "descripcion": "Pulgar con cartel «10.000 me gusta = verdad» tachado con una X",
+   "alt": "Pulgar con cartel 10.000 me gusta = verdad tachado con una X",
+   "uso": "Pulgar",
+   "tags": [
+    "5°",
+    "me-gusta",
+    "opinion",
+    "popular-no-es-verdad",
+    "tecnologia",
+    "verificar",
+    "verificar-informacion"
+   ],
+   "materia": [
+    "tecnologia"
+   ],
+   "grados": [
+    5
+   ],
+   "ancho": 493,
+   "alto": 266,
+   "transparente": true,
+   "tiene_texto": true,
+   "texto_es_contenido": true,
+   "texto": "gusta",
+   "origen": "extraída de PROCESO_SUBIR_DE_GRADO (tec5) · clave «f6» · 2026-11-08",
+   "usada_en_origen": [
+    {
+     "doc": "Tecnologia5",
+     "slide": 5,
+     "titulo": "¿Es confiable esta información?"
+    }
+   ],
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": [],
+   "recorte_verificado": true
+  },
+  {
+   "id": "cuaderno-con-mis-palabras-palomita-y-copia-4026",
+   "archivo": "tematicos/trabajo-escrito/cuaderno-con-mis-palabras-palomita-y-copia-4026.webp",
+   "svg": null,
+   "categoria": "tematicos",
+   "subcategoria": "trabajo-escrito",
+   "descripcion": "Cuaderno con «Mis palabras» (palomita) y «copiar y pegar» (X)",
+   "alt": "Cuaderno con Mis palabras (palomita) y copiar y pegar (X)",
+   "uso": "Cuaderno",
+   "tags": [
+    "5°",
+    "copiar",
+    "parafrasear",
+    "plagio",
+    "propias-palabras",
+    "tecnologia",
+    "trabajo-escrito"
+   ],
+   "materia": [
+    "tecnologia"
+   ],
+   "grados": [
+    5
+   ],
+   "ancho": 452,
+   "alto": 303,
+   "transparente": true,
+   "tiene_texto": false,
+   "texto_es_contenido": false,
+   "texto": "",
+   "origen": "extraída de PROCESO_SUBIR_DE_GRADO (tec5) · clave «f12» · 2026-11-08",
+   "usada_en_origen": [
+    {
+     "doc": "Tecnologia5",
+     "slide": 12,
+     "titulo": "Actividad 6 · Palabra ↔ significado"
+    }
+   ],
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": [],
+   "recorte_verificado": true
+  },
+  {
+   "id": "archivo-foto-jpg-exe-con-alerta-roja-y-el-0d4c",
+   "archivo": "tematicos/seguridad-digital/archivo-foto-jpg-exe-con-alerta-roja-y-el-0d4c.webp",
+   "svg": null,
+   "categoria": "tematicos",
+   "subcategoria": "seguridad-digital",
+   "descripcion": "Archivo «foto.jpg.exe» con alerta roja y el letrero «Archivo sospechoso»",
+   "alt": "Archivo foto.jpg.exe con alerta roja y el letrero Archivo sospechoso",
+   "uso": "Archivo «foto.jpg.exe»",
+   "tags": [
+    "5°",
+    "adjunto",
+    "archivo-sospechoso",
+    "exe",
+    "extension",
+    "seguridad-digital",
+    "tecnologia",
+    "virus"
+   ],
+   "materia": [
+    "tecnologia"
+   ],
+   "grados": [
+    5
+   ],
+   "ancho": 408,
+   "alto": 289,
+   "transparente": true,
+   "tiene_texto": true,
+   "texto_es_contenido": true,
+   "texto": "Archivo sospechoso",
+   "origen": "extraída de PROCESO_SUBIR_DE_GRADO (tec5) · clave «f29» · 2026-11-08",
+   "usada_en_origen": [
+    {
+     "doc": "Tecnologia5",
+     "slide": 29,
+     "titulo": "Los pioneros de Internet"
+    }
+   ],
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": [],
+   "recorte_verificado": true
+  },
+  {
+   "id": "mapa-del-mundo-con-computadoras-y-flechas-0f4d",
+   "archivo": "tematicos/historia-internet/mapa-del-mundo-con-computadoras-y-flechas-0f4d.webp",
+   "svg": null,
+   "categoria": "tematicos",
+   "subcategoria": "historia-internet",
+   "descripcion": "Mapa del mundo con computadoras y flechas rojas que se expanden: «Año 2000»",
+   "alt": "Mapa del mundo con computadoras y flechas rojas que se expanden: Año 2000",
+   "uso": "Mapa del mundo",
+   "tags": [
+    "2000",
+    "5°",
+    "expansion",
+    "historia",
+    "historia-internet",
+    "internet",
+    "mundo",
+    "tecnologia"
+   ],
+   "materia": [
+    "tecnologia"
+   ],
+   "grados": [
+    5
+   ],
+   "ancho": 457,
+   "alto": 274,
+   "transparente": true,
+   "tiene_texto": false,
+   "texto_es_contenido": false,
+   "texto": "",
+   "origen": "extraída de PROCESO_SUBIR_DE_GRADO (tec5) · clave «f25» · 2026-11-08",
+   "usada_en_origen": [
+    {
+     "doc": "Tecnologia5",
+     "slide": 25,
+     "titulo": "Actividad 14 · Hábitos seguros e inseguros"
+    }
+   ],
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": [],
+   "recorte_verificado": true
+  },
+  {
+   "id": "aria-detective-con-lupa-y-comparo-en-otras-825c",
+   "archivo": "tematicos/verificar-informacion/aria-detective-con-lupa-y-comparo-en-otras-825c.webp",
+   "svg": null,
+   "categoria": "tematicos",
+   "subcategoria": "verificar-informacion",
+   "descripcion": "ARIA detective con lupa y «Comparo en otras fuentes»",
+   "alt": "ARIA detective con lupa y Comparo en otras fuentes",
+   "uso": "ARIA detective",
+   "tags": [
+    "5°",
+    "aria",
+    "comparar",
+    "detective",
+    "fuentes",
+    "tecnologia",
+    "verificar",
+    "verificar-informacion"
+   ],
+   "materia": [
+    "tecnologia"
+   ],
+   "grados": [
+    5
+   ],
+   "ancho": 475,
+   "alto": 318,
+   "transparente": true,
+   "tiene_texto": true,
+   "texto_es_contenido": true,
+   "texto": "omparo fuentes",
+   "origen": "extraída de PROCESO_SUBIR_DE_GRADO (tec5) · clave «f18» · 2026-11-08",
+   "usada_en_origen": [
+    {
+     "doc": "Tecnologia5",
+     "slide": 18,
+     "titulo": "Actividad 9 · ¿Hecho u opinión?"
+    }
+   ],
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": [],
+   "recorte_verificado": true
+  },
+  {
+   "id": "megafono-con-oferta-compra-ya-y-la-etiquet-263e",
+   "archivo": "tematicos/verificar-informacion/megafono-con-oferta-compra-ya-y-la-etiquet-263e.webp",
+   "svg": null,
+   "categoria": "tematicos",
+   "subcategoria": "verificar-informacion",
+   "descripcion": "Megáfono con «¡Oferta! Compra ya» y la etiqueta «publicidad»",
+   "alt": "Megáfono con ¡Oferta! Compra ya y la etiqueta publicidad",
+   "uso": "Megáfono",
+   "tags": [
+    "5°",
+    "oferta",
+    "persuadir",
+    "publicidad",
+    "tecnologia",
+    "tipos-informacion",
+    "verificar-informacion"
+   ],
+   "materia": [
+    "tecnologia"
+   ],
+   "grados": [
+    5
+   ],
+   "ancho": 480,
+   "alto": 264,
+   "transparente": true,
+   "tiene_texto": true,
+   "texto_es_contenido": true,
+   "texto": "Compra publicidad",
+   "origen": "extraída de PROCESO_SUBIR_DE_GRADO (tec5) · clave «f7» · 2026-11-08",
+   "usada_en_origen": [
+    {
+     "doc": "Tecnologia5",
+     "slide": 4,
+     "titulo": "Bloque 1 · Tipos de información y fuentes"
+    }
+   ],
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": [],
+   "recorte_verificado": true
+  },
+  {
+   "id": "escalera-de-4-pasos-para-verificar-1-autor-3a99",
+   "archivo": "tematicos/verificar-informacion/escalera-de-4-pasos-para-verificar-1-autor-3a99.webp",
+   "svg": null,
+   "categoria": "tematicos",
+   "subcategoria": "verificar-informacion",
+   "descripcion": "Escalera de 4 pasos para verificar: 1 Autor, 2 Fecha, 3 Fuentes, 4 Comparar",
+   "alt": "Escalera de 4 pasos para verificar: 1 Autor, 2 Fecha, 3 Fuentes, 4 Comparar",
+   "uso": "Escalera de 4 pasos para verificar",
+   "tags": [
+    "5°",
+    "autor",
+    "comparar",
+    "fecha",
+    "fuentes",
+    "pasos",
+    "tecnologia",
+    "verificar",
+    "verificar-informacion"
+   ],
+   "materia": [
+    "tecnologia"
+   ],
+   "grados": [
+    5
+   ],
+   "ancho": 442,
+   "alto": 247,
+   "transparente": true,
+   "tiene_texto": true,
+   "texto_es_contenido": true,
+   "texto": "Comparar Fecha Autor",
+   "origen": "extraída de PROCESO_SUBIR_DE_GRADO (tec5) · clave «f8» · 2026-11-08",
+   "usada_en_origen": [
+    {
+     "doc": "Tecnologia5",
+     "slide": 7,
+     "titulo": "Actividad 2 · ¿Confiable o no?"
+    }
+   ],
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": [],
+   "recorte_verificado": true
+  },
+  {
+   "id": "aria-con-un-video-como-armar-una-maqueta-p-5b19",
+   "archivo": "tematicos/internet/aria-con-un-video-como-armar-una-maqueta-p-5b19.webp",
+   "svg": null,
+   "categoria": "tematicos",
+   "subcategoria": "internet",
+   "descripcion": "ARIA con un video «Cómo armar una maqueta paso a paso» en una pantalla",
+   "alt": "ARIA con un video Cómo armar una maqueta paso a paso en una pantalla",
+   "uso": "ARIA",
+   "tags": [
+    "5°",
+    "aria",
+    "internet",
+    "tecnologia",
+    "tipos-informacion",
+    "tutorial",
+    "video"
+   ],
+   "materia": [
+    "tecnologia"
+   ],
+   "grados": [
+    5
+   ],
+   "ancho": 475,
+   "alto": 299,
+   "transparente": true,
+   "tiene_texto": true,
+   "texto_es_contenido": true,
+   "texto": "Como armar una maqueta paso paso",
+   "origen": "extraída de PROCESO_SUBIR_DE_GRADO (tec5) · clave «f3» · 2026-11-08",
+   "usada_en_origen": [
+    {
+     "doc": "Tecnologia5",
+     "slide": 4,
+     "titulo": "Bloque 1 · Tipos de información y fuentes"
+    }
+   ],
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": [],
+   "recorte_verificado": true
+  },
+  {
+   "id": "correo-con-el-asunto-iloveyou-y-el-archivo-a847",
+   "archivo": "tematicos/seguridad-digital/correo-con-el-asunto-iloveyou-y-el-archivo-a847.webp",
+   "svg": null,
+   "categoria": "tematicos",
+   "subcategoria": "seguridad-digital",
+   "descripcion": "Correo con el asunto «ILOVEYOU» y el archivo LOVE-LETTER-FOR-YOU.TXT.vbs con alerta roja",
+   "alt": "Correo con el asunto ILOVEYOU y el archivo LOVE-LETTER-FOR-YOU.TXT.vbs con alerta roja",
+   "uso": "Correo",
+   "tags": [
+    "5°",
+    "adjunto",
+    "correo",
+    "gusano",
+    "historia",
+    "iloveyou",
+    "seguridad-digital",
+    "tecnologia",
+    "virus"
+   ],
+   "materia": [
+    "tecnologia"
+   ],
+   "grados": [
+    5
+   ],
+   "ancho": 408,
+   "alto": 299,
+   "transparente": true,
+   "tiene_texto": true,
+   "texto_es_contenido": true,
+   "texto": "ILOVEYOU LOVE-LETTER- FOR-YOU. TXT. “Correo",
+   "origen": "extraída de PROCESO_SUBIR_DE_GRADO (tec5) · clave «f24» · 2026-11-08",
+   "usada_en_origen": [
+    {
+     "doc": "Tecnologia5",
+     "slide": 25,
+     "titulo": "Actividad 14 · Hábitos seguros e inseguros"
+    }
+   ],
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": [],
+   "recorte_verificado": true
+  },
+  {
+   "id": "globo-terraqueo-conectado-a-muchas-computa-f5ce",
+   "archivo": "tematicos/historia-internet/globo-terraqueo-conectado-a-muchas-computa-f5ce.webp",
+   "svg": null,
+   "categoria": "tematicos",
+   "subcategoria": "historia-internet",
+   "descripcion": "Globo terráqueo conectado a muchas computadoras: «Internet: la red de redes»",
+   "alt": "Globo terráqueo conectado a muchas computadoras: Internet: la red de redes",
+   "uso": "Globo terráqueo conectado a muchas computadoras",
+   "tags": [
+    "5°",
+    "computadoras",
+    "definicion",
+    "historia-internet",
+    "internet",
+    "mundo",
+    "red-de-redes",
+    "tecnologia"
+   ],
+   "materia": [
+    "tecnologia"
+   ],
+   "grados": [
+    5
+   ],
+   "ancho": 461,
+   "alto": 310,
+   "transparente": true,
+   "tiene_texto": false,
+   "texto_es_contenido": false,
+   "texto": "",
+   "origen": "extraída de PROCESO_SUBIR_DE_GRADO (tec5) · clave «f31» · 2026-11-08",
+   "usada_en_origen": [
+    {
+     "doc": "Tecnologia5",
+     "slide": 31,
+     "titulo": "Actividad 18 · Completa los espacios"
+    }
+   ],
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": [],
+   "recorte_verificado": true
+  },
+  {
+   "id": "senora-con-celular-que-dice-reenvia-a-10-p-fcf7",
+   "archivo": "tematicos/verificar-informacion/senora-con-celular-que-dice-reenvia-a-10-p-fcf7.webp",
+   "svg": null,
+   "categoria": "tematicos",
+   "subcategoria": "verificar-informacion",
+   "descripcion": "Señora con celular que dice «¡Reenvía a 10 personas!» y ARIA con duda",
+   "alt": "Señora con celular que dice ¡Reenvía a 10 personas! y ARIA con duda",
+   "uso": "Señora",
+   "tags": [
+    "5°",
+    "aria",
+    "bulo",
+    "cadena",
+    "reenviar",
+    "tecnologia",
+    "verificar",
+    "verificar-informacion",
+    "whatsapp"
+   ],
+   "materia": [
+    "tecnologia"
+   ],
+   "grados": [
+    5
+   ],
+   "ancho": 497,
+   "alto": 309,
+   "transparente": true,
+   "tiene_texto": true,
+   "texto_es_contenido": true,
+   "texto": "personas!",
+   "origen": "extraída de PROCESO_SUBIR_DE_GRADO (tec5) · clave «f17» · 2026-11-08",
+   "usada_en_origen": [
+    {
+     "doc": "Tecnologia5",
+     "slide": 18,
+     "titulo": "Actividad 9 · ¿Hecho u opinión?"
+    }
+   ],
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": [],
+   "recorte_verificado": true
+  },
+  {
+   "id": "sobre-con-arroba-1971-primer-correo-c1d3",
+   "archivo": "tematicos/historia-internet/sobre-con-arroba-1971-primer-correo-c1d3.webp",
+   "svg": null,
+   "categoria": "tematicos",
+   "subcategoria": "historia-internet",
+   "descripcion": "Sobre con arroba: «1971 · primer correo»",
+   "alt": "Sobre con arroba: 1971 · primer correo",
+   "uso": "Sobre",
+   "tags": [
+    "1971",
+    "5°",
+    "arroba",
+    "correo-electronico",
+    "historia",
+    "historia-internet",
+    "tecnologia",
+    "tomlinson"
+   ],
+   "materia": [
+    "tecnologia"
+   ],
+   "grados": [
+    5
+   ],
+   "ancho": 444,
+   "alto": 238,
+   "transparente": true,
+   "tiene_texto": false,
+   "texto_es_contenido": false,
+   "texto": "",
+   "origen": "extraída de PROCESO_SUBIR_DE_GRADO (tec5) · clave «f36» · 2026-11-08",
+   "usada_en_origen": [
+    {
+     "doc": "Tecnologia5",
+     "slide": 32,
+     "titulo": "Actividad 19 · ¿Internet o la Web?"
+    }
+   ],
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": [],
+   "recorte_verificado": true
+  },
+  {
+   "id": "pantalla-con-megafono-y-titulares-mayuscul-fff4",
+   "archivo": "tematicos/verificar-informacion/pantalla-con-megafono-y-titulares-mayuscul-fff4.webp",
+   "svg": null,
+   "categoria": "tematicos",
+   "subcategoria": "verificar-informacion",
+   "descripcion": "Pantalla con megáfono y titulares «MAYÚSCULAS, dinero fácil, ¡compártelo ya!» con alerta",
+   "alt": "Pantalla con megáfono y titulares MAYÚSCULAS, dinero fácil, ¡compártelo ya! con alerta",
+   "uso": "Pantalla",
+   "tags": [
+    "5°",
+    "desinformacion",
+    "mayusculas",
+    "senales-engano",
+    "tecnologia",
+    "urgencia",
+    "verificar-informacion"
+   ],
+   "materia": [
+    "tecnologia"
+   ],
+   "grados": [
+    5
+   ],
+   "ancho": 490,
+   "alto": 263,
+   "transparente": true,
+   "tiene_texto": true,
+   "texto_es_contenido": true,
+   "texto": "diner facil partelo",
+   "origen": "extraída de PROCESO_SUBIR_DE_GRADO (tec5) · clave «f16» · 2026-11-08",
+   "usada_en_origen": [
+    {
+     "doc": "Tecnologia5",
+     "slide": 17,
+     "titulo": "Verificar y el semáforo del pulgar"
+    }
+   ],
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": [],
+   "recorte_verificado": true
+  },
+  {
+   "id": "barra-de-busqueda-volcanes-activos-de-colo-f2ab",
+   "archivo": "tematicos/internet/barra-de-busqueda-volcanes-activos-de-colo-f2ab.webp",
+   "svg": null,
+   "categoria": "tematicos",
+   "subcategoria": "internet",
+   "descripcion": "Barra de búsqueda «volcanes activos de Colombia» con las palabras clave en burbujas",
+   "alt": "Barra de búsqueda volcanes activos de Colombia con las palabras clave en burbujas",
+   "uso": "Barra de búsqueda «volcanes activos de Colombia»",
+   "tags": [
+    "5°",
+    "buscador",
+    "busqueda",
+    "colombia",
+    "internet",
+    "palabras-clave",
+    "tecnologia",
+    "volcanes"
+   ],
+   "materia": [
+    "tecnologia"
+   ],
+   "grados": [
+    5
+   ],
+   "ancho": 491,
+   "alto": 201,
+   "transparente": true,
+   "tiene_texto": false,
+   "texto_es_contenido": false,
+   "texto": "",
+   "origen": "extraída de PROCESO_SUBIR_DE_GRADO (tec5) · clave «f9» · 2026-11-08",
+   "usada_en_origen": [
+    {
+     "doc": "Tecnologia5",
+     "slide": 11,
+     "titulo": "Comparar páginas, tomar notas y anotar la fuente"
+    }
+   ],
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": [],
+   "recorte_verificado": true
+  },
+  {
+   "id": "pagina-de-noticias-con-imagen-y-datos-auto-07d7",
+   "archivo": "tematicos/verificar-informacion/pagina-de-noticias-con-imagen-y-datos-auto-07d7.webp",
+   "svg": null,
+   "categoria": "tematicos",
+   "subcategoria": "verificar-informacion",
+   "descripcion": "Página de «Noticias» con imagen y datos: autor Ana Ruiz, fecha 12 de marzo de 2026, fuente medio local",
+   "alt": "Página de Noticias con imagen y datos: autor Ana Ruiz, fecha 12 de marzo de 2026, fuente medio local",
+   "uso": "Página de «Noticias»",
+   "tags": [
+    "5°",
+    "autor",
+    "confiable",
+    "ejemplo",
+    "fecha",
+    "fuente",
+    "noticia",
+    "tecnologia",
+    "verificar-informacion"
+   ],
+   "materia": [
+    "tecnologia"
+   ],
+   "grados": [
+    5
+   ],
+   "ancho": 460,
+   "alto": 372,
+   "transparente": true,
+   "tiene_texto": true,
+   "texto_es_contenido": true,
+   "texto": "Noticias Autor: Ana Ruiz Fecha: marzo 2026",
+   "origen": "extraída de PROCESO_SUBIR_DE_GRADO (tec5) · clave «f2» · 2026-11-08",
+   "usada_en_origen": [
+    {
+     "doc": "Tecnologia5",
+     "slide": 5,
+     "titulo": "¿Es confiable esta información?"
+    }
+   ],
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": [],
+   "recorte_verificado": true
+  },
+  {
+   "id": "gusano-de-colores-con-cara-enojada-entre-c-383a",
+   "archivo": "tematicos/seguridad-digital/gusano-de-colores-con-cara-enojada-entre-c-383a.webp",
+   "svg": null,
+   "categoria": "tematicos",
+   "subcategoria": "seguridad-digital",
+   "descripcion": "Gusano de colores con cara enojada entre computadoras: «Se copia solo»",
+   "alt": "Gusano de colores con cara enojada entre computadoras: Se copia solo",
+   "uso": "Gusano de colores",
+   "tags": [
+    "5°",
+    "gusano",
+    "malware",
+    "se-copia-solo",
+    "seguridad-digital",
+    "tecnologia",
+    "virus"
+   ],
+   "materia": [
+    "tecnologia"
+   ],
+   "grados": [
+    5
+   ],
+   "ancho": 456,
+   "alto": 294,
+   "transparente": true,
+   "tiene_texto": true,
+   "texto_es_contenido": true,
+   "texto": "copia solo",
+   "origen": "extraída de PROCESO_SUBIR_DE_GRADO (tec5) · clave «f22» · 2026-11-08",
+   "usada_en_origen": [
+    {
+     "doc": "Tecnologia5",
+     "slide": 24,
+     "titulo": "Actividad 13 · Palabra ↔ significado"
+    }
+   ],
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": [],
+   "recorte_verificado": true
+  },
+  {
+   "id": "nina-con-lupa-ante-una-laptop-con-la-busqu-d598",
+   "archivo": "tematicos/internet/nina-con-lupa-ante-una-laptop-con-la-busqu-d598.webp",
+   "svg": null,
+   "categoria": "tematicos",
+   "subcategoria": "internet",
+   "descripcion": "Niña con lupa ante una laptop con la búsqueda «noticias de Colombia hoy»",
+   "alt": "Niña con lupa ante una laptop con la búsqueda noticias de Colombia hoy",
+   "uso": "Niña",
+   "tags": [
+    "5°",
+    "buscar",
+    "busqueda",
+    "internet",
+    "investigar",
+    "noticias",
+    "tecnologia"
+   ],
+   "materia": [
+    "tecnologia"
+   ],
+   "grados": [
+    5
+   ],
+   "ancho": 487,
+   "alto": 284,
+   "transparente": true,
+   "tiene_texto": true,
+   "texto_es_contenido": true,
+   "texto": "noticias Colombia hoy",
+   "origen": "extraída de PROCESO_SUBIR_DE_GRADO (tec5) · clave «f4» · 2026-11-08",
+   "usada_en_origen": [
+    {
+     "doc": "Tecnologia5",
+     "slide": 10,
+     "titulo": "Bloque 2 · Palabras clave y pestañas"
+    }
+   ],
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": [],
+   "recorte_verificado": true
+  },
+  {
+   "id": "laptop-con-reloj-de-arena-lento-y-ventanas-49f1",
+   "archivo": "tematicos/seguridad-digital/laptop-con-reloj-de-arena-lento-y-ventanas-49f1.webp",
+   "svg": null,
+   "categoria": "tematicos",
+   "subcategoria": "seguridad-digital",
+   "descripcion": "Laptop con reloj de arena, «Lento» y «Ventanas raras» como señales de virus",
+   "alt": "Laptop con reloj de arena, Lento y Ventanas raras como señales de virus",
+   "uso": "Laptop",
+   "tags": [
+    "5°",
+    "computador",
+    "lento",
+    "seguridad-digital",
+    "senales",
+    "tecnologia",
+    "ventanas",
+    "virus"
+   ],
+   "materia": [
+    "tecnologia"
+   ],
+   "grados": [
+    5
+   ],
+   "ancho": 461,
+   "alto": 268,
+   "transparente": true,
+   "tiene_texto": true,
+   "texto_es_contenido": true,
+   "texto": "Vent",
+   "origen": "extraída de PROCESO_SUBIR_DE_GRADO (tec5) · clave «f26» · 2026-11-08",
+   "usada_en_origen": [
+    {
+     "doc": "Tecnologia5",
+     "slide": 29,
+     "titulo": "Los pioneros de Internet"
+    }
+   ],
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": [],
+   "recorte_verificado": true
+  },
+  {
+   "id": "escudo-con-cruz-y-una-lupa-que-revisa-un-v-e48b",
+   "archivo": "tematicos/seguridad-digital/escudo-con-cruz-y-una-lupa-que-revisa-un-v-e48b.webp",
+   "svg": null,
+   "categoria": "tematicos",
+   "subcategoria": "seguridad-digital",
+   "descripcion": "Escudo con cruz y una lupa que revisa un virus verde: «Antivirus»",
+   "alt": "Escudo con cruz y una lupa que revisa un virus verde: Antivirus",
+   "uso": "Escudo",
+   "tags": [
+    "5°",
+    "antivirus",
+    "escudo",
+    "lupa",
+    "proteccion",
+    "seguridad-digital",
+    "tecnologia",
+    "virus"
+   ],
+   "materia": [
+    "tecnologia"
+   ],
+   "grados": [
+    5
+   ],
+   "ancho": 417,
+   "alto": 302,
+   "transparente": true,
+   "tiene_texto": false,
+   "texto_es_contenido": false,
+   "texto": "",
+   "origen": "extraída de PROCESO_SUBIR_DE_GRADO (tec5) · clave «f27» · 2026-11-08",
+   "usada_en_origen": [
+    {
+     "doc": "Tecnologia5",
+     "slide": 26,
+     "titulo": "Actividad 15 · Completa los espacios"
+    }
+   ],
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": [],
+   "recorte_verificado": true
+  },
+  {
+   "id": "ruta-de-investigacion-con-paradas-palabras-3516",
+   "archivo": "tematicos/internet/ruta-de-investigacion-con-paradas-palabras-3516.webp",
+   "svg": null,
+   "categoria": "tematicos",
+   "subcategoria": "internet",
+   "descripcion": "Ruta de investigación con paradas «Palabras clave», «Pestañas», «Notas» y «Fuente»",
+   "alt": "Ruta de investigación con paradas Palabras clave, Pestañas, Notas y Fuente",
+   "uso": "Ruta de investigación",
+   "tags": [
+    "5°",
+    "fuente",
+    "internet",
+    "investigacion",
+    "notas",
+    "palabras-clave",
+    "pestanas",
+    "ruta",
+    "tecnologia"
+   ],
+   "materia": [
+    "tecnologia"
+   ],
+   "grados": [
+    5
+   ],
+   "ancho": 494,
+   "alto": 275,
+   "transparente": true,
+   "tiene_texto": false,
+   "texto_es_contenido": false,
+   "texto": "nas",
+   "origen": "extraída de PROCESO_SUBIR_DE_GRADO (tec5) · clave «f14» · 2026-11-08",
+   "usada_en_origen": [
+    {
+     "doc": "Tecnologia5",
+     "slide": 13,
+     "titulo": "Actividad 7 · Buenas y malas prácticas al investigar"
+    }
+   ],
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": [],
+   "recorte_verificado": true
+  },
+  {
+   "id": "lupa-sobre-una-pagina-web-con-tres-casilla-4dea",
+   "archivo": "tematicos/verificar-informacion/lupa-sobre-una-pagina-web-con-tres-casilla-4dea.webp",
+   "svg": null,
+   "categoria": "tematicos",
+   "subcategoria": "verificar-informacion",
+   "descripcion": "Lupa sobre una página web con tres casillas verificadas: autor, fecha y fuente",
+   "alt": "Lupa sobre una página web con tres casillas verificadas: autor, fecha y fuente",
+   "uso": "Lupa sobre una página web",
+   "tags": [
+    "5°",
+    "autor",
+    "fecha",
+    "fuente",
+    "lupa",
+    "pagina",
+    "tecnologia",
+    "verificar",
+    "verificar-informacion"
+   ],
+   "materia": [
+    "tecnologia"
+   ],
+   "grados": [
+    5
+   ],
+   "ancho": 484,
+   "alto": 281,
+   "transparente": true,
+   "tiene_texto": false,
+   "texto_es_contenido": false,
+   "texto": "",
+   "origen": "extraída de PROCESO_SUBIR_DE_GRADO (tec5) · clave «f5» · 2026-11-08",
+   "usada_en_origen": [
+    {
+     "doc": "Tecnologia5",
+     "slide": 5,
+     "titulo": "¿Es confiable esta información?"
+    }
+   ],
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": [],
+   "recorte_verificado": true
+  },
+  {
+   "id": "mapa-de-colombia-con-una-torre-de-antena-4-d276",
+   "archivo": "tematicos/historia-internet/mapa-de-colombia-con-una-torre-de-antena-4-d276.webp",
+   "svg": null,
+   "categoria": "tematicos",
+   "subcategoria": "historia-internet",
+   "descripcion": "Mapa de Colombia con una torre de antena: «4 de junio de 1994 · primera conexión a Internet»",
+   "alt": "Mapa de Colombia con una torre de antena: 4 de junio de 1994 · primera conexión a Internet",
+   "uso": "Mapa de Colombia",
+   "tags": [
+    "1994",
+    "5°",
+    "colombia",
+    "conexion",
+    "historia",
+    "historia-internet",
+    "internet",
+    "tecnologia"
+   ],
+   "materia": [
+    "tecnologia"
+   ],
+   "grados": [
+    5
+   ],
+   "ancho": 453,
+   "alto": 382,
+   "transparente": true,
+   "tiene_texto": true,
+   "texto_es_contenido": true,
+   "texto": "junio 1994. primera internet",
+   "origen": "extraída de PROCESO_SUBIR_DE_GRADO (tec5) · clave «f39» · 2026-11-08",
+   "usada_en_origen": [],
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": [],
+   "recorte_verificado": true
+  },
+  {
+   "id": "dos-globos-bogota-es-la-capital-de-colombi-a613",
+   "archivo": "tematicos/verificar-informacion/dos-globos-bogota-es-la-capital-de-colombi-a613.webp",
+   "svg": null,
+   "categoria": "tematicos",
+   "subcategoria": "verificar-informacion",
+   "descripcion": "Dos globos: «Bogotá es la capital de Colombia» (Hecho) y «La pizza es la mejor comida» (Opinión)",
+   "alt": "Dos globos: Bogotá es la capital de Colombia (Hecho) y La pizza es la mejor comida (Opinión)",
+   "uso": "Dos globos",
+   "tags": [
+    "5°",
+    "diferencia",
+    "ejemplo",
+    "hecho",
+    "opinion",
+    "tecnologia",
+    "verificar",
+    "verificar-informacion"
+   ],
+   "materia": [
+    "tecnologia"
+   ],
+   "grados": [
+    5
+   ],
+   "ancho": 479,
+   "alto": 251,
+   "transparente": true,
+   "tiene_texto": true,
+   "texto_es_contenido": true,
+   "texto": "Bogota pizza capital mejor Colombia comida Hecho",
+   "origen": "extraída de PROCESO_SUBIR_DE_GRADO (tec5) · clave «f15» · 2026-11-08",
+   "usada_en_origen": [
+    {
+     "doc": "Tecnologia5",
+     "slide": 17,
+     "titulo": "Verificar y el semáforo del pulgar"
+    }
+   ],
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": [],
+   "recorte_verificado": true
+  },
+  {
+   "id": "nino-con-microfono-entrevista-a-una-abuela-59ec",
+   "archivo": "tematicos/historia-internet/nino-con-microfono-entrevista-a-una-abuela-59ec.webp",
+   "svg": null,
+   "categoria": "tematicos",
+   "subcategoria": "historia-internet",
+   "descripcion": "Niño con micrófono entrevista a una abuela: «¿Cómo era sin Internet?»",
+   "alt": "Niño con micrófono entrevista a una abuela: ¿Cómo era sin Internet?",
+   "uso": "Niño",
+   "tags": [
+    "5°",
+    "abuela",
+    "antes-del-internet",
+    "entrevista",
+    "historia",
+    "historia-internet",
+    "tecnologia"
+   ],
+   "materia": [
+    "tecnologia"
+   ],
+   "grados": [
+    5
+   ],
+   "ancho": 491,
+   "alto": 385,
+   "transparente": true,
+   "tiene_texto": true,
+   "texto_es_contenido": true,
+   "texto": "zcomo era sin Internet:",
+   "origen": "extraída de PROCESO_SUBIR_DE_GRADO (tec5) · clave «f40» · 2026-11-08",
+   "usada_en_origen": [],
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": [],
+   "recorte_verificado": true
+  },
+  {
+   "id": "tres-paginas-imagen-video-mundo-comparadas-2a54",
+   "archivo": "tematicos/verificar-informacion/tres-paginas-imagen-video-mundo-comparadas-2a54.webp",
+   "svg": null,
+   "categoria": "tematicos",
+   "subcategoria": "verificar-informacion",
+   "descripcion": "Tres páginas (imagen, video, mundo) comparadas con una lupa sobre un libro: «Comparo»",
+   "alt": "Tres páginas (imagen, video, mundo) comparadas con una lupa sobre un libro: Comparo",
+   "uso": "Tres páginas (imagen, video, mundo) comparadas",
+   "tags": [
+    "5°",
+    "comparar",
+    "fuentes",
+    "lupa",
+    "paginas",
+    "tecnologia",
+    "verificar-informacion"
+   ],
+   "materia": [
+    "tecnologia"
+   ],
+   "grados": [
+    5
+   ],
+   "ancho": 471,
+   "alto": 314,
+   "transparente": true,
+   "tiene_texto": false,
+   "texto_es_contenido": false,
+   "texto": "",
+   "origen": "extraída de PROCESO_SUBIR_DE_GRADO (tec5) · clave «f11» · 2026-11-08",
+   "usada_en_origen": [
+    {
+     "doc": "Tecnologia5",
+     "slide": 12,
+     "titulo": "Actividad 6 · Palabra ↔ significado"
+    }
+   ],
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": [],
+   "recorte_verificado": true
+  },
+  {
+   "id": "video-con-tijeras-y-alerta-los-videos-tamb-27cf",
+   "archivo": "tematicos/verificar-informacion/video-con-tijeras-y-alerta-los-videos-tamb-27cf.webp",
+   "svg": null,
+   "categoria": "tematicos",
+   "subcategoria": "verificar-informacion",
+   "descripcion": "Video con tijeras y alerta: «Los videos también pueden engañar»",
+   "alt": "Video con tijeras y alerta: Los videos también pueden engañar",
+   "uso": "Video",
+   "tags": [
+    "5°",
+    "desinformacion",
+    "editado",
+    "enganar",
+    "tecnologia",
+    "verificar",
+    "verificar-informacion",
+    "video"
+   ],
+   "materia": [
+    "tecnologia"
+   ],
+   "grados": [
+    5
+   ],
+   "ancho": 468,
+   "alto": 310,
+   "transparente": true,
+   "tiene_texto": true,
+   "texto_es_contenido": true,
+   "texto": "Los videos tambien pueden",
+   "origen": "extraída de PROCESO_SUBIR_DE_GRADO (tec5) · clave «f20» · 2026-11-08",
+   "usada_en_origen": [
+    {
+     "doc": "Tecnologia5",
+     "slide": 17,
+     "titulo": "Verificar y el semáforo del pulgar"
+    }
+   ],
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": [],
+   "recorte_verificado": true
+  },
+  {
+   "id": "una-foto-que-se-divide-en-paquetes-que-via-237e",
+   "archivo": "tematicos/historia-internet/una-foto-que-se-divide-en-paquetes-que-via-237e.webp",
+   "svg": null,
+   "categoria": "tematicos",
+   "subcategoria": "historia-internet",
+   "descripcion": "Una foto que se divide en «paquetes» que viajan en camión hasta una casa: «dirección IP»",
+   "alt": "Una foto que se divide en paquetes que viajan en camión hasta una casa: dirección IP",
+   "uso": "Una foto que se divide en «paquetes» que viajan en camión hasta una casa",
+   "tags": [
+    "5°",
+    "como-viaja-informacion",
+    "direccion-ip",
+    "historia-internet",
+    "paquetes",
+    "redes",
+    "tecnologia"
+   ],
+   "materia": [
+    "tecnologia"
+   ],
+   "grados": [
+    5
+   ],
+   "ancho": 480,
+   "alto": 270,
+   "transparente": true,
+   "tiene_texto": false,
+   "texto_es_contenido": false,
+   "texto": "",
+   "origen": "extraída de PROCESO_SUBIR_DE_GRADO (tec5) · clave «f38» · 2026-11-08",
+   "usada_en_origen": [
+    {
+     "doc": "Tecnologia5",
+     "slide": 31,
+     "titulo": "Actividad 18 · Completa los espacios"
+    }
+   ],
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": [],
+   "recorte_verificado": true
+  },
+  {
+   "id": "los-pioneros-en-cuatro-medallas-hopper-com-fd45",
+   "archivo": "tematicos/historia-internet/los-pioneros-en-cuatro-medallas-hopper-com-fd45.webp",
+   "svg": null,
+   "categoria": "tematicos",
+   "subcategoria": "historia-internet",
+   "descripcion": "«Los pioneros» en cuatro medallas: Hopper (compilador), Feinler (dominios), Cerf y Kahn (TCP/IP), Tomlinson (correo)",
+   "alt": "Los pioneros en cuatro medallas: Hopper (compilador), Feinler (dominios), Cerf y Kahn (TCP/IP), Tomlinson (correo)",
+   "uso": "«Los pioneros» en cuatro medallas",
+   "tags": [
+    "5°",
+    "cerf",
+    "feinler",
+    "historia",
+    "historia-internet",
+    "hopper",
+    "kahn",
+    "pioneros",
+    "tecnologia",
+    "tomlinson"
+   ],
+   "materia": [
+    "tecnologia"
+   ],
+   "grados": [
+    5
+   ],
+   "ancho": 510,
+   "alto": 259,
+   "transparente": true,
+   "tiene_texto": true,
+   "texto_es_contenido": true,
+   "texto": "‘Los pioneros)",
+   "origen": "extraída de PROCESO_SUBIR_DE_GRADO (tec5) · clave «f37» · 2026-11-08",
+   "usada_en_origen": [
+    {
+     "doc": "Tecnologia5",
+     "slide": 32,
+     "titulo": "Actividad 19 · ¿Internet o la Web?"
+    }
+   ],
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": [],
+   "recorte_verificado": true
+  },
+  {
+   "id": "dos-computadoras-antiguas-conectadas-arpan-2a1c",
+   "archivo": "tematicos/historia-internet/dos-computadoras-antiguas-conectadas-arpan-2a1c.webp",
+   "svg": null,
+   "categoria": "tematicos",
+   "subcategoria": "historia-internet",
+   "descripcion": "Dos computadoras antiguas conectadas: «ARPANET · 1969»",
+   "alt": "Dos computadoras antiguas conectadas: ARPANET · 1969",
+   "uso": "Dos computadoras antiguas conectadas",
+   "tags": [
+    "1969",
+    "5°",
+    "arpanet",
+    "computadoras",
+    "historia",
+    "historia-internet",
+    "red",
+    "tecnologia"
+   ],
+   "materia": [
+    "tecnologia"
+   ],
+   "grados": [
+    5
+   ],
+   "ancho": 473,
+   "alto": 241,
+   "transparente": true,
+   "tiene_texto": true,
+   "texto_es_contenido": true,
+   "texto": "ARPANET 1969",
+   "origen": "extraída de PROCESO_SUBIR_DE_GRADO (tec5) · clave «f33» · 2026-11-08",
+   "usada_en_origen": [
+    {
+     "doc": "Tecnologia5",
+     "slide": 31,
+     "titulo": "Actividad 18 · Completa los espacios"
+    }
+   ],
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": [],
+   "recorte_verificado": true
+  },
+  {
+   "id": "caballo-de-madera-con-lazo-y-un-virus-esco-ef47",
+   "archivo": "tematicos/seguridad-digital/caballo-de-madera-con-lazo-y-un-virus-esco-ef47.webp",
+   "svg": null,
+   "categoria": "tematicos",
+   "subcategoria": "seguridad-digital",
+   "descripcion": "Caballo de madera con lazo y un virus escondido: «Troyano»",
+   "alt": "Caballo de madera con lazo y un virus escondido: Troyano",
+   "uso": "Caballo de madera",
+   "tags": [
+    "5°",
+    "caballo",
+    "malware",
+    "seguridad-digital",
+    "tecnologia",
+    "troyano",
+    "virus"
+   ],
+   "materia": [
+    "tecnologia"
+   ],
+   "grados": [
+    5
+   ],
+   "ancho": 374,
+   "alto": 306,
+   "transparente": true,
+   "tiene_texto": true,
+   "texto_es_contenido": true,
+   "texto": "Troyano",
+   "origen": "extraída de PROCESO_SUBIR_DE_GRADO (tec5) · clave «f23» · 2026-11-08",
+   "usada_en_origen": [
+    {
+     "doc": "Tecnologia5",
+     "slide": 24,
+     "titulo": "Actividad 13 · Palabra ↔ significado"
+    }
+   ],
+   "estado": "aprobada",
+   "calidad": 4,
+   "usada_en": [],
+   "recorte_verificado": true
+  },
+  {
+   "id": "cientifico-senalando-una-computadora-y-pag-21b7",
+   "archivo": "tematicos/historia-internet/cientifico-senalando-una-computadora-y-pag-21b7.webp",
+   "svg": null,
+   "categoria": "tematicos",
+   "subcategoria": "historia-internet",
+   "descripcion": "Científico señalando una computadora y páginas web: «la Web · 1989»",
+   "alt": "Científico señalando una computadora y páginas web: la Web · 1989",
+   "uso": "Científico señalando una computadora y páginas web",
+   "tags": [
+    "1989",
+    "5°",
+    "berners-lee",
+    "historia",
+    "historia-internet",
+    "paginas",
+    "tecnologia",
+    "web"
+   ],
+   "materia": [
+    "tecnologia"
+   ],
+   "grados": [
+    5
+   ],
+   "ancho": 519,
+   "alto": 286,
+   "transparente": true,
+   "tiene_texto": false,
+   "texto_es_contenido": false,
+   "texto": "",
+   "origen": "extraída de PROCESO_SUBIR_DE_GRADO (tec5) · clave «f35» · 2026-11-08",
+   "usada_en_origen": [
+    {
+     "doc": "Tecnologia5",
+     "slide": 32,
+     "titulo": "Actividad 19 · ¿Internet o la Web?"
+    }
+   ],
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": [],
+   "recorte_verificado": true
+  },
+  {
+   "id": "seis-tarjetas-de-tipos-de-informacion-noti-c931",
+   "archivo": "tematicos/verificar-informacion/seis-tarjetas-de-tipos-de-informacion-noti-c931.webp",
+   "svg": null,
+   "categoria": "tematicos",
+   "subcategoria": "verificar-informacion",
+   "descripcion": "Seis tarjetas de tipos de información: noticia, video tutorial, enciclopedia, red social, publicidad y rumor",
+   "alt": "Seis tarjetas de tipos de información: noticia, video tutorial, enciclopedia, red social, publicidad y rumor",
+   "uso": "Seis tarjetas de tipos de información",
+   "tags": [
+    "5°",
+    "enciclopedia",
+    "noticia",
+    "publicidad",
+    "rumor",
+    "tecnologia",
+    "tipos-informacion",
+    "verificar-informacion",
+    "video"
+   ],
+   "materia": [
+    "tecnologia"
+   ],
+   "grados": [
+    5
+   ],
+   "ancho": 456,
+   "alto": 321,
+   "transparente": true,
+   "tiene_texto": true,
+   "texto_es_contenido": true,
+   "texto": "deo tutorial Noticia Rumor",
+   "origen": "extraída de PROCESO_SUBIR_DE_GRADO (tec5) · clave «f1» · 2026-11-08",
+   "usada_en_origen": [
+    {
+     "doc": "Tecnologia5",
+     "slide": 4,
+     "titulo": "Bloque 1 · Tipos de información y fuentes"
+    }
+   ],
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": [],
+   "recorte_verificado": true
+  },
+  {
+   "id": "ventana-de-navegador-con-tres-pestanas-pag-0de4",
+   "archivo": "tematicos/internet/ventana-de-navegador-con-tres-pestanas-pag-0de4.webp",
+   "svg": null,
+   "categoria": "tematicos",
+   "subcategoria": "internet",
+   "descripcion": "Ventana de navegador con tres pestañas: Página 1, Página 2 y Página 3",
+   "alt": "Ventana de navegador con tres pestañas: Página 1, Página 2 y Página 3",
+   "uso": "Ventana de navegador",
+   "tags": [
+    "5°",
+    "internet",
+    "navegador",
+    "paginas",
+    "pestanas",
+    "tecnologia",
+    "ventana"
+   ],
+   "materia": [
+    "tecnologia"
+   ],
+   "grados": [
+    5
+   ],
+   "ancho": 457,
+   "alto": 241,
+   "transparente": false,
+   "tiene_texto": true,
+   "texto_es_contenido": true,
+   "texto": "Pagina",
+   "origen": "extraída de PROCESO_SUBIR_DE_GRADO (tec5) · clave «f10» · 2026-11-08",
+   "usada_en_origen": [
+    {
+     "doc": "Tecnologia5",
+     "slide": 11,
+     "titulo": "Comparar páginas, tomar notas y anotar la fuente"
+    }
+   ],
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": [],
+   "recorte_verificado": true
+  },
+  {
+   "id": "familia-del-malware-virus-gusano-troyano-y-dc08",
+   "archivo": "tematicos/seguridad-digital/familia-del-malware-virus-gusano-troyano-y-dc08.webp",
+   "svg": null,
+   "categoria": "tematicos",
+   "subcategoria": "seguridad-digital",
+   "descripcion": "Familia del malware: virus, gusano, troyano y malware",
+   "alt": "Familia del malware: virus, gusano, troyano y malware",
+   "uso": "Familia del malware",
+   "tags": [
+    "5°",
+    "familia",
+    "gusano",
+    "malware",
+    "seguridad-digital",
+    "tecnologia",
+    "troyano",
+    "virus"
+   ],
+   "materia": [
+    "tecnologia"
+   ],
+   "grados": [
+    5
+   ],
+   "ancho": 492,
+   "alto": 272,
+   "transparente": true,
+   "tiene_texto": true,
+   "texto_es_contenido": true,
+   "texto": "‘Malwa Familia del",
+   "origen": "extraída de PROCESO_SUBIR_DE_GRADO (tec5) · clave «f30» · 2026-11-08",
+   "usada_en_origen": [
+    {
+     "doc": "Tecnologia5",
+     "slide": 26,
+     "titulo": "Actividad 15 · Completa los espacios"
+    }
+   ],
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": [],
+   "recorte_verificado": true
+  },
+  {
+   "id": "dos-laptops-que-se-saludan-hola-y-hello-co-cd1f",
+   "archivo": "tematicos/historia-internet/dos-laptops-que-se-saludan-hola-y-hello-co-cd1f.webp",
+   "svg": null,
+   "categoria": "tematicos",
+   "subcategoria": "historia-internet",
+   "descripcion": "Dos laptops que se saludan «Hola» y «Hello» con el rótulo «TCP/IP · idioma común»",
+   "alt": "Dos laptops que se saludan Hola y Hello con el rótulo TCP/IP · idioma común",
+   "uso": "Dos laptops que se saludan «Hola» y «Hello»",
+   "tags": [
+    "5°",
+    "historia-internet",
+    "idioma-comun",
+    "protocolo",
+    "redes",
+    "tcp-ip",
+    "tecnologia"
+   ],
+   "materia": [
+    "tecnologia"
+   ],
+   "grados": [
+    5
+   ],
+   "ancho": 479,
+   "alto": 276,
+   "transparente": true,
+   "tiene_texto": true,
+   "texto_es_contenido": true,
+   "texto": "‘idioma comun",
+   "origen": "extraída de PROCESO_SUBIR_DE_GRADO (tec5) · clave «f34» · 2026-11-08",
+   "usada_en_origen": [
+    {
+     "doc": "Tecnologia5",
+     "slide": 32,
+     "titulo": "Actividad 19 · ¿Internet o la Web?"
+    }
+   ],
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": [],
+   "recorte_verificado": true
+  },
+  {
+   "id": "nina-anotando-en-su-cuaderno-fuente-nombre-2785",
+   "archivo": "tematicos/trabajo-escrito/nina-anotando-en-su-cuaderno-fuente-nombre-2785.webp",
+   "svg": null,
+   "categoria": "tematicos",
+   "subcategoria": "trabajo-escrito",
+   "descripcion": "Niña anotando en su cuaderno «Fuente: nombre de la página y fecha»",
+   "alt": "Niña anotando en su cuaderno Fuente: nombre de la página y fecha",
+   "uso": "Niña anotando en su cuaderno «Fuente",
+   "tags": [
+    "5°",
+    "citar",
+    "cuaderno",
+    "fuente",
+    "investigar",
+    "notas",
+    "tecnologia",
+    "trabajo-escrito"
+   ],
+   "materia": [
+    "tecnologia"
+   ],
+   "grados": [
+    5
+   ],
+   "ancho": 494,
+   "alto": 291,
+   "transparente": true,
+   "tiene_texto": true,
+   "texto_es_contenido": true,
+   "texto": "Fuente Nombre Pagina",
+   "origen": "extraída de PROCESO_SUBIR_DE_GRADO (tec5) · clave «f13» · 2026-11-08",
+   "usada_en_origen": [
+    {
+     "doc": "Tecnologia5",
+     "slide": 12,
+     "titulo": "Actividad 6 · Palabra ↔ significado"
+    }
+   ],
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": [],
+   "recorte_verificado": true
+  },
+  {
+   "id": "semaforo-del-pulgar-rojo-no-lo-comparto-am-e62b",
+   "archivo": "tematicos/verificar-informacion/semaforo-del-pulgar-rojo-no-lo-comparto-am-e62b.webp",
+   "svg": null,
+   "categoria": "tematicos",
+   "subcategoria": "verificar-informacion",
+   "descripcion": "Semáforo del pulgar: rojo «No lo comparto», amarillo «Lo verifico», verde «Ya lo verifiqué»",
+   "alt": "Semáforo del pulgar: rojo No lo comparto, amarillo Lo verifico, verde Ya lo verifiqué",
+   "uso": "Semáforo del pulgar",
+   "tags": [
+    "5°",
+    "compartir",
+    "decision",
+    "semaforo",
+    "tecnologia",
+    "verificar",
+    "verificar-informacion"
+   ],
+   "materia": [
+    "tecnologia"
+   ],
+   "grados": [
+    5
+   ],
+   "ancho": 487,
+   "alto": 288,
+   "transparente": true,
+   "tiene_texto": true,
+   "texto_es_contenido": true,
+   "texto": "comparto",
+   "origen": "extraída de PROCESO_SUBIR_DE_GRADO (tec5) · clave «f19» · 2026-11-08",
+   "usada_en_origen": [
+    {
+     "doc": "Tecnologia5",
+     "slide": 18,
+     "titulo": "Actividad 9 · ¿Hecho u opinión?"
+    }
+   ],
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": [],
+   "recorte_verificado": true
+  },
+  {
+   "id": "laptop-con-un-virus-verde-enojado-y-una-al-8e3e",
+   "archivo": "tematicos/seguridad-digital/laptop-con-un-virus-verde-enojado-y-una-al-8e3e.webp",
+   "svg": null,
+   "categoria": "tematicos",
+   "subcategoria": "seguridad-digital",
+   "descripcion": "Laptop con un virus verde enojado y una alerta roja: «Virus»",
+   "alt": "Laptop con un virus verde enojado y una alerta roja: Virus",
+   "uso": "Laptop",
+   "tags": [
+    "5°",
+    "alerta",
+    "computador",
+    "malware",
+    "seguridad-digital",
+    "tecnologia",
+    "virus"
+   ],
+   "materia": [
+    "tecnologia"
+   ],
+   "grados": [
+    5
+   ],
+   "ancho": 439,
+   "alto": 305,
+   "transparente": true,
+   "tiene_texto": false,
+   "texto_es_contenido": false,
+   "texto": "",
+   "origen": "extraída de PROCESO_SUBIR_DE_GRADO (tec5) · clave «f21» · 2026-11-08",
+   "usada_en_origen": [
+    {
+     "doc": "Tecnologia5",
+     "slide": 24,
+     "titulo": "Actividad 13 · Palabra ↔ significado"
+    }
+   ],
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": [],
+   "recorte_verificado": true
+  },
+  {
+   "id": "calle-internet-la-carretera-y-web-tiendas-f674",
+   "archivo": "tematicos/historia-internet/calle-internet-la-carretera-y-web-tiendas-f674.webp",
+   "svg": null,
+   "categoria": "tematicos",
+   "subcategoria": "historia-internet",
+   "descripcion": "Calle: «Internet = la carretera» y «Web = tiendas y casas»",
+   "alt": "Calle: Internet = la carretera y Web = tiendas y casas",
+   "uso": "Calle",
+   "tags": [
+    "5°",
+    "analogia",
+    "carretera",
+    "historia-internet",
+    "internet-vs-web",
+    "tecnologia",
+    "tiendas"
+   ],
+   "materia": [
+    "tecnologia"
+   ],
+   "grados": [
+    5
+   ],
+   "ancho": 485,
+   "alto": 279,
+   "transparente": true,
+   "tiene_texto": true,
+   "texto_es_contenido": true,
+   "texto": "Web tiendas carretera 100",
+   "origen": "extraída de PROCESO_SUBIR_DE_GRADO (tec5) · clave «f32» · 2026-11-08",
+   "usada_en_origen": [
+    {
+     "doc": "Tecnologia5",
+     "slide": 31,
+     "titulo": "Actividad 18 · Completa los espacios"
+    }
+   ],
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": [],
+   "recorte_verificado": true
   }
  ]
 }

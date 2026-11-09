@@ -24,7 +24,9 @@
    "titulo": "La coma separa lo entero de lo decimal",
    "texto": "En 3,7 el 3 es la parte entera y el 7 son siete décimas. Un cero a la derecha no cambia el valor: 2,5 es igual a 2,50.",
    "aria": "asset://aria-asi-se-hace",
-   "ejemplo": "En 12,05 hay 12 enteros, 0 décimas y 5 centésimas. Se lee «doce enteros con cinco centésimas»."
+   "ejemplo": "En 12,05 hay 12 enteros, 0 décimas y 5 centésimas. Se lee «doce enteros con cinco centésimas».",
+   "imagen": "asset://tabla-de-valor-posicional-unidades-1-decim-b41e",
+   "alt": "Tabla de valor posicional: Unidades 1 · Décimas 0,1 · Centésimas 0,01 · Milésimas 0,001"
   },
   {
    "id": "m03",
