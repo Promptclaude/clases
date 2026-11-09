@@ -1,0 +1,578 @@
+{
+ "meta": {
+  "claseId": "mat5_p4_s4_tienda_razones",
+  "semana": 4,
+  "grado": 5,
+  "materia": "Aritmética",
+  "titulo": "La tienda de las razones",
+  "dba": "DBA: Interpreta y usa razones y proporcionalidad directa para resolver problemas de compra y reparto"
+ },
+ "slides": [
+  {
+   "id": "r01",
+   "type": "intro",
+   "titulo": "¡Bienvenido a la tienda de las razones!",
+   "mision": [
+    "🎯 Aprenderás: a comparar cantidades con razones y a usar la proporcionalidad.",
+    "👆 Harás: unir, completar tablas, cazar errores de un ticket y abrir la caja fuerte.",
+    "🏆 Ganarás: estrellas, medallas y un tesoro."
+   ]
+  },
+  {
+   "id": "r02",
+   "type": "info",
+   "titulo": "Una razón compara dos cantidades",
+   "texto": "Si hay 2 jugos y 3 galletas, la razón de jugos a galletas es 2 : 3. Se lee «2 por cada 3». El orden importa: 3 : 2 sería otra razón.",
+   "imagen": "asset://jugos-y-galletas-con-la-razon-2-3-d32d",
+   "alt": "Jugos y galletas con la razón 2 : 3",
+   "ejemplo": "En una bolsa hay 1 manzana por cada 4 naranjas: la razón de manzanas a naranjas es 1 : 4."
+  },
+  {
+   "id": "r03",
+   "type": "enlazar",
+   "titulo": "Une la situación con su razón",
+   "intro": "Cada situación tiene su razón.",
+   "ejemplo": "2 jugos y 3 galletas se une con 2 : 3.",
+   "pares": [
+    {
+     "izq": "2 jugos y 3 galletas",
+     "der": "2 : 3",
+     "porQue": "Primero la cantidad que nombras primero."
+    },
+    {
+     "izq": "1 lápiz por cada 5 estudiantes",
+     "der": "1 : 5",
+     "porQue": "«Por cada» separa las dos cantidades."
+    },
+    {
+     "izq": "4 niñas y 6 niños",
+     "der": "4 : 6",
+     "porQue": "Niñas primero, niños después."
+    },
+    {
+     "izq": "3 goles en 9 partidos",
+     "der": "3 : 9",
+     "porQue": "Goles : partidos."
+    },
+    {
+     "izq": "7 sillas y 2 mesas",
+     "der": "7 : 2",
+     "porQue": "Sillas : mesas."
+    }
+   ]
+  },
+  {
+   "id": "r04",
+   "type": "quiz",
+   "titulo": "Quiz 1: razones",
+   "preguntas": [
+    {
+     "id": "q1",
+     "dba": "Razones",
+     "nivel": "recordar",
+     "enunciado": "En un curso hay 12 niñas y 15 niños. ¿Cuál es la razón de niñas a niños?",
+     "calc": null,
+     "retroalimentacion": "Niñas primero: 12 : 15.",
+     "errorComun": "El orden de la razón sigue el orden de la pregunta: niñas, niños.",
+     "opciones": [
+      {
+       "id": "a",
+       "texto": "12 : 15",
+       "correcta": true
+      },
+      {
+       "id": "b",
+       "texto": "15 : 12",
+       "correcta": false,
+       "porQue": "El orden de la razón sigue el orden de la pregunta: niñas, niños."
+      },
+      {
+       "id": "c",
+       "texto": "12 : 27",
+       "correcta": false,
+       "porQue": "El orden de la razón sigue el orden de la pregunta: niñas, niños."
+      },
+      {
+       "id": "d",
+       "texto": "27 : 12",
+       "correcta": false,
+       "porQue": "El orden de la razón sigue el orden de la pregunta: niñas, niños."
+      }
+     ]
+    },
+    {
+     "id": "q2",
+     "dba": "Proporcionalidad",
+     "nivel": "aplicar",
+     "enunciado": "Una receta usa 2 tazas de harina por cada 1 taza de leche. Si usas 6 tazas de harina, ¿cuántas tazas de leche necesitas?",
+     "calc": null,
+     "retroalimentacion": "6 es 2 × 3, así que la leche es 1 × 3 = 3.",
+     "errorComun": "Si la harina se multiplica por 3, la leche también se multiplica por 3 (no se resta ni se suma).",
+     "opciones": [
+      {
+       "id": "a",
+       "texto": "3",
+       "correcta": true
+      },
+      {
+       "id": "b",
+       "texto": "4",
+       "correcta": false,
+       "porQue": "Si la harina se multiplica por 3, la leche también se multiplica por 3 (no se resta ni se suma)."
+      },
+      {
+       "id": "c",
+       "texto": "2",
+       "correcta": false,
+       "porQue": "Si la harina se multiplica por 3, la leche también se multiplica por 3 (no se resta ni se suma)."
+      },
+      {
+       "id": "d",
+       "texto": "6",
+       "correcta": false,
+       "porQue": "Si la harina se multiplica por 3, la leche también se multiplica por 3 (no se resta ni se suma)."
+      }
+     ]
+    },
+    {
+     "id": "q3",
+     "dba": "Precio por kilo",
+     "nivel": "analizar",
+     "enunciado": "El vendedor cobra $2,40 por cada kilo. ¿Cuánto cuestan 3 kg?",
+     "calc": null,
+     "retroalimentacion": "3 × 2,40 = 7,20.",
+     "errorComun": "Se multiplica el precio de 1 kg por la cantidad de kilos; no se suma.",
+     "opciones": [
+      {
+       "id": "a",
+       "texto": "$7,20",
+       "correcta": true
+      },
+      {
+       "id": "b",
+       "texto": "$5,40",
+       "correcta": false,
+       "porQue": "Se multiplica el precio de 1 kg por la cantidad de kilos; no se suma."
+      },
+      {
+       "id": "c",
+       "texto": "$2,43",
+       "correcta": false,
+       "porQue": "Se multiplica el precio de 1 kg por la cantidad de kilos; no se suma."
+      },
+      {
+       "id": "d",
+       "texto": "$6,00",
+       "correcta": false,
+       "porQue": "Se multiplica el precio de 1 kg por la cantidad de kilos; no se suma."
+      }
+     ],
+     "imagen": "asset://vendedor-de-frutas-con-el-letrero-2-40-el-85c6",
+     "alt": "Vendedor de frutas con el letrero $2,40 el kilo y una balanza que marca 3 kg"
+    }
+   ]
+  },
+  {
+   "id": "r05",
+   "type": "info",
+   "titulo": "Proporcionalidad: se multiplica igual",
+   "texto": "Dos cantidades son proporcionales cuando, al multiplicar una por un número, la otra se multiplica por el mismo número. Si 1 kg cuesta $3, 2 kg cuestan $6 y 3 kg cuestan $9.",
+   "imagen": "asset://tabla-de-proporcion-pesoprecio-1-kg-3-2-kg-9f24",
+   "alt": "Tabla de proporción peso–precio (1 kg → $3, 2 kg → $6, 3 kg → $9, 5 kg → ?) con ×3",
+   "ejemplo": "Si 2 jugos cuestan $4, 4 jugos cuestan $8: los dos valores se multiplicaron por 2."
+  },
+  {
+   "id": "r06",
+   "type": "tabla",
+   "titulo": "Completa la tabla de precios",
+   "intro": "Cada kilo de arroz cuesta lo mismo. Completa los precios que faltan.",
+   "ejemplo": "Con 1 kg → $3, la regla es «× 3»: 2 kg → $6.",
+   "relacion": "Regla: el precio es 3 veces los kilos (kilos × 3).",
+   "columnas": [
+    "Kilos",
+    "Precio ($)"
+   ],
+   "filas": [
+    [
+     1,
+     3
+    ],
+    [
+     2,
+     6
+    ],
+    [
+     3,
+     {
+      "r": 9
+     }
+    ],
+    [
+     5,
+     {
+      "r": 15
+     }
+    ],
+    [
+     10,
+     {
+      "r": 30
+     }
+    ]
+   ],
+   "proporcional": true,
+   "pista": "Multiplica los kilos por 3.",
+   "porQue": "Cada kilo cuesta $3, así que el precio es kilos × 3."
+  },
+  {
+   "id": "r07",
+   "type": "detective",
+   "titulo": "Detective del ticket",
+   "contexto": "🧾 Ticket de precios de la papelería",
+   "intro": "Alguien sumó en vez de multiplicar. Encuentra los 3 errores.",
+   "ejemplo": "Si 1 lápiz cuesta $2, 2 lápices cuestan $4 (2 × 2), no $3.",
+   "pista": "Compara el precio con «cantidad × $2» en cada línea.",
+   "lineas": [
+    [
+     {
+      "t": "Producto:",
+      "fijo": true
+     },
+     {
+      "t": "Lápices"
+     }
+    ],
+    [
+     {
+      "t": "1 lápiz cuesta",
+      "fijo": true
+     },
+     {
+      "t": "$2"
+     }
+    ],
+    [
+     {
+      "t": "2 lápices cuestan",
+      "fijo": true
+     },
+     {
+      "t": "$4"
+     }
+    ],
+    [
+     {
+      "t": "3 lápices cuestan",
+      "fijo": true
+     },
+     {
+      "t": "$5",
+      "s": true,
+      "porQue": "Debería ser $6: 3 × 2 = 6. Se sumó en vez de multiplicar."
+     }
+    ],
+    [
+     {
+      "t": "5 lápices cuestan",
+      "fijo": true
+     },
+     {
+      "t": "$10"
+     }
+    ],
+    [
+     {
+      "t": "10 lápices cuestan",
+      "fijo": true
+     },
+     {
+      "t": "$12",
+      "s": true,
+      "porQue": "Debería ser $20: 10 × 2 = 20. Se sumó en vez de multiplicar."
+     }
+    ],
+    [
+     {
+      "t": "Juan dice:"
+     },
+     {
+      "t": "«como 2 cuestan $4, 4 cuestan $6»",
+      "s": true,
+      "porQue": "Si los lápices se duplican, el precio se duplica: 4 lápices cuestan $8."
+     }
+    ]
+   ]
+  },
+  {
+   "id": "r08",
+   "type": "relampago",
+   "titulo": "Relámpago: ¿proporcionales?",
+   "intro": "Decide rápido si las dos columnas son proporcionales.",
+   "segundos": 10,
+   "vidas": 3,
+   "opciones": [
+    "Proporcionales",
+    "No proporcionales"
+   ],
+   "items": [
+    {
+     "texto": "1 kg → $3 · 2 kg → $6",
+     "correcta": 0,
+     "porQue": "Se multiplicó por 2 en ambas."
+    },
+    {
+     "texto": "1 h → 5 km · 2 h → 7 km",
+     "correcta": 1,
+     "porQue": "5 se duplicaría a 10, no a 7."
+    },
+    {
+     "texto": "1 cuaderno → $4 · 3 cuadernos → $12",
+     "correcta": 0,
+     "porQue": "Se multiplicó por 3 en ambas."
+    },
+    {
+     "texto": "10 años → 1,4 m · 20 años → 1,7 m",
+     "correcta": 1,
+     "porQue": "La estatura no se duplica al duplicar la edad."
+    },
+    {
+     "texto": "1 L → $2 · 5 L → $10",
+     "correcta": 0,
+     "porQue": "Se multiplicó por 5 en ambas."
+    },
+    {
+     "texto": "2 años → 8 cm · 4 años → 12 cm",
+     "correcta": 1,
+     "porQue": "8 se duplicaría a 16, no a 12."
+    },
+    {
+     "texto": "3 jugos → $6 · 6 jugos → $12",
+     "correcta": 0,
+     "porQue": "Se multiplicó por 2 en ambas."
+    },
+    {
+     "texto": "1 caja → 12 huevos · 2 cajas → 14 huevos",
+     "correcta": 1,
+     "porQue": "12 se duplicaría a 24, no a 14."
+    }
+   ]
+  },
+  {
+   "id": "r09",
+   "type": "comparar",
+   "titulo": "¿Razones equivalentes?",
+   "ejemplo": "2/3 y 4/6: dividiendo 4 y 6 entre 2 queda 2/3, así que son iguales.",
+   "items": [
+    {
+     "a": "2/3",
+     "b": "4/6",
+     "porQue": "4/6 se simplifica a 2/3."
+    },
+    {
+     "a": "3/4",
+     "b": "5/8",
+     "porQue": "3/4 = 0,75 y 5/8 = 0,625."
+    },
+    {
+     "a": "1/2",
+     "b": "3/5",
+     "porQue": "1/2 = 0,5 y 3/5 = 0,6."
+    },
+    {
+     "a": "6/9",
+     "b": "2/3",
+     "porQue": "6/9 se simplifica a 2/3."
+    }
+   ]
+  },
+  {
+   "id": "r10",
+   "type": "ordenar",
+   "titulo": "Los pasos de la regla de tres",
+   "instruccion": "Ordena los pasos para hallar cuánto cuestan 5 kg si 3 kg cuestan $9.",
+   "items": [
+    "Escribo lo que sé: 3 kg cuestan $9",
+    "Busco cuánto cuesta 1 kg: 9 ÷ 3 = 3",
+    "Escribo lo que pregunto: ¿cuánto cuestan 5 kg?",
+    "Multiplico: 3 × 5 = 15",
+    "Respondo: 5 kg cuestan $15"
+   ],
+   "porQue": "Primero se halla el valor de 1 y luego se multiplica."
+  },
+  {
+   "id": "r11",
+   "type": "evalFinal",
+   "titulo": "Reto final",
+   "preguntas": [
+    {
+     "id": "e1",
+     "dba": "Razones",
+     "nivel": "recordar",
+     "enunciado": "¿Cuál es la razón de 4 gatos a 6 perros?",
+     "calc": null,
+     "retroalimentacion": "Gatos primero: 4 : 6.",
+     "errorComun": "El orden de la razón sigue el orden de la pregunta.",
+     "opciones": [
+      {
+       "id": "a",
+       "texto": "4 : 6",
+       "correcta": true
+      },
+      {
+       "id": "b",
+       "texto": "6 : 4",
+       "correcta": false,
+       "porQue": "El orden de la razón sigue el orden de la pregunta."
+      },
+      {
+       "id": "c",
+       "texto": "4 : 10",
+       "correcta": false,
+       "porQue": "El orden de la razón sigue el orden de la pregunta."
+      },
+      {
+       "id": "d",
+       "texto": "10 : 4",
+       "correcta": false,
+       "porQue": "El orden de la razón sigue el orden de la pregunta."
+      }
+     ]
+    },
+    {
+     "id": "e2",
+     "dba": "Proporcionalidad",
+     "nivel": "aplicar",
+     "enunciado": "Si 4 cuadernos cuestan $12, ¿cuánto cuestan 7 cuadernos?",
+     "calc": null,
+     "retroalimentacion": "Cada cuaderno cuesta 12 ÷ 4 = $3 y 7 × 3 = $21.",
+     "errorComun": "Se halla el precio de 1 cuaderno y se multiplica; no se suma ni se multiplican los dos datos.",
+     "opciones": [
+      {
+       "id": "a",
+       "texto": "$21",
+       "correcta": true
+      },
+      {
+       "id": "b",
+       "texto": "$19",
+       "correcta": false,
+       "porQue": "Se halla el precio de 1 cuaderno y se multiplica; no se suma ni se multiplican los dos datos."
+      },
+      {
+       "id": "c",
+       "texto": "$28",
+       "correcta": false,
+       "porQue": "Se halla el precio de 1 cuaderno y se multiplica; no se suma ni se multiplican los dos datos."
+      },
+      {
+       "id": "d",
+       "texto": "$84",
+       "correcta": false,
+       "porQue": "Se halla el precio de 1 cuaderno y se multiplica; no se suma ni se multiplican los dos datos."
+      }
+     ]
+    },
+    {
+     "id": "e3",
+     "dba": "Cambio de moneda",
+     "nivel": "analizar",
+     "enunciado": "Si 1 dólar son 4 mil pesos, ¿cuántos pesos son 5 dólares?",
+     "calc": null,
+     "retroalimentacion": "5 × 4 mil = 20 mil.",
+     "errorComun": "Por cada dólar se tienen 4 mil pesos: hay que multiplicar por 5.",
+     "opciones": [
+      {
+       "id": "a",
+       "texto": "20 mil",
+       "correcta": true
+      },
+      {
+       "id": "b",
+       "texto": "9 mil",
+       "correcta": false,
+       "porQue": "Por cada dólar se tienen 4 mil pesos: hay que multiplicar por 5."
+      },
+      {
+       "id": "c",
+       "texto": "4 mil",
+       "correcta": false,
+       "porQue": "Por cada dólar se tienen 4 mil pesos: hay que multiplicar por 5."
+      },
+      {
+       "id": "d",
+       "texto": "25 mil",
+       "correcta": false,
+       "porQue": "Por cada dólar se tienen 4 mil pesos: hay que multiplicar por 5."
+      }
+     ],
+     "imagen": "asset://casa-de-cambio-1-us-4-mil-pesos-y-la-pregu-a71a",
+     "alt": "Casa de cambio 1 US$ = 4 mil pesos y la pregunta 5 US$ = ?"
+    }
+   ]
+  },
+  {
+   "id": "r12",
+   "type": "candado",
+   "titulo": "La caja fuerte de la tienda",
+   "intro": "Resuelve los acertijos, junta los 4 dígitos y abre la caja fuerte.",
+   "tesoro": "¡Eres el mejor tendero! Te ganaste un cargamento de XP.",
+   "acertijos": [
+    {
+     "q": "¿Cuál es la razón de 2 jugos a 3 galletas?",
+     "ops": [
+      "2 : 3",
+      "3 : 2",
+      "5 : 1"
+     ],
+     "ok": 0,
+     "digito": 4,
+     "porQue": "Jugos primero: 2 : 3."
+    },
+    {
+     "q": "Si 1 kg cuesta $3, ¿cuánto cuestan 4 kg?",
+     "ops": [
+      "$7",
+      "$12",
+      "$34"
+     ],
+     "ok": 1,
+     "digito": 2,
+     "porQue": "4 × 3 = 12."
+    },
+    {
+     "q": "¿2/3 es igual a 4/6?",
+     "ops": [
+      "No",
+      "Depende",
+      "Sí"
+     ],
+     "ok": 2,
+     "digito": 9,
+     "porQue": "4/6 se simplifica a 2/3."
+    },
+    {
+     "q": "Si 2 lápices cuestan $4, ¿cuánto cuestan 6?",
+     "ops": [
+      "$10",
+      "$8",
+      "$12"
+     ],
+     "ok": 2,
+     "digito": 7,
+     "porQue": "Cada lápiz cuesta $2 y 6 × 2 = 12."
+    }
+   ]
+  },
+  {
+   "id": "r13",
+   "type": "final",
+   "titulo": "¡Misión cumplida, tendero!",
+   "aprendiste": [
+    "Escribes razones como 2 : 3 y las lees «2 por cada 3».",
+    "Completas tablas de proporcionalidad multiplicando por el mismo número.",
+    "Detectas errores cuando alguien suma en vez de multiplicar."
+   ],
+   "siguiente": "Resolveremos problemas de porcentajes con descuentos en la tienda escolar."
+  }
+ ]
+}

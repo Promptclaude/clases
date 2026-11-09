@@ -6,7 +6,7 @@ Uso:  python3 tools/auditar_clase.py clase.html [--json informe.json]
 import json, os, re, subprocess, sys
 PROHIBIDAS = ['incorrecto', 'fallaste', 'estás mal', 'error tuyo']
 MARCAS = ['fortnite', 'free fire', 'freefire', 'minecraft', 'among us', 'roblox', 'pokemon', 'pokémon', 'mario bros', 'disney', 'marvel', 'nintendo', 'epic games', 'pixar', 'brawl stars', 'clash royale']
-TIPOS = {'intro', 'info', 'tf', 'fill', 'drag', 'match', 'orden', 'wordsearch', 'interactive', 'minijuego', 'historia', 'quiz', 'evalFinal', 'final', 'repaso', 'practica', 'detective', 'fraccion', 'cuadricula', 'recta', 'comparar', 'podio', 'abierta', 'cuaderno', 'enlazar', 'ordenar', 'memoria', 'relampago', 'sopa', 'candado'}
+TIPOS = {'intro', 'info', 'tf', 'fill', 'drag', 'match', 'orden', 'wordsearch', 'interactive', 'minijuego', 'historia', 'quiz', 'evalFinal', 'final', 'repaso', 'practica', 'tabla', 'detective', 'fraccion', 'cuadricula', 'recta', 'comparar', 'podio', 'abierta', 'cuaderno', 'enlazar', 'ordenar', 'memoria', 'relampago', 'sopa', 'candado'}
 IDS = ['nota-hud', 'nota-delta', 'aciertos-hud', 'nota-intento-hud', 'razon-bloqueo', 'rescate-wrap', 'aviso-guardado', 'btn-next', 'btn-prev', 'stage']
 UNICAS = ['puedeAvanzar', 'aplicarEstadoAvance', 'updScore', 'htmlRetroQuiz', 'sesionGuardadaEsValida', 'esEstudianteNuevo', 'construirEntradaEstudiante', 'pintarNota', 'marcarActividadHecha', 'razonBloqueo', 'almacen', 'save', 'load']
 def main():
@@ -54,7 +54,7 @@ def main():
                 if run > 2: E.append(f"Más de 2 slides seguidas del tipo {b['type']} (Prioridad 46)"); break
             chk('dba' in D['meta'] and len(D['meta']['dba']) > 10, 'DBA declarado', 'Falta meta.dba')
             # Variedad (Prioridad 66): una clase dinámica mezcla tipos de juego; avisa si es monótona
-            JUEGOS = {'detective', 'fraccion', 'tf', 'fill', 'drag', 'minijuego', 'cuadricula', 'recta', 'comparar', 'podio', 'enlazar', 'ordenar', 'memoria', 'relampago', 'sopa', 'candado'}
+            JUEGOS = {'tabla', 'detective', 'fraccion', 'tf', 'fill', 'drag', 'minijuego', 'cuadricula', 'recta', 'comparar', 'podio', 'enlazar', 'ordenar', 'memoria', 'relampago', 'sopa', 'candado'}
             tj = {x['type'] for x in S if x['type'] in JUEGOS}; nj = sum(1 for x in S if x['type'] in JUEGOS)
             if len(S) >= 8 and len(tj) < 4: A.append(f"Variedad: solo {len(tj)} tipos de juego distintos ({', '.join(sorted(tj)) or 'ninguno'}); usa al menos 4 para que no sea monótona (Prioridad 66)")
             elif len(S) >= 8: OK.append(f"Variedad: {len(tj)} tipos de juego distintos en {nj} actividades")
@@ -76,6 +76,16 @@ def main():
             for s in S:
                 t, its = s['type'], s.get('items', [])
                 if t in ('fraccion', 'cuadricula', 'recta', 'comparar', 'podio'): chk(len(its) >= 2, '', f"{s['id']}: {t} necesita mínimo 2 puntos (items)")
+                if t == 'tabla':
+                    cols, fil = s.get('columnas', []), s.get('filas', []); bl = [(i, j, x['r']) for i, f in enumerate(fil) for j, x in enumerate(f) if isinstance(x, dict)]
+                    chk(2 <= len(cols) <= 4 and all(isinstance(c, str) and c for c in cols) and 3 <= len(fil) <= 6 and all(isinstance(f, list) and len(f) == len(cols) for f in fil), '', f"{s['id']}: tabla necesita 2 a 4 columnas con nombre y 3 a 6 filas con el mismo número de celdas")
+                    chk(2 <= len(bl) <= 6 and all(isinstance(r, (int, float)) for _, _, r in bl), '', f"{s['id']}: tabla necesita de 2 a 6 celdas vacías, cada una como {{\"r\": número}}")
+                    if s.get('proporcional') and len(cols) == 2:
+                        try:
+                            val = lambda f, j: f[j]['r'] if isinstance(f[j], dict) else float(str(f[j]).replace(',', '.')); razones = [val(f, 1) / val(f, 0) for f in fil]
+                            chk(max(razones) - min(razones) < 1e-9, '', f"{s['id']}: la tabla marcada como proporcional NO lo es (razones {[round(x, 4) for x in razones]}); revisa los valores o las respuestas")
+                            chk(sum(1 for f in fil if not any(isinstance(c, dict) for c in f)) >= 2, '', f"{s['id']}: una tabla proporcional necesita al menos 2 filas completas para que se pueda deducir la regla")
+                        except Exception: E.append(f"{s['id']}: tabla proporcional con valores no numéricos")
                 if t == 'detective':
                     ls = s.get('lineas', []); segs = [p for l in ls for p in l if not p.get('fijo')]; pis = [p for p in segs if p.get('s')]
                     chk(bool(s.get('contexto')) and len(ls) >= 3 and all(isinstance(l, list) and l for l in ls), '', f"{s['id']}: detective necesita contexto (ej. «✉️ Correo recibido») y mínimo 3 líneas")

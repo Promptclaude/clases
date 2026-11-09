@@ -99,11 +99,12 @@ function razonBloqueo(s) {
     case 'orden':      return '🔢 Ordena como creas y pulsa «Verificar».';
     case 'wordsearch': return '🔍 Encuentra 1 palabra, o espera y pulsa «No me sale».';
     case 'interactive':return '👆 Toca al menos 1 elemento de la imagen.';
+    case 'tabla':      return '📊 Completa las celdas y pulsa «Revisar» (o «No me sale»).';
     case 'detective':  return '🕵️ Marca las señales sospechosas y pulsa «Revisar» (o «No me sale»).';
     case 'fraccion':   return '🍕 Pinta las partes y pulsa «Verificar» (o «No me sale»).';
     case 'cuadricula': return '🟨 Sombrea los cuadritos y pulsa «Verificar» (o «No me sale»).';
     case 'recta':      return '📏 Toca una marca de la recta y pulsa «Verificar» (o «No me sale»).';
-    case 'comparar':   return '⚖️ Elige &lt;, &gt; o = y pulsa «Verificar» (o «No me sale»).';
+    case 'comparar':   return '⚖️ Elige <, > o = y pulsa «Verificar» (o «No me sale»).';
     case 'podio':      return '🏅 Elige los puestos y pulsa «Verificar» (o «No me sale»).';
     case 'abierta':     return '✍️ Escribe tus respuestas y pulsa «Guardar respuesta».';
     case 'cuaderno':    return '📓 Marca la casilla cuando hayas hecho la hoja en tu cuaderno.';

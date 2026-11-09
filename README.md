@@ -15,6 +15,7 @@
 | **Juego detective y calidad de imágenes** (señales de engaño, recortes del banco) | módulo `prompt-modulos/38_detective_y_recortes.md` · ejemplo real `plantilla/ejemplos/tec5_detectives_internet.datos.json` · motor `plantilla/motor/v31_detective_snippets.js` |
 | **Ampliar el banco: quitar fondos, separar láminas, kit SVG de matemáticas** | `banco-imagenes/GUIA_NUEVAS_IMAGENES.md` · módulo `prompt-modulos/39_banco_nuevas_imagenes.md` · `banco-imagenes/_herramientas/` |
 | **Catálogo visual del banco** (miniaturas, qué contiene cada imagen, alt, grado) | `banco-imagenes/CATALOGO.md` y `banco-imagenes/catalogo/` |
+| **Actividad tabla y clase de razones/proporcionalidad** | módulo `prompt-modulos/40_tabla_y_razones.md` · ejemplo real `plantilla/ejemplos/mat5_tienda_razones.datos.json` · motor `plantilla/motor/v32_tabla_snippets.js` |
 | Módulos del prompt sueltos | `prompt-modulos/` |
 | Historial | `CHANGELOG.md` (versiones previas recuperables con `git checkout archivo-v24-v25`) |
 
