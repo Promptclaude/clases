@@ -13,7 +13,7 @@ def main():
     ap.add_argument('--assets', default=os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'banco-imagenes')); ap.add_argument('--presupuesto-mb', default='1.5')
     a = ap.parse_args()
     t = open(a.plantilla, encoding='utf8').read()
-    for marca, f in (('/*@@V23@@*/', 'v23_snippets.js'), ('/*@@FX@@*/', 'juego_fx_snippets.js'), ('/*@@V27@@*/', 'v27_actividades_snippets.js'), ('/*@@V28@@*/', 'v28_juegos_snippets.js'), ('/*@@V29@@*/', 'v29_mapa_y_celebracion_snippets.js'), ('/*@@V31@@*/', 'v31_detective_snippets.js'), ('/*@@V32@@*/', 'v32_tabla_snippets.js')):
+    for marca, f in (('/*@@V23@@*/', 'v23_snippets.js'), ('/*@@FX@@*/', 'juego_fx_snippets.js'), ('/*@@V27@@*/', 'v27_actividades_snippets.js'), ('/*@@V28@@*/', 'v28_juegos_snippets.js'), ('/*@@V29@@*/', 'v29_mapa_y_celebracion_snippets.js'), ('/*@@V31@@*/', 'v31_detective_snippets.js'), ('/*@@V32@@*/', 'v32_tabla_snippets.js'), ('/*@@V33@@*/', 'v33_editor_snippets.js')):
         assert marca in t, 'falta la marca ' + marca
         t = t.replace(marca, open(os.path.join(a.motor_dir, f), encoding='utf8').read())
     if a.datos_de:

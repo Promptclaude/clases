@@ -5,7 +5,7 @@
 //    «lo que lograste hoy» (campo `aprendiste`), «próxima misión» (campo `siguiente`) e insignia imprimible con el nombre.
 // Regla del motor que se mantiene: no cambia notas ni bloquea; si algo falla aquí, la clase sigue igual.
 
-const V29_ICO = { intro: '🚀', info: '📘', tf: '🕵️', fill: '✏️', drag: '🧲', minijuego: '🎯', quiz: '❓', evalFinal: '🏆', cuadricula: '🟨', recta: '📏', comparar: '⚖️', podio: '🏅', abierta: '✍️', cuaderno: '📓', enlazar: '🔗', ordenar: '🔢', memoria: '🃏', relampago: '⚡', sopa: '🔎', candado: '🔐', detective: '🕵️', tabla: '📊', fraccion: '🍕', final: '🏁' };
+const V29_ICO = { intro: '🚀', info: '📘', tf: '🕵️', fill: '✏️', drag: '🧲', minijuego: '🎯', quiz: '❓', evalFinal: '🏆', cuadricula: '🟨', recta: '📏', comparar: '⚖️', podio: '🏅', abierta: '✍️', cuaderno: '📓', enlazar: '🔗', ordenar: '🔢', memoria: '🃏', relampago: '⚡', sopa: '🔎', candado: '🔐', detective: '🕵️', tabla: '📊', editor: '🖋️', fraccion: '🍕', final: '🏁' };
 
 (function () {
   const c = document.createElement('style');

@@ -99,6 +99,7 @@ function razonBloqueo(s) {
     case 'orden':      return '🔢 Ordena como creas y pulsa «Verificar».';
     case 'wordsearch': return '🔍 Encuentra 1 palabra, o espera y pulsa «No me sale».';
     case 'interactive':return '👆 Toca al menos 1 elemento de la imagen.';
+    case 'editor':     return '🖋️ Aplica el formato pedido y pulsa «Revisar» (o «No me sale»).';
     case 'tabla':      return '📊 Completa las celdas y pulsa «Revisar» (o «No me sale»).';
     case 'detective':  return '🕵️ Marca las señales sospechosas y pulsa «Revisar» (o «No me sale»).';
     case 'fraccion':   return '🍕 Pinta las partes y pulsa «Verificar» (o «No me sale»).';

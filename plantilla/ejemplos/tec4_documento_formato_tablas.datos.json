@@ -1,0 +1,540 @@
+{
+ "meta": {
+  "claseId": "tec4_p4_s6_documento_formato_tablas",
+  "semana": 6,
+  "grado": 4,
+  "materia": "Tecnología e Informática",
+  "titulo": "Mi primer documento: formato y tablas",
+  "dba": "DBA: Usa un procesador de texto para dar formato a un documento e insertar tablas con orden y claridad"
+ },
+ "slides": [
+  {
+   "id": "w01",
+   "type": "intro",
+   "titulo": "¡Taller de documentos!",
+   "mision": [
+    "🎯 Aprenderás: a dar formato al texto y a usar tablas.",
+    "👆 Harás: aplicar negrita, cursiva y color, unir, ordenar, buscar palabras y abrir un candado.",
+    "🏆 Ganarás: la placa de Maestro de Documentos."
+   ]
+  },
+  {
+   "id": "w02",
+   "type": "info",
+   "titulo": "El formato cambia cómo se ve el texto",
+   "texto": "Con el formato puedes poner el texto en negrita, cursiva, subrayado o de otro color. Sirve para resaltar lo importante, pero sin exagerar.",
+   "imagen": "asset://barra-de-formato-con-iconos-negrita-cursiv-9e1e",
+   "alt": "Barra de formato con iconos Negrita, Cursiva, Subrayado, Color, Viñetas y Numeración",
+   "ejemplo": "Para destacar el nombre de tu mascota, lo pones en negrita: Luna."
+  },
+  {
+   "id": "w03",
+   "type": "editor",
+   "titulo": "Dale formato a la mascota",
+   "intro": "Sigue las instrucciones sobre la frase de Ana.",
+   "ejemplo": "Para poner «Luna» en negrita: toca la palabra y luego el botón N.",
+   "pista": "Toca la palabra (se encierra en un recuadro) y después el botón de formato.",
+   "texto": [
+    "Mi",
+    "mascota",
+    "Luna",
+    "es",
+    "muy",
+    "juguetona",
+    "y",
+    "cariñosa"
+   ],
+   "objetivos": [
+    {
+     "palabra": 2,
+     "formatos": [
+      "negrita"
+     ],
+     "instr": "Pon «Luna» en negrita (N)."
+    },
+    {
+     "palabra": 5,
+     "formatos": [
+      "cursiva"
+     ],
+     "instr": "Pon «juguetona» en cursiva (K)."
+    },
+    {
+     "palabra": 7,
+     "formatos": [
+      "subrayado"
+     ],
+     "instr": "Subraya «cariñosa» (S)."
+    },
+    {
+     "palabra": 1,
+     "formatos": [
+      "color"
+     ],
+     "instr": "Cambia «mascota» al color rojo (A)."
+    }
+   ],
+   "porQue": "Cada botón cambia la palabra seleccionada: negrita la engrosa, cursiva la inclina, subrayado le pone una línea y color la pinta."
+  },
+  {
+   "id": "w04",
+   "type": "enlazar",
+   "titulo": "Une el botón con lo que hace",
+   "intro": "Cada botón de formato tiene su función.",
+   "ejemplo": "Negrita se une con «Hace la letra más gruesa».",
+   "pares": [
+    {
+     "izq": "Negrita",
+     "der": "Hace la letra más gruesa",
+     "porQue": "N de negrita: letra gruesa."
+    },
+    {
+     "izq": "Cursiva",
+     "der": "Inclina la letra",
+     "porQue": "K de cursiva: letra inclinada."
+    },
+    {
+     "izq": "Subrayado",
+     "der": "Pone una línea debajo",
+     "porQue": "S de subrayado: línea debajo."
+    },
+    {
+     "izq": "Color",
+     "der": "Cambia el color de la letra",
+     "porQue": "Sirve para resaltar con un color."
+    },
+    {
+     "izq": "Viñetas",
+     "der": "Hace una lista con puntos",
+     "porQue": "Ordena ideas sin números."
+    }
+   ]
+  },
+  {
+   "id": "w05",
+   "type": "quiz",
+   "titulo": "Quiz 1: formato y alineación",
+   "preguntas": [
+    {
+     "id": "q1",
+     "dba": "Formato",
+     "nivel": "recordar",
+     "enunciado": "¿Qué botón pone la letra más gruesa?",
+     "calc": null,
+     "retroalimentacion": "La negrita engrosa la letra.",
+     "errorComun": "Cursiva inclina la letra y subrayado le pone una línea debajo.",
+     "opciones": [
+      {
+       "id": "a",
+       "texto": "Negrita (N)",
+       "correcta": true
+      },
+      {
+       "id": "b",
+       "texto": "Cursiva (K)",
+       "correcta": false,
+       "porQue": "Cursiva inclina la letra y subrayado le pone una línea debajo."
+      },
+      {
+       "id": "c",
+       "texto": "Subrayado (S)",
+       "correcta": false,
+       "porQue": "Cursiva inclina la letra y subrayado le pone una línea debajo."
+      },
+      {
+       "id": "d",
+       "texto": "Viñetas",
+       "correcta": false,
+       "porQue": "Cursiva inclina la letra y subrayado le pone una línea debajo."
+      }
+     ]
+    },
+    {
+     "id": "q2",
+     "dba": "Alineación",
+     "nivel": "aplicar",
+     "enunciado": "Quieres que el título quede en el medio de la hoja. ¿Qué alineación eliges?",
+     "calc": null,
+     "retroalimentacion": "Centrada pone el texto en el medio.",
+     "errorComun": "Izquierda y derecha lo pegan a un lado; justificada alinea ambos lados.",
+     "opciones": [
+      {
+       "id": "a",
+       "texto": "Centrada",
+       "correcta": true
+      },
+      {
+       "id": "b",
+       "texto": "Izquierda",
+       "correcta": false,
+       "porQue": "Izquierda y derecha lo pegan a un lado; justificada alinea ambos lados."
+      },
+      {
+       "id": "c",
+       "texto": "Derecha",
+       "correcta": false,
+       "porQue": "Izquierda y derecha lo pegan a un lado; justificada alinea ambos lados."
+      },
+      {
+       "id": "d",
+       "texto": "Justificada",
+       "correcta": false,
+       "porQue": "Izquierda y derecha lo pegan a un lado; justificada alinea ambos lados."
+      }
+     ],
+     "imagen": "asset://cuatro-alineaciones-de-texto-izquierda-cen-7472",
+     "alt": "Cuatro alineaciones de texto: izquierda, centrada, derecha y justificada"
+    },
+    {
+     "id": "q3",
+     "dba": "Tamaño de letra",
+     "nivel": "analizar",
+     "enunciado": "Según la guía, ¿qué tamaño de letra conviene para un título?",
+     "calc": null,
+     "retroalimentacion": "El título lleva 24; el subtítulo 18 y la lectura 12.",
+     "errorComun": "18 es para subtítulos y 12 para leer; 8 es demasiado pequeño.",
+     "opciones": [
+      {
+       "id": "a",
+       "texto": "24",
+       "correcta": true
+      },
+      {
+       "id": "b",
+       "texto": "12",
+       "correcta": false,
+       "porQue": "18 es para subtítulos y 12 para leer; 8 es demasiado pequeño."
+      },
+      {
+       "id": "c",
+       "texto": "18",
+       "correcta": false,
+       "porQue": "18 es para subtítulos y 12 para leer; 8 es demasiado pequeño."
+      },
+      {
+       "id": "d",
+       "texto": "8",
+       "correcta": false,
+       "porQue": "18 es para subtítulos y 12 para leer; 8 es demasiado pequeño."
+      }
+     ],
+     "imagen": "asset://tres-tamanos-de-letra-aa-12-lectura-18-sub-c974",
+     "alt": "Tres tamaños de letra Aa: 12 lectura, 18 subtítulo y 24 título"
+    }
+   ]
+  },
+  {
+   "id": "w06",
+   "type": "info",
+   "titulo": "Las tablas ordenan la información",
+   "texto": "Una tabla tiene filas (de lado a lado) y columnas (de arriba abajo). Donde se cruzan está la celda, el cuadrito donde escribes.",
+   "imagen": "asset://diagrama-de-tabla-con-encabezado-columna-f-a03b",
+   "alt": "Diagrama de tabla con encabezado, columna, fila y celda señalados",
+   "ejemplo": "Un horario de clases es una tabla: cada fila es un día y cada columna es una materia."
+  },
+  {
+   "id": "w07",
+   "type": "memoria",
+   "titulo": "Memoria: partes de una tabla",
+   "intro": "Encuentra cada parte con lo que significa.",
+   "pares": [
+    {
+     "a": "Fila",
+     "b": "Va de lado a lado",
+     "porQue": "Las filas son horizontales."
+    },
+    {
+     "a": "Columna",
+     "b": "Va de arriba abajo",
+     "porQue": "Las columnas son verticales."
+    },
+    {
+     "a": "Celda",
+     "b": "Cuadrito donde escribes",
+     "porQue": "Es donde se cruzan fila y columna."
+    },
+    {
+     "a": "Encabezado",
+     "b": "Primera fila con los títulos",
+     "porQue": "Dice qué contiene cada columna."
+    }
+   ]
+  },
+  {
+   "id": "w08",
+   "type": "ordenar",
+   "titulo": "Inserta una tabla",
+   "instruccion": "Ordena los pasos para insertar una tabla de 3 columnas y 4 filas.",
+   "items": [
+    "Haz clic donde quieres la tabla",
+    "Abre el menú Insertar",
+    "Elige Tabla",
+    "Escoge 3 columnas y 4 filas",
+    "Escribe en cada celda"
+   ],
+   "porQue": "Primero se ubica el cursor, luego se inserta la tabla y al final se escribe."
+  },
+  {
+   "id": "w09",
+   "type": "relampago",
+   "titulo": "Relámpago: ¿letra o alineación?",
+   "intro": "Decide rápido a qué grupo pertenece cada acción.",
+   "segundos": 8,
+   "vidas": 3,
+   "opciones": [
+    "🔤 Formato de letra",
+    "↔️ Alineación"
+   ],
+   "items": [
+    {
+     "texto": "Poner en negrita",
+     "correcta": 0,
+     "porQue": "Cambia cómo se ve la letra."
+    },
+    {
+     "texto": "Centrar el título",
+     "correcta": 1,
+     "porQue": "Mueve el texto en la hoja."
+    },
+    {
+     "texto": "Subrayar una palabra",
+     "correcta": 0,
+     "porQue": "Cambia la letra."
+    },
+    {
+     "texto": "Justificar el párrafo",
+     "correcta": 1,
+     "porQue": "Alinea ambos lados del párrafo."
+    },
+    {
+     "texto": "Cambiar el color de la letra",
+     "correcta": 0,
+     "porQue": "Cambia la letra."
+    },
+    {
+     "texto": "Alinear a la derecha",
+     "correcta": 1,
+     "porQue": "Mueve el texto al lado derecho."
+    },
+    {
+     "texto": "Poner en cursiva",
+     "correcta": 0,
+     "porQue": "Inclina la letra."
+    },
+    {
+     "texto": "Alinear a la izquierda",
+     "correcta": 1,
+     "porQue": "Mueve el texto al lado izquierdo."
+    }
+   ]
+  },
+  {
+   "id": "w10",
+   "type": "sopa",
+   "titulo": "Sopa del taller",
+   "intro": "Lee la pista y encuentra la palabra.",
+   "tam": 10,
+   "palabras": [
+    {
+     "palabra": "NEGRITA",
+     "pista": "Letra más gruesa"
+    },
+    {
+     "palabra": "CURSIVA",
+     "pista": "Letra inclinada"
+    },
+    {
+     "palabra": "MARGEN",
+     "pista": "Espacio blanco al borde de la hoja"
+    },
+    {
+     "palabra": "TABLA",
+     "pista": "Cuadro con filas y columnas"
+    },
+    {
+     "palabra": "FILA",
+     "pista": "Va de lado a lado en una tabla"
+    },
+    {
+     "palabra": "CELDA",
+     "pista": "Cuadrito donde se escribe en una tabla"
+    }
+   ]
+  },
+  {
+   "id": "w11",
+   "type": "evalFinal",
+   "titulo": "Reto final",
+   "preguntas": [
+    {
+     "id": "e1",
+     "dba": "Tablas",
+     "nivel": "recordar",
+     "enunciado": "¿Dónde se escribe el dato en una tabla?",
+     "calc": null,
+     "retroalimentacion": "Cada dato va en una celda.",
+     "errorComun": "El margen es el espacio blanco de la hoja, no sirve para escribir datos de la tabla.",
+     "opciones": [
+      {
+       "id": "a",
+       "texto": "En la celda",
+       "correcta": true
+      },
+      {
+       "id": "b",
+       "texto": "En el margen",
+       "correcta": false,
+       "porQue": "El margen es el espacio blanco de la hoja, no sirve para escribir datos de la tabla."
+      },
+      {
+       "id": "c",
+       "texto": "En el título",
+       "correcta": false,
+       "porQue": "El margen es el espacio blanco de la hoja, no sirve para escribir datos de la tabla."
+      },
+      {
+       "id": "d",
+       "texto": "En la orientación",
+       "correcta": false,
+       "porQue": "El margen es el espacio blanco de la hoja, no sirve para escribir datos de la tabla."
+      }
+     ]
+    },
+    {
+     "id": "e2",
+     "dba": "Tablas",
+     "nivel": "aplicar",
+     "enunciado": "Quieres insertar una tabla de 3 columnas y 4 filas. ¿Cuántas celdas tendrá en total?",
+     "calc": null,
+     "retroalimentacion": "3 × 4 = 12 celdas.",
+     "errorComun": "Hay que multiplicar columnas por filas; no se suman.",
+     "opciones": [
+      {
+       "id": "a",
+       "texto": "12",
+       "correcta": true
+      },
+      {
+       "id": "b",
+       "texto": "7",
+       "correcta": false,
+       "porQue": "Hay que multiplicar columnas por filas; no se suman."
+      },
+      {
+       "id": "c",
+       "texto": "34",
+       "correcta": false,
+       "porQue": "Hay que multiplicar columnas por filas; no se suman."
+      },
+      {
+       "id": "d",
+       "texto": "16",
+       "correcta": false,
+       "porQue": "Hay que multiplicar columnas por filas; no se suman."
+      }
+     ]
+    },
+    {
+     "id": "e3",
+     "dba": "Márgenes",
+     "nivel": "analizar",
+     "enunciado": "Tu documento se ve muy pegado al borde de la hoja. ¿Qué debes ajustar?",
+     "calc": null,
+     "retroalimentacion": "Los márgenes son el espacio entre el texto y el borde.",
+     "errorComun": "El color, la cursiva y el nombre del archivo no cambian el espacio del borde.",
+     "opciones": [
+      {
+       "id": "a",
+       "texto": "Los márgenes",
+       "correcta": true
+      },
+      {
+       "id": "b",
+       "texto": "El color",
+       "correcta": false,
+       "porQue": "El color, la cursiva y el nombre del archivo no cambian el espacio del borde."
+      },
+      {
+       "id": "c",
+       "texto": "La cursiva",
+       "correcta": false,
+       "porQue": "El color, la cursiva y el nombre del archivo no cambian el espacio del borde."
+      },
+      {
+       "id": "d",
+       "texto": "El nombre del archivo",
+       "correcta": false,
+       "porQue": "El color, la cursiva y el nombre del archivo no cambian el espacio del borde."
+      }
+     ],
+     "imagen": "asset://hoja-con-margenes-senalados-superior-infer-0002",
+     "alt": "Hoja con márgenes señalados (superior, inferior, izquierdo y derecho)"
+    }
+   ]
+  },
+  {
+   "id": "w12",
+   "type": "candado",
+   "titulo": "El candado del taller",
+   "intro": "Resuelve los acertijos, junta los 4 dígitos y abre el candado.",
+   "tesoro": "¡Eres Maestro de Documentos! Recibes tu placa.",
+   "acertijos": [
+    {
+     "q": "¿Qué botón inclina la letra?",
+     "ops": [
+      "Cursiva",
+      "Negrita",
+      "Subrayado"
+     ],
+     "ok": 0,
+     "digito": 6,
+     "porQue": "La K de cursiva inclina la letra."
+    },
+    {
+     "q": "¿Cómo se llama el cuadrito donde escribes en una tabla?",
+     "ops": [
+      "Fila",
+      "Celda",
+      "Margen"
+     ],
+     "ok": 1,
+     "digito": 1,
+     "porQue": "Es la celda."
+    },
+    {
+     "q": "En una tabla de 3 columnas y 2 filas, ¿cuántas celdas hay?",
+     "ops": [
+      "5",
+      "6",
+      "32"
+     ],
+     "ok": 1,
+     "digito": 8,
+     "porQue": "3 × 2 = 6."
+    },
+    {
+     "q": "¿Qué alineación pone el texto en el medio?",
+     "ops": [
+      "Derecha",
+      "Izquierda",
+      "Centrada"
+     ],
+     "ok": 2,
+     "digito": 3,
+     "porQue": "Centrada lo deja en el medio."
+    }
+   ]
+  },
+  {
+   "id": "w13",
+   "type": "final",
+   "titulo": "¡Misión cumplida, maestro!",
+   "aprendiste": [
+    "Aplicas negrita, cursiva, subrayado y color a una palabra.",
+    "Distingues el formato de letra de la alineación del texto.",
+    "Reconoces las partes de una tabla y cómo se inserta."
+   ],
+   "siguiente": "Aprenderemos a insertar imágenes y ajustarlas sin deformarlas."
+  }
+ ]
+}

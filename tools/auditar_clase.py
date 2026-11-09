@@ -6,7 +6,7 @@ Uso:  python3 tools/auditar_clase.py clase.html [--json informe.json]
 import json, os, re, subprocess, sys
 PROHIBIDAS = ['incorrecto', 'fallaste', 'estás mal', 'error tuyo']
 MARCAS = ['fortnite', 'free fire', 'freefire', 'minecraft', 'among us', 'roblox', 'pokemon', 'pokémon', 'mario bros', 'disney', 'marvel', 'nintendo', 'epic games', 'pixar', 'brawl stars', 'clash royale']
-TIPOS = {'intro', 'info', 'tf', 'fill', 'drag', 'match', 'orden', 'wordsearch', 'interactive', 'minijuego', 'historia', 'quiz', 'evalFinal', 'final', 'repaso', 'practica', 'tabla', 'detective', 'fraccion', 'cuadricula', 'recta', 'comparar', 'podio', 'abierta', 'cuaderno', 'enlazar', 'ordenar', 'memoria', 'relampago', 'sopa', 'candado'}
+TIPOS = {'intro', 'info', 'tf', 'fill', 'drag', 'match', 'orden', 'wordsearch', 'interactive', 'minijuego', 'historia', 'quiz', 'evalFinal', 'final', 'repaso', 'practica', 'editor', 'tabla', 'detective', 'fraccion', 'cuadricula', 'recta', 'comparar', 'podio', 'abierta', 'cuaderno', 'enlazar', 'ordenar', 'memoria', 'relampago', 'sopa', 'candado'}
 IDS = ['nota-hud', 'nota-delta', 'aciertos-hud', 'nota-intento-hud', 'razon-bloqueo', 'rescate-wrap', 'aviso-guardado', 'btn-next', 'btn-prev', 'stage']
 UNICAS = ['puedeAvanzar', 'aplicarEstadoAvance', 'updScore', 'htmlRetroQuiz', 'sesionGuardadaEsValida', 'esEstudianteNuevo', 'construirEntradaEstudiante', 'pintarNota', 'marcarActividadHecha', 'razonBloqueo', 'almacen', 'save', 'load']
 def main():
@@ -54,7 +54,7 @@ def main():
                 if run > 2: E.append(f"Más de 2 slides seguidas del tipo {b['type']} (Prioridad 46)"); break
             chk('dba' in D['meta'] and len(D['meta']['dba']) > 10, 'DBA declarado', 'Falta meta.dba')
             # Variedad (Prioridad 66): una clase dinámica mezcla tipos de juego; avisa si es monótona
-            JUEGOS = {'tabla', 'detective', 'fraccion', 'tf', 'fill', 'drag', 'minijuego', 'cuadricula', 'recta', 'comparar', 'podio', 'enlazar', 'ordenar', 'memoria', 'relampago', 'sopa', 'candado'}
+            JUEGOS = {'editor', 'tabla', 'detective', 'fraccion', 'tf', 'fill', 'drag', 'minijuego', 'cuadricula', 'recta', 'comparar', 'podio', 'enlazar', 'ordenar', 'memoria', 'relampago', 'sopa', 'candado'}
             tj = {x['type'] for x in S if x['type'] in JUEGOS}; nj = sum(1 for x in S if x['type'] in JUEGOS)
             if len(S) >= 8 and len(tj) < 4: A.append(f"Variedad: solo {len(tj)} tipos de juego distintos ({', '.join(sorted(tj)) or 'ninguno'}); usa al menos 4 para que no sea monótona (Prioridad 66)")
             elif len(S) >= 8: OK.append(f"Variedad: {len(tj)} tipos de juego distintos en {nj} actividades")
@@ -76,6 +76,13 @@ def main():
             for s in S:
                 t, its = s['type'], s.get('items', [])
                 if t in ('fraccion', 'cuadricula', 'recta', 'comparar', 'podio'): chk(len(its) >= 2, '', f"{s['id']}: {t} necesita mínimo 2 puntos (items)")
+                if t == 'editor':
+                    tx, ob = s.get('texto', []), s.get('objetivos', []); FORM = {'negrita', 'cursiva', 'subrayado', 'color'}
+                    chk(isinstance(tx, list) and 6 <= len(tx) <= 18 and all(isinstance(w, str) and w.strip() and ' ' not in w.strip() for w in tx), '', f"{s['id']}: editor necesita «texto» como lista de 6 a 18 palabras sueltas (sin espacios dentro de cada palabra)")
+                    chk(2 <= len(ob) <= 5 and all(isinstance(o.get('palabra'), int) and 0 <= o['palabra'] < len(tx) and o.get('instr') and o.get('formatos') and set(o['formatos']) <= FORM for o in ob), '', f"{s['id']}: cada objetivo del editor necesita palabra (índice válido), instr y formatos entre {sorted(FORM)}")
+                    chk(len({o.get('palabra') for o in ob}) == len(ob), '', f"{s['id']}: el editor no puede pedir dos objetivos sobre la misma palabra")
+                    for o in ob:
+                        if isinstance(o.get('palabra'), int) and 0 <= o['palabra'] < len(tx) and o.get('instr'): chk(tx[o['palabra']].strip('.,;:«»¡!¿?').lower() in o['instr'].lower(), '', f"{s['id']}: la instrucción «{o['instr']}» no menciona la palabra del índice {o['palabra']} («{tx[o['palabra']]}»): el estudiante marcaría otra")
                 if t == 'tabla':
                     cols, fil = s.get('columnas', []), s.get('filas', []); bl = [(i, j, x['r']) for i, f in enumerate(fil) for j, x in enumerate(f) if isinstance(x, dict)]
                     chk(2 <= len(cols) <= 4 and all(isinstance(c, str) and c for c in cols) and 3 <= len(fil) <= 6 and all(isinstance(f, list) and len(f) == len(cols) for f in fil), '', f"{s['id']}: tabla necesita 2 a 4 columnas con nombre y 3 a 6 filas con el mismo número de celdas")

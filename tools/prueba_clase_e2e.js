@@ -30,7 +30,7 @@ const idxTipo = (w, ...tipos) => w.CLASE_API.SL.findIndex(x => tipos.includes(x.
 const idxEvaluables = w => w.CLASE_API.SL.map((x, i) => ['quiz', 'evalFinal'].includes(x.type) ? i : -1).filter(i => i >= 0);
 const val27 = x => { const t = String(x).trim(), pc = t.endsWith('%'), u = t.replace('%', '').replace(/\s/g, ''); let v; if (u.includes('/')) { const [a, b] = u.split('/'); v = parseFloat(a.replace(',', '.')) / parseFloat(b.replace(',', '.')); } else v = parseFloat(u.replace(',', '.')); return pc ? v / 100 : v; };
 const NUEVOS27 = ['fraccion', 'cuadricula', 'recta', 'comparar', 'podio', 'abierta', 'cuaderno'];
-const NUEVOS31 = ['detective', 'tabla'];
+const NUEVOS31 = ['detective', 'tabla', 'editor'];
 const NUEVOS28 = ['enlazar', 'ordenar', 'memoria', 'relampago', 'sopa', 'candado'];
 const ACTIVIDADES = ['tf', 'fill', 'drag', 'match', 'orden', 'wordsearch', 'interactive', 'minijuego', 'historia', ...NUEVOS27, ...NUEVOS28, ...NUEVOS31];
 const cerrarModal = w => { if (!q(w, '#modal').hidden) { const b = q(w, '#modal button'); if (b) clic(b); } };
@@ -43,6 +43,7 @@ async function jugarSlide(w, modo /* 'mal' | 'bien' */) {
   if (t === 'drag') { const ids = s.chips.map((c, i) => i).slice(0, 2); for (const i of ids) { for (let k = 0; k < 2; k++) { clic(q(w, `[data-test=chip][data-i="${i}"]`)); const bien = s.chips[i].z, mala = s.zonas.find(z => z.id !== bien).id; clic(q(w, `[data-test=zona][data-z="${modo === 'bien' ? bien : mala}"]`)); if (modo === 'bien') break; } } }
   if (NUEVOS27.includes(t)) await jugarNuevo27(w, s, t, modo);
   if (NUEVOS28.includes(t)) await jugarNuevo28(w, s, t, modo);
+  if (t === 'editor') { const ob = s.objetivos; if (modo === 'bien') ob.forEach(o => { clic(q(w, `[data-test=ed-pal][data-i="${o.palabra}"]`)); o.formatos.forEach(f => clic(q(w, `[data-test=ed-tool][data-t="${f}"]`))); }); else { clic(q(w, '[data-test=ed-pal][data-i="0"]')); clic(q(w, '[data-test=ed-tool][data-t="negrita"]')); } clic(q(w, '[data-test=ed-revisar]')); if (modo !== 'bien') clic(q(w, '[data-test=ed-revisar]')); }
   if (t === 'tabla') { const bl = s.filas.flatMap((f, i) => f.map((x, j) => ({ x, k: i + ',' + j }))).filter(o => o.x && typeof o.x === 'object'); const poner = (o, v) => { const e = q(w, `[data-test=tabla-in][data-k="${o.k}"]`); e.value = v; e.dispatchEvent(new w.Event('input', { bubbles: true })); }; bl.forEach(o => poner(o, modo === 'bien' ? String(o.x.r).replace('.', ',') : '0')); clic(q(w, '[data-test=tabla-revisar]')); if (modo !== 'bien') clic(q(w, '[data-test=tabla-revisar]')); }
   if (t === 'detective') { const cl = (s.lineas.flatMap((l, i) => l.map((p, j) => ({ p, k: i + ',' + j }))).filter(x => !x.p.fijo)); const mk = x => clic(q(w, `[data-test=det-seg][data-k="${x.k}"]`)); if (modo === 'bien') { cl.filter(x => x.p.s).forEach(mk); clic(q(w, '[data-test=det-revisar]')); } else { mk(cl.find(x => !x.p.s)); clic(q(w, '[data-test=det-revisar]')); clic(q(w, '[data-test=det-revisar]')); } }
   if (t === 'minijuego') { for (let r = 0; r < s.rondas.length; r++) { const R = s.rondas[r], i = modo === 'bien' ? R.ok : (R.ok + 1) % R.ops.length; clic(q(w, `[data-test=mj-op][data-i="${i}"]`)); await sleep(60); } }
@@ -306,6 +307,22 @@ async function recorrer(w, modo, tope = 40) { let n = 0; const vistos = []; whil
       ok(API.estado().aciertos === 0 && hud(w) === '0.0', 'tabla NO toca la nota del quiz (HUD ' + hud(w) + ')'); w.close();
       const w2 = abrir({ est: 'pedro' }).window; w2.CLASE_API.irA(iT); const p2 = (o, v) => { const e = q(w2, `[data-test=tabla-in][data-k="${o.k}"]`); e.value = v; e.dispatchEvent(new w2.Event('input', { bubbles: true })); }, c2 = sel => { const e = q(w2, sel); if (e) clic(e); };
       bl.forEach(o => p2(o, '9999')); c2('[data-test=tabla-revisar]'); c2('[data-test=tabla-revisar]'); ok(habil(w2) && qa(w2, '.v32-tab input.rev').length === bl.length, 'tabla: tras 2 revisiones fallidas muestra los valores y deja continuar'); w2.close(); } }
+
+  T('T29 · Editor: tocar palabra + botón, falsas alarmas, 2 revisiones y sin tocar la nota');
+  { const iE = SL0.findIndex(x => x.type === 'editor'); if (iE < 0) console.log('  ⚠️  la clase no usa editor: no aplica');
+    else { const w = abrir({ est: 'olga' }).window, API = w.CLASE_API, s = SL0[iE]; API.irA(iE); const c = sel => { const e = q(w, sel); if (e) clic(e); }, txt = sel => (q(w, sel) || { textContent: '' }).textContent;
+      const ob = s.objetivos, pon = o => { c(`[data-test=ed-pal][data-i="${o.palabra}"]`); o.formatos.forEach(f => c(`[data-test=ed-tool][data-t="${f}"]`)); }, libre = s.texto.findIndex((_, i) => !ob.some(o => o.palabra === i));
+      c('[data-test=ed-tool][data-t="negrita"]'); ok(!qa(w, '.v33-pal.f-negrita').length, 'editor: tocar un botón sin palabra seleccionada no aplica nada (avisa)');
+      c('[data-test=ed-revisar]'); ok(!habil(w) && txt('[data-test=ed-fb]') === '', 'editor: revisar sin aplicar formato no gasta la revisión');
+      ob.slice(0, ob.length - 1).forEach(pon); c(`[data-test=ed-pal][data-i="${libre}"]`); c('[data-test=ed-tool][data-t="negrita"]'); c('[data-test=ed-revisar]');
+      ok(new RegExp('Cumpliste ' + (ob.length - 1) + ' de ' + ob.length + ' instrucciones y hay 1 palabra').test(txt('[data-test=ed-fb]')) && !habil(w), 'editor: dice cuántas instrucciones cumplió y cuántas palabras tienen formato de más, sin decir cuáles');
+      ok(qa(w, '.v33-pal.f-negrita').length >= 1 && !q(w, '[data-test=ed-porque]'), 'editor: el formato se ve en la hoja y no se revela la solución');
+      c('[data-test=ed-pista]'); ok(!!q(w, '[data-test=ed-pista-txt]'), 'editor: el botón 💡 Pista ayuda');
+      { const pl = q(w, `[data-test=ed-pal][data-i="${libre}"]`); if (!pl.classList.contains('sel')) clic(pl); } c('[data-test=ed-tool][data-t="negrita"]'); pon(ob[ob.length - 1]); c('[data-test=ed-revisar]');
+      ok(habil(w) && /2\.ª revisión/.test(txt('[data-test=ed-fb]')), 'editor: quitar lo que sobra y completar lo que falta en la 2.ª revisión da medio punto');
+      ok(API.estado().aciertos === 0 && hud(w) === '0.0', 'editor NO toca la nota del quiz (HUD ' + hud(w) + ')'); w.close();
+      const w2 = abrir({ est: 'pedro' }).window; w2.CLASE_API.irA(iE); const c2 = sel => { const e = q(w2, sel); if (e) clic(e); }; c2(`[data-test=ed-pal][data-i="${libre}"]`); c2('[data-test=ed-tool][data-t="subrayado"]'); c2('[data-test=ed-revisar]'); c2('[data-test=ed-revisar]');
+      ok(habil(w2) && qa(w2, '.v33-pal.rev').length === ob.length, 'editor: tras 2 revisiones fallidas marca cómo debía quedar y deja continuar'); w2.close(); } }
 
   console.log(`\n${pasos - fallos}/${pasos} comprobaciones OK${fallos ? ' · ' + fallos + ' ❌' : ''}`); process.exit(fallos ? 1 : 0);
 })().catch(e => { console.error('ERROR del runner:', e); process.exit(3); });

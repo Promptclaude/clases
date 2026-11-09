@@ -138,7 +138,7 @@ input[type=text]{font:inherit;font-size:1.05rem;padding:8px 10px;border:3px soli
 (function () {
 'use strict';
 /* ═══════ MOTOR DE REFERENCIA · v26 — NO se reescribe: cada clase nueva solo cambia #datos-clase, los assets y los colores ═══════ */
-const MOTOR_VERSION = '32.0';   // sube cuando cambie el motor; las clases guardan sus datos aparte y se reconstruyen con construir_clase.py --datos-de
+const MOTOR_VERSION = '33.0';   // sube cuando cambie el motor; las clases guardan sus datos aparte y se reconstruyen con construir_clase.py --datos-de
 const TEST = window.__TEST__ || null, FACTOR = (TEST && TEST.factor) || 1, ANTI_DOBLE = (TEST && TEST.antiDobleMs) || 350;   // ms mínimos entre dos respuestas de quiz (evita contestar dos por un doble toque)
 const DATOS = JSON.parse(document.getElementById('datos-clase').textContent);
 const CONFIG_CLASE = DATOS.meta, CLASE_ID = CONFIG_CLASE.claseId, SL = DATOS.slides, TOT = SL.length;
@@ -355,6 +355,7 @@ const RENDER = { intro: rIntro, info: rInfo, tf: rTF, fill: rFill, drag: rDrag, 
 /*@@V29@@*/
 /*@@V31@@*/
 /*@@V32@@*/
+/*@@V33@@*/
 
 /* ── solución para «No me sale» ── */
 function mostrarSolucionActividad(s) {

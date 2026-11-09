@@ -16,6 +16,7 @@
 | **Ampliar el banco: quitar fondos, separar láminas, kit SVG de matemáticas** | `banco-imagenes/GUIA_NUEVAS_IMAGENES.md` · módulo `prompt-modulos/39_banco_nuevas_imagenes.md` · `banco-imagenes/_herramientas/` |
 | **Catálogo visual del banco** (miniaturas, qué contiene cada imagen, alt, grado) | `banco-imagenes/CATALOGO.md` y `banco-imagenes/catalogo/` |
 | **Actividad tabla y clase de razones/proporcionalidad** | módulo `prompt-modulos/40_tabla_y_razones.md` · ejemplo real `plantilla/ejemplos/mat5_tienda_razones.datos.json` · motor `plantilla/motor/v32_tabla_snippets.js` |
+| **Juego editor (formato de texto) y clase de ofimática** | módulo `prompt-modulos/41_editor_de_formato.md` · ejemplo real `plantilla/ejemplos/tec4_documento_formato_tablas.datos.json` · motor `plantilla/motor/v33_editor_snippets.js` |
 | Módulos del prompt sueltos | `prompt-modulos/` |
 | Historial | `CHANGELOG.md` (versiones previas recuperables con `git checkout archivo-v24-v25`) |
 
