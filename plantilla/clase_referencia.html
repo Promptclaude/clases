@@ -505,7 +505,7 @@ input[type=text]{font:inherit;font-size:1.05rem;padding:8px 10px;border:3px soli
 (function () {
 'use strict';
 /* ═══════ MOTOR DE REFERENCIA · v26 — NO se reescribe: cada clase nueva solo cambia #datos-clase, los assets y los colores ═══════ */
-const MOTOR_VERSION = '33.0';   // sube cuando cambie el motor; las clases guardan sus datos aparte y se reconstruyen con construir_clase.py --datos-de
+const MOTOR_VERSION = '34.0';   // sube cuando cambie el motor; las clases guardan sus datos aparte y se reconstruyen con construir_clase.py --datos-de
 const TEST = window.__TEST__ || null, FACTOR = (TEST && TEST.factor) || 1, ANTI_DOBLE = (TEST && TEST.antiDobleMs) || 350;   // ms mínimos entre dos respuestas de quiz (evita contestar dos por un doble toque)
 const DATOS = JSON.parse(document.getElementById('datos-clase').textContent);
 const CONFIG_CLASE = DATOS.meta, CLASE_ID = CONFIG_CLASE.claseId, SL = DATOS.slides, TOT = SL.length;
@@ -513,7 +513,10 @@ const TIPOS_EVALUABLES = ['quiz', 'evalFinal'], TIPOS_LECTURA = ['info'], MAX_VI
 const NIVELES = ['Explorador', 'Aprendiz', 'Constructor', 'Estratega', 'Campeón'], UMBRAL = [0, 60, 140, 240, 360];
 const qs = new URLSearchParams(location.search);
 const norm = s => String(s).normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/[^a-z0-9]+/g, '_').replace(/^_|_$/g, '');
-const NOMBRE = (qs.get('est') || 'Invitado').trim(), GRUPO = (qs.get('grupo') || '000').trim();
+// Identidad: si el estudiante entró por la portada del Aula (sesión «aula_sesion_v1») manda la sesión; si no, ?est=&grupo= (pruebas o uso suelto).
+// Nunca se adivina desde otras claves del navegador: en una sala compartida mezclaría estudiantes.
+const _SES = (() => { try { const x = JSON.parse(localStorage.getItem('aula_sesion_v1') || 'null'); return x && x.token && (x.nombre || x.apodo) ? x : null; } catch (e) { return null; } })();
+const NOMBRE = ((_SES && (_SES.nombre || _SES.apodo)) || qs.get('est') || 'Invitado').trim(), GRUPO = ((_SES && _SES.grupo) || qs.get('grupo') || '000').trim();
 const NOMBRE_NORM = norm(NOMBRE), GRUPO_NORM = norm(GRUPO);
 const SKEY = 'aula:' + CLASE_ID + ':' + GRUPO_NORM + ':' + NOMBRE_NORM, IKEY = 'aula_progreso_v2';
 const ERRORES = []; window.addEventListener('error', e => ERRORES.push(String(e.message)));
@@ -1661,6 +1664,19 @@ $('stage').addEventListener('click', e => {
 });
 
 RENDER.editor = s => { const h = rEditor(s); if (!s.ejemplo) return h; const k = h.indexOf('</h2>'), box = '<div class="v27-ex" data-test="ejemplo"><strong>📘 Ejemplo resuelto:</strong> ' + esc(s.ejemplo) + '<br><strong>✏️ Ahora tú:</strong> es lo mismo, solo cambian los datos.</div>'; return k < 0 ? box + h : h.slice(0, k + 5) + box + h.slice(k + 5); };
+
+// ═══ v34 · 73 — CONEXIÓN CON EL AULA (servidor del Profe: hoja «Notas y avance») ═══
+// El motor define window.AULA_RESUMEN() con el contrato que lee aula-sync.js:
+//   {materia, semana, avance 0-100, aciertos, preguntas, nota 0-5}  (+ campos extra que el servidor ignora y sirven para depurar).
+// aula-sync.js (si la clase lo carga con meta.aula=true) copia al servidor TODO lo que esta clase guarda en el navegador,
+// incluidos los puntos de los juegos y las respuestas «abiertas». Si el aula no está, esta función no se llama: no cambia nada.
+window.AULA_RESUMEN = function () {
+  const vistos = st.seen ? (st.seen.size !== undefined ? st.seen.size : st.seen.length) : 0, pregs = totalPreguntasReales();
+  const juegos = SL.filter(x => CLAVE_HECHO[x.type]), hechos = juegos.filter(x => st.acts[CLAVE_HECHO[x.type] + x.id]).length; let pts = 0;
+  SL.forEach(x => { const p = st.acts['pts_' + x.id]; if (typeof p === 'number') pts += p; });
+  return { materia: (CONFIG_CLASE.materia + ' ' + CONFIG_CLASE.grado + '°').slice(0, 40), semana: CONFIG_CLASE.semana, avance: Math.min(100, Math.round(vistos / TOT * 100)),
+    aciertos: Math.min(st.aciertos || 0, pregs), preguntas: pregs, nota: Math.round(notaOficial() * 10) / 10, juegos: hechos, juegosTotal: juegos.length, puntosJuegos: pts };
+};
 
 
 /* ── solución para «No me sale» ── */

@@ -1,0 +1,27 @@
+# personajes/boli
+
+21 imágenes · [← volver al índice](../CATALOGO.md)
+
+| Imagen | Id y qué contiene | Materia · grado | Calidad |
+|:--:|---|---|:--:|
+| <img src="../personajes/boli/boli-birrete.webp" width="110" alt="Bolí con birrete de graduación y un diploma"> | **`boli-birrete`**<br>Bolí con birrete de graduación y un diploma<br><sub>`birrete` `boli` `diploma` `estilo-sticker` `graduacion`</sub> | — | 5★ |
+| <img src="../personajes/boli/boli-celebra.webp" width="110" alt="Bolí celebrando con confeti de colores"> | **`boli-celebra`**<br>Bolí celebrando con confeti de colores<br><sub>`boli` `celebrar` `confeti` `estilo-sticker` `logro`</sub> | — | 5★ |
+| <img src="../personajes/boli/boli-duerme.webp" width="110" alt="Bolí dormido con una luna y zzz"> | **`boli-duerme`**<br>Bolí dormido con una luna y «zzz»<br><sub>`boli` `descanso` `dormir` `estilo-sticker` `luna`</sub> | — | 5★ |
+| <img src="../personajes/boli/boli-quieto.webp" width="110" alt="Bolí de pie en pose neutra"> | **`boli-quieto`**<br>Bolí de pie en pose neutra<br><sub>`boli` `estilo-sticker` `neutro` `quieto`</sub> | — | 5★ |
+| <img src="../personajes/boli/boli-salta.webp" width="110" alt="Bolí saltando de alegría con las alas arriba"> | **`boli-salta`**<br>Bolí saltando de alegría con las alas arriba<br><sub>`alegria` `boli` `estilo-sticker` `saltar`</sub> | — | 5★ |
+| <img src="../personajes/boli/boli-saluda.webp" width="110" alt="Bolí saludando con una ala"> | **`boli-saluda`**<br>Bolí saludando con una ala<br><sub>`boli` `estilo-sticker` `hola` `saludar`</sub> | — | 5★ |
+| <img src="../personajes/boli/boli-senala.webp" width="110" alt="Bolí señalando hacia un lado"> | **`boli-senala`**<br>Bolí señalando hacia un lado<br><sub>`boli` `estilo-sticker` `indicar` `senalar`</sub> | — | 5★ |
+| <img src="../personajes/boli/boli-trofeo.webp" width="110" alt="Bolí con un trofeo dorado"> | **`boli-trofeo`**<br>Bolí con un trofeo dorado<br><sub>`boli` `estilo-sticker` `ganador` `premio` `trofeo`</sub> | — | 5★ |
+| <img src="../personajes/boli/boli-v2-birrete.webp" width="110" alt="Bolí (versión 2) con birrete y diploma, guiñando un ojo"> | **`boli-v2-birrete`**<br>Bolí (versión 2) con birrete y diploma, guiñando un ojo<br><sub>`boli` `boli-v2` `diploma` `estilo-sticker` `graduacion`</sub> | — | 5★ |
+| <img src="../personajes/boli/boli-v2-laptop.webp" width="110" alt="Bolí (versión 2) sentado con una laptop"> | **`boli-v2-laptop`**<br>Bolí (versión 2) sentado con una laptop<br><sub>`boli` `boli-v2` `computador` `estilo-sticker` `laptop` `tecnologia`</sub> | — | 5★ |
+| <img src="../personajes/boli/boli-v2-piensa.webp" width="110" alt="Bolí (versión 2) pensando con una bombilla"> | **`boli-v2-piensa`**<br>Bolí (versión 2) pensando con una bombilla<br><sub>`boli` `boli-v2` `estilo-sticker` `idea` `pensar`</sub> | — | 5★ |
+| <img src="../personajes/boli/boli-v2-pompones.webp" width="110" alt="Bolí (versión 2) animando con pompones amarillos"> | **`boli-v2-pompones`**<br>Bolí (versión 2) animando con pompones amarillos<br><sub>`animo` `boli` `boli-v2` `estilo-sticker` `pompones` `porra`</sub> | — | 5★ |
+| <img src="../personajes/boli/boli-v2-pulgar.webp" width="110" alt="Bolí (versión 2) con el pulgar arriba"> | **`boli-v2-pulgar`**<br>Bolí (versión 2) con el pulgar arriba<br><sub>`bien` `boli` `boli-v2` `estilo-sticker` `pulgar-arriba`</sub> | — | 5★ |
+| <img src="../personajes/boli/boli-v2-salta.webp" width="110" alt="Bolí (versión 2) saltando de alegría"> | **`boli-v2-salta`**<br>Bolí (versión 2) saltando de alegría<br><sub>`alegria` `boli` `boli-v2` `estilo-sticker` `saltar`</sub> | — | 5★ |
+| <img src="../personajes/boli/boli-v2-saluda.webp" width="110" alt="Bolí (versión 2) saludando"> | **`boli-v2-saluda`**<br>Bolí (versión 2) saludando<br><sub>`boli` `boli-v2` `estilo-sticker` `hola` `saludar`</sub> | — | 5★ |
+| <img src="../personajes/boli/boli-animo.webp" width="110" alt="Bolí (ave azul con antena dorada) con ojos llorosos, para dar ánimo"> | **`boli-animo`**<br>Bolí (ave azul con antena dorada) con ojos llorosos, para dar ánimo<br><sub>`animo` `boli` `error` `estilo-sticker` `triste`</sub> | — | 4★ |
+| <img src="../personajes/boli/boli-piensa.webp" width="110" alt="Bolí pensando con una bombilla encendida"> | **`boli-piensa`**<br>Bolí pensando con una bombilla encendida<br><sub>`boli` `bombilla` `estilo-sticker` `idea` `pensar`</sub> | — | 4★ |
+| <img src="../personajes/boli/boli-tablet.webp" width="110" alt="Bolí sosteniendo una tablet con carita sonriente"> | **`boli-tablet`**<br>Bolí sosteniendo una tablet con carita sonriente<br><sub>`boli` `estilo-sticker` `tablet` `tecnologia`</sub> | — | 4★ |
+| <img src="../personajes/boli/boli-v2-libro.webp" width="110" alt="Bolí (versión 2) leyendo un libro azul"> | **`boli-v2-libro`**<br>Bolí (versión 2) leyendo un libro azul<br><sub>`boli` `boli-v2` `estilo-sticker` `lectura` `leer` `libro`</sub> | — | 4★ |
+| <img src="../personajes/boli/boli-v2-lupa.webp" width="110" alt="Bolí (versión 2) mirando por una lupa grande"> | **`boli-v2-lupa`**<br>Bolí (versión 2) mirando por una lupa grande<br><sub>`boli` `boli-v2` `estilo-sticker` `investigar` `lupa`</sub> | — | 4★ |
+| <img src="../personajes/boli/boli-v2-trofeo.webp" width="110" alt="Bolí (versión 2) con un trofeo dorado con estrella"> | **`boli-v2-trofeo`**<br>Bolí (versión 2) con un trofeo dorado con estrella<br><sub>`boli` `boli-v2` `estilo-sticker` `premio` `trofeo`</sub> | — | 4★ |

@@ -17,6 +17,7 @@
 | **Catálogo visual del banco** (miniaturas, qué contiene cada imagen, alt, grado) | `banco-imagenes/CATALOGO.md` y `banco-imagenes/catalogo/` |
 | **Actividad tabla y clase de razones/proporcionalidad** | módulo `prompt-modulos/40_tabla_y_razones.md` · ejemplo real `plantilla/ejemplos/mat5_tienda_razones.datos.json` · motor `plantilla/motor/v32_tabla_snippets.js` |
 | **Juego editor (formato de texto) y clase de ofimática** | módulo `prompt-modulos/41_editor_de_formato.md` · ejemplo real `plantilla/ejemplos/tec4_documento_formato_tablas.datos.json` · motor `plantilla/motor/v33_editor_snippets.js` |
+| **Conexión con el Aula (Notas y avance), nombre del archivo y mascotas** | módulo `prompt-modulos/42_aula_y_mascotas.md` · `pruebas/prueba_aula_integracion.py` · motor `plantilla/motor/v34_aula_snippets.js` |
 | Módulos del prompt sueltos | `prompt-modulos/` |
 | Historial | `CHANGELOG.md` (versiones previas recuperables con `git checkout archivo-v24-v25`) |
 

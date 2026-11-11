@@ -138,7 +138,7 @@ input[type=text]{font:inherit;font-size:1.05rem;padding:8px 10px;border:3px soli
 (function () {
 'use strict';
 /* ═══════ MOTOR DE REFERENCIA · v26 — NO se reescribe: cada clase nueva solo cambia #datos-clase, los assets y los colores ═══════ */
-const MOTOR_VERSION = '33.0';   // sube cuando cambie el motor; las clases guardan sus datos aparte y se reconstruyen con construir_clase.py --datos-de
+const MOTOR_VERSION = '34.0';   // sube cuando cambie el motor; las clases guardan sus datos aparte y se reconstruyen con construir_clase.py --datos-de
 const TEST = window.__TEST__ || null, FACTOR = (TEST && TEST.factor) || 1, ANTI_DOBLE = (TEST && TEST.antiDobleMs) || 350;   // ms mínimos entre dos respuestas de quiz (evita contestar dos por un doble toque)
 const DATOS = JSON.parse(document.getElementById('datos-clase').textContent);
 const CONFIG_CLASE = DATOS.meta, CLASE_ID = CONFIG_CLASE.claseId, SL = DATOS.slides, TOT = SL.length;
@@ -146,7 +146,10 @@ const TIPOS_EVALUABLES = ['quiz', 'evalFinal'], TIPOS_LECTURA = ['info'], MAX_VI
 const NIVELES = ['Explorador', 'Aprendiz', 'Constructor', 'Estratega', 'Campeón'], UMBRAL = [0, 60, 140, 240, 360];
 const qs = new URLSearchParams(location.search);
 const norm = s => String(s).normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/[^a-z0-9]+/g, '_').replace(/^_|_$/g, '');
-const NOMBRE = (qs.get('est') || 'Invitado').trim(), GRUPO = (qs.get('grupo') || '000').trim();
+// Identidad: si el estudiante entró por la portada del Aula (sesión «aula_sesion_v1») manda la sesión; si no, ?est=&grupo= (pruebas o uso suelto).
+// Nunca se adivina desde otras claves del navegador: en una sala compartida mezclaría estudiantes.
+const _SES = (() => { try { const x = JSON.parse(localStorage.getItem('aula_sesion_v1') || 'null'); return x && x.token && (x.nombre || x.apodo) ? x : null; } catch (e) { return null; } })();
+const NOMBRE = ((_SES && (_SES.nombre || _SES.apodo)) || qs.get('est') || 'Invitado').trim(), GRUPO = ((_SES && _SES.grupo) || qs.get('grupo') || '000').trim();
 const NOMBRE_NORM = norm(NOMBRE), GRUPO_NORM = norm(GRUPO);
 const SKEY = 'aula:' + CLASE_ID + ':' + GRUPO_NORM + ':' + NOMBRE_NORM, IKEY = 'aula_progreso_v2';
 const ERRORES = []; window.addEventListener('error', e => ERRORES.push(String(e.message)));
@@ -356,6 +359,7 @@ const RENDER = { intro: rIntro, info: rInfo, tf: rTF, fill: rFill, drag: rDrag, 
 /*@@V31@@*/
 /*@@V32@@*/
 /*@@V33@@*/
+/*@@V34@@*/
 
 /* ── solución para «No me sale» ── */
 function mostrarSolucionActividad(s) {

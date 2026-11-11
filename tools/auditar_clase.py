@@ -65,6 +65,12 @@ def main():
             fin = [x for x in S if x['type'] == 'final']
             if fin and not fin[0].get('aprendiste'): A.append("La slide final no tiene «aprendiste» (3 logros): la pantalla de celebración queda sin «Lo que lograste hoy» (Prioridad 67)")
             elif fin: chk(1 <= len(fin[0]['aprendiste']) <= 4 and all(len(x.split()) <= 20 for x in fin[0]['aprendiste']), '', 'La slide final: «aprendiste» debe tener 1 a 4 logros de máximo 20 palabras')
+            # Conexión con el Aula (Prioridad 73)
+            if D['meta'].get('aula'):
+                chk(bool(re.search(r'<head>\s*<script src="[^"]*aula-sync\.js"', html)), 'aula-sync.js primero en <head>', 'meta.aula=true pero aula-sync.js no es la PRIMERA etiqueta del <head> (reconstruir con construir_clase.py)')
+                chk('aula-config.js' in html and 'aula-contexto.js' in html, 'config y contexto del aula', 'meta.aula=true pero faltan aula-config.js o aula-contexto.js')
+                chk(isinstance(D['meta'].get('semana'), int) and isinstance(D['meta'].get('grado'), int) and 1 <= D['meta']['semana'] <= 20, 'semana y grado enteros', 'meta.semana y meta.grado deben ser números enteros (el servidor los guarda en la hoja)')
+                if not re.search(r'_(mat|tec)\d_', D['meta'].get('claseId', '')): A.append("meta.claseId no contiene «_mat<grado>_» ni «_tec<grado>_»: el servidor usa el NOMBRE DEL ARCHIVO (semanaN_mat5_p4.html) para dar el XP al mundo correcto; nombra así el archivo")
             def num(x):                      # «0,75» · «3/4» · «25 %»
                 t = str(x).strip(); pc = t.endswith('%'); u = t.replace('%', '').replace(' ', '')
                 if '/' in u: a, b = u.split('/'); v = float(a.replace(',', '.')) / float(b.replace(',', '.'))

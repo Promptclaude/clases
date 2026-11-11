@@ -1,11 +1,13 @@
 {
  "meta": {
-  "claseId": "tec4_p4_s6_documento_formato_tablas",
+  "claseId": "semana6_tec4_p4",
   "semana": 6,
   "grado": 4,
   "materia": "Tecnología e Informática",
   "titulo": "Mi primer documento: formato y tablas",
-  "dba": "DBA: Usa un procesador de texto para dar formato a un documento e insertar tablas con orden y claridad"
+  "dba": "DBA: Usa un procesador de texto para dar formato a un documento e insertar tablas con orden y claridad",
+  "aula": true,
+  "aulaVersion": "20261110"
  },
  "slides": [
   {

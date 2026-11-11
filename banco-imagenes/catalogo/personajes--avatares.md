@@ -1,9 +1,19 @@
 # personajes/avatares
 
-10 imágenes · [← volver al índice](../CATALOGO.md)
+20 imágenes · [← volver al índice](../CATALOGO.md)
 
 | Imagen | Id y qué contiene | Materia · grado | Calidad |
 |:--:|---|---|:--:|
+| <img src="../personajes/avatares/avatar-01-nina-trenzas.webp" width="110" alt="Avatar de niña con trenzas oscuras y camiseta naranja"> | **`avatar-01-nina-trenzas`**<br>Avatar de niña con trenzas oscuras y camiseta naranja<br><sub>`avatar` `avatares` `estilo-sticker` `nina` `perfil` `trenzas`</sub> | — | 5★ |
+| <img src="../personajes/avatares/avatar-02-nino-gafas.webp" width="110" alt="Avatar de niño con gafas redondas y camiseta azul"> | **`avatar-02-nino-gafas`**<br>Avatar de niño con gafas redondas y camiseta azul<br><sub>`avatar` `avatares` `estilo-sticker` `gafas` `nino` `perfil`</sub> | — | 5★ |
+| <img src="../personajes/avatares/avatar-03-nina-coletas.webp" width="110" alt="Avatar de niña rubia con coletas, moños amarillos y camiseta amarilla"> | **`avatar-03-nina-coletas`**<br>Avatar de niña rubia con coletas, moños amarillos y camiseta amarilla<br><sub>`avatar` `avatares` `coletas` `estilo-sticker` `nina` `perfil`</sub> | — | 5★ |
+| <img src="../personajes/avatares/avatar-04-nino-audifonos.webp" width="110" alt="Avatar de niño con audífonos azules y camiseta azul"> | **`avatar-04-nino-audifonos`**<br>Avatar de niño con audífonos azules y camiseta azul<br><sub>`audifonos` `avatar` `avatares` `estilo-sticker` `nino` `perfil`</sub> | — | 5★ |
+| <img src="../personajes/avatares/avatar-05-nina-diadema.webp" width="110" alt="Avatar de niña de cabello largo con diadema verde y camiseta verde"> | **`avatar-05-nina-diadema`**<br>Avatar de niña de cabello largo con diadema verde y camiseta verde<br><sub>`avatar` `avatares` `diadema` `estilo-sticker` `nina` `perfil`</sub> | — | 5★ |
+| <img src="../personajes/avatares/avatar-06-nino-gorra.webp" width="110" alt="Avatar de niño con gorra azul"> | **`avatar-06-nino-gorra`**<br>Avatar de niño con gorra azul<br><sub>`avatar` `avatares` `estilo-sticker` `gorra` `nino` `perfil`</sub> | — | 5★ |
+| <img src="../personajes/avatares/avatar-07-nina-afro.webp" width="110" alt="Avatar de niña con cabello afro, moños naranjas y aretes"> | **`avatar-07-nina-afro`**<br>Avatar de niña con cabello afro, moños naranjas y aretes<br><sub>`afro` `avatar` `avatares` `estilo-sticker` `nina` `perfil`</sub> | — | 5★ |
+| <img src="../personajes/avatares/avatar-09-nina-rizos.webp" width="110" alt="Avatar de niña de rizos con gafas moradas y camiseta morada"> | **`avatar-09-nina-rizos`**<br>Avatar de niña de rizos con gafas moradas y camiseta morada<br><sub>`avatar` `avatares` `estilo-sticker` `gafas` `nina` `perfil` `rizos`</sub> | — | 5★ |
+| <img src="../personajes/avatares/avatar-08-nino-pecas.webp" width="110" alt="Avatar de niño pelirrojo con pecas y camiseta verde"> | **`avatar-08-nino-pecas`**<br>Avatar de niño pelirrojo con pecas y camiseta verde<br><sub>`avatar` `avatares` `estilo-sticker` `nino` `pecas` `perfil`</sub> | — | 4★ |
+| <img src="../personajes/avatares/avatar-10-nino-astronauta.webp" width="110" alt="Avatar de niño astronauta con casco"> | **`avatar-10-nino-astronauta`**<br>Avatar de niño astronauta con casco<br><sub>`astronauta` `avatar` `avatares` `estilo-sticker` `nino` `perfil`</sub> | — | 4★ |
 | <img src="../personajes/avatares/0c5971d1a6.webp" width="110" alt=""> | **`img-0c5971d1a6`**<br> <br><sub>texto: vay</sub><br><sub>`avatar` `login` `perfil` `personaje` `sprite` `tecnologia`</sub> | — | 4★ |
 | <img src="../personajes/avatares/svg-1075a4ea8c.svg" width="110" alt="SVG extraído de clase"> | **`img-1075a4ea8c`**<br>SVG extraído de clase<br><sub>`5°` `aritmetica` `avatar` `icono` `juego` `perfil`</sub> | — | 4★ |
 | <img src="../personajes/avatares/svg-194a87c2fc.svg" width="110" alt="SVG extraído de clase"> | **`img-194a87c2fc`**<br>SVG extraído de clase<br><sub>`5°` `aritmetica` `avatar` `icono` `juego` `perfil`</sub> | — | 4★ |

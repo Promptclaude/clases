@@ -1,0 +1,89 @@
+# stem (archivo sin extensión) | carpeta destino | descripción | tags
+personajes_aria-celebra | personajes/aria-v2 | ARIA (robot de cuerpo completo, versión 2) celebrando con confeti | aria celebrar confeti alegria logro
+personajes_aria-explica | personajes/aria-v2 | ARIA de cuerpo completo explicando junto a una pantalla holográfica azul | aria explicar pantalla holograma ensenar
+personajes_aria-lupa | personajes/aria-v2 | ARIA de cuerpo completo con una lupa grande y huellas en el suelo (investigando) | aria lupa detective investigar huellas
+personajes_aria-piensa | personajes/aria-v2 | ARIA de cuerpo completo pensando con la mano en la barbilla y una bombilla encendida | aria pensar idea bombilla duda
+personajes_aria-pulgar | personajes/aria-v2 | ARIA de cuerpo completo con el pulgar arriba | aria pulgar-arriba bien aprobar animo
+personajes_aria-saluda | personajes/aria-v2 | ARIA de cuerpo completo saludando con la mano | aria saludar hola bienvenida
+personajes_aria-senala | personajes/aria-v2 | ARIA de cuerpo completo señalando hacia un lado | aria senalar indicar mirar
+personajes_boli-animo | personajes/boli | Bolí (ave azul con antena dorada) con ojos llorosos, para dar ánimo | boli triste animo error
+personajes_boli-birrete | personajes/boli | Bolí con birrete de graduación y un diploma | boli graduacion diploma birrete
+personajes_boli-celebra | personajes/boli | Bolí celebrando con confeti de colores | boli celebrar confeti logro
+personajes_boli-duerme | personajes/boli | Bolí dormido con una luna y «zzz» | boli dormir luna descanso
+personajes_boli-piensa | personajes/boli | Bolí pensando con una bombilla encendida | boli pensar idea bombilla
+personajes_boli-quieto | personajes/boli | Bolí de pie en pose neutra | boli neutro quieto
+personajes_boli-salta | personajes/boli | Bolí saltando de alegría con las alas arriba | boli saltar alegria
+personajes_boli-saluda | personajes/boli | Bolí saludando con una ala | boli saludar hola
+personajes_boli-senala | personajes/boli | Bolí señalando hacia un lado | boli senalar indicar
+personajes_boli-tablet | personajes/boli | Bolí sosteniendo una tablet con carita sonriente | boli tablet tecnologia
+personajes_boli-trofeo | personajes/boli | Bolí con un trofeo dorado | boli trofeo premio ganador
+personajes_boli-v2-birrete | personajes/boli | Bolí (versión 2) con birrete y diploma, guiñando un ojo | boli boli-v2 graduacion diploma
+personajes_boli-v2-laptop | personajes/boli | Bolí (versión 2) sentado con una laptop | boli boli-v2 laptop computador tecnologia
+personajes_boli-v2-libro | personajes/boli | Bolí (versión 2) leyendo un libro azul | boli boli-v2 libro leer lectura
+personajes_boli-v2-lupa | personajes/boli | Bolí (versión 2) mirando por una lupa grande | boli boli-v2 lupa investigar
+personajes_boli-v2-piensa | personajes/boli | Bolí (versión 2) pensando con una bombilla | boli boli-v2 pensar idea
+personajes_boli-v2-pompones | personajes/boli | Bolí (versión 2) animando con pompones amarillos | boli boli-v2 pompones animo porra
+personajes_boli-v2-pulgar | personajes/boli | Bolí (versión 2) con el pulgar arriba | boli boli-v2 pulgar-arriba bien
+personajes_boli-v2-salta | personajes/boli | Bolí (versión 2) saltando de alegría | boli boli-v2 saltar alegria
+personajes_boli-v2-saluda | personajes/boli | Bolí (versión 2) saludando | boli boli-v2 saludar hola
+personajes_boli-v2-trofeo | personajes/boli | Bolí (versión 2) con un trofeo dorado con estrella | boli boli-v2 trofeo premio
+avatares_avatar-01-nina-trenzas | personajes/avatares | Avatar de niña con trenzas oscuras y camiseta naranja | avatar perfil nina trenzas
+avatares_avatar-02-nino-gafas | personajes/avatares | Avatar de niño con gafas redondas y camiseta azul | avatar perfil nino gafas
+avatares_avatar-03-nina-coletas | personajes/avatares | Avatar de niña rubia con coletas, moños amarillos y camiseta amarilla | avatar perfil nina coletas
+avatares_avatar-04-nino-audifonos | personajes/avatares | Avatar de niño con audífonos azules y camiseta azul | avatar perfil nino audifonos
+avatares_avatar-05-nina-diadema | personajes/avatares | Avatar de niña de cabello largo con diadema verde y camiseta verde | avatar perfil nina diadema
+avatares_avatar-06-nino-gorra | personajes/avatares | Avatar de niño con gorra azul | avatar perfil nino gorra
+avatares_avatar-07-nina-afro | personajes/avatares | Avatar de niña con cabello afro, moños naranjas y aretes | avatar perfil nina afro
+avatares_avatar-08-nino-pecas | personajes/avatares | Avatar de niño pelirrojo con pecas y camiseta verde | avatar perfil nino pecas
+avatares_avatar-09-nina-rizos | personajes/avatares | Avatar de niña de rizos con gafas moradas y camiseta morada | avatar perfil nina rizos gafas
+avatares_avatar-10-nino-astronauta | personajes/avatares | Avatar de niño astronauta con casco | avatar perfil nino astronauta
+iconos_bandera-meta | juego | Bandera de cuadros blanca y negra de meta | meta bandera llegada final
+iconos_boton-jugar | juego | Botón verde redondo de jugar (play) | jugar play empezar boton
+iconos_check-acierto | juego | Marca de verificación blanca sobre círculo verde (acierto) | check acierto correcto bien
+iconos_corazon-vida | juego | Corazón rojo brillante (vida) | corazon vida vidas
+iconos_en-construccion | interfaz/estado | Cono de obra con llave inglesa: en construcción | construccion obra proximamente
+iconos_en-linea | interfaz/estado | Planeta Tierra con señal wifi: en línea (conectado) | en-linea conectado wifi internet
+iconos_equis-error | juego | Equis blanca sobre círculo rojo (error) | equis error incorrecto mal
+iconos_estrella-xp | juego | Estrella dorada de puntos de experiencia (XP) | estrella xp puntos experiencia
+iconos_llama-racha | juego | Llama de fuego (racha de aciertos) | llama racha fuego aciertos
+iconos_moneda-estrella | juego | Moneda dorada con una estrella | moneda estrella premio recompensa
+iconos_sin-internet | interfaz/estado | Nube azul tachada con una línea roja: sin internet | sin-internet desconectado nube error
+iconos_trofeo-dorado | premios | Trofeo dorado con estrella sobre base azul | trofeo premio ganador logro
+login_candado-abierto | interfaz/login | Candado verde abierto con marca de verificación | candado abierto desbloqueado acceso
+login_candado-cerrado | interfaz/login | Candado dorado cerrado | candado cerrado bloqueado seguridad
+login_gafete-estudiante | interfaz/login | Gafete o credencial de estudiante con cordón azul | gafete credencial estudiante identificacion
+login_llave-dorada | interfaz/login | Llave dorada con una estrella | llave dorada acceso entrar
+login_pin-cuatro-puntos | interfaz/login | Campo de PIN de cuatro puntos (tres llenos y uno vacío) | pin clave codigo contrasena
+portada_cohete-despegando | interfaz/portada | Cohete rojo y blanco despegando con estrellas | cohete despegar espacio inicio
+portada_emblema-escudo-cohete | interfaz/portada | Emblema: escudo azul con un cohete y una estrella | emblema escudo cohete estrella
+portada_planeta-anillo | interfaz/portada | Planeta naranja con anillo y estrellas | planeta anillo espacio estrellas
+portada_portal-entrada | interfaz/portada | Portal de entrada azul brillante con una puerta abierta | portal entrada puerta
+portada_tablet-carita | interfaz/portada | Tablet con carita sonriente | tablet carita tecnologia
+periodos_calendario-semana | interfaz/periodos | Calendario de semana con una estrella dorada | calendario semana estrella
+periodos_camino-tablero | interfaz/periodos | Camino de juego de mesa con casillas y banderas | camino tablero progreso ruta
+periodos_periodo-1 | interfaz/periodos | Insignia hexagonal verde con el número 1 (período 1) | periodo 1 insignia hexagono
+periodos_periodo-2 | interfaz/periodos | Insignia hexagonal morada con el número 2 (período 2) | periodo 2 insignia hexagono
+periodos_periodo-3 | interfaz/periodos | Insignia hexagonal rosa con el número 3 (período 3) | periodo 3 insignia hexagono
+periodos_periodo-4 | interfaz/periodos | Insignia hexagonal amarilla con el número 4 (período 4) | periodo 4 insignia hexagono
+grados_numero-4 | interfaz/insignias | Número 4 grande en naranja con borde azul (grado cuarto) | grado cuarto 4 numero
+grados_numero-5 | interfaz/insignias | Número 5 grande en naranja con borde azul (grado quinto) | grado quinto 5 numero
+aritmetica_abaco | iconos/aritmetica | Ábaco con cuentas azules, verdes, naranjas y rojas | abaco cuentas contar
+aritmetica_balanza | iconos/aritmetica | Balanza de platillos dorada con dos cubos azules | balanza equilibrio comparar
+aritmetica_calculadora | iconos/aritmetica | Calculadora naranja con teclas de colores | calculadora operaciones
+aritmetica_libro-lapiz | iconos/aritmetica | Libro abierto con un lápiz | libro lapiz cuaderno escribir
+aritmetica_monedas-apiladas | iconos/aritmetica | Torres de monedas doradas apiladas | monedas dinero apiladas
+aritmetica_pizza-fracciones | iconos/aritmetica | Pizza partida en porciones separadas (fracciones) | pizza fracciones porciones partes
+aritmetica_regla-escuadra | iconos/aritmetica | Regla naranja y escuadra azul | regla escuadra geometria medir
+aritmetica_signo-dividir | iconos/aritmetica | Signo de dividir (÷) naranja | dividir division signo
+aritmetica_signo-mas | iconos/aritmetica | Signo de más (+) naranja | suma mas signo
+aritmetica_signo-por | iconos/aritmetica | Signo de multiplicar (×) naranja | multiplicar por signo
+tecnologia_audifonos-microfono | iconos/tecnologia | Audífonos azules con micrófono | audifonos microfono audio
+tecnologia_chip-circuito | iconos/tecnologia | Chip de computador con circuitos | chip procesador circuito hardware
+tecnologia_codigo-ventana | iconos/tecnologia | Ventana azul con el símbolo de código </> | codigo programacion ventana
+tecnologia_engranajes | iconos/tecnologia | Dos engranajes, uno azul y otro naranja | engranajes configuracion mecanismo
+tecnologia_escudo-seguridad | iconos/tecnologia | Escudo azul con candado y marca de verificación (seguridad) | escudo seguridad candado proteccion
+tecnologia_laptop-carita | iconos/tecnologia | Laptop azul con carita sonriente | laptop computador carita
+tecnologia_memoria-usb | iconos/tecnologia | Memoria USB azul | usb memoria almacenamiento
+tecnologia_monitor-escritorio | iconos/tecnologia | Computador de escritorio con monitor, teclado y mouse | monitor escritorio teclado mouse computador
+tecnologia_nube-wifi | iconos/tecnologia | Nube con señal wifi | nube wifi internet
+tecnologia_robot-juguete | iconos/tecnologia | Robot de juguete azul sonriente | robot juguete tecnologia

@@ -1,6 +1,6 @@
 # Catálogo visual del banco de imágenes
 
-423 imágenes usables (de 734 registradas). Haz clic en un tema para ver miniaturas, qué contiene cada una y su texto alternativo (`alt`).
+511 imágenes usables (de 822 registradas). Haz clic en un tema para ver miniaturas, qué contiene cada una y su texto alternativo (`alt`).
 
 **Cómo usarlas en una clase:** `"imagen": "asset://ID", "alt": "…el alt del catálogo…"`. Buscar por contenido: `python3 _herramientas/buscar_banco.py palabra --alt`.
 
@@ -9,21 +9,29 @@
 | [escenarios/ciudad-digital](catalogo/escenarios--ciudad-digital.md) | 1 | … |
 | [escenarios/colegio](catalogo/escenarios--colegio.md) | 1 | … |
 | [escenarios/espacio](catalogo/escenarios--espacio.md) | 1 | … |
+| [iconos/aritmetica](catalogo/iconos--aritmetica.md) | 10 | Balanza de platillos dorada con dos cu; Calculadora naranja con teclas de colo; Libro abierto con un lápiz… |
+| [iconos/tecnologia](catalogo/iconos--tecnologia.md) | 10 | Audífonos azules con micrófono; Chip de computador con circuitos; Computador de escritorio con monitor, … |
 | [infografias](catalogo/infografias.md) | 1 | … |
 | [institucional](catalogo/institucional.md) | 1 | Escudo del Colegio Integrado Simón Bol… |
 | [interfaz/banners](catalogo/interfaz--banners.md) | 5 | ; Logo «Proceso de Subir de grado» con c… |
 | [interfaz/barras-y-marcos](catalogo/interfaz--barras-y-marcos.md) | 5 | ; Mapa de misión en el espacio con plane; Mapa de misión: galaxia con planetas «… |
 | [interfaz/botones](catalogo/interfaz--botones.md) | 11 | … |
-| [interfaz/insignias](catalogo/interfaz--insignias.md) | 2 | … |
-| [juego](catalogo/juego.md) | 29 | Acierto; Bloqueado; Botón sin texto: azul… |
+| [interfaz/estado](catalogo/interfaz--estado.md) | 3 | Cono de obra con llave inglesa: en con; Nube azul tachada con una línea roja: ; Planeta Tierra con señal wifi: en líne… |
+| [interfaz/insignias](catalogo/interfaz--insignias.md) | 4 | ; Número 4 grande en naranja con borde a; Número 5 grande en naranja con borde a… |
+| [interfaz/login](catalogo/interfaz--login.md) | 5 | Campo de PIN de cuatro puntos (tres ll; Candado dorado cerrado; Candado verde abierto con marca de ver… |
+| [interfaz/periodos](catalogo/interfaz--periodos.md) | 6 | Calendario de semana con una estrella ; Camino de juego de mesa con casillas y; Insignia hexagonal amarilla con el núm… |
+| [interfaz/portada](catalogo/interfaz--portada.md) | 5 | Cohete rojo y blanco despegando con es; Emblema: escudo azul con un cohete y u; Planeta naranja con anillo y estrellas… |
+| [juego](catalogo/juego.md) | 37 | Acierto; Bandera de cuadros blanca y negra de m; Bloqueado… |
 | [matematicas/base10](catalogo/matematicas--base10.md) | 4 | Bloque de base 10: centena (placa de 1; Bloque de base 10: decena (barra de 10; Bloque de base 10: millar (cubo de 100… |
 | [matematicas/dinero](catalogo/matematicas--dinero.md) | 7 | Billete genérico de 10000 (ilustración; Billete genérico de 2000 (ilustración ; Billete genérico de 5000 (ilustración … |
 | [matematicas/fracciones](catalogo/matematicas--fracciones.md) | 44 | Barra con 1/10 pintado; Barra con 1/2 pintado; Barra con 1/3 pintado… |
 | [matematicas/geometria](catalogo/matematicas--geometria.md) | 9 | Cuadrado (figura geométrica); Círculo (figura geométrica); Hexágono (figura geométrica)… |
 | [personajes/aria](catalogo/personajes--aria.md) | 35 | ; ARIA con pulgar arriba y globo «¡Lo es; Mascota ARIA (busto) · (sin texto) cor… |
-| [personajes/avatares](catalogo/personajes--avatares.md) | 10 | ; SVG extraído de clase… |
+| [personajes/aria-v2](catalogo/personajes--aria-v2.md) | 7 | ARIA (robot de cuerpo completo, versió; ARIA de cuerpo completo con el pulgar ; ARIA de cuerpo completo con una lupa g… |
+| [personajes/avatares](catalogo/personajes--avatares.md) | 20 | ; Avatar de niña con cabello afro, moños; Avatar de niña con trenzas oscuras y c… |
+| [personajes/boli](catalogo/personajes--boli.md) | 21 | Bolí (ave azul con antena dorada) con ; Bolí (versión 2) animando con pompones; Bolí (versión 2) con birrete y diploma… |
 | [personajes/npc](catalogo/personajes--npc.md) | 16 | … |
-| [premios](catalogo/premios.md) | 13 | ; ARIA con birrete y diploma, pergamino ; ARIA con cohete y pergamino «¡Subí a s… |
+| [premios](catalogo/premios.md) | 14 | ; ARIA con birrete y diploma, pergamino ; ARIA con cohete y pergamino «¡Subí a s… |
 | [tematicos/decimales](catalogo/tematicos--decimales.md) | 47 | ; 10 barras amarillas de decena igual a ; Balanza de platillos que compara 2,09 … |
 | [tematicos/detectives](catalogo/tematicos--detectives.md) | 8 | ; Detective con forma de papa y lupa fre; Detective niña con lupa frente a la pi… |
 | [tematicos/dinero](catalogo/tematicos--dinero.md) | 29 | ; Alcancía de cerdito con monedas y «$14; Billete y monedas con «Compra: $5,65» … |

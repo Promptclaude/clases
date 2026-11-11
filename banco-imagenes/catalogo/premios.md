@@ -1,6 +1,6 @@
 # premios
 
-13 imágenes · [← volver al índice](../CATALOGO.md)
+14 imágenes · [← volver al índice](../CATALOGO.md)
 
 | Imagen | Id y qué contiene | Materia · grado | Calidad |
 |:--:|---|---|:--:|
@@ -8,6 +8,7 @@
 | <img src="../premios/aria-con-birrete-y-diploma-pergamino-subi-7fd8.webp" width="110" alt="ARIA con birrete y diploma, pergamino ¡Subí de grado! y cohete"> | **`aria-con-birrete-y-diploma-pergamino-subi-7fd8`**<br>ARIA con birrete y diploma, pergamino «¡Subí de grado!» y cohete<br><sub>`4°` `aria` `aritmetica` `celebracion` `diploma` `graduacion` `subir-de-grado`</sub> | aritmetica · grado 4 | 5★ |
 | <img src="../premios/aria-con-cohete-y-pergamino-subi-a-sexto-3ec5.webp" width="110" alt="ARIA con cohete y pergamino ¡Subí a sexto!"> | **`aria-con-cohete-y-pergamino-subi-a-sexto-3ec5`**<br>ARIA con cohete y pergamino «¡Subí a sexto!»<br><sub>`5°` `aria` `aritmetica` `celebracion` `quinto` `sexto` `subir-de-grado`</sub> | aritmetica · grado 5 | 5★ |
 | <img src="../premios/corona.png" width="110" alt="Corona dorada con rubíes"> | **`corona`**<br>Corona dorada con rubíes<br><sub>`corona` `campeón` `nivel máximo` `premio` `logro`</sub> | — | 5★ |
+| <img src="../premios/icono-trofeo-dorado.webp" width="110" alt="Trofeo dorado con estrella sobre base azul"> | **`icono-trofeo-dorado`**<br>Trofeo dorado con estrella sobre base azul<br><sub>`estilo-sticker` `ganador` `logro` `premio` `trofeo`</sub> | — | 5★ |
 | <img src="../premios/medalla-bronce.png" width="110" alt="Medalla de bronce con laurel"> | **`medalla-bronce`**<br>Medalla de bronce con laurel<br><sub>`medalla` `logro` `bronce` `nivel` `premio`</sub> | — | 5★ |
 | <img src="../premios/medalla-oro.png" width="110" alt="Medalla de oro con alas"> | **`medalla-oro`**<br>Medalla de oro con alas<br><sub>`medalla` `logro` `oro` `nivel` `premio`</sub> | — | 5★ |
 | <img src="../premios/medalla-plata.png" width="110" alt="Medalla de plata con alas"> | **`medalla-plata`**<br>Medalla de plata con alas<br><sub>`medalla` `logro` `plata` `nivel` `premio`</sub> | — | 5★ |

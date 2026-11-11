@@ -1,6 +1,6 @@
 # juego
 
-29 imágenes · [← volver al índice](../CATALOGO.md)
+37 imágenes · [← volver al índice](../CATALOGO.md)
 
 | Imagen | Id y qué contiene | Materia · grado | Calidad |
 |:--:|---|---|:--:|
@@ -28,6 +28,14 @@
 | <img src="../juego/gema.png" width="110" alt="Gema"> | **`gema`**<br>Gema<br><sub>`kit` `gema` `juego` `icono`</sub> | — | 5★ |
 | <img src="../juego/globo.png" width="110" alt="Globo de diálogo (sin texto)"> | **`globo`**<br>Globo de diálogo (sin texto)<br><sub>`kit` `globo` `juego` `icono`</sub> | — | 5★ |
 | <img src="../juego/globo-pensar.png" width="110" alt="Globo de pensamiento"> | **`globo-pensar`**<br>Globo de pensamiento<br><sub>`kit` `globo` `juego` `icono`</sub> | — | 5★ |
+| <img src="../juego/icono-bandera-meta.webp" width="110" alt="Bandera de cuadros blanca y negra de meta"> | **`icono-bandera-meta`**<br>Bandera de cuadros blanca y negra de meta<br><sub>`bandera` `estilo-sticker` `final` `llegada` `meta`</sub> | — | 5★ |
+| <img src="../juego/icono-boton-jugar.webp" width="110" alt="Botón verde redondo de jugar (play)"> | **`icono-boton-jugar`**<br>Botón verde redondo de jugar (play)<br><sub>`boton` `empezar` `estilo-sticker` `jugar` `play`</sub> | — | 5★ |
+| <img src="../juego/icono-check-acierto.webp" width="110" alt="Marca de verificación blanca sobre círculo verde (acierto)"> | **`icono-check-acierto`**<br>Marca de verificación blanca sobre círculo verde (acierto)<br><sub>`acierto` `bien` `check` `correcto` `estilo-sticker`</sub> | — | 5★ |
+| <img src="../juego/icono-corazon-vida.webp" width="110" alt="Corazón rojo brillante (vida)"> | **`icono-corazon-vida`**<br>Corazón rojo brillante (vida)<br><sub>`corazon` `estilo-sticker` `vida` `vidas`</sub> | — | 5★ |
+| <img src="../juego/icono-equis-error.webp" width="110" alt="Equis blanca sobre círculo rojo (error)"> | **`icono-equis-error`**<br>Equis blanca sobre círculo rojo (error)<br><sub>`equis` `error` `estilo-sticker` `incorrecto` `mal`</sub> | — | 5★ |
+| <img src="../juego/icono-estrella-xp.webp" width="110" alt="Estrella dorada de puntos de experiencia (XP)"> | **`icono-estrella-xp`**<br>Estrella dorada de puntos de experiencia (XP)<br><sub>`estilo-sticker` `estrella` `experiencia` `puntos` `xp`</sub> | — | 5★ |
+| <img src="../juego/icono-llama-racha.webp" width="110" alt="Llama de fuego (racha de aciertos)"> | **`icono-llama-racha`**<br>Llama de fuego (racha de aciertos)<br><sub>`aciertos` `estilo-sticker` `fuego` `llama` `racha`</sub> | — | 5★ |
+| <img src="../juego/icono-moneda-estrella.webp" width="110" alt="Moneda dorada con una estrella"> | **`icono-moneda-estrella`**<br>Moneda dorada con una estrella<br><sub>`estilo-sticker` `estrella` `moneda` `premio` `recompensa`</sub> | — | 5★ |
 | <img src="../juego/llama.png" width="110" alt="Racha"> | **`llama`**<br>Racha<br><sub>`kit` `llama` `juego` `icono`</sub> | — | 5★ |
 | <img src="../juego/moneda.png" width="110" alt="Moneda"> | **`moneda`**<br>Moneda<br><sub>`kit` `moneda` `juego` `icono`</sub> | — | 5★ |
 | <img src="../juego/ok.png" width="110" alt="Acierto"> | **`ok`**<br>Acierto<br><sub>`kit` `ok` `juego` `icono`</sub> | — | 5★ |

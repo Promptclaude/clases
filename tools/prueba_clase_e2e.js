@@ -324,5 +324,19 @@ async function recorrer(w, modo, tope = 40) { let n = 0; const vistos = []; whil
       const w2 = abrir({ est: 'pedro' }).window; w2.CLASE_API.irA(iE); const c2 = sel => { const e = q(w2, sel); if (e) clic(e); }; c2(`[data-test=ed-pal][data-i="${libre}"]`); c2('[data-test=ed-tool][data-t="subrayado"]'); c2('[data-test=ed-revisar]'); c2('[data-test=ed-revisar]');
       ok(habil(w2) && qa(w2, '.v33-pal.rev').length === ob.length, 'editor: tras 2 revisiones fallidas marca cómo debía quedar y deja continuar'); w2.close(); } }
 
+  T('T30 · Aula: identidad desde la sesión del aula y AULA_RESUMEN con el contrato de «Notas y avance»');
+  { const ses = JSON.stringify({ token: 'tok', api: 'http://localhost/api', nombre: 'María Pérez', apodo: 'maria', grupo: '501', id: 'x1' });
+    const w = abrir({ est: 'otro', grupo: '999', storage: { aula_sesion_v1: ses } }).window, API = w.CLASE_API; const iF = SL0.findIndex(x => x.type === 'final'); API.irA(iF);
+    ok(/María Pérez/.test(q(w, '[data-test=insignia]').textContent), 'con sesión del aula manda la sesión (nombre «María Pérez»), no el ?est= de la dirección');
+    ok(/501/.test(API.SKEY) && !/999/.test(API.SKEY), 'el progreso se guarda bajo el grupo de la sesión (' + API.SKEY + '): dos estudiantes en el mismo equipo no se mezclan');
+    ok(typeof w.AULA_RESUMEN === 'function', 'la clase define window.AULA_RESUMEN()');
+    for (let i = 0; i < SL0.length; i++) API.irA(i); const r = w.AULA_RESUMEN();
+    ok(r.avance === 100 && Number.isInteger(r.avance), 'al recorrer todas las slides el avance es 100 (avance = ' + r.avance + ')');
+    ok(typeof r.materia === 'string' && r.materia.length <= 40 && /\d°$/.test(r.materia) && Number.isInteger(r.semana) && r.semana > 0, 'materia («' + r.materia + '») y semana (' + r.semana + ') válidas para la hoja');
+    ok(r.nota >= 0 && r.nota <= 5 && r.aciertos >= 0 && r.aciertos <= r.preguntas && r.preguntas > 0, 'nota ' + r.nota + ' en 0–5 y aciertos ' + r.aciertos + ' ≤ preguntas ' + r.preguntas);
+    ok(Number.isInteger(r.juegosTotal) && r.juegos <= r.juegosTotal, 'datos extra de juegos coherentes (' + r.juegos + ' de ' + r.juegosTotal + ')'); w.close();
+    const w2 = abrir({ est: 'sofia', grupo: '402' }).window; w2.CLASE_API.irA(iF); ok(/sofia/i.test(q(w2, '[data-test=insignia]').textContent) && /402/.test(w2.CLASE_API.SKEY), 'sin sesión del aula sigue funcionando con ?est= y ?grupo= (pruebas y uso suelto)'); w2.close();
+    const w3 = abrir({ est: 'ana', grupo: '501', storage: { aula_sesion_v1: '{esto no es json' } }).window; w3.CLASE_API.irA(iF); ok(/ana/i.test(q(w3, '[data-test=insignia]').textContent), 'una sesión dañada no rompe la clase (usa ?est=)'); w3.close(); }
+
   console.log(`\n${pasos - fallos}/${pasos} comprobaciones OK${fallos ? ' · ' + fallos + ' ❌' : ''}`); process.exit(fallos ? 1 : 0);
 })().catch(e => { console.error('ERROR del runner:', e); process.exit(3); });

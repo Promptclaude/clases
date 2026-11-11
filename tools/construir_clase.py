@@ -13,7 +13,7 @@ def main():
     ap.add_argument('--assets', default=os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'banco-imagenes')); ap.add_argument('--presupuesto-mb', default='1.5')
     a = ap.parse_args()
     t = open(a.plantilla, encoding='utf8').read()
-    for marca, f in (('/*@@V23@@*/', 'v23_snippets.js'), ('/*@@FX@@*/', 'juego_fx_snippets.js'), ('/*@@V27@@*/', 'v27_actividades_snippets.js'), ('/*@@V28@@*/', 'v28_juegos_snippets.js'), ('/*@@V29@@*/', 'v29_mapa_y_celebracion_snippets.js'), ('/*@@V31@@*/', 'v31_detective_snippets.js'), ('/*@@V32@@*/', 'v32_tabla_snippets.js'), ('/*@@V33@@*/', 'v33_editor_snippets.js')):
+    for marca, f in (('/*@@V23@@*/', 'v23_snippets.js'), ('/*@@FX@@*/', 'juego_fx_snippets.js'), ('/*@@V27@@*/', 'v27_actividades_snippets.js'), ('/*@@V28@@*/', 'v28_juegos_snippets.js'), ('/*@@V29@@*/', 'v29_mapa_y_celebracion_snippets.js'), ('/*@@V31@@*/', 'v31_detective_snippets.js'), ('/*@@V32@@*/', 'v32_tabla_snippets.js'), ('/*@@V33@@*/', 'v33_editor_snippets.js'), ('/*@@V34@@*/', 'v34_aula_snippets.js')):
         assert marca in t, 'falta la marca ' + marca
         t = t.replace(marca, open(os.path.join(a.motor_dir, f), encoding='utf8').read())
     if a.datos_de:
@@ -28,6 +28,11 @@ def main():
     sub = f"{meta['materia']} {meta['grado']}° · Semana {meta['semana']}"
     t = re.sub(r'<title>.*?</title>', lambda _: f"<title>{escape(meta['titulo'])} · {escape(sub)}</title>", t, count=1, flags=re.S)
     t = re.sub(r'(<div id="fx-intro"[^>]*>.*?)<h1>.*?</h1><p>.*?</p>', lambda m: m.group(1) + f"<h1>{escape(meta['titulo'])}</h1><p>{escape(sub)}</p>", t, count=1, flags=re.S)
+    # Conexión con el Aula: con meta.aula=true se cargan los scripts del servidor como PRIMERAS etiquetas del <head> (aula-sync.js debe ir primero)
+    if meta.get('aula'):
+        base = meta.get('aulaRecursos', '../../recursos/js/'); v = ('?v=' + str(meta['aulaVersion'])) if meta.get('aulaVersion') else ''
+        tags = f'<script src="{base}aula-sync.js"></script>\n<script src="{base}aula-config.js{v}"></script>\n<script src="{base}aula-contexto.js{v}"></script>\n'
+        t = t.replace('<head>', '<head>\n' + tags, 1)
     tmp = a.salida + '.tmp.html'; open(tmp, 'w', encoding='utf8').write(t)
     r = subprocess.run([sys.executable, os.path.join(os.path.dirname(os.path.abspath(__file__)), 'empaquetar_assets.py'), tmp, '-o', a.salida, '--assets', a.assets, '--presupuesto-mb', a.presupuesto_mb], capture_output=True, text=True)
     os.remove(tmp)

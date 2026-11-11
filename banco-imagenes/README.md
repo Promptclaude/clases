@@ -14,7 +14,10 @@ Consulta: `python3 _herramientas/buscar_banco.py gema --cat juego --sin-texto` �
 | `juego/` | Estrellas, monedas, gemas, vidas, cofres… (PNG + SVG) |
 | `escenarios/` | `espacio/` · `colegio/` · `ciudad-digital/` |
 | `tematicos/` (nuevos temas) | `decimales` (30+), `dinero`, `medidas`, `razones`, `fracciones`, `detectives`, `trabajo-escrito` · Tecnología: `internet`, `seguridad-digital`, `documentos-word`, `verificar-informacion`, `historia-internet` |
-| `institucional/` | Escudo del colegio |
+| `institucional/` | Escudo del colegio (520 × 630 px) |
+| `personajes/aria-v2/` · `personajes/boli/` | ARIA v2 de cuerpo completo (7) y **Bolí**, mascota de la portada (21 poses). ARIA = dentro de las clases; Bolí = portada e índice |
+| `iconos/aritmetica/` · `iconos/tecnologia/` | Íconos de área (ábaco, balanza, calculadora, signos, USB, nube wifi, chip…) |
+| `interfaz/login/` · `portada/` · `periodos/` · `estado/` · `insignias/` | Candados, gafete, PIN; cohete y portal; períodos 1–4; en línea / sin internet; grados 4 y 5 |
 | `matematicas/` | **Kit SVG original** (64): fracciones (círculos y barras, vacías y pintadas), bloques base 10, figuras geométricas, monedas y billetes genéricos |
 | `infografias/` | Tabla con columna/celda/fila (y futuras) |
 | `tematicos/` | `decimales/` · `dinero/` (tienda, precios) · `detectives/` · `fabrica/` · `internet/` · `seguridad-digital/` · `logos-redes-sociales/` |
@@ -45,3 +48,7 @@ Ver `GUIA_NUEVAS_IMAGENES.md`: cómo pedirme imágenes, qué puedo y qué no pue
 ## Metadatos de las imágenes importadas de «Proceso de subir de grado»
 `descripcion` (qué contiene, 1 frase) · `alt` (texto alternativo listo para usar) · `tags` · `materia` y `grados` (aritmetica/tecnologia, 4.° y 5.°) · `texto` (lo que dice la imagen, por OCR) · `texto_es_contenido` (el texto ES el concepto: reutilizable en clases del tema) · `usada_en_origen` (slides donde se usaba) · `recorte_verificado` (revisada a ojo: está completa).
 La importación es reproducible: `_herramientas/importaciones/proceso_subir_de_grado/`.
+
+## Importaciones
+- `_herramientas/importaciones/proceso_subir_de_grado/` — 165 imágenes de los documentos «Proceso de subir de grado».
+- `_herramientas/importaciones/recursos_clases/` — 88 imágenes + escudo de `Clases/recursos/imagenes` (WebP sin pérdida, estilo «sticker» consistente).

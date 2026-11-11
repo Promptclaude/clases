@@ -1,0 +1,16 @@
+# iconos/tecnologia
+
+10 imágenes · [← volver al índice](../CATALOGO.md)
+
+| Imagen | Id y qué contiene | Materia · grado | Calidad |
+|:--:|---|---|:--:|
+| <img src="../iconos/tecnologia/icono-tecnologia-audifonos-microfono.webp" width="110" alt="Audífonos azules con micrófono"> | **`icono-tecnologia-audifonos-microfono`**<br>Audífonos azules con micrófono<br><sub>`audifonos` `audio` `estilo-sticker` `microfono` `tecnologia`</sub> | tecnologia | 5★ |
+| <img src="../iconos/tecnologia/icono-tecnologia-chip-circuito.webp" width="110" alt="Chip de computador con circuitos"> | **`icono-tecnologia-chip-circuito`**<br>Chip de computador con circuitos<br><sub>`chip` `circuito` `estilo-sticker` `hardware` `procesador` `tecnologia`</sub> | tecnologia | 5★ |
+| <img src="../iconos/tecnologia/icono-tecnologia-engranajes.webp" width="110" alt="Dos engranajes, uno azul y otro naranja"> | **`icono-tecnologia-engranajes`**<br>Dos engranajes, uno azul y otro naranja<br><sub>`configuracion` `engranajes` `estilo-sticker` `mecanismo` `tecnologia`</sub> | tecnologia | 5★ |
+| <img src="../iconos/tecnologia/icono-tecnologia-escudo-seguridad.webp" width="110" alt="Escudo azul con candado y marca de verificación (seguridad)"> | **`icono-tecnologia-escudo-seguridad`**<br>Escudo azul con candado y marca de verificación (seguridad)<br><sub>`candado` `escudo` `estilo-sticker` `proteccion` `seguridad` `tecnologia`</sub> | tecnologia | 5★ |
+| <img src="../iconos/tecnologia/icono-tecnologia-laptop-carita.webp" width="110" alt="Laptop azul con carita sonriente"> | **`icono-tecnologia-laptop-carita`**<br>Laptop azul con carita sonriente<br><sub>`carita` `computador` `estilo-sticker` `laptop` `tecnologia`</sub> | tecnologia | 5★ |
+| <img src="../iconos/tecnologia/icono-tecnologia-monitor-escritorio.webp" width="110" alt="Computador de escritorio con monitor, teclado y mouse"> | **`icono-tecnologia-monitor-escritorio`**<br>Computador de escritorio con monitor, teclado y mouse<br><sub>`computador` `escritorio` `estilo-sticker` `monitor` `mouse` `teclado` `tecnologia`</sub> | tecnologia | 5★ |
+| <img src="../iconos/tecnologia/icono-tecnologia-nube-wifi.webp" width="110" alt="Nube con señal wifi"> | **`icono-tecnologia-nube-wifi`**<br>Nube con señal wifi<br><sub>`estilo-sticker` `internet` `nube` `tecnologia` `wifi`</sub> | tecnologia | 5★ |
+| <img src="../iconos/tecnologia/icono-tecnologia-codigo-ventana.webp" width="110" alt="Ventana azul con el símbolo de código &lt;/&gt;"> | **`icono-tecnologia-codigo-ventana`**<br>Ventana azul con el símbolo de código &lt;/&gt;<br><sub>`codigo` `estilo-sticker` `programacion` `tecnologia` `ventana`</sub> | tecnologia | 4★ |
+| <img src="../iconos/tecnologia/icono-tecnologia-memoria-usb.webp" width="110" alt="Memoria USB azul"> | **`icono-tecnologia-memoria-usb`**<br>Memoria USB azul<br><sub>`almacenamiento` `estilo-sticker` `memoria` `tecnologia` `usb`</sub> | tecnologia | 4★ |
+| <img src="../iconos/tecnologia/icono-tecnologia-robot-juguete.webp" width="110" alt="Robot de juguete azul sonriente"> | **`icono-tecnologia-robot-juguete`**<br>Robot de juguete azul sonriente<br><sub>`estilo-sticker` `juguete` `robot` `tecnologia`</sub> | tecnologia | 4★ |
