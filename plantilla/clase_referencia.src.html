@@ -146,9 +146,11 @@ const TIPOS_EVALUABLES = ['quiz', 'evalFinal'], TIPOS_LECTURA = ['info'], MAX_VI
 const NIVELES = ['Explorador', 'Aprendiz', 'Constructor', 'Estratega', 'Campeón'], UMBRAL = [0, 60, 140, 240, 360];
 const qs = new URLSearchParams(location.search);
 const norm = s => String(s).normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/[^a-z0-9]+/g, '_').replace(/^_|_$/g, '');
+/* memoria de respaldo de almacen(): se declara ANTES de la identidad, que ya usa almacen() */
+const memoria = {}; let usandoMemoria = false;
 // Identidad: si el estudiante entró por la portada del Aula (sesión «aula_sesion_v1») manda la sesión; si no, ?est=&grupo= (pruebas o uso suelto).
 // Nunca se adivina desde otras claves del navegador: en una sala compartida mezclaría estudiantes.
-const _SES = (() => { try { const x = JSON.parse(localStorage.getItem('aula_sesion_v1') || 'null'); return x && x.token && (x.nombre || x.apodo) ? x : null; } catch (e) { return null; } })();
+const _SES = (() => { try { const x = JSON.parse(almacen().getItem('aula_sesion_v1') || 'null'); return x && x.token && (x.nombre || x.apodo) ? x : null; } catch (e) { return null; } })();
 const NOMBRE = ((_SES && (_SES.nombre || _SES.apodo)) || qs.get('est') || 'Invitado').trim(), GRUPO = ((_SES && _SES.grupo) || qs.get('grupo') || '000').trim();
 const NOMBRE_NORM = norm(NOMBRE), GRUPO_NORM = norm(GRUPO);
 const SKEY = 'aula:' + CLASE_ID + ':' + GRUPO_NORM + ':' + NOMBRE_NORM, IKEY = 'aula_progreso_v2';
@@ -160,7 +162,6 @@ const IMG = { corazon: 'asset://corazon', corazonVacio: 'asset://corazon-vacio',
 const esc = s => String(s == null ? '' : s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
 
 /* ── almacenamiento (única puerta a localStorage) ── */
-const memoria = {}; let usandoMemoria = false;
 function almacen() {
   try { const ls = window.localStorage, k = '__t'; ls.setItem(k, '1'); ls.removeItem(k); usandoMemoria = false; return ls; }
   catch (e) { usandoMemoria = true; return { getItem: k => (k in memoria ? memoria[k] : null), setItem: (k, v) => { memoria[k] = String(v); }, removeItem: k => { delete memoria[k]; } }; }

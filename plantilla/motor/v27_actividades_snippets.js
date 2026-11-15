@@ -133,7 +133,8 @@ $('stage').addEventListener('click', e => {
   if (a === 'v27-guardar-abierta') { const min = s.minPalabras || 5, txt = st.acts['abierta_txt_' + s.id] || [];
     const faltan = s.prompts.filter((_, j) => ((txt[j] || '').trim().split(/\s+/).filter(Boolean).length) < min).length;
     if (faltan) { showToast('✍️ Escribe al menos ' + min + ' palabras en cada punto'); return; }
-    st.acts['abierta_ok_' + s.id] = true; marcarActividadHecha(s.id, 'acierto'); sumarXP(10); Juego.evento('actividad'); save(); return render(false); }
+    st.acts['abierta_ok_' + s.id] = true; st.acts['abierta_env_' + s.id] = s.prompts.map((_, j) => String(txt[j] || '').trim()); st.acts['abierta_ts_' + s.id] = Date.now();   // instantánea: lo que ve el docente (los borradores no se envían)
+    marcarActividadHecha(s.id, 'acierto'); sumarXP(10); Juego.evento('actividad'); save(); if (typeof v34Abiertas === 'function') v34Abiertas(); return render(false); }
   if (a === 'v27-imprimir') { window.print(); return; }
 });
 $('stage').addEventListener('input', e => {
@@ -144,6 +145,6 @@ $('stage').addEventListener('input', e => {
 $('stage').addEventListener('change', e => {
   const t = e.target; if (!t || !t.dataset || !t.dataset.accion) return; const s = SL[st.slide];
   if (t.dataset.accion === 'v27-puesto') { const it = v27Item(s, +t.dataset.i); if (it.r !== null) return; it.v = t.value; save(); }
-  if (t.dataset.accion === 'v27-cuaderno') { st.acts['cuaderno_ok_' + s.id] = t.checked; if (t.checked) { marcarActividadHecha(s.id, 'acierto'); sumarXP(10); Juego.evento('actividad'); } save(); render(false); }
+  if (t.dataset.accion === 'v27-cuaderno') { st.acts['cuaderno_ok_' + s.id] = t.checked; if (t.checked) { st.acts['cuaderno_ts_' + s.id] = Date.now(); marcarActividadHecha(s.id, 'acierto'); sumarXP(10); Juego.evento('actividad'); } save(); if (typeof v34Abiertas === 'function') v34Abiertas(); render(false); }
 });
 $('stage').addEventListener('keydown', e => { const t = e.target; if ((e.key === 'Enter' || e.key === ' ') && t && t.dataset && t.dataset.test === 'frac-parte') { e.preventDefault(); t.dispatchEvent(new MouseEvent('click', { bubbles: true })); } });

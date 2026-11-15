@@ -664,9 +664,11 @@ const TIPOS_EVALUABLES = ['quiz', 'evalFinal'], TIPOS_LECTURA = ['info'], MAX_VI
 const NIVELES = ['Explorador', 'Aprendiz', 'Constructor', 'Estratega', 'Campeón'], UMBRAL = [0, 60, 140, 240, 360];
 const qs = new URLSearchParams(location.search);
 const norm = s => String(s).normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/[^a-z0-9]+/g, '_').replace(/^_|_$/g, '');
+/* memoria de respaldo de almacen(): se declara ANTES de la identidad, que ya usa almacen() */
+const memoria = {}; let usandoMemoria = false;
 // Identidad: si el estudiante entró por la portada del Aula (sesión «aula_sesion_v1») manda la sesión; si no, ?est=&grupo= (pruebas o uso suelto).
 // Nunca se adivina desde otras claves del navegador: en una sala compartida mezclaría estudiantes.
-const _SES = (() => { try { const x = JSON.parse(localStorage.getItem('aula_sesion_v1') || 'null'); return x && x.token && (x.nombre || x.apodo) ? x : null; } catch (e) { return null; } })();
+const _SES = (() => { try { const x = JSON.parse(almacen().getItem('aula_sesion_v1') || 'null'); return x && x.token && (x.nombre || x.apodo) ? x : null; } catch (e) { return null; } })();
 const NOMBRE = ((_SES && (_SES.nombre || _SES.apodo)) || qs.get('est') || 'Invitado').trim(), GRUPO = ((_SES && _SES.grupo) || qs.get('grupo') || '000').trim();
 const NOMBRE_NORM = norm(NOMBRE), GRUPO_NORM = norm(GRUPO);
 const SKEY = 'aula:' + CLASE_ID + ':' + GRUPO_NORM + ':' + NOMBRE_NORM, IKEY = 'aula_progreso_v2';
@@ -678,7 +680,6 @@ const IMG = { corazon: 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy
 const esc = s => String(s == null ? '' : s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
 
 /* ── almacenamiento (única puerta a localStorage) ── */
-const memoria = {}; let usandoMemoria = false;
 function almacen() {
   try { const ls = window.localStorage, k = '__t'; ls.setItem(k, '1'); ls.removeItem(k); usandoMemoria = false; return ls; }
   catch (e) { usandoMemoria = true; return { getItem: k => (k in memoria ? memoria[k] : null), setItem: (k, v) => { memoria[k] = String(v); }, removeItem: k => { delete memoria[k]; } }; }
@@ -1376,7 +1377,8 @@ $('stage').addEventListener('click', e => {
   if (a === 'v27-guardar-abierta') { const min = s.minPalabras || 5, txt = st.acts['abierta_txt_' + s.id] || [];
     const faltan = s.prompts.filter((_, j) => ((txt[j] || '').trim().split(/\s+/).filter(Boolean).length) < min).length;
     if (faltan) { showToast('✍️ Escribe al menos ' + min + ' palabras en cada punto'); return; }
-    st.acts['abierta_ok_' + s.id] = true; marcarActividadHecha(s.id, 'acierto'); sumarXP(10); Juego.evento('actividad'); save(); return render(false); }
+    st.acts['abierta_ok_' + s.id] = true; st.acts['abierta_env_' + s.id] = s.prompts.map((_, j) => String(txt[j] || '').trim()); st.acts['abierta_ts_' + s.id] = Date.now();   // instantánea: lo que ve el docente (los borradores no se envían)
+    marcarActividadHecha(s.id, 'acierto'); sumarXP(10); Juego.evento('actividad'); save(); if (typeof v34Abiertas === 'function') v34Abiertas(); return render(false); }
   if (a === 'v27-imprimir') { window.print(); return; }
 });
 $('stage').addEventListener('input', e => {
@@ -1387,7 +1389,7 @@ $('stage').addEventListener('input', e => {
 $('stage').addEventListener('change', e => {
   const t = e.target; if (!t || !t.dataset || !t.dataset.accion) return; const s = SL[st.slide];
   if (t.dataset.accion === 'v27-puesto') { const it = v27Item(s, +t.dataset.i); if (it.r !== null) return; it.v = t.value; save(); }
-  if (t.dataset.accion === 'v27-cuaderno') { st.acts['cuaderno_ok_' + s.id] = t.checked; if (t.checked) { marcarActividadHecha(s.id, 'acierto'); sumarXP(10); Juego.evento('actividad'); } save(); render(false); }
+  if (t.dataset.accion === 'v27-cuaderno') { st.acts['cuaderno_ok_' + s.id] = t.checked; if (t.checked) { st.acts['cuaderno_ts_' + s.id] = Date.now(); marcarActividadHecha(s.id, 'acierto'); sumarXP(10); Juego.evento('actividad'); } save(); if (typeof v34Abiertas === 'function') v34Abiertas(); render(false); }
 });
 $('stage').addEventListener('keydown', e => { const t = e.target; if ((e.key === 'Enter' || e.key === ' ') && t && t.dataset && t.dataset.test === 'frac-parte') { e.preventDefault(); t.dispatchEvent(new MouseEvent('click', { bubbles: true })); } });
 
@@ -1828,6 +1830,29 @@ window.AULA_RESUMEN = function () {
   return { materia: (CONFIG_CLASE.materia + ' ' + CONFIG_CLASE.grado + '°').slice(0, 40), semana: CONFIG_CLASE.semana, avance: Math.min(100, Math.round(vistos / TOT * 100)),
     aciertos: Math.min(st.aciertos || 0, pregs), preguntas: pregs, nota: Math.round(notaOficial() * 10) / 10, juegos: hechos, juegosTotal: juegos.length, puntosJuegos: pts };
 };
+
+// ── Respuestas abiertas para el docente ──────────────────────────────────────────────────────────────────────────────
+// Al guardar una respuesta abierta (o marcar el cuaderno) el motor deja en el navegador la clave «abiertas:<clase>:<grupo>:<nombre>» con
+// {v:1, c:<clase>, g:<grupo>, a:[{s:slide, i:n.º, p:pregunta, r:respuesta, t:hora, tipo?}]}. aula-sync.js la copia al servidor como
+// cualquier otra clave y el servidor (Abiertas.gs) la convierte en filas de la hoja «Respuestas abiertas». Solo se envía lo que el
+// estudiante GUARDÓ (no los borradores). Si no hay aula, la clave queda en el navegador y no pasa nada.
+// <clase> se calcula IGUAL que en aula-sync.js (nombre del archivo): así coincide aunque meta.claseId sea distinto.
+const v34Stem = () => { let n = ''; try { n = decodeURIComponent((location.pathname.split('/').pop() || 'index').replace(/\.html?$/i, '')); } catch (e) { n = 'index'; } return n.replace(/[^A-Za-z0-9_.-]/g, '_').slice(0, 44); };
+function v34Abiertas() {
+  try {
+    const a = [];
+    SL.forEach(s => {
+      if (s.type === 'abierta') { const env = st.acts['abierta_env_' + s.id]; if (env) s.prompts.forEach((p, i) => { if ((env[i] || '').trim()) a.push({ s: s.id, i, p: String(p).slice(0, 300), r: String(env[i]).slice(0, 1500), t: st.acts['abierta_ts_' + s.id] || 0 }); }); }
+      if (s.type === 'cuaderno' && st.acts['cuaderno_ok_' + s.id]) a.push({ s: s.id, i: 0, tipo: 'cuaderno', p: String(s.titulo).slice(0, 300), r: 'El estudiante marcó que hizo la hoja a mano y la entregará.', t: st.acts['cuaderno_ts_' + s.id] || 0 });
+    });
+    if (!a.length) return;
+    const stem = v34Stem(), clave = 'abiertas:' + stem + ':' + GRUPO_NORM + ':' + NOMBRE_NORM;
+    let cargado = JSON.stringify({ v: 1, c: stem, g: GRUPO, a: a.slice(0, 12) }), tope = 1500;
+    while (cargado.length > 28000 && tope > 200) { tope = Math.floor(tope * 0.7); cargado = JSON.stringify({ v: 1, c: stem, g: GRUPO, a: a.slice(0, 12).map(x => Object.assign({}, x, { r: x.r.slice(0, tope) })) }); }
+    const ls = almacen(); if (ls.getItem(clave) !== cargado) ls.setItem(clave, cargado);   // única puerta al almacenamiento (si está bloqueado, no pasa nada)
+  } catch (e) { /* nunca rompe la clase */ }
+}
+setTimeout(v34Abiertas, 2000);   // al abrir: si ya había respuestas guardadas (otro equipo), vuelve a dejar el paquete
 
 
 /* ── solución para «No me sale» ── */

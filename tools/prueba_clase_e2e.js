@@ -338,5 +338,18 @@ async function recorrer(w, modo, tope = 40) { let n = 0; const vistos = []; whil
     const w2 = abrir({ est: 'sofia', grupo: '402' }).window; w2.CLASE_API.irA(iF); ok(/sofia/i.test(q(w2, '[data-test=insignia]').textContent) && /402/.test(w2.CLASE_API.SKEY), 'sin sesión del aula sigue funcionando con ?est= y ?grupo= (pruebas y uso suelto)'); w2.close();
     const w3 = abrir({ est: 'ana', grupo: '501', storage: { aula_sesion_v1: '{esto no es json' } }).window; w3.CLASE_API.irA(iF); ok(/ana/i.test(q(w3, '[data-test=insignia]').textContent), 'una sesión dañada no rompe la clase (usa ?est=)'); w3.close(); }
 
+  T('T31 · Respuestas abiertas para el docente: solo lo guardado, formato del paquete y cuaderno');
+  { const iA = SL0.findIndex(x => x.type === 'abierta'); if (iA < 0) console.log('  ⚠️  la clase no usa respuestas abiertas: no aplica');
+    else { const w = abrir({ est: 'olga', grupo: '401' }).window, API = w.CLASE_API, sl = SL0[iA], claves = () => Object.keys(w.localStorage).filter(k => k.startsWith('abiertas:'));
+      API.irA(iA); qa(w, '[data-test=abierta-txt]').forEach((x, i) => { x.value = 'respuesta numero ' + i + ' con varias palabras escritas'; x.dispatchEvent(new w.Event('input', { bubbles: true })); });
+      ok(claves().length === 0, 'mientras escribe (borrador) no se deja nada para el docente');
+      clic(q(w, '[data-test=abierta-guardar]')); await sleep(60); ok(claves().length === 1 && /^abiertas:[A-Za-z0-9_.-]+:401:olga$/.test(claves()[0]), 'al guardar deja UNA clave «' + (claves()[0] || '—') + '» (archivo : grupo : estudiante)');
+      const pq = JSON.parse(w.localStorage.getItem(claves()[0])); ok(pq.v === 1 && pq.g === '401' && pq.a.length === sl.prompts.length && pq.a.every((x, i) => x.s === sl.id && x.i === i && x.p === sl.prompts[i] && x.r.startsWith('respuesta numero ' + i)), 'el paquete trae slide, n.º, pregunta y respuesta de cada punto');
+      ok(w.localStorage.getItem(claves()[0]).length < 28000, 'el paquete cabe en el límite del servidor (' + w.localStorage.getItem(claves()[0]).length + ' de 30.000)');
+      const x0 = qa(w, '[data-test=abierta-txt]')[0]; x0.value = 'respuesta corregida y mejorada despues de guardar'; x0.dispatchEvent(new w.Event('input', { bubbles: true })); ok(JSON.parse(w.localStorage.getItem(claves()[0])).a[0].r.startsWith('respuesta numero 0'), 'editar después de guardar NO envía el borrador hasta que vuelva a pulsar «Guardar»');
+      clic(q(w, '[data-test=abierta-guardar]')); await sleep(60); ok(JSON.parse(w.localStorage.getItem(claves()[0])).a[0].r.startsWith('respuesta corregida'), 'al guardar de nuevo se actualiza la respuesta enviada');
+      const iC = SL0.findIndex(x => x.type === 'cuaderno'); if (iC >= 0) { API.irA(iC); const cb = q(w, '[data-test=cuaderno-ok]'); cb.checked = true; cb.dispatchEvent(new w.Event('change', { bubbles: true })); await sleep(60); ok(JSON.parse(w.localStorage.getItem(claves()[0])).a.some(x => x.tipo === 'cuaderno' && x.s === SL0[iC].id), 'marcar «hice la hoja a mano» queda registrado como entregado para el docente'); }
+      w.close(); } }
+
   console.log(`\n${pasos - fallos}/${pasos} comprobaciones OK${fallos ? ' · ' + fallos + ' ❌' : ''}`); process.exit(fallos ? 1 : 0);
 })().catch(e => { console.error('ERROR del runner:', e); process.exit(3); });

@@ -71,6 +71,14 @@ def main():
                 chk('aula-config.js' in html and 'aula-contexto.js' in html, 'config y contexto del aula', 'meta.aula=true pero faltan aula-config.js o aula-contexto.js')
                 chk(isinstance(D['meta'].get('semana'), int) and isinstance(D['meta'].get('grado'), int) and 1 <= D['meta']['semana'] <= 20, 'semana y grado enteros', 'meta.semana y meta.grado deben ser números enteros (el servidor los guarda en la hoja)')
                 if not re.search(r'_(mat|tec)\d_', D['meta'].get('claseId', '')): A.append("meta.claseId no contiene «_mat<grado>_» ni «_tec<grado>_»: el servidor usa el NOMBRE DEL ARCHIVO (semanaN_mat5_p4.html) para dar el XP al mundo correcto; nombra así el archivo")
+            # Respuestas abiertas visibles para el docente (Prioridad 74): el servidor guarda hasta 12 por envío
+            tot_ab = sum(len(x.get('prompts', [])) for x in S if x['type'] == 'abierta') + sum(1 for x in S if x['type'] == 'cuaderno')
+            chk(tot_ab <= 12, '', f"La clase pide {tot_ab} respuestas abiertas/cuadernos: el servidor del Aula solo guarda 12 por clase (las demás se perderían). Reduce los prompts")
+            for x in S:
+                if x['type'] == 'abierta':
+                    for pp in x.get('prompts', []):
+                        if re.search(r'\b(escribe|escr[ií]benos|dime|dinos|cu[eé]ntame|indica|anota|comparte|di|pon)\b[^.?!]{0,40}\b(tu|tus)\s+(direcci[oó]n|tel[eé]fono|celular|c[eé]dula|contrase[ñn]a|edad|apellidos?|correo)\b|cu[aá]l es (tu|su)\s+(direcci[oó]n|tel[eé]fono|celular|c[eé]dula|contrase[ñn]a|edad|apellidos?|correo)\b|d[oó]nde vives|c[oó]mo te llamas', pp, re.I): A.append(f"{x['id']}: la pregunta «{pp[:60]}…» parece pedir datos personales; las respuestas las lee el docente y quedan guardadas: no pidas datos personales a los estudiantes")
+                if x['type'] == 'abierta': chk(len(x.get('prompts', [])) <= 4 and all(len(pp) <= 280 for pp in x.get('prompts', [])), '', f"{x['id']}: abierta admite hasta 4 preguntas de máximo 280 caracteres (el docente las lee en la hoja «Respuestas abiertas»)")
             def num(x):                      # «0,75» · «3/4» · «25 %»
                 t = str(x).strip(); pc = t.endswith('%'); u = t.replace('%', '').replace(' ', '')
                 if '/' in u: a, b = u.split('/'); v = float(a.replace(',', '.')) / float(b.replace(',', '.'))

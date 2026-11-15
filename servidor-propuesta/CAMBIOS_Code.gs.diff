@@ -1,0 +1,33 @@
+--- Code.gs (original)
++++ Code.gs (con cambios)
+@@ -504,4 +504,5 @@
+     h.appendRow([id, clave, txt, horaStr()]);
+   }
++  try { guardarAbiertas(j, clave, b); } catch (eAb) { Logger.log('Respuestas abiertas: ' + eAb); }   // nunca impide guardar el progreso
+   return t;
+ }
+@@ -707,4 +708,5 @@
+     actualizarResumen(libroAct);
+     hs.hideSheet(); he.hideSheet();
++    try { asegurarHojaAbiertas(); } catch (eAb) { Logger.log('Respuestas abiertas: ' + eAb); }
+   } catch (e) { Logger.log('Formato opcional no aplicado: ' + e); }
+ 
+@@ -783,4 +785,6 @@
+       .addItem('🚪 Abrir / cerrar el primer ingreso', 'menuPrimerIngreso')
+       .addItem('📊 Actualizar resumen por grupo', 'menuActualizarResumen')
++      .addItem('📝 Ir a las respuestas abiertas', 'menuAbiertasIr')
++      .addItem('📝 Respuestas por revisar (resumen)', 'menuAbiertasPendientes')
+       .addSeparator()
+       .addItem('🔑 Restablecer PIN por apodo', 'menuRestablecerPin')
+@@ -837,4 +841,5 @@
+       for (var i = ids.length - 1; i >= 0; i--) if (String(ids[i][0]) === id) he.deleteRow(i + 2);
+     }
++    try { borrarAbiertasDe(id); } catch (eAb) {}
+     hoja(CFG.HOJA_SEG).deleteRow(j.filaS);
+     hoja(CFG.HOJA_PERFILES).deleteRow(j.filaP);
+@@ -890,4 +895,5 @@
+       if (u >= 2) { h.getRange(2, 1, u - 1, h.getLastColumn()).clearContent(); n += u - 1; }
+     });
++    try { n += limpiarAbiertas(); } catch (eAb) {}
+     cache().remove('rk');
+     try { actualizarResumen(SpreadsheetApp.getActiveSpreadsheet()); } catch (e2) {}
