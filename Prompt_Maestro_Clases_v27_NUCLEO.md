@@ -104,7 +104,7 @@ Usa solo estos. Antes de escribir los datos de un tipo, lee su módulo en `promp
 
 **Ritmo y variedad.**
 - Mínimo 4 tipos de juego distintos por clase; nunca más de 2 slides seguidas del mismo tipo.
-- Sopa de letras: máximo 5 palabras.
+- Sopa de letras: 3 a 8 palabras distintas de 3 a 10 letras, cada una con pista (módulo 35; el auditor lo exige).
 - Respuestas abiertas: máximo 12 (con `cuaderno`) por clase, 1–3 frases, con `ejemplo` de buena respuesta. **Nunca pidas datos personales** (nombre, dirección, teléfono, contraseñas, edad, fotos): las lee el docente y quedan guardadas.
 
 **Diseño.**
