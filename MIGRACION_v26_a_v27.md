@@ -8,7 +8,7 @@ Lo que sigue es un diagnóstico por lectura del repositorio; **no se ejecutaron 
 | Prioridades v26 | Tema | Destino | Estado |
 |---|---|---|---|
 | 0, 38, 62, 61, 44–47, 49 | Datos, flujo, pedagogía, preguntas, ritmo | **Núcleo** §3, §5 | Condensado |
-| 0-B, 0-E, 0-F, 12, 14-B, 0-D | Visual, paleta clara, tema rotativo, contexto Cúcuta, sopa ≤ 5 | **Núcleo** §5 | Condensado |
+| 0-B, 0-E, 0-F, 12, 14-B | Visual, paleta clara, tema rotativo, contexto Cúcuta | **Núcleo** §5 | Condensado |
 | 50, 56, módulo 33, 39 (imágenes) | Imágenes propias y banco | **Núcleo** §6 | Condensado |
 | 58, 59, 60, 63, 64 | Motor, pruebas, puerta, errores históricos, versiones | **Núcleo** §2, §3, §7, §8 + módulo 32 (consulta) | Condensado |
 | 8-A … 8-W, 6, 6-B, 6-C, 8, 8-B…8-L, 38-B/C/D, 39, 39-B, 40, 41, 42, 43, 3, 4, 5, 7, 18, 52 | Sincronía, guardado, identidad, nota, bloqueos, quiz, reintento, modales, cronómetro | **Motor + puerta** (`plantilla/motor/`, T10–T31, mutaciones) | **Verificar** que cada una tenga su prueba (ver abajo) y luego archivar |
