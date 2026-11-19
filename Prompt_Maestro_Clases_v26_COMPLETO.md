@@ -1,5 +1,7 @@
 # PROMPT MAESTRO DE CLASES v26 — COMPLETO (generado desde prompt/*.md; no editar aquí)
 
+> **Revisión de coherencia v26.1.** Prioridades **1, 1-B y 31 superadas** (imágenes: solo el banco, módulo 33); **9 reescrita** (guion de ritmo, 9–14 slides). `aria/aria_widget.html`, `tests/prueba_clase.js` y las herramientas `insertar_*`, `aligerar_html`, `esqueleto_clase` y `verificar_imagenes` no están en este repositorio (ver avisos). **Pendiente de decidir:** `MAX_VIDAS = 8` frente al «reintento con 2 oportunidades» del motor (Prioridad 6).
+
 # 00 · Protocolo de aplicación y tabla de precedencia (Prompt Maestro de Clases v26)
 
 > **Actúa como un desarrollador senior full-stack especializado en EdTech gamificada, experto en HTML5, CSS3 vanilla y JavaScript puro.** Tu misión es crear un archivo HTML único para la clase de la semana. No simplifiques. No recortes. Construye la mejor clase posible siguiendo TODAS las prioridades según su nivel (sección 3).
@@ -20,12 +22,12 @@ Este documento está dividido en módulos **a propósito**: cada prioridad exist
 ## 1. Cómo se trabaja: index + clase anterior → clase de la semana siguiente
 El docente entrega **(a)** el `index` del curso (Aritmética 4.º/5.º o Tecnología 4.º/5.º) y **(b)** la clase de la semana anterior como plantilla. De ahí salen la semana siguiente y su tema (`INDEX_SEMANAS_META`). **El flujo completo, qué se hereda y qué no, está en la Prioridad 38 (módulo 28).** Resumen:
 1. Resumir la clase anterior con las herramientas (nunca abrirla entera).
-2. Pedir/confirmar los datos de la semana (`plantillas/DATOS_DE_LA_CLASE.md`).
+2. Pedir/confirmar los datos de la semana (`meta` y objetivos del `datos.json`; ver módulos 37 y 42).
 3. Clonar **solo el código**; **todos los datos** se sustituyen; las claves salen de `CLASE_CFG` + `Nucleo`.
 4. Auditar (`tools/auditar_clase.py … --previa …`) y probar (`tests/`), con cero ❌.
 
 ## 2. Protocolo de lectura (cero omisiones, sin llenar el contexto)
-1. **Antes de escribir una línea**, lee `plantillas/DATOS_DE_LA_CLASE.md` y completa los datos (Prioridad 0).
+1. **Antes de escribir una línea**, reúne los datos de la clase con el docente (Prioridad 0; van en `meta` del `datos.json`, módulo 37).
 2. **Etapa 1:** módulos 10, 11, 12, 13 (arranque, lectura/visual/bloqueos, contenido/quiz, vidas).
 3. **Etapa 2 (núcleo anti-bugs):** módulos 14, 15, 16, 28, 29 **y 32** (y, en la Etapa 3, el **30** y el **31**) (sincronía, motores, nota/semana/reintento, clonado y robustez, **sin bloqueos por error / nota en vivo / guardado verificable**). El código de los motores es **canónico**: se copia de la clase anterior o de estos módulos, no se reinventa.
 4. **Etapa 3:** módulos 17 a 27 y 90 (estructura, diseño, panel, técnica, extras, ARIA, recursos, **narrativa, minijuegos, economía, ARIA-KB**).
@@ -55,12 +57,12 @@ Cuando dos módulos parezcan decir cosas distintas, manda la columna "Fuente ún
 | Cronómetro de lectura | **8-N** (motor) y **0-A** (visual y reglas) | por tiempo real, idempotente |
 | Modales | **8-Q** | `showModal()` / `closeModal()` con cola |
 | Reintento | **8-W** (`iniciarNuevoIntento()`) + **38-C** (estados y vigilante) | la interfaz de vidas es la de 6, 6-B y 6-C; `MAX_VIDAS = 8` |
-| ARIA (código) | **`aria/aria_widget.html`** | se inserta con `tools/insertar_aria.py`; las Prioridades 30–30-F son las REGLAS |
-| Prueba automática | **`tests/prueba_clase.js`** | 8-T explica cuándo y cómo correrla |
-| Clave del panel docente | **`plantillas/DATOS_DE_LA_CLASE.md`** | en el código aparece como `{{CLAVE_PANEL_DOCENTE}}`: sustitúyela por el valor de ese archivo |
-| Posición de quizzes y tipos de slide | **Prioridad 9** (tabla de 17) | 23 slides; Quiz 1 = 10, Quiz 2 = 15, Final = 21–22; `historia` = lectura, `minijuego` = actividad. La plantilla de datos se lee contra esta tabla |
+| ARIA (código) | **No está en este repositorio** | el chat de ARIA no lo implementa el motor v34 (ver aviso en la sección ARIA); ARIA existe como mascota con imágenes del banco |
+| Prueba automática | **`tools/prueba_clase_e2e.js`** y **`tools/puerta_de_calidad.py`** | 8-T explica cuándo y cómo correrla; la puerta ejecuta todas las pruebas |
+| Clave del panel docente | **`plantillas/DATOS_DE_LA_CLASE.md` *(no está en este repositorio)*** | en el código aparece como `{{CLAVE_PANEL_DOCENTE}}`: sustitúyela por el valor de ese archivo |
+| Estructura y ritmo de la clase | **Prioridad 9** (guion de ritmo) y `plantilla/ejemplos/` | 9–14 slides según la clase; solo tipos que implementa el motor (módulo 32, Prioridad 58) |
 | Fondo claro vs mundos oscuros | **0-E** + **35-B** | `body`, tarjetas y opciones siempre claros; lo oscuro solo dentro de `.escena` |
-| Imágenes remotas y "autocontenida" | **1-B** + **31** | respaldo global de error; imágenes críticas embebidas |
+| Imágenes | **Módulo 33 + Prioridades 56 y 68** | solo `asset://` del banco, con `alt`; el empaquetador las embebe |
 | Gemas, poderes, tienda | **36 a 36-D** (+ `Nucleo.ganar/gastar`) | las gemas nunca tocan la nota; no hay saldo manual |
 | Pistas de ARIA y filtro anti-fuga | **37-B** (sobre 30-B a 30-F) | 30-B sigue vigente; 37-B agrega escalera, costos y filtro local |
 | Pruebas | **`CLASE_API` (38-D)** | las pruebas nuevas solo usan esa interfaz y el DOM |
@@ -76,14 +78,14 @@ Cuando dos módulos parezcan decir cosas distintas, manda la columna "Fuente ún
 
 ## 4-B. Presupuesto de tokens (qué NO leer)
 
-- **Nunca leas imágenes en base64.** Para mirar una clase ya hecha (~5–6 MB): `python3 tools/aligerar_html.py clase.html` y lee solo `clase.ligero.html`. Al terminar, `python3 tools/restaurar_html.py clase.ligero.html` devuelve el HTML completo idéntico.
-- Para la estructura (slides, tipos, tema visual) de una clase previa: `python3 tools/esqueleto_clase.py clase.html` (unas 40 líneas).
-- **ARIA y el núcleo no se reescriben ni se leen**: `python3 tools/insertar_aria.py clase.html` y `python3 tools/insertar_nucleo.py clase.html` los copian por script.
+- **Nunca leas imágenes en base64.** Para inspeccionar una clase ya hecha no la abras entera: lee su bloque `datos-clase` (JSON) o reconstrúyela con `construir_clase.py --datos-de`. *(`aligerar_html.py` y `restaurar_html.py`, citadas antes, no están en este repositorio.)*
+- Para la estructura de una clase previa (slides, tipos, tema visual) lee su bloque `datos-clase`. *(`esqueleto_clase.py`, citada antes, no está en este repositorio.)*
+- **El motor no se reescribe ni se lee**: `construir_clase.py` lo inyecta. *(`insertar_aria.py` e `insertar_nucleo.py`, citadas antes, no están en este repositorio.)*
 - `historial/` es registro de cambios. **No se lee al aplicar el prompt.**
 
 ## 5. Prioridades que deben quedar confirmadas al entregar
 
-Marca cada una como ✅ implementada o ➖ no aplica (con motivo). Total: 123 prioridades.
+Marca cada una como ✅ implementada o ➖ no aplica (con motivo). Total: 123 prioridades (⛔ = superada: 1, 1-B y 31; la 9 fue reescrita).
 
 <!--LISTA_INICIO-->
 
@@ -100,12 +102,12 @@ Marca cada una como ✅ implementada o ➖ no aplica (con motivo). Total: 123 pr
 - [ ] **0-G** 🔴 EL MENÚ/INDICADOR DE PROGRESO ES 100% VISUAL, NUNCA NAVEGABLE
 
 **12_contenido_y_quiz.md** — Imágenes, ejercicios, nota, bloqueo de evaluables y preguntas de quiz
-- [ ] **1** 🔴 IMÁGENES REALES DE INTERNET (MÍNIMO 20)
+- [ ] **1** ⛔ SUPERADA — IMÁGENES: usar el banco (módulo 33, Prioridades 56 y 68); ya no hay imágenes de Internet ni mínimo de 20
 - [ ] **2** 🔴 SLIDE DE EJERCICIOS PRÁCTICOS (sin video)
 - [ ] **3** 🔴 SISTEMA DE NOTA CALCULADA SOLO CON QUIZZES
 - [ ] **4** 🔴 BLOQUEO DE EVALUABLES — NO SE PUEDEN SALTAR (motor en 8-O)
 - [ ] **5** 🔴 PREGUNTAS DE QUIZ: OPCIÓN MÚLTIPLE CON CONTEXTO
-- [ ] **1-B** 🔴 IMÁGENES: RESPALDO GLOBAL, SIN CAÍDAS Y CON VERIFICACIÓN
+- [ ] **1-B** ⛔ SUPERADA — respaldo de imágenes remotas (ya no hay imágenes remotas)
 
 **13_vidas_y_feedback.md** — Vidas/reintentos, reintento dirigido, retroalimentación y matching
 - [ ] **6** 🔴 SISTEMA DE VIDAS / REINTENTOS (MAX_VIDAS = 8)
@@ -151,7 +153,7 @@ Marca cada una como ✅ implementada o ➖ no aplica (con motivo). Total: 123 pr
 - [ ] **38-E** 🟠 HIGIENE DEL CÓDIGO ENTREGADO, SALUD Y MIGRACIÓN
 
 **17_estructura_y_pantallas.md** — Estructura de slides, cuadernos, menú de ruta, nota final y pantalla final
-- [ ] **9** 🔴 ESTRUCTURA DE 23 SLIDES
+- [ ] **9** 🔴 ESTRUCTURA Y RITMO DE LA CLASE (guion de ritmo; reemplaza la tabla fija de 23 slides)
 - [ ] **10** 🔴 CUADERNOS DIGITALES: ACCESO DESDE MENÚ SUPERIOR + DISEÑO TIPO AGENDA REAL
 - [ ] **10-B** 🔴 LA NOTA FINAL NO SE MUESTRA SI FALTAN SLIDES POR VER
 - [ ] **10-C** 🔴 MENÚ DE RUTA COMPACTO, GAMIFICADO Y NO-NAVEGABLE
@@ -187,7 +189,7 @@ Marca cada una como ✅ implementada o ➖ no aplica (con motivo). Total: 123 pr
 - [ ] **28** 🟠 SLIDER "ANTES / DESPUÉS" PARA CONCEPTOS DE COMPARACIÓN
 - [ ] **29** 🟠 PARALLAX SUTIL EN EL FONDO DECORATIVO
 
-**22_aria_asistente.md** — ARIA: reglas de comportamiento y ganchos con la clase (el código está en aria/aria_widget.html)
+**22_aria_asistente.md** — ARIA: reglas de comportamiento y ganchos con la clase (el código de `aria/aria_widget.html` NO está en este repositorio; ver aviso en la sección ARIA)
 - [ ] **30** 🟠 ARIA: ROBOT ASISTENTE DE LA CLASE, CON CHAT Y VOZ
 - [ ] **30-B** 🟠 ARIA: ORIENTACIÓN SOCRÁTICA ANTE PREGUNTAS DE QUIZ COPIADAS/PEGADAS, SIN REVELAR NUNCA LA RESPUESTA
 - [ ] **30-C** 🟠 ARIA: LECTOR PROFUNDO DE TODA LA CLASE + EXPLICACIÓN DE CONCEPTOS Y PROCESOS EN PALABRAS SIMPLES
@@ -196,7 +198,7 @@ Marca cada una como ✅ implementada o ➖ no aplica (con motivo). Total: 123 pr
 - [ ] **30-F** 🟠 ARIA EXPLICA MEJOR (NO SOLO DISTINTO): ANDAMIAJE SOCRÁTICO + REFUERZO PROACTIVO + COMPARACIÓN VISUAL
 
 **23_recursos_y_medidas.md** — Imágenes base64 propias, medidas exactas y sonido sintetizado
-- [ ] **31** 🟠 IMÁGENES PROPIAS EMBEBIDAS EN BASE64
+- [ ] **31** ⛔ SUPERADA — imágenes en base64 (las empaqueta `construir_clase.py` desde `asset://`)
 - [ ] **32** 🟢 MEDIDAS EXACTAS DE CAJAS DE TEXTO E IMÁGENES POR SLIDE
 - [ ] **33** 🟢 SONIDO SINTETIZADO CON WEB AUDIO API
 
@@ -259,14 +261,14 @@ Marca cada una como ✅ implementada o ➖ no aplica (con motivo). Total: 123 pr
 
 ## 6. Orden de entrega de una clase nueva
 
-1. Datos de la clase completos (`plantillas/DATOS_DE_LA_CLASE.md`) y línea real de `INDEX_SEMANAS_META` pegada del index.
+1. Datos de la clase completos (`meta` y objetivos del `datos.json`, módulos 37 y 42) y, si aplica, línea real de `INDEX_SEMANAS_META` pegada del index.
 2. Resumir la clase anterior (4-B) y clonar **solo el código** (Prioridad 38).
 3. Generar el contenido: narrativa (24), minijuegos (25), economía (26), `CLASE_KB` (27); archivo con el nombre **idéntico** al campo `.archivo` (8-K).
-4. `python3 tools/insertar_nucleo.py semanaN_xxx.html` y `python3 tools/insertar_aria.py semanaN_xxx.html`
+4. `python3 tools/construir_clase.py plantilla/clase_referencia.src.html --datos datos.json -o semanaN_xxx.html` (inyecta el motor y empaqueta las imágenes `asset://`).
 5. `python3 tools/auditar_clase.py semanaN_xxx.html --previa semana{N-1}_xxx.html --semana N` → **cero ❌**.
-6. `python3 tools/verificar_imagenes.py semanaN_xxx.html` (o declarar "imágenes sin verificar").
-7. `node tests/prueba_clase.js /ruta/semanaN_xxx.html` → T1–T9 sin ❌ (8-T) y la prueba de semana nueva (38-B).
-8. Recorrer `prompt/90_checklists.md` y la lista de la sección 5; entregar con un resumen de **qué cambió respecto a la clase anterior** y qué quedó sin verificar.
+6. Imágenes: solo `asset://` del banco; `construir_clase.py` bloquea las `descartada` y `auditar_clase.py` exige `alt`.
+7. `python3 tools/puerta_de_calidad.py semanaN_xxx.html` → 🟢 VERDE (incluye `tools/prueba_clase_e2e.js`, T10–T31). Sin VERDE no se entrega.
+8. Recorrer la lista de la sección 5; entregar con un resumen de **qué cambió respecto a la clase anterior** y qué quedó sin verificar.
 
 # 10 · Datos obligatorios de la clase y sincronía con el index
 
@@ -388,7 +390,7 @@ function htmlIndicadorCronometro(restantes, segundos) {
 - Preguntas de quiz sobre conceptos que NO se hayan explicado Y ejemplificado antes
 **OBLIGATORIO en slides de info/lectura:**
 - Mínimo 1 organizador gráfico, infografía SVG o esquema visual por slide
-- Grid 2×2 de imágenes reales de Unsplash (ya definido en Prioridad 1)
+- Imágenes del banco (`asset://`, módulo 33), cada una con `alt`
 - Ejemplos resueltos paso a paso ANTES de cada quiz
 - Cada concepto explicado con una analogía de cultura pop (Prioridad 14)
 #### ESTRUCTURA VISUAL OBLIGATORIA para slides de concepto:
@@ -425,10 +427,10 @@ function htmlIndicadorCronometro(restantes, segundos) {
       </div>
       <!-- GRID DE IMÁGENES (obligatorio) -->
       <div class="g2" style="gap:9px">
-        <div class="imgc"><img src="[URL_UNSPLASH]" alt="[desc]" loading="lazy"><div class="imgc-cap">🖼️ [Título]</div></div>
-        <div class="imgc"><img src="[URL_UNSPLASH]" alt="[desc]" loading="lazy"><div class="imgc-cap">🖼️ [Título]</div></div>
-        <div class="imgc"><img src="[URL_UNSPLASH]" alt="[desc]" loading="lazy"><div class="imgc-cap">🖼️ [Título]</div></div>
-        <div class="imgc"><img src="[URL_UNSPLASH]" alt="[desc]" loading="lazy"><div class="imgc-cap">🖼️ [Título]</div></div>
+        <div class="imgc"><img src="asset://[ID_BANCO]" alt="[desc]" loading="lazy"><div class="imgc-cap">🖼️ [Título]</div></div>
+        <div class="imgc"><img src="asset://[ID_BANCO]" alt="[desc]" loading="lazy"><div class="imgc-cap">🖼️ [Título]</div></div>
+        <div class="imgc"><img src="asset://[ID_BANCO]" alt="[desc]" loading="lazy"><div class="imgc-cap">🖼️ [Título]</div></div>
+        <div class="imgc"><img src="asset://[ID_BANCO]" alt="[desc]" loading="lazy"><div class="imgc-cap">🖼️ [Título]</div></div>
       </div>
     </div>
     <!-- ZONA 2: Organizador gráfico SVG (obligatorio en al menos 1 slide por concepto) -->
@@ -964,148 +966,14 @@ El menú/indicador de progreso **NUNCA** tiene un `onclick` que cambie `st.slide
 
 # 12 · Imágenes, ejercicios, nota, bloqueo de evaluables y preguntas de quiz
 
-## 🔴 PRIORIDAD 1 · ABSOLUTA — IMÁGENES REALES DE INTERNET (MÍNIMO 20)
+## ⛔ PRIORIDAD 1 · SUPERADA — IMÁGENES: USAR EL BANCO, NO INTERNET
 
-### 📸 REGLA DE ORO: MÍNIMO 20 IMÁGENES REALES POR CLASE
-**FUENTE PRINCIPAL — Unsplash (sin API key). Puede fallar: un ID puede dejar de existir o no haber internet. El respaldo de la Prioridad 1-B es OBLIGATORIO:**
-```javascript
-// PATRÓN EXACTO que funciona — NO cambiar la estructura de la URL:
-'https://images.unsplash.com/photo-[ID_FOTO]?w=400&h=250&fit=crop&auto=format&q=80'
-// Para thumbnails en tarjetas interactivas:
-'https://images.unsplash.com/photo-[ID_FOTO]?w=120&h=120&fit=crop&auto=format&q=80'
-// Para imágenes de detalle (cuando el usuario hace clic):
-'https://images.unsplash.com/photo-[ID_FOTO]?w=500&h=300&fit=crop&auto=format&q=80'
-```
-**IDs de Unsplash por categoría temática (lista inicial; no están verificados uno a uno — `tools/verificar_imagenes.py` los comprueba, y el respaldo 1-B cubre los que fallen):**
-```javascript
-// TECNOLOGÍA / COMPUTADORES
-const IMGS_TECH = {
-  teclado:    '1587829741301-dc798b83add3',
-  mouse:      '1527814050087-3793815479db',
-  monitor:    '1547082299-de196ea013d6',
-  laptop:     '1496181133206-80ce9b88a853',
-  disco_hdd:  '1597872200969-2b65d56bd16b',
-  usb:        '1601972599720-36938d4ecd31',
-  ram:        '1531492746076-161ca9bcad58',
-  cpu:        '1518770660439-4636190af475',
-  impresora:  '1544117519-31a4b719223d',
-  redes:      '1558618666-fcd25c85cd64',
-  router:     '1544197150-b99a580bb7a8',
-  internet:   '1451187580459-43490279c0fa',
-  codigo:     '1461749280684-dccba630e2f6',
-  apps:       '1512941937669-90a1b58e7e9c',
-  celular:    '1511707171634-5f897ff02aa9',
-  videojuego: '1612287230202-1ff1d85d1bdf',
-  gamer_setup:'1593508512255-86ab42a8e620',
-  so_windows: '1551650975-87deedd944c3',
-};
-// NATURALEZA / CIENCIAS
-const IMGS_CIENCIAS = {
-  planta:       '1416879595882-3373a0480b5b',
-  animal:       '1474511320723-9a56873867b5',
-  agua:         '1505118380757-91f5f5632de0',
-  sol:          '1508739773434-c26b3d09e071',
-  tierra:       '1446776811953-b23d57bd21aa',
-  ecosistema:   '1441974231531-c6227db76b6e',
-  laboratorio:  '1532094349884-32413686ca0c',
-  microscopio:  '1507003211169-0a1dd7228f2d',
-  celula:       '1559757148-5c350d0d3c56',
-  cuerpo:       '1530026405845-74d57adf5e44',
-};
-// MATEMÁTICAS
-const IMGS_MATH = {
-  numeros:      '1509228468518-180b8abb5fa6',
-  geometria:    '1509236841566-9f7efd7ce929',
-  calculadora:  '1587145820266-a5951ee6f620',
-  regla:        '1611532736597-de2d4265fba3',
-  reloj:        '1516574187841-cb9cc2ca948b',
-  monedas:      '1518458028785-8fbcd101ebb9',
-  fracciones:   '1578662996442-48f60103fc96',
-};
-// LENGUAJE / ESPAÑOL
-const IMGS_LENGUAJE = {
-  libro:        '1481627834876-b7833e8f5570',
-  escritura:    '1455390582262-e97a8c80a394',
-  lectura:      '1512820790803-83ca734da794',
-  lapiz:        '1513001900722-370f803f498d',
-  biblioteca:   '1507842217343-583bb7270b66',
-  periodico:    '1504711434969-e33886168f5c',
-};
-// SOCIAL / COLOMBIA
-const IMGS_SOCIAL = {
-  ciudad:       '1512917774080-9991f1c7a03d',
-  campo:        '1500382017468-9049fed747ef',
-  familia:      '1511895426328-dc8714191011',
-  colombia:     '1580063665421-a10acfdb2a3a',
-  escuela:      '1580582932707-520aed937b7b',
-  mapa:         '1524661135-423995f22d0b',
-};
-```
-**DISTRIBUCIÓN OBLIGATORIA — MÍNIMO 20 IMÁGENES POR CLASE:**
-| Ubicación | Cantidad mínima |
-|-----------|----------------|
-| Slide intro | 1–2 imágenes decorativas |
-| Cada slide 'info' (mín. 4 slides de info) | 4 imágenes en grid 2×2 cada uno = 16 |
-| Explorador interactivo (6 elementos) | 6 thumbnails + 6 detalle = 12 |
-| Repaso/resumen | 2 imágenes |
-|  v7.3: Cuadernos | 0 — el Cuaderno 1 y el Taller en Clase NUNCA llevan imágenes (Prioridad 10); compensar el total en los slides 'info'/repaso/explorador |
-| **TOTAL GARANTIZADO** | **≥ 20 imágenes reales** (todas fuera de los cuadernos) |
-**IMPLEMENTACIÓN EXACTA en slides de contenido:**
-```html
-<!-- Grid 2×2 obligatorio en cada slide info -->
-<div class="g2" style="gap:9px">
-  <div class="imgc">
-    <img src="https://images.unsplash.com/photo-[ID]?w=300&h=130&fit=crop&auto=format&q=80"
-         alt="[descripción]" loading="lazy">
-    <div class="imgc-cap">🖼️ [Título]</div>
-  </div>
-  <!-- repetir 3 veces más -->
-</div>
-```
-**CSS de imágenes — incluir SIEMPRE:**
-```css
-.imgc { border-radius:10px; overflow:hidden; border:4px solid var(--primary); box-shadow:0 3px 0 var(--primary-dark); }
-.imgc img { width:100%; height:130px; object-fit:cover; display:block; }
-.imgc-cap { background:var(--primary); color:#fff; padding:5px 8px; font-family:var(--font-ui); font-size:.75rem; text-align:center; }
-.hwp { background:linear-gradient(180deg,#fff,#f8f8f0); border:3px solid var(--primary); border-radius:11px; padding:11px; cursor:pointer; transition:.15s; text-align:center; box-shadow:0 4px 0 var(--primary-dark); }
-.hwp:hover { transform:translateY(-2px); border-color:var(--accent); box-shadow:0 6px 0 var(--accent2); }
-.hwp img { width:65px; height:65px; object-fit:cover; border-radius:7px; display:block; margin:0 auto 6px; }
-.hw-detail { background:#fffde0; border:4px solid var(--accent); border-radius:var(--radius); padding:14px; margin-top:11px; display:none; animation:sIn .3s; box-shadow:0 5px 0 var(--accent2); }
-.hw-detail.show { display:flex; gap:12px; align-items:flex-start; }
-.hw-detail img { width:120px; height:90px; object-fit:cover; border-radius:7px; border:3px solid var(--accent); flex-shrink:0; }
-```
-**SISTEMA DE FALLBACK EMOJI — OBLIGATORIO al final del archivo:**
-```javascript
-document.addEventListener('DOMContentLoaded', function() {
-  const emojiMap = {
-    'teclado':'⌨️','keyboard':'⌨️','mouse':'🖱️','monitor':'🖥️','laptop':'💻',
-    'computador':'💻','disco':'💾','hdd':'💾','usb':'🔌','cpu':'⚙️','ram':'💾',
-    'impresora':'🖨️','cámara':'📷','red':'🌐','router':'📡','internet':'🌐',
-    'código':'👨‍💻','apps':'📱','videojuego':'🎮','gamer':'🎮','hardware':'🔧',
-    'software':'💻','planta':'🌱','animal':'🐾','célula':'🔬','sistema':'🫀',
-    'agua':'💧','tierra':'🌍','sol':'☀️','luna':'🌙','laboratorio':'🧪',
-    'número':'🔢','suma':'➕','resta':'➖','fracciones':'🔢','geometría':'📐',
-    'calculadora':'🧮','libro':'📚','escritura':'✍️','lectura':'📖','lapiz':'✏️',
-    'ciudad':'🏙️','campo':'🌾','colombia':'🇨🇴','mapa':'🗺️','música':'🎵','arte':'🎨',
-  };
-  function fixImg(img) {
-    img.onerror = null;
-    const alt = (img.alt||'').toLowerCase();
-    let icon = '🖼️';
-    for (const k in emojiMap) { if (alt.includes(k)) { icon = emojiMap[k]; break; } }
-    const ph = document.createElement('div');
-    ph.style.cssText = 'font-size:2.8rem;display:flex;align-items:center;justify-content:center;min-height:70px;width:100%;background:var(--primary-light,#e8f4ff);border-radius:9px;border:2px dashed var(--primary,#4a90d9);flex-direction:column;gap:5px;padding:8px;';
-    const cap = img.closest('.imgc')?.querySelector('.imgc-cap')?.textContent || img.alt || '';
-    ph.innerHTML = `<span>${icon}</span><span style="font-size:.65rem;font-family:Fredoka One;color:var(--primary-dark,#2c5282)">${cap}</span>`;
-    img.parentNode.insertBefore(ph, img);
-    img.style.display = 'none';
-  }
-  document.querySelectorAll('img').forEach(function(img) {
-    if (img.complete && img.naturalWidth === 0) fixImg(img);
-    else img.addEventListener('error', function() { fixImg(this); });
-  });
-});
-```
+**Ya no se piden imágenes reales de Internet ni un mínimo de 20 por clase.** La fuente única de imágenes es `banco-imagenes/banco.json` (módulo 33, Prioridades 56 y 68):
+- `asset://<id>`, nunca URLs remotas; si falta una imagen clave se crea original (SVG) o se reporta como «imagen faltante».
+- `alt` descriptivo obligatorio (mínimo 2 palabras); una imagen por slide o pregunta, la más clara.
+- Sin personajes ni marcas de terceros.
+
+El texto anterior de esta prioridad (fuente de fotos externas, IDs sin verificar, grid 2×2 obligatorio y respaldo emoji) contradecía esas reglas y se retiró; sigue disponible en el historial de git.
 
 ## 🔴 PRIORIDAD 2 · ABSOLUTA — SLIDE DE EJERCICIOS PRÁCTICOS (sin video)
 
@@ -1155,7 +1023,7 @@ function rPractica(s) {
 **CHECKLIST:**
 ```
 [ ] El slide tipo 'video' fue eliminado por completo — no debe aparecer en ningún lugar del código generado
-[ ] El slide tipo 'practica' ocupa la posición 16 de la estructura (Prioridad 9)
+[ ] El slide tipo 'practica' ocupa la posición 16 de la estructura (Prioridad 9, superada: el tipo `practica` no lo implementa el motor v34)
 [ ] Entre 2 y 3 ejercicios resueltos paso a paso, nunca más de 3
 [ ] Cada ejercicio de práctica se relaciona directamente con una pregunta real de Quiz 2 o Evaluación Final
 [ ] Aplica cronómetro de 12s (Prioridad 0-A) igual que cualquier slide de lectura
@@ -1323,31 +1191,9 @@ function renderResumenQuiz(s) {
 }
 ```
 
-## 🔴 PRIORIDAD 1-B · ABSOLUTA — IMÁGENES: RESPALDO GLOBAL, SIN CAÍDAS Y CON VERIFICACIÓN
+## ⛔ PRIORIDAD 1-B · SUPERADA — RESPALDO GLOBAL DE IMÁGENES REMOTAS
 
-El prompt exige una clase "100 % autocontenida" y a la vez imágenes remotas. Se concilian así: **la clase siempre se ve completa aunque no cargue ninguna imagen remota.**
-1. **Manejador global de error de imagen** (una sola vez, en fase de captura), que cambia cualquier `<img>` rota por un respaldo temático (emoji grande del tema o un SVG inline con el título de la imagen) y le agrega `alt`:
-```javascript
-document.addEventListener('error', function (e) {
-  var im = e.target; if (!im || im.tagName !== 'IMG' || im.dataset.respaldo) return;
-  im.dataset.respaldo = '1';
-  im.src = 'data:image/svg+xml;utf8,' + encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" width="400" height="250"><rect width="100%" height="100%" fill="#F3F6FB"/><text x="50%" y="50%" font-size="72" text-anchor="middle" dominant-baseline="middle">' + (window.RESPALDO_IMG || '🖼️') + '</text></svg>');
-}, true);
-```
-2. `RESPALDO_IMG` = emoji del tema visual (de `AVATAR_TEMA_ICONO`). Ningún slide depende de que una imagen remota cargue para entenderse (toda información vive también en texto).
-3. **Camino preferido (práctica real observada):** las clases ya incrustan sus imágenes en base64 WebP (≈ 2–3 MB en una clase completa) y no dependen de internet; la Prioridad 31 lo regula. Unsplash queda como fuente de apoyo para imágenes decorativas.
-4. **Imágenes críticas** (las que explican un concepto evaluable) van **embebidas en base64 liviano** (≤ 40 KB cada una, WebP) o se dibujan con SVG/CSS; las decorativas pueden ser remotas.
-5. **Verificación previa a la entrega:** `python3 tools/verificar_imagenes.py clase.html` comprueba que cada URL remota responde 200; las que fallen se reemplazan antes de entregar. Si no hay red para comprobar, se declara en la entrega ("imágenes remotas sin verificar").
-6. Todas las `<img>` remotas llevan `loading="lazy"`, `alt` descriptivo y tamaño fijo (evita saltos de diseño).
-
-**Checklist:**
-```
-[ ] Manejador global de error de imagen presente (captura) y RESPALDO_IMG definido
-[ ] Ninguna información esencial depende de una imagen remota
-[ ] Imágenes que explican conceptos evaluables: embebidas o SVG/CSS
-[ ] tools/verificar_imagenes.py ejecutado (o declarado "sin verificar")
-[ ] alt descriptivo, loading="lazy" y tamaño fijo en todas
-```
+Las clases ya no usan imágenes remotas: van embebidas por el empaquetador y la auditoría exige «sin recursos externos». El respaldo global de error y `verificar_imagenes.py` (que no está en este repositorio) dejaron de aplicarse. Texto anterior disponible en el historial de git.
 
 # 13 · Vidas/reintentos, reintento dirigido, retroalimentación y matching
 
@@ -3076,7 +2922,7 @@ window.__pistaTimeout = null;      // ejemplo: resplandor de la pista de la sopa
 Todas las prioridades 8-* anteriores traen su "prueba obligatoria" como una lista de pasos para hacer a mano — y a mano es exactamente como el bug de `semana2_mat4_p4.html` pasó desapercibido: entrar y salir 5 veces de una slide de lectura, o recargar en mitad de una retroalimentación, es tedioso de repetir cada vez y fácil de saltarse. Esta prioridad reúne esas pruebas en **un solo script automático** que corre en segundos con un reloj de navegador acelerado (12 s de espera se simulan sin esperar 12 s reales) y que **cualquier clase generada con este prompt debe pasar íntegro antes de entregarse**.
 ### ⚖️ REGLA ABSOLUTA
 Antes de entregar el archivo `.html` final de cualquier clase, se ejecuta `prueba_clase.js` contra ese archivo (requiere Node.js y el paquete `playwright`: `npm i playwright`). **Si el script reporta algún ❌, la clase NO se entrega** hasta corregir la causa — casi siempre una copia parcial de 8-N/8-O/8-P/8-Q, o una función duplicada de una versión antigua que no fue reemplazada del todo.
-> El código completo de la prueba está en **`tests/prueba_clase.js`** (idéntico al que antes se incluía aquí). Uso: `node tests/prueba_clase.js /ruta/semanaN_area_g_pP.html` (requiere `npm i playwright`).
+> El código completo de la prueba está en **`tests/prueba_clase.js`** *(no está en este repositorio)* (usar `tools/prueba_clase_e2e.js`) (idéntico al que antes se incluía aquí). Uso: `node tests/prueba_clase.js /ruta/semanaN_area_g_pP.html` (requiere `npm i playwright`).
 ### 🧭 Cómo leer el resultado
 - **T1-T3** prueban el cronómetro (8-N): que la cuenta baje de verdad, que se desbloquee aunque la pestaña esté en segundo plano, y que ir/venir no acumule temporizadores.
 - **T4** recorre TODA la clase con un reloj acelerado, abusando de Atrás/Adelante a mitad de cada cronómetro y dando 5 clics rápidos en cada pregunta — si algo queda bloqueado en cualquier slide, lo reporta con el número exacto.
@@ -3499,11 +3345,11 @@ Así se trabaja en la práctica (4 cursos: Aritmética 4.º y 5.º, Tecnología 
 
 ### 38.2 — Pasos obligatorios
 1. **Leer el index:** de `INDEX_SEMANAS_META` sale la **semana siguiente** (la primera sin clase generada o el mayor `num` + 1), su **tema**, su `universo` y el `archivo` exacto (8-K). Si falta el tema, se **pregunta**; no se inventa.
-2. **Resumir la anterior sin leerla completa:** `python3 tools/aligerar_html.py anterior.html` y `python3 tools/esqueleto_clase.py anterior.html` (jamás abrir el HTML pesado con `cat/view`).
+2. **Resumir la anterior sin leerla completa:** `python3 tools/aligerar_html.py anterior.html` *(no está en este repositorio)* y `python3 tools/esqueleto_clase.py anterior.html` (jamás abrir el HTML pesado con `cat/view`).
 3. **Clonar con `CLASE_CFG`:** el único lugar donde viven curso, grado, periodo y semana (38.3). Cambiarlo y **no escribir ninguna clave de almacenamiento a mano**.
 4. **Sustituir todos los datos** (tabla de arriba), uno por uno.
 5. **Auditar:** `python3 tools/auditar_clase.py nueva.html --previa anterior.html --semana N` → **cero ❌** (restos de la semana anterior, funciones duplicadas, fondo oscuro, claves manuales, sello débil).
-6. **Probar:** `node tests/prueba_clase.js nueva.html` (T1–T9) → cero ❌.
+6. **Probar:** `node tests/prueba_clase.js nueva.html` *(no está en este repositorio)* (usar `python3 tools/puerta_de_calidad.py nueva.html`) (T1–T9) → cero ❌.
 7. **Confirmar** la lista de prioridades (00 §4) y el resumen de lo que cambió respecto a la anterior.
 
 ### 38.3 — `CLASE_CFG` y claves: una sola fuente
@@ -3517,7 +3363,7 @@ const almacen   = Nucleo.crearAlmacen(window.localStorage);             // segur
 //   PREFIX  = claseCtx.storagePrefix SOLO si es de esta semana y de este grupo; si no, curso_grado_grupo_pP_sS (8-K y 8-V)
 // Guardar: Nucleo.guardar(almacen, CLASE_CFG, estado, { totalSlides, xp, medallas, semaforo, notaIntentoActual, completada }, claseCtx)
 ```
-- **`motor/nucleo.js` se inserta tal cual** (`python3 tools/insertar_nucleo.py clase.html`); **no se reescribe**. **Implementa el contrato con el index (8-K y 8-F): mismas claves, misma normalización de nombre y la misma entrada para el index; reemplaza el bloque de PREFIX/SKEY/INDEX_KEY de 8-K/8-V y `syncIndex()` solo en cómo se obtienen y escriben las claves (los campos de la entrada siguen siendo los de 8-F).** Provee: claves, sello, carga/guardado, `registrarIntento` (mejor nota), billetera. Está probado (`node tests/prueba_nucleo.js`).
+- **`motor/nucleo.js` se inserta tal cual** (`python3 tools/insertar_nucleo.py clase.html` *(no está en este repositorio)*); **no se reescribe**. **Implementa el contrato con el index (8-K y 8-F): mismas claves, misma normalización de nombre y la misma entrada para el index; reemplaza el bloque de PREFIX/SKEY/INDEX_KEY de 8-K/8-V y `syncIndex()` solo en cómo se obtienen y escriben las claves (los campos de la entrada siguen siendo los de 8-F).** Provee: claves, sello, carga/guardado, `registrarIntento` (mejor nota), billetera. Está probado (`node tests/prueba_nucleo.js`).
 - **Prohibido:** literales como `'mat4p4_…'`, `'mat_4_'`, `'_s5'` o `SEMANA_NUM` repetido por el código. Si la clase anterior los trae, **se eliminan** y se reemplazan por llamadas al núcleo.
 - Las funciones `PREFIX()`, `skey()`, `sessionKey()`, `resumeKey()`, `prefijoRespaldo()` y `buscarSesionHuerfanaPorNombre()` **desaparecen**: el núcleo las hace innecesarias. (La recuperación "huérfana" recorría claves de otras sesiones; con un sello estricto ya no hay nada que recuperar de otra semana.)
 
@@ -3629,7 +3475,7 @@ Las pruebas nuevas y futuras **solo** llaman a `CLASE_API` y al DOM. Los datos d
 3. **Manejo global de errores:** `window.addEventListener('error', …)` y `'unhandledrejection'` registran en `ERRORES_CLASE` (máx. 50) y **nunca** muestran un mensaje técnico al estudiante; el Panel Docente tiene una pestaña **"Salud"** con errores, `almacenEnMemoria`, reparaciones y versión.
 4. **Versión de datos:** el sello incluye `schema`. Si en el futuro cambia, `Nucleo` lo trata como inválido (cuarentena) y la clase arranca limpia; **jamás** se "migra" adivinando.
 5. **Respaldo manual:** botón en el Panel Docente "Exportar / importar progreso (JSON)" para un estudiante; la importación **valida el sello** de la clase actual y rechaza el resto.
-6. **Imágenes remotas** (Prioridad 1-B): un manejador global de error reemplaza toda imagen rota por un respaldo temático (emoji/SVG).
+6. **Imágenes remotas** (antes Prioridad 1-B, superada): las imágenes van embebidas por el empaquetador; no hay imágenes remotas que puedan romperse.
 
 **Checklist:**
 ```
@@ -3642,44 +3488,26 @@ Las pruebas nuevas y futuras **solo** llaman a `CLASE_API` y al DOM. Los datos d
 
 # 17 · Estructura de slides, cuadernos, menú de ruta, nota final y pantalla final
 
-## 🔴 PRIORIDAD 9 · ABSOLUTA — ESTRUCTURA DE 23 SLIDES
+## 🔴 PRIORIDAD 9 · ABSOLUTA — ESTRUCTURA Y RITMO DE LA CLASE
 
-** CAMBIO CRÍTICO v6.2:** los cuadernos (Cuaderno 1 y Taller en Clase / antes "Cuaderno 2") **NUNCA** ocupan una posición dentro de la secuencia de slides. Son EXCLUSIVAMENTE paneles flotantes accesibles desde el navbar superior (ver Prioridad 10, actualizada en v6.2). Esto corrige clases anteriores que los integraban como slides duplicadas dentro del recorrido — eso queda PROHIBIDO. La estructura correcta, sin cuadernos, es de 23 slides (v22: con capítulos `historia`, minijuegos y mundos):
-| Slides | Tipo | Contenido | Mundo | Nota |
-|--------|------|-----------|-------|------|
-| 1 | intro | Portal de entrada: apertura misteriosa con el nombre, **elige título y avatar** (34.4) | 1 | ❌ |
-| 2 | **historia** | **Capítulo 1** — cuento interactivo que enseña el Concepto 1 (34-C) | 1 | ❌ |
-| 3 | info | Concepto 1 formal y visual + 4 imágenes | 1 | ❌ |
-| 4 | info | Concepto 2 + 4 imágenes | 1 | ❌ |
-| 5 | **historia** | **Capítulo 2** — Concepto 2 en acción | 1 | ❌ |
-| 6 | interactive | Explorador clickeable + 6 imágenes | 1 | ❌ |
-| 7 | info | Concepto 3 + 4 imágenes | 1 | ❌ |
-| 8 | **minijuego** | **Minijuego A** — practica el Concepto 3 (35) | 2 | ❌ |
-| 9 | complementaria | Drag & drop / Matching (sin nota) + botón Verificar | 2 | ❌ |
-| 10 | **quiz** | **QUIZ 1: 8 preguntas opción múltiple** | 2 | ✅ NOTA |
-| 11 | complementaria | Fill in the blank / Ordenar (sin nota) + botón Verificar | 2 | ❌ |
-| 12 | **historia** | **Capítulo 3** — giro: la historia viaja al **Mundo Sorpresa** | 3 | ❌ |
-| 13 | info | Concepto 4 + 4 imágenes | 3 | ❌ |
-| 14 | **minijuego** | **Minijuego B** — en el Mundo Sorpresa | 3 | ❌ |
-| 15 | **quiz** | **QUIZ 2: 8 preguntas opción múltiple** | 3 | ✅ NOTA |
-| 16 | practica | Ejercicios prácticos resueltos (ligados al Quiz 2/Eval. Final) | 3 | ❌ |
-| 17 | info | Profundización + ¿Sabías que…? + 2 imágenes | 3 | ❌ |
-| 18 | wordsearch | Sopa de letras (máx. 5 palabras, mín. 1 encontrada) | 3 | ❌ |
-| 19 | repaso | Mapa mental / resumen visual + 2 imágenes | 3 | ❌ |
-| 20 | **minijuego** | **Minijuego C** — escape room de repaso (`candados`) | 4 | ❌ |
-| 21–22 | **evalFinal** | **Evaluación Final: 14 preguntas opción múltiple** (cap. final antes de 21) | 4 | ✅ NOTA |
-| 23 | final | Pantalla cierre: nota (mejor nota) + vidas + gemas + resolución del misterio | 4 | — |
-**Esta tabla es la ÚNICA fuente de las posiciones.** La plantilla `DATOS_DE_LA_CLASE.md` y las pruebas se leen contra ella (en la v21 la plantilla decía Quiz 1 = slides 9-10, Quiz 2 = 14-15 y Final = 23-24, lo que contradecía esta tabla). **Siguen siendo 23 slides**, así que los motores de navegación, bloqueo y nota no cambian de posición: `historia` cuenta como **lectura** (34-C.3) y `minijuego` como **actividad** (35.3). Si el docente pide una versión más corta, se conservan las posiciones de los evaluables (10, 15, 21–22) y se quitan slides no evaluables.
-**Los cuadernos NO aparecen en esta tabla porque NO son slides.** Se acceden en cualquier momento desde los botones fijos del navbar (📒 Cuaderno 1 / 📝 Taller en Clase), como paneles flotantes independientes del recorrido — nunca deben duplicarse dentro del contenido de ninguna slide, ni contarse en `SL`, ni aparecer en el sidebar de progreso, ni bloquear `nextSlide()`.
-**CÁLCULO DE NOTA CON ESTA ESTRUCTURA:**
+**Reemplaza la antigua tabla fija de 23 slides** (usaba tipos que el motor no implementa, como `historia` o `interactive`). Una clase tiene entre 9 y 14 slides según el tema; la referencia son los ejemplos reales de `plantilla/ejemplos/*.datos.json`.
+
+Guion de ritmo:
+1. `intro`: misión de 3 líneas (🎯 Aprenderás · 👆 Harás · 🏆 Ganarás).
+2. `info`: una idea por slide, con imagen del banco (`alt`) y «Ejemplo resuelto / Ahora tú».
+3. Práctica y juegos de aplicación: **mínimo 4 tipos distintos** y nunca más de 2 slides seguidas del mismo tipo (lo vigila el auditor).
+4. `quiz`: única fuente de la nota; se evalúa solo lo explicado y practicado.
+5. `evalFinal` y, opcionalmente, `candado`.
+6. `final`: celebración, «lo que aprendiste» y siguiente misión.
+
+Solo se usan tipos de slide que implementa el motor (módulo 32, Prioridad 58). Las posiciones exactas ya no son fijas: la puerta de calidad comprueba que empiece en `intro` y termine en `final`.
+
+**Checklist:**
 ```
-Total preguntas evaluables = 8 (Q1) + 8 (Q2) + 14 (EF) = 30 preguntas
-Nota = (aciertos / 30) × 5.0
-Ejemplo: 20 aciertos de 30 → (20/30) × 5.0 = 3.33 (aprobado)
-Ejemplo: 30 aciertos → 5.0 (perfecto)
-Ejemplo: 0 aciertos → 0.0 (reprueba → se activan las 8 vidas)
+[ ] Entre 9 y 14 slides; empieza en intro y termina en final
+[ ] Al menos 4 tipos de juego distintos; nunca > 2 seguidos del mismo tipo
+[ ] Solo tipos que el motor implementa
 ```
-**Nota 2 de la clase (independiente de esta nota automática):** el Taller en Clase (antes "Cuaderno 2") se califica aparte, manualmente por el docente — ver Prioridad 10 y Prioridad 18.
 
 ## 🔴 PRIORIDAD 10 · ABSOLUTA — CUADERNOS DIGITALES: ACCESO DESDE MENÚ SUPERIOR + DISEÑO TIPO AGENDA REAL
 
@@ -5548,7 +5376,7 @@ function renderPistaGeneralHerramientas() {
 - JavaScript vanilla puro — sin React, Vue, jQuery
 - CSS puro — sin Tailwind, Bootstrap
 - Google Fonts como única CDN de fuentes
-- **Mínimo 20 imágenes Unsplash** con fallback emoji
+- **Imágenes del banco** (`asset://`, módulo 33) con `alt` descriptivo
 - **2-3 ejercicios prácticos resueltos** ligados directamente al quiz/examen (slide `practica`, Prioridad 2)
 - **Sistema de 8 vidas** — solo resetean quizzes de opción múltiple
 - **Nota desde 0.0** — se construye con aciertos, nunca desde 5.0
@@ -5688,16 +5516,16 @@ function chequearMensajeMitadClase() {
 ## 🟠 PRIORIDAD 19 · ALTA — IMÁGENES CON PUNTOS CALIENTES (HOTSPOTS) — ALTERNATIVA AL GRID 2×2
 
 ### 🔵 REGLA DE ORO: UNA IMAGEN GRANDE CON PUNTOS TOCABLES, EN VEZ DE 4 FOTOS FIJAS
-Como alternativa al grid 2×2 de imágenes obligatorio en cada slide de concepto (Prioridad 1), se puede usar — en algunos slides de concepto, no necesariamente todos — **una sola imagen grande de Unsplash con 3 o 4 puntos marcados (hotspots)** que el estudiante toca para revelar un dato, definición o ejemplo relacionado con esa parte de la imagen. Es más interactivo que solo mirar fotos estáticas.
+Como alternativa al grid 2×2 de imágenes obligatorio en cada slide de concepto (módulo 33), se puede usar — en algunos slides de concepto, no necesariamente todos — **una sola imagen grande del banco con 3 o 4 puntos marcados (hotspots)** que el estudiante toca para revelar un dato, definición o ejemplo relacionado con esa parte de la imagen. Es más interactivo que solo mirar fotos estáticas.
 **Reglas de los hotspots:**
 - Cada hotspot es un círculo pulsante posicionado sobre un punto relevante de la imagen (ej. una pieza del computador, una parte de una célula, un elemento de un mapa)
 - Al tocar un hotspot, se revela un dato breve (1 línea) — mediante un toast o un popover pequeño, nunca un modal que bloquee la lectura
-- Cada imagen usada en este patrón sigue contando para el mínimo de 20 imágenes reales de la Prioridad 1 — pero como reemplaza a 4 imágenes por 1, el autor debe compensar usando el patrón de grid 2×2 en más slides, o combinando varios slides con hotspots, para no bajar del total de 20
-- No reemplaza la regla de `alt` descriptivo ni el sistema de fallback emoji (Prioridad 1) — el hotspot es una capa adicional sobre la imagen, no un reemplazo de sus reglas base
+- Cada imagen del patrón sale del banco (`asset://`) y lleva `alt` descriptivo; ya no existe un mínimo de 20 imágenes por clase.
+- No reemplaza la regla de `alt` descriptivo (módulo 33): el hotspot es una capa adicional sobre la imagen, no un reemplazo de sus reglas base
 ```html
 <!-- Patrón de imagen con hotspots — alternativa al grid 2×2 en un slide de concepto -->
 <div class="hotspot-container">
-  <img src="https://images.unsplash.com/photo-[ID]?w=500&h=320&fit=crop&auto=format&q=80"
+  <img src="asset://[ID_BANCO]"
        alt="[descripción]" loading="lazy" class="hotspot-img">
   <!-- 3-4 puntos, posicionados con top/left en % sobre la imagen -->
   <button class="hotspot-punto" style="top:28%;left:22%" onclick="mostrarHotspot('[Dato breve 1]')">+</button>
@@ -5729,7 +5557,7 @@ function mostrarHotspot(dato) {
   50%     { box-shadow: 0 0 0 10px rgba(255,215,0,0); }
 }
 ```
-**Nota importante:** este patrón es OPCIONAL y complementario al grid 2×2 (Prioridad 1) — el autor decide en qué slides de concepto usar cada estilo, según lo que mejor se preste para el tema. Los clics en los hotspots son formativos, nunca afectan la nota (Prioridad 18-A).
+**Nota importante:** este patrón es OPCIONAL y complementario al grid 2×2 (módulo 33) — el autor decide en qué slides de concepto usar cada estilo, según lo que mejor se preste para el tema. Los clics en los hotspots son formativos, nunca afectan la nota (Prioridad 18-A).
 
 ## 🟠 PRIORIDAD 20 · ALTA — VITRINA DE LOGROS ACUMULADOS ENTRE SEMANAS
 
@@ -6183,10 +6011,10 @@ function lanzarReaccionesFlotantes(origenEl, emojis) {
 Para slides de concepto donde el contenido sea una comparación real (antes/después, correcto/incorrecto, con/sin, antiguo/moderno) — alternativa opcional al grid 2×2 (Prioridad 1) o a los hotspots (Prioridad 19), nunca obligatoria — una imagen dividida con una manija deslizable que el estudiante arrastra con mouse o dedo.
 ```html
 <div class="ad-slider" id="ad-slider-1">
-  <img src="https://images.unsplash.com/photo-[ID_DESPUES]?w=500&h=320&fit=crop&auto=format&q=80"
+  <img src="asset://[ID_BANCO]"
        alt="[descripción DESPUÉS]" loading="lazy" class="ad-img ad-img-fondo">
   <div class="ad-img-recorte">
-    <img src="https://images.unsplash.com/photo-[ID_ANTES]?w=500&h=320&fit=crop&auto=format&q=80"
+    <img src="asset://[ID_BANCO]"
          alt="[descripción ANTES]" loading="lazy" class="ad-img">
   </div>
   <div class="ad-linea"></div>
@@ -6246,13 +6074,13 @@ function initAntesDepues(contId) {
 .ad-etiqueta { position: absolute; bottom: 8px; background: rgba(0,0,0,.55); color: #fff; font-family: var(--font-ui); font-size: .68rem; padding: 3px 9px; border-radius: 8px; }
 .ad-etiqueta-izq { left: 8px; } .ad-etiqueta-der { right: 8px; }
 ```
-**Reglas:** uso opcional solo cuando el concepto sea comparación real · ambas imágenes cuentan para el mínimo de 20 (Prioridad 1) con alt + fallback emoji · funciona con mouse Y touch · nunca afecta la nota (Prioridad 18-A).
+**Reglas:** uso opcional solo cuando el concepto sea comparación real · ambas imágenes salen del banco (`asset://`) con `alt` descriptivo · funciona con mouse Y touch · nunca afecta la nota (Prioridad 18-A).
 **Checklist:**
 ```
 [ ] Patrón .ad-slider usado SOLO en slides donde el contenido es una comparación/transformación real
 [ ] initAntesDepues() inicializado tras insertar el HTML del slide en render()
 [ ] Funciona con mouse Y con touch, probado en ambos casos
-[ ] Cada <img> interna tiene alt descriptivo y fallback emoji (Prioridad 1)
+[ ] Cada <img> interna es un `asset://` del banco y tiene alt descriptivo
 [ ] El uso del slider nunca afecta la nota (Prioridad 18-A)
 ```
 
@@ -6301,6 +6129,8 @@ function initParallaxFondo() {
 ```
 
 # 22 · ARIA: reglas de comportamiento y ganchos con la clase (el código está en aria/aria_widget.html)
+
+> ⚠ **AVISO (revisión de coherencia).** Los archivos `aria/aria_widget.html`, `tools/insertar_aria.py` y `tools/insertar_nucleo.py` que citan las Prioridades 30 a 30-F y 36-D **nunca estuvieron en este repositorio** (ningún commit los toca) y el motor v34 **no implementa el chat, la voz ni la base de conocimiento de ARIA**. ARIA existe como mascota con imágenes del banco. Estas prioridades quedan como **histórico**: no se exigen en una clase nueva hasta que el widget se agregue a la plantilla con su prueba (Prioridad 64).
 
 ## 🟠 PRIORIDAD 30 · ALTA — ARIA: ROBOT ASISTENTE DE LA CLASE, CON CHAT Y VOZ
 
@@ -6456,7 +6286,7 @@ indexarContenidoClaseAria();
 
 ### 🎭 REGLA DE ORO: ARIA REACCIONA CON EL CUERPO, NO SOLO CON TEXTO — CADA EVENTO DE LA CLASE TIENE SU POSE Y SU ANIMACIÓN
 
-**Qué es:** ARIA tiene 6 poses oficiales (WebP con fondo transparente, cada una con su globo de texto dibujado). Se incrustan en base64 (Prioridad 31) dentro de `ARIA_SPRITES`. La función `ariaReaccionar(estado)` muestra la pose sobre el botón de ARIA con una animación distinta por estado (salto, rebote, latido, temblor, saludo) y la oculta sola a los ~3 s. Además, las categorías afines del avatar (`logro`, `animo`, `despedida`, `dormida`, `triste`, `confundida`, `carino`, `genial`) pasan a usar estas poses.
+**Qué es:** ARIA tiene 6 poses oficiales (WebP con fondo transparente, cada una con su globo de texto dibujado). Las empaqueta `construir_clase.py` desde `asset://` (no se pegan en base64) dentro de `ARIA_SPRITES`. La función `ariaReaccionar(estado)` muestra la pose sobre el botón de ARIA con una animación distinta por estado (salto, rebote, latido, temblor, saludo) y la oculta sola a los ~3 s. Además, las categorías afines del avatar (`logro`, `animo`, `despedida`, `dormida`, `triste`, `confundida`, `carino`, `genial`) pasan a usar estas poses.
 
 | Estado | Pose | Animación | Cuándo llamarlo |
 |---|---|---|---|
@@ -6594,68 +6424,9 @@ if (!esCorrecta){
 
 # 23 · Imágenes base64 propias, medidas exactas y sonido sintetizado
 
-## 🟠 PRIORIDAD 31 · ALTA — IMÁGENES PROPIAS EMBEBIDAS EN BASE64
+## ⛔ PRIORIDAD 31 · SUPERADA — IMÁGENES PROPIAS EN BASE64
 
-### 🖼️ REGLA DE ORO: TODA IMAGEN QUE NO SEA UNA FOTO DE STOCK VA EMBEBIDA COMO DATA URI, NUNCA COMO ARCHIVO EXTERNO
-La Prioridad Absoluta 1 (imágenes reales de Unsplash) sigue vigente para el grid 2×2 de fotografías de apoyo en los slides de concepto. Pero para las **imágenes propias de diseño de la clase** — el título ilustrado, los personajes/mascota, los diagramas hechos a medida para un concepto puntual (parte entera/decimal, recta numérica, comparación de decimales, etc.) — la clase real analizada usa un patrón distinto y más confiable: **incrustar el PNG/JPG directamente como base64 dentro de un objeto JS**, en vez de enlazar a un archivo externo.
-
-**Por qué esto es mejor que un `<img src="archivo.png">` externo:**
-- El HTML queda 100% autocontenido (cumple la Prioridad Técnica 17 de "un solo archivo") — no depende de que el archivo `.png` viaje junto al `.html`, ni de rutas relativas que se rompen al mover el archivo.
-- No hay riesgo de "imagen rota" si el profesor copia el HTML a otro computador o lo sube a otra plataforma sin la carpeta de imágenes.
-- Convive perfectamente con el fallback de imágenes de la Prioridad 1 (si por algún motivo el data URI no carga, el `onerror` de esa prioridad muestra el emoji-placeholder igual que con una URL normal).
-
-### 31.1 — Estructura: objeto `IMG` con constantes base64 (COPIAR Y ADAPTAR)
-```javascript
-// ═══ IMÁGENES PROPIAS DE LA CLASE — EMBEBIDAS EN BASE64, 100% AUTOCONTENIDAS ═══
-// Cada clave es un nombre descriptivo del concepto que ilustra (NO el nombre de archivo original).
-// El valor es el data URI completo, listo para usarse directo en cualquier atributo src o background.
-const IMG = {
-  char_robot:   "data:image/png;base64,iVBORw0KGgo...",   // mascota/personaje guía de la clase
-  logo_lockup:  "data:image/png;base64,iVBORw0KGgo...",   // logo institucional o de marca de la serie de clases
-  t_titulo:     "data:image/jpeg;base64,/9j/4AAQSkZJRg...", // imagen decorativa del slide de bienvenida
-  t_concepto_1: "data:image/jpeg;base64,/9j/4AAQSkZJRg...", // diagrama a medida para el primer concepto de la semana
-  t_concepto_2: "data:image/jpeg;base64,/9j/4AAQSkZJRg...", // diagrama a medida para el segundo concepto
-  t_recuerda:   "data:image/jpeg;base64,/9j/4AAQSkZJRg...", // imagen del slide de cierre/repaso
-  // ... una entrada por cada imagen propia que la clase necesite
-};
-```
-Uso en el HTML de un slide (idéntico a cualquier `<img>`, porque un data URI ES una URL válida):
-```html
-<div style="text-align:center;margin-bottom:14px">
-  <img src="${IMG.t_concepto_1}" alt="[Descripción real del concepto]"
-       style="max-width:320px;width:100%;border-radius:16px;border:3px solid var(--accent);
-              box-shadow:0 6px 18px rgba(10,20,60,.28)">
-</div>
-```
-
-### 31.2 — Cómo convertir un PNG/JPG a base64 (flujo de trabajo para quien genera la clase)
-1. Partir de la imagen ya diseñada (PNG o JPG, idealmente ya recortada/optimizada al tamaño final de uso — no subir un archivo de varios MB sin comprimir).
-2. Convertirla a texto base64 puro. En un entorno con Python disponible: `base64.b64encode(open('archivo.png','rb').read()).decode()`. En un entorno con Node: `Buffer.from(fs.readFileSync('archivo.png')).toString('base64')`. También sirve cualquier conversor online confiable si no hay acceso a consola.
-3. Anteponer el prefijo correcto según el formato real del archivo: `data:image/png;base64,` para PNG (fondos transparentes, íconos, mascota) o `data:image/jpeg;base64,` para JPG/JPEG (fotografías, ilustraciones sin transparencia).
-4. Pegar el resultado completo (prefijo + cadena base64) como el valor de la clave correspondiente en el objeto `IMG`.
-5. **Nunca** cortar ni truncar la cadena base64 al pegarla — una cadena incompleta rompe la imagen igual que un archivo corrupto.
-
-### 31.3 — Cuándo usar base64 propio vs. Unsplash (regla de decisión)
-| Tipo de imagen | Método |
-|---|---|
-| Foto real de un objeto/situación de la vida cotidiana (grid 2×2 de apoyo, Prioridad 1) | URL de Unsplash (`?w=300&h=130&fit=crop`) |
-| Mascota/personaje guía de la clase | Base64 propio (PNG con transparencia si aplica) |
-| Diagrama o ilustración diseñada a medida para UN concepto específico de esta semana (ej. "parte entera y parte decimal", "la recta numérica con decimales") | Base64 propio |
-| Imagen decorativa del slide de bienvenida o de cierre | Base64 propio |
-| Logo institucional / de la serie de clases | Base64 propio |
-
-**Peso:** cada imagen base64 aumenta el tamaño del archivo HTML final (aprox. 33% más pesada que el binario original). Es un costo aceptable a cambio de la portabilidad total del archivo — pero evita incrustar más de 8-10 imágenes propias grandes en una sola clase; para el resto de apoyo visual, usa el grid de Unsplash de la Prioridad 1.
-
-**Checklist:**
-```
-[ ] Existe un objeto IMG con una clave por cada imagen propia de diseño de la clase
-[ ] Cada valor es un data URI completo (con su prefijo data:image/...;base64, correcto) y sin truncar
-[ ] Las imágenes propias de diseño (mascota, diagramas a medida, título, cierre) usan IMG.xxx — nunca una ruta de archivo externo
-[ ] El grid 2×2 de fotos de apoyo (Prioridad 1) SIGUE usando URLs de Unsplash, no base64
-[ ] El fallback de imágenes (Prioridad 1) sigue funcionando igual con estas imágenes (probado con onerror)
-[ ] No hay más de ~10 imágenes propias grandes embebidas en base64 en una sola clase (control de peso del archivo)
-```
-
+**Ya no se pegan imágenes en base64 a mano.** Toda imagen se pide como `asset://<id>` del banco (módulo 33, Prioridades 56 y 68) y `construir_clase.py` la empaqueta. Pegar base64 está prohibido (Prioridad 58). El texto anterior de esta prioridad contradecía esa regla y se retiró; sigue disponible en el historial de git.
 
 ## 🟢 PRIORIDAD 32 · TÉCNICA — MEDIDAS EXACTAS DE CAJAS DE TEXTO E IMÁGENES POR SLIDE
 
@@ -6665,9 +6436,9 @@ La revisión de una clase real construida con este sistema mostró que el diseñ
 | Elemento | Medida exacta | Notas |
 |---|---|---|
 | Contenedor general del slide (`.si-wrap`) | `max-width:1040px; margin:0 auto;` | Todo el contenido de un slide vive dentro de este ancho, centrado |
-| Grid de fotos de apoyo 2×2 (`.g2` + `.imgc`, Prioridad 1) | 2 columnas (`grid-template-columns:1fr 1fr; gap:12px`), cada foto `height:110px; object-fit:cover` | En móvil (`max-width:600px`) baja a **1 columna** |
+| Grid de fotos de apoyo 2×2 (`.g2` + `.imgc`, módulo 33) | 2 columnas (`grid-template-columns:1fr 1fr; gap:12px`), cada foto `height:110px; object-fit:cover` | En móvil (`max-width:600px`) baja a **1 columna** |
 | Pie de foto del grid (`.imgc-cap`) | `font-size:.65rem`, padding `4px 7px` | Texto corto, una línea, nunca un párrafo |
-| Imagen propia de un concepto específico (diagrama base64, Prioridad 31) | `max-width:320px; width:100%` centrada, con borde de 3px y sombra | Para el slide de cierre/cierre motivacional puede subir hasta `max-width:460px` |
+| Imagen propia de un concepto específico (imagen `asset://` del banco) | `max-width:320px; width:100%` centrada, con borde de 3px y sombra | Para el slide de cierre/cierre motivacional puede subir hasta `max-width:460px` |
 | Imagen del slide de bienvenida (título ilustrado) | `width:260px; max-width:75%` | Con animación suave tipo flotante, borde de acento |
 | Burbuja de texto de la mascota/tip (`.mc`) | `max-width:380px` (hasta `460px` en pantallas de cierre) | Texto alineado a la izquierda dentro de la burbuja |
 | Mensaje individual del chat de ARIA (`.aria-msg`) | `max-width:88%` del ancho de la burbuja de chat | Nunca ocupa el 100% — deja aire a los lados |
@@ -7024,7 +6795,7 @@ const MJ_DATA = {
 
 **Checklist:**
 ```
-[ ] 3 minijuegos de 3 tipos distintos, en las posiciones de la Prioridad 9, y distintos a los de la clase anterior
+[ ] 3 minijuegos de 3 tipos distintos, repartidos según el guion de ritmo (Prioridad 9), y distintos a los de la clase anterior
 [ ] Todos se registran con registrarMinijuego y se montan con montarMinijuego (try/catch + Reto rápido)
 [ ] Ninguno toca mejorNota ni aciertos de quiz
 [ ] Siguiente se habilita al completar una partida (ganada o perdida) o al pulsar «No me sale» (a los 25 s); cumple 39-B.1 y 39-B.3
@@ -7165,7 +6936,7 @@ La Prioridad 15 (gamificación base: XP, insignias) **se mantiene**. Esta se sum
 # 27 · ARIA con conocimiento de TODA la clase y escalera de pistas (nunca revela la respuesta)
 
 > Esta capa **se suma** a las Prioridades 30 a 30-F (ARIA ya lee la clase, detecta preguntas copiadas y explica sin resolver). **No las reemplaza.** Lo nuevo: (1) un conocimiento **estructurado** de la clase (`CLASE_KB`) declarado al generar, en lugar de depender solo de leer el DOM; (2) una **escalera de pistas** con costo en gemas; (3) un **filtro local** que impide que ninguna respuesta —ni siquiera la de un modelo de IA— revele la opción correcta.
-> El código de ARIA sigue en `aria/aria_widget.html` (se inserta por script). Lo que cambia es lo que la clase **le entrega** y las reglas que cumple.
+> El código de ARIA sigue en `aria/aria_widget.html` *(no está en este repositorio)* (se inserta por script). Lo que cambia es lo que la clase **le entrega** y las reglas que cumple.
 
 ## 🔴 PRIORIDAD 37 · ABSOLUTA — `CLASE_KB`: EL CONOCIMIENTO ESTRUCTURADO QUE ARIA TIENE DE LA CLASE
 
@@ -8401,8 +8172,8 @@ Cada error que alguna vez existió tiene una prueba que lo vigila. **Si se cambi
 - [ ] Mensaje "Encuentra al menos 1 palabra para continuar — tu avance nunca se pierde" visible en el slide
 - [ ] Ninguna selección inválida congela la página — siempre se puede reintentar sin recargar
 ### IMÁGENES
-- [ ] Mínimo 20 imágenes Unsplash en el código (contar manualmente)
-- [ ] Patrón URL exacto: `https://images.unsplash.com/photo-[ID]?w=NNN&h=NNN&fit=crop&auto=format&q=80`
+- [ ] Todas las imágenes son `asset://` del banco, cada una con `alt` (el auditor lo comprueba)
+- [ ] Ninguna imagen remota ni en base64 pegada a mano (el empaquetador las rechaza)
 - [ ] Todos los `<img>` con `alt` descriptivo en español y `loading="lazy"`
 - [ ] Sistema de fallback emoji al final del archivo
 - [ ] CSS de `.imgc`, `.hwp`, `.hw-detail` incluido
@@ -8642,9 +8413,9 @@ Cada error que alguna vez existió tiene una prueba que lo vigila. **Si se cambi
 - [ ] Patrón de hotspots usado como alternativa OPCIONAL al grid 2×2, no obligatorio en todos los slides
 - [ ] Cada imagen con hotspots tiene 3-4 puntos pulsantes (`.hotspot-punto`) posicionados sobre zonas relevantes
 - [ ] Al tocar un hotspot se revela un dato breve (toast, nunca modal que bloquee la lectura)
-- [ ] El total de imágenes reales de la clase sigue llegando a 20 (Prioridad 1), compensando con más slides si se usa este patrón
+- [ ] Las imágenes del patrón salen del banco y llevan `alt` descriptivo
 - [ ] Los clics en hotspots NUNCA afectan la nota (Prioridad 18-A)
-- [ ] `alt` descriptivo y fallback emoji (Prioridad 1) siguen aplicando también a las imágenes con hotspots
+- [ ] `alt` descriptivo (módulo 33) sigue aplicando también a las imágenes con hotspots
 ### VITRINA DE LOGROS ACUMULADOS (Prioridad 20 — v6.7)
 - [ ] Botón fijo "🏆 Mis Logros" en el navbar, junto a los cuadernos
 - [ ] Se abre como panel flotante (`showModalGrande`) — nunca es un slide, nunca bloquea nada
@@ -8693,7 +8464,7 @@ Cada error que alguna vez existió tiene una prueba que lo vigila. **Si se cambi
 ### SLIDER "ANTES Y DESPUÉS" (Prioridad 28 — v7.5)
 - [ ] El comparador se usa solo cuando el concepto realmente tiene una comparación/transformación clara
 - [ ] initAntesDepues() funciona con mouse Y con touch
-- [ ] Ambas imágenes cuentan para el mínimo de 20 imágenes reales y llevan alt + fallback emoji
+- [ ] Ambas imágenes salen del banco (`asset://`) y llevan `alt` descriptivo
 ### PARALLAX SUTIL EN EL FONDO (Prioridad 29 — v7.5)
 - [ ] Capa de fondo SEPARADA del contenido (#fondo-parallax), con requestAnimationFrame
 - [ ] El fondo se mueve a 25-35% de la velocidad real del scroll, con opacidad 10-15%
