@@ -3,6 +3,7 @@
 | Qué | Dónde |
 |---|---|
 | **Prompt vigente (v26 + módulo 33 del banco)** | `Prompt_Maestro_Clases_v26_COMPLETO.md` |
+| **Propuesta en revisión: núcleo v27** (≈3.000 tokens) y plan de migración | `Prompt_Maestro_Clases_v27_NUCLEO.md` · `MIGRACION_v26_a_v27.md` (aún no reemplaza al v26) |
 | **Motor de referencia** (se reutiliza, no se reescribe) | `plantilla/clase_referencia.src.html`, `plantilla/motor/` |
 | Ejemplo de otra materia solo con datos | `plantilla/ejemplos/` |
 | **Puerta de calidad** y demás herramientas | `tools/` (`puerta_de_calidad.py`, `construir_clase.py`, `auditar_clase.py`, `prueba_clase_e2e.js`, …) |
