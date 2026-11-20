@@ -1,6 +1,6 @@
 # PROMPT MAESTRO DE CLASES v26 — COMPLETO (generado desde prompt/*.md; no editar aquí)
 
-> **Revisión de coherencia v26.1.** Prioridades **1, 1-B y 31 superadas** (imágenes: solo el banco, módulo 33); **9 reescrita** (guion de ritmo, 9–14 slides). `aria/aria_widget.html`, `tests/prueba_clase.js` y las herramientas `insertar_*`, `aligerar_html`, `esqueleto_clase` y `verificar_imagenes` no están en este repositorio (ver avisos). **Pendiente de decidir:** `MAX_VIDAS = 8` frente al «reintento con 2 oportunidades» del motor (Prioridad 6).
+> **Revisión de coherencia v26.1.** Prioridades **1, 1-B y 31 superadas** (imágenes: solo el banco, módulo 33); **9 reescrita** (guion de ritmo, 9–14 slides). `aria/aria_widget.html`, `tests/prueba_clase.js` y las herramientas `insertar_*`, `aligerar_html`, `esqueleto_clase` y `verificar_imagenes` no están en este repositorio (ver avisos). **Vidas:** el motor v34 usa `MAX_VIDAS = 2`; el 8 de la Prioridad 6 era histórico y se actualizó.
 
 # 00 · Protocolo de aplicación y tabla de precedencia (Prompt Maestro de Clases v26)
 
@@ -56,7 +56,7 @@ Cuando dos módulos parezcan decir cosas distintas, manda la columna "Fuente ún
 | Navegación (`puedeAvanzar`, `render`, `nextSlide`, `revalidarAvance`) | **8-O** | un solo `nextSlide()` en todo el archivo |
 | Cronómetro de lectura | **8-N** (motor) y **0-A** (visual y reglas) | por tiempo real, idempotente |
 | Modales | **8-Q** | `showModal()` / `closeModal()` con cola |
-| Reintento | **8-W** (`iniciarNuevoIntento()`) + **38-C** (estados y vigilante) | la interfaz de vidas es la de 6, 6-B y 6-C; `MAX_VIDAS = 8` |
+| Reintento | **8-W** (`iniciarNuevoIntento()`) + **38-C** (estados y vigilante) | la interfaz de vidas es la de 6, 6-B y 6-C; `MAX_VIDAS` lo define el motor (2 en v34) |
 | ARIA (código) | **No está en este repositorio** | el chat de ARIA no lo implementa el motor v34 (ver aviso en la sección ARIA); ARIA existe como mascota con imágenes del banco |
 | Prueba automática | **`tools/prueba_clase_e2e.js`** y **`tools/puerta_de_calidad.py`** | 8-T explica cuándo y cómo correrla; la puerta ejecuta todas las pruebas |
 | Clave del panel docente | **`plantillas/DATOS_DE_LA_CLASE.md` *(no está en este repositorio)*** | en el código aparece como `{{CLAVE_PANEL_DOCENTE}}`: sustitúyela por el valor de ese archivo |
@@ -110,7 +110,7 @@ Marca cada una como ✅ implementada o ➖ no aplica (con motivo). Total: 123 pr
 - [ ] **1-B** ⛔ SUPERADA — respaldo de imágenes remotas (ya no hay imágenes remotas)
 
 **13_vidas_y_feedback.md** — Vidas/reintentos, reintento dirigido, retroalimentación y matching
-- [ ] **6** 🔴 SISTEMA DE VIDAS / REINTENTOS (MAX_VIDAS = 8)
+- [ ] **6** 🔴 SISTEMA DE VIDAS / REINTENTOS (MAX_VIDAS = 2 en el motor v34)
 - [ ] **6-B** 🔴 REINTENTO DIRIGIDO: SIN CRONÓMETRO Y SALTO DIRECTO A LO EVALUABLE
 - [ ] **6-C** 🔴 LAS VIDAS SOLO SE ACTIVAN DESDE LA PANTALLA FINAL
 - [ ] **7** 🔴 RETROALIMENTACIÓN EN ACTIVIDADES COMPLEMENTARIAS
@@ -1197,11 +1197,13 @@ Las clases ya no usan imágenes remotas: van embebidas por el empaquetador y la 
 
 # 13 · Vidas/reintentos, reintento dirigido, retroalimentación y matching
 
-## 🔴 PRIORIDAD 6 · ABSOLUTA — SISTEMA DE VIDAS / REINTENTOS (MAX_VIDAS = 8)
+## 🔴 PRIORIDAD 6 · ABSOLUTA — SISTEMA DE VIDAS / REINTENTOS (MAX_VIDAS = 2 en el motor v34; el 8 de v11.1 es histórico)
 
-### ❤️ MAX_VIDAS (8) — SOLO RESETEAN QUIZZES DE OPCIÓN MÚLTIPLE
+> ⚠ **Valor vigente:** el motor define `MAX_VIDAS = 2` («oportunidades de práctica» para mejorar la nota) en `plantilla/clase_referencia.src.html`. Una clase **nunca** lo redefine; si se quiere otro valor, se cambia en la plantilla con su prueba (Prioridad 64). Los ejemplos de código de esta prioridad son históricos (v11.1, cuando eran 8).
+
+### ❤️ MAX_VIDAS (2 en v34; histórico: 8) — SOLO RESETEAN QUIZZES DE OPCIÓN MÚLTIPLE
 ```javascript
-const MAX_VIDAS = 8;  // NO CAMBIAR (v11.1 — antes 3, luego probado en 6, subido a 8 tras confirmar en producción intentos legítimos por encima de 6)
+const MAX_VIDAS = 2;  // valor vigente del motor v34 (en v11.1 era 8): se define en la plantilla, no en la clase
 function pedirReintento() {
   if (st.slide !== SL.length - 1) { showToast('🔒 Termina de ver toda la clase para poder reintentar'); return; } // candado de origen (6-C): solo desde la pantalla final
   const vidasUsadas = st.vidasUsadas || 0;
@@ -1343,7 +1345,7 @@ function renderBannerReintento() {
 ### 🚨 CAMBIO DE CRITERIO — MOTIVO
 En v7.3 el botón de vidas vivía en el navbar fijo, usable desde cualquier slide. Esto generaba un problema pedagógico: un estudiante que fallaba el Quiz 1 a mitad de la clase podía pulsar "Reintentar" de inmediato, sin haber visto las slides que venían después — perdiéndose contenido que sí necesitaba. **Regla de oro nueva:** el sistema de vidas (MAX_VIDAS) **solo puede activarse desde la pantalla final** (`rFinal()`, Prioridad 11) — nunca antes. Así el estudiante siempre completa el recorrido completo antes de poder decidir si reintenta.
 ```
-✅ TODO lo demás de las Prioridades 6 y 6-B (MAX_VIDAS=8 desde v11.1 — Prioridad 8-M, confirmarReintento(), reseteo solo de
+✅ TODO lo demás de las Prioridades 6 y 6-B (MAX_VIDAS=8 en v11.1, hoy 2 en el motor — Prioridad 8-M, confirmarReintento(), reseteo solo de
    quizzes, reintento dirigido sin cronómetro con salto directo a evaluables, banner protagonista)
    se mantiene EXACTAMENTE IGUAL — solo cambia DÓNDE se puede activar el reintento.
 ```
@@ -4955,9 +4957,9 @@ El reset solo quizzes consume 1 vida. Estas acciones no se pueden deshacer.
 </div>
 <div class="pd-section">Vidas</div>
 <div class="pd-card">
-<div class="pd-card-head"><span class="pd-card-ico">❤️</span><span class="pd-card-title">Reactivar las 8 vidas</span></div>
+<div class="pd-card-head"><span class="pd-card-ico">❤️</span><span class="pd-card-title">Reactivar las vidas</span></div>
 <div class="pd-card-desc">Estado actual: <strong style="color:var(--dn-gold-bright)">${vidas}/${MAX_VIDAS} vidas disponibles</strong>.</div>
-<button class="pd-btn pd-btn-red" onclick="pd_reactivarVidas()">🔁 Reactivar 8 vidas ahora</button>
+<button class="pd-btn pd-btn-red" onclick="pd_reactivarVidas()">🔁 Reactivar vidas ahora</button>
 </div>`;
  
 // ── CONTENIDO TAB HERRAMIENTAS ──
@@ -5378,7 +5380,7 @@ function renderPistaGeneralHerramientas() {
 - Google Fonts como única CDN de fuentes
 - **Imágenes del banco** (`asset://`, módulo 33) con `alt` descriptivo
 - **2-3 ejercicios prácticos resueltos** ligados directamente al quiz/examen (slide `practica`, Prioridad 2)
-- **Sistema de 8 vidas** — solo resetean quizzes de opción múltiple
+- **Sistema de vidas** (`MAX_VIDAS` del motor) — solo resetean quizzes de opción múltiple
 - **Nota desde 0.0** — se construye con aciertos, nunca desde 5.0
 - Paleta de colores CLARA y VIVA
 - Sin scroll de página — solo scroll en `#slide-wrap`
@@ -8217,7 +8219,7 @@ Cada error que alguna vez existió tiene una prueba que lo vigila. **Si se cambi
 - [ ]  v7.5: cada par/ítem tiene su PROPIO botón "✔️ Verificar" — nunca un solo botón "Verificar todo" al final
 - [ ]  v7.5: mismo patrón de verificación individual aplicado a fill, tf y orden
 ### SISTEMA DE VIDAS (Prioridad 6 — v7.5, ACTIVACIÓN SOLO DESDE LA PANTALLA FINAL)
-- [ ] `MAX_VIDAS = 8` definida (v11.1 — Prioridad 8-M)
+- [ ] `MAX_VIDAS` viene de la plantilla (2 en v34) y no se redefine en la clase (Prioridad 8-M)
 - [ ] `st.vidasUsadas` en el estado del estudiante
 - [ ] Al reintentar: SOLO resetear quiz1, quiz2, evalFinal
 - [ ] Info, practica, wordsearch, interactive, cuadernos: NO se resetean — cubierto también por la Prioridad 8-I
@@ -8376,7 +8378,7 @@ Cada error que alguna vez existió tiene una prueba que lo vigila. **Si se cambi
 - [ ] Requiere clic en la zona oculta + escribir la clave con teclado físico en 8 segundos
 - [ ] Sin mensajes de error visibles si la clave es incorrecta (no delata el sistema)
 - [ ] Panel ubicado conceptualmente en la parte superior de la clase (zona del navbar)
-- [ ] Herramienta "🔁 Reactivar 8 vidas" presente y funcional
+- [ ] Herramienta "🔁 Reactivar vidas" presente y funcional
 - [ ] Ver nota, desglose de quizzes, errores del estudiante
 - [ ] Ajuste manual de nota con motivo
 - [ ] Tab con selector de semana para reset
