@@ -1,0 +1,5 @@
+# Dependencias de Python para las pruebas y las herramientas de imágenes
+playwright>=1.40
+pillow
+numpy
+scipy

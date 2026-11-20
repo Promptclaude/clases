@@ -1,0 +1,48 @@
+name: Pruebas
+
+# Corre en cada Pull Request y en cada cambio a main.
+# Un cambio no se acepta si la clase de referencia, las clases de ejemplo,
+# el auditor, las mutaciones o la integración con el Aula fallan.
+on:
+  pull_request:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  rapidas:
+    name: Pruebas rápidas (~1 min)
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run test:rapido
+
+  completas:
+    name: Batería completa (e2e, mutaciones, Aula)
+    needs: rapidas
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+          cache-dependency-path: requirements.txt
+      - run: npm ci
+      - run: pip install -r requirements.txt
+      - run: python -m playwright install --with-deps chromium
+      - run: npm test
