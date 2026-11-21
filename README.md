@@ -1,5 +1,27 @@
 # Clases — Prompt Maestro, motor probado y recursos
 
+Clases gamificadas en HTML para primaria (Aritmética y Tecnología e Informática, 4.° y 5.°), generadas con Claude a partir de un prompt, un motor ya probado y un banco de imágenes.
+
+## Inicio rápido
+```
+npm install                      # una sola vez (pruebas)
+npm run prompt                   # arma prompt_armado.md: el texto que se pega en Claude (propuesta v27)
+# Claude devuelve un datos.json  →  construir y verificar:
+python3 tools/construir_clase.py plantilla/clase_referencia.src.html --datos datos.json -o clase.html
+python3 tools/puerta_de_calidad.py clase.html     # 🟢 VERDE = lista; 🔴 ROJO se corrige
+npm test                         # todas las pruebas del repositorio (≈7 min)
+```
+El formato exacto de `datos.json` está en `prompt-modulos/44_formato_de_datos.md` (un ejemplo real por tipo de actividad).
+
+## Versiones: qué es cada número
+| Qué | Versión | Dónde se define |
+|---|---|---|
+| Motor de las clases | **34.0** | `MOTOR_VERSION` en `plantilla/clase_referencia.src.html` |
+| Prompt vigente | **v26** (+ revisión de coherencia v26.1 y módulos 33–43) | `Prompt_Maestro_Clases_v26_COMPLETO.md` |
+| Prompt propuesto | **v27 núcleo** (≈22.000 tokens armado) | `Prompt_Maestro_Clases_v27_NUCLEO.md` |
+| `package.json` | 26.0.0 | Solo identifica el paquete de pruebas; **no** es la versión del motor ni del prompt |
+
+## Mapa del repositorio
 | Qué | Dónde |
 |---|---|
 | **Prompt vigente (v26 + módulo 33 del banco)** | `Prompt_Maestro_Clases_v26_COMPLETO.md` |
@@ -8,7 +30,7 @@
 | Ejemplo de otra materia solo con datos | `plantilla/ejemplos/` |
 | **Puerta de calidad** y demás herramientas | `tools/` (`puerta_de_calidad.py`, `construir_clase.py`, `auditar_clase.py`, `prueba_clase_e2e.js`, …) |
 | Pruebas del repositorio | `pruebas/` · `npm test` |
-| **Banco de imágenes y base de datos** (505 recursos revisados y clasificados) | `banco-imagenes/` (ver su README, `banco.json` y `vistas-previas/`) · módulo `prompt-modulos/33_banco_imagenes.md` |
+| **Banco de imágenes y base de datos** (822 recursos registrados en `banco.json`; solo los de estado `aprobada` se usan en clases) | `banco-imagenes/` (ver su README, `banco.json` y `vistas-previas/`) · módulo `prompt-modulos/33_banco_imagenes.md` |
 | **Actividades visuales tipo nivelación** (cuadrícula, recta, comparar, podio, abierta, cuaderno) | módulo `prompt-modulos/34_actividades_tipo_nivelacion.md` · ejemplo `plantilla/ejemplos/mat4_decimales.datos.json` · motor `plantilla/motor/v27_actividades_snippets.js` |
 | **Juegos de aplicación y ritmo de clase** (enlazar, ordenar, memoria, relámpago, sopa de letras, candado secreto) | módulo `prompt-modulos/35_juegos_y_ritmo_de_clase.md` · ejemplo `plantilla/ejemplos/tec4_juegos_hardware.datos.json` · motor `plantilla/motor/v28_juegos_snippets.js` |
 | **Mapa de misión y final de celebración** (medalla, estrellas, logros, insignia imprimible) | módulo `prompt-modulos/36_mapa_y_celebracion.md` · motor `plantilla/motor/v29_mapa_y_celebracion_snippets.js` |
@@ -24,7 +46,7 @@
 | Historial | `CHANGELOG.md` (versiones previas recuperables con `git checkout archivo-v24-v25`) |
 
 ## Crear una clase
-1. Escribe `datos.json` (misma forma que `plantilla/ejemplos/*.json`).
+1. Escribe `datos.json` (forma exacta en `prompt-modulos/44_formato_de_datos.md`; ejemplos completos en `plantilla/ejemplos/*.datos.json`).
 2. `python3 tools/construir_clase.py plantilla/clase_referencia.src.html --datos datos.json -o clase.html`
 3. `python3 tools/puerta_de_calidad.py clase.html` → **VERDE** para entregar; ROJO se corrige.
 4. Ábrela una vez en un equipo del laboratorio (lo único que las pruebas automáticas no cubren: apariencia y rendimiento reales).
