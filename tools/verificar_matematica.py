@@ -19,6 +19,7 @@ def evaluar(expr):
     return ev(ast.parse(expr.replace(',', '.'), mode='eval'))
 def num(txt):
     t = str(txt).strip().replace(' ', '').replace('\u2212', '-')
+    t = re.sub(r'^\$|%$', '', t)   # «$20» y «25 %» valen 20 y 25 (precios y porcentajes son lo normal en clase)
     if re.fullmatch(r'-?\d{1,3}(\.\d{3})+(,\d+)?', t): t = t.replace('.', '')
     try: return Decimal(t.replace(',', '.'))
     except InvalidOperation: return None

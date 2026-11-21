@@ -97,6 +97,7 @@ Usa solo estos. Para cada tipo: su ejemplo de formato está en el módulo 44 y s
 - Inicia con 1–2 preguntas sin nota de la clase anterior si el tipo lo permite (`tf` o `quiz` corto).
 
 **Preguntas bien hechas.**
+- Cada `quiz` y el `evalFinal` llevan **mínimo 3 preguntas** (los ejemplos usan 3; la puerta lo exige).
 - Una sola correcta, mínimo 3 opciones, `porQue` (≤ 25 palabras, tono amable) en cada distractor.
 - Los distractores son **errores comunes reales** (alinear mal la coma, «más cifras = mayor», sumar numerador con numerador…), nunca opciones absurdas.
 - Toda pregunta con operación lleva `calc`; la puerta la recalcula.
@@ -116,7 +117,7 @@ Usa solo estos. Para cada tipo: su ejemplo de formato está en el módulo 44 y s
 ## 6. Imágenes
 
 - **Solo del banco** (`banco-imagenes/banco.json`) o SVG original. Referencia: `asset://<id>`. Nunca `descartada`; `por_revisar` o `uso_con_cuidado` solo si el módulo 33 lo permite.
-- `alt` obligatorio (mínimo 2 palabras), describe lo que se ve y lo que enseña.
+- `alt` obligatorio (mínimo 2 palabras), describe lo que se ve y lo que enseña. Muchas imágenes del banco no traen `alt`: **mírala antes de usarla** y escríbelo tú; no uses una imagen que no hayas visto ni una de otro tema (p. ej. un precio con decimales para explicar porcentajes).
 - Una imagen por slide o pregunta, la más clara y relacionada con el concepto.
 - Sin personajes, marcas ni imágenes de terceros (Minecraft, Among Us, Fortnite, Mario…).
 - Mascotas: **ARIA** es la mascota dentro de las clases (no mezclar `aria-*` con `aria-v2-*` en la misma clase). **Bolí** es de la portada y el índice; no entra en una clase salvo petición del docente.
