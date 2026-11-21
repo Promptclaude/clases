@@ -8,6 +8,7 @@ donde la atención del modelo es mayor. El resultado cabe en unos 14.000 tokens.
 
 Uso:
   python3 tools/armar_prompt.py                    → escribe prompt_armado.md (modo clase)
+  python3 tools/armar_prompt.py --verificar        → falla si prompt_armado.md (el del repositorio) está desfasado
   python3 tools/armar_prompt.py --motor            → añade el módulo 32 (para cambiar/ampliar el motor)
   python3 tools/armar_prompt.py --tipos enlazar,sopa,detective
                                                    → solo los módulos de esos tipos (+ los siempre necesarios)
@@ -45,6 +46,7 @@ def tokens(texto):
 def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument('--motor', action='store_true', help='añade el módulo 32 (motor y calidad)')
+    ap.add_argument('--verificar', action='store_true', help='comprueba que prompt_armado.md del repositorio está al día (no escribe nada)')
     ap.add_argument('--tipos', help='lista de tipos de slide separados por coma; solo sus módulos')
     ap.add_argument('--presupuesto', type=int, default=30000, help='tope de tokens estimados')
     ap.add_argument('-o', '--salida', default=os.path.join(RAIZ, 'prompt_armado.md'))
@@ -85,6 +87,14 @@ def main():
     salida = ''.join(partes)
 
     t = tokens(salida)
+    if a.verificar:
+        if a.tipos or a.motor:
+            print('✗ --verificar solo compara el modo clase por defecto (sin --tipos ni --motor)'); return 1
+        ruta = os.path.join(RAIZ, 'prompt_armado.md')
+        actual = open(ruta, encoding='utf-8').read() if os.path.exists(ruta) else ''
+        if actual != salida:
+            print('✗ prompt_armado.md está desfasado: corre  python3 tools/armar_prompt.py  y súbelo'); return 1
+        print('✔ prompt_armado.md está al día (%d tokens estimados)' % t); return 0
     with open(a.salida, 'w', encoding='utf-8') as f: f.write(salida)
     print('Prompt armado: %s' % os.path.relpath(a.salida, RAIZ))
     print('  núcleo + %d módulos (%s) + tarjeta final' % (len(incluidos), ', '.join(str(n) for n, _ in incluidos)))

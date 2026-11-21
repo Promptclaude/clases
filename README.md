@@ -4,13 +4,16 @@ Clases gamificadas en HTML para primaria (Aritmética y Tecnología e Informáti
 
 ## Inicio rápido
 ```
+# Docente: no necesitas comandos para pedir una clase → lee GUIA_DOCENTE.md y copia prompt_armado.md
 npm install                      # una sola vez (pruebas)
-npm run prompt                   # arma prompt_armado.md: el texto que se pega en Claude (propuesta v27)
+npm run prompt                   # vuelve a armar prompt_armado.md (ya viene hecho y se verifica solo)
 # Claude devuelve un datos.json  →  construir y verificar:
 python3 tools/construir_clase.py plantilla/clase_referencia.src.html --datos datos.json -o clase.html
 python3 tools/puerta_de_calidad.py clase.html     # 🟢 VERDE = lista; 🔴 ROJO se corrige
 npm test                         # todas las pruebas del repositorio (≈7 min)
 ```
+**Guía para el docente:** `GUIA_DOCENTE.md` (cómo pegar el prompt, qué pedir y cómo verificar).
+
 El formato exacto de `datos.json` está en `prompt-modulos/44_formato_de_datos.md` (un ejemplo real por tipo de actividad).
 
 ## Versiones: qué es cada número

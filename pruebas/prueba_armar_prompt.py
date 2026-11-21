@@ -33,6 +33,8 @@ chequeo('pide el bloque de LECTURA al inicio', 'LECTURA:' in t and 'cortado' in 
 chequeo('sin referencias a imágenes remotas', 'unsplash' not in t.lower())
 chequeo('sin tipos de slide inexistentes recomendados', not re.search(r'type[`: ]+(historia|interactive|wordsearch|match)\b', t))
 
+rv = subprocess.run([sys.executable, os.path.join(RAIZ, 'tools', 'armar_prompt.py'), '--verificar'], capture_output=True, text=True)
+chequeo('prompt_armado.md del repositorio está al día', rv.returncode == 0, rv.stdout + rv.stderr)
 r2, t2 = armar('--tipos', 'enlazar,sopa')
 chequeo('--tipos arma un prompt más corto', r2.returncode == 0 and 0 < len(t2) < len(t), r2.stdout + r2.stderr)
 chequeo('--tipos conserva el formato de los tipos pedidos y quita los otros', '### `enlazar`' in t2 and '### `sopa`' in t2 and '### `quiz`' in t2 and '### `detective`' not in t2)
