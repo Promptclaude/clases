@@ -60,7 +60,7 @@ Cuando dos módulos parezcan decir cosas distintas, manda la columna "Fuente ún
 | ARIA (código) | **No está en este repositorio** | el chat de ARIA no lo implementa el motor v34 (ver aviso en la sección ARIA); ARIA existe como mascota con imágenes del banco |
 | Prueba automática | **`tools/prueba_clase_e2e.js`** y **`tools/puerta_de_calidad.py`** | 8-T explica cuándo y cómo correrla; la puerta ejecuta todas las pruebas |
 | Clave del panel docente | **`plantillas/DATOS_DE_LA_CLASE.md` *(no está en este repositorio)*** | en el código aparece como `{{CLAVE_PANEL_DOCENTE}}`: sustitúyela por el valor de ese archivo |
-| Estructura y ritmo de la clase | **Prioridad 9** (guion de ritmo) y `plantilla/ejemplos/` | 9–14 slides según la clase; solo tipos que implementa el motor (módulo 32, Prioridad 58) |
+| Estructura y ritmo de la clase | **Prioridad 9** (clase de 2 horas) y `plantilla/ejemplos/mat5_porcentajes_2h.datos.json` | 25 a 32 slides en 3 ciclos; solo tipos que implementa el motor (módulo 32, Prioridad 58) |
 | Fondo claro vs mundos oscuros | **0-E** + **35-B** | `body`, tarjetas y opciones siempre claros; lo oscuro solo dentro de `.escena` |
 | Imágenes | **Módulo 33 + Prioridades 56 y 68** | solo `asset://` del banco, con `alt`; el empaquetador las embebe |
 | Gemas, poderes, tienda | **36 a 36-D** (+ `Nucleo.ganar/gastar`) | las gemas nunca tocan la nota; no hay saldo manual |
