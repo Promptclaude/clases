@@ -36,11 +36,11 @@ Requisitos: Python 3 con `Pillow`, `scipy`, `numpy`; Node con `npm install` (jsd
 Pegar el prompt v26 completo (≈630.000 caracteres) hace que partes importantes se lean con poca atención o se pierdan. La propuesta v27 lo evita:
 
 ```
-npm run prompt                       # arma prompt_armado.md (≈16.000 tokens): núcleo + módulos 33–43 + tarjeta final
+npm run prompt                       # arma prompt_armado.md (≈22.000 tokens): núcleo + módulos 33–44 (incluye el formato del `datos.json`) + tarjeta final
 python3 tools/armar_prompt.py --tipos enlazar,sopa,detective   # solo los módulos de esos tipos
 python3 tools/armar_prompt.py --motor                          # añade el módulo 32 si vas a cambiar el motor
 ```
 
 - Pega `prompt_armado.md` **como mensaje** (o como instrucciones del proyecto), no como archivo de conocimiento: los archivos grandes de un Proyecto de Claude se consultan por fragmentos y no se leen enteros.
 - El prompt abre con la **tarjeta de reglas críticas R1–R15**, la repite al final y exige que Claude confirme lo que leyó en su primera respuesta y marque R1–R15 en el informe de entrega.
-- `python3 pruebas/prueba_armar_prompt.py` falla si el prompt se pasa de 25.000 tokens, si falta un módulo o si una regla crítica deja de estar al principio y al final.
+- `python3 pruebas/prueba_armar_prompt.py` falla si el prompt se pasa de 30.000 tokens, si falta un módulo o si una regla crítica deja de estar al principio y al final.

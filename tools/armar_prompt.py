@@ -2,7 +2,7 @@
 """
 armar_prompt.py — arma el prompt que se pega en Claude para que se lea COMPLETO.
 
-Une, en este orden:  núcleo (con tarjeta R1–R15)  →  módulos de actividades 33–43  →  tarjeta final R1–R15.
+Une, en este orden:  núcleo (con tarjeta R1–R15)  →  módulos de actividades 33–44  →  tarjeta final R1–R15.
 La tarjeta se repite al final para que las reglas críticas queden al principio y al final del texto,
 donde la atención del modelo es mayor. El resultado cabe en unos 14.000 tokens.
 
@@ -11,26 +11,31 @@ Uso:
   python3 tools/armar_prompt.py --motor            → añade el módulo 32 (para cambiar/ampliar el motor)
   python3 tools/armar_prompt.py --tipos enlazar,sopa,detective
                                                    → solo los módulos de esos tipos (+ los siempre necesarios)
-  python3 tools/armar_prompt.py -o salida.md --presupuesto 40000     (tope de tokens; por defecto 25000)
+  python3 tools/armar_prompt.py -o salida.md --presupuesto 40000     (tope de tokens; por defecto 30000)
 Sale con código 1 si se pasa del presupuesto o falta algo.
 """
 import argparse, glob, os, re, sys
 
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from generar_referencia_datos import MODULO_DE_TIPO as POR_TIPO, BASICOS   # una sola fuente de verdad
+
 RAIZ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 NUCLEO = os.path.join(RAIZ, 'Prompt_Maestro_Clases_v27_NUCLEO.md')
 MODULOS = os.path.join(RAIZ, 'prompt-modulos')
-SIEMPRE = {33, 35, 36, 37, 42}      # banco, ritmo, mapa/final, flujo con imágenes, Aula
-POR_TIPO = {                         # tipo de slide -> módulo
-    'cuadricula': 34, 'recta': 34, 'comparar': 34, 'podio': 34, 'cuaderno': 34, 'abierta': 43,
-    'enlazar': 35, 'ordenar': 35, 'memoria': 35, 'relampago': 35, 'sopa': 35, 'candado': 35,
-    'fraccion': 37, 'detective': 38, 'tabla': 40, 'editor': 41,
-}
-RANGO_CLASE = range(33, 44)
+SIEMPRE = {33, 35, 36, 37, 42, 44}  # banco, ritmo, mapa/final, flujo con imágenes, Aula, formato de datos
+RANGO_CLASE = range(33, 45)
 
 
 def numero(ruta):
     m = re.match(r'(\d+)_', os.path.basename(ruta))
     return int(m.group(1)) if m else -1
+
+
+def filtrar_formato(texto, tipos):
+    """Del módulo 44 deja la cabecera y solo los ejemplos de los tipos usados (+ los básicos)."""
+    partes = re.split(r'(?=<!-- TIPO:)', texto)
+    quiero = set(tipos) | BASICOS
+    return ''.join(p for p in partes if not p.startswith('<!-- TIPO:') or re.match(r'<!-- TIPO:(\w+) -->', p).group(1) in quiero)
 
 
 def tokens(texto):
@@ -41,7 +46,7 @@ def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument('--motor', action='store_true', help='añade el módulo 32 (motor y calidad)')
     ap.add_argument('--tipos', help='lista de tipos de slide separados por coma; solo sus módulos')
-    ap.add_argument('--presupuesto', type=int, default=25000, help='tope de tokens estimados')
+    ap.add_argument('--presupuesto', type=int, default=30000, help='tope de tokens estimados')
     ap.add_argument('-o', '--salida', default=os.path.join(RAIZ, 'prompt_armado.md'))
     a = ap.parse_args()
 
@@ -72,6 +77,8 @@ def main():
     incluidos = []
     for n in sorted(quiero):
         txt = open(todos[n], encoding='utf-8').read().strip()
+        if n == 44 and a.tipos:
+            txt = filtrar_formato(txt, tipos).strip()
         partes.append('\n\n---\n\n<!-- MÓDULO %d -->\n\n%s' % (n, txt))
         incluidos.append((n, os.path.basename(todos[n])))
     partes.append('\n\n---\n\n## ★ TARJETA FINAL — antes de entregar, verifica R1–R15 una por una\n\n' + tarjeta + '\n')
