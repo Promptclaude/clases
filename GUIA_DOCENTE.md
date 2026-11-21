@@ -35,6 +35,8 @@ Imágenes que quiero usar o evitar (opcional):
 ```
 
 ## 5. Qué recibes
+Una clase completa son **25 a 32 pantallas** (unas 2 horas), en 3 ciclos: explicar con un ejemplo resuelto → practicar juntos (sin nota) → juego → quiz. Antes del primer quiz el estudiante explica con sus palabras. **Nadie se bloquea por equivocarse**: cada error trae su explicación, pista y otra oportunidad. Si recibes una clase corta, pide: «Alárgala a 25 slides con más ciclos de explicación y práctica».
+
 - **Si el chat puede ejecutar herramientas:** la clase construida y verificada, con su informe de entrega.
 - **Si no puede (lo más común):** un único bloque `datos.json` y dos comandos. El informe dirá **«NO VERIFICADO»**, y es normal.
 

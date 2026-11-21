@@ -26,7 +26,7 @@ Los 6 de Prioridad 65 siguen disponibles: `cuadricula`, `recta`, `comparar`, `po
 2. **Al menos 4 tipos de juego distintos** por clase (el auditor avisa si no). Máximo 2 slides seguidas del mismo tipo.
 3. **Alternar el cuerpo**: un juego que *se toca* (enlazar, memoria, sopa) → uno de *pensar* (ordenar, cuadrícula, recta) → uno de *velocidad* (relámpago). No poner dos de velocidad.
 4. **Curva de emoción**: abre con un juego fácil que dé éxito rápido; deja el más difícil para después del quiz; **cierra con `candado`** (o `relampago` + `final`) para terminar con recompensa.
-5. **Receta de 11 slides** (adaptar): `intro` → `info` → `enlazar` → `relampago` → `quiz` → `memoria`/`cuadricula` → `ordenar` → `sopa` → `evalFinal` → `candado` → `final`. Para clases largas, repetir el patrón *info → juego → juego → quiz*.
+5. **Receta de un ciclo** (el plano completo de 25 a 32 slides está en el núcleo §5-A): `info` con ejemplo resuelto → `fill`/`tf` guiado sin nota → `enlazar`/`ordenar` con menos ayuda → juego (`memoria`, `sopa`, `minijuego`…) → `quiz`. Una clase lleva 3 de estos ciclos más apertura y cierre; `relampago` solo una vez.
 6. **Misión narrativa**: la `intro` plantea una misión («arma tu computador», «salva la tienda») y cada juego avanza esa misión; el `candado`/`final` la cierra.
 7. **Visual**: cada juego usa lenguaje claro y colores del banco; imágenes del banco (módulo 33) sin texto horneado; nunca personajes ni marcas de terceros.
 

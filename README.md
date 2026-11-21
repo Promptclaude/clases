@@ -67,5 +67,5 @@ python3 tools/armar_prompt.py --motor                          # añade el módu
 ```
 
 - Pega `prompt_armado.md` **como mensaje** (o como instrucciones del proyecto), no como archivo de conocimiento: los archivos grandes de un Proyecto de Claude se consultan por fragmentos y no se leen enteros.
-- El prompt abre con la **tarjeta de reglas críticas R1–R15**, la repite al final y exige que Claude confirme lo que leyó en su primera respuesta y marque R1–R15 en el informe de entrega.
+- El prompt abre con la **tarjeta de reglas críticas R1–R16**, la repite al final y exige que Claude confirme lo que leyó en su primera respuesta y marque R1–R16 en el informe de entrega.
 - `python3 pruebas/prueba_armar_prompt.py` falla si el prompt se pasa de 30.000 tokens, si falta un módulo o si una regla crítica deja de estar al principio y al final.

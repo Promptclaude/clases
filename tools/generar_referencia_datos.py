@@ -36,6 +36,8 @@ Una clase es **solo** un JSON `{ "meta": {…}, "slides": […] }`. El motor, lo
 - `meta.claseId`: con `meta.aula: true` es el nombre del archivo sin `.html`, p. ej. `semana6_tec4_p4` (`semana<N>_<mat|tec><grado>_p<período>`). `meta.materia`: `Aritmética` o `Tecnología e Informática`. `meta.grado`: 4 o 5. `meta.dba`: texto que empieza por «DBA: ».
 - `meta.aula: true` conecta la clase al Aula. `meta.aulaVersion` es solo un número (fecha `AAAAMMDD`) que obliga al navegador a recargar los scripts del Aula: copia el de la clase más reciente y no lo inventes; cámbialo solo si el docente avisa que actualizó esos scripts. Si no tienes una clase de referencia, pregúntalo.
 - Preguntas (`quiz` y `evalFinal`): `nivel` ∈ `recordar` · `comprender` · `aplicar` · `analizar`. Una sola opción con `"correcta": true`; **toda opción incorrecta lleva `porQue`**. `calc` es `null` cuando no hay operación; con operación va `{"expr": "3.4+2.15", "resultado": "5,55"}` (decimales con coma o punto) y la puerta lo recalcula.
+- Los ejemplos de abajo muestran la **forma** de cada tipo, no el largo: una clase real tiene 25 a 32 slides (núcleo §5-A).
+- `abierta`: cada elemento de `prompts` es una frase de **mínimo 4 palabras** (un «Hoy aprendí que…» corto da error).
 - Respuestas numéricas: pueden llevar `$` o `%` (`"$20"`, `"25 %"`); la puerta compara el número. Ninguna opción incorrecta puede valer lo mismo que la correcta.
 - Imágenes: `"imagen": "asset://<id-del-banco>"` y su `"alt"` descriptivo. La mascota «así se hace» de un `info` va en `"aria": "asset://aria-asi-se-hace"`.
 """

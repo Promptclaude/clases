@@ -58,6 +58,10 @@ def main():
             tj = {x['type'] for x in S if x['type'] in JUEGOS}; nj = sum(1 for x in S if x['type'] in JUEGOS)
             if len(S) >= 8 and len(tj) < 4: A.append(f"Variedad: solo {len(tj)} tipos de juego distintos ({', '.join(sorted(tj)) or 'ninguno'}); usa al menos 4 para que no sea monótona (Prioridad 66)")
             elif len(S) >= 8: OK.append(f"Variedad: {len(tj)} tipos de juego distintos en {nj} actividades")
+            # Duración: una clase dura 2 horas → 25 a 32 slides en ciclos explicar → practicar → jugar → evaluar
+            if len(S) < 25: A.append(f"Duración: {len(S)} slides; una clase de 2 horas necesita de 25 a 32 (3 ciclos: explicar con ejemplo resuelto → práctica guiada → juego → quiz)")
+            elif len(S) > 32: A.append(f"Duración: {len(S)} slides; más de 32 se pasa de las 2 horas y pesa más (revisa el ritmo)")
+            else: OK.append(f"Duración: {len(S)} slides (clase de 2 horas)")
             # Bienvenida y pestaña deben ser de ESTA clase (no de la plantilla) · Prioridad 67
             mi = re.search(r'<div id="fx-intro".*?<h1>(.*?)</h1>', html, re.S); ti = re.search(r'<title>(.*?)</title>', html, re.S)
             chk(bool(mi) and mi.group(1).replace('&amp;', '&').strip() == D['meta']['titulo'].strip(), '', f"La pantalla de bienvenida dice «{mi.group(1) if mi else '?'}» pero la clase se llama «{D['meta']['titulo']}» (reconstruir con construir_clase.py)")

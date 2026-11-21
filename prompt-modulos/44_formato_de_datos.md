@@ -9,6 +9,8 @@ Una clase es **solo** un JSON `{ "meta": {…}, "slides": […] }`. El motor, lo
 - `meta.claseId`: con `meta.aula: true` es el nombre del archivo sin `.html`, p. ej. `semana6_tec4_p4` (`semana<N>_<mat|tec><grado>_p<período>`). `meta.materia`: `Aritmética` o `Tecnología e Informática`. `meta.grado`: 4 o 5. `meta.dba`: texto que empieza por «DBA: ».
 - `meta.aula: true` conecta la clase al Aula. `meta.aulaVersion` es solo un número (fecha `AAAAMMDD`) que obliga al navegador a recargar los scripts del Aula: copia el de la clase más reciente y no lo inventes; cámbialo solo si el docente avisa que actualizó esos scripts. Si no tienes una clase de referencia, pregúntalo.
 - Preguntas (`quiz` y `evalFinal`): `nivel` ∈ `recordar` · `comprender` · `aplicar` · `analizar`. Una sola opción con `"correcta": true`; **toda opción incorrecta lleva `porQue`**. `calc` es `null` cuando no hay operación; con operación va `{"expr": "3.4+2.15", "resultado": "5,55"}` (decimales con coma o punto) y la puerta lo recalcula.
+- Los ejemplos de abajo muestran la **forma** de cada tipo, no el largo: una clase real tiene 25 a 32 slides (núcleo §5-A).
+- `abierta`: cada elemento de `prompts` es una frase de **mínimo 4 palabras** (un «Hoy aprendí que…» corto da error).
 - Respuestas numéricas: pueden llevar `$` o `%` (`"$20"`, `"25 %"`); la puerta compara el número. Ninguna opción incorrecta puede valer lo mismo que la correcta.
 - Imágenes: `"imagen": "asset://<id-del-banco>"` y su `"alt"` descriptivo. La mascota «así se hace» de un `info` va en `"aria": "asset://aria-asi-se-hace"`.
 
@@ -35,7 +37,7 @@ Una clase es **solo** un JSON `{ "meta": {…}, "slides": […] }`. El motor, lo
 <!-- TIPO:quiz -->
 ### `quiz`
 ```json
-{"id": "t05", "type": "quiz", "titulo": "Quiz 1: partes y funciones", "preguntas": [{"id": "q1", "dba": "Partes del computador", "nivel": "recordar", "enunciado": "¿Qué parte muestra las imágenes del computador?", "calc": null, "opciones": [{"id": "a", "texto": "La pantalla", "correcta": true}, {"id": "b", "texto": "El teclado", "correcta": false, "porQue": "El teclado sirve para escribir; no muestra imágenes."}, {"id": "c", "texto": "El ratón", "correcta": false, "porQue": "El ratón mueve el puntero; no muestra imágenes."}, {"id": "d", "texto": "La memoria", "correcta": false, "porQue": "La memoria guarda datos; no los muestra."}], "retroalimentacion": "La pantalla (monitor) es el dispositivo de salida que muestra imágenes.", "errorComun": "Piensa si la parte envía o muestra información."}]}
+{"id": "s08", "type": "quiz", "titulo": "Quiz 1: ¿qué es un porcentaje?", "preguntas": [{"id": "q1", "dba": "Porcentajes y descuentos", "nivel": "recordar", "enunciado": "¿Qué significa 25 %?", "calc": null, "retroalimentacion": "25 % quiere decir 25 de cada 100.", "errorComun": "Un porcentaje compara con 100, no con 10.", "opciones": [{"id": "a", "texto": "25 de cada 100", "correcta": true}, {"id": "b", "texto": "25 de cada 10", "correcta": false, "porQue": "Un porcentaje compara con 100, no con 10."}, {"id": "c", "texto": "25 más 100", "correcta": false, "porQue": "El porcentaje no se suma: es una parte de 100."}, {"id": "d", "texto": "1 de cada 25", "correcta": false, "porQue": "Eso sería 1/25; 25 % es 25/100."}]}]}
 ```
 (Muestra 1 pregunta; las demás tienen la misma forma. Cuántas y de qué niveles: núcleo §5.)
 
@@ -101,7 +103,7 @@ Reglas y límites de `podio`: módulo 34.
 <!-- TIPO:abierta -->
 ### `abierta`
 ```json
-{"id": "d11", "type": "abierta", "titulo": "Explica con tus palabras", "intro": "Tu docente leerá tus respuestas.", "minPalabras": 6, "ejemplo": "«Un correo falso suele tener un remitente raro y me mete prisa para que no pregunte».", "prompts": ["Cuéntale a un amigo cómo reconoces un correo falso. Escribe al menos dos señales.", "¿Qué harías si un mensaje te pide tu contraseña?"]}
+{"id": "s07", "type": "abierta", "titulo": "Explícaselo a un amigo", "intro": "Antes del quiz, cuéntalo con tus palabras. Tu docente lo leerá.", "minPalabras": 6, "ejemplo": "«El 25 % es 25 de cada 100, como un cuarto del total».", "prompts": ["Si un amigo no sabe qué es el 25 %, ¿cómo se lo explicarías con tus palabras?"]}
 ```
 Reglas y límites de `abierta`: módulo 43.
 
@@ -129,7 +131,7 @@ Reglas y límites de `ordenar`: módulo 35.
 <!-- TIPO:memoria -->
 ### `memoria`
 ```json
-{"id": "p10", "type": "memoria", "titulo": "Memoria: fracción y porcentaje", "intro": "Encuentra cada fracción con su porcentaje.", "pares": [{"a": "1/2", "b": "50 %", "porQue": "La mitad es el 50 %."}, {"a": "1/4", "b": "25 %", "porQue": "Un cuarto es el 25 %."}, {"a": "3/4", "b": "75 %", "porQue": "Tres cuartos son el 75 %."}, {"a": "1/10", "b": "10 %", "porQue": "Un décimo es el 10 %."}]}
+{"id": "s06", "type": "memoria", "titulo": "Encuentra las parejas", "intro": "Une cada porcentaje con su fracción.", "pares": [{"a": "25 %", "b": "1/4", "porQue": "25 de 100 es un cuarto."}, {"a": "50 %", "b": "1/2", "porQue": "50 de 100 es la mitad."}, {"a": "75 %", "b": "3/4", "porQue": "75 de 100 son tres cuartos."}, {"a": "10 %", "b": "1/10", "porQue": "10 de 100 es un décimo."}]}
 ```
 Reglas y límites de `memoria`: módulo 35.
 

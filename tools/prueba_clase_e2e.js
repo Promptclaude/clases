@@ -128,7 +128,7 @@ async function recorrer(w, modo, tope = 40) { let n = 0; const vistos = []; whil
     for (let i = 1; i <= k; i++) { await resp(true); lect.push(hud(w)); esp.push((i * paso).toFixed(1)); }
     ok(lect.join() === esp.join(), `cada acierto sube el HUD en vivo: ${lect.join(' → ')} (esperado ${esp.join(' → ')})`);
     for (let i = k; i < NQ1; i++) await resp(false); for (const j of iQuiz.slice(1)) { w.CLASE_API.irA(j); for (let n = 0; n < SL0[j].preguntas.length; n++) await resp(n === 0); }
-    const aciertos1 = k + (iQuiz.length > 1 ? 1 : 0), mejor = w.CLASE_API.notaOficial(); ok(Math.abs(mejor - aciertos1 * paso) < 0.01, `primer intento: ${aciertos1} de ${NQ} → nota oficial ${(aciertos1 * paso).toFixed(2)} (${mejor.toFixed(2)})`);
+    const aciertos1 = k + (iQuiz.length - 1)   /* una correcta en cada pantalla de evaluación posterior a la primera (clases con varios quizzes) */, mejor = w.CLASE_API.notaOficial(); ok(Math.abs(mejor - aciertos1 * paso) < 0.01, `primer intento: ${aciertos1} de ${NQ} → nota oficial ${(aciertos1 * paso).toFixed(2)} (${mejor.toFixed(2)})`);
     w.CLASE_API.irA(iFinal); clic(q(w, '[data-test=reintentar]')); ok(!q(w, '#modal').hidden, 'pide confirmación antes de gastar la oportunidad'); clic(q(w, '[data-test=confirmar-reintento]'));
     ok(hud(w) === '0.0' && tipo(w) === SL0[iQuiz[0]].type, 'reintento: el HUD arranca en 0.0 y vuelve al quiz'); ok(new RegExp('Mejor nota: ' + mejor.toFixed(1).replace('.', '\\.')).test(q(w, '#nota-intento-hud').textContent), `aparte se ve «Mejor nota: ${mejor.toFixed(1)} (es la que cuenta)»`);
     ok(qa(w, '#vidas-hud img').filter(i => /usada/.test(i.alt)).length === 1, 'las oportunidades muestran 1 usada');

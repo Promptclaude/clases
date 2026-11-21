@@ -2,7 +2,7 @@
 """
 armar_prompt.py — arma el prompt que se pega en Claude para que se lea COMPLETO.
 
-Une, en este orden:  núcleo (con tarjeta R1–R15)  →  módulos de actividades 33–44  →  tarjeta final R1–R15.
+Une, en este orden:  núcleo (con tarjeta R1–R16)  →  módulos de actividades 33–44  →  tarjeta final R1–R16.
 La tarjeta se repite al final para que las reglas críticas queden al principio y al final del texto,
 donde la atención del modelo es mayor. El resultado cabe en unos 14.000 tokens.
 
@@ -83,7 +83,7 @@ def main():
             txt = filtrar_formato(txt, tipos).strip()
         partes.append('\n\n---\n\n<!-- MÓDULO %d -->\n\n%s' % (n, txt))
         incluidos.append((n, os.path.basename(todos[n])))
-    partes.append('\n\n---\n\n## ★ TARJETA FINAL — antes de entregar, verifica R1–R15 una por una\n\n' + tarjeta + '\n')
+    partes.append('\n\n---\n\n## ★ TARJETA FINAL — antes de entregar, verifica R1–R16 una por una\n\n' + tarjeta + '\n')
     salida = ''.join(partes)
 
     t = tokens(salida)
@@ -101,7 +101,7 @@ def main():
     print('  %d caracteres ≈ %d tokens (presupuesto %d)' % (len(salida), t, a.presupuesto))
     if t > a.presupuesto:
         print('✗ Se pasa del presupuesto: un prompt tan largo no se lee completo. Reduce con --tipos o recorta módulos.'); return 1
-    print('✔ Cabe completo y la tarjeta R1–R15 queda al principio y al final.')
+    print('✔ Cabe completo y la tarjeta R1–R16 queda al principio y al final.')
     return 0
 
 
