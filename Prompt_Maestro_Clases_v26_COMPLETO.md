@@ -1,6 +1,6 @@
 # PROMPT MAESTRO DE CLASES v26 — COMPLETO (generado desde prompt/*.md; no editar aquí)
 
-> **Revisión de coherencia v26.1.** Prioridades **1, 1-B y 31 superadas** (imágenes: solo el banco, módulo 33); **9 reescrita** (guion de ritmo, 9–14 slides). `aria/aria_widget.html`, `tests/prueba_clase.js` y las herramientas `insertar_*`, `aligerar_html`, `esqueleto_clase` y `verificar_imagenes` no están en este repositorio (ver avisos). **Vidas:** el motor v34 usa `MAX_VIDAS = 2`; el 8 de la Prioridad 6 era histórico y se actualizó.
+> **Revisión de coherencia v26.1.** Prioridades **1, 1-B y 31 superadas** (imágenes: solo el banco, módulo 33); **9 reescrita** (clase de 2 horas: 25 a 32 slides en ciclos). `aria/aria_widget.html`, `tests/prueba_clase.js` y las herramientas `insertar_*`, `aligerar_html`, `esqueleto_clase` y `verificar_imagenes` no están en este repositorio (ver avisos). **Vidas:** el motor v34 usa `MAX_VIDAS = 2`; el 8 de la Prioridad 6 era histórico y se actualizó.
 
 # 00 · Protocolo de aplicación y tabla de precedencia (Prompt Maestro de Clases v26)
 
@@ -3490,25 +3490,23 @@ Las pruebas nuevas y futuras **solo** llaman a `CLASE_API` y al DOM. Los datos d
 
 # 17 · Estructura de slides, cuadernos, menú de ruta, nota final y pantalla final
 
-## 🔴 PRIORIDAD 9 · ABSOLUTA — ESTRUCTURA Y RITMO DE LA CLASE
+## 🔴 PRIORIDAD 9 · ABSOLUTA — ESTRUCTURA Y RITMO DE LA CLASE (2 HORAS, 25 A 32 SLIDES)
 
-**Reemplaza la antigua tabla fija de 23 slides** (usaba tipos que el motor no implementa, como `historia` o `interactive`). Una clase tiene entre 9 y 14 slides según el tema; la referencia son los ejemplos reales de `plantilla/ejemplos/*.datos.json`.
+**Reemplaza la antigua tabla fija de 23 slides** (usaba tipos que el motor no implementa, como `historia` o `interactive`). Una clase dura **dos horas**: **mínimo 25 y máximo 32 slides**, con solo tipos que implementa el motor (módulo 32, Prioridad 58).
 
-Guion de ritmo:
-1. `intro`: misión de 3 líneas (🎯 Aprenderás · 👆 Harás · 🏆 Ganarás).
-2. `info`: una idea por slide, con imagen del banco (`alt`) y «Ejemplo resuelto / Ahora tú».
-3. Práctica y juegos de aplicación: **mínimo 4 tipos distintos** y nunca más de 2 slides seguidas del mismo tipo (lo vigila el auditor).
-4. `quiz`: única fuente de la nota; se evalúa solo lo explicado y practicado.
-5. `evalFinal` y, opcionalmente, `candado`.
-6. `final`: celebración, «lo que aprendiste» y siguiente misión.
+Estructura en **3 ciclos de aprendizaje** entre una apertura y un cierre:
+1. **Apertura:** `intro` (misión e historia) y un `tf` de calentamiento: repaso de la clase anterior y predicciones, sin nota.
+2. **Cada ciclo (una idea):** `info` con ejemplo resuelto completo → práctica guiada sin nota con un paso en blanco (`fill`/`tf`) → práctica con menos ayuda (`ordenar`, `tabla`, `enlazar`…) → juego → `quiz` de ≥ 3 preguntas. Antes del primer quiz, un «explícaselo a un amigo» (`abierta`).
+3. **Cierre:** `evalFinal` → `candado` → ticket de salida (`abierta`) → `final`.
 
-Solo se usan tipos de slide que implementa el motor (módulo 32, Prioridad 58). Las posiciones exactas ya no son fijas: la puerta de calidad comprueba que empiece en `intro` y termine en `final`.
+El plano completo de 27 slides y las reglas de ciclo están en el núcleo v27 (§5-A) y en `plantilla/ejemplos/mat5_porcentajes_2h.datos.json`. Nunca más de 2 slides seguidas del mismo tipo, al menos 4 tipos de juego distintos y `relampago` solo una vez.
 
 **Checklist:**
 ```
-[ ] Entre 9 y 14 slides; empieza en intro y termina en final
+[ ] Entre 25 y 32 slides; empieza en intro y termina en final
+[ ] 3 ciclos: explicar con ejemplo resuelto → práctica guiada sin nota → juego → quiz
+[ ] Antes del primer quiz: comprobaciones sin nota y un «explícaselo a un amigo»
 [ ] Al menos 4 tipos de juego distintos; nunca > 2 seguidos del mismo tipo
-[ ] Solo tipos que el motor implementa
 ```
 
 ## 🔴 PRIORIDAD 10 · ABSOLUTA — CUADERNOS DIGITALES: ACCESO DESDE MENÚ SUPERIOR + DISEÑO TIPO AGENDA REAL
