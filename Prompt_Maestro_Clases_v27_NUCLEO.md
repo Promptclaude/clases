@@ -66,6 +66,13 @@ Una clase = `plantilla/clase_referencia.src.html` + un `datos.json` (+ imágenes
 7. **Revisión matemática a mano** de cada cuenta, equivalencia y orden. La puerta atrapa mucho, no todo.
 8. **Informe de entrega** (§8).
 
+**Sin herramientas (un chat que no ejecuta código):** no puedes construir ni pasar la puerta. Entonces entrega el `datos.json` **completo en un único bloque ```json** (sin recortar nada), seguido de estos dos comandos para el docente, y el informe con «NO VERIFICADO» (R14):
+
+```
+python3 tools/construir_clase.py plantilla/clase_referencia.src.html --datos datos.json -o semanaN_xxx.html
+python3 tools/puerta_de_calidad.py semanaN_xxx.html
+```
+
 ## 4. Tipos de slide y actividad que SÍ existen
 
 Usa solo estos. Para cada tipo: su ejemplo de formato está en el módulo 44 y sus reglas y límites en su módulo (34–43).

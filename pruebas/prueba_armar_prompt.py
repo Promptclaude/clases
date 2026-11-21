@@ -27,6 +27,8 @@ r0 = subprocess.run([sys.executable, os.path.join(RAIZ, 'tools', 'generar_refere
 chequeo('el módulo 44 está al día con plantilla/ejemplos', r0.returncode == 0, r0.stdout + r0.stderr)
 chequeo('no promete colores --mundo en datos.json', '+ colores `--mundo' not in t)
 chequeo('el informe de entrega pide verificar R1–R15', 'R1 ✔' in t and 'R15 ✔' in t)
+chequeo('explica qué entregar si no hay herramientas', 'Sin herramientas' in t and 'único bloque' in t)
+chequeo('explica aulaVersion', 'aulaVersion` es solo un número' in t)
 chequeo('pide el bloque de LECTURA al inicio', 'LECTURA:' in t and 'cortado' in t)
 chequeo('sin referencias a imágenes remotas', 'unsplash' not in t.lower())
 chequeo('sin tipos de slide inexistentes recomendados', not re.search(r'type[`: ]+(historia|interactive|wordsearch|match)\b', t))
