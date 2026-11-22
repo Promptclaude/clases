@@ -7,6 +7,7 @@ Una clase es **solo** un JSON `{ "meta": {…}, "slides": […] }`. El motor, lo
 **Reglas de forma comunes**
 - Cada slide lleva un `id` único (`r01`, `r02`… en orden; los ejemplos también usan `m01`…). Cada pregunta lleva `id` único dentro de su quiz (`q1`, `q2`… y en el reto final `e1`, `e2`…).
 - `meta.claseId`: con `meta.aula: true` es el nombre del archivo sin `.html`, p. ej. `semana6_tec4_p4` (`semana<N>_<mat|tec><grado>_p<período>`). `meta.materia`: `Aritmética` o `Tecnología e Informática`. `meta.grado`: 4 o 5. `meta.dba`: texto que empieza por «DBA: ».
+- `meta.cofres` y `meta.premio` son **opcionales** (monedas y cofres, núcleo §5-E): `cofres` son **exactamente 5** `{"icono": "🛒", "nombre": "Carrito de compras"}` con el tema de la clase, de menos a más valioso (icono ≤ 8 caracteres, nombre ≤ 32); `premio` es un texto de 3 a 80 caracteres con un premio real que da el docente.
 - `meta.aula: true` conecta la clase al Aula. `meta.aulaVersion` es solo un número (fecha `AAAAMMDD`) que obliga al navegador a recargar los scripts del Aula: copia el de la clase más reciente y no lo inventes; cámbialo solo si el docente avisa que actualizó esos scripts. Si no tienes una clase de referencia, pregúntalo.
 - Preguntas (`quiz` y `evalFinal`): `nivel` ∈ `recordar` · `comprender` · `aplicar` · `analizar`. Una sola opción con `"correcta": true`; **toda opción incorrecta lleva `porQue`**. `calc` es `null` cuando no hay operación; con operación va `{"expr": "3.4+2.15", "resultado": "5,55"}` (decimales con coma o punto) y la puerta lo recalcula.
 - Los ejemplos de abajo muestran la **forma** de cada tipo, no el largo: una clase real tiene 25 a 32 slides (núcleo §5-A).
@@ -17,7 +18,7 @@ Una clase es **solo** un JSON `{ "meta": {…}, "slides": […] }`. El motor, lo
 ## meta
 
 ```json
-{"claseId": "semana6_tec4_p4", "semana": 6, "grado": 4, "materia": "Tecnología e Informática", "titulo": "Mi primer documento: formato y tablas", "dba": "DBA: Usa un procesador de texto para dar formato a un documento e insertar tablas con orden y claridad", "aula": true, "aulaVersion": "20261110"}
+{"claseId": "mat5_p4_s5_porcentajes_2h", "semana": 5, "grado": 5, "materia": "Aritmética", "titulo": "Porcentajes y descuentos en la tienda escolar", "dba": "DBA: Resuelve problemas de compra con porcentajes sencillos y descuentos, relacionándolos con fracciones", "cofres": [{"icono": "🛒", "nombre": "Carrito de compras"}, {"icono": "🏷️", "nombre": "Etiqueta de oferta"}, {"icono": "🧮", "nombre": "Calculadora de tendero"}, {"icono": "👑", "nombre": "Corona del tendero"}, {"icono": "🏆", "nombre": "Trofeo de la tienda"}], "premio": "Elige la canción con la que empezamos la próxima clase", "aula": true, "aulaVersion": "20261110"}
 ```
 
 ## Un ejemplo por tipo de slide

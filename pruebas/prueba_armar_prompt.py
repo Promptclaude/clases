@@ -14,6 +14,7 @@ def armar(*args):
     return r, (open(sal, encoding='utf-8').read() if os.path.exists(sal) else '')
 
 r, t = armar()
+s_ = t
 chequeo('armar_prompt termina bien (código 0)', r.returncode == 0, r.stdout + r.stderr)
 chequeo('tamaño ≤ 25.000 tokens estimados', len(t) // 3 <= 25000, str(len(t) // 3))
 reglas = ['R%d' % i for i in range(1, 17)]
@@ -34,6 +35,8 @@ chequeo('trae el ciclo explicar→practicar→jugar→evaluar', 'Yo muestro' in 
 chequeo('exige explicar con sus palabras antes del primer quiz', 'explícaselo a un amigo' in t and 'Antes del primer quiz' in t)
 chequeo('explica qué hacer si se equivoca sin bloquear', 'no se frena' in t and 'No me sale' in t)
 chequeo('pide ticket de salida y caza-errores', 'ticket de salida' in t and 'Caza-errores' in t)
+chequeo('explica monedas y cofres y el premio del docente', 'Monedas y cofres' in s_ and 'meta.premio' in s_ and 'meta.cofres' in s_ and '10 monedas' in s_)
+chequeo('el formato de datos documenta cofres y premio', '"cofres"' in s_ and '"premio"' in s_)
 chequeo('pide el bloque de LECTURA al inicio', 'LECTURA:' in t and 'cortado' in t)
 chequeo('sin referencias a imágenes remotas', 'unsplash' not in t.lower())
 chequeo('sin tipos de slide inexistentes recomendados', not re.search(r'type[`: ]+(historia|interactive|wordsearch|match)\b', t))

@@ -5,7 +5,30 @@
   "grado": 5,
   "materia": "Aritmética",
   "titulo": "Porcentajes y descuentos en la tienda escolar",
-  "dba": "DBA: Resuelve problemas de compra con porcentajes sencillos y descuentos, relacionándolos con fracciones"
+  "dba": "DBA: Resuelve problemas de compra con porcentajes sencillos y descuentos, relacionándolos con fracciones",
+  "cofres": [
+   {
+    "icono": "🛒",
+    "nombre": "Carrito de compras"
+   },
+   {
+    "icono": "🏷️",
+    "nombre": "Etiqueta de oferta"
+   },
+   {
+    "icono": "🧮",
+    "nombre": "Calculadora de tendero"
+   },
+   {
+    "icono": "👑",
+    "nombre": "Corona del tendero"
+   },
+   {
+    "icono": "🏆",
+    "nombre": "Trofeo de la tienda"
+   }
+  ],
+  "premio": "Elige la canción con la que empezamos la próxima clase"
  },
  "slides": [
   {
@@ -15,7 +38,7 @@
    "mision": [
     "🎯 Aprenderás: qué es un porcentaje y cómo calcular descuentos.",
     "👆 Harás: completar, unir, ordenar, jugar y explicar con tus palabras.",
-    "🏆 Ganarás: estrellas, medallas y el tesoro de la caja fuerte."
+    "🏆 Ganarás: 🪙 monedas en cada actividad para abrir los 5 cofres de la tienda y ganar el premio de la clase."
    ]
   },
   {

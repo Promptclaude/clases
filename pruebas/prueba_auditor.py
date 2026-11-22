@@ -21,6 +21,10 @@ CASOS = [
  ('imagen sin resolver (asset://)', lambda h: h.replace('<title>', '<img src="asset://aria-hola" alt="x"><title>', 1)),
  ('recurso externo (necesita internet)', lambda h: h.replace('</head>', '<script src="https://cdn.example.com/x.js"></script></head>', 1)),
  ('función crítica duplicada', lambda h: h.replace('function razonBloqueo(s) {', 'function razonBloqueo(x) { return ""; }\nfunction razonBloqueo(s) {', 1)),
+ ('meta.cofres con solo 4 cofres', lambda h: datos(h, lambda d: d['meta'].__setitem__('cofres', [{'icono': '🧢', 'nombre': 'Gorra'}] * 4))),
+ ('meta.cofres con un cofre sin nombre', lambda h: datos(h, lambda d: d['meta'].__setitem__('cofres', [{'icono': '🧢', 'nombre': 'Gorra'}] * 4 + [{'icono': '🏆'}]))),
+ ('meta.premio demasiado largo', lambda h: datos(h, lambda d: d['meta'].__setitem__('premio', 'x' * 100))),
+ ('quita las monedas del motor (v35Cofre)', lambda h: h.replace('function v35Cofre() {', 'function v35CofreDesactivado() {', 1)),
 ]
 base = correr(BASE); print(('✅' if base.returncode == 0 else '❌') + ' la clase de referencia sin defectos sale VERDE'); fallos = 0 if base.returncode == 0 else 1
 for nombre, f in CASOS:

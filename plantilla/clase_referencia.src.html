@@ -138,7 +138,7 @@ input[type=text]{font:inherit;font-size:1.05rem;padding:8px 10px;border:3px soli
 (function () {
 'use strict';
 /* ═══════ MOTOR DE REFERENCIA · v26 — NO se reescribe: cada clase nueva solo cambia #datos-clase, los assets y los colores ═══════ */
-const MOTOR_VERSION = '34.0';   // sube cuando cambie el motor; las clases guardan sus datos aparte y se reconstruyen con construir_clase.py --datos-de
+const MOTOR_VERSION = '35.0';   // sube cuando cambie el motor; las clases guardan sus datos aparte y se reconstruyen con construir_clase.py --datos-de
 const TEST = window.__TEST__ || null, FACTOR = (TEST && TEST.factor) || 1, ANTI_DOBLE = (TEST && TEST.antiDobleMs) || 350;   // ms mínimos entre dos respuestas de quiz (evita contestar dos por un doble toque)
 const DATOS = JSON.parse(document.getElementById('datos-clase').textContent);
 const CONFIG_CLASE = DATOS.meta, CLASE_ID = CONFIG_CLASE.claseId, SL = DATOS.slides, TOT = SL.length;
@@ -250,6 +250,7 @@ function pintarHud() {
   const v = $('vidas-hud'); let h = ''; for (let i = 0; i < MAX_VIDAS; i++) h += '<img src="' + (i < MAX_VIDAS - st.vidasUsadas ? IMG.corazon : IMG.corazonVacio) + '" alt="' + (i < MAX_VIDAS - st.vidasUsadas ? 'oportunidad disponible' : 'oportunidad usada') + '">'; v.innerHTML = h;
   $('xp-hud').innerHTML = '<img src="' + IMG.estrella + '" alt="XP"> ' + st.xp + ' XP · ' + NIVELES[nivelActual()];
   $('progreso').firstElementChild.style.width = Math.round(((st.slide + 1) / TOT) * 100) + '%'; $('progreso').setAttribute('aria-valuenow', String(Math.round(((st.slide + 1) / TOT) * 100)));
+  try { v35Cofre(); } catch (e) { /* el incentivo nunca rompe la clase */ }
 }
 function actualizarUIGeneral() { pintarHud(); }
 
@@ -361,6 +362,7 @@ const RENDER = { intro: rIntro, info: rInfo, tf: rTF, fill: rFill, drag: rDrag, 
 /*@@V32@@*/
 /*@@V33@@*/
 /*@@V34@@*/
+/*@@V35@@*/
 
 /* ── solución para «No me sale» ── */
 function mostrarSolucionActividad(s) {
@@ -423,7 +425,7 @@ setInterval(save, 20000);
 
 /* ── API para pruebas (59) ── */
 window.CLASE_API = { MOTOR_VERSION, SL, ERRORES, claseId: CLASE_ID, semana: CONFIG_CLASE.semana, SKEY, IKEY, Juego, GENERADORES, GENERAR: (g, seed) => GENERADORES[g](rngDe(seed), { id: 'x', dba: 'x', nivel: 'x' }),
-  estado: () => JSON.parse(JSON.stringify({ slide: st.slide, aciertos: st.aciertos, intentos: st.intentos, vidasUsadas: st.vidasUsadas, mejorNota: st.mejorNota, reintentoActivo: st.reintentoActivo, xp: st.xp, total: TOT, tipo: SL[st.slide].type, acts: st.acts })),
+  estado: () => JSON.parse(JSON.stringify({ slide: st.slide, aciertos: st.aciertos, intentos: st.intentos, vidasUsadas: st.vidasUsadas, mejorNota: st.mejorNota, reintentoActivo: st.reintentoActivo, xp: st.xp, monedas: v35Monedas(), monedasPosibles: v35Posibles(), premio: CONFIG_CLASE.premio || null, cofres: v35Cofres().map(c => c.umbral), total: TOT, tipo: SL[st.slide].type, acts: st.acts })),
   notaHud: () => $('nota-hud').textContent, notaOficial, calcTotal, razonBloqueo: () => razonBloqueo(SL[st.slide]), rescate: () => usarRescate(SL[st.slide].id), puedeAvanzar: () => puedeAvanzar(SL[st.slide]),
   actividadesConAyuda: () => Object.keys(st.acts).filter(k => k.startsWith('ayuda_')).length, irA,
   opcionCorrectaActual: () => { const s = SL[st.slide]; if (!TIPOS_EVALUABLES.includes(s.type)) return null; const idx = st.acts['quiz_idx_' + s.id] || 0; if (idx >= s.preguntas.length) return null; const o = vistaPregunta(s, idx).preg.opciones.find(x => x.correcta); return { id: o.id, texto: o.texto }; } };

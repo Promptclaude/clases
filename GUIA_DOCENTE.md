@@ -32,6 +32,7 @@ Tema:
 DBA:
 ¿Conectada al Aula? (sí / no)
 Imágenes que quiero usar o evitar (opcional):
+Premio real para quien abra los 5 cofres (opcional; algo que tú puedas dar, p. ej. elegir la canción de inicio, ser tu ayudante del día, un sticker):
 ```
 
 ## 5. Qué recibes
@@ -46,6 +47,9 @@ Para verificar tú (o quien administra el repositorio):
 3. `python3 tools/puerta_de_calidad.py semanaN_xxx.html`
    - 🟢 **VERDE** → lista para el siguiente paso.
    - 🔴 **ROJO** → pega a Claude el informe de la puerta y pídele que corrija **los datos**; repite.
+
+## Monedas y cofres (la práctica sin nota también vale)
+Cada actividad sin nota da **🪙 monedas** al terminarla: 10 si la acierta, 5 si solo la intenta, 2 si pide ayuda. Una barra dorada arriba se llena y abre **5 cofres** (con aviso y confeti); el último abre **el premio que tú definas**. En la pantalla final y en la insignia imprimible aparecen las monedas, los cofres y el premio para que el estudiante te lo muestre. Los quizzes no dan monedas (su recompensa es la nota), y las monedas **nunca** cambian la nota ni bloquean nada. Cada clase empieza en cero.
 
 ## 6. Antes de usarla con estudiantes
 - Ábrela una vez en un equipo del laboratorio: es lo único que las pruebas no cubren (cómo se ve y qué tan rápido va).

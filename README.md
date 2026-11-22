@@ -19,7 +19,7 @@ El formato exacto de `datos.json` está en `prompt-modulos/44_formato_de_datos.m
 ## Versiones: qué es cada número
 | Qué | Versión | Dónde se define |
 |---|---|---|
-| Motor de las clases | **34.0** | `MOTOR_VERSION` en `plantilla/clase_referencia.src.html` |
+| Motor de las clases | **35.0** | `MOTOR_VERSION` en `plantilla/clase_referencia.src.html` |
 | Prompt vigente | **v26** (+ revisión de coherencia v26.1 y módulos 33–43) | `Prompt_Maestro_Clases_v26_COMPLETO.md` |
 | Prompt propuesto | **v27 núcleo** (≈22.000 tokens armado) | `Prompt_Maestro_Clases_v27_NUCLEO.md` |
 | `package.json` | 26.0.0 | Solo identifica el paquete de pruebas; **no** es la versión del motor ni del prompt |

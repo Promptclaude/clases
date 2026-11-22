@@ -351,5 +351,38 @@ async function recorrer(w, modo, tope = 40) { let n = 0; const vistos = []; whil
       const iC = SL0.findIndex(x => x.type === 'cuaderno'); if (iC >= 0) { API.irA(iC); const cb = q(w, '[data-test=cuaderno-ok]'); cb.checked = true; cb.dispatchEvent(new w.Event('change', { bubbles: true })); await sleep(60); ok(JSON.parse(w.localStorage.getItem(claves()[0])).a.some(x => x.tipo === 'cuaderno' && x.s === SL0[iC].id), 'marcar «hice la hoja a mano» queda registrado como entregado para el docente'); }
       w.close(); } }
 
+  T('T35 · Incentivo sin nota: monedas 🪙 y cofres (suben con la práctica, nunca tocan la nota ni bloquean)');
+  { const w0 = abrir({ est: 'monedas0' }).window, e0 = w0.CLASE_API.estado(), pos = e0.monedasPosibles, hayActs = pos >= 30;
+    ok(e0.monedas === 0, 'arranca en 0 monedas (una semana nueva siempre parte de cero)');
+    if (!hayActs) { ok(!q(w0, '[data-test=cofre]'), 'con menos de 3 actividades no se muestra la barra'); }
+    else {
+      ok(e0.cofres.length === 5 && e0.cofres.every((u, i, a) => i === 0 || u > a[i - 1]) && e0.cofres[4] <= pos, '5 cofres con umbrales crecientes y alcanzables: ' + e0.cofres.join(' · ') + ' de ' + pos + ' posibles');
+      ok(!!q(w0, '[data-test=cofre]') && qa(w0, '[data-test=cofre-item]').length === 5 && q(w0, '[data-test=monedas]').textContent.includes('0'), 'la barra de cofres está en el encabezado con 5 cofres cerrados');
+      ok(qa(w0, '[data-test=cofre-item]').every(x => x.dataset.abierto === '0'), 'al empezar todos los cofres están cerrados 🔒');
+      // los quizzes NO dan monedas (su premio es la nota)
+      const iQ = idxEvaluables(w0)[0]; w0.CLASE_API.irA(iQ); await jugarSlide(w0, 'bien');
+      ok(w0.CLASE_API.estado().monedas === 0, 'responder un quiz bien NO da monedas (esa recompensa es la nota)');
+    }
+    w0.close();
+    if (hayActs) {
+      const wm = abrir({ est: 'monedasM' }).window; await recorrer(wm, 'mal'); const em = wm.CLASE_API.estado(), hm = hud(wm);
+      const wb = abrir({ est: 'monedasB' }).window; await recorrer(wb, 'bien'); const eb = wb.CLASE_API.estado(), hb = hud(wb);
+      ok(em.monedas > 0, 'intentar y fallar TAMBIÉN suma (' + em.monedas + ' monedas): el esfuerzo cuenta');
+      ok(em.monedas < eb.monedas && eb.monedas >= 0.8 * pos, 'acertar suma casi el doble: mal ' + em.monedas + ' · bien ' + eb.monedas + ' de ' + pos);
+      ok(hm === '0.0' && hb === '5.0', 'las monedas no cambian la nota: mal ' + hm + ' · bien ' + hb);
+      const ab = e => e.cofres.filter(u => e.monedas >= u).length;
+      ok(ab(eb) >= 4 && ab(em) < ab(eb), 'acertar abre más cofres que solo intentar: bien ' + ab(eb) + ' · mal ' + ab(em));
+      ok(!!q(wb, '[data-test=cofre-toast]'), 'el aviso de monedas/cofres existe y se muestra aunque la barra quede fuera de pantalla');
+      ok(wb.CLASE_API.ERRORES.length === 0 && wm.CLASE_API.ERRORES.length === 0, 'cero errores de JavaScript con el incentivo');
+      const fin = q(wb, '[data-test=celebracion]');
+      ok(!!fin && !!q(wb, '[data-test=chip-monedas]') && q(wb, '[data-test=chip-monedas]').textContent.includes(String(eb.monedas)), 'la pantalla final muestra las monedas ganadas');
+      ok(!!q(wb, '[data-test=cofres-final]'), 'la pantalla final muestra la colección de cofres');
+      if (eb.premio && ab(eb) === 5) ok(!!q(wb, '[data-test=premio]') && q(wb, '[data-test=premio]').textContent.includes(eb.premio), 'con los 5 cofres abiertos aparece el premio del docente: «' + eb.premio + '»');
+      if (eb.premio) ok(!q(wm, '[data-test=premio]'), 'sin abrir los 5 cofres el premio NO aparece (solo el aviso de cómo ganarlo)');
+      if (!eb.premio) ok(!q(wb, '[data-test=premio]'), 'sin meta.premio no aparece ningún premio');
+      wm.close(); wb.close();
+    }
+  }
+
   console.log(`\n${pasos - fallos}/${pasos} comprobaciones OK${fallos ? ' · ' + fallos + ' ❌' : ''}`); process.exit(fallos ? 1 : 0);
 })().catch(e => { console.error('ERROR del runner:', e); process.exit(3); });

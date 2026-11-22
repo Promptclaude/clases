@@ -43,7 +43,8 @@ RENDER.final = function (s) {
   const nombre = (NOMBRE || 'Explorador'), fecha = new Date().toLocaleDateString('es-CO', { day: 'numeric', month: 'long', year: 'numeric' });
   const cel = '<div class="v29-cel" data-test="celebracion"><div class="fila"><img src="asset://aria-genial" alt="ARIA celebra" width="120"><img src="' + med + '" alt="Medalla de ' + nom + '" width="110" data-test="medalla"></div>' +
     '<p><strong>¡Felicitaciones, ' + esc(nombre) + '!</strong></p><div class="v29-est" data-test="estrellas" aria-label="' + est + ' de 3 estrellas">' + '⭐'.repeat(est) + '☆'.repeat(3 - est) + '</div>' +
-    '<div class="v29-chips"><span data-test="chip-juegos">🎮 ' + hechos + ' de ' + juegos.length + ' juegos</span><span>⭐ ' + st.xp + ' XP</span><span>🏅 ' + NIVELES[nivelActual()] + '</span></div></div>' +
+    '<div class="v29-chips"><span data-test="chip-juegos">🎮 ' + hechos + ' de ' + juegos.length + ' juegos</span><span>⭐ ' + st.xp + ' XP</span><span data-test="chip-monedas">🪙 ' + v35Monedas() + ' monedas</span><span>🏅 ' + NIVELES[nivelActual()] + '</span></div></div>' +
+    v35FinalHtml() +
     (s.aprendiste && s.aprendiste.length ? '<div class="v29-logro" data-test="logros"><strong>🧠 Lo que lograste hoy:</strong><ul>' + s.aprendiste.map(x => '<li>' + esc(x) + '</li>').join('') + '</ul></div>' : '') +
     (s.siguiente ? '<div class="v29-sig" data-test="siguiente-mision">🚀 <strong>Próxima misión:</strong> ' + esc(s.siguiente) + '</div>' : '') +
     '<div class="v29-cert" data-test="insignia"><div>🏅</div><h3>Insignia de misión</h3><p><strong>' + esc(nombre) + '</strong><br>completó «' + esc(CONFIG_CLASE.titulo) + '»<br>' + esc(CONFIG_CLASE.materia) + ' ' + CONFIG_CLASE.grado + '.° · Medalla de ' + nom + '<br><small>' + fecha + '</small></p></div>' +

@@ -58,7 +58,7 @@ Una clase = `plantilla/clase_referencia.src.html` + un `datos.json` (+ imágenes
 ## 3. Flujo obligatorio (siempre en este orden)
 
 0. **Lectura** (§0): bloque de 4 líneas antes de cualquier otra cosa.
-1. **Datos de la clase.** Pregunta solo lo que falte, en un solo mensaje: materia, grado, período, semana, tema, DBA, objetivos, y si la clase se conecta al Aula (`meta.aula: true`). No empieces sin tema ni DBA.
+1. **Datos de la clase.** Pregunta solo lo que falte, en un solo mensaje: materia, grado, período, semana, tema, DBA, objetivos, si la clase se conecta al Aula (`meta.aula: true`) y, opcional, un **premio real** para quien abra los 5 cofres (`meta.premio`, §5-E). No empieces sin tema ni DBA.
 2. **Nombre del archivo:** `semana<N>_<mat|tec><grado>_p<período>.html` (ej. `semana6_tec4_p4.html`). Mismo texto en `meta.claseId`. El servidor del Aula identifica la clase por ese nombre.
 3. **Imágenes:** busca primero en el banco (`python3 banco-imagenes/_herramientas/buscar_banco.py <palabras> --alt`). Detalle en §6.
 4. **Guion de ritmo y datos JSON** (§4 y §5-A: 25 a 32 slides en ciclos).
@@ -140,7 +140,18 @@ Nada se bloquea: el estudiante **intenta** (responde algo) y sigue a su ritmo, a
 - **Una historia en 3 actos** (Descubre → Practica → Reta). Los títulos hablan en voz de misión: «Misión 2 · Calcula el porcentaje».
 - **Cada juego con su verbo:** `relampago` = rapidez; `memoria` = equivalencias; `ordenar` = procedimientos; `detective` = analizar señales; `tabla` = patrones; `candado` = recompensa final.
 - **Variedad de gestos:** alterna leer, tocar, arrastrar y escribir; nunca más de 2 slides seguidas del mismo tipo (el auditor lo exige).
+- **Cofres con tema:** los 5 cofres (`meta.cofres`) son parte de la historia (§5-E).
 - **Caza-errores:** al menos una actividad (un `tf` o una pregunta de nivel `analizar`) donde un personaje se equivoca y el estudiante dice por qué.
+
+### 5-E. Monedas y cofres: la práctica sin nota también vale (lo hace el motor)
+
+Los estudiantes se desmotivan con lo que «no tiene nota». Por eso el motor da **🪙 monedas** al terminar **cada actividad sin nota**: **10** si la acierta, **5** si solo la intenta, **2** si pide ayuda («No me sale»). Una **barra dorada** en el encabezado se llena y abre **5 cofres** coleccionables, con un aviso y confeti en pantalla; el último cofre abre el **premio de la clase**. Los `quiz` y el `evalFinal` **no** dan monedas (su recompensa es la nota). Las monedas nunca cambian la nota y nunca bloquean nada.
+
+Tu parte al escribir la clase:
+1. **Pregunta por un premio real** (opcional) para `meta.premio` (3 a 80 caracteres): algo que el docente pueda dar sin costo (elegir la canción de inicio, ser ayudante del día, un sticker). Nada de dinero, comida ni notas.
+2. **Pon tema a los cofres** con `meta.cofres`: **exactamente 5** `{icono, nombre}` con objetos de la historia de la clase, de menos a más valioso (en la tienda: 🛒 🏷️ 🧮 👑 🏆). Si no los pones, el motor usa unos genéricos (🧢 🔭 🚀 👑 🏆).
+3. **Anúncialo en la misión:** el tercer renglón de `intro` («🏆 Ganarás: …») menciona las monedas, los cofres y el premio si lo hay.
+4. **Cuenta con ello al diseñar:** toda actividad sin nota vale lo mismo (10 monedas), así que una clase de 18 actividades da 180 posibles. No inventes puntos ni alargues la clase para «dar más monedas».
 
 ### 5-D. Preguntas y contenido
 

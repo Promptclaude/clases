@@ -58,7 +58,7 @@ Una clase = `plantilla/clase_referencia.src.html` + un `datos.json` (+ imágenes
 ## 3. Flujo obligatorio (siempre en este orden)
 
 0. **Lectura** (§0): bloque de 4 líneas antes de cualquier otra cosa.
-1. **Datos de la clase.** Pregunta solo lo que falte, en un solo mensaje: materia, grado, período, semana, tema, DBA, objetivos, y si la clase se conecta al Aula (`meta.aula: true`). No empieces sin tema ni DBA.
+1. **Datos de la clase.** Pregunta solo lo que falte, en un solo mensaje: materia, grado, período, semana, tema, DBA, objetivos, si la clase se conecta al Aula (`meta.aula: true`) y, opcional, un **premio real** para quien abra los 5 cofres (`meta.premio`, §5-E). No empieces sin tema ni DBA.
 2. **Nombre del archivo:** `semana<N>_<mat|tec><grado>_p<período>.html` (ej. `semana6_tec4_p4.html`). Mismo texto en `meta.claseId`. El servidor del Aula identifica la clase por ese nombre.
 3. **Imágenes:** busca primero en el banco (`python3 banco-imagenes/_herramientas/buscar_banco.py <palabras> --alt`). Detalle en §6.
 4. **Guion de ritmo y datos JSON** (§4 y §5-A: 25 a 32 slides en ciclos).
@@ -140,7 +140,18 @@ Nada se bloquea: el estudiante **intenta** (responde algo) y sigue a su ritmo, a
 - **Una historia en 3 actos** (Descubre → Practica → Reta). Los títulos hablan en voz de misión: «Misión 2 · Calcula el porcentaje».
 - **Cada juego con su verbo:** `relampago` = rapidez; `memoria` = equivalencias; `ordenar` = procedimientos; `detective` = analizar señales; `tabla` = patrones; `candado` = recompensa final.
 - **Variedad de gestos:** alterna leer, tocar, arrastrar y escribir; nunca más de 2 slides seguidas del mismo tipo (el auditor lo exige).
+- **Cofres con tema:** los 5 cofres (`meta.cofres`) son parte de la historia (§5-E).
 - **Caza-errores:** al menos una actividad (un `tf` o una pregunta de nivel `analizar`) donde un personaje se equivoca y el estudiante dice por qué.
+
+### 5-E. Monedas y cofres: la práctica sin nota también vale (lo hace el motor)
+
+Los estudiantes se desmotivan con lo que «no tiene nota». Por eso el motor da **🪙 monedas** al terminar **cada actividad sin nota**: **10** si la acierta, **5** si solo la intenta, **2** si pide ayuda («No me sale»). Una **barra dorada** en el encabezado se llena y abre **5 cofres** coleccionables, con un aviso y confeti en pantalla; el último cofre abre el **premio de la clase**. Los `quiz` y el `evalFinal` **no** dan monedas (su recompensa es la nota). Las monedas nunca cambian la nota y nunca bloquean nada.
+
+Tu parte al escribir la clase:
+1. **Pregunta por un premio real** (opcional) para `meta.premio` (3 a 80 caracteres): algo que el docente pueda dar sin costo (elegir la canción de inicio, ser ayudante del día, un sticker). Nada de dinero, comida ni notas.
+2. **Pon tema a los cofres** con `meta.cofres`: **exactamente 5** `{icono, nombre}` con objetos de la historia de la clase, de menos a más valioso (en la tienda: 🛒 🏷️ 🧮 👑 🏆). Si no los pones, el motor usa unos genéricos (🧢 🔭 🚀 👑 🏆).
+3. **Anúncialo en la misión:** el tercer renglón de `intro` («🏆 Ganarás: …») menciona las monedas, los cofres y el premio si lo hay.
+4. **Cuenta con ello al diseñar:** toda actividad sin nota vale lo mismo (10 monedas), así que una clase de 18 actividades da 180 posibles. No inventes puntos ni alargues la clase para «dar más monedas».
 
 ### 5-D. Preguntas y contenido
 
@@ -546,6 +557,7 @@ Una clase es **solo** un JSON `{ "meta": {…}, "slides": […] }`. El motor, lo
 **Reglas de forma comunes**
 - Cada slide lleva un `id` único (`r01`, `r02`… en orden; los ejemplos también usan `m01`…). Cada pregunta lleva `id` único dentro de su quiz (`q1`, `q2`… y en el reto final `e1`, `e2`…).
 - `meta.claseId`: con `meta.aula: true` es el nombre del archivo sin `.html`, p. ej. `semana6_tec4_p4` (`semana<N>_<mat|tec><grado>_p<período>`). `meta.materia`: `Aritmética` o `Tecnología e Informática`. `meta.grado`: 4 o 5. `meta.dba`: texto que empieza por «DBA: ».
+- `meta.cofres` y `meta.premio` son **opcionales** (monedas y cofres, núcleo §5-E): `cofres` son **exactamente 5** `{"icono": "🛒", "nombre": "Carrito de compras"}` con el tema de la clase, de menos a más valioso (icono ≤ 8 caracteres, nombre ≤ 32); `premio` es un texto de 3 a 80 caracteres con un premio real que da el docente.
 - `meta.aula: true` conecta la clase al Aula. `meta.aulaVersion` es solo un número (fecha `AAAAMMDD`) que obliga al navegador a recargar los scripts del Aula: copia el de la clase más reciente y no lo inventes; cámbialo solo si el docente avisa que actualizó esos scripts. Si no tienes una clase de referencia, pregúntalo.
 - Preguntas (`quiz` y `evalFinal`): `nivel` ∈ `recordar` · `comprender` · `aplicar` · `analizar`. Una sola opción con `"correcta": true`; **toda opción incorrecta lleva `porQue`**. `calc` es `null` cuando no hay operación; con operación va `{"expr": "3.4+2.15", "resultado": "5,55"}` (decimales con coma o punto) y la puerta lo recalcula.
 - Los ejemplos de abajo muestran la **forma** de cada tipo, no el largo: una clase real tiene 25 a 32 slides (núcleo §5-A).
@@ -556,7 +568,7 @@ Una clase es **solo** un JSON `{ "meta": {…}, "slides": […] }`. El motor, lo
 ## meta
 
 ```json
-{"claseId": "semana6_tec4_p4", "semana": 6, "grado": 4, "materia": "Tecnología e Informática", "titulo": "Mi primer documento: formato y tablas", "dba": "DBA: Usa un procesador de texto para dar formato a un documento e insertar tablas con orden y claridad", "aula": true, "aulaVersion": "20261110"}
+{"claseId": "mat5_p4_s5_porcentajes_2h", "semana": 5, "grado": 5, "materia": "Aritmética", "titulo": "Porcentajes y descuentos en la tienda escolar", "dba": "DBA: Resuelve problemas de compra con porcentajes sencillos y descuentos, relacionándolos con fracciones", "cofres": [{"icono": "🛒", "nombre": "Carrito de compras"}, {"icono": "🏷️", "nombre": "Etiqueta de oferta"}, {"icono": "🧮", "nombre": "Calculadora de tendero"}, {"icono": "👑", "nombre": "Corona del tendero"}, {"icono": "🏆", "nombre": "Trofeo de la tienda"}], "premio": "Elige la canción con la que empezamos la próxima clase", "aula": true, "aulaVersion": "20261110"}
 ```
 
 ## Un ejemplo por tipo de slide

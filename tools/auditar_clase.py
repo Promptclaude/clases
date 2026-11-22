@@ -8,7 +8,7 @@ PROHIBIDAS = ['incorrecto', 'fallaste', 'estás mal', 'error tuyo']
 MARCAS = ['fortnite', 'free fire', 'freefire', 'minecraft', 'among us', 'roblox', 'pokemon', 'pokémon', 'mario bros', 'disney', 'marvel', 'nintendo', 'epic games', 'pixar', 'brawl stars', 'clash royale']
 TIPOS = {'intro', 'info', 'tf', 'fill', 'drag', 'match', 'orden', 'wordsearch', 'interactive', 'minijuego', 'historia', 'quiz', 'evalFinal', 'final', 'repaso', 'practica', 'editor', 'tabla', 'detective', 'fraccion', 'cuadricula', 'recta', 'comparar', 'podio', 'abierta', 'cuaderno', 'enlazar', 'ordenar', 'memoria', 'relampago', 'sopa', 'candado'}
 IDS = ['nota-hud', 'nota-delta', 'aciertos-hud', 'nota-intento-hud', 'razon-bloqueo', 'rescate-wrap', 'aviso-guardado', 'btn-next', 'btn-prev', 'stage']
-UNICAS = ['puedeAvanzar', 'aplicarEstadoAvance', 'updScore', 'htmlRetroQuiz', 'sesionGuardadaEsValida', 'esEstudianteNuevo', 'construirEntradaEstudiante', 'pintarNota', 'marcarActividadHecha', 'razonBloqueo', 'almacen', 'save', 'load']
+UNICAS = ['puedeAvanzar', 'aplicarEstadoAvance', 'updScore', 'htmlRetroQuiz', 'sesionGuardadaEsValida', 'esEstudianteNuevo', 'construirEntradaEstudiante', 'pintarNota', 'marcarActividadHecha', 'razonBloqueo', 'v35Cofre', 'v35Monedas', 'v35Cofres', 'almacen', 'save', 'load']
 def main():
     if len(sys.argv) < 2: print(__doc__); sys.exit(2)
     ruta = sys.argv[1]; html = open(ruta, encoding='utf8').read(); E, A, OK = [], [], []
@@ -53,6 +53,9 @@ def main():
                 run = run + 1 if a['type'] == b['type'] else 1
                 if run > 2: E.append(f"Más de 2 slides seguidas del tipo {b['type']} (Prioridad 46)"); break
             chk('dba' in D['meta'] and len(D['meta']['dba']) > 10, 'DBA declarado', 'Falta meta.dba')
+            if 'cofres' in D['meta']:
+                cf = D['meta']['cofres']; chk(isinstance(cf, list) and len(cf) == 5 and all(isinstance(c, dict) and 1 <= len(str(c.get('icono', ''))) <= 8 and 1 <= len(str(c.get('nombre', ''))) <= 32 for c in cf), 'meta.cofres válido (5 cofres con icono y nombre)', 'meta.cofres debe tener exactamente 5 cofres {icono, nombre} (icono ≤ 8 caracteres, nombre ≤ 32)')
+            if 'premio' in D['meta']: chk(isinstance(D['meta']['premio'], str) and 3 <= len(D['meta']['premio']) <= 80, 'meta.premio válido', 'meta.premio debe ser un texto de 3 a 80 caracteres')
             # Variedad (Prioridad 66): una clase dinámica mezcla tipos de juego; avisa si es monótona
             JUEGOS = {'editor', 'tabla', 'detective', 'fraccion', 'tf', 'fill', 'drag', 'minijuego', 'cuadricula', 'recta', 'comparar', 'podio', 'enlazar', 'ordenar', 'memoria', 'relampago', 'sopa', 'candado'}
             tj = {x['type'] for x in S if x['type'] in JUEGOS}; nj = sum(1 for x in S if x['type'] in JUEGOS)
