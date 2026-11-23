@@ -91,3 +91,10 @@ function v35FinalHtml() {
     (premio && abiertos === 5 ? '<div class="v35-premio" data-test="premio">🎁 Premio de la clase: ' + esc(premio) + '<br><small>Muéstrale tu insignia a tu docente para reclamarlo.</small></div>' : '') +
     (premio && abiertos < 5 ? '<p style="margin:8px 0 0"><small>🎁 Abre los 5 cofres para ganar el premio de la clase.</small></p>' : '') + '</div>';
 }
+
+// Insignia imprimible: deja constancia de las monedas, los cofres y el premio para mostrárselo al docente
+function v35InsigniaHtml() {
+  if (v35Actividades().length < 3) return '';
+  const mon = v35Monedas(), cofres = v35Cofres(), abiertos = cofres.filter(x => mon >= x.umbral).length, premio = CONFIG_CLASE.premio;
+  return '<br>🪙 ' + mon + ' monedas · 🔓 ' + abiertos + ' de 5 cofres' + (premio && abiertos === 5 ? '<br><strong>🎁 Premio: ' + esc(premio) + '</strong>' : '');
+}

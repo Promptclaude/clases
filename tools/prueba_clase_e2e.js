@@ -378,6 +378,7 @@ async function recorrer(w, modo, tope = 40) { let n = 0; const vistos = []; whil
       ok(!!fin && !!q(wb, '[data-test=chip-monedas]') && q(wb, '[data-test=chip-monedas]').textContent.includes(String(eb.monedas)), 'la pantalla final muestra las monedas ganadas');
       ok(!!q(wb, '[data-test=cofres-final]'), 'la pantalla final muestra la colección de cofres');
       if (eb.premio && ab(eb) === 5) ok(!!q(wb, '[data-test=premio]') && q(wb, '[data-test=premio]').textContent.includes(eb.premio), 'con los 5 cofres abiertos aparece el premio del docente: «' + eb.premio + '»');
+      { const ins = q(wb, '[data-test=insignia]'); ok(!!ins && ins.textContent.includes(eb.monedas + ' monedas') && (!eb.premio || ab(eb) < 5 || ins.textContent.includes(eb.premio)), 'la insignia imprimible deja constancia de monedas, cofres' + (eb.premio ? ' y premio' : '')); }
       if (eb.premio) ok(!q(wm, '[data-test=premio]'), 'sin abrir los 5 cofres el premio NO aparece (solo el aviso de cómo ganarlo)');
       if (!eb.premio) ok(!q(wb, '[data-test=premio]'), 'sin meta.premio no aparece ningún premio');
       wm.close(); wb.close();

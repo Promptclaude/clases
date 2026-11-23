@@ -1124,7 +1124,7 @@ RENDER.final = function (s) {
     v35FinalHtml() +
     (s.aprendiste && s.aprendiste.length ? '<div class="v29-logro" data-test="logros"><strong>🧠 Lo que lograste hoy:</strong><ul>' + s.aprendiste.map(x => '<li>' + esc(x) + '</li>').join('') + '</ul></div>' : '') +
     (s.siguiente ? '<div class="v29-sig" data-test="siguiente-mision">🚀 <strong>Próxima misión:</strong> ' + esc(s.siguiente) + '</div>' : '') +
-    '<div class="v29-cert" data-test="insignia"><div>🏅</div><h3>Insignia de misión</h3><p><strong>' + esc(nombre) + '</strong><br>completó «' + esc(CONFIG_CLASE.titulo) + '»<br>' + esc(CONFIG_CLASE.materia) + ' ' + CONFIG_CLASE.grado + '.° · Medalla de ' + nom + '<br><small>' + fecha + '</small></p></div>' +
+    '<div class="v29-cert" data-test="insignia"><div>🏅</div><h3>Insignia de misión</h3><p><strong>' + esc(nombre) + '</strong><br>completó «' + esc(CONFIG_CLASE.titulo) + '»<br>' + esc(CONFIG_CLASE.materia) + ' ' + CONFIG_CLASE.grado + '.° · Medalla de ' + nom + '<br><small>' + fecha + '</small>' + v35InsigniaHtml() + '</p></div>' +
     '<button type="button" class="btn" data-test="imprimir-insignia" data-accion="v29-imprimir">🖨 Imprimir mi insignia</button>';
   if (!v29Celebrado) { v29Celebrado = true; try { Juego.evento('hito'); } catch (e) { /* sin efectos no pasa nada */ } }
   const k = base.indexOf('</h1>'); return k < 0 ? cel + base : base.slice(0, k + 5) + cel + base.slice(k + 5);
@@ -1431,6 +1431,13 @@ function v35FinalHtml() {
     cofres.map(x => '<div class="it' + (mon >= x.umbral ? '' : ' no') + '"><b>' + (mon >= x.umbral ? esc(x.icono) : '🔒') + '</b>' + esc(x.nombre) + '</div>').join('') + '</div>' +
     (premio && abiertos === 5 ? '<div class="v35-premio" data-test="premio">🎁 Premio de la clase: ' + esc(premio) + '<br><small>Muéstrale tu insignia a tu docente para reclamarlo.</small></div>' : '') +
     (premio && abiertos < 5 ? '<p style="margin:8px 0 0"><small>🎁 Abre los 5 cofres para ganar el premio de la clase.</small></p>' : '') + '</div>';
+}
+
+// Insignia imprimible: deja constancia de las monedas, los cofres y el premio para mostrárselo al docente
+function v35InsigniaHtml() {
+  if (v35Actividades().length < 3) return '';
+  const mon = v35Monedas(), cofres = v35Cofres(), abiertos = cofres.filter(x => mon >= x.umbral).length, premio = CONFIG_CLASE.premio;
+  return '<br>🪙 ' + mon + ' monedas · 🔓 ' + abiertos + ' de 5 cofres' + (premio && abiertos === 5 ? '<br><strong>🎁 Premio: ' + esc(premio) + '</strong>' : '');
 }
 
 

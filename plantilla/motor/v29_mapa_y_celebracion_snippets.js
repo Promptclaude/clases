@@ -47,7 +47,7 @@ RENDER.final = function (s) {
     v35FinalHtml() +
     (s.aprendiste && s.aprendiste.length ? '<div class="v29-logro" data-test="logros"><strong>🧠 Lo que lograste hoy:</strong><ul>' + s.aprendiste.map(x => '<li>' + esc(x) + '</li>').join('') + '</ul></div>' : '') +
     (s.siguiente ? '<div class="v29-sig" data-test="siguiente-mision">🚀 <strong>Próxima misión:</strong> ' + esc(s.siguiente) + '</div>' : '') +
-    '<div class="v29-cert" data-test="insignia"><div>🏅</div><h3>Insignia de misión</h3><p><strong>' + esc(nombre) + '</strong><br>completó «' + esc(CONFIG_CLASE.titulo) + '»<br>' + esc(CONFIG_CLASE.materia) + ' ' + CONFIG_CLASE.grado + '.° · Medalla de ' + nom + '<br><small>' + fecha + '</small></p></div>' +
+    '<div class="v29-cert" data-test="insignia"><div>🏅</div><h3>Insignia de misión</h3><p><strong>' + esc(nombre) + '</strong><br>completó «' + esc(CONFIG_CLASE.titulo) + '»<br>' + esc(CONFIG_CLASE.materia) + ' ' + CONFIG_CLASE.grado + '.° · Medalla de ' + nom + '<br><small>' + fecha + '</small>' + v35InsigniaHtml() + '</p></div>' +
     '<button type="button" class="btn" data-test="imprimir-insignia" data-accion="v29-imprimir">🖨 Imprimir mi insignia</button>';
   if (!v29Celebrado) { v29Celebrado = true; try { Juego.evento('hito'); } catch (e) { /* sin efectos no pasa nada */ } }
   const k = base.indexOf('</h1>'); return k < 0 ? cel + base : base.slice(0, k + 5) + cel + base.slice(k + 5);
