@@ -21,6 +21,7 @@ function marcarActividadHecha(sId, modo) {
   }
   save();                                          // 8-B: en el mismo clic
   aplicarEstadoAvance(s);
+  try { v35Cofre(); } catch (e) { /* v35: las monedas nunca rompen la clase */ }
   return true;
 }
 

@@ -1,0 +1,1131 @@
+{
+ "meta": {
+  "claseId": "mat5_p4_s5_porcentajes_2h",
+  "semana": 5,
+  "grado": 5,
+  "materia": "Aritmética",
+  "titulo": "Porcentajes y descuentos en la tienda escolar",
+  "dba": "DBA: Resuelve problemas de compra con porcentajes sencillos y descuentos, relacionándolos con fracciones",
+  "cofres": [
+   {
+    "icono": "🛒",
+    "nombre": "Carrito de compras"
+   },
+   {
+    "icono": "🏷️",
+    "nombre": "Etiqueta de oferta"
+   },
+   {
+    "icono": "🧮",
+    "nombre": "Calculadora de tendero"
+   },
+   {
+    "icono": "👑",
+    "nombre": "Corona del tendero"
+   },
+   {
+    "icono": "🏆",
+    "nombre": "Trofeo de la tienda"
+   }
+  ],
+  "premio": "Elige la canción con la que empezamos la próxima clase",
+  "tema": "desierto"
+ },
+ "slides": [
+  {
+   "id": "s01",
+   "type": "intro",
+   "titulo": "Misión: ¡Dueños de la tienda escolar!",
+   "mision": [
+    "🎯 Aprenderás: qué es un porcentaje y cómo calcular descuentos.",
+    "👆 Harás: completar, unir, ordenar, jugar y explicar con tus palabras.",
+    "🏆 Ganarás: 🪙 monedas en cada actividad para abrir los 5 cofres de la tienda y ganar el premio de la clase."
+   ]
+  },
+  {
+   "id": "s02",
+   "type": "tf",
+   "titulo": "Calentamiento: ¿verdadero o falso?",
+   "items": [
+    {
+     "t": "En una razón 1:2, por cada 1 hay 2 de la otra cantidad.",
+     "v": true,
+     "porQue": "Repaso: la razón compara dos cantidades."
+    },
+    {
+     "t": "Dos razones iguales como 1:2 y 2:4 son proporcionales.",
+     "v": true,
+     "porQue": "Repaso: en las dos, el segundo número es el doble del primero."
+    },
+    {
+     "t": "Creo que el 10 % de $200 son $10.",
+     "v": false,
+     "porQue": "Es una predicción típica: el 10 % de 200 es 20. ¡Lo veremos!"
+    },
+    {
+     "t": "Creo que el 50 % de un precio es la mitad del precio.",
+     "v": true,
+     "porQue": "Correcto: lo confirmaremos en la misión 1."
+    }
+   ],
+   "etapa": "calienta"
+  },
+  {
+   "id": "s03",
+   "type": "info",
+   "titulo": "Misión 1 · El secreto del 100",
+   "texto": "Un porcentaje compara una cantidad con 100. El 25 % significa 25 de cada 100, o sea 25/100, que es igual a 1/4.",
+   "ejemplo": "Ejemplo resuelto: 50 de cada 100 → 50 % → 50/100 → se simplifica a 1/2. Por eso el 50 % es la mitad."
+  },
+  {
+   "id": "s04",
+   "type": "fill",
+   "titulo": "Lo hacemos juntos",
+   "items": [
+    {
+     "antes": "El 25 % significa 25 de cada",
+     "ans": [
+      "100",
+      "cien"
+     ],
+     "despues": ".",
+     "porQue": "Un porcentaje siempre compara con 100."
+    },
+    {
+     "antes": "El 50 % es la",
+     "ans": [
+      "mitad"
+     ],
+     "despues": "del total.",
+     "porQue": "50 de cada 100 es la mitad."
+    },
+    {
+     "antes": "El 100 % es",
+     "ans": [
+      "todo",
+      "el total"
+     ],
+     "despues": "el precio.",
+     "porQue": "100 de cada 100 es todo."
+    }
+   ]
+  },
+  {
+   "id": "s05",
+   "type": "enlazar",
+   "titulo": "Une la situación con su porcentaje",
+   "intro": "Ahora tú, con menos ayuda.",
+   "ejemplo": "«El precio completo» se une con 100 %.",
+   "pares": [
+    {
+     "izq": "La mitad del precio",
+     "der": "50 %",
+     "porQue": "La mitad son 50 de cada 100."
+    },
+    {
+     "izq": "Un cuarto del precio",
+     "der": "25 %",
+     "porQue": "Un cuarto son 25 de cada 100."
+    },
+    {
+     "izq": "La décima parte del precio",
+     "der": "10 %",
+     "porQue": "La décima parte son 10 de cada 100."
+    },
+    {
+     "izq": "Tres cuartas partes del precio",
+     "der": "75 %",
+     "porQue": "Tres cuartos son 75 de cada 100."
+    },
+    {
+     "izq": "Todo el precio",
+     "der": "100 %",
+     "porQue": "Todo son 100 de cada 100."
+    }
+   ]
+  },
+  {
+   "id": "s06",
+   "type": "memoria",
+   "titulo": "Encuentra las parejas",
+   "intro": "Une cada porcentaje con su fracción.",
+   "pares": [
+    {
+     "a": "25 %",
+     "b": "1/4",
+     "porQue": "25 de 100 es un cuarto."
+    },
+    {
+     "a": "50 %",
+     "b": "1/2",
+     "porQue": "50 de 100 es la mitad."
+    },
+    {
+     "a": "75 %",
+     "b": "3/4",
+     "porQue": "75 de 100 son tres cuartos."
+    },
+    {
+     "a": "10 %",
+     "b": "1/10",
+     "porQue": "10 de 100 es un décimo."
+    }
+   ]
+  },
+  {
+   "id": "s07",
+   "type": "abierta",
+   "titulo": "Explícaselo a un amigo",
+   "intro": "Antes del quiz, cuéntalo con tus palabras. Tu docente lo leerá.",
+   "minPalabras": 6,
+   "ejemplo": "«El 25 % es 25 de cada 100, como un cuarto del total».",
+   "prompts": [
+    "Si un amigo no sabe qué es el 25 %, ¿cómo se lo explicarías con tus palabras?"
+   ]
+  },
+  {
+   "id": "s08",
+   "type": "quiz",
+   "titulo": "Quiz 1: ¿qué es un porcentaje?",
+   "preguntas": [
+    {
+     "id": "q1",
+     "dba": "Porcentajes y descuentos",
+     "nivel": "recordar",
+     "enunciado": "¿Qué significa 25 %?",
+     "calc": null,
+     "retroalimentacion": "25 % quiere decir 25 de cada 100.",
+     "errorComun": "Un porcentaje compara con 100, no con 10.",
+     "opciones": [
+      {
+       "id": "a",
+       "texto": "25 de cada 100",
+       "correcta": true
+      },
+      {
+       "id": "b",
+       "texto": "25 de cada 10",
+       "correcta": false,
+       "porQue": "Un porcentaje compara con 100, no con 10."
+      },
+      {
+       "id": "c",
+       "texto": "25 más 100",
+       "correcta": false,
+       "porQue": "El porcentaje no se suma: es una parte de 100."
+      },
+      {
+       "id": "d",
+       "texto": "1 de cada 25",
+       "correcta": false,
+       "porQue": "Eso sería 1/25; 25 % es 25/100."
+      }
+     ]
+    },
+    {
+     "id": "q2",
+     "dba": "Porcentajes y descuentos",
+     "nivel": "comprender",
+     "enunciado": "¿Qué fracción es igual a 50 %?",
+     "calc": null,
+     "retroalimentacion": "50 de cada 100 es la mitad: 1/2.",
+     "errorComun": "50 % no es 1/5: 50 de 100 es la mitad.",
+     "opciones": [
+      {
+       "id": "a",
+       "texto": "1/2",
+       "correcta": true
+      },
+      {
+       "id": "b",
+       "texto": "1/5",
+       "correcta": false,
+       "porQue": "1/5 es 20 %; la mitad de 100 es 50."
+      },
+      {
+       "id": "c",
+       "texto": "5/100",
+       "correcta": false,
+       "porQue": "5/100 es 5 %, no 50 %."
+      },
+      {
+       "id": "d",
+       "texto": "2/1",
+       "correcta": false,
+       "porQue": "2/1 es el doble, no la mitad."
+      }
+     ]
+    },
+    {
+     "id": "q3",
+     "dba": "Porcentajes y descuentos",
+     "nivel": "comprender",
+     "enunciado": "¿Qué porcentaje representa «la mitad» de un precio?",
+     "calc": null,
+     "retroalimentacion": "La mitad son 50 de cada 100: 50 %.",
+     "errorComun": "La mitad no es 100 %: ese es el precio completo.",
+     "opciones": [
+      {
+       "id": "a",
+       "texto": "50 %",
+       "correcta": true
+      },
+      {
+       "id": "b",
+       "texto": "100 %",
+       "correcta": false,
+       "porQue": "El 100 % es todo el precio, no la mitad."
+      },
+      {
+       "id": "c",
+       "texto": "5 %",
+       "correcta": false,
+       "porQue": "El 5 % es solo 5 de cada 100."
+      },
+      {
+       "id": "d",
+       "texto": "25 %",
+       "correcta": false,
+       "porQue": "El 25 % es un cuarto, no la mitad."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s09",
+   "type": "info",
+   "titulo": "Misión 2 · Calcula el porcentaje",
+   "texto": "Para el 10 % divides entre 10. Para el 50 % divides entre 2. Para el 25 % divides entre 4. Así sabes cuánto es el porcentaje de un precio.",
+   "ejemplo": "Ejemplo resuelto: el 25 % de $80. Paso 1: el 25 % es un cuarto. Paso 2: 80 ÷ 4 = 20. Respuesta: $20."
+  },
+  {
+   "id": "s10",
+   "type": "fill",
+   "titulo": "Lo hacemos juntos: un paso en blanco",
+   "items": [
+    {
+     "antes": "El 25 % de $80: divido 80 entre",
+     "ans": [
+      "4"
+     ],
+     "despues": "y obtengo $20.",
+     "porQue": "El 25 % es un cuarto, así que se divide entre 4."
+    },
+    {
+     "antes": "El 50 % de $60: divido 60 entre",
+     "ans": [
+      "2"
+     ],
+     "despues": "y obtengo $30.",
+     "porQue": "El 50 % es la mitad, así que se divide entre 2."
+    },
+    {
+     "antes": "El 10 % de $90: divido 90 entre",
+     "ans": [
+      "10"
+     ],
+     "despues": "y obtengo $9.",
+     "porQue": "El 10 % es la décima parte, así que se divide entre 10."
+    }
+   ]
+  },
+  {
+   "id": "s11",
+   "type": "ordenar",
+   "titulo": "Ahora tú: los pasos del porcentaje",
+   "instruccion": "Ordena los pasos para hallar el 50 % de $60.",
+   "items": [
+    "Escribo el precio: $60",
+    "Pienso: el 50 % es la mitad",
+    "Divido: 60 ÷ 2",
+    "Respondo: el 50 % de $60 es $30"
+   ],
+   "porQue": "Primero entiendo qué porcentaje es, luego divido y respondo."
+  },
+  {
+   "id": "s12",
+   "type": "tabla",
+   "titulo": "Completa la tabla del 10 %",
+   "intro": "En la tienda todo tiene 10 % de descuento. Completa lo que falta.",
+   "ejemplo": "Si el precio es $10, el descuento es $1 porque 10 ÷ 10 = 1.",
+   "relacion": "Regla: el descuento es el precio dividido entre 10.",
+   "columnas": [
+    "Precio ($)",
+    "Descuento 10 % ($)"
+   ],
+   "filas": [
+    [
+     10,
+     1
+    ],
+    [
+     20,
+     2
+    ],
+    [
+     50,
+     {
+      "r": 5
+     }
+    ],
+    [
+     100,
+     {
+      "r": 10
+     }
+    ],
+    [
+     200,
+     {
+      "r": 20
+     }
+    ]
+   ],
+   "proporcional": true,
+   "pista": "Divide el precio entre 10.",
+   "porQue": "El 10 % es la décima parte del precio: precio ÷ 10."
+  },
+  {
+   "id": "s13",
+   "type": "relampago",
+   "titulo": "Relámpago: ¿cierto o falso?",
+   "intro": "Decide rápido si cada frase es cierta.",
+   "segundos": 10,
+   "vidas": 3,
+   "opciones": [
+    "Cierto",
+    "Falso"
+   ],
+   "items": [
+    {
+     "texto": "El 50 % es la mitad",
+     "correcta": 0,
+     "porQue": "50 de cada 100 es la mitad."
+    },
+    {
+     "texto": "El 25 % es la mitad",
+     "correcta": 1,
+     "porQue": "El 25 % es un cuarto."
+    },
+    {
+     "texto": "El 10 % de $50 es $5",
+     "correcta": 0,
+     "porQue": "50 ÷ 10 = 5."
+    },
+    {
+     "texto": "El 75 % es 1/4",
+     "correcta": 1,
+     "porQue": "El 75 % es 3/4."
+    },
+    {
+     "texto": "El 100 % es todo el precio",
+     "correcta": 0,
+     "porQue": "100 de cada 100 es todo."
+    },
+    {
+     "texto": "El 20 % de $100 es $2",
+     "correcta": 1,
+     "porQue": "El 20 % de 100 es $20."
+    },
+    {
+     "texto": "El 50 % de $30 es $15",
+     "correcta": 0,
+     "porQue": "La mitad de 30 es 15."
+    },
+    {
+     "texto": "El 25 % de $40 es $20",
+     "correcta": 1,
+     "porQue": "El 25 % de 40 es 40 ÷ 4 = 10."
+    },
+    {
+     "texto": "El 10 % de $90 es $9",
+     "correcta": 0,
+     "porQue": "90 ÷ 10 = 9."
+    }
+   ]
+  },
+  {
+   "id": "s14",
+   "type": "tf",
+   "titulo": "Caza-errores: ¿quién se equivocó?",
+   "items": [
+    {
+     "t": "Luis dice: «El 25 % de $40 es $25». Su resultado es correcto.",
+     "v": false,
+     "porQue": "El 25 % de 40 es 40 ÷ 4 = 10, no 25."
+    },
+    {
+     "t": "Marta dice: «El 10 % de $300 es $30». Su resultado es correcto.",
+     "v": true,
+     "porQue": "300 ÷ 10 = 30."
+    },
+    {
+     "t": "Pedro dice: «El 50 % de $80 es $160». Su resultado es correcto.",
+     "v": false,
+     "porQue": "Multiplicó por 2; el 50 % es la mitad: 80 ÷ 2 = 40."
+    }
+   ],
+   "etapa": "comprueba"
+  },
+  {
+   "id": "s15",
+   "type": "quiz",
+   "titulo": "Quiz 2: calcula porcentajes",
+   "preguntas": [
+    {
+     "id": "q4",
+     "dba": "Porcentajes y descuentos",
+     "nivel": "aplicar",
+     "enunciado": "¿Cuánto es el 10 % de $200?",
+     "calc": {
+      "expr": "200/10",
+      "resultado": "20"
+     },
+     "retroalimentacion": "El 10 % es la décima parte: 200 ÷ 10 = 20.",
+     "errorComun": "El 10 % no es 10 pesos: se calcula sobre el precio.",
+     "opciones": [
+      {
+       "id": "a",
+       "texto": "$20",
+       "correcta": true
+      },
+      {
+       "id": "b",
+       "texto": "$10",
+       "correcta": false,
+       "porQue": "Usaste el 10 como pesos; hay que dividir 200 entre 10."
+      },
+      {
+       "id": "c",
+       "texto": "$2.000",
+       "correcta": false,
+       "porQue": "Multiplicaste por 10 en vez de dividir."
+      },
+      {
+       "id": "d",
+       "texto": "$190",
+       "correcta": false,
+       "porQue": "Restaste en lugar de hallar la décima parte."
+      }
+     ]
+    },
+    {
+     "id": "q5",
+     "dba": "Porcentajes y descuentos",
+     "nivel": "aplicar",
+     "enunciado": "¿Cuánto es el 50 % de $60?",
+     "calc": {
+      "expr": "60/2",
+      "resultado": "30"
+     },
+     "retroalimentacion": "El 50 % es la mitad: 60 ÷ 2 = 30.",
+     "errorComun": "El 50 % no son 50 pesos: es la mitad del precio.",
+     "opciones": [
+      {
+       "id": "a",
+       "texto": "$30",
+       "correcta": true
+      },
+      {
+       "id": "b",
+       "texto": "$50",
+       "correcta": false,
+       "porQue": "Usaste el 50 como pesos; la mitad de 60 es 30."
+      },
+      {
+       "id": "c",
+       "texto": "$120",
+       "correcta": false,
+       "porQue": "Multiplicaste por 2; la mitad se halla dividiendo."
+      },
+      {
+       "id": "d",
+       "texto": "$15",
+       "correcta": false,
+       "porQue": "Dividiste entre 4; el 50 % se halla dividiendo entre 2."
+      }
+     ]
+    },
+    {
+     "id": "q6",
+     "dba": "Porcentajes y descuentos",
+     "nivel": "aplicar",
+     "enunciado": "¿Cuánto es el 25 % de $80?",
+     "calc": {
+      "expr": "80/4",
+      "resultado": "20"
+     },
+     "retroalimentacion": "El 25 % es un cuarto: 80 ÷ 4 = 20.",
+     "errorComun": "El 25 % no son 25 pesos.",
+     "opciones": [
+      {
+       "id": "a",
+       "texto": "$20",
+       "correcta": true
+      },
+      {
+       "id": "b",
+       "texto": "$25",
+       "correcta": false,
+       "porQue": "Usaste el 25 como pesos; el 25 % de 80 se halla dividiendo entre 4."
+      },
+      {
+       "id": "c",
+       "texto": "$320",
+       "correcta": false,
+       "porQue": "Multiplicaste 80 × 4 en lugar de dividir."
+      },
+      {
+       "id": "d",
+       "texto": "$40",
+       "correcta": false,
+       "porQue": "Dividiste entre 2; eso es el 50 %."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s16",
+   "type": "info",
+   "titulo": "Misión 3 · El precio con descuento",
+   "texto": "Un descuento es un porcentaje que se resta del precio. Primero hallas cuánto es el descuento. Luego lo restas del precio y obtienes lo que pagas.",
+   "ejemplo": "Ejemplo resuelto: camiseta de $40 con 25 % de descuento. Paso 1: 40 ÷ 4 = 10. Paso 2: 40 − 10 = 30. Pagas $30."
+  },
+  {
+   "id": "s17",
+   "type": "fill",
+   "titulo": "Lo hacemos juntos: el precio final",
+   "items": [
+    {
+     "antes": "Camiseta de $40 con 25 %: el descuento es",
+     "ans": [
+      "10",
+      "$10"
+     ],
+     "despues": ".",
+     "porQue": "40 ÷ 4 = 10."
+    },
+    {
+     "antes": "Entonces pago 40 − 10 =",
+     "ans": [
+      "30",
+      "$30"
+     ],
+     "despues": ".",
+     "porQue": "El descuento se resta del precio."
+    },
+    {
+     "antes": "Mochila de $100 con 10 %: pago 100 − 10 =",
+     "ans": [
+      "90",
+      "$90"
+     ],
+     "despues": ".",
+     "porQue": "El 10 % de 100 es 10; se resta: 90."
+    }
+   ]
+  },
+  {
+   "id": "s18",
+   "type": "minijuego",
+   "juego": "carrera",
+   "titulo": "Carrera de la tienda",
+   "rondas": [
+    {
+     "q": "¿Cuánto es el 10 % de $50?",
+     "ops": [
+      "$5",
+      "$10",
+      "$50"
+     ],
+     "ok": 0,
+     "porQue": "50 ÷ 10 = 5."
+    },
+    {
+     "q": "¿Cuánto pagas por un cuaderno de $20 con 50 % de descuento?",
+     "ops": [
+      "$10",
+      "$30",
+      "$5"
+     ],
+     "ok": 0,
+     "porQue": "El descuento es 10; 20 − 10 = 10."
+    },
+    {
+     "q": "¿Cuánto es el 25 % de $100?",
+     "ops": [
+      "$50",
+      "$25",
+      "$75"
+     ],
+     "ok": 1,
+     "porQue": "100 ÷ 4 = 25."
+    },
+    {
+     "q": "¿Cuánto pagas por un jugo de $8 con 50 % de descuento?",
+     "ops": [
+      "$4",
+      "$16",
+      "$2"
+     ],
+     "ok": 0,
+     "porQue": "El descuento es 4; 8 − 4 = 4."
+    }
+   ]
+  },
+  {
+   "id": "s19",
+   "type": "sopa",
+   "titulo": "Sopa de la tienda",
+   "intro": "Lee la pista y encuentra la palabra escondida.",
+   "tam": 10,
+   "palabras": [
+    {
+     "palabra": "PRECIO",
+     "pista": "Lo que cuesta un producto"
+    },
+    {
+     "palabra": "MITAD",
+     "pista": "El 50 % de un precio"
+    },
+    {
+     "palabra": "CUARTO",
+     "pista": "El 25 % es un ... del total"
+    },
+    {
+     "palabra": "DESCUENTO",
+     "pista": "Lo que se resta del precio"
+    },
+    {
+     "palabra": "CIEN",
+     "pista": "Un porcentaje compara con este número"
+    }
+   ]
+  },
+  {
+   "id": "s20",
+   "type": "enlazar",
+   "titulo": "Une el producto con lo que pagas",
+   "intro": "Calcula el precio final y únelo.",
+   "ejemplo": "«$100 con 50 %» se une con «$50».",
+   "pares": [
+    {
+     "izq": "$50 con 10 % de descuento",
+     "der": "$45",
+     "porQue": "10 % de 50 = 5; 50 − 5 = 45."
+    },
+    {
+     "izq": "$100 con 50 % de descuento",
+     "der": "$50",
+     "porQue": "La mitad de 100 es 50; 100 − 50 = 50."
+    },
+    {
+     "izq": "$80 con 25 % de descuento",
+     "der": "$60",
+     "porQue": "25 % de 80 = 20; 80 − 20 = 60."
+    },
+    {
+     "izq": "$20 con 50 % de descuento",
+     "der": "$10",
+     "porQue": "La mitad de 20 es 10; 20 − 10 = 10."
+    },
+    {
+     "izq": "$200 con 10 % de descuento",
+     "der": "$180",
+     "porQue": "10 % de 200 = 20; 200 − 20 = 180."
+    }
+   ]
+  },
+  {
+   "id": "s21",
+   "type": "quiz",
+   "titulo": "Quiz 3: precios con descuento",
+   "preguntas": [
+    {
+     "id": "q7",
+     "dba": "Porcentajes y descuentos",
+     "nivel": "aplicar",
+     "enunciado": "Una camiseta cuesta $40 y tiene 25 % de descuento. ¿Cuánto pagas?",
+     "calc": {
+      "expr": "40-40/4",
+      "resultado": "30"
+     },
+     "retroalimentacion": "El 25 % de 40 es 10. Pagas 40 − 10 = 30.",
+     "errorComun": "Hallar el descuento no es el final: hay que restarlo.",
+     "opciones": [
+      {
+       "id": "a",
+       "texto": "$30",
+       "correcta": true
+      },
+      {
+       "id": "b",
+       "texto": "$10",
+       "correcta": false,
+       "porQue": "Ese es el descuento; falta restarlo del precio."
+      },
+      {
+       "id": "c",
+       "texto": "$50",
+       "correcta": false,
+       "porQue": "Sumaste 40 + 10; un descuento se resta."
+      },
+      {
+       "id": "d",
+       "texto": "$15",
+       "correcta": false,
+       "porQue": "Restaste 25 a 40; el descuento es 10."
+      }
+     ]
+    },
+    {
+     "id": "q8",
+     "dba": "Porcentajes y descuentos",
+     "nivel": "aplicar",
+     "enunciado": "Una mochila cuesta $100 y tiene 10 % de descuento. ¿Cuánto pagas?",
+     "calc": {
+      "expr": "100-100/10",
+      "resultado": "90"
+     },
+     "retroalimentacion": "El 10 % de 100 es 10. Pagas 100 − 10 = 90.",
+     "errorComun": "El 10 % no son 10 por ciento del cuaderno sino del precio de la mochila.",
+     "opciones": [
+      {
+       "id": "a",
+       "texto": "$90",
+       "correcta": true
+      },
+      {
+       "id": "b",
+       "texto": "$10",
+       "correcta": false,
+       "porQue": "Ese es el descuento; falta restarlo."
+      },
+      {
+       "id": "c",
+       "texto": "$110",
+       "correcta": false,
+       "porQue": "Sumaste el descuento; se resta."
+      },
+      {
+       "id": "d",
+       "texto": "$99",
+       "correcta": false,
+       "porQue": "Restaste solo 1; el 10 % de 100 es 10."
+      }
+     ]
+    },
+    {
+     "id": "q9",
+     "dba": "Porcentajes y descuentos",
+     "nivel": "aplicar",
+     "enunciado": "Un libro cuesta $30 y tiene 50 % de descuento. ¿Cuánto ahorras?",
+     "calc": {
+      "expr": "30/2",
+      "resultado": "15"
+     },
+     "retroalimentacion": "Ahorras el descuento: 50 % de 30 = 15.",
+     "errorComun": "Ahorrar es el descuento, no el precio final.",
+     "opciones": [
+      {
+       "id": "a",
+       "texto": "$15",
+       "correcta": true
+      },
+      {
+       "id": "b",
+       "texto": "$30",
+       "correcta": false,
+       "porQue": "Ese es el precio completo."
+      },
+      {
+       "id": "c",
+       "texto": "$50",
+       "correcta": false,
+       "porQue": "Usaste el 50 como pesos."
+      },
+      {
+       "id": "d",
+       "texto": "$45",
+       "correcta": false,
+       "porQue": "Sumaste 30 + 15; ahorrar es el descuento."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s22",
+   "type": "abierta",
+   "titulo": "Explica tus pasos",
+   "intro": "Cuéntalo con tus palabras. Tu docente lo leerá.",
+   "minPalabras": 8,
+   "ejemplo": "«Primero hallo el descuento dividiendo, y después lo resto del precio».",
+   "prompts": [
+    "Una camiseta cuesta $60 y tiene 50 % de descuento. Explica paso a paso cómo hallarías lo que pagas."
+   ]
+  },
+  {
+   "id": "s23",
+   "type": "fill",
+   "titulo": "Repaso mezclado",
+   "items": [
+    {
+     "antes": "El 10 % de $90 es",
+     "ans": [
+      "9",
+      "$9"
+     ],
+     "despues": ".",
+     "porQue": "90 ÷ 10 = 9."
+    },
+    {
+     "antes": "El 50 % de $30 es",
+     "ans": [
+      "15",
+      "$15"
+     ],
+     "despues": ".",
+     "porQue": "La mitad de 30 es 15."
+    },
+    {
+     "antes": "Un balón de $80 con descuento de $20 se paga a",
+     "ans": [
+      "60",
+      "$60"
+     ],
+     "despues": ".",
+     "porQue": "80 − 20 = 60."
+    }
+   ],
+   "etapa": "repaso"
+  },
+  {
+   "id": "s24",
+   "type": "evalFinal",
+   "titulo": "Reto final de la tienda",
+   "preguntas": [
+    {
+     "id": "e1",
+     "dba": "Porcentajes y descuentos",
+     "nivel": "aplicar",
+     "enunciado": "Un balón cuesta $80 y tiene 25 % de descuento. ¿Cuánto pagas?",
+     "calc": {
+      "expr": "80-80/4",
+      "resultado": "60"
+     },
+     "retroalimentacion": "El 25 % de 80 es 20. Pagas 80 − 20 = 60.",
+     "errorComun": "Hallar el descuento no es el final: hay que restarlo.",
+     "opciones": [
+      {
+       "id": "a",
+       "texto": "$60",
+       "correcta": true
+      },
+      {
+       "id": "b",
+       "texto": "$20",
+       "correcta": false,
+       "porQue": "Ese es el descuento; falta restarlo del precio."
+      },
+      {
+       "id": "c",
+       "texto": "$100",
+       "correcta": false,
+       "porQue": "Sumaste 80 + 20; un descuento se resta."
+      },
+      {
+       "id": "d",
+       "texto": "$55",
+       "correcta": false,
+       "porQue": "Restaste 25 pesos; el 25 % de 80 es 20."
+      }
+     ]
+    },
+    {
+     "id": "e2",
+     "dba": "Porcentajes y descuentos",
+     "nivel": "aplicar",
+     "enunciado": "Unos zapatos cuestan $200 y tienen 10 % de descuento. ¿Cuánto pagas?",
+     "calc": {
+      "expr": "200-200/10",
+      "resultado": "180"
+     },
+     "retroalimentacion": "El 10 % de 200 es 20. Pagas 200 − 20 = 180.",
+     "errorComun": "El 10 % de 200 no es 10.",
+     "opciones": [
+      {
+       "id": "a",
+       "texto": "$180",
+       "correcta": true
+      },
+      {
+       "id": "b",
+       "texto": "$20",
+       "correcta": false,
+       "porQue": "Ese es el descuento; falta restarlo."
+      },
+      {
+       "id": "c",
+       "texto": "$190",
+       "correcta": false,
+       "porQue": "Restaste 10 pesos; el 10 % de 200 es 20."
+      },
+      {
+       "id": "d",
+       "texto": "$220",
+       "correcta": false,
+       "porQue": "Sumaste el descuento; se resta."
+      }
+     ]
+    },
+    {
+     "id": "e3",
+     "dba": "Porcentajes y descuentos",
+     "nivel": "analizar",
+     "enunciado": "Ana dice: «El 50 % de $60 es $50». ¿Qué error cometió?",
+     "calc": null,
+     "retroalimentacion": "El 50 % de 60 es la mitad: $30.",
+     "errorComun": "El 50 % no son 50 pesos.",
+     "opciones": [
+      {
+       "id": "a",
+       "texto": "Usó 50 como pesos; la mitad de $60 es $30",
+       "correcta": true
+      },
+      {
+       "id": "b",
+       "texto": "No cometió ningún error",
+       "correcta": false,
+       "porQue": "Sí hay error: la mitad de $60 es $30."
+      },
+      {
+       "id": "c",
+       "texto": "Debió dividir entre 4",
+       "correcta": false,
+       "porQue": "Dividir entre 4 daría el 25 %."
+      },
+      {
+       "id": "d",
+       "texto": "Debió restar 60 − 10",
+       "correcta": false,
+       "porQue": "Restar no calcula un porcentaje."
+      }
+     ]
+    },
+    {
+     "id": "e4",
+     "dba": "Porcentajes y descuentos",
+     "nivel": "analizar",
+     "enunciado": "Tienda A: balón de $60 con 50 % de descuento. Tienda B: balón de $44 con 25 % de descuento. ¿Dónde pagas menos?",
+     "calc": null,
+     "retroalimentacion": "En A pagas 60 − 30 = 30; en B pagas 44 − 11 = 33.",
+     "errorComun": "El descuento mayor no siempre da el precio menor: hay que calcular el precio final.",
+     "opciones": [
+      {
+       "id": "a",
+       "texto": "En la tienda A",
+       "correcta": true
+      },
+      {
+       "id": "b",
+       "texto": "En la tienda B",
+       "correcta": false,
+       "porQue": "En B pagas $33, más que los $30 de A."
+      },
+      {
+       "id": "c",
+       "texto": "Pagas lo mismo en las dos",
+       "correcta": false,
+       "porQue": "En A pagas $30 y en B $33: no es lo mismo."
+      },
+      {
+       "id": "d",
+       "texto": "No se puede saber",
+       "correcta": false,
+       "porQue": "Sí se puede: calculando el precio final de cada una."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "s25",
+   "type": "candado",
+   "titulo": "La caja fuerte de la tienda",
+   "intro": "Resuelve los acertijos, junta los 4 dígitos y abre la caja fuerte.",
+   "tesoro": "¡Eres un gran tendero! Te ganaste un cargamento de XP.",
+   "acertijos": [
+    {
+     "q": "¿Cuánto es el 50 % de $10?",
+     "ops": [
+      "$5",
+      "$50",
+      "$20"
+     ],
+     "ok": 0,
+     "digito": 4,
+     "porQue": "La mitad de 10 es 5."
+    },
+    {
+     "q": "¿Qué fracción es el 25 %?",
+     "ops": [
+      "1/2",
+      "1/4",
+      "1/10"
+     ],
+     "ok": 1,
+     "digito": 7,
+     "porQue": "25 de 100 es un cuarto."
+    },
+    {
+     "q": "¿Cuánto es el 10 % de $300?",
+     "ops": [
+      "$30",
+      "$3",
+      "$310"
+     ],
+     "ok": 0,
+     "digito": 2,
+     "porQue": "300 ÷ 10 = 30."
+    },
+    {
+     "q": "¿Cuánto es el 100 % de $9?",
+     "ops": [
+      "$1",
+      "$9",
+      "$100"
+     ],
+     "ok": 1,
+     "digito": 5,
+     "porQue": "El 100 % es todo el precio: $9."
+    }
+   ]
+  },
+  {
+   "id": "s26",
+   "type": "abierta",
+   "titulo": "Tu ticket de salida",
+   "intro": "Antes de irte, cuéntanos cómo te fue. Tu docente lo leerá.",
+   "minPalabras": 4,
+   "ejemplo": "«Hoy aprendí que el 50 % es la mitad. Aún no entiendo el 75 %».",
+   "prompts": [
+    "Hoy aprendí que lo más importante fue…",
+    "Todavía no entiendo bien esta parte del tema…"
+   ]
+  },
+  {
+   "id": "s27",
+   "type": "final",
+   "titulo": "¡Misión cumplida, tendero!",
+   "aprendiste": [
+    "Un porcentaje compara una cantidad con 100.",
+    "El 10 %, el 25 % y el 50 % se calculan dividiendo entre 10, 4 y 2.",
+    "Un descuento se calcula y luego se resta del precio."
+   ],
+   "siguiente": "Resolveremos problemas de porcentajes en gráficas y encuestas."
+  }
+ ]
+}

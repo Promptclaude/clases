@@ -2,7 +2,7 @@
 """
 armar_prompt.py — arma el prompt que se pega en Claude para que se lea COMPLETO.
 
-Une, en este orden:  núcleo (con tarjeta R1–R15)  →  módulos de actividades 33–44  →  tarjeta final R1–R15.
+Une, en este orden:  núcleo (con tarjeta R1–R16)  →  módulos de actividades 33–44  →  tarjeta final R1–R16.
 La tarjeta se repite al final para que las reglas críticas queden al principio y al final del texto,
 donde la atención del modelo es mayor. El resultado cabe en unos 14.000 tokens.
 
@@ -12,7 +12,7 @@ Uso:
   python3 tools/armar_prompt.py --motor            → añade el módulo 32 (para cambiar/ampliar el motor)
   python3 tools/armar_prompt.py --tipos enlazar,sopa,detective
                                                    → solo los módulos de esos tipos (+ los siempre necesarios)
-  python3 tools/armar_prompt.py -o salida.md --presupuesto 40000     (tope de tokens; por defecto 30000)
+  python3 tools/armar_prompt.py -o salida.md --presupuesto 40000     (tope de tokens; por defecto 34000)
 Sale con código 1 si se pasa del presupuesto o falta algo.
 """
 import argparse, glob, os, re, sys
@@ -48,7 +48,7 @@ def main():
     ap.add_argument('--motor', action='store_true', help='añade el módulo 32 (motor y calidad)')
     ap.add_argument('--verificar', action='store_true', help='comprueba que prompt_armado.md del repositorio está al día (no escribe nada)')
     ap.add_argument('--tipos', help='lista de tipos de slide separados por coma; solo sus módulos')
-    ap.add_argument('--presupuesto', type=int, default=30000, help='tope de tokens estimados')
+    ap.add_argument('--presupuesto', type=int, default=34000, help='tope de tokens estimados')
     ap.add_argument('-o', '--salida', default=os.path.join(RAIZ, 'prompt_armado.md'))
     a = ap.parse_args()
 
@@ -83,7 +83,7 @@ def main():
             txt = filtrar_formato(txt, tipos).strip()
         partes.append('\n\n---\n\n<!-- MÓDULO %d -->\n\n%s' % (n, txt))
         incluidos.append((n, os.path.basename(todos[n])))
-    partes.append('\n\n---\n\n## ★ TARJETA FINAL — antes de entregar, verifica R1–R15 una por una\n\n' + tarjeta + '\n')
+    partes.append('\n\n---\n\n## ★ TARJETA FINAL — antes de entregar, verifica R1–R16 una por una\n\n' + tarjeta + '\n')
     salida = ''.join(partes)
 
     t = tokens(salida)
@@ -101,7 +101,7 @@ def main():
     print('  %d caracteres ≈ %d tokens (presupuesto %d)' % (len(salida), t, a.presupuesto))
     if t > a.presupuesto:
         print('✗ Se pasa del presupuesto: un prompt tan largo no se lee completo. Reduce con --tipos o recorta módulos.'); return 1
-    print('✔ Cabe completo y la tarjeta R1–R15 queda al principio y al final.')
+    print('✔ Cabe completo y la tarjeta R1–R16 queda al principio y al final.')
     return 0
 
 

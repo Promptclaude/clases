@@ -34,8 +34,12 @@ Una clase es **solo** un JSON `{ "meta": {…}, "slides": […] }`. El motor, lo
 **Reglas de forma comunes**
 - Cada slide lleva un `id` único (`r01`, `r02`… en orden; los ejemplos también usan `m01`…). Cada pregunta lleva `id` único dentro de su quiz (`q1`, `q2`… y en el reto final `e1`, `e2`…).
 - `meta.claseId`: con `meta.aula: true` es el nombre del archivo sin `.html`, p. ej. `semana6_tec4_p4` (`semana<N>_<mat|tec><grado>_p<período>`). `meta.materia`: `Aritmética` o `Tecnología e Informática`. `meta.grado`: 4 o 5. `meta.dba`: texto que empieza por «DBA: ».
+- `meta.cofres` y `meta.premio` son **opcionales** (monedas y cofres, núcleo §5-E): `cofres` son **exactamente 5** `{"icono": "🛒", "nombre": "Carrito de compras"}` con el tema de la clase, de menos a más valioso (icono ≤ 8 caracteres, nombre ≤ 32); `premio` es un texto de 3 a 80 caracteres con un premio real que da el docente.
+- `meta.tema` (opcional): `espacio`, `oceano`, `bosque`, `volcan`, `dulce` o `desierto` (núcleo §5-F). En cualquier slide, `etapa` (opcional) cambia la cinta de color automática: `mision`, `calienta`, `aprende`, `juntos`, `tu`, `juego`, `comprueba`, `explica`, `reto`, `repaso` o `final`.
 - `meta.aula: true` conecta la clase al Aula. `meta.aulaVersion` es solo un número (fecha `AAAAMMDD`) que obliga al navegador a recargar los scripts del Aula: copia el de la clase más reciente y no lo inventes; cámbialo solo si el docente avisa que actualizó esos scripts. Si no tienes una clase de referencia, pregúntalo.
 - Preguntas (`quiz` y `evalFinal`): `nivel` ∈ `recordar` · `comprender` · `aplicar` · `analizar`. Una sola opción con `"correcta": true`; **toda opción incorrecta lleva `porQue`**. `calc` es `null` cuando no hay operación; con operación va `{"expr": "3.4+2.15", "resultado": "5,55"}` (decimales con coma o punto) y la puerta lo recalcula.
+- Los ejemplos de abajo muestran la **forma** de cada tipo, no el largo: una clase real tiene 25 a 32 slides (núcleo §5-A).
+- `abierta`: cada elemento de `prompts` es una frase de **mínimo 4 palabras** (un «Hoy aprendí que…» corto da error).
 - Respuestas numéricas: pueden llevar `$` o `%` (`"$20"`, `"25 %"`); la puerta compara el número. Ninguna opción incorrecta puede valer lo mismo que la correcta.
 - Imágenes: `"imagen": "asset://<id-del-banco>"` y su `"alt"` descriptivo. La mascota «así se hace» de un `info` va en `"aria": "asset://aria-asi-se-hace"`.
 """
@@ -65,7 +69,9 @@ def recortar(s):
 
 def generar():
     por_tipo, metas = cargar()
-    meta = sorted(metas, key=lambda m: -len(m))[0]          # el que trae meta.aula
+    meta = dict(sorted(metas, key=lambda m: -len(m))[0])     # el más completo...
+    for m in metas:                                         # ...más las claves opcionales que traen los demás (aula, cofres, premio)
+        for k, v in m.items(): meta.setdefault(k, v)
     out = [CABECERA, '## meta\n', '```json', json.dumps(meta, ensure_ascii=False), '```\n']
     out.append('## Un ejemplo por tipo de slide\n')
     faltan = [t for t in ORDEN if t not in por_tipo]
