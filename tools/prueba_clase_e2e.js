@@ -128,7 +128,7 @@ async function recorrer(w, modo, tope = 40) { let n = 0; const vistos = []; whil
     for (let i = 1; i <= k; i++) { await resp(true); lect.push(hud(w)); esp.push((i * paso).toFixed(1)); }
     ok(lect.join() === esp.join(), `cada acierto sube el HUD en vivo: ${lect.join(' → ')} (esperado ${esp.join(' → ')})`);
     for (let i = k; i < NQ1; i++) await resp(false); for (const j of iQuiz.slice(1)) { w.CLASE_API.irA(j); for (let n = 0; n < SL0[j].preguntas.length; n++) await resp(n === 0); }
-    const aciertos1 = k + (iQuiz.length > 1 ? 1 : 0), mejor = w.CLASE_API.notaOficial(); ok(Math.abs(mejor - aciertos1 * paso) < 0.01, `primer intento: ${aciertos1} de ${NQ} → nota oficial ${(aciertos1 * paso).toFixed(2)} (${mejor.toFixed(2)})`);
+    const aciertos1 = k + (iQuiz.length - 1)   /* una correcta en cada pantalla de evaluación posterior a la primera (clases con varios quizzes) */, mejor = w.CLASE_API.notaOficial(); ok(Math.abs(mejor - aciertos1 * paso) < 0.01, `primer intento: ${aciertos1} de ${NQ} → nota oficial ${(aciertos1 * paso).toFixed(2)} (${mejor.toFixed(2)})`);
     w.CLASE_API.irA(iFinal); clic(q(w, '[data-test=reintentar]')); ok(!q(w, '#modal').hidden, 'pide confirmación antes de gastar la oportunidad'); clic(q(w, '[data-test=confirmar-reintento]'));
     ok(hud(w) === '0.0' && tipo(w) === SL0[iQuiz[0]].type, 'reintento: el HUD arranca en 0.0 y vuelve al quiz'); ok(new RegExp('Mejor nota: ' + mejor.toFixed(1).replace('.', '\\.')).test(q(w, '#nota-intento-hud').textContent), `aparte se ve «Mejor nota: ${mejor.toFixed(1)} (es la que cuenta)»`);
     ok(qa(w, '#vidas-hud img').filter(i => /usada/.test(i.alt)).length === 1, 'las oportunidades muestran 1 usada');
@@ -350,6 +350,68 @@ async function recorrer(w, modo, tope = 40) { let n = 0; const vistos = []; whil
       clic(q(w, '[data-test=abierta-guardar]')); await sleep(60); ok(JSON.parse(w.localStorage.getItem(claves()[0])).a[0].r.startsWith('respuesta corregida'), 'al guardar de nuevo se actualiza la respuesta enviada');
       const iC = SL0.findIndex(x => x.type === 'cuaderno'); if (iC >= 0) { API.irA(iC); const cb = q(w, '[data-test=cuaderno-ok]'); cb.checked = true; cb.dispatchEvent(new w.Event('change', { bubbles: true })); await sleep(60); ok(JSON.parse(w.localStorage.getItem(claves()[0])).a.some(x => x.tipo === 'cuaderno' && x.s === SL0[iC].id), 'marcar «hice la hoja a mano» queda registrado como entregado para el docente'); }
       w.close(); } }
+
+  T('T35 · Incentivo sin nota: monedas 🪙 y cofres (suben con la práctica, nunca tocan la nota ni bloquean)');
+  { const w0 = abrir({ est: 'monedas0' }).window, e0 = w0.CLASE_API.estado(), pos = e0.monedasPosibles, hayActs = pos >= 30;
+    ok(e0.monedas === 0, 'arranca en 0 monedas (una semana nueva siempre parte de cero)');
+    if (!hayActs) { ok(!q(w0, '[data-test=cofre]'), 'con menos de 3 actividades no se muestra la barra'); }
+    else {
+      ok(e0.cofres.length === 5 && e0.cofres.every((u, i, a) => i === 0 || u > a[i - 1]) && e0.cofres[4] <= pos, '5 cofres con umbrales crecientes y alcanzables: ' + e0.cofres.join(' · ') + ' de ' + pos + ' posibles');
+      ok(!!q(w0, '[data-test=cofre]') && qa(w0, '[data-test=cofre-item]').length === 5 && q(w0, '[data-test=monedas]').textContent.includes('0'), 'la barra de cofres está en el encabezado con 5 cofres cerrados');
+      ok(qa(w0, '[data-test=cofre-item]').every(x => x.dataset.abierto === '0'), 'al empezar todos los cofres están cerrados 🔒');
+      // los quizzes NO dan monedas (su premio es la nota)
+      const iQ = idxEvaluables(w0)[0]; w0.CLASE_API.irA(iQ); await jugarSlide(w0, 'bien');
+      ok(w0.CLASE_API.estado().monedas === 0, 'responder un quiz bien NO da monedas (esa recompensa es la nota)');
+    }
+    w0.close();
+    if (hayActs) {
+      const wm = abrir({ est: 'monedasM' }).window; await recorrer(wm, 'mal'); const em = wm.CLASE_API.estado(), hm = hud(wm);
+      const wb = abrir({ est: 'monedasB' }).window; await recorrer(wb, 'bien'); const eb = wb.CLASE_API.estado(), hb = hud(wb);
+      ok(em.monedas > 0, 'intentar y fallar TAMBIÉN suma (' + em.monedas + ' monedas): el esfuerzo cuenta');
+      ok(em.monedas < eb.monedas && eb.monedas >= 0.8 * pos, 'acertar suma casi el doble: mal ' + em.monedas + ' · bien ' + eb.monedas + ' de ' + pos);
+      ok(hm === '0.0' && hb === '5.0', 'las monedas no cambian la nota: mal ' + hm + ' · bien ' + hb);
+      const ab = e => e.cofres.filter(u => e.monedas >= u).length;
+      ok(ab(eb) >= 4 && ab(em) < ab(eb), 'acertar abre más cofres que solo intentar: bien ' + ab(eb) + ' · mal ' + ab(em));
+      ok(!!q(wb, '[data-test=cofre-toast]'), 'el aviso de monedas/cofres existe y se muestra aunque la barra quede fuera de pantalla');
+      ok(wb.CLASE_API.ERRORES.length === 0 && wm.CLASE_API.ERRORES.length === 0, 'cero errores de JavaScript con el incentivo');
+      const fin = q(wb, '[data-test=celebracion]');
+      ok(!!fin && !!q(wb, '[data-test=chip-monedas]') && q(wb, '[data-test=chip-monedas]').textContent.includes(String(eb.monedas)), 'la pantalla final muestra las monedas ganadas');
+      ok(!!q(wb, '[data-test=cofres-final]'), 'la pantalla final muestra la colección de cofres');
+      if (eb.premio && ab(eb) === 5) ok(!!q(wb, '[data-test=premio]') && q(wb, '[data-test=premio]').textContent.includes(eb.premio), 'con los 5 cofres abiertos aparece el premio del docente: «' + eb.premio + '»');
+      { const ins = q(wb, '[data-test=insignia]'); ok(!!ins && ins.textContent.includes(eb.monedas + ' monedas') && (!eb.premio || ab(eb) < 5 || ins.textContent.includes(eb.premio)), 'la insignia imprimible deja constancia de monedas, cofres' + (eb.premio ? ' y premio' : '')); }
+      if (eb.premio) ok(!q(wm, '[data-test=premio]'), 'sin abrir los 5 cofres el premio NO aparece (solo el aviso de cómo ganarlo)');
+      if (!eb.premio) ok(!q(wb, '[data-test=premio]'), 'sin meta.premio no aparece ningún premio');
+      wm.close(); wb.close();
+    }
+  }
+
+  T('T36 · Mejoras visuales: cintas de etapa, mascota en la intro, ayuda plegable, encabezado compacto, tema de color');
+  { const w = abrir({ est: 'visual36' }).window, SLv = w.CLASE_API.SL, ETAPAS = ['mision', 'calienta', 'aprende', 'juntos', 'tu', 'juego', 'comprueba', 'explica', 'reto', 'repaso', 'final'];
+    let sinCinta = [], mala = [];
+    for (let i = 0; i < SLv.length; i++) { w.CLASE_API.irA(i); const c = q(w, '[data-test=etapa]'); if (!c) sinCinta.push(SLv[i].id); else if (!ETAPAS.includes(c.dataset.etapa) || !c.textContent.trim()) mala.push(SLv[i].id); }
+    ok(sinCinta.length === 0 && mala.length === 0, 'cada slide lleva su cinta de etapa con color y nombre' + (sinCinta.length ? ' · SIN cinta: ' + sinCinta : '') + (mala.length ? ' · etapa inválida: ' + mala : ''));
+    w.CLASE_API.irA(0); const hero = q(w, '[data-test=hero] img');
+    ok(!!hero && (hero.getAttribute('alt') || '').length > 10, 'la introducción trae la mascota ARIA con texto alternativo');
+    SLv.forEach((s, i) => { if (s.etapa) { w.CLASE_API.irA(i); ok(q(w, '[data-test=etapa]').dataset.etapa === s.etapa, 'la etapa «' + s.etapa + '» escrita en ' + s.id + ' manda sobre la automática'); } });
+    const estilos = [...w.document.querySelectorAll('style')].map(x => x.textContent).join('\n');
+    ok(/input\[data-test=fill-input\]\{display:inline-block/.test(estilos), 'los cuadros de «completar» van en línea con la frase');
+    // ayuda plegable: abierta la 1.ª vez de cada tipo; plegada en los siguientes
+    const porTipo = {}; SLv.forEach((s, i) => { (porTipo[s.type] = porTipo[s.type] || []).push(i); });
+    const tipo2 = Object.keys(porTipo).find(k => ['tf', 'fill', 'enlazar', 'memoria', 'ordenar', 'tabla', 'drag', 'sopa'].includes(k) && porTipo[k].length >= 2);
+    if (tipo2) {
+      w.CLASE_API.irA(porTipo[tipo2][0]); const d1 = q(w, '.tarjeta-reto');
+      ok(!!d1 && d1.open === true, 'la ayuda «Cómo se juega» está ABIERTA la primera vez que aparece «' + tipo2 + '»');
+      await jugarSlide(w, 'bien');
+      w.CLASE_API.irA(porTipo[tipo2][1]); const d2 = q(w, '.tarjeta-reto');
+      ok(!!d2 && d2.open === false && !!q(w, '.tarjeta-reto [data-test=prog]'), 'en la segunda «' + tipo2 + '» la ayuda va PLEGADA (una línea) y el progreso sigue visible');
+    }
+    const e = w.CLASE_API.estado(), barra = q(w, '#barra');
+    if (e.monedasPosibles >= 30) ok(barra.classList.contains('v35on') && !!q(w, '[data-test=xp-compacto]') && q(w, '[data-test=xp-compacto]').textContent.includes(String(e.xp)), 'el XP se muestra en la fila de las monedas (encabezado compacto)');
+    if (e.tema) { const f = w.document.documentElement.style.getPropertyValue('--mundo-fondo'); ok(/^#[0-9a-f]{6}$/i.test(f), 'el tema «' + e.tema + '» cambia el color de fondo: ' + f); }
+    else ok(w.document.documentElement.style.getPropertyValue('--mundo-fondo') === '', 'sin meta.tema se conserva el aspecto de la plantilla');
+    ok(w.CLASE_API.ERRORES.length === 0, 'cero errores de JavaScript con lo visual');
+    w.close();
+  }
 
   console.log(`\n${pasos - fallos}/${pasos} comprobaciones OK${fallos ? ' · ' + fallos + ' ❌' : ''}`); process.exit(fallos ? 1 : 0);
 })().catch(e => { console.error('ERROR del runner:', e); process.exit(3); });
