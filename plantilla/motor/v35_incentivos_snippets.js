@@ -32,8 +32,8 @@ function v35Cofres() {
   const c = document.createElement('style');
   c.textContent = '#v35-cofre{flex:1 1 100%;margin-top:4px;position:relative}' +
     '#v35-cofre .top{display:flex;justify-content:space-between;align-items:baseline;gap:8px;font-size:.78rem;font-weight:800;color:#fde68a}' +
-    '#v35-cofre .mon{font-size:1rem;color:#ffe27a}#v35-cofre .prox{opacity:.9;font-weight:700;color:#fff}' +
-    '#v35-cofre .barra{position:relative;height:12px;margin:12px 16px 14px;border-radius:99px;background:#ffffff22;border:2px solid var(--contorno)}' +
+    '#v35-cofre .mon{font-size:1rem;color:#ffe27a}#v35-cofre .xp{font-weight:800;color:#fff;opacity:.95}#v35-cofre .prox{opacity:.9;font-weight:700;color:#fff;text-align:right}' +
+    '#v35-cofre .barra{position:relative;height:11px;margin:10px 16px 12px;border-radius:99px;background:#ffffff22;border:2px solid var(--contorno)}' +
     '#v35-cofre .barra>i{display:block;height:100%;border-radius:99px;background:linear-gradient(90deg,#fbbf24,#f59e0b,#fde047);transition:width .5s}' +
     '#v35-cofre .c{position:absolute;top:50%;transform:translate(-50%,-50%);width:26px;height:26px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.9rem;background:#334155;border:2px solid #94a3b8;filter:grayscale(.7);opacity:.85}' +
     '#v35-cofre .c.ab{background:#fbbf24;border-color:#fff;filter:none;opacity:1;box-shadow:0 0 10px #fbbf24;transform:translate(-50%,-50%) scale(1.15)}' +
@@ -54,10 +54,11 @@ function v35Cofre() {
   const cont = document.getElementById('barra'); if (!cont || v35Actividades().length < 3) return;
   const mon = v35Monedas(), cofres = v35Cofres(), max = cofres[4].umbral, pct = Math.min(100, Math.round(mon / max * 100));
   const abiertos = cofres.filter(x => mon >= x.umbral).length, prox = cofres.find(x => mon < x.umbral);
+  cont.classList.add('v35on');                                   // el XP se muestra aquí y se oculta su fila aparte
   let el = document.getElementById('v35-cofre');
   if (!el) { el = document.createElement('div'); el.id = 'v35-cofre'; el.setAttribute('data-test', 'cofre'); cont.appendChild(el); }
-  el.innerHTML = '<div class="top"><span class="mon" data-test="monedas">🪙 ' + mon + '</span><span class="prox">' +
-      (prox ? 'Próximo cofre: ' + esc(prox.icono) + ' a ' + prox.umbral + ' 🪙' : '¡Todos los cofres abiertos!') + '</span></div>' +
+  el.innerHTML = '<div class="top"><span class="mon" data-test="monedas">🪙 ' + mon + '</span><span class="xp" data-test="xp-compacto">⭐ ' + st.xp + ' XP · ' + NIVELES[nivelActual()] + '</span><span class="prox">' +
+      (prox ? 'Próximo: ' + esc(prox.icono) + ' a ' + prox.umbral + ' 🪙' : '¡Todos abiertos!') + '</span></div>' +
     '<div class="barra" role="progressbar" aria-label="Cofres de práctica: ' + abiertos + ' de 5 abiertos" aria-valuemin="0" aria-valuemax="' + max + '" aria-valuenow="' + Math.min(mon, max) + '">' +
       '<i style="width:' + pct + '%"></i>' +
       cofres.map((x, i) => '<span class="c' + (mon >= x.umbral ? ' ab' : '') + '" style="left:' + Math.round(x.umbral / max * 100) + '%" data-test="cofre-item" data-abierto="' + (mon >= x.umbral ? 1 : 0) + '" title="' + esc(x.nombre) + '">' + (mon >= x.umbral ? esc(x.icono) : '🔒') + '</span>').join('') +

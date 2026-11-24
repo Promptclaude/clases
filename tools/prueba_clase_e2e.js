@@ -385,5 +385,33 @@ async function recorrer(w, modo, tope = 40) { let n = 0; const vistos = []; whil
     }
   }
 
+  T('T36 · Mejoras visuales: cintas de etapa, mascota en la intro, ayuda plegable, encabezado compacto, tema de color');
+  { const w = abrir({ est: 'visual36' }).window, SLv = w.CLASE_API.SL, ETAPAS = ['mision', 'calienta', 'aprende', 'juntos', 'tu', 'juego', 'comprueba', 'explica', 'reto', 'repaso', 'final'];
+    let sinCinta = [], mala = [];
+    for (let i = 0; i < SLv.length; i++) { w.CLASE_API.irA(i); const c = q(w, '[data-test=etapa]'); if (!c) sinCinta.push(SLv[i].id); else if (!ETAPAS.includes(c.dataset.etapa) || !c.textContent.trim()) mala.push(SLv[i].id); }
+    ok(sinCinta.length === 0 && mala.length === 0, 'cada slide lleva su cinta de etapa con color y nombre' + (sinCinta.length ? ' · SIN cinta: ' + sinCinta : '') + (mala.length ? ' · etapa inválida: ' + mala : ''));
+    w.CLASE_API.irA(0); const hero = q(w, '[data-test=hero] img');
+    ok(!!hero && (hero.getAttribute('alt') || '').length > 10, 'la introducción trae la mascota ARIA con texto alternativo');
+    SLv.forEach((s, i) => { if (s.etapa) { w.CLASE_API.irA(i); ok(q(w, '[data-test=etapa]').dataset.etapa === s.etapa, 'la etapa «' + s.etapa + '» escrita en ' + s.id + ' manda sobre la automática'); } });
+    const estilos = [...w.document.querySelectorAll('style')].map(x => x.textContent).join('\n');
+    ok(/input\[data-test=fill-input\]\{display:inline-block/.test(estilos), 'los cuadros de «completar» van en línea con la frase');
+    // ayuda plegable: abierta la 1.ª vez de cada tipo; plegada en los siguientes
+    const porTipo = {}; SLv.forEach((s, i) => { (porTipo[s.type] = porTipo[s.type] || []).push(i); });
+    const tipo2 = Object.keys(porTipo).find(k => ['tf', 'fill', 'enlazar', 'memoria', 'ordenar', 'tabla', 'drag', 'sopa'].includes(k) && porTipo[k].length >= 2);
+    if (tipo2) {
+      w.CLASE_API.irA(porTipo[tipo2][0]); const d1 = q(w, '.tarjeta-reto');
+      ok(!!d1 && d1.open === true, 'la ayuda «Cómo se juega» está ABIERTA la primera vez que aparece «' + tipo2 + '»');
+      await jugarSlide(w, 'bien');
+      w.CLASE_API.irA(porTipo[tipo2][1]); const d2 = q(w, '.tarjeta-reto');
+      ok(!!d2 && d2.open === false && !!q(w, '.tarjeta-reto [data-test=prog]'), 'en la segunda «' + tipo2 + '» la ayuda va PLEGADA (una línea) y el progreso sigue visible');
+    }
+    const e = w.CLASE_API.estado(), barra = q(w, '#barra');
+    if (e.monedasPosibles >= 30) ok(barra.classList.contains('v35on') && !!q(w, '[data-test=xp-compacto]') && q(w, '[data-test=xp-compacto]').textContent.includes(String(e.xp)), 'el XP se muestra en la fila de las monedas (encabezado compacto)');
+    if (e.tema) { const f = w.document.documentElement.style.getPropertyValue('--mundo-fondo'); ok(/^#[0-9a-f]{6}$/i.test(f), 'el tema «' + e.tema + '» cambia el color de fondo: ' + f); }
+    else ok(w.document.documentElement.style.getPropertyValue('--mundo-fondo') === '', 'sin meta.tema se conserva el aspecto de la plantilla');
+    ok(w.CLASE_API.ERRORES.length === 0, 'cero errores de JavaScript con lo visual');
+    w.close();
+  }
+
   console.log(`\n${pasos - fallos}/${pasos} comprobaciones OK${fallos ? ' · ' + fallos + ' ❌' : ''}`); process.exit(fallos ? 1 : 0);
 })().catch(e => { console.error('ERROR del runner:', e); process.exit(3); });

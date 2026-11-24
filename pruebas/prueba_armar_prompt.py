@@ -16,7 +16,7 @@ def armar(*args):
 r, t = armar()
 s_ = t
 chequeo('armar_prompt termina bien (código 0)', r.returncode == 0, r.stdout + r.stderr)
-chequeo('tamaño ≤ 25.000 tokens estimados', len(t) // 3 <= 25000, str(len(t) // 3))
+chequeo('tamaño ≤ 27.000 tokens estimados', len(t) // 3 <= 27000, str(len(t) // 3))
 reglas = ['R%d' % i for i in range(1, 17)]
 ini = t.find('TARJETA DE REGLAS CRÍTICAS'); fin = t.rfind('TARJETA FINAL')
 chequeo('la tarjeta aparece al principio y al final', 0 <= ini < fin and ini < 2000 and len(t) - fin < 4000, 'ini=%d fin=%d de %d' % (ini, fin, len(t)))
@@ -36,6 +36,8 @@ chequeo('exige explicar con sus palabras antes del primer quiz', 'explícaselo a
 chequeo('explica qué hacer si se equivoca sin bloquear', 'no se frena' in t and 'No me sale' in t)
 chequeo('pide ticket de salida y caza-errores', 'ticket de salida' in t and 'Caza-errores' in t)
 chequeo('explica monedas y cofres y el premio del docente', 'Monedas y cofres' in s_ and 'meta.premio' in s_ and 'meta.cofres' in s_ and '10 monedas' in s_)
+chequeo('explica el tema de color y las etapas', 'meta.tema' in s_ and 'cinta de color' in s_ and 'no repitas el de la clase anterior' in s_ and '`etapa`' in s_)
+chequeo('el formato de datos documenta tema y etapa', '"tema"' in s_ and 'etapa' in s_)
 chequeo('el formato de datos documenta cofres y premio', '"cofres"' in s_ and '"premio"' in s_)
 chequeo('pide el bloque de LECTURA al inicio', 'LECTURA:' in t and 'cortado' in t)
 chequeo('sin referencias a imágenes remotas', 'unsplash' not in t.lower())

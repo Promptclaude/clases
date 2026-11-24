@@ -28,7 +28,8 @@
     "nombre": "Trofeo de la tienda"
    }
   ],
-  "premio": "Elige la canción con la que empezamos la próxima clase"
+  "premio": "Elige la canción con la que empezamos la próxima clase",
+  "tema": "desierto"
  },
  "slides": [
   {
@@ -66,7 +67,8 @@
      "v": true,
      "porQue": "Correcto: lo confirmaremos en la misión 1."
     }
-   ]
+   ],
+   "etapa": "calienta"
   },
   {
    "id": "s03",
@@ -463,7 +465,8 @@
      "v": false,
      "porQue": "Multiplicó por 2; el 50 % es la mitad: 80 ÷ 2 = 40."
     }
-   ]
+   ],
+   "etapa": "comprueba"
   },
   {
    "id": "s15",
@@ -896,7 +899,8 @@
      "despues": ".",
      "porQue": "80 − 20 = 60."
     }
-   ]
+   ],
+   "etapa": "repaso"
   },
   {
    "id": "s24",

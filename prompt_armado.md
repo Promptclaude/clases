@@ -1,6 +1,6 @@
 # PROMPT MAESTRO DE CLASES v27 — NÚCLEO
 
-> Se usa **armado** con `python3 tools/armar_prompt.py` (núcleo + módulos 33–44 + tarjeta final ≈ 22.000 tokens): así todo el prompt se lee completo.
+> Se usa **armado** con `python3 tools/armar_prompt.py` (núcleo + módulos 33–44 + tarjeta final ≈ 25.000 tokens): así todo el prompt se lee completo.
 > Propuesta de reducción de la v26 (645.000 caracteres → unos 9.500, ≈3.000 tokens). Antes de adoptarla, revisar `MIGRACION_v26_a_v27.md`.
 
 <!--TARJETA_INICIO-->
@@ -140,7 +140,7 @@ Nada se bloquea: el estudiante **intenta** (responde algo) y sigue a su ritmo, a
 - **Una historia en 3 actos** (Descubre → Practica → Reta). Los títulos hablan en voz de misión: «Misión 2 · Calcula el porcentaje».
 - **Cada juego con su verbo:** `relampago` = rapidez; `memoria` = equivalencias; `ordenar` = procedimientos; `detective` = analizar señales; `tabla` = patrones; `candado` = recompensa final.
 - **Variedad de gestos:** alterna leer, tocar, arrastrar y escribir; nunca más de 2 slides seguidas del mismo tipo (el auditor lo exige).
-- **Cofres con tema:** los 5 cofres (`meta.cofres`) son parte de la historia (§5-E).
+- **Cofres y tema con la historia:** los 5 cofres (`meta.cofres`) son parte de la historia (§5-E).
 - **Caza-errores:** al menos una actividad (un `tf` o una pregunta de nivel `analizar`) donde un personaje se equivoca y el estudiante dice por qué.
 
 ### 5-E. Monedas y cofres: la práctica sin nota también vale (lo hace el motor)
@@ -152,6 +152,12 @@ Tu parte al escribir la clase:
 2. **Pon tema a los cofres** con `meta.cofres`: **exactamente 5** `{icono, nombre}` con objetos de la historia de la clase, de menos a más valioso (en la tienda: 🛒 🏷️ 🧮 👑 🏆). Si no los pones, el motor usa unos genéricos (🧢 🔭 🚀 👑 🏆).
 3. **Anúncialo en la misión:** el tercer renglón de `intro` («🏆 Ganarás: …») menciona las monedas, los cofres y el premio si lo hay.
 4. **Cuenta con ello al diseñar:** toda actividad sin nota vale lo mismo (10 monedas), así que una clase de 18 actividades da 180 posibles. No inventes puntos ni alargues la clase para «dar más monedas».
+
+### 5-F. Aspecto visual: cintas de etapa y tema de color (lo pinta el motor)
+
+- **Cada slide lleva sola una cinta de color con su etapa:** 🧠 Aprende (`info`), 🤝 Lo hacemos juntos (`tf`, `fill`), 💪 Ahora tú, 🎮 ¡A jugar!, 🧪 Comprueba (`quiz`), ✍️ Explica con tus palabras (`abierta`), 🏆 Reto final. Así el estudiante ve en qué parte del ciclo va (§5-A) y la clase no se siente como una sola pantalla repetida. **No la escribas**: cámbiala solo cuando el tipo no cuente la historia, con `etapa` en la slide (`mision`, `calienta`, `aprende`, `juntos`, `tu`, `juego`, `comprueba`, `explica`, `reto`, `repaso`, `final`). Ejemplos: el `tf` del inicio → `calienta`; el `fill` de repaso mezclado → `repaso`; el `tf` de caza-errores → `comprueba`.
+- **Tema de color por clase (`meta.tema`):** `espacio`, `oceano`, `bosque`, `volcan`, `dulce` o `desierto`. Elige el que combine con la historia (tienda → `desierto`, mar → `oceano`, huerta → `bosque`, dulces → `dulce`) y **no repitas el de la clase anterior** de la misma materia; si no sabes cuál fue, pregúntalo. Sin `meta.tema` se usa `espacio`.
+- La mascota ARIA sale sola en la introducción y la ayuda «Cómo se juega» se pliega sola después de la primera vez de cada tipo. En celular conviene que el contenido importante quepa sin tanto desplazamiento: **frases cortas y pocas actividades por slide**.
 
 ### 5-D. Preguntas y contenido
 
@@ -173,7 +179,7 @@ Tu parte al escribir la clase:
 - Respuestas abiertas: máximo 12 en toda la clase (contando `cuaderno`), con `ejemplo` de buena respuesta; cada pregunta de una `abierta` es una frase de **mínimo 4 palabras**. **Nunca pidas datos personales** (nombre, dirección, teléfono, contraseñas, edad, fotos): las lee el docente y quedan guardadas.
 
 **Diseño.**
-- El aspecto (colores, fondo temático) es el de la plantilla: el constructor no lo cambia desde `datos.json`. Un tema visual distinto por clase es un cambio de herramienta, no de datos.
+- El aspecto lo pinta el motor; tú solo eliges `meta.tema` y, si hace falta, `etapa` (§5-F).
 - Tarjetas, opciones y zonas de respuesta claras, con texto oscuro y contraste legible.
 - Usa contexto de Cúcuta y Norte de Santander cuando aporte al concepto, sin forzarlo.
 - Peso del archivo ≤ 1,5 MB; sin recursos externos.
@@ -558,6 +564,7 @@ Una clase es **solo** un JSON `{ "meta": {…}, "slides": […] }`. El motor, lo
 - Cada slide lleva un `id` único (`r01`, `r02`… en orden; los ejemplos también usan `m01`…). Cada pregunta lleva `id` único dentro de su quiz (`q1`, `q2`… y en el reto final `e1`, `e2`…).
 - `meta.claseId`: con `meta.aula: true` es el nombre del archivo sin `.html`, p. ej. `semana6_tec4_p4` (`semana<N>_<mat|tec><grado>_p<período>`). `meta.materia`: `Aritmética` o `Tecnología e Informática`. `meta.grado`: 4 o 5. `meta.dba`: texto que empieza por «DBA: ».
 - `meta.cofres` y `meta.premio` son **opcionales** (monedas y cofres, núcleo §5-E): `cofres` son **exactamente 5** `{"icono": "🛒", "nombre": "Carrito de compras"}` con el tema de la clase, de menos a más valioso (icono ≤ 8 caracteres, nombre ≤ 32); `premio` es un texto de 3 a 80 caracteres con un premio real que da el docente.
+- `meta.tema` (opcional): `espacio`, `oceano`, `bosque`, `volcan`, `dulce` o `desierto` (núcleo §5-F). En cualquier slide, `etapa` (opcional) cambia la cinta de color automática: `mision`, `calienta`, `aprende`, `juntos`, `tu`, `juego`, `comprueba`, `explica`, `reto`, `repaso` o `final`.
 - `meta.aula: true` conecta la clase al Aula. `meta.aulaVersion` es solo un número (fecha `AAAAMMDD`) que obliga al navegador a recargar los scripts del Aula: copia el de la clase más reciente y no lo inventes; cámbialo solo si el docente avisa que actualizó esos scripts. Si no tienes una clase de referencia, pregúntalo.
 - Preguntas (`quiz` y `evalFinal`): `nivel` ∈ `recordar` · `comprender` · `aplicar` · `analizar`. Una sola opción con `"correcta": true`; **toda opción incorrecta lleva `porQue`**. `calc` es `null` cuando no hay operación; con operación va `{"expr": "3.4+2.15", "resultado": "5,55"}` (decimales con coma o punto) y la puerta lo recalcula.
 - Los ejemplos de abajo muestran la **forma** de cada tipo, no el largo: una clase real tiene 25 a 32 slides (núcleo §5-A).
@@ -568,7 +575,7 @@ Una clase es **solo** un JSON `{ "meta": {…}, "slides": […] }`. El motor, lo
 ## meta
 
 ```json
-{"claseId": "mat5_p4_s5_porcentajes_2h", "semana": 5, "grado": 5, "materia": "Aritmética", "titulo": "Porcentajes y descuentos en la tienda escolar", "dba": "DBA: Resuelve problemas de compra con porcentajes sencillos y descuentos, relacionándolos con fracciones", "cofres": [{"icono": "🛒", "nombre": "Carrito de compras"}, {"icono": "🏷️", "nombre": "Etiqueta de oferta"}, {"icono": "🧮", "nombre": "Calculadora de tendero"}, {"icono": "👑", "nombre": "Corona del tendero"}, {"icono": "🏆", "nombre": "Trofeo de la tienda"}], "premio": "Elige la canción con la que empezamos la próxima clase", "aula": true, "aulaVersion": "20261110"}
+{"claseId": "mat5_p4_s5_porcentajes_2h", "semana": 5, "grado": 5, "materia": "Aritmética", "titulo": "Porcentajes y descuentos en la tienda escolar", "dba": "DBA: Resuelve problemas de compra con porcentajes sencillos y descuentos, relacionándolos con fracciones", "cofres": [{"icono": "🛒", "nombre": "Carrito de compras"}, {"icono": "🏷️", "nombre": "Etiqueta de oferta"}, {"icono": "🧮", "nombre": "Calculadora de tendero"}, {"icono": "👑", "nombre": "Corona del tendero"}, {"icono": "🏆", "nombre": "Trofeo de la tienda"}], "premio": "Elige la canción con la que empezamos la próxima clase", "tema": "desierto", "aula": true, "aulaVersion": "20261110"}
 ```
 
 ## Un ejemplo por tipo de slide
@@ -602,13 +609,13 @@ Una clase es **solo** un JSON `{ "meta": {…}, "slides": […] }`. El motor, lo
 <!-- TIPO:tf -->
 ### `tf`
 ```json
-{"id": "t04", "type": "tf", "titulo": "¿Verdadero o falso?", "items": [{"t": "El ratón es un dispositivo de salida.", "v": false, "porQue": "El ratón envía información al computador: es de entrada."}, {"t": "La CPU es el cerebro del computador.", "v": true, "porQue": "La CPU procesa la información y ejecuta las órdenes."}]}
+{"id": "s14", "type": "tf", "titulo": "Caza-errores: ¿quién se equivocó?", "items": [{"t": "Luis dice: «El 25 % de $40 es $25». Su resultado es correcto.", "v": false, "porQue": "El 25 % de 40 es 40 ÷ 4 = 10, no 25."}, {"t": "Marta dice: «El 10 % de $300 es $30». Su resultado es correcto.", "v": true, "porQue": "300 ÷ 10 = 30."}, {"t": "Pedro dice: «El 50 % de $80 es $160». Su resultado es correcto.", "v": false, "porQue": "Multiplicó por 2; el 50 % es la mitad: 80 ÷ 2 = 40."}], "etapa": "comprueba"}
 ```
 
 <!-- TIPO:fill -->
 ### `fill`
 ```json
-{"id": "t07", "type": "fill", "titulo": "Completa", "items": [{"antes": "El dispositivo que muestra imágenes se llama", "ans": ["pantalla", "monitor"], "despues": ".", "porQue": "La pantalla o monitor muestra lo que hace el computador."}]}
+{"id": "s23", "type": "fill", "titulo": "Repaso mezclado", "items": [{"antes": "El 10 % de $90 es", "ans": ["9", "$9"], "despues": ".", "porQue": "90 ÷ 10 = 9."}, {"antes": "El 50 % de $30 es", "ans": ["15", "$15"], "despues": ".", "porQue": "La mitad de 30 es 15."}, {"antes": "Un balón de $80 con descuento de $20 se paga a", "ans": ["60", "$60"], "despues": ".", "porQue": "80 − 20 = 60."}], "etapa": "repaso"}
 ```
 
 <!-- TIPO:drag -->

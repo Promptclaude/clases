@@ -24,6 +24,9 @@ CASOS = [
  ('meta.cofres con solo 4 cofres', lambda h: datos(h, lambda d: d['meta'].__setitem__('cofres', [{'icono': '🧢', 'nombre': 'Gorra'}] * 4))),
  ('meta.cofres con un cofre sin nombre', lambda h: datos(h, lambda d: d['meta'].__setitem__('cofres', [{'icono': '🧢', 'nombre': 'Gorra'}] * 4 + [{'icono': '🏆'}]))),
  ('meta.premio demasiado largo', lambda h: datos(h, lambda d: d['meta'].__setitem__('premio', 'x' * 100))),
+ ('meta.tema desconocido', lambda h: datos(h, lambda d: d['meta'].__setitem__('tema', 'neon'))),
+ ('etapa inexistente en una slide', lambda h: datos(h, lambda d: d['slides'][1].__setitem__('etapa', 'bailar'))),
+ ('quita la cinta de etapa del motor (v36Etapa)', lambda h: h.replace('function v36Etapa(s) {', 'function v36EtapaDesactivada(s) {', 1)),
  ('quita las monedas del motor (v35Cofre)', lambda h: h.replace('function v35Cofre() {', 'function v35CofreDesactivado() {', 1)),
 ]
 base = correr(BASE); print(('✅' if base.returncode == 0 else '❌') + ' la clase de referencia sin defectos sale VERDE'); fallos = 0 if base.returncode == 0 else 1

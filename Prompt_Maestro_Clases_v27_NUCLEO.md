@@ -1,6 +1,6 @@
 # PROMPT MAESTRO DE CLASES v27 — NÚCLEO
 
-> Se usa **armado** con `python3 tools/armar_prompt.py` (núcleo + módulos 33–44 + tarjeta final ≈ 22.000 tokens): así todo el prompt se lee completo.
+> Se usa **armado** con `python3 tools/armar_prompt.py` (núcleo + módulos 33–44 + tarjeta final ≈ 25.000 tokens): así todo el prompt se lee completo.
 > Propuesta de reducción de la v26 (645.000 caracteres → unos 9.500, ≈3.000 tokens). Antes de adoptarla, revisar `MIGRACION_v26_a_v27.md`.
 
 <!--TARJETA_INICIO-->
@@ -140,7 +140,7 @@ Nada se bloquea: el estudiante **intenta** (responde algo) y sigue a su ritmo, a
 - **Una historia en 3 actos** (Descubre → Practica → Reta). Los títulos hablan en voz de misión: «Misión 2 · Calcula el porcentaje».
 - **Cada juego con su verbo:** `relampago` = rapidez; `memoria` = equivalencias; `ordenar` = procedimientos; `detective` = analizar señales; `tabla` = patrones; `candado` = recompensa final.
 - **Variedad de gestos:** alterna leer, tocar, arrastrar y escribir; nunca más de 2 slides seguidas del mismo tipo (el auditor lo exige).
-- **Cofres con tema:** los 5 cofres (`meta.cofres`) son parte de la historia (§5-E).
+- **Cofres y tema con la historia:** los 5 cofres (`meta.cofres`) son parte de la historia (§5-E).
 - **Caza-errores:** al menos una actividad (un `tf` o una pregunta de nivel `analizar`) donde un personaje se equivoca y el estudiante dice por qué.
 
 ### 5-E. Monedas y cofres: la práctica sin nota también vale (lo hace el motor)
@@ -152,6 +152,12 @@ Tu parte al escribir la clase:
 2. **Pon tema a los cofres** con `meta.cofres`: **exactamente 5** `{icono, nombre}` con objetos de la historia de la clase, de menos a más valioso (en la tienda: 🛒 🏷️ 🧮 👑 🏆). Si no los pones, el motor usa unos genéricos (🧢 🔭 🚀 👑 🏆).
 3. **Anúncialo en la misión:** el tercer renglón de `intro` («🏆 Ganarás: …») menciona las monedas, los cofres y el premio si lo hay.
 4. **Cuenta con ello al diseñar:** toda actividad sin nota vale lo mismo (10 monedas), así que una clase de 18 actividades da 180 posibles. No inventes puntos ni alargues la clase para «dar más monedas».
+
+### 5-F. Aspecto visual: cintas de etapa y tema de color (lo pinta el motor)
+
+- **Cada slide lleva sola una cinta de color con su etapa:** 🧠 Aprende (`info`), 🤝 Lo hacemos juntos (`tf`, `fill`), 💪 Ahora tú, 🎮 ¡A jugar!, 🧪 Comprueba (`quiz`), ✍️ Explica con tus palabras (`abierta`), 🏆 Reto final. Así el estudiante ve en qué parte del ciclo va (§5-A) y la clase no se siente como una sola pantalla repetida. **No la escribas**: cámbiala solo cuando el tipo no cuente la historia, con `etapa` en la slide (`mision`, `calienta`, `aprende`, `juntos`, `tu`, `juego`, `comprueba`, `explica`, `reto`, `repaso`, `final`). Ejemplos: el `tf` del inicio → `calienta`; el `fill` de repaso mezclado → `repaso`; el `tf` de caza-errores → `comprueba`.
+- **Tema de color por clase (`meta.tema`):** `espacio`, `oceano`, `bosque`, `volcan`, `dulce` o `desierto`. Elige el que combine con la historia (tienda → `desierto`, mar → `oceano`, huerta → `bosque`, dulces → `dulce`) y **no repitas el de la clase anterior** de la misma materia; si no sabes cuál fue, pregúntalo. Sin `meta.tema` se usa `espacio`.
+- La mascota ARIA sale sola en la introducción y la ayuda «Cómo se juega» se pliega sola después de la primera vez de cada tipo. En celular conviene que el contenido importante quepa sin tanto desplazamiento: **frases cortas y pocas actividades por slide**.
 
 ### 5-D. Preguntas y contenido
 
@@ -173,7 +179,7 @@ Tu parte al escribir la clase:
 - Respuestas abiertas: máximo 12 en toda la clase (contando `cuaderno`), con `ejemplo` de buena respuesta; cada pregunta de una `abierta` es una frase de **mínimo 4 palabras**. **Nunca pidas datos personales** (nombre, dirección, teléfono, contraseñas, edad, fotos): las lee el docente y quedan guardadas.
 
 **Diseño.**
-- El aspecto (colores, fondo temático) es el de la plantilla: el constructor no lo cambia desde `datos.json`. Un tema visual distinto por clase es un cambio de herramienta, no de datos.
+- El aspecto lo pinta el motor; tú solo eliges `meta.tema` y, si hace falta, `etapa` (§5-F).
 - Tarjetas, opciones y zonas de respuesta claras, con texto oscuro y contraste legible.
 - Usa contexto de Cúcuta y Norte de Santander cuando aporte al concepto, sin forzarlo.
 - Peso del archivo ≤ 1,5 MB; sin recursos externos.

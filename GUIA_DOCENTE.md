@@ -51,6 +51,9 @@ Para verificar tú (o quien administra el repositorio):
 ## Monedas y cofres (la práctica sin nota también vale)
 Cada actividad sin nota da **🪙 monedas** al terminarla: 10 si la acierta, 5 si solo la intenta, 2 si pide ayuda. Una barra dorada arriba se llena y abre **5 cofres** (con aviso y confeti); el último abre **el premio que tú definas**. En la pantalla final y en la insignia imprimible aparecen las monedas, los cofres y el premio para que el estudiante te lo muestre. Los quizzes no dan monedas (su recompensa es la nota), y las monedas **nunca** cambian la nota ni bloquean nada. Cada clase empieza en cero.
 
+## Cómo se ve la clase
+Cada pantalla trae una **cinta de color** (🧠 Aprende, 🤝 Lo hacemos juntos, 💪 Ahora tú, 🎮 ¡A jugar!, 🧪 Comprueba…) para que el estudiante sepa en qué parte va, y cada clase puede tener su **tema de color** (espacio, océano, bosque, volcán, dulce o desierto) para que no se vean todas iguales. Pide uno que combine con la historia y distinto al de la clase anterior. En celular, la ayuda «Cómo se juega» se abre sola la primera vez de cada actividad y después queda en una línea.
+
 ## 6. Antes de usarla con estudiantes
 - Ábrela una vez en un equipo del laboratorio: es lo único que las pruebas no cubren (cómo se ve y qué tan rápido va).
 - Lee las cuentas y las respuestas correctas: la puerta recalcula las operaciones, pero la revisión pedagógica es tuya.

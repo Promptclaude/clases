@@ -12,7 +12,7 @@ Uso:
   python3 tools/armar_prompt.py --motor            → añade el módulo 32 (para cambiar/ampliar el motor)
   python3 tools/armar_prompt.py --tipos enlazar,sopa,detective
                                                    → solo los módulos de esos tipos (+ los siempre necesarios)
-  python3 tools/armar_prompt.py -o salida.md --presupuesto 40000     (tope de tokens; por defecto 30000)
+  python3 tools/armar_prompt.py -o salida.md --presupuesto 40000     (tope de tokens; por defecto 34000)
 Sale con código 1 si se pasa del presupuesto o falta algo.
 """
 import argparse, glob, os, re, sys
@@ -48,7 +48,7 @@ def main():
     ap.add_argument('--motor', action='store_true', help='añade el módulo 32 (motor y calidad)')
     ap.add_argument('--verificar', action='store_true', help='comprueba que prompt_armado.md del repositorio está al día (no escribe nada)')
     ap.add_argument('--tipos', help='lista de tipos de slide separados por coma; solo sus módulos')
-    ap.add_argument('--presupuesto', type=int, default=30000, help='tope de tokens estimados')
+    ap.add_argument('--presupuesto', type=int, default=34000, help='tope de tokens estimados')
     ap.add_argument('-o', '--salida', default=os.path.join(RAIZ, 'prompt_armado.md'))
     a = ap.parse_args()
 

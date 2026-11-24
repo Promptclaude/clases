@@ -2,6 +2,16 @@
 
 > Las versiones anteriores del prompt (v24, v25) ya no están en el repositorio. Se pueden recuperar con `git checkout archivo-v24-v25`.
 
+## v36 — Mejoras visuales (celular primero)
+- **Revisión visual:** se capturaron las 27 slides de una clase en un celular (390 px). Problemas: el encabezado ocupaba ~25 % de la pantalla, la caja «Misión / Cómo / Para seguir / Progreso» otro ~25 % en cada actividad (la actividad quedaba en menos de la mitad), todas las pantallas eran la misma tarjeta blanca sobre fondo morado, la introducción era solo texto y las frases de «completar» se partían porque el cuadro ocupaba toda la línea.
+- **Cintas de etapa** de color sobre cada slide (🧠 Aprende · 🤝 Lo hacemos juntos · 💪 Ahora tú · 🎮 ¡A jugar! · 🧪 Comprueba · ✍️ Explica · 🏆 Reto), automáticas por tipo y cambiables con `etapa`.
+- **Tema de color por clase** (`meta.tema`: espacio, oceano, bosque, volcan, dulce, desierto), seis paletas con contraste revisado. Reemplaza la limitación «los colores no se cambian desde datos.json».
+- **Ayuda plegable:** la caja «Cómo se juega» se abre sola la primera vez de cada tipo y después queda en una línea con el progreso (ahorra ~110 px por actividad).
+- **Encabezado compacto:** el XP pasa a la fila de las monedas (~70 px menos).
+- **Mascota ARIA** en la introducción y **cuadros de respuesta en línea** con la frase.
+- **Solo presentación:** no toca nota, avance ni lo guardado; si falla, la clase sigue igual. Módulo `v36_visual_snippets.js`; `MOTOR_VERSION = '36.0'`.
+- **Pruebas:** T36 en el e2e (11 comprobaciones) y 3 casos nuevos en el auditor (`meta.tema`, `etapa`, módulo presente).
+
 ## v35 — Monedas 🪙 y cofres: incentivo para la práctica sin nota
 - **Motivo:** los estudiantes no contestaban lo que «no tiene nota». El motor ya sumaba XP, pero solo se veía como una línea de texto, sin meta ni recompensa.
 - **Qué hace:** cada actividad sin nota da monedas al terminarse (acierta = 10, intenta = 5, pide ayuda = 2). Una **barra dorada** en el encabezado se llena y abre **5 cofres** coleccionables; un aviso fijo en pantalla (con confeti) muestra cada ganancia y cada cofre aunque la barra quede fuera de la vista. El último cofre abre el **premio del docente** (`meta.premio`). Los cofres pueden llevar el tema de la clase (`meta.cofres`, exactamente 5).

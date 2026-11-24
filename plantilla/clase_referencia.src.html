@@ -7,7 +7,7 @@
 <style>
 :root{--mundo-primario:#4F46E5;--mundo-acento:#FFB800;--mundo-fondo:#0F0B3D;--ok:#22C55E;--casi:#F59E0B;--texto:#1b1448;--tarjeta:#fff;--contorno:#2B1B6B;--font-ui:'Nunito',system-ui,-apple-system,'Segoe UI',sans-serif}
 *{box-sizing:border-box}html,body{margin:0;min-height:100%;font-family:var(--font-ui);color:var(--texto)}
-body{background:radial-gradient(ellipse at 50% 0,#3a2a9a 0,var(--mundo-fondo) 70%) fixed;padding:env(safe-area-inset-top) 0 env(safe-area-inset-bottom)}
+body{background:radial-gradient(ellipse at 50% 0,var(--mundo-luz,#3a2a9a) 0,var(--mundo-fondo) 70%) fixed;padding:env(safe-area-inset-top) 0 env(safe-area-inset-bottom)}
 body::before{content:"";position:fixed;inset:0;pointer-events:none;background-image:radial-gradient(2px 2px at 20px 30px,#fff6,transparent),radial-gradient(2px 2px at 120px 90px,#fff5,transparent);background-size:180px 140px;opacity:.5}
 #app{position:relative;max-width:820px;margin:0 auto;padding:8px 12px 24px}
 #barra{display:flex;align-items:center;justify-content:space-between;gap:8px;flex-wrap:wrap;background:#ffffff14;border:3px solid var(--contorno);border-radius:18px;padding:8px 12px;color:#fff;backdrop-filter:blur(4px)}
@@ -138,7 +138,7 @@ input[type=text]{font:inherit;font-size:1.05rem;padding:8px 10px;border:3px soli
 (function () {
 'use strict';
 /* ═══════ MOTOR DE REFERENCIA · v26 — NO se reescribe: cada clase nueva solo cambia #datos-clase, los assets y los colores ═══════ */
-const MOTOR_VERSION = '35.0';   // sube cuando cambie el motor; las clases guardan sus datos aparte y se reconstruyen con construir_clase.py --datos-de
+const MOTOR_VERSION = '36.0';   // sube cuando cambie el motor; las clases guardan sus datos aparte y se reconstruyen con construir_clase.py --datos-de
 const TEST = window.__TEST__ || null, FACTOR = (TEST && TEST.factor) || 1, ANTI_DOBLE = (TEST && TEST.antiDobleMs) || 350;   // ms mínimos entre dos respuestas de quiz (evita contestar dos por un doble toque)
 const DATOS = JSON.parse(document.getElementById('datos-clase').textContent);
 const CONFIG_CLASE = DATOS.meta, CLASE_ID = CONFIG_CLASE.claseId, SL = DATOS.slides, TOT = SL.length;
@@ -316,7 +316,10 @@ function responderQuiz(sId, qIdx, opId) {
 }
 
 /* ── actividades sin nota ── */
-const tarjeta = (m, c, p, g) => '<div class="tarjeta-reto"><p>🎯 <strong>Misión:</strong> ' + m + '</p><p>👆 <strong>Cómo:</strong> ' + c + '</p><p>✅ <strong>Para seguir:</strong> ' + p + '</p><p>📊 <strong>Progreso:</strong> <span data-test="prog">' + g + '</span></p></div>';
+const tarjeta = (m, c, p, g) => {
+  const tipo = SL[st.slide] && SL[st.slide].type, nuevo = !SL.some(x => x.type === tipo && st.acts[(CLAVE_HECHO[x.type] || '#') + x.id]);   // la ayuda se abre sola solo la primera vez de cada tipo
+  return '<details class="tarjeta-reto"' + (nuevo ? ' open' : '') + '><summary><span class="tr-m">🎯 <strong>Misión:</strong> ' + m + '<span class="tr-ver">ℹ️ Toca para ver cómo se juega</span></span><span class="tr-g">📊 <span data-test="prog">' + g + '</span></span></summary><p>👆 <strong>Cómo:</strong> ' + c + '</p><p>✅ <strong>Para seguir:</strong> ' + p + '</p></details>';
+};
 const imgApoyo = o => o && o.imagen ? '<img class="img-apoyo" data-test="img-apoyo" src="' + esc(o.imagen) + '" alt="' + esc(o.alt || 'Imagen de apoyo') + '">' : '';
 function rInfo(s) { return '<h2>' + esc(s.titulo) + '</h2><p>' + esc(s.texto) + '</p>' + imgApoyo(s) + (s.aria ? '<img src="' + esc(s.aria) + '" alt="ARIA explica" width="190">' : ''); }
 function rIntro(s) { return '<h1>' + esc(s.titulo) + '</h1><ul>' + s.mision.map(m => '<li>' + esc(m) + '</li>').join('') + '</ul><p>Jugador: <strong>' + esc(NOMBRE) + '</strong> · Grupo ' + esc(GRUPO) + '</p>'; }
@@ -363,6 +366,7 @@ const RENDER = { intro: rIntro, info: rInfo, tf: rTF, fill: rFill, drag: rDrag, 
 /*@@V33@@*/
 /*@@V34@@*/
 /*@@V35@@*/
+/*@@V36@@*/
 
 /* ── solución para «No me sale» ── */
 function mostrarSolucionActividad(s) {
@@ -380,6 +384,7 @@ function irA(i) { st.slide = Math.max(0, Math.min(TOT - 1, i)); limpiarTimers();
 function render(entrando) {
   const s = SL[st.slide], stage = $('stage'); stage.dataset.tipo = s.type; stage.dataset.slide = s.id;
   stage.innerHTML = RENDER[s.type](s);
+  try { v36Etapa(s); } catch (e) { /* lo visual nunca rompe la clase */ }
   if (entrando) { stage.classList.remove('fx-in'); void stage.offsetWidth; stage.classList.add('fx-in'); st.seen.add(s.id); if (s.type === 'historia' && !st.acts['historia_t0_' + s.id]) st.acts['historia_t0_' + s.id] = Date.now(); }
   actualizarUIGeneral(); pintarNota(); aplicarEstadoAvance(s);
   $('btn-prev').disabled = st.slide === 0; $('btn-next').style.visibility = s.type === 'final' ? 'hidden' : 'visible';
@@ -425,7 +430,7 @@ setInterval(save, 20000);
 
 /* ── API para pruebas (59) ── */
 window.CLASE_API = { MOTOR_VERSION, SL, ERRORES, claseId: CLASE_ID, semana: CONFIG_CLASE.semana, SKEY, IKEY, Juego, GENERADORES, GENERAR: (g, seed) => GENERADORES[g](rngDe(seed), { id: 'x', dba: 'x', nivel: 'x' }),
-  estado: () => JSON.parse(JSON.stringify({ slide: st.slide, aciertos: st.aciertos, intentos: st.intentos, vidasUsadas: st.vidasUsadas, mejorNota: st.mejorNota, reintentoActivo: st.reintentoActivo, xp: st.xp, monedas: v35Monedas(), monedasPosibles: v35Posibles(), premio: CONFIG_CLASE.premio || null, cofres: v35Cofres().map(c => c.umbral), total: TOT, tipo: SL[st.slide].type, acts: st.acts })),
+  estado: () => JSON.parse(JSON.stringify({ slide: st.slide, aciertos: st.aciertos, intentos: st.intentos, vidasUsadas: st.vidasUsadas, mejorNota: st.mejorNota, reintentoActivo: st.reintentoActivo, xp: st.xp, monedas: v35Monedas(), monedasPosibles: v35Posibles(), premio: CONFIG_CLASE.premio || null, tema: CONFIG_CLASE.tema || null, cofres: v35Cofres().map(c => c.umbral), total: TOT, tipo: SL[st.slide].type, acts: st.acts })),
   notaHud: () => $('nota-hud').textContent, notaOficial, calcTotal, razonBloqueo: () => razonBloqueo(SL[st.slide]), rescate: () => usarRescate(SL[st.slide].id), puedeAvanzar: () => puedeAvanzar(SL[st.slide]),
   actividadesConAyuda: () => Object.keys(st.acts).filter(k => k.startsWith('ayuda_')).length, irA,
   opcionCorrectaActual: () => { const s = SL[st.slide]; if (!TIPOS_EVALUABLES.includes(s.type)) return null; const idx = st.acts['quiz_idx_' + s.id] || 0; if (idx >= s.preguntas.length) return null; const o = vistaPregunta(s, idx).preg.opciones.find(x => x.correcta); return { id: o.id, texto: o.texto }; } };
