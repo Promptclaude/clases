@@ -19,7 +19,7 @@ El formato exacto de `datos.json` está en `prompt-modulos/44_formato_de_datos.m
 ## Versiones: qué es cada número
 | Qué | Versión | Dónde se define |
 |---|---|---|
-| Motor de las clases | **36.0** | `MOTOR_VERSION` en `plantilla/clase_referencia.src.html` |
+| Motor de las clases | **37.0** | `MOTOR_VERSION` en `plantilla/clase_referencia.src.html` |
 | Prompt vigente | **v26** (+ revisión de coherencia v26.1 y módulos 33–43) | `Prompt_Maestro_Clases_v26_COMPLETO.md` |
 | Prompt propuesto | **v27 núcleo** (≈25.000 tokens armado) | `Prompt_Maestro_Clases_v27_NUCLEO.md` |
 | `package.json` | 26.0.0 | Solo identifica el paquete de pruebas; **no** es la versión del motor ni del prompt |
@@ -45,6 +45,7 @@ El formato exacto de `datos.json` está en `prompt-modulos/44_formato_de_datos.m
 | **Juego editor (formato de texto) y clase de ofimática** | módulo `prompt-modulos/41_editor_de_formato.md` · ejemplo real `plantilla/ejemplos/tec4_documento_formato_tablas.datos.json` · motor `plantilla/motor/v33_editor_snippets.js` |
 | **Conexión con el Aula (Notas y avance), nombre del archivo y mascotas** | módulo `prompt-modulos/42_aula_y_mascotas.md` · `pruebas/prueba_aula_integracion.py` · motor `plantilla/motor/v34_aula_snippets.js` |
 | **Hoja «Respuestas abiertas» para el docente** (servidor) | carpeta `servidor-propuesta/` (`INSTALACION.md`, `Abiertas.gs`, `DISENO.md`, parche de 6 líneas) · módulo `prompt-modulos/43_respuestas_abiertas_para_el_docente.md` · `pruebas/prueba_servidor_abiertas.js` |
+| **Modo juego** (clima por tema, racha 🔥, jefe final, modo ahorro, portal y chispas) | módulo `prompt-modulos/45_modo_juego.md` · motor `plantilla/motor/v37_modo_juego_snippets.js` · e2e T37 |
 | Módulos del prompt sueltos | `prompt-modulos/` |
 | Historial | `CHANGELOG.md` (versiones previas recuperables con `git checkout archivo-v24-v25`) |
 
@@ -61,7 +62,7 @@ Requisitos: Python 3 con `Pillow`, `scipy`, `numpy`; Node con `npm install` (jsd
 Pegar el prompt v26 completo (≈630.000 caracteres) hace que partes importantes se lean con poca atención o se pierdan. La propuesta v27 lo evita:
 
 ```
-npm run prompt                       # arma prompt_armado.md (≈25.000 tokens): núcleo + módulos 33–44 (incluye el formato del `datos.json`) + tarjeta final
+npm run prompt                       # arma prompt_armado.md (≈25.000 tokens): núcleo + módulos 33–45 (incluye el formato del `datos.json`) + tarjeta final
 python3 tools/armar_prompt.py --tipos enlazar,sopa,detective   # solo los módulos de esos tipos
 python3 tools/armar_prompt.py --motor                          # añade el módulo 32 si vas a cambiar el motor
 ```

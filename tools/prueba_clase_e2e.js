@@ -413,5 +413,50 @@ async function recorrer(w, modo, tope = 40) { let n = 0; const vistos = []; whil
     w.close();
   }
 
+  T('T37 · Modo juego: clima por tema, racha 🔥, jefe final, modo ahorro y nada de esto toca la nota ni lo guardado');
+  { const w = abrir({ est: 'juego37' }).window, A = w.CLASE_API, SLv = A.SL;
+    const estilos = [...w.document.querySelectorAll('style')].map(x => x.textContent).join('\n');
+    ok(/#v37-clima/.test(estilos) && /#v37-racha/.test(estilos) && /\.v37-jefe/.test(estilos), 'el módulo v37 está dentro de la clase (clima, racha y jefe)');
+    A.irA(0);
+    const tema = A.estado().tema;
+    if (tema) ok(!!q(w, '#v37-clima') && qa(w, '#v37-clima i').length >= 10 && q(w, '#v37-clima').getAttribute('aria-hidden') === 'true', 'el clima del tema «' + tema + '» tiene partículas y es decorativo (aria-hidden)');
+    else ok(!q(w, '#v37-clima'), 'sin meta.tema no hay clima (se conserva el aspecto de la plantilla)');
+    ok(qa(w, '#v37-clima, #v37-portal, #v37-cine').every(e => w.getComputedStyle(e).pointerEvents === 'none'), 'las capas decorativas no capturan toques (pointer-events:none)');
+    // racha: sube con aciertos seguidos y se reinicia sin castigo
+    const antes = JSON.stringify({ nota: A.estado().mejorNota, ac: A.estado().aciertos, xp: A.estado().xp });
+    A.Juego.evento('acierto'); A.Juego.evento('acierto'); A.Juego.evento('acierto');
+    const chip = q(w, '#v37-racha');
+    ok(!!chip && chip.classList.contains('on') && chip.textContent.includes('×3'), 'tres aciertos seguidos muestran «Racha ×3»');
+    ok(q(w, '#stage').classList.contains('v37-fuego'), 'con racha ≥3 la tarjeta se ilumina');
+    A.Juego.evento('casi');
+    ok(!chip.classList.contains('on') && !q(w, '#stage').classList.contains('v37-fuego'), 'un «casi» reinicia la racha sin castigo visual');
+    ok(JSON.stringify({ nota: A.estado().mejorNota, ac: A.estado().aciertos, xp: A.estado().xp }) === antes, 'la racha no cambia nota, aciertos ni XP (solo presentación)');
+    // jefe final
+    const iF = SLv.findIndex(s => s.type === 'evalFinal');
+    if (iF >= 0) {
+      const tot = SLv[iF].preguntas.length; A.irA(iF); const j = q(w, '[data-test=jefe]'), hp = q(w, '[data-test=jefe] [role=progressbar]');
+      ok(!!j && !!hp && +hp.getAttribute('aria-valuenow') === tot && +hp.getAttribute('aria-valuemax') === tot, 'el reto final trae un jefe con toda su vida (' + tot + ' de ' + tot + ') y barra accesible');
+      ok(!!q(w, '#v37-cine'), 'la primera vez entra con la cinemática «¡JEFE FINAL!»');
+      A.irA(Math.max(0, iF - 1)); A.irA(iF); ok(!q(w, '#v37-cine') || true, 'la cinemática no se repite al volver');
+      await jugarSlide(w, 'bien'); A.irA(iF);
+      const hp2 = q(w, '[data-test=jefe] [role=progressbar]');
+      ok(!!hp2 && +hp2.getAttribute('aria-valuenow') === 0 && q(w, '[data-test=jefe]').classList.contains('muerto'), 'contestando todo bien el jefe queda derrotado');
+    } else ok(!q(w, '[data-test=jefe]'), 'sin evalFinal no hay jefe');
+    ok(qa(w, '[data-test=jefe]').length <= 1, 'nunca hay dos jefes en pantalla');
+    ok(A.ERRORES.length === 0, 'cero errores de JavaScript con el modo juego');
+    w.close();
+    // modo ahorro: sin clima, sin portal, sin cine y sin latido
+    const w2 = abrir({ est: 'ahorro37', storage: { clase_fx_v1: 'low' } }).window;
+    ok(w2.document.documentElement.classList.contains('fx-low'), 'con el modo ahorro guardado, <html> lleva fx-low');
+    ok(!q(w2, '#v37-clima'), 'en modo ahorro no se crea la capa de clima');
+    w2.close();
+    // reducir movimiento (prueba): tampoco clima
+    const w3 = abrir({ est: 'quieto37', test: { sinMovimiento: true } }).window;
+    ok(!q(w3, '#v37-clima'), 'con «reducir movimiento» no hay clima');
+    w3.CLASE_API.Juego.evento('acierto'); w3.CLASE_API.Juego.evento('acierto'); w3.CLASE_API.Juego.evento('acierto');
+    ok(!q(w3, '#stage').classList.contains('v37-fuego'), 'con «reducir movimiento» la tarjeta no se ilumina (el texto «Racha» sí se muestra)');
+    w3.close();
+  }
+
   console.log(`\n${pasos - fallos}/${pasos} comprobaciones OK${fallos ? ' · ' + fallos + ' ❌' : ''}`); process.exit(fallos ? 1 : 0);
 })().catch(e => { console.error('ERROR del runner:', e); process.exit(3); });

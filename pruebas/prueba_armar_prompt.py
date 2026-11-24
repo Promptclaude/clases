@@ -22,7 +22,7 @@ ini = t.find('TARJETA DE REGLAS CRÍTICAS'); fin = t.rfind('TARJETA FINAL')
 chequeo('la tarjeta aparece al principio y al final', 0 <= ini < fin and ini < 2000 and len(t) - fin < 4000, 'ini=%d fin=%d de %d' % (ini, fin, len(t)))
 for rr in reglas:
     chequeo('%s está al principio y al final' % rr, len(re.findall(r'\| %s \|' % rr, t)) == 2)
-chequeo('incluye los módulos 33 a 44', all('<!-- MÓDULO %d -->' % n in t for n in range(33, 45)))
+chequeo('incluye los módulos 33 a 45', all('<!-- MÓDULO %d -->' % n in t for n in range(33, 46)))
 chequeo('trae el formato del datos.json de los tipos básicos', all(k in t for k in ('"mision"', '"errorComun"', '"pares"', '"acertijos"', '"expr"')))
 r0 = subprocess.run([sys.executable, os.path.join(RAIZ, 'tools', 'generar_referencia_datos.py'), '--verificar'], capture_output=True, text=True)
 chequeo('el módulo 44 está al día con plantilla/ejemplos', r0.returncode == 0, r0.stdout + r0.stderr)

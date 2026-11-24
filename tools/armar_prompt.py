@@ -2,7 +2,7 @@
 """
 armar_prompt.py — arma el prompt que se pega en Claude para que se lea COMPLETO.
 
-Une, en este orden:  núcleo (con tarjeta R1–R16)  →  módulos de actividades 33–44  →  tarjeta final R1–R16.
+Une, en este orden:  núcleo (con tarjeta R1–R16)  →  módulos de actividades 33–45  →  tarjeta final R1–R16.
 La tarjeta se repite al final para que las reglas críticas queden al principio y al final del texto,
 donde la atención del modelo es mayor. El resultado cabe en unos 14.000 tokens.
 
@@ -23,8 +23,8 @@ from generar_referencia_datos import MODULO_DE_TIPO as POR_TIPO, BASICOS   # una
 RAIZ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 NUCLEO = os.path.join(RAIZ, 'Prompt_Maestro_Clases_v27_NUCLEO.md')
 MODULOS = os.path.join(RAIZ, 'prompt-modulos')
-SIEMPRE = {33, 35, 36, 37, 42, 44}  # banco, ritmo, mapa/final, flujo con imágenes, Aula, formato de datos
-RANGO_CLASE = range(33, 45)
+SIEMPRE = {33, 35, 36, 37, 42, 44, 45}  # banco, ritmo, mapa/final, flujo con imágenes, Aula, formato de datos, modo juego
+RANGO_CLASE = range(33, 46)
 
 
 def numero(ruta):

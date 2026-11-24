@@ -2,6 +2,20 @@
 
 > Las versiones anteriores del prompt (v24, v25) ya no están en el repositorio. Se pueden recuperar con `git checkout archivo-v24-v25`.
 
+## v37 — Modo juego (portado del juego de las tablas «Ninja Multiplicación»)
+- **Por qué:** al revisar una clase real en celular (390 px), cada pantalla seguía siendo una tarjeta blanca sobre fondo oscuro sin ambiente, sin sensación de avance de «partida» y sin un clímax en el reto final. El repositorio del juego ya resolvía esto; se trasladó lo que sirve **sin imágenes nuevas (0 KB) y sin tocar nota, avance ni lo guardado**.
+- **Qué trae** (módulo `plantilla/motor/v37_modo_juego_snippets.js`, `MOTOR_VERSION = '37.0'`):
+  - **Modo ahorro automático** (de `rendimiento-2026.js`): pista de hardware + medición real de fotogramas; recuerda el resultado; `?fx=low|high|auto`. Pensado para los PC del laboratorio.
+  - **Clima por tema** (de `fx-engine.js`): partículas CSS detrás de la tarjeta según `meta.tema` (estrellas, burbujas, luciérnagas, brasas, confeti, arena).
+  - **Chispas al tocar** (de `interaccion-2026.js`) y **portal de color** al cambiar de pantalla (de `transicion-2026.js`).
+  - **Racha 🔥** (de `racha.js`): «Racha ×N» con 2+ aciertos seguidos, tarjeta iluminada con 3+; un «casi» reinicia sin castigo.
+  - **Jefe final** (de `jefe-cinematica.js`): el `evalFinal` muestra «👑 JEFE FINAL» con barra de vida que baja con cada acierto y entrada dramática la primera vez.
+  - **Tarjeta con franja del color de la etapa**, textura suave y **«Siguiente» que late 3 veces** al habilitarse.
+- **Diseño seguro:** todo es `pointer-events:none`, cada pieza va en `try/catch`, con «reducir movimiento» o modo ahorro se apaga lo decorativo y la racha/jefe siguen siendo texto. Usa `almacen()` (nunca `localStorage` directo).
+- **Pruebas:** T37 en el e2e (hasta 18 comprobaciones; con tema y sin tema); las 7 clases de ejemplo se reconstruyeron con el motor 37.0 y pasan la puerta. Módulo 45 del prompt (`prompt-modulos/45_modo_juego.md`).
+- **En la prueba de hardware:** en las pruebas automáticas la pista de hardware no cuenta, para que el resultado no dependa de la máquina.
+- **Pendiente (fase 2, ver propuestas):** avatar y colección entre semanas, fondos ilustrados por tema con el arte del juego, sonido ambiente, PWA sin conexión.
+
 ## v36 — Mejoras visuales (celular primero)
 - **Revisión visual:** se capturaron las 27 slides de una clase en un celular (390 px). Problemas: el encabezado ocupaba ~25 % de la pantalla, la caja «Misión / Cómo / Para seguir / Progreso» otro ~25 % en cada actividad (la actividad quedaba en menos de la mitad), todas las pantallas eran la misma tarjeta blanca sobre fondo morado, la introducción era solo texto y las frases de «completar» se partían porque el cuadro ocupaba toda la línea.
 - **Cintas de etapa** de color sobre cada slide (🧠 Aprende · 🤝 Lo hacemos juntos · 💪 Ahora tú · 🎮 ¡A jugar! · 🧪 Comprueba · ✍️ Explica · 🏆 Reto), automáticas por tipo y cambiables con `etapa`.

@@ -8,7 +8,7 @@ PROHIBIDAS = ['incorrecto', 'fallaste', 'estás mal', 'error tuyo']
 MARCAS = ['fortnite', 'free fire', 'freefire', 'minecraft', 'among us', 'roblox', 'pokemon', 'pokémon', 'mario bros', 'disney', 'marvel', 'nintendo', 'epic games', 'pixar', 'brawl stars', 'clash royale']
 TIPOS = {'intro', 'info', 'tf', 'fill', 'drag', 'match', 'orden', 'wordsearch', 'interactive', 'minijuego', 'historia', 'quiz', 'evalFinal', 'final', 'repaso', 'practica', 'editor', 'tabla', 'detective', 'fraccion', 'cuadricula', 'recta', 'comparar', 'podio', 'abierta', 'cuaderno', 'enlazar', 'ordenar', 'memoria', 'relampago', 'sopa', 'candado'}
 IDS = ['nota-hud', 'nota-delta', 'aciertos-hud', 'nota-intento-hud', 'razon-bloqueo', 'rescate-wrap', 'aviso-guardado', 'btn-next', 'btn-prev', 'stage']
-UNICAS = ['puedeAvanzar', 'aplicarEstadoAvance', 'updScore', 'htmlRetroQuiz', 'sesionGuardadaEsValida', 'esEstudianteNuevo', 'construirEntradaEstudiante', 'pintarNota', 'marcarActividadHecha', 'razonBloqueo', 'v35Cofre', 'v36Etapa', 'v36Tema', 'v35Monedas', 'v35Cofres', 'almacen', 'save', 'load']
+UNICAS = ['puedeAvanzar', 'aplicarEstadoAvance', 'updScore', 'htmlRetroQuiz', 'sesionGuardadaEsValida', 'esEstudianteNuevo', 'construirEntradaEstudiante', 'pintarNota', 'marcarActividadHecha', 'razonBloqueo', 'v35Cofre', 'v36Etapa', 'v36Tema', 'v37Escena', 'v37Jefe', 'v37Racha', 'v37Clima', 'v37Portal', 'v35Monedas', 'v35Cofres', 'almacen', 'save', 'load']
 def main():
     if len(sys.argv) < 2: print(__doc__); sys.exit(2)
     ruta = sys.argv[1]; html = open(ruta, encoding='utf8').read(); E, A, OK = [], [], []
