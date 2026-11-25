@@ -421,6 +421,9 @@ async function recorrer(w, modo, tope = 40) { let n = 0; const vistos = []; whil
     const tema = A.estado().tema;
     if (tema) ok(!!q(w, '#v37-clima') && qa(w, '#v37-clima i').length >= 10 && q(w, '#v37-clima').getAttribute('aria-hidden') === 'true', 'el clima del tema «' + tema + '» tiene partículas y es decorativo (aria-hidden)');
     else ok(!q(w, '#v37-clima'), 'sin meta.tema no hay clima (se conserva el aspecto de la plantilla)');
+    const fondo = q(w, '#v37-fondo');
+    if (tema) ok(!!fondo && /^url\(data:image\//.test(fondo.style.backgroundImage.replace(/"/g, '')) && fondo.getAttribute('aria-hidden') === 'true', 'el fondo ilustrado del tema «' + tema + '» va incrustado (sin internet) y es decorativo');
+    else ok(!fondo, 'sin meta.tema no hay fondo ilustrado');
     ok(qa(w, '#v37-clima, #v37-portal, #v37-cine').every(e => w.getComputedStyle(e).pointerEvents === 'none'), 'las capas decorativas no capturan toques (pointer-events:none)');
     // racha: sube con aciertos seguidos y se reinicia sin castigo
     const antes = JSON.stringify({ nota: A.estado().mejorNota, ac: A.estado().aciertos, xp: A.estado().xp });

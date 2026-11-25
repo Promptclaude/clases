@@ -1897,11 +1897,15 @@ const V37_CLIMA = {   // partícula por tema: color y forma (todo con CSS, sin i
   dulce:    { color: '#ffd1f0', forma: 'confeti',  n: 14 },
   desierto: { color: '#f5d9a0', forma: 'arena',    n: 16 }
 };
+const V37_FONDO = '';   // construir_clase.py lo cambia por el fondo del tema de ESTA clase (o '' si no hay tema)
 let v37Listo = false, v37Racha_n = 0, v37UltSlide = -1, v37Activos = 0, v37Cine = {};
 
 (function () {
   const c = document.createElement('style');
   c.textContent =
+    // fondo ilustrado: montañas del juego en el borde inferior (imagen quieta: barata aun en modo ahorro)
+    '#v37-fondo{position:fixed;left:0;right:0;bottom:0;height:min(30vh,260px);z-index:0;pointer-events:none;background-repeat:repeat-x;background-position:center bottom;background-size:auto 100%;opacity:.7;-webkit-mask-image:linear-gradient(to top,#000 55%,transparent);mask-image:linear-gradient(to top,#000 55%,transparent)}' +
+    '#fx-intro .v37-fondo-intro{position:absolute;left:0;right:0;bottom:0;height:26vh;pointer-events:none;background-repeat:repeat-x;background-position:center bottom;background-size:auto 100%;opacity:.95;-webkit-mask-image:linear-gradient(to top,#000 60%,transparent);mask-image:linear-gradient(to top,#000 60%,transparent)}' +
     // capa de clima (detrás de la tarjeta, nunca tapa nada)
     '#app{z-index:1}#v37-clima{position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden}' +
     '#v37-clima i{position:absolute;top:-5vh;left:var(--x);width:var(--s);height:var(--s);background:var(--c);opacity:0;animation:v37cae var(--d) linear var(--r) infinite}' +
@@ -1994,6 +1998,15 @@ function v37Clima() {
   capa.innerHTML = h; document.body.insertBefore(capa, document.body.firstChild);
 }
 
+// ── 2b) Fondo ilustrado del tema (una sola vez; no depende de las partículas) ──
+function v37Fondo() {
+  if (!V37_FONDO || document.getElementById('v37-fondo')) return;
+  const f = document.createElement('div'); f.id = 'v37-fondo'; f.setAttribute('aria-hidden', 'true'); f.style.backgroundImage = 'url(' + V37_FONDO + ')';
+  document.body.insertBefore(f, document.body.firstChild);
+  const intro = document.getElementById('fx-intro');   // la pantalla de bienvenida también estrena las montañas
+  if (intro) { const g = document.createElement('div'); g.className = 'v37-fondo-intro'; g.setAttribute('aria-hidden', 'true'); g.style.backgroundImage = 'url(' + V37_FONDO + ')'; intro.insertBefore(g, intro.firstChild); }
+}
+
 // ── 3) Chispas al tocar ──
 function v37Toques() {
   const cols = ['#ffd23f', '#5eeaff', '#a855f7', '#ff5d8f', '#8cf0a0'];
@@ -2050,6 +2063,7 @@ function v37Escena(s, entrando) {
     try { v37Rendimiento(); } catch (e) { /* sin esto la clase funciona igual */ }
     try { v37Toques(); } catch (e) { /* idem */ }
   }
+  try { v37Fondo(); } catch (e) { /* idem */ }
   try { v37Clima(); } catch (e) { /* idem */ }
   try { const c = document.querySelector('#stage .v36-etapa'); if (c) $('stage').style.setProperty('--etapa', c.style.background || ''); } catch (e) { /* idem */ }
   try { v37Jefe(s); } catch (e) { /* idem */ }

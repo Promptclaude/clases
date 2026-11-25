@@ -33,6 +33,9 @@ def main():
         base = meta.get('aulaRecursos', '../../recursos/js/'); v = ('?v=' + str(meta['aulaVersion'])) if meta.get('aulaVersion') else ''
         tags = f'<script src="{base}aula-sync.js"></script>\n<script src="{base}aula-config.js{v}"></script>\n<script src="{base}aula-contexto.js{v}"></script>\n'
         t = t.replace('<head>', '<head>\n' + tags, 1)
+    # Fondo ilustrado del tema (motor 37): solo se incrusta el de ESTA clase; sin meta.tema no hay fondo
+    TEMAS_FONDO = ('espacio', 'oceano', 'bosque', 'volcan', 'dulce', 'desierto')
+    t = t.replace("'asset://fondo-tema'", ("'asset://fondo-" + meta['tema'] + "'") if meta.get('tema') in TEMAS_FONDO else "''")
     tmp = a.salida + '.tmp.html'; open(tmp, 'w', encoding='utf8').write(t)
     r = subprocess.run([sys.executable, os.path.join(os.path.dirname(os.path.abspath(__file__)), 'empaquetar_assets.py'), tmp, '-o', a.salida, '--assets', a.assets, '--presupuesto-mb', a.presupuesto_mb], capture_output=True, text=True)
     os.remove(tmp)

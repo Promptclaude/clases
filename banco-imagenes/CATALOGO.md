@@ -1,6 +1,6 @@
 # Catálogo visual del banco de imágenes
 
-511 imágenes usables (de 822 registradas). Haz clic en un tema para ver miniaturas, qué contiene cada una y su texto alternativo (`alt`).
+517 imágenes usables (de 828 registradas). Haz clic en un tema para ver miniaturas, qué contiene cada una y su texto alternativo (`alt`).
 
 **Cómo usarlas en una clase:** `"imagen": "asset://ID", "alt": "…el alt del catálogo…"`. Buscar por contenido: `python3 _herramientas/buscar_banco.py palabra --alt`.
 
@@ -22,6 +22,7 @@
 | [interfaz/periodos](catalogo/interfaz--periodos.md) | 6 | Calendario de semana con una estrella ; Camino de juego de mesa con casillas y; Insignia hexagonal amarilla con el núm… |
 | [interfaz/portada](catalogo/interfaz--portada.md) | 5 | Cohete rojo y blanco despegando con es; Emblema: escudo azul con un cohete y u; Planeta naranja con anillo y estrellas… |
 | [juego](catalogo/juego.md) | 37 | Acierto; Bandera de cuadros blanca y negra de m; Bloqueado… |
+| [juego/fondos-tema](catalogo/juego--fondos-tema.md) | 6 | Silueta de montañas para el borde infe… |
 | [matematicas/base10](catalogo/matematicas--base10.md) | 4 | Bloque de base 10: centena (placa de 1; Bloque de base 10: decena (barra de 10; Bloque de base 10: millar (cubo de 100… |
 | [matematicas/dinero](catalogo/matematicas--dinero.md) | 7 | Billete genérico de 10000 (ilustración; Billete genérico de 2000 (ilustración ; Billete genérico de 5000 (ilustración … |
 | [matematicas/fracciones](catalogo/matematicas--fracciones.md) | 44 | Barra con 1/10 pintado; Barra con 1/2 pintado; Barra con 1/3 pintado… |

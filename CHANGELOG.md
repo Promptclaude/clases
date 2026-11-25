@@ -10,6 +10,7 @@
   - **Chispas al tocar** (de `interaccion-2026.js`) y **portal de color** al cambiar de pantalla (de `transicion-2026.js`).
   - **Racha 🔥** (de `racha.js`): «Racha ×N» con 2+ aciertos seguidos, tarjeta iluminada con 3+; un «casi» reinicia sin castigo.
   - **Jefe final** (de `jefe-cinematica.js`): el `evalFinal` muestra «👑 JEFE FINAL» con barra de vida que baja con cada acierto y entrada dramática la primera vez.
+  - **Fondo ilustrado por tema**: montañas del juego (6 WebP de 45–66 KB en `banco-imagenes/juego/fondo-*.webp`, ids `fondo-desierto`, `fondo-espacio`, `fondo-bosque`, `fondo-oceano`, `fondo-volcan`, `fondo-dulce`) en el borde inferior y en la bienvenida. `construir_clase.py` incrusta solo el de ESTA clase (+≈80 KB); sin `meta.tema` no hay fondo. La imagen es quieta, así que se mantiene también en modo ahorro.
   - **Tarjeta con franja del color de la etapa**, textura suave y **«Siguiente» que late 3 veces** al habilitarse.
 - **Diseño seguro:** todo es `pointer-events:none`, cada pieza va en `try/catch`, con «reducir movimiento» o modo ahorro se apaga lo decorativo y la racha/jefe siguen siendo texto. Usa `almacen()` (nunca `localStorage` directo).
 - **Pruebas:** T37 en el e2e (hasta 18 comprobaciones; con tema y sin tema); las 7 clases de ejemplo se reconstruyeron con el motor 37.0 y pasan la puerta. Módulo 45 del prompt (`prompt-modulos/45_modo_juego.md`).
