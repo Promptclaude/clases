@@ -1,6 +1,6 @@
 # Catálogo visual del banco de imágenes
 
-517 imágenes usables (de 828 registradas). Haz clic en un tema para ver miniaturas, qué contiene cada una y su texto alternativo (`alt`).
+527 imágenes usables (de 838 registradas). Haz clic en un tema para ver miniaturas, qué contiene cada una y su texto alternativo (`alt`).
 
 **Cómo usarlas en una clase:** `"imagen": "asset://ID", "alt": "…el alt del catálogo…"`. Buscar por contenido: `python3 _herramientas/buscar_banco.py palabra --alt`.
 
@@ -29,7 +29,7 @@
 | [matematicas/geometria](catalogo/matematicas--geometria.md) | 9 | Cuadrado (figura geométrica); Círculo (figura geométrica); Hexágono (figura geométrica)… |
 | [personajes/aria](catalogo/personajes--aria.md) | 35 | ; ARIA con pulgar arriba y globo «¡Lo es; Mascota ARIA (busto) · (sin texto) cor… |
 | [personajes/aria-v2](catalogo/personajes--aria-v2.md) | 7 | ARIA (robot de cuerpo completo, versió; ARIA de cuerpo completo con el pulgar ; ARIA de cuerpo completo con una lupa g… |
-| [personajes/avatares](catalogo/personajes--avatares.md) | 20 | ; Avatar de niña con cabello afro, moños; Avatar de niña con trenzas oscuras y c… |
+| [personajes/avatares](catalogo/personajes--avatares.md) | 30 | ; Avatar de niña con cabello afro, moños; Avatar de niña con trenzas oscuras y c… |
 | [personajes/boli](catalogo/personajes--boli.md) | 21 | Bolí (ave azul con antena dorada) con ; Bolí (versión 2) animando con pompones; Bolí (versión 2) con birrete y diploma… |
 | [personajes/npc](catalogo/personajes--npc.md) | 16 | … |
 | [premios](catalogo/premios.md) | 14 | ; ARIA con birrete y diploma, pergamino ; ARIA con cohete y pergamino «¡Subí a s… |

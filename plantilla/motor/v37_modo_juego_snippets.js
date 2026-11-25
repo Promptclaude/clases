@@ -19,7 +19,11 @@ const V37_CLIMA = {   // partícula por tema: color y forma (todo con CSS, sin i
   desierto: { color: '#f5d9a0', forma: 'arena',    n: 16 }
 };
 const V37_FONDO = 'asset://fondo-tema';   // construir_clase.py lo cambia por el fondo del tema de ESTA clase (o '' si no hay tema)
-let v37RachaMax = 0, v37Listo = false, v37Racha_n = 0, v37UltSlide = -1, v37Activos = 0, v37Cine = {};
+const V37_AVATARES = [   // miniaturas del banco (personajes/avatares): el estudiante elige su compañero y lo lleva en la tarjeta
+  ['asset://avatar-mini-01', 'Niña con trenzas'], ['asset://avatar-mini-02', 'Niño con gafas'], ['asset://avatar-mini-03', 'Niña con coletas'], ['asset://avatar-mini-04', 'Niño con audífonos'], ['asset://avatar-mini-05', 'Niña con diadema'],
+  ['asset://avatar-mini-06', 'Niño con gorra'], ['asset://avatar-mini-07', 'Niña con cabello afro'], ['asset://avatar-mini-08', 'Niño pelirrojo con pecas'], ['asset://avatar-mini-09', 'Niña con rizos y gafas'], ['asset://avatar-mini-10', 'Niño astronauta']
+];
+let v37Av = -1, v37AvImg = null, v37RachaMax = 0, v37Listo = false, v37Racha_n = 0, v37UltSlide = -1, v37Activos = 0, v37Cine = {};
 
 (function () {
   const c = document.createElement('style');
@@ -33,6 +37,13 @@ let v37RachaMax = 0, v37Listo = false, v37Racha_n = 0, v37UltSlide = -1, v37Acti
     '.v37-logros li{text-align:center;font-size:.74rem;font-weight:800;line-height:1.15;padding:6px 4px;border-radius:10px;background:#fff;border:2px solid #d9c9ff}' +
     '.v37-logros li img{width:44px;height:44px;display:block;margin:0 auto 4px}.v37-logros li small{display:block;font-weight:600;opacity:.85}' +
     '.v37-logros li.ok{border-color:#FFB800;box-shadow:0 0 10px #ffb80088}.v37-logros li.no img{filter:grayscale(1) opacity(.45)}.v37-logros li.no{color:#555}' +
+    // selector de compañero (bienvenida) y su insignia en la tarjeta
+    '#v37-avatares{max-width:94vw;text-align:center}#v37-avatares p{margin:0 0 6px;font-weight:900;font-size:.9rem;color:#ffe27a}' +
+    '#v37-avatares .fila{display:flex;gap:8px;overflow-x:auto;padding:4px 6px;scroll-snap-type:x proximity;justify-content:flex-start}' +
+    '#v37-avatares button{flex:0 0 auto;width:56px;height:56px;border-radius:50%;border:3px solid #ffffff55;background:#3a2a8a;padding:0;cursor:pointer;scroll-snap-align:center}' +
+    '#v37-avatares button img{width:100%;height:100%;border-radius:50%;display:block}#v37-avatares button[aria-checked=true]{border-color:#FFD54A;box-shadow:0 0 12px #FFD54A;transform:scale(1.1)}' +
+    '#v37-avatares button:focus-visible{outline:3px solid #fff;outline-offset:2px}' +
+    '#v37-ajustes .av{width:46px;height:46px;border-radius:50%;border:3px solid #FFD54A;background:#3a2a8a;margin-top:-4px;box-shadow:0 3px 0 #0006}' +
     // ajustes (sonido y efectos) + latido de los corazones
     '#stage{position:relative}#v37-ajustes{position:absolute;top:-17px;right:12px;z-index:5;display:flex;gap:6px}' +
     '#v37-ajustes button{width:36px;height:36px;border-radius:50%;border:3px solid #fff;background:#1d1450;color:#fff;font-size:1rem;line-height:1;cursor:pointer;box-shadow:0 3px 0 #0006;padding:0}' +
@@ -233,7 +244,30 @@ function v37Ajustes() {
     const low = !H.classList.contains('fx-low'); H.classList.toggle('fx-low', low); poner(KF, low ? 'low' : 'high'); pintar();
     if (low) { const c = document.getElementById('v37-clima'); if (c) c.remove(); } else { try { v37Clima(); } catch (e) { /* idem */ } }
   });
-  box.appendChild(bs); box.appendChild(bf); v37Aj = box; (stage || document.body).appendChild(box); pintar();
+  v37AvImg = document.createElement('img'); v37AvImg.className = 'av'; v37AvImg.alt = ''; v37AvImg.setAttribute('data-test', 'avatar-puesto'); v37AvImg.hidden = true; box.appendChild(v37AvImg);
+  box.appendChild(bs); box.appendChild(bf); v37Aj = box; (stage || document.body).appendChild(box); pintar(); v37AvPintar();
+}
+
+// ── 9) Compañero: el estudiante elige un avatar en la bienvenida y lo lleva en la tarjeta (se recuerda por estudiante en este navegador) ──
+function v37AvClave() { return 'clase_avatar_v1:' + CLASE_ID + ':' + GRUPO_NORM + ':' + NOMBRE_NORM; }
+function v37AvPintar() {
+  document.querySelectorAll('#v37-avatares button').forEach((b, i) => b.setAttribute('aria-checked', String(i === v37Av)));
+  if (!v37AvImg) return;
+  if (v37Av < 0) { v37AvImg.hidden = true; return; }
+  v37AvImg.src = V37_AVATARES[v37Av][0]; v37AvImg.alt = 'Tu compañero: ' + V37_AVATARES[v37Av][1].toLowerCase(); v37AvImg.hidden = false;
+}
+function v37Avatares() {
+  try { const g = parseInt(almacen().getItem(v37AvClave()), 10); v37Av = g >= 0 && g < V37_AVATARES.length ? g : -1; } catch (e) { v37Av = -1; }
+  const intro = document.getElementById('fx-intro'), ir = document.getElementById('btn-empezar'); if (!intro || !ir || document.getElementById('v37-avatares')) return;
+  const box = document.createElement('div'); box.id = 'v37-avatares'; box.setAttribute('role', 'radiogroup'); box.setAttribute('aria-label', 'Elige tu compañero');
+  box.innerHTML = '<p>Elige tu compañero</p><div class="fila">' + V37_AVATARES.map((a, i) => '<button type="button" role="radio" aria-checked="false" data-test="avatar-opcion" aria-label="' + esc(a[1]) + '"><img src="' + a[0] + '" alt=""></button>').join('') + '</div>';
+  box.addEventListener('click', e => {
+    const b = e.target.closest && e.target.closest('button'); if (!b) return;
+    v37Av = Array.prototype.indexOf.call(box.querySelectorAll('button'), b);
+    try { almacen().setItem(v37AvClave(), String(v37Av)); } catch (er) { /* sin almacenamiento: vale en esta sesión */ }
+    v37AvPintar();
+  });
+  intro.insertBefore(box, ir); v37AvPintar();
 }
 
 // ── enganche único desde render(): arranca lo que falta la primera vez y coordina lo de cada pantalla ──
@@ -242,6 +276,7 @@ function v37Escena(s, entrando) {
     v37Listo = true;
     try { v37Rendimiento(); } catch (e) { /* sin esto la clase funciona igual */ }
     try { v37Toques(); } catch (e) { /* idem */ }
+    try { v37Avatares(); } catch (e) { /* idem */ }
   }
   try { v37Ajustes(); } catch (e) { /* idem */ }
   try { v37Fondo(); } catch (e) { /* idem */ }

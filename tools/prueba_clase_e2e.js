@@ -464,6 +464,14 @@ async function recorrer(w, modo, tope = 40) { let n = 0; const vistos = []; whil
       ok(wa.CLASE_API.ERRORES.length === 0, 'cero errores de JavaScript con los ajustes'); wa.close();
       const wb = abrir({ est: 'mudo37', storage: { clase_sonido_v1: 'off' } }).window;
       ok(q(wb, '[data-test=ajuste-sonido]').getAttribute('aria-pressed') === 'false', 'un sonido apagado se recuerda al volver a abrir la clase'); wb.close(); }
+    // compañero: el estudiante elige avatar en la bienvenida y lo lleva en la tarjeta
+    { const wv = abrir({ est: 'avatar37' }).window, ops = qa(wv, '[data-test=avatar-opcion]'), pu = () => q(wv, '[data-test=avatar-puesto]');
+      ok(ops.length === 10 && ops.every(b => b.getAttribute('role') === 'radio' && b.getAttribute('aria-label') && /^data:image\//.test(b.querySelector('img').getAttribute('src'))), 'la bienvenida ofrece 10 compañeros accesibles con su imagen incrustada');
+      ok(!!pu() && pu().hidden === true, 'sin elegir, no se muestra insignia en la tarjeta');
+      ops[3].click(); ok(ops[3].getAttribute('aria-checked') === 'true' && ops.filter(b => b.getAttribute('aria-checked') === 'true').length === 1, 'elegir un compañero lo marca (solo uno)');
+      ok(pu().hidden === false && /audífonos/i.test(pu().alt) && /^data:image\//.test(pu().getAttribute('src')), 'el compañero elegido aparece en la tarjeta con texto alternativo');
+      wv.CLASE_API.irA(2); ok(!!pu() && pu().hidden === false && pu().closest('#stage') !== null, 'y se queda al cambiar de pantalla');
+      ok(wv.CLASE_API.ERRORES.length === 0, 'cero errores de JavaScript con el compañero'); wv.close(); }
     ok(A.ERRORES.length === 0, 'cero errores de JavaScript con el modo juego');
     w.close();
     // modo ahorro: sin clima, sin portal, sin cine y sin latido
