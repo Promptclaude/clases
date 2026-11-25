@@ -19,7 +19,7 @@ const V37_CLIMA = {   // partícula por tema: color y forma (todo con CSS, sin i
   desierto: { color: '#f5d9a0', forma: 'arena',    n: 16 }
 };
 const V37_FONDO = 'asset://fondo-tema';   // construir_clase.py lo cambia por el fondo del tema de ESTA clase (o '' si no hay tema)
-let v37Listo = false, v37Racha_n = 0, v37UltSlide = -1, v37Activos = 0, v37Cine = {};
+let v37RachaMax = 0, v37Listo = false, v37Racha_n = 0, v37UltSlide = -1, v37Activos = 0, v37Cine = {};
 
 (function () {
   const c = document.createElement('style');
@@ -27,6 +27,12 @@ let v37Listo = false, v37Racha_n = 0, v37UltSlide = -1, v37Activos = 0, v37Cine 
     // fondo ilustrado: montañas del juego en el borde inferior (imagen quieta: barata aun en modo ahorro)
     '#v37-fondo{position:fixed;left:0;right:0;bottom:0;height:min(30vh,260px);z-index:0;pointer-events:none;background-repeat:repeat-x;background-position:center bottom;background-size:auto 100%;opacity:.7;-webkit-mask-image:linear-gradient(to top,#000 55%,transparent);mask-image:linear-gradient(to top,#000 55%,transparent)}' +
     '#fx-intro .v37-fondo-intro{position:absolute;left:0;right:0;bottom:0;height:26vh;pointer-events:none;background-repeat:repeat-x;background-position:center bottom;background-size:auto 100%;opacity:.95;-webkit-mask-image:linear-gradient(to top,#000 60%,transparent);mask-image:linear-gradient(to top,#000 60%,transparent)}' +
+    // logros de la pantalla final
+    '.v37-logros{margin:10px 0;padding:10px;border-radius:14px;background:#f5f0ff;border:3px solid #b45cff}.v37-logros h3{margin:0 0 8px;font-size:1rem}' +
+    '.v37-logros ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:8px}' +
+    '.v37-logros li{text-align:center;font-size:.74rem;font-weight:800;line-height:1.15;padding:6px 4px;border-radius:10px;background:#fff;border:2px solid #d9c9ff}' +
+    '.v37-logros li img{width:44px;height:44px;display:block;margin:0 auto 4px}.v37-logros li small{display:block;font-weight:600;opacity:.85}' +
+    '.v37-logros li.ok{border-color:#FFB800;box-shadow:0 0 10px #ffb80088}.v37-logros li.no img{filter:grayscale(1) opacity(.45)}.v37-logros li.no{color:#555}' +
     // capa de clima (detrás de la tarjeta, nunca tapa nada)
     '#app{z-index:1}#v37-clima{position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden}' +
     '#v37-clima i{position:absolute;top:-5vh;left:var(--x);width:var(--s);height:var(--s);background:var(--c);opacity:0;animation:v37cae var(--d) linear var(--r) infinite}' +
@@ -153,7 +159,7 @@ function v37Portal() {
 function v37Racha(nombre) {
   let b = document.getElementById('v37-racha');
   if (!b) { b = document.createElement('div'); b.id = 'v37-racha'; b.setAttribute('aria-live', 'polite'); document.body.appendChild(b); }
-  if (nombre === 'acierto') v37Racha_n++; else if (nombre === 'casi') v37Racha_n = 0; else return;
+  if (nombre === 'acierto') { v37Racha_n++; if (v37Racha_n > v37RachaMax) v37RachaMax = v37Racha_n; } else if (nombre === 'casi') v37Racha_n = 0; else return;
   const stage = document.getElementById('stage'), n = v37Racha_n;
   if (n >= 2) { b.textContent = '🔥 Racha ×' + n; b.classList.add('on'); if (!v37SinMovimiento()) { b.classList.remove('pop'); void b.offsetWidth; b.classList.add('pop'); } } else b.classList.remove('on');
   if (stage) stage.classList.toggle('v37-fuego', n >= 3 && !v37SinMovimiento());
@@ -176,6 +182,28 @@ function v37Jefe(s) {
     v37Cine[s.id] = true; const c = document.createElement('div'); c.id = 'v37-cine'; c.setAttribute('aria-hidden', 'true'); c.innerHTML = '<b>👑 ¡JEFE FINAL!</b>'; document.body.appendChild(c); setTimeout(() => c.remove(), 1750);
   }
 }
+
+// ── 7) Logros coleccionables en la pantalla final (de achievements.js): dan una meta clara para volver a intentarlo ──
+// Se calculan con lo que YA está guardado (vidas, juegos hechos, quiz, monedas, nota) y con la racha de esta sesión. No suman nada.
+function v37Logros() {
+  const juegos = SL.filter(x => CLAVE_HECHO[x.type]), hechos = juegos.filter(x => st.acts[CLAVE_HECHO[x.type] + x.id]).length;
+  const ef = SL.find(x => x.type === 'evalFinal'), buenas = ef ? (st.acts['quiz_resps_' + ef.id] || []).filter(r => r.correcta).length : 0;
+  const cofres = v35Cofres(), todos = v35Monedas() >= cofres[4].umbral;
+  const L = [
+    { id: 'sin-perder', img: 'asset://escudo', nom: 'Sin perder vidas', pista: 'Termina sin gastar oportunidades', ok: st.vidasUsadas === 0 },
+    { id: 'racha', img: 'asset://llama', nom: 'Imparable', pista: '5 aciertos seguidos', ok: v37RachaMax >= 5 },
+    { id: 'juegos', img: 'asset://cohete', nom: 'Todos los juegos', pista: 'Completa todos los juegos', ok: juegos.length > 0 && hechos === juegos.length },
+    { id: 'cofres', img: 'asset://cofre', nom: 'Coleccionista', pista: 'Abre los 5 cofres', ok: todos },
+    { id: 'jefe', img: 'asset://gema', nom: 'Rompe-jefes', pista: 'Derrota al jefe final', ok: !!ef && buenas === ef.preguntas.length },
+    { id: 'nota', img: 'asset://estrella', nom: 'Nota de oro', pista: 'Llega a 4.5 o más', ok: notaOficial() >= 4.5 }
+  ], n = L.filter(x => x.ok).length;
+  return '<div class="v37-logros" data-test="logros-v37"><h3>🏆 Tus logros: ' + n + ' de ' + L.length + '</h3><ul>' +
+    L.map(x => '<li class="' + (x.ok ? 'ok' : 'no') + '" data-test="logro-v37" data-logro="' + x.id + '" data-ok="' + (x.ok ? 1 : 0) + '"><img src="' + x.img + '" alt=""><span>' + esc(x.nom) + '</span><small>' + (x.ok ? '¡Conseguido!' : esc(x.pista)) + '</small></li>').join('') + '</ul></div>';
+}
+const v37Final0 = RENDER.final;
+RENDER.final = function (s) {
+  const base = v37Final0(s); try { const k = base.indexOf('<div class="v29-cert"'); const h = v37Logros(); return k < 0 ? base + h : base.slice(0, k) + h + base.slice(k); } catch (e) { return base; }
+};
 
 // ── enganche único desde render(): arranca lo que falta la primera vez y coordina lo de cada pantalla ──
 function v37Escena(s, entrando) {

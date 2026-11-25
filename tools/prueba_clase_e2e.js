@@ -446,6 +446,14 @@ async function recorrer(w, modo, tope = 40) { let n = 0; const vistos = []; whil
       ok(!!hp2 && +hp2.getAttribute('aria-valuenow') === 0 && q(w, '[data-test=jefe]').classList.contains('muerto'), 'contestando todo bien el jefe queda derrotado');
     } else ok(!q(w, '[data-test=jefe]'), 'sin evalFinal no hay jefe');
     ok(qa(w, '[data-test=jefe]').length <= 1, 'nunca hay dos jefes en pantalla');
+    // logros de la pantalla final (solo presentación: no suman nada)
+    { const wl = abrir({ est: 'logrosB' }).window; await recorrer(wl, 'bien'); const lb = qa(wl, '[data-test=logro-v37]'), okB = lb.filter(x => x.dataset.ok === '1').length;
+      ok(lb.length === 6 && !!q(wl, '[data-test=logros-v37]'), 'el final muestra 6 logros coleccionables');
+      ok(lb.every(x => x.querySelector('img') && /^data:image\//.test(x.querySelector('img').getAttribute('src'))), 'cada logro usa un ícono incrustado (sin internet)');
+      const nb = wl.CLASE_API.notaOficial(); ok(q(wl, '[data-logro=nota]').dataset.ok === (nb >= 4.5 ? '1' : '0'), 'el logro «Nota de oro» coincide con la nota oficial (' + nb.toFixed(1) + ')');
+      const wm2 = abrir({ est: 'logrosM' }).window; await recorrer(wm2, 'mal'); const okM = qa(wm2, '[data-test=logro-v37]').filter(x => x.dataset.ok === '1').length;
+      ok(okB > okM && q(wm2, '[data-logro=nota]').dataset.ok === '0' && q(wm2, '[data-logro=jefe]').dataset.ok === '0', 'contestar bien da más logros que contestar mal (' + okB + ' vs ' + okM + ')');
+      ok(wl.CLASE_API.estado().xp >= 0 && wl.CLASE_API.ERRORES.length === 0 && wm2.CLASE_API.ERRORES.length === 0, 'cero errores de JavaScript con los logros'); wl.close(); wm2.close(); }
     ok(A.ERRORES.length === 0, 'cero errores de JavaScript con el modo juego');
     w.close();
     // modo ahorro: sin clima, sin portal, sin cine y sin latido
