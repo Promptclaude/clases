@@ -2080,6 +2080,13 @@ let v37RachaMax = 0, v37Listo = false, v37Racha_n = 0, v37UltSlide = -1, v37Acti
     '.v37-logros li{text-align:center;font-size:.74rem;font-weight:800;line-height:1.15;padding:6px 4px;border-radius:10px;background:#fff;border:2px solid #d9c9ff}' +
     '.v37-logros li img{width:44px;height:44px;display:block;margin:0 auto 4px}.v37-logros li small{display:block;font-weight:600;opacity:.85}' +
     '.v37-logros li.ok{border-color:#FFB800;box-shadow:0 0 10px #ffb80088}.v37-logros li.no img{filter:grayscale(1) opacity(.45)}.v37-logros li.no{color:#555}' +
+    // ajustes (sonido y efectos) + latido de los corazones
+    '#stage{position:relative}#v37-ajustes{position:absolute;top:-17px;right:12px;z-index:5;display:flex;gap:6px}' +
+    '#v37-ajustes button{width:36px;height:36px;border-radius:50%;border:3px solid #fff;background:#1d1450;color:#fff;font-size:1rem;line-height:1;cursor:pointer;box-shadow:0 3px 0 #0006;padding:0}' +
+    '#v37-ajustes button[aria-pressed=false]{background:#555a;opacity:.85}#v37-ajustes button:focus-visible{outline:3px solid #FFD54A;outline-offset:2px}' +
+    '#vidas-hud img[alt="oportunidad disponible"]{animation:v37corazon 1.7s ease-in-out infinite}' +
+    '@keyframes v37corazon{0%,60%,100%{transform:scale(1)}72%{transform:scale(1.18)}84%{transform:scale(1)}92%{transform:scale(1.1)}}' +
+    'html.fx-low #vidas-hud img{animation:none!important}@media print{#v37-ajustes{display:none}}' +
     // capa de clima (detrás de la tarjeta, nunca tapa nada)
     '#app{z-index:1}#v37-clima{position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden}' +
     '#v37-clima i{position:absolute;top:-5vh;left:var(--x);width:var(--s);height:var(--s);background:var(--c);opacity:0;animation:v37cae var(--d) linear var(--r) infinite}' +
@@ -2122,7 +2129,7 @@ let v37RachaMax = 0, v37Listo = false, v37Racha_n = 0, v37UltSlide = -1, v37Acti
     '@keyframes v37cine{0%{opacity:0}15%{opacity:1}80%{opacity:1}100%{opacity:0}}' +
     // sin movimiento o equipo lento: se apaga lo decorativo (lo importante sigue siendo texto)
     'html.fx-low #v37-clima,html.fx-low #v37-portal,html.fx-low #v37-cine{display:none}html.fx-low #btn-next{animation:none!important}' +
-    '@media (prefers-reduced-motion:reduce){#v37-clima,#v37-portal,#v37-cine,.v37-chispa{display:none}}';
+    '@media (prefers-reduced-motion:reduce){#v37-clima,#v37-portal,#v37-cine,.v37-chispa{display:none}#vidas-hud img{animation:none!important}}';
   document.head.appendChild(c);
 })();
 
@@ -2252,6 +2259,30 @@ RENDER.final = function (s) {
   const base = v37Final0(s); try { const k = base.indexOf('<div class="v29-cert"'); const h = v37Logros(); return k < 0 ? base + h : base.slice(0, k) + h + base.slice(k); } catch (e) { return base; }
 };
 
+// ── 8) Ajustes del estudiante: silenciar y apagar efectos (en un laboratorio con 40 equipos el sonido molesta y los PC lentos lo agradecen) ──
+let v37Aj = null;
+function v37Ajustes() {
+  const stage = document.getElementById('stage');
+  if (v37Aj) { if (stage && v37Aj.parentNode !== stage) stage.appendChild(v37Aj); return; }
+  const KS = 'clase_sonido_v1', KF = 'clase_fx_v1', H = document.documentElement;
+  const leer = k => { try { return almacen().getItem(k) || ''; } catch (e) { return ''; } };
+  const poner = (k, v) => { try { almacen().setItem(k, v); } catch (e) { /* sin almacenamiento: el ajuste vale solo en esta sesión */ } };
+  if (leer(KS) === 'off') sonidoActivo = false;
+  const box = document.createElement('div'); box.id = 'v37-ajustes'; box.setAttribute('role', 'group'); box.setAttribute('aria-label', 'Ajustes');
+  const bs = document.createElement('button'), bf = document.createElement('button'); bs.type = bf.type = 'button';
+  bs.setAttribute('data-test', 'ajuste-sonido'); bf.setAttribute('data-test', 'ajuste-efectos');
+  const pintar = () => {
+    bs.textContent = sonidoActivo ? '🔊' : '🔇'; bs.setAttribute('aria-pressed', String(sonidoActivo)); bs.setAttribute('aria-label', 'Sonido: ' + (sonidoActivo ? 'activado' : 'apagado')); bs.title = 'Sonido';
+    const fx = !H.classList.contains('fx-low'); bf.textContent = fx ? '✨' : '💤'; bf.setAttribute('aria-pressed', String(fx)); bf.setAttribute('aria-label', 'Efectos visuales: ' + (fx ? 'activados' : 'apagados')); bf.title = 'Efectos';
+  };
+  bs.addEventListener('click', () => { sonidoActivo = !sonidoActivo; poner(KS, sonidoActivo ? 'on' : 'off'); pintar(); });
+  bf.addEventListener('click', () => {
+    const low = !H.classList.contains('fx-low'); H.classList.toggle('fx-low', low); poner(KF, low ? 'low' : 'high'); pintar();
+    if (low) { const c = document.getElementById('v37-clima'); if (c) c.remove(); } else { try { v37Clima(); } catch (e) { /* idem */ } }
+  });
+  box.appendChild(bs); box.appendChild(bf); v37Aj = box; (stage || document.body).appendChild(box); pintar();
+}
+
 // ── enganche único desde render(): arranca lo que falta la primera vez y coordina lo de cada pantalla ──
 function v37Escena(s, entrando) {
   if (!v37Listo) {
@@ -2259,6 +2290,7 @@ function v37Escena(s, entrando) {
     try { v37Rendimiento(); } catch (e) { /* sin esto la clase funciona igual */ }
     try { v37Toques(); } catch (e) { /* idem */ }
   }
+  try { v37Ajustes(); } catch (e) { /* idem */ }
   try { v37Fondo(); } catch (e) { /* idem */ }
   try { v37Clima(); } catch (e) { /* idem */ }
   try { const c = document.querySelector('#stage .v36-etapa'); if (c) $('stage').style.setProperty('--etapa', c.style.background || ''); } catch (e) { /* idem */ }

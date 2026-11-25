@@ -454,6 +454,16 @@ async function recorrer(w, modo, tope = 40) { let n = 0; const vistos = []; whil
       const wm2 = abrir({ est: 'logrosM' }).window; await recorrer(wm2, 'mal'); const okM = qa(wm2, '[data-test=logro-v37]').filter(x => x.dataset.ok === '1').length;
       ok(okB > okM && q(wm2, '[data-logro=nota]').dataset.ok === '0' && q(wm2, '[data-logro=jefe]').dataset.ok === '0', 'contestar bien da más logros que contestar mal (' + okB + ' vs ' + okM + ')');
       ok(wl.CLASE_API.estado().xp >= 0 && wl.CLASE_API.ERRORES.length === 0 && wm2.CLASE_API.ERRORES.length === 0, 'cero errores de JavaScript con los logros'); wl.close(); wm2.close(); }
+    // ajustes del estudiante: sonido y efectos (se recuerdan en el navegador)
+    { const wa = abrir({ est: 'ajustes37' }).window, bs = q(wa, '[data-test=ajuste-sonido]'), bf = q(wa, '[data-test=ajuste-efectos]');
+      ok(!!bs && !!bf && bs.getAttribute('aria-pressed') === 'true' && bf.getAttribute('aria-label').startsWith('Efectos visuales'), 'hay botones de sonido y efectos accesibles, con el sonido activado por defecto');
+      bs.click(); ok(bs.getAttribute('aria-pressed') === 'false' && /apagado/.test(bs.getAttribute('aria-label')) && bs.textContent === '🔇', 'al tocar el sonido se apaga y el botón lo dice');
+      bs.click(); ok(bs.getAttribute('aria-pressed') === 'true', 'y se vuelve a encender');
+      bf.click(); ok(wa.document.documentElement.classList.contains('fx-low') && !q(wa, '#v37-clima') && bf.getAttribute('aria-pressed') === 'false', 'al apagar efectos se activa el modo ahorro y desaparece el clima');
+      bf.click(); ok(!wa.document.documentElement.classList.contains('fx-low'), 'al encenderlos vuelve el modo completo');
+      ok(wa.CLASE_API.ERRORES.length === 0, 'cero errores de JavaScript con los ajustes'); wa.close();
+      const wb = abrir({ est: 'mudo37', storage: { clase_sonido_v1: 'off' } }).window;
+      ok(q(wb, '[data-test=ajuste-sonido]').getAttribute('aria-pressed') === 'false', 'un sonido apagado se recuerda al volver a abrir la clase'); wb.close(); }
     ok(A.ERRORES.length === 0, 'cero errores de JavaScript con el modo juego');
     w.close();
     // modo ahorro: sin clima, sin portal, sin cine y sin latido
