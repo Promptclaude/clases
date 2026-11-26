@@ -1969,6 +1969,20 @@ let v37Av = -1, v37AvImg = null, v37RachaMax = 0, v37Listo = false, v37Racha_n =
     '#v37-avatares button img{width:100%;height:100%;border-radius:50%;display:block}#v37-avatares button[aria-checked=true]{border-color:#FFD54A;box-shadow:0 0 12px #FFD54A;transform:scale(1.1)}' +
     '#v37-avatares button:focus-visible{outline:3px solid #fff;outline-offset:2px}' +
     '#v37-ajustes .av{width:46px;height:46px;border-radius:50%;border:3px solid #FFD54A;background:#3a2a8a;margin-top:-4px;box-shadow:0 3px 0 #0006}' +
+    // opciones de respuesta como «teclas» de juego: letra, relieve, y respuesta clara al acertar o fallar
+    '#stage .opcion{position:relative;padding-left:56px;min-height:54px;background:linear-gradient(180deg,#fff,#efeaff);border-radius:16px;transition:transform .12s,box-shadow .12s}' +
+    '#stage .opcion[data-letra]::before{content:attr(data-letra);position:absolute;left:12px;top:50%;transform:translateY(-50%);width:30px;height:30px;border-radius:50%;display:grid;place-items:center;font-weight:900;font-size:.95rem;color:#fff;background:linear-gradient(180deg,#7c4dff,#5b2fd6);box-shadow:0 2px 0 #3a1c9a}' +
+    '@media (hover:hover){#stage .opcion:not(:disabled):hover{transform:translateY(-2px);box-shadow:0 6px 0 #cfc7f7}}#stage .opcion:not(:disabled):active{transform:translateY(3px);box-shadow:0 1px 0 #cfc7f7}' +
+    '#stage .opcion.ok{background:linear-gradient(180deg,#eafff1,#c9f5da);animation:v37acierto .45s ease-out}#stage .opcion.ok[data-letra]::before{background:linear-gradient(180deg,#34d399,#16a34a);box-shadow:0 2px 0 #0b6b2e}' +
+    '#stage .opcion.mal{background:linear-gradient(180deg,#fff7e8,#ffe7c2);animation:v37casi .4s ease-out}#stage .opcion.mal[data-letra]::before{background:linear-gradient(180deg,#fbbf24,#d97706);box-shadow:0 2px 0 #8a4a00}' +
+    '@keyframes v37acierto{0%{transform:scale(1)}40%{transform:scale(1.04)}100%{transform:scale(1)}}@keyframes v37casi{0%,100%{transform:translateX(0)}25%{transform:translateX(-5px)}60%{transform:translateX(5px)}}' +
+    'html.fx-low #stage .opcion{animation:none!important;transition:none}' +
+    // cuadro de respuesta (retroalimentación): el botón «.mbtn» no tenía estilo y salía gris de fábrica; ahora es como el resto de botones
+    '#modal-cuerpo{border-radius:24px;box-shadow:0 8px 0 #1d1450}#modal:not([hidden]) #modal-cuerpo{animation:v37modal .3s cubic-bezier(.2,1.2,.3,1)}' +
+    '@keyframes v37modal{from{opacity:0;transform:scale(.88) translateY(12px)}to{opacity:1;transform:none}}' +
+    '#modal-cuerpo .mbtn,#modal-cuerpo>button:not([class]){display:block;width:100%;margin-top:12px;font-family:inherit;font-weight:900;font-size:1.05rem;min-height:52px;padding:10px 18px;border-radius:16px;border:4px solid var(--contorno);cursor:pointer;color:#fff;text-shadow:0 1px 0 #0006;background:linear-gradient(#8CF0A0,#1FAF55);box-shadow:0 5px 0 #0F6A32;transition:transform .08s}' +
+    '#modal-cuerpo .mbtn:active{transform:translateY(3px);box-shadow:0 2px 0 #0F6A32}#modal-cuerpo .mbtn:focus-visible{outline:3px solid #FFD54A;outline-offset:3px}' +
+    'html.fx-low #modal-cuerpo{animation:none!important}' +
     // ajustes (sonido y efectos) + latido de los corazones
     '#stage{position:relative}#v37-ajustes{position:absolute;top:-17px;right:12px;z-index:5;display:flex;gap:6px}' +
     '#v37-ajustes button{width:36px;height:36px;border-radius:50%;border:3px solid #fff;background:#1d1450;color:#fff;font-size:1rem;line-height:1;cursor:pointer;box-shadow:0 3px 0 #0006;padding:0}' +
@@ -2018,7 +2032,7 @@ let v37Av = -1, v37AvImg = null, v37RachaMax = 0, v37Listo = false, v37Racha_n =
     '@keyframes v37cine{0%{opacity:0}15%{opacity:1}80%{opacity:1}100%{opacity:0}}' +
     // sin movimiento o equipo lento: se apaga lo decorativo (lo importante sigue siendo texto)
     'html.fx-low #v37-clima,html.fx-low #v37-portal,html.fx-low #v37-cine{display:none}html.fx-low #btn-next{animation:none!important}' +
-    '@media (prefers-reduced-motion:reduce){#v37-clima,#v37-portal,#v37-cine,.v37-chispa{display:none}#vidas-hud img{animation:none!important}}';
+    '@media (prefers-reduced-motion:reduce){#modal-cuerpo{animation:none!important}#stage .opcion{animation:none!important;transition:none}#v37-clima,#v37-portal,#v37-cine,.v37-chispa{display:none}#vidas-hud img{animation:none!important}}';
   document.head.appendChild(c);
 })();
 
@@ -2195,6 +2209,14 @@ function v37Avatares() {
   intro.insertBefore(box, ir); v37AvPintar();
 }
 
+// ── 10) Letras A, B, C… en las opciones de respuesta (solo de la vista: el texto de la opción no cambia) ──
+function v37Letras(s) {
+  if (!['quiz', 'evalFinal', 'minijuego'].includes(s.type)) return;
+  const grupos = new Map();
+  $('stage').querySelectorAll('.opcion').forEach(o => { const g = grupos.get(o.parentNode) || []; g.push(o); grupos.set(o.parentNode, g); });
+  grupos.forEach(g => g.forEach((o, i) => { if (i < 26) o.setAttribute('data-letra', String.fromCharCode(65 + i)); }));
+}
+
 // ── enganche único desde render(): arranca lo que falta la primera vez y coordina lo de cada pantalla ──
 function v37Escena(s, entrando) {
   if (!v37Listo) {
@@ -2208,6 +2230,7 @@ function v37Escena(s, entrando) {
   try { v37Clima(); } catch (e) { /* idem */ }
   try { const c = document.querySelector('#stage .v36-etapa'); if (c) $('stage').style.setProperty('--etapa', c.style.background || ''); } catch (e) { /* idem */ }
   try { v37Jefe(s); } catch (e) { /* idem */ }
+  try { v37Letras(s); } catch (e) { /* idem */ }
   try { if (entrando && v37UltSlide >= 0 && v37UltSlide !== st.slide) v37Portal(); } catch (e) { /* idem */ }
   v37UltSlide = st.slide;
 }

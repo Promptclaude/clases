@@ -472,6 +472,12 @@ async function recorrer(w, modo, tope = 40) { let n = 0; const vistos = []; whil
       ok(pu().hidden === false && /audífonos/i.test(pu().alt) && /^data:image\//.test(pu().getAttribute('src')), 'el compañero elegido aparece en la tarjeta con texto alternativo');
       wv.CLASE_API.irA(2); ok(!!pu() && pu().hidden === false && pu().closest('#stage') !== null, 'y se queda al cambiar de pantalla');
       ok(wv.CLASE_API.ERRORES.length === 0, 'cero errores de JavaScript con el compañero'); wv.close(); }
+    // opciones con letra (solo vista): A, B, C… y el texto de la opción no cambia
+    { const wq = abrir({ est: 'letras37' }).window, iq = wq.CLASE_API.SL.findIndex(s => s.type === 'quiz');
+      if (iq >= 0) { wq.CLASE_API.irA(iq); const os = qa(wq, '#stage .opcion');
+        ok(os.length >= 2 && os.every((o, i) => o.getAttribute('data-letra') === String.fromCharCode(65 + i)), 'las opciones del quiz traen letra A, B, C…');
+        ok(os.every(o => !/^[A-D]\s/.test(o.textContent)), 'la letra es solo visual: no entra en el texto de la opción (lectores y pruebas ven lo mismo)'); }
+      ok(wq.CLASE_API.ERRORES.length === 0, 'cero errores de JavaScript con las letras'); wq.close(); }
     ok(A.ERRORES.length === 0, 'cero errores de JavaScript con el modo juego');
     w.close();
     // modo ahorro: sin clima, sin portal, sin cine y sin latido

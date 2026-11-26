@@ -763,6 +763,7 @@ Estas piezas vienen del juego de las tablas y las pinta **el motor solo**. No es
 - **Logros en la pantalla final**: 6 insignias coleccionables (sin perder vidas, racha ×5, todos los juegos, 5 cofres, derrotar al jefe, nota ≥ 4.5). Las bloqueadas muestran su meta. En `aprendiste` y `siguiente` no repitas estos logros: ya los muestra el motor.
 - **Ajustes del estudiante**: botones 🔊 (sonido) y ✨ (efectos) en la esquina de la tarjeta, que el motor pone solo. No agregues tus propios controles de sonido ni de efectos.
 - **Compañero**: en la bienvenida el estudiante elige un avatar y lo lleva en la tarjeta. No pongas avatares ni personajes propios en la bienvenida: ya está resuelto. Puedes hablar de «tu compañero» en el texto, sin darle nombre ni género.
+- **Opciones con letra**: en quiz, reto final y minijuegos de opciones el motor pone la letra A, B, C… y la animación de acierto/casi. No escribas «A)», «B)» dentro del texto de las opciones: saldría duplicado.
 - **Portal** de color del tema al cambiar de pantalla, **chispas** al tocar y «Siguiente» que late 3 veces cuando se habilita.
 - **Modo ahorro automático**: en equipos lentos o con «reducir movimiento» todo lo decorativo se apaga y la clase funciona igual. Para probar: `?fx=low` (ahorro), `?fx=high` (completo), `?fx=auto`.
 
@@ -772,7 +773,7 @@ Estas piezas vienen del juego de las tablas y las pinta **el motor solo**. No es
 3. Nada de esto puede ser la única forma de enterarse de algo: el texto de la clase debe bastar sin efectos.
 
 ### Pruebas
-El e2e (T37) comprueba: clima y fondo ilustrado por tema (incrustado, sin internet), capas sin captura de toques, racha ×3 y reinicio, jefe con toda su vida al entrar y derrotado al acertar todo, 6 logros en el final (más al contestar bien que mal), nada de esto cambia nota/aciertos/XP, modo ahorro y «reducir movimiento» sin clima, botones de sonido y efectos que se recuerdan, 10 compañeros elegibles que se quedan en la tarjeta, y cero errores de JavaScript.
+El e2e (T37) comprueba: clima y fondo ilustrado por tema (incrustado, sin internet), capas sin captura de toques, racha ×3 y reinicio, jefe con toda su vida al entrar y derrotado al acertar todo, 6 logros en el final (más al contestar bien que mal), nada de esto cambia nota/aciertos/XP, modo ahorro y «reducir movimiento» sin clima, botones de sonido y efectos que se recuerdan, 10 compañeros elegibles que se quedan en la tarjeta, letras A/B/C en las opciones sin tocar su texto, y cero errores de JavaScript.
 
 ---
 
