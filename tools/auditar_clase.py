@@ -56,6 +56,8 @@ def main():
             if 'cofres' in D['meta']:
                 cf = D['meta']['cofres']; chk(isinstance(cf, list) and len(cf) == 5 and all(isinstance(c, dict) and 1 <= len(str(c.get('icono', ''))) <= 8 and 1 <= len(str(c.get('nombre', ''))) <= 32 for c in cf), 'meta.cofres válido (5 cofres con icono y nombre)', 'meta.cofres debe tener exactamente 5 cofres {icono, nombre} (icono ≤ 8 caracteres, nombre ≤ 32)')
             if 'tema' in D['meta']: chk(D['meta']['tema'] in ('espacio', 'oceano', 'bosque', 'volcan', 'dulce', 'desierto'), 'meta.tema válido', 'meta.tema debe ser espacio, oceano, bosque, volcan, dulce o desierto')
+            if 'historia' in D['meta']:
+                h = D['meta']['historia']; chk(isinstance(h, list) and 1 <= len(h) <= 3 and all(isinstance(x, str) and 3 <= len(x.strip()) <= 180 for x in h), 'meta.historia válida', 'meta.historia debe ser un arreglo de 1 a 3 textos de 3 a 180 caracteres')
             for s_ in D['slides']:
                 if 'etapa' in s_: chk(s_['etapa'] in ('mision', 'calienta', 'aprende', 'juntos', 'tu', 'juego', 'comprueba', 'explica', 'reto', 'repaso', 'final'), '', f"{s_['id']}: etapa «{s_['etapa']}» no existe (mision, calienta, aprende, juntos, tu, juego, comprueba, explica, reto, repaso, final)")
             if 'premio' in D['meta']: chk(isinstance(D['meta']['premio'], str) and 3 <= len(D['meta']['premio']) <= 80, 'meta.premio válido', 'meta.premio debe ser un texto de 3 a 80 caracteres')

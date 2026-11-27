@@ -2,6 +2,17 @@
 
 > Las versiones anteriores del prompt (v24, v25) ya no están en el repositorio. Se pueden recuperar con `git checkout archivo-v24-v25`.
 
+## v38 — Aventura (historia, villano, jefe con cara y misión de repaso)
+- **Por qué:** al comparar una clase real en celular (390 px) con el juego de las tablas, las clases seguían siendo una tarjeta blanca sin historia; el juego abre con cinemática y villano. Se trasladó lo que sirve sin tocar nota, avance ni lo guardado.
+- **Qué trae** (`plantilla/motor/v38_aventura_snippets.js`, `MOTOR_VERSION = '38.0'`, módulo 46 del prompt):
+  - **Cinemática de misión** de 3 paneles al pulsar «Empezar»: ARIA avisa → el **Rey del Caos** (villano recurrente, de `assets/characters/villain` del juego) → «¿Aceptas?». Se escribe sola, se puede saltar, sale una vez por estudiante (`clase_cine_v1:…` vía `almacen()`). Texto opcional en `meta.historia` (hasta 3 textos de ≤180 caracteres; el auditor lo valida). `?cine=1` la fuerza; `__TEST__.sinCine` la apaga.
+  - **Jefe final con cara** (de `jefe-cinematica.js`/`villain-boss.js`): busto del Rey del Caos, golpe «-1 💥» con cada acierto y caída al derrotarlo.
+  - **Misión de repaso** en la pantalla final (de `repaso-errores.js`): hasta 5 quizzes con preguntas falladas o actividades hechas con ayuda, con «Volver a verla». Solo lee `st`; no cambia la nota.
+  - **Diseño en celular:** el aviso «por qué no puedo avanzar» ya no se pisa con el contenido (pie con degradado) y el encabezado baja de ≈102 a ≈69 px.
+  - **Banco:** `villano-rey-caos` (75 KB) y `villano-rey-caos-busto` (22 KB), +≈97 KB por clase.
+- **Pruebas:** T38 en el e2e; ejemplos reconstruidos con el motor 38.0; prompt armado en ≈26.900 tokens (tope 27.000).
+- **Pendiente (siguientes ideas del juego):** escena con capas y parallax (`escena-2026`), piel de «panel de cristal», pantalla final «Nivel superado», mascota ARIA reactiva, ayudas como poderes con aura, modo sin conexión (`sw-registro`).
+
 ## v37 — Modo juego (portado del juego de las tablas «Ninja Multiplicación»)
 - **Por qué:** al revisar una clase real en celular (390 px), cada pantalla seguía siendo una tarjeta blanca sobre fondo oscuro sin ambiente, sin sensación de avance de «partida» y sin un clímax en el reto final. El repositorio del juego ya resolvía esto; se trasladó lo que sirve **sin imágenes nuevas (0 KB) y sin tocar nota, avance ni lo guardado**.
 - **Qué trae** (módulo `plantilla/motor/v37_modo_juego_snippets.js`, `MOTOR_VERSION = '37.0'`):

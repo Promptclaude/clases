@@ -5,7 +5,12 @@
   "grado": 5,
   "materia": "Aritmética",
   "titulo": "La pizzería de las fracciones",
-  "dba": "DBA: Reconoce y usa fracciones, decimales y porcentajes equivalentes en situaciones cotidianas"
+  "dba": "DBA: Reconoce y usa fracciones, decimales y porcentajes equivalentes en situaciones cotidianas",
+  "historia": [
+   "¡Alerta en la pizzería! Las fracciones se mezclaron y nadie sabe cuánta pizza queda en cada caja.",
+   "¡Ja, ja! Soy el Rey del Caos. Escondí los decimales dentro de los porcentajes. ¡Nadie los ordenará jamás!",
+   "Pinta, une y compara fracciones para derrotarlo en el Reto final de la pizzería. ¿Aceptas la misión?"
+  ]
  },
  "slides": [
   {

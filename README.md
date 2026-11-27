@@ -19,7 +19,7 @@ El formato exacto de `datos.json` está en `prompt-modulos/44_formato_de_datos.m
 ## Versiones: qué es cada número
 | Qué | Versión | Dónde se define |
 |---|---|---|
-| Motor de las clases | **37.0** | `MOTOR_VERSION` en `plantilla/clase_referencia.src.html` |
+| Motor de las clases | **38.0** | `MOTOR_VERSION` en `plantilla/clase_referencia.src.html` |
 | Prompt vigente | **v26** (+ revisión de coherencia v26.1 y módulos 33–43) | `Prompt_Maestro_Clases_v26_COMPLETO.md` |
 | Prompt propuesto | **v27 núcleo** (≈25.000 tokens armado) | `Prompt_Maestro_Clases_v27_NUCLEO.md` |
 | `package.json` | 26.0.0 | Solo identifica el paquete de pruebas; **no** es la versión del motor ni del prompt |
@@ -46,6 +46,7 @@ El formato exacto de `datos.json` está en `prompt-modulos/44_formato_de_datos.m
 | **Conexión con el Aula (Notas y avance), nombre del archivo y mascotas** | módulo `prompt-modulos/42_aula_y_mascotas.md` · `pruebas/prueba_aula_integracion.py` · motor `plantilla/motor/v34_aula_snippets.js` |
 | **Hoja «Respuestas abiertas» para el docente** (servidor) | carpeta `servidor-propuesta/` (`INSTALACION.md`, `Abiertas.gs`, `DISENO.md`, parche de 6 líneas) · módulo `prompt-modulos/43_respuestas_abiertas_para_el_docente.md` · `pruebas/prueba_servidor_abiertas.js` |
 | **Modo juego** (clima por tema, racha 🔥, jefe final, modo ahorro, portal y chispas) | módulo `prompt-modulos/45_modo_juego.md` · motor `plantilla/motor/v37_modo_juego_snippets.js` · e2e T37 |
+| **Aventura** (cinemática con el Rey del Caos, jefe con cara, misión de repaso) | módulo `prompt-modulos/46_aventura.md` · motor `plantilla/motor/v38_aventura_snippets.js` · e2e T38 |
 | Módulos del prompt sueltos | `prompt-modulos/` |
 | Historial | `CHANGELOG.md` (versiones previas recuperables con `git checkout archivo-v24-v25`) |
 
