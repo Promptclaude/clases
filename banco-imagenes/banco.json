@@ -1,7 +1,7 @@
 {
  "version": 1,
  "generado": "2026-11-03",
- "total": 838,
+ "total": 840,
  "campos": {
   "estado": "aprobada | por_revisar | especifica | descartada",
   "calidad": "1-5 (resolución+nitidez)",
@@ -27719,6 +27719,54 @@
    "tiene_texto": false,
    "texto": "",
    "origen": "recorte del avatar-10 del banco",
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": []
+  },
+  {
+   "id": "villano-rey-caos",
+   "archivo": "personajes/villano/villano-rey-caos.webp",
+   "svg": "",
+   "categoria": "personajes",
+   "subcategoria": "villano",
+   "uso": "El Rey del Caos (cuerpo completo): villano recurrente de las clases, para la cinemática de misión (motor v38)",
+   "tags": [
+    "villano",
+    "rey del caos",
+    "jefe",
+    "cinemática",
+    "personaje"
+   ],
+   "ancho": 344,
+   "alto": 520,
+   "transparente": true,
+   "tiene_texto": false,
+   "texto": "",
+   "origen": "arte propio del juego Ninja Multiplicación (luisalbertocaceres2586-cell/Luis, assets/characters/villain/portrait.png), recortado y convertido a WebP",
+   "estado": "aprobada",
+   "calidad": 5,
+   "usada_en": []
+  },
+  {
+   "id": "villano-rey-caos-busto",
+   "archivo": "personajes/villano/villano-rey-caos-busto.webp",
+   "svg": "",
+   "categoria": "personajes",
+   "subcategoria": "villano",
+   "uso": "El Rey del Caos (busto): cara del jefe final (motor v38)",
+   "tags": [
+    "villano",
+    "rey del caos",
+    "jefe",
+    "busto",
+    "personaje"
+   ],
+   "ancho": 200,
+   "alto": 199,
+   "transparente": true,
+   "tiene_texto": false,
+   "texto": "",
+   "origen": "arte propio del juego Ninja Multiplicación (luisalbertocaceres2586-cell/Luis, assets/characters/villain/portrait.png), recortado y convertido a WebP",
    "estado": "aprobada",
    "calidad": 5,
    "usada_en": []

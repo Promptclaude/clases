@@ -23,8 +23,8 @@ from generar_referencia_datos import MODULO_DE_TIPO as POR_TIPO, BASICOS   # una
 RAIZ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 NUCLEO = os.path.join(RAIZ, 'Prompt_Maestro_Clases_v27_NUCLEO.md')
 MODULOS = os.path.join(RAIZ, 'prompt-modulos')
-SIEMPRE = {33, 35, 36, 37, 42, 44, 45}  # banco, ritmo, mapa/final, flujo con imágenes, Aula, formato de datos, modo juego
-RANGO_CLASE = range(33, 46)
+SIEMPRE = {33, 35, 36, 37, 42, 44, 45, 46}  # banco, ritmo, mapa/final, flujo con imágenes, Aula, formato de datos, modo juego, aventura
+RANGO_CLASE = range(33, 47)
 
 
 def numero(ruta):

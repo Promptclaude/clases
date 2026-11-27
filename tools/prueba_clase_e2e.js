@@ -493,5 +493,45 @@ async function recorrer(w, modo, tope = 40) { let n = 0; const vistos = []; whil
     w3.close();
   }
 
+  T('T38 · Aventura: cinemática de misión con el Rey del Caos, jefe con cara y misión de repaso (solo presentación)');
+  { const w = abrir({ est: 'av38', test: { sinIntro: false } }).window, A = w.CLASE_API, d = w.document;
+    const estilos = [...d.querySelectorAll('style')].map(x => x.textContent).join('\n');
+    ok(/#v38-cine/.test(estilos) && /\.v38-repaso/.test(estilos) && A.MOTOR_VERSION === '38.0', 'el módulo v38 está dentro de la clase y el motor es 38.0');
+    // cinemática: aparece al empezar, es saltable, se escribe sola y no vuelve a salir
+    ok(!q(w, '#v38-cine'), 'antes de empezar no hay cinemática');
+    clic(q(w, '#btn-empezar'));
+    const cine = q(w, '#v38-cine');
+    ok(!!cine && cine.getAttribute('role') === 'dialog' && !!cine.getAttribute('aria-label'), 'al empezar sale la cinemática (diálogo accesible con nombre)');
+    ok(!!q(w, '[data-test=cine-saltar]') && /^data:image\//.test(q(w, '#v38-cine .v38-actor').getAttribute('src')), 'se puede saltar y el personaje va incrustado (sin internet)');
+    const nota0 = A.estado().mejorNota, xp0 = A.estado().xp, ac0 = A.estado().aciertos, acts0 = JSON.stringify(A.estado().acts || {});
+    clic(q(w, '[data-test=cine-sig]')); clic(q(w, '[data-test=cine-sig]'));   // 1.º termina el texto, 2.º avanza (en jsdom sin movimiento puede avanzar directo)
+    ok(!!q(w, '#v38-cine'), 'la historia tiene varios paneles: no se cierra en el primer toque');
+    clic(q(w, '[data-test=cine-saltar]'));
+    ok(!q(w, '#v38-cine'), '«Saltar» cierra la cinemática');
+    ok(A.estado().mejorNota === nota0 && A.estado().xp === xp0 && A.estado().aciertos === ac0 && JSON.stringify(A.estado().acts || {}) === acts0, 'la cinemática no cambia nota, XP, aciertos ni lo guardado');
+    // se recuerda por estudiante: otra apertura con el mismo almacenamiento ya no la muestra; con ?cine=1 sí
+    const claveCine = Object.keys(snap(w)).find(k => k.startsWith('clase_cine_v1:'));
+    ok(!!claveCine && !claveCine.startsWith('aula:'), 'se recuerda con clave propia (clase_cine_v1:…), sin tocar las claves del Aula');
+    const w2 = abrir({ est: 'av38', test: { sinIntro: false }, storage: snap(w) }).window; clic(q(w2, '#btn-empezar'));
+    ok(!q(w2, '#v38-cine'), 'quien ya la vio no la ve de nuevo');
+    w2.close();
+    // las pruebas automáticas y los equipos con sinCine no la ven
+    const w3 = abrir({ est: 'otra38', test: { sinCine: true, sinIntro: false } }).window; clic(q(w3, '#btn-empezar')); ok(!q(w3, '#v38-cine'), '__TEST__.sinCine la apaga'); w3.close();
+    // jefe final con cara
+    const iF = A.SL.findIndex(s => s.type === 'evalFinal');
+    if (iF >= 0) { A.irA(iF); const cara = q(w, '[data-test=jefe] .v38-cara'); ok(!!cara && /^data:image\//.test(cara.getAttribute('src')) && !!cara.getAttribute('alt'), 'el jefe final tiene la cara del Rey del Caos (incrustada y con texto alternativo)'); ok(qa(w, '.v38-cara').length === 1, 'nunca hay dos caras de jefe'); }
+    else ok(!q(w, '.v38-cara'), 'sin evalFinal no hay cara de jefe');
+    w.close(); }
+  // misión de repaso: contestar mal muestra pendientes con botón de volver; contestar bien deja menos
+  { const wm = abrir({ est: 'rep38m' }).window; await recorrer(wm, 'mal'); const rm = q(wm, '[data-test=repaso]');
+    ok(!!rm, 'la pantalla final trae la «Misión de repaso»');
+    const nm = rm ? +rm.dataset.n : -1; ok(nm > 0 && qa(wm, '[data-test=repaso-item] [data-accion=v38-repasar]').length === Math.min(nm, 5), 'contestando mal hay pendientes (' + nm + ') y cada uno tiene su botón «Volver a verla»');
+    const antesN = wm.CLASE_API.notaOficial(), btn = q(wm, '[data-accion=v38-repasar]'); const destino = +btn.dataset.ir; clic(btn);
+    ok(wm.CLASE_API.estado().slide === destino, 'el botón lleva a la pantalla indicada (' + destino + ')');
+    ok(Math.abs(wm.CLASE_API.notaOficial() - antesN) < 1e-9, 'volver a ver una pantalla no cambia la nota');
+    ok(wm.CLASE_API.ERRORES.length === 0, 'cero errores de JavaScript con la misión de repaso'); wm.close();
+    const wb = abrir({ est: 'rep38b' }).window; await recorrer(wb, 'bien'); const rb = q(wb, '[data-test=repaso]'), nb = rb ? +rb.dataset.n : -1;
+    ok(!!rb && nb >= 0 && nb < nm, 'contestando bien quedan menos pendientes (' + nb + ' vs ' + nm + ')'); wb.close(); }
+
   console.log(`\n${pasos - fallos}/${pasos} comprobaciones OK${fallos ? ' · ' + fallos + ' ❌' : ''}`); process.exit(fallos ? 1 : 0);
 })().catch(e => { console.error('ERROR del runner:', e); process.exit(3); });
