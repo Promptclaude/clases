@@ -493,5 +493,40 @@ async function recorrer(w, modo, tope = 40) { let n = 0; const vistos = []; whil
     w3.close();
   }
 
+
+  // ═══ T38 · Juego pro: letra de cartel, pista 💡, repaso de errores y estrellas secretas ═══
+  {
+    T('T38 · Juego pro: letra de cartel, pista 💡 (solo práctica), repaso de errores y estrellas secretas');
+    const w = abrir({ est: 'pro38' }).window, A = w.CLASE_API;
+    ok(A.MOTOR_VERSION === '38.0', 'el motor es 38.0');
+    ok(/Lilita One/.test(w.document.head.innerHTML) && /data:font\/woff2;base64,/.test(w.document.head.innerHTML), 'la letra de cartel va incrustada (sin internet)');
+    // estrellas secretas
+    let halladas = 0;
+    if (A.SL.length >= 6) {
+      for (let i = 0; i < A.SL.length; i++) { A.irA(i); const e = q(w, '#v38-estrella'); if (e) { halladas++; ok(e.getAttribute('aria-label') && !!e.closest('#stage'), 'la estrella secreta tiene texto alternativo y vive en la tarjeta'); clic(e); ok(!q(w, '#v38-estrella'), 'al tocarla desaparece'); } }
+      ok(halladas === 3, 'hay exactamente 3 estrellas secretas (' + halladas + ')');
+    }
+    // pista: nunca en quiz ni evalFinal
+    for (let k = 0; k < 3; k++) A.Juego.evento('acierto');
+    const iq = A.SL.findIndex(s => s.type === 'quiz'); if (iq >= 0) { A.irA(iq); ok(!q(w, '#v38-pista'), 'la pista NO aparece en un quiz (da nota)'); }
+    const ie = A.SL.findIndex(s => s.type === 'evalFinal'); if (ie >= 0) { A.irA(ie); ok(!q(w, '#v38-pista'), 'la pista NO aparece en el reto final'); }
+    const im = A.SL.findIndex(s => s.type === 'minijuego' && s.rondas[0].ops.length >= 3);
+    if (im >= 0) {
+      const antes = A.estado(); A.irA(im); const b = q(w, '#v38-pista'); ok(!!b, 'en un minijuego de 3+ opciones aparece la pista tras una racha ×3');
+      if (b) { clic(b); const ok0 = A.SL[im].rondas[0].ok, ops = qa(w, '[data-accion=mj-op]');
+        ok(ops.filter(o => o.disabled).length >= 1 && !ops[ok0].disabled, 'la pista tacha respuestas malas y nunca la correcta'); ok(!q(w, '#v38-pista'), 'la pista se gasta');
+        const des = A.estado(); ok(des.xp === antes.xp && des.aciertos === antes.aciertos && des.monedas === antes.monedas, 'usar la pista no cambia XP, aciertos ni monedas'); }
+    }
+    // repaso de errores: fallar todo → hay repaso; acertar todo → «nada para repasar»
+    const responder = async (win, bien) => { const a = win.CLASE_API; for (let i = 0; i < a.SL.length; i++) { const sl = a.SL[i]; if (sl.type !== 'quiz' && sl.type !== 'evalFinal') continue; a.irA(i);
+      for (let n = 0; n < sl.preguntas.length; n++) { const c = a.opcionCorrectaActual(); if (!c) break; const ops = qa(win, '[data-test=opcion]'); clic(bien ? ops.find(o => o.dataset.op === c.id) : ops.find(o => o.dataset.op !== c.id)); cerrarModal(win); await sleep(75); } } };
+    await responder(w, false); A.irA(A.SL.length - 1);
+    const rp = q(w, '[data-test=repaso-v38]'); ok(!!rp && +rp.dataset.n > 0 && qa(w, '[data-test=repaso-v38] li').length <= 5, 'fallando todo, la pantalla final trae «Para repasar» (máx. 5)');
+    ok(/Estrellas secretas: \d de 3/.test(w.document.body.textContent) || A.SL.length < 6, 'el final cuenta las estrellas secretas');
+    ok(A.ERRORES.length === 0, 'cero errores de JavaScript con el juego pro'); w.close();
+    const w2 = abrir({ est: 'bien38' }).window; await responder(w2, true); w2.CLASE_API.irA(w2.CLASE_API.SL.length - 1);
+    const rp2 = q(w2, '[data-test=repaso-v38]'); ok(!!rp2 && rp2.dataset.n === '0', 'acertando todo dice «Nada para repasar»'); w2.close();
+  }
+
   console.log(`\n${pasos - fallos}/${pasos} comprobaciones OK${fallos ? ' · ' + fallos + ' ❌' : ''}`); process.exit(fallos ? 1 : 0);
 })().catch(e => { console.error('ERROR del runner:', e); process.exit(3); });

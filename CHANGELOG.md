@@ -2,6 +2,16 @@
 
 > Las versiones anteriores del prompt (v24, v25) ya no están en el repositorio. Se pueden recuperar con `git checkout archivo-v24-v25`.
 
+## v38 — Juego pro (portado del juego «Ninja Multiplicación»)
+- **Qué trae** (módulo `plantilla/motor/v38_juego_pro_snippets.js`, `MOTOR_VERSION = '38.0'`; solo presentación, no toca nota, XP, monedas ni lo guardado):
+  - **Letra de cartel Lilita One** incrustada (≈14 KB, sin internet) en títulos, botones y números del encabezado; preguntas y opciones siguen en la letra de lectura.
+  - **Pista 💡** (de `poderes/pista-reloj.js`): se gana con racha ×3 (máx. 2) y tacha respuestas malas **solo en juegos de práctica** (`minijuego`, `relampago` con 3+ opciones); nunca en quiz ni reto final.
+  - **Repaso de errores** (de `educativo/repaso-errores.js`): «📚 Para repasar» en la pantalla final con lo fallado, la correcta y el porqué.
+  - **3 ⭐ secretas** (de `secretos/flores-doradas.js`): escondidas en pantallas fijas por clase, recordadas por estudiante; no suman nota.
+  - **Encabezado compacto en celular** y la racha 🔥 de v37 ya no tapa «XP» ni «Próximo cofre».
+- **Pruebas:** T38 en el e2e; módulo 46 del prompt (el prompt armado queda ≈26.800 tokens). Las 7 clases de ejemplo y la de referencia se reconstruyeron con el motor 38.0.
+- **Pendiente (fase 3, ideas del juego):** selector de mundos con parallax, pantalla de resultados con marcos de cristal, intro por capas, explosiones/meteoros de celebración, moneda girando y corazón latiendo (`assets/ui/hud/animados`), modo sin conexión (`sw.js`).
+
 ## v37 — Modo juego (portado del juego de las tablas «Ninja Multiplicación»)
 - **Por qué:** al revisar una clase real en celular (390 px), cada pantalla seguía siendo una tarjeta blanca sobre fondo oscuro sin ambiente, sin sensación de avance de «partida» y sin un clímax en el reto final. El repositorio del juego ya resolvía esto; se trasladó lo que sirve **sin imágenes nuevas (0 KB) y sin tocar nota, avance ni lo guardado**.
 - **Qué trae** (módulo `plantilla/motor/v37_modo_juego_snippets.js`, `MOTOR_VERSION = '37.0'`):
